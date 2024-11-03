@@ -1,0 +1,7 @@
+torch
+transformers
+beautifulsoup4
+python-docx
+pandas
+nltk
+stanza
