@@ -1,0 +1,1739 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="معامل و تحـاليل طبية - إسعافات أولية و طـوارئ - موسـوعة الحمل و الولادة - موسـوعة الأمراض - شخص مرضـك بنفسك - منتدى الطبى - سؤال و جواب - العلاج بالطب الشعبى - معلومات طبية عامة" name="موسوعة طبية كاملة باللغة العربية"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <!-- Video Zoom Start -->
+  <link href="../../n_images/video_zoom/jquery.fancybox.css" media="screen" rel="stylesheet" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="../../n_images/video_zoom/flowplayer-3.2.6.min.js" type="text/javascript">
+  </script>
+  <script src="../../n_images/video_zoom/jquery.fancybox-1.2.1.pack.js" type="text/javascript">
+  </script>
+  <script src="../../n_images/video_zoom/jquery.easing.1.3.js" type="text/javascript">
+  </script>
+  <script src="../../n_images/video_zoom/fancyplayer.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   var videopath = "http://www.123esaaf.com";
+	var swfplayer = "http://www.123esaaf.com/n_images/video_zoom_images/flowplayer-3.2.7.swf";
+  </script>
+  <!-- Video Zoom End -->
+  <!-- Template Style CSS -->
+  <link href="../../style.css" media="screen" rel="stylesheet" type="text/css"/>
+  <!-- Google AdSense Code-->
+  <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+  </script>
+  <script>
+   (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5256587038964653",
+    enable_page_level_ads: true
+  });
+  </script>
+  <!-- Google AdSense Code-->
+ </head>
+ <script language="JavaScript">
+  <!-- 
+/***********************************************/
+
+window.ondragstart = function() { return false; }
+
+function disableSelection(target){
+if (typeof target.onselectstart!="undefined") //IE route
+	target.onselectstart=function(){return false}
+else if (typeof target.style.MozUserSelect!="undefined") //Firefox route
+	target.style.MozUserSelect="none"
+else //All other route (ie: Opera)
+	target.onmousedown=function(){return false}
+target.style.cursor = "default"
+}
+
+//Sample usages
+//disableSelection(document.body) //Disable text selection on entire body
+//disableSelection(document.getElementById("mydiv")) //Disable text selection on element with id="mydiv"
+
+/***********************************************/
+
+$(document).ready(function(){function cartEffect(){setTimeout("window.location = 'http://www.123esaaf.com/easyclinic/checkout.php'",250);}
+$('.cartadd').ajaxForm({success:cartEffect});});
+-->
+ </script>
+ <!-- InstanceEndEditable -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1296676-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+ <!-- BEGIN FLOATING SLIDE SHOW CODE //-->
+ <!-- Edit the HTML: Set first image path and size //-->
+ <div id="FloatSlideShow" style="position:absolute;z-index:1000000">
+  <a href="http://123esaaf.com/wp/" target="_new">
+   <img border="0" height="178" name="SlideShow" src="../../n_images/blogger_new.png" width="160"/>
+  </a>
+ </div>
+ <!-- End of editable HTML //-->
+ <script>
+  /* Floating Slide Show Script C.2004 by CodeLifter.com */
+
+// You *must* add onload="runSlideShow()" to the <body> tag
+// of the page.
+
+// In the section marked Edit the HTML, above, remember to
+// set the path and size for the first image.
+
+// =======================================
+// Set the following variables
+// =======================================
+
+// Set slideShowSpeed (milliseconds):
+var slideShowSpeed = 3000
+
+// Duration of crossfade (seconds) for IE:
+var crossFadeDuration = 3
+
+// Set the positioning variables, below:
+// Negative numbers are relative to right (whereX) or bottom (whereY)
+// Positive numbers are relative to left (whereX) or (whereY) top
+// Experiment with values to get positioning exact, and allow
+// for the dimensions of the image in the positioning
+
+var whereX = 40;
+var whereY = -233;
+
+// Specify the image files:
+var Pic = new Array() // don't touch this!
+// to add more images, just continue
+// the pattern, adding to the array below
+
+Pic[0] = 'image_1.gif'
+Pic[1] = 'image_2.gif'
+Pic[2] = 'image_3.gif'
+Pic[3] = 'image_4.gif'
+Pic[4] = 'image_5.gif'
+
+// =======================================
+// Do not edit *anything* below this line!
+// =======================================
+
+var nn=(navigator.appName.indexOf("Netscape")!=-1);
+var t;var j=0;var p=Pic.length;var preLoad=new Array();
+for (i=0;i<p;i++){preLoad[i]=new Image();preLoad[i].src = Pic[i];}
+function runSlideShow(){
+if (document.all){
+document.images.SlideShow.style.filter="blendTrans(duration=2)";
+document.images.SlideShow.style.filter="blendTrans(duration=crossFadeDuration)";
+document.images.SlideShow.filters.blendTrans.Apply();}
+if (document.all || document.getElementById){document.images.SlideShow.src = preLoad[j].src;}else{
+document.FloatSlideShow.document.images["SlideShow"].src = preLoad[j].src;}
+if (document.all){document.images.SlideShow.filters.blendTrans.Play();}
+j=j+1;if (j>(p-1))j=0;t=setTimeout('runSlideShow()', slideShowSpeed);}
+var dD=document,dH=dD.html,dB=dD.body,px=dD.layers?'':'px';
+function floatSS(iX,iY,id){
+var L=dD.getElementById?dD.getElementById(id):dD.all?dD.all[id]:dD.layers[id];		
+this[id+'O']=L;if(dD.layers)L.style=L;L.nX=L.iX=iX;L.nY=L.iY=iY;
+L.P=function(x,y){this.style.left=x+px;this.style.top=y+px;};L.Fss=function(){var pX, pY;	
+pX=(this.iX >=0)?0:nn?innerWidth:nn&&dH.clientWidth?dH.clientWidth:dB.clientWidth;	
+pY=nn?pageYOffset:nn&&dH.scrollTop?dH.scrollTop:dB.scrollTop;	
+if(this.iY<0)pY+=nn?innerHeight:nn&&dH.clientHeight?dH.clientHeight:dB.clientHeight;	
+this.nX+=.1*(pX+this.iX-this.nX);this.nY+=.1*(pY+this.iY-this.nY);this.P(this.nX,this.nY);
+setTimeout(this.id+'O.Fss()',33);};return L;}
+floatSS(whereX,whereY,'FloatSlideShow').Fss();
+ </script>
+ <!-- END FLOATING SLIDE SHOW CODE //-->
+ <!-- BEGIN FLOATING SLIDE SHOW CODE //-->
+ <!-- Edit the HTML: Set first image path and size //-->
+ <div id="FloatSlideShow2" style="position:absolute;z-index:1000000">
+  <a href="http://www.123esaaf.com/n_donations.html" target="_new">
+   <img border="0" height="177" name="SlideShow" src="../../n_images/donations.png" width="127"/>
+  </a>
+ </div>
+ <!-- End of editable HTML //-->
+ <script>
+  /* Floating Slide Show Script C.2004 by CodeLifter.com */
+
+// You *must* add onload="runSlideShow()" to the <body> tag
+// of the page.
+
+// In the section marked Edit the HTML, above, remember to
+// set the path and size for the first image.
+
+// =======================================
+// Set the following variables
+// =======================================
+
+// Set slideShowSpeed (milliseconds):
+var slideShowSpeed = 3000
+
+// Duration of crossfade (seconds) for IE:
+var crossFadeDuration = 3
+
+// Set the positioning variables, below:
+// Negative numbers are relative to right (whereX) or bottom (whereY)
+// Positive numbers are relative to left (whereX) or (whereY) top
+// Experiment with values to get positioning exact, and allow
+// for the dimensions of the image in the positioning
+
+var whereX = 45;
+var whereY = -233;
+
+// Specify the image files:
+var Pic = new Array() // don't touch this!
+// to add more images, just continue
+// the pattern, adding to the array below
+
+Pic[0] = 'image_1.gif'
+Pic[1] = 'image_2.gif'
+Pic[2] = 'image_3.gif'
+Pic[3] = 'image_4.gif'
+Pic[4] = 'image_5.gif'
+
+// =======================================
+// Do not edit *anything* below this line!
+// =======================================
+
+var nn=(navigator.appName.indexOf("Netscape")!=-1);
+var t;var j=0;var p=Pic.length;var preLoad=new Array();
+for (i=0;i<p;i++){preLoad[i]=new Image();preLoad[i].src = Pic[i];}
+function runSlideShow(){
+if (document.all){
+document.images.SlideShow.style.filter="blendTrans(duration=2)";
+document.images.SlideShow.style.filter="blendTrans(duration=crossFadeDuration)";
+document.images.SlideShow.filters.blendTrans.Apply();}
+if (document.all || document.getElementById){document.images.SlideShow.src = preLoad[j].src;}else{
+document.FloatSlideShow2.document.images["SlideShow"].src = preLoad[j].src;}
+if (document.all){document.images.SlideShow.filters.blendTrans.Play();}
+j=j+1;if (j>(p-1))j=0;t=setTimeout('runSlideShow()', slideShowSpeed);}
+var dD=document,dH=dD.html,dB=dD.body,px=dD.layers?'':'px';
+function floatSS(iX,iY,id){
+var L=dD.getElementById?dD.getElementById(id):dD.all?dD.all[id]:dD.layers[id];		
+this[id+'O']=L;if(dD.layers)L.style=L;L.nX=L.iX=iX;L.nY=L.iY=iY;
+L.P=function(x,y){this.style.right=x+px;this.style.top=y+px;};L.Fss=function(){var pX, pY;	
+pX=(this.iX >=0)?0:nn?innerWidth:nn&&dH.clientWidth?dH.clientWidth:dB.clientWidth;	
+pY=nn?pageYOffset:nn&&dH.scrollTop?dH.scrollTop:dB.scrollTop;	
+if(this.iY<0)pY+=nn?innerHeight:nn&&dH.clientHeight?dH.clientHeight:dB.clientHeight;	
+this.nX+=.1*(pX+this.iX-this.nX);this.nY+=.1*(pY+this.iY-this.nY);this.P(this.nX,this.nY);
+setTimeout(this.id+'O.Fss()',33);};return L;}
+floatSS(whereX,whereY,'FloatSlideShow2').Fss();
+ </script>
+ <!-- END FLOATING SLIDE SHOW CODE //-->
+ <title>
+  طعام الطفل منذ الولادة و حتى أول سنتين من العمر
+ </title>
+ <body alink="#416271" link="#416271" vlink="#416271">
+  <div id="main_container">
+   <div id="header">
+    <div id="logo">
+     <a href="../../index.html">
+      <img alt="" border="0" height="80" src="../../n_images/123esaaf_logo.png" title="" width="243"/>
+     </a>
+    </div>
+    <div id="menu" style="width: 900; height: 224">
+     <ul>
+      <li>
+       <font face="Tahoma">
+        <a class="current" href="../../index.html">
+         الذهاب إلى الصفحـة الرئيسيـة
+        </a>
+       </font>
+      </li>
+      <li>
+       <font face="Tahoma">
+        <a class="current" href="../../n_symptoms_main_page.html">
+         شخـّص مرضـك بنفسك قبل زيارة الطبيب
+        </a>
+       </font>
+      </li>
+      <li>
+       <font face="Tahoma">
+        <a class="current" href="../../n_diseases_main_page.html">
+         موسوعـة الأمـراض الشائعـة و النـادرة
+        </a>
+       </font>
+      </li>
+      <li>
+       <font face="Tahoma">
+        <a class="current" href="../../n_general_info_main_page.html">
+         معلومـات طبيـة عامـة
+        </a>
+       </font>
+      </li>
+     </ul>
+     <p>
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+     <ul>
+      <li>
+      </li>
+     </ul>
+     <ul>
+      <li>
+       <font face="Tahoma">
+        <a class="current" href="../../n_pregnancy_main_page.html">
+         موسوعة 
+                الحمل و الولادة
+        </a>
+       </font>
+      </li>
+      <li>
+       <font face="Tahoma">
+        <a class="current" href="../../n_newborn_main_page.html">
+         دليل التعامل مع الأطفال حديثى الولادة
+        </a>
+       </font>
+      </li>
+      <li>
+       <font face="Tahoma">
+        <a class="current" href="../../n_emergency_main_page.html">
+         الإسعافات الأولية و حالات الطوارئ
+        </a>
+       </font>
+      </li>
+      <li>
+       <font face="Tahoma">
+        <a class="current" href="../../n_laboratory_main_page.html">
+         دليل 
+                الفحوصات و التحاليل الطبية
+        </a>
+       </font>
+      </li>
+      <li>
+      </li>
+     </ul>
+     <p>
+     </p>
+     <ul>
+      <li dir="ltr">
+       <ul>
+        <li>
+         <font face="Tahoma">
+          <a class="current" href="../../n_herbs_main_page.html">
+           موسوعـة العـلاج 
+                بالطـب البديــل
+          </a>
+         </font>
+        </li>
+        <li>
+         <font face="Tahoma">
+          <a class="current" href="../../n_q_and_a_main_page.html">
+           أنت تسأل و طبيـب الموقـع يجيـب
+          </a>
+         </font>
+        </li>
+        <li>
+         <font face="Tahoma">
+          <a class="current" href="../../n_atlas_main_page.html">
+           موسوعـة أطلـس جسـم الإنسـان
+          </a>
+         </font>
+        </li>
+        <li>
+         <font face="Tahoma">
+          <a class="current" href="http://123esaaf.com/wp/" target="_blank">
+           أحـدث الأخبـار و المقـالات الطبيــة
+          </a>
+         </font>
+        </li>
+       </ul>
+       <p>
+       </p>
+       <p>
+       </p>
+       <p>
+       </p>
+       <p>
+       </p>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="blue_box">
+    <div class="department_logo">
+     <img alt="" height="236" src="../../n_images/newborn_logo.png" title="" width="215"/>
+    </div>
+    <div class="text_content" style="width: 350; height: 179">
+     <h1 align="justify" dir="rtl" style="line-height: 200%">
+      <span lang="ar-eg">
+       <font face="Tahoma" size="2">
+        دليل التعامل مع الأطفال 
+        حديثى الولادة
+       </font>
+      </span>
+      <font face="Tahoma" size="2">
+       :
+      </font>
+     </h1>
+     <p class="blue" dir="rtl" style="line-height: 200%">
+      <font color="#AAD2DF">
+       <font face="Tahoma" size="2">
+        دليل كامل للعناية 
+        بالأطفال حديثى الولادة للتيسير على الوالدين الاعتناء و كيفية التعامل 
+        الصحيح مع الطفل الرضيع خاصة فى أول سنتين من عمره
+        <span lang="ar-eg">
+         .
+        </span>
+       </font>
+       <br/>
+      </font>
+      <br/>
+      <b>
+       <font color="#FFFFFF" face="Tahoma" size="2">
+        الموضوع :
+       </font>
+      </b>
+     </p>
+     <p class="blue" dir="rtl" style="line-height: 200%">
+      <b>
+       <font color="#AAD2DF" face="Tahoma" size="2">
+        طعام الطفل منذ الولادة و 
+        حتى أول سنتين من العمر
+       </font>
+      </b>
+     </p>
+     <div class="read_more" style="width: 180; height: 78">
+      <font face="Tahoma">
+       <a href="../../n_references.html" id="linky2" style="text-decoration: none" target="_blank">
+        المصادر و المراجع الطبية
+       </a>
+      </font>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+<div id="right_nav">
+ <ul>
+  <li>
+   <font face="Tahoma" size="2">
+    <span lang="ar-eg">
+     <a href="http://www.123esaaf.com/Database/n_doctor_index.html" target="_blank">
+      دليل الأطباء
+     </a>
+    </span>
+   </font>
+  </li>
+  <li>
+   <font face="Tahoma" size="2">
+    <span lang="ar-eg">
+     <a href="http://www.123esaaf.com/Database/n_hospital_index.html" target="_blank">
+      دليل المستشفيات
+     </a>
+    </span>
+   </font>
+  </li>
+  <li>
+   <font face="Tahoma" size="2">
+    <span lang="ar-eg">
+     <a href="http://www.123esaaf.com/Database/n_pharmacy_index.html" target="_blank">
+      دليل الصيدليات
+     </a>
+    </span>
+   </font>
+  </li>
+  <li>
+   <font face="Tahoma" size="2">
+    <span lang="ar-eg">
+     <a href="http://www.123esaaf.com/Database/n_lab_index.html" target="_blank">
+      دليل معامل التحاليل
+     </a>
+    </span>
+   </font>
+  </li>
+  <li>
+   <font face="Tahoma" size="2">
+    <span lang="ar-eg">
+     <a href="http://www.123esaaf.com/Database/n_labradilogy_index.html" target="_blank">
+      دليل مراكز الأشعة
+     </a>
+    </span>
+   </font>
+  </li>
+  <li>
+   <font face="Tahoma" size="2">
+    <span lang="ar-eg">
+     <a href="http://www.123esaaf.com/indexes/drugs_index/n_drugs_search.asp" target="_blank">
+      دليل الأدوية
+     </a>
+    </span>
+   </font>
+  </li>
+  <li>
+  </li>
+ </ul>
+</div>
+<!--end of blue box-->
+<div id="main_content">
+ <div id="left_content" style="width: 340; height: 626">
+  <h2 align="right" dir="rtl">
+   <font face="Tahoma" size="2">
+    موقع 123 إسعاف 
+        دوت كوم
+   </font>
+  </h2>
+  <p dir="rtl">
+   <font color="#8F8F8F" face="Tahoma" style="font-size: 9pt">
+    يمثل موسوعة طبية عربية شاملة كل 
+التخصصات الطبية وضعت لزيادة الوعى لدى المواطن العربى الغير متخصص فى النواحى 
+الطبية تتبنى مبدأ (الوقاية خير من العلاج) عن طريق تعليم الأسرة العربية مبادىء 
+الصحة و بالتالى تنمية قدراتهم الوقائية ضد الأمراض.
+   </font>
+  </p>
+  <div id="left_nav">
+   <ul>
+    <li>
+     <a title="">
+     </a>
+    </li>
+   </ul>
+  </div>
+  <p class="clear" dir="rtl">
+   <font face="Tahoma" size="2">
+    <img alt="" class="left_img" height="63" src="../../n_images/searching.png" title="" width="80"/>
+   </font>
+   <font face="Tahoma" style="font-size: 9pt">
+    <p dir="rtl">
+     <a href="http://www.123esaaf.com/indexes/medicaldata_index/n_medicaldata_search.asp" id="linky1" style="text-decoration: none" target="_blank">
+      قم 
+        بالبحث عن موضوع محدد تريد استطلاعه فى موقع الموسوعة الطبية.
+     </a>
+    </p>
+   </font>
+  </p>
+ </div>
+</div>
+<div id="left_nav">
+ <ul>
+  <li>
+   <a title="">
+   </a>
+  </li>
+ </ul>
+</div>
+<p class="clear" dir="rtl">
+ <font face="Tahoma" size="2">
+  <img alt="" class="left_img" height="66" src="../../n_images/consultation.png" title="" width="80"/>
+ </font>
+ <font face="Tahoma" style="font-size: 9pt">
+  <p dir="rtl">
+   <a href="../../n_estishara_buy1.html" id="linky1" style="text-decoration: none" target="_blank">
+    قم باستشارة طبيب الموقع فى شكوى طبية 
+        خاصة بك أو بمن تهتم بهم.
+   </a>
+  </p>
+ </font>
+</p>
+<div id="left_nav">
+ <ul>
+  <li>
+   <a title="">
+   </a>
+  </li>
+ </ul>
+</div>
+<p class="clear" dir="rtl">
+ <font face="Tahoma" size="2">
+  <img alt="" class="left_img" height="63" src="../../n_images/library.png" title="" width="80"/>
+ </font>
+ <font face="Tahoma" style="font-size: 9pt">
+  <p dir="rtl">
+   <a href="../../n_library.html" id="linky1" style="text-decoration: none" target="_blank">
+    استعرض مكتبة الكتب الطبية المجانية الخاصة بالموقع باللغتين العربية و 
+        الإنجليزية.
+   </a>
+  </p>
+ </font>
+</p>
+<div id="left_nav">
+ <ul>
+  <li>
+   <a title="">
+   </a>
+  </li>
+ </ul>
+</div>
+<p class="clear" dir="rtl">
+ <font face="Tahoma" size="2">
+  <img alt="" class="left_img" height="63" src="../../n_images/dictionary.png" title="" width="80"/>
+ </font>
+ <font face="Tahoma" style="font-size: 9pt">
+  <p dir="rtl">
+   <a href="http://www.123esaaf.com/Indexes/MedicalData_Index/n_MedicalDic_search.asp" id="linky1" style="text-decoration: none" target="_blank">
+    ابحث عن معنى أى مصطلح طبى من خلال المعجم الطبى الخاص بالموقع باللغتين العربية و الإنجليزية.
+   </a>
+  </p>
+ </font>
+</p>
+<div id="left_nav">
+ <ul>
+  <li>
+   <a title="">
+   </a>
+  </li>
+ </ul>
+</div>
+<p class="clear" dir="rtl">
+ <font face="Tahoma" size="2">
+  <img alt="" class="left_img" height="63" src="../../n_images/android_app.png" title="" width="80"/>
+ </font>
+ <font face="Tahoma" style="font-size: 9pt">
+  <p dir="rtl">
+   <a href="http://www.alabdelaziz.com/android/download/123esaaf%20Website.apk" id="linky1" style="text-decoration: none" target="_blank">
+    حمّل الآن مجانا تطبيق أندرويد لاستعراض موقع 123 إسعاف دوت كوم على الهواتف الذكية.
+   </a>
+  </p>
+ </font>
+</p>
+<div id="left_nav">
+ <ul>
+  <li>
+   <a title="">
+   </a>
+  </li>
+ </ul>
+</div>
+<p class="clear" dir="rtl">
+ <font face="Tahoma" size="2">
+  <img alt="" class="left_img" height="63" src="../../n_images/games.png" title="" width="80"/>
+ </font>
+ <font face="Tahoma" style="font-size: 9pt">
+  <p dir="rtl">
+   <a href="../../n_games_main_page.html" id="linky1" style="text-decoration: none" target="_blank">
+    قم بالترفيه عن نفسك و قضاء وقت ممتع بممارسة ألعابا مسلية مجانية.
+   </a>
+  </p>
+ </font>
+</p>
+<p dir="rtl">
+ <div id="left_nav">
+  <ul>
+   <li>
+    <a title="">
+    </a>
+   </li>
+  </ul>
+ </div>
+</p>
+<p dir="rtl">
+</p>
+<h4 align="left" dir="rtl">
+ <font face="Tahoma" style="font-size: 9pt">
+  خدمة الدعم الفنى 
+            المجانية لزوار الموقع
+ </font>
+</h4>
+<p dir="ltr" style="line-height: 15px">
+ <img alt="" class="box_img" height="34" src="../../n_images/phone_icon.gif" title="" width="47"/>
+ <font face="Tahoma" style="font-size: 8pt">
+  002 0101 8584 111
+  <br/>
+  002 0101 8584 222
+  <br/>
+  <br/>
+ </font>
+ <font face="Tahoma">
+  <span style="font-size: 8pt">
+   <img alt="" class="box_img" height="33" src="../../n_images/contact_icon.gif" title="" width="47"/>
+  </span>
+  <a <="" a="" href="/cdn-cgi/l/email-protection#9ae8ffecf3ffedc5aba8a9ffe9fbfbfcdaf2f5eef7fbf3f6b4f9f5f7" id="linky1" style="text-decoration: none">
+   <span lang="en-us" style="font-size: 8pt">
+    <span class="__cf_email__" data-cfemail="b6c4d3c0dfd3c1e9878485d3c5d7d7d0f6ded9c2dbd7dfda98d5d9db">
+     [email protected]
+    </span>
+   </span>
+  </a>
+  <br/>
+ </font>
+</p>
+<span lang="en-us" style="font-size: 8pt">
+ <a <="" a="" href="/cdn-cgi/l/email-protection#4f28232e3c3c2a3c20293b0f27203b222e2623612c2022" id="linky1" style="text-decoration: none">
+  <span class="__cf_email__" data-cfemail="1d7a717c6e6e786e727b695d757269707c7471337e7270">
+   [email protected]
+  </span>
+ </a>
+</span>
+<br/>
+<table border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" height="20" style="border-collapse: collapse" width="100%">
+ <tr>
+  <td bordercolor="#FFFFFF" height="2" width="20%">
+   <div id="left">
+    <p class="facebook">
+     <a alt="تابعنا على الفيسبوك" href="https://www.facebook.com/esaaf123" target="_blank" title="تابعنا على الفيسبوك">
+     </a>
+    </p>
+   </div>
+  </td>
+  <td bordercolor="#FFFFFF" height="2" width="20%">
+   <div id="left">
+    <p class="twitter">
+     <a alt="تابعنا على تويتر" href="http://twitter.com/#!/123esaaf" target="_blank" title="تابعنا على تويتر">
+     </a>
+    </p>
+   </div>
+  </td>
+  <td bordercolor="#FFFFFF" height="2" width="20%">
+   <div id="left">
+    <p class="google">
+     <a alt="تابعنا على جوجل بلس" href="https://plus.google.com/100039246378151295252/" target="_blank" title="تابعنا على جوجل بلس">
+     </a>
+    </p>
+   </div>
+  </td>
+  <td bordercolor="#FFFFFF" height="2" width="20%">
+   <div id="left">
+    <p class="youtube">
+     <a alt="تابعنا على اليوتيوب" href="http://www.youtube.com/123esaaf" target="_blank" title="تابعنا على اليوتيوب">
+     </a>
+    </p>
+   </div>
+  </td>
+  <td bordercolor="#FFFFFF" height="2" width="20%">
+   <div id="left">
+    <p class="bloger">
+     <a alt="آخر الأخبار الطبية على إسعاف بلوجر" href="http://123esaaf.com/wp/" target="_blank" title="آخر الأخبار الطبية على إسعاف بلوجر">
+     </a>
+    </p>
+   </div>
+  </td>
+ </tr>
+</table>
+<font face="Tahoma" style="font-size: 9pt">
+ <p dir="rtl">
+  <div id="left_nav">
+   <ul>
+    <li>
+     <a title="">
+     </a>
+    </li>
+   </ul>
+  </div>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p style="text-align: right">
+  <a href="http://www.123esaaf.com/n_medigo.html" target="_blank">
+   <img border="0" height="157" src="../../n_images/medigo/medigo.gif" width="250"/>
+  </a>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+</font>
+<table border="0" bordercolor="#111111" bordercolordark="#FFFFFF" bordercolorlight="#FFFFFF" cellpadding="0" cellspacing="0" height="1" style="border-collapse: collapse" width="100%">
+ <tr>
+  <td height="1" width="100%">
+   <div id="left_nav">
+    <ul>
+     <li>
+      <a title="">
+      </a>
+     </li>
+    </ul>
+   </div>
+  </td>
+ </tr>
+</table>
+<p dir="rtl" style="text-align: left">
+ <iframe align="right" allowtransparency="true" frameborder="0" name="I1" scrolling="no" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fesaaf123&amp;send=false&amp;layout=standard&amp;width=300&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=35" style="border:medium none; overflow:hidden; width:300; height:61;">
+ </iframe>
+</p>
+<font face="Tahoma">
+ <p>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+</font>
+<font face="Tahoma" style="font-size: 9pt">
+ <p dir="rtl">
+  <div id="left_nav">
+   <ul>
+    <li>
+     <a title="">
+     </a>
+    </li>
+   </ul>
+  </div>
+ </p>
+</font>
+<p>
+</p>
+<p>
+</p>
+<font face="Tahoma" style="font-size: 9pt">
+ <p dir="rtl">
+  <p dir="rtl" style="line-height: 150%">
+   <font color="#8B8E5D" face="Tahoma" style="font-size: 9pt">
+    <img border="0" height="30" src="../../n_images/numbers/lamb.png" width="30"/>
+    <span lang="en-us">
+    </span>
+   </font>
+   <font color="#8F8F8F" face="Tahoma" style="font-size: 9pt">
+    يفضل استعراض الموقع من خلال
+   </font>
+   <font color="#8B8E5D" face="Tahoma" style="font-size: 9pt">
+   </font>
+   <font color="#CF9531" face="Tahoma" style="font-size: 9pt">
+    <a href="https://www.mozilla.org/ar/firefox/new/" style="text-decoration: none" target="_blank">
+     <font color="#CF9531">
+      مستعرض الإنترنت 
+    فايرفوكس
+     </font>
+    </a>
+   </font>
+   <font color="#8B8E5D" face="Tahoma" style="font-size: 9pt">
+   </font>
+   <font color="#8F8F8F" face="Tahoma" style="font-size: 9pt">
+    نظرا لكونه يدعم أدوات الفلاش 
+    و الجافاسكريبت الموجودة بالموقع
+   </font>
+   <div id="left_nav">
+    <ul>
+     <li>
+      <a title="">
+      </a>
+     </li>
+    </ul>
+   </div>
+  </p>
+ </p>
+</font>
+<!--end of left content-->
+<div id="right_content" style="width: 232; height: 3274">
+ <body class="loading">
+  <h2 align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="80" src="../../n_images/page_titles/newborn/page_title_0016.png" width="400"/>
+  </h2>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <br/>
+   <font color="#F7941D" size="4">
+    <b>
+     الشهور الثلاثة الأولى من عمر طفلك
+    </b>
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    خلال أول ثلاثة شهور من عمر الرضيع يجب ألا يتناول فيها سوى اللبن بالرضاعة 
+        الطبيعية أو باللبن الصناعى عند حدوث ظروف قهرية تستوجب ذلك ، و يكون ذلك 
+        تحت رعاية الطبيب المتابع للمولود.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    و يقوم الحليب بإمداد رضيعك بكافة احتياجاته الغذائية ، حتى المياه يمكن 
+        الاستعاضة عنها بالحليب ، فلا يحتاج الرضيع إلى شرب الماء خلال تلك الفترة 
+        طالما كان منتظما فى الرضاعة.
+   </font>
+  </p>
+  <div class="products_box" dir="rtl" style="width: 520; height: 0">
+   <p dir="rtl" style="line-height: 200%">
+   </p>
+  </div>
+  <p dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font color="#F7941D" size="4">
+    <b>
+     عند بلوغ الطفل نهاية الشهر الرابع
+    </b>
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    فى هذا السن يبدأ إدخال الأطعمة للأطفال حيث توصى الأكاديمية الأمريكية لطب 
+        الأطفال ببدء تقديم الطعام للطفل بداية من سن 6 شهور ، و أحيانا يكون فى سن 
+        أصغر عند 4 شهور تبعا لاستعداد الطفل و حاجاته الغذائية ، و على الأم أن 
+        تتابع الطبيب قبل بدء إطعام الطفل حيث يحتاج الطفل لبعض الوقت حتى يتعلم و 
+        يعتاد على الطعام.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    أثناء تلك الفترة تقوم الأم بإرضاعه نفس عدد الرضعات المعتادة دون أى تغيير 
+        ، و لا يجب أن تنزعج إن رفض الطفل بعض الأطعمة فى البداية.
+   </font>
+  </p>
+  <div class="products_box" dir="rtl" style="width: 520; height: 0">
+   <p dir="rtl" style="line-height: 200%">
+   </p>
+  </div>
+  <p dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <b>
+     <font color="#DF7000">
+      <img border="0" height="23" src="../../n_images/numbers/question.png" width="23"/>
+      كيف تعرفين أن طفلك مستعد للطعام الإضافى للبن ؟
+     </font>
+    </b>
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    هناك بعض العلامات التى تشير أن الطفل مستعد لبدء إدخال الطعام ، منها ما 
+        يلى :
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; margin-right:20px">
+   <font style="font-size: 11pt">
+    <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+    ملاحظة استطاعة الطفل أن يتحكم فى رفع رأسه (يصلُب رأسه) ، حيث يستطيع 
+        الطفل بدء تناول الطعام عندما يكون قادرا على التحكم فى الرأس و الرقبة.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; margin-right:20px">
+   <font style="font-size: 11pt">
+    <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+    يبدأ الطفل النظر للآباء أثناء تناولهم الطعام و يظهر عليه الاهتمام و 
+        محاولة مد اليد للطعام.
+   </font>
+  </p>
+  <div class="products_box" dir="rtl" style="width: 520; height: 0">
+   <p dir="rtl" style="line-height: 200%">
+   </p>
+  </div>
+  <p dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <b>
+     <font color="#DF7000">
+      <img border="0" height="23" src="../../n_images/numbers/question.png" width="23"/>
+      كيف تكون البداية لإطعام طفلك ما هو جديد ؟
+     </font>
+    </b>
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="24" src="../../n_images/numbers/no1.png" width="24"/>
+    <font color="#DF7000">
+     <b>
+     </b>
+    </font>
+    عندما يصبح الطفل مستعدا لبدء تناول الطعام الخارجى و بعد 
+        استشارة طبيب الأطفال ، عليك أن تختارى وقت من اليوم يكون الطفل فيه غير 
+        متعب و يكون جائع (أى لا تقومى بإرضاعه رضعة كاملة قبل الطعام مباشرة) ، و 
+        اجعلى الطفل يجلس مسنودا أو يجلس فى الكرسى الخاص به.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; text-align:center">
+   <img border="0" height="110" src="images/016A.png" width="136"/>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="24" src="../../n_images/numbers/no2.png" width="25"/>
+   <font style="font-size: 11pt">
+    ابدئى باعطاء الطفل بعضا من الحبوب المطحونة المدعمة بالحديد (على شكل 
+        بودرة تخلط بالماء أو باللبن) ، أو بعض من الحبوب المكونة من القمح و 
+        الحليب مثل السيريلاك أو غيرها من الأنواع المختلفة المتوفرة فى الأسواق.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="24" src="../../n_images/numbers/no3.png" width="24"/>
+   <font style="font-size: 11pt">
+    إذا شعرتى أن الطفل غير مهتم بالطعام و رافض له فعليك أن تنتظرى بضعة أيام 
+        ثم تحاولي معه من جديد ، و لا يدعو ذلك للقلق فالاحتياجات الغذائية 
+        الأساسية لطفلك يحصل عليها من لبن الثدى أو اللبن الصناعى حتى عمر سنتين.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="24" src="../../n_images/numbers/no4.png" width="25"/>
+   <font style="font-size: 11pt">
+    ضعى الملعقة بالقرب من فم الطفل و أتركى الطفل يشم رائحة الطعام و يتذوقه ، 
+        لا تنزعجي إذا رفض الطفل الطعام و حاولى مرة أخرى.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; text-align:center">
+   <img border="0" height="127" src="images/016B.png" width="169"/>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="24" src="../../n_images/numbers/no5.png" width="25"/>
+   <font style="font-size: 11pt">
+    لا تحاولى أن تضعى الطعام للطفل في الببرونة (الرضّاعة) كى يعتاد على الأكل 
+        بالملعقة ، و استعملى ملعقة صغيرة للأكل الخارجى.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="24" src="../../n_images/numbers/no6.png" width="24"/>
+   <font style="font-size: 11pt">
+    إبدائى بعصائر الفاكهة حتى يحب الطفل الطعام (مثل عصير طماطم أو عصير 
+        برتقال : 2 ملعقة كبيرة عصير مركز+ نصف كوب ماء صغير سبق غليه على النار و 
+        مبرد) ، إبدائى بكمية قليلة جدا (5 مل = ملعقة كبيرة) ثم تزداد تدريجيا فى 
+        الأيام التالية (من 10 مل إلى 15 مل) حتى تصل الوجبة إلى 30 أو 60 مل حسب 
+        احتياج الطفل.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="center" style="line-height: 200%; text-align:center">
+   <img border="0" height="111" src="images/016C.png" width="117"/>
+   <img border="0" height="138" src="images/016D.png" width="253"/>
+  </p>
+  <p align="center" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="24" src="../../n_images/numbers/no7.png" width="25"/>
+   <font style="font-size: 11pt">
+    إبدائى كل صنف من الطعام على حدة لمدة 3 أو 4 أيام ثم أدخلى صنف جديد عليه 
+        بعد ذلك ... و هكذا ، أى لا تبدئى إعطاء الطفل نوعين مختلفين مرة واحدة كى 
+        تستطيعين تحديد الأطعمة التى تسبب حساسية للطفل لتتجنبيها فيما بعد.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="24" src="../../n_images/numbers/no8.png" width="24"/>
+   <font style="font-size: 11pt">
+    بعد ذلك إبدائى بإدخال الخضروات للطفل فى صورة شوربة الخضار (بطاطس + جزر + 
+        كوسة) حيث يتم سلقها ثم تضرب فى الخلاط أو تهرس جيدا .. و إليك أمثلة لبعض 
+        المكونات الغذائية المفيدة لطفلك فى هذه السن :
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="center" dir="ltr" style="line-height: 200%; text-align:center">
+   <img border="0" height="147" src="images/n_016_A.png" width="314"/>
+  </p>
+  <p align="center" style="line-height: 200%; text-align:center">
+   <img border="0" height="147" src="images/n_016_B.png" width="314"/>
+  </p>
+  <p align="center" style="line-height: 200%; text-align:center">
+   <img border="0" height="147" src="images/n_016_C.png" width="314"/>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="24" src="../../n_images/numbers/no9.png" width="24"/>
+    أعطى الطفل وجبتين فى الفترة من الساعة الثانية عشرة ظهرا حتى السادسة مساء 
+        ، حيث تتخللهما الرضاعة الطبيعية.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="24" src="../../n_images/numbers/no10.png" width="24"/>
+   <font style="font-size: 11pt">
+    إذا كان الطفل عنده احتمالية حساسية الطعام (أى إذا كان أحد أفراد الأسرة 
+        أو الأقرباء القريبين له يعانى من أى صور للحساسية مثل حساسية لبعض أنواع 
+        الطعام أو الربو أو الحساسية الجلدية) .. فى تلك الحالة لا يجب إعطاء الطفل 
+        الطعام الآتى إلا بعد بلوغه سنتين من العمر : (السمك - المأكولات البحرية - 
+        الفستق - البندق - الزبدة).
+   </font>
+  </p>
+  <div class="products_box" dir="rtl" style="width: 520; height: 0">
+   <p dir="rtl" style="line-height: 200%">
+   </p>
+  </div>
+  <p dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font color="#00B5F0" size="3">
+    نصائح عند بدء إطعام الطفل :
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+    استخدمى الكوب أو الملعقة الخاصة بالأطفال (متوفرة بالصيدليات و بأماكن بيع 
+        مستلزمات الرضع).
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; text-align:center">
+   <img border="0" height="134" src="images/n_016E.png" width="290"/>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+    تجنبى إضافة الكثير من السكر أو الملح للطعام.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+    تأكدى من النظافة الجيدة لأدوات تحضير طعام الطفل.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+    حاولى بقدر الإمكان تحضير طعام الطفل طازجا بنفسك أفضل من اللجوء إلى 
+        الأطعمة الجاهزة.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+    تجنبى استخدام الأوانى المعدنية ، و استخدمى الأوانى الزجاجية (البايركس).
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+    تجنبى (البنجر - السبانخ - اللفت) فهى تحتوى على نسبة عالية من النترات 
+        التى يمكن أن تسبب فقر الدم (أنيميا) للطفل.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+    لا تقدمى للطفل كمية من العصائر أكثر من 120 مل فى اليوم لتجنب حدوث 
+        الإسهال.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+    عادة يحب الطفل العصائر السكرية مثل الجزر و أغلب الفاكهة ، فلا يجعلك ذلك 
+        تهملين باقى أنواع الخضروات.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+    لا تبدئى إطعام الطفل إلا و هو بصحة جيدة و لا يعانى من أى أمراض مثل 
+        النزلة المعوية أو ارتفاع درجة الحرارة أو نزلات البرد.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+    حاولى استخدام أدوات لإطعام الطفل ذات ألوان و أشكال جذابة.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+    لا تهملى الرضاعة الطبيعية.
+   </font>
+  </p>
+  <div class="products_box" dir="rtl" style="width: 520; height: 0">
+   <p dir="rtl" style="line-height: 200%">
+   </p>
+  </div>
+  <p dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font color="#F7941D" size="4">
+    <b>
+     طعام الطفل من الشهر الثامن و حتى بلوغه عامه الأول
+    </b>
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="35" src="../../n_images/numbers/hand.png" width="30"/>
+    <font color="#6898AC">
+     عند بلوغ الطفل سن 8 أشهر
+    </font>
+    فإن أغلب الأطفال يكونوا مستعدين تماما لتقبل 
+        الخضروات و الفاكهة المهروسة و الحبوب المدعمة بالحديد ، فيتم إعطائها لهم 
+        بجانب الرضاعة الطبيعية أو اللبن الصناعى ، و يمكن الآن أيضا إدخال اللحوم 
+        إلى طعام الطفل.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; text-align:center">
+   <img border="0" height="111" src="images/016F.png" width="168"/>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    و عند بدء إعطاء الطفل أى نوع جديد من الطعام لأول مرة ، فعلى الأم تجربته 
+        أولا عن طريق إعطائه للطفل ثم تنتظر لمدة 3 أيام و حتى أسبوع و تراقب ظهور 
+        أى علامات للحساسية على الطفل ، و بعد ذلك تبدأ بتجربة نوع جديد من الطعام 
+        إذا لم تظهر على الطفل أية أعراض للحساسية.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    و يجب على الأم أن تحرص فى هذا العمر على تقديم أنواع مختلفة للطفل من 
+        الأطعمة ذات المذاق المختلف و القوام المختلف حتى يعتاد الطفل على اختلاف 
+        المذاق.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    و هناك عدة طرق يمكن تقديم الطعام بها للطفل ، فيمكن هرس الطعام بعد سلقه 
+        أو طحنه أو تقطيعه قطع صغيرة جدا بعد تسويته لمدة أطول حتى يصبح ناعم جدا ، 
+        فالطفل الآن يستطيع مضغ الطعام إلى حد ما.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="35" src="../../n_images/numbers/hand.png" width="30"/>
+    <font color="#6898AC">
+     عند بلوغ الطفل سن 9 أشهر
+    </font>
+    يستطيع استخدام أصابعه و تنسيق الحركة ليضع 
+        الطعام بين إصبعى السبابة و الإبهام أو يمكنه الإمساك بالملعقة ، فيمكن أن 
+        تتركه الأم يحاول أن يأكل بمفرده بأصابعه ، كما و يمكنها إعطائه الملعقة 
+        الخاصة بالأطفال ليحاول استعمالها بنفسه.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; text-align:center">
+   <img border="0" height="99" src="images/016G.png" width="114"/>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    و يجب أن تحاول الأم أن يشارك الطفل باقى أفراد الأسرة فى وقت الطعام ، ففى 
+        هذا السن يستمتع الطفل بمشاركته مع باقى أفراد الأسرة على منضدة الطعام.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="35" src="../../n_images/numbers/hand.png" width="30"/>
+    <font color="#6898AC">
+     مع بلوغ الطفل عامه الأول
+    </font>
+    يكون مستعدا لإعطائه اللبن البقرى (بعد استشارة 
+        الطبيب) بدلا من اللبن الصناعى ، و يمكنك استكمال الرضاعة الطبيعية بجانب 
+        إعطائه اللبن البقرى إذا أردت ذلك.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    و الأفضل فى هذا السن أن تضع الأم للطفل العصائر و اللبن فى الكوب الخاص به 
+        و ليس فى زجاجة حتى يعتاد على ذلك ، و عليها أن تترك الكوب للطفل ليحاول أن 
+        يتعامل معه و يشرب بمفرده.
+   </font>
+  </p>
+  <div class="products_box" dir="rtl" style="width: 520; height: 0">
+   <p dir="rtl" style="line-height: 200%">
+   </p>
+  </div>
+  <p dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <b>
+     <font color="#DF7000">
+      <img border="0" height="23" src="../../n_images/numbers/question.png" width="23"/>
+      ما هى علامات حساسية الطعام ؟
+     </font>
+    </b>
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; margin-right:20px">
+   <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+   <font style="font-size: 11pt">
+    <b>
+     <font color="#DF7000">
+     </font>
+    </b>
+    طفح جلدى.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; margin-right:20px">
+   <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+   <font style="font-size: 11pt">
+    <b>
+     <font color="#DF7000">
+     </font>
+    </b>
+    زيادة الغازات المعوية (خروج الريح).
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; margin-right:20px">
+   <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+   <font style="font-size: 11pt">
+    <b>
+     <font color="#DF7000">
+     </font>
+    </b>
+    حدوث إسهال.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    <img border="0" height="25" src="../../n_images/numbers/exclamation.png" width="30"/>
+    فى الحالات الشديدة من الحساسية يظهر على جلد الطفل طفح جلدى شديد أو قد 
+        يحدث صعوبة فى التنفس ، و يجب فى تلك الحالة أن تتوجهى إلى طبيب الأطفال 
+        فورا
+    <span lang="ar-eg">
+     ،
+    </span>
+    فإذا ظهر على الطفل أية أعراض للحساسية يجب عليك إيقاف هذا النوع من الطعام 
+        حتى تستشيرى الطبيب فى ذلك.
+   </font>
+  </p>
+  <div class="products_box" dir="rtl" style="width: 520; height: 0">
+   <p dir="rtl" style="line-height: 200%">
+   </p>
+  </div>
+  <p dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font color="#00B5F0" size="3">
+    نصائح للأم أثناء تلك المرحلة :
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+   <font style="font-size: 11pt">
+    <b>
+     <font color="#DF7000">
+     </font>
+    </b>
+    تجنبى إعطاء الطفل (بياض البيض - اللبن البقرى - العصائر 
+        الحمضية - البندق - الفستق - العسل الأبيض) إلا بعد بلوغه العام الأول ، 
+        فهذه الأطعمة قد تؤدى إلى حدوث حساسية للطفل .. فالفاكهة الحمضية تكون 
+        عالية الحموضة بالنسبة للطفل ، و قد تؤدى إلى ألم و طفح جلدى مكان الحفاضة 
+        ، و البندق و الفستق قد يسبب الاختناق للطفل أثناء تناوله بسبب صلابته ، و 
+        العسل الأبيض ممنوع إعطائه قبل سنة من عمر الطفل فقد يسبب تسمم للطفل.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="center" style="line-height: 200%; text-align:center">
+   <img border="0" height="90" src="images/016H.png" width="120"/>
+   <img border="0" height="98" src="images/016I.png" width="88"/>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+   <font style="font-size: 11pt">
+    <b>
+     <font color="#DF7000">
+     </font>
+    </b>
+    لا تتركى طفلك بمفرده أثناء تناوله الطعام.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+   <font style="font-size: 11pt">
+    <b>
+     <font color="#DF7000">
+     </font>
+    </b>
+    تجنبى الأطعمة التى قد تسبب له الاختناق مثل (حبات العنب 
+        الكاملة - الخضار الغير مطهى جيدا - الفاكهة الصلبة - الزبيب - قطع الجبن 
+        الصلبة - و الحلويات الصلبة).
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+   <font style="font-size: 11pt">
+    <b>
+     <font color="#DF7000">
+     </font>
+    </b>
+    إذا لاحظتى رفض الطفل لمذاق نوع ما من الطعام فلا تتوقفى عن 
+        إعطائه له ، لكن انتظرى عدة أيام ثم حاولى تقديمه له مرة أخرى ، و يمكنك 
+        أيضا خلطه مع نوع آخر من الطعام تعلمين أن طفلك يحبه.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <img border="0" height="10" src="../../n_images/numbers/icon_no.png" width="10"/>
+   <font style="font-size: 11pt">
+    <b>
+     <font color="#DF7000">
+     </font>
+    </b>
+    لا تحاولى إعطاء الطفل نوع جديد من الطعام و هو مريض أو سيئ 
+        المزاج بسبب التسنين مثلا ، فقد يرتبط ذلك مع الطفل بحيث يربط بين شعوره 
+        بالألم و المرض و بين هذا النوع من الطعام فيرفضه و لا يتقبله نهائيا بعد 
+        ذلك.
+   </font>
+  </p>
+  <div class="products_box" dir="rtl" style="width: 520; height: 0">
+   <p dir="rtl" style="line-height: 200%">
+   </p>
+  </div>
+  <p dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <b>
+    <font color="#F7941D" size="4">
+     طعام الطفل من سن سنة إلى سنتين
+     <br/>
+    </font>
+   </b>
+   <font style="font-size: 11pt">
+    <br/>
+    فى هذه المرحلة من عمر الطفل يبدأ تغيير طبيعته الغذائية حيث تقترب طبيعة 
+        طعامه من الكبار ، و هنا يأتى دور الأم فى محاولة تقديم مختلف القوام و 
+        النكهات للطعام كى يعتاد عليها.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; text-align:center">
+   <img border="0" height="187" src="images/016J.png" width="150"/>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    و لأن بطون الأطفال صغيرة فعلى الأم محاولة تقديم وجبات صغيرة لكنها غنية 
+        بالمواد المغذية التى تساعدهم على النمو ليكونوا أصحاء و أقوياء ، و عليها 
+        تجنب الحلوى التى تعطيهم سعرات حرارية دون أى مواد مغذية من فيتامينات و 
+        معادن هامة.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    و ننصح بتقسيم وجبات الطفل خلال اليوم إلى ثلاث وجبات رئيسية تتخللهم 2 إلى 
+        3 وجبات خفيفة.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    يبدأ الطفل فى هذا السن تعلم تناول الطعام بنفسه ، فى البداية بالأصابع ثم 
+        يبدأ استخدام أدوات المائدة مثل الملعقة فى سن 15 - 18 شهر تقريبا ، و على 
+        الأم إعطائه الفرصة كى يُنمى مهاراته ، حيث يحب الطفل أيضا فى هذا السن 
+        إظهار استقلاله و اعتماده على نفسه فلا تحاولى منعه من هذا الإحساس و 
+        اتركيه وقت تناول الطعام يفعل ما يشاء.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; text-align:center">
+   <img border="0" height="128" src="images/016K.png" width="190"/>
+  </p>
+  <div class="products_box" dir="rtl" style="width: 520; height: 0">
+   <p dir="rtl" style="line-height: 200%">
+   </p>
+  </div>
+  <p dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font color="#00B5F0" size="3">
+    الأطعمة التي يجب تجنبها :
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    يبدأ الطفل فى هذا السن تناول بعض الأطعمة التى كانت ممنوعة قبل عمر سنة 
+        مثل (الحليب البقرى و الفواكه الحمضية و بياض البيض) ، و فى بعض الحالات 
+        ينصح بالامتناع عن بعض الأطعمة فى حالة وجود تاريخ عائلى لدى الأب أو الأم 
+        بالحساسية من طعام ما ، ففى تلك الحالة يفضل عدم إعطاء الطفل هذا الطعام 
+        إلا بعد سن 2 إلى 3 سنوات ، و يجب تجنب الأطعمة التى قد تسبب اختناق الطفل 
+        مثل (الذرة الصفراء - الفيشار - المقانق - الهوت دوج - الزبيب - البندق - 
+        العنب).
+   </font>
+  </p>
+  <div class="products_box" dir="rtl" style="width: 520; height: 0">
+   <p dir="rtl" style="line-height: 200%">
+   </p>
+  </div>
+  <p dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font color="#00B5F0" size="3">
+    طفلك و الحليب :
+    <br/>
+   </font>
+   <font style="font-size: 11pt">
+    <br/>
+    يعتبر الحليب البقرى جزء هام و ضرورى من غذاء الطفل حيث يحتوى على فيتامين 
+        د و الكالسيوم الضروريان لنمو عظام الطفل.
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; text-align:center">
+   <img border="0" height="120" src="images/016L.png" width="149"/>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    و فى سن 12 إلى 18 شهر يكون الوقت المناسب لبدء تعليم الطفل على الشرب من 
+        الكوب ، فينصح بإعطائه الحليب فى كوب و ليس فى الرضّاعة.
+   </font>
+  </p>
+  <div class="products_box" dir="rtl" style="width: 520; height: 0">
+   <p dir="rtl" style="line-height: 200%">
+   </p>
+  </div>
+  <p dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font color="#00B5F0" size="3">
+    طفلك و الحديد :
+    <br/>
+   </font>
+   <font style="font-size: 11pt">
+    <br/>
+    بعد بلوغ الطفل عامه الأول يكون من الضرورى التأكد من عدم وجود نقص الحديد 
+        لدى الطفل حتى لا يؤثر ذلك على الطفل و يجعله عرضة للإصابة بمرض فقر الدم 
+        (الأنيميا).
+   </font>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%; text-align:center">
+   <img border="0" height="135" src="images/016M.png" width="145"/>
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+  </p>
+  <p align="justify" dir="rtl" style="line-height: 200%">
+   <font style="font-size: 11pt">
+    و لوقاية الطفل من الإصابة بنقص الحديد ينصح بالإكثار من تناول الأطعمة 
+        الغنية بالحديد مثل (الوجبات الخفيفة المدعمة بالحديد - اللحوم - الدجاج - 
+        الأسماك - الفاصوليا - التفاح - عصير الطماطم - شورية الخضار) ، كما ننصح 
+        بإعطاء الطفل الحبوب المدعمة.
+   </font>
+  </p>
+  <div class="products_box" dir="rtl" style="width: 520; height: 0">
+   <p dir="rtl" style="line-height: 200%">
+   </p>
+  </div>
+  <p dir="rtl" style="line-height: 200%">
+  </p>
+  <p dir="rtl" style="line-height: 200%">
+   <font color="#11B8F7">
+    <span style="font-size: 11pt">
+     استعراض مادة فيلمية مصورة 
+توضيحية
+    </span>
+   </font>
+  </p>
+  <p dir="rtl" style="line-height: 200%">
+  </p>
+  <p dir="rtl" style="line-height: 200%">
+   <a <a="" class="video_link" href="/Pregnancy/Newborn/016_video1.flv" title="&lt;font face=Tahoma&gt;&lt;small&gt;&lt;font size=2&gt;&lt;font color=#D7D7D7&gt;© CopyRights : www.123esaaf.com™">
+    <img border="0" height="40" name="pic_video1" onmouseout="document.pic_video1.src='../../n_images/video_file.png'" onmouseover="document.pic_video1.src='../../n_images/video_file_hover.png'" src="../../n_images/video_file.png" title="فيلم إرشادى عن الأطعمة التى ينصح بها للطفل من عمر 8 إلى 12 شهر" width="40"/>
+   </a>
+  </p>
+ </body>
+</div>
+<a <a="" class="video_link" href="/Pregnancy/Newborn/016_video2.flv" title="&lt;font face=Tahoma&gt;&lt;small&gt;&lt;font size=2&gt;&lt;font color=#D7D7D7&gt;© CopyRights : www.123esaaf.com™">
+ <img border="0" height="40" name="pic_video2" onmouseout="document.pic_video2.src='../../n_images/video_file.png'" onmouseover="document.pic_video2.src='../../n_images/video_file_hover.png'" src="../../n_images/video_file.png" title="فيلم إرشادى عن الأطعمة التى ينصح بها للطفل من عمر 8 إلى 12 شهر" width="40"/>
+</a>
+<a <a="" class="video_link" href="/Pregnancy/Newborn/016_video3.flv" title="&lt;font face=Tahoma&gt;&lt;small&gt;&lt;font size=2&gt;&lt;font color=#D7D7D7&gt;© CopyRights : www.123esaaf.com™">
+ <img border="0" height="40" name="pic_video3" onmouseout="document.pic_video3.src='../../n_images/video_file.png'" onmouseover="document.pic_video3.src='../../n_images/video_file_hover.png'" src="../../n_images/video_file.png" title="فيلم إرشادى عن الأطعمة التى ينصح بها للطفل من عمر سنة إلى سنتين" width="40"/>
+</a>
+<a <a="" class="video_link" href="/Pregnancy/Newborn/016_video4.flv" title="&lt;font face=Tahoma&gt;&lt;small&gt;&lt;font size=2&gt;&lt;font color=#D7D7D7&gt;© CopyRights : www.123esaaf.com™">
+ <img border="0" height="40" name="pic_video4" onmouseout="document.pic_video4.src='../../n_images/video_file.png'" onmouseover="document.pic_video4.src='../../n_images/video_file_hover.png'" src="../../n_images/video_file.png" title="فيلم إرشادى لشرح نصائح عن كيفية إعداد وجبة صحيحة لطفلك" width="40"/>
+</a>
+<div class="products_box" dir="rtl" style="width: 520; height: 0">
+ <p dir="rtl" style="line-height: 200%">
+ </p>
+</div>
+<p dir="rtl" style="line-height: 200%">
+</p>
+<table border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%">
+ <tr>
+ </tr>
+</table>
+<table border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%">
+ <tr>
+ </tr>
+</table>
+<p dir="rtl" style="line-height: 200%; ">
+ <font size="1">
+  <font color="#DF7000">
+   <img border="0" height="20" src="../../n_images/numbers/thank_you.png" width="20"/>
+   <span lang="ar-eg">
+   </span>
+   شكر خاص
+  </font>
+  <font color="#6898AC">
+   للدكتورة / رنيم علاء زوين على مجهودها الطيب فى إعداد 
+المادة العلمية بهذه الصفحة من الموقع
+   <span lang="ar-eg">
+    .
+   </span>
+  </font>
+ </font>
+</p>
+<table border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%">
+ <tr>
+ </tr>
+</table>
+<div class="products_box" dir="rtl" style="width: 520; height: 0">
+ <p dir="rtl" style="line-height: 200%">
+ </p>
+</div>
+<p dir="rtl" style="line-height: 200%">
+</p>
+<div class="contact_info_box" dir="rtl">
+ <div class="adress" dir="rtl">
+  <p dir="rtl" style="line-height: 200%; text-align:center">
+   <font color="#36668D">
+    <span style="font-size: 8.5pt">
+     المعلومات المذكورة هنا تمت 
+            مراجعتها طبيا و غرضها الرئيسى هو زيادة الوعى الثقافى الطبى لدى 
+            المواطن العربى ، و هى لا تغنى عن استشارة الطبيب المتخصص فهو الجهة 
+            الوحيدة القادرة على توجيهكم و علاجكم بشكل صحيح ، كما أن المادة 
+            المذكورة هنا على قدر صحتها و تخصصها إلا أننا لا ننصح أن يعتمد عليها 
+            طلبة كليات الطب كمرجع دراسى لهم
+    </span>
+   </font>
+  </p>
+ </div>
+</div>
+<div class="contact_info_box" dir="rtl">
+ <div class="adress" dir="rtl">
+  <p dir="rtl" style="line-height: 200%; text-align:center">
+   <span style="font-size: 8.5pt">
+    إذا كانت لديك أى ملاحظات على الصفحة 
+            الحالية ، يسعدنا أن ترسل لنا إيميل تحدد فيه بياناتك و بيانات الصفحة 
+            المطلوبة و ملاحظاتك عليها على البريد الإلكترونى التالى
+    <br/>
+   </span>
+  </p>
+ </div>
+</div>
+<a href="/cdn-cgi/l/email-protection#b2e0d7c4dbd7c5ed838081d7c1d3d3d4f2daddc6dfd3dbde9cd1dddf" id="linky4" style="text-decoration: none">
+ <span style="font-size: 8.5pt">
+  <span class="__cf_email__" data-cfemail="4d1f283b24283a127c7f7e283e2c2c2b0d252239202c2421632e2220">
+   [email protected]
+  </span>
+ </span>
+</a>
+<p dir="rtl" style="line-height: 200%; text-align:center">
+ <font color="#36668D" style="font-size: 8.5pt">
+  لمعرفة المصدر و 
+            المراجع الطبية المقتبس منها هذه المادة (
+  <a href="../../n_references.html" id="linky4" style="text-decoration: none" target="_blank">
+   إضغط هنا
+  </a>
+  )
+ </font>
+</p>
+<!--end of main content-->
+<!--end of main content-->
+<div id="advertising">
+ <p dir="ltr" style="text-align: center">
+  <font face="Tahoma" style="font-size: 9pt">
+   <img border="0" height="60" src="../../n_images/sponsors/hadith.png" width="196"/>
+  </font>
+ </p>
+</div>
+<div id="footer">
+ <div class="copyright">
+  <a href="http://www.alabdelaziz.com" target="_blank">
+   <img alt="" border="0" height="58" src="../../n_images/footer_logo.png" title="" width="300"/>
+  </a>
+ </div>
+ <div class="footer_links" style="width: 531; height: 54">
+  <p dir="rtl">
+   <font face="Tahoma" style="font-size: 8pt">
+    <a href="../../n_staff.html">
+     القائمين على الموقع
+    </a>
+    <a href="../../n_privacy.html">
+     سياسة الخصوصية و شروط 
+        الاستخدام
+    </a>
+    <a href="../../n_references.html" target="_blank">
+     المراجع الطبية
+    </a>
+    <a href="../../n_contact.html" target="_blank">
+     الاتصال بنا
+    </a>
+   </font>
+  </p>
+ </div>
+</div>
+<a href="#" style="position: fixed; bottom:5px;left:88px;" title="عودة لأعلى">
+ <img height="25" src="../../n_images/go_up.png" style="border: none;" width="25"/>
+</a>
+<!--end of main container-->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+</script>
+<body oncontextmenu="return false;">
+</body>
+<script type="text/javascript">
+ disableSelection(document.body) //disable text selection on entire body of page
+</script>

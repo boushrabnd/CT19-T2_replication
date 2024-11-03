@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ar" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <link href="/imgs/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <style>
+   @font-face{font-family:'DinNext';font-style:normal;font-weight:400;src:url('/css/fonts/dinnext/DinNextRegular.eot?v=1');src:url('/css/fonts/dinnext/DinNextRegular.eot?v=1') format('embedded-opentype'), url('/css/fonts/dinnext/DinNextRegular.woff?v=1') format('woff'), url('/css/fonts/dinnext/DinNextRegular.ttf?v=1') format('truetype'), url('/css/fonts/dinnext/DinNextRegular.svg?v=1#DinNextRegular') format('svg');}@font-face{font-family:'DinNext';font-style:normal;font-weight:600;src:url('/css/fonts/dinnext/DinNextMedium.eot?v=1');src:url('/css/fonts/dinnext/DinNextMedium.eot?v=1') format('embedded-opentype'), url('/css/fonts/dinnext/DinNextMedium.woff?v=1') format('woff'), url('/css/fonts/dinnext/DinNextMedium.ttf?v=1') format('truetype'), url('/css/fonts/dinnext/DinNextMedium.svg?v=1#DinNextMedium') format('svg');}@font-face{font-family:'DinNext';font-style:normal;font-weight:700;src:url('/css/fonts/dinnext/DinNextBold.eot?v=1');src:url('/css/fonts/dinnext/DinNextBold.eot?v=1') format('embedded-opentype'), url('/css/fonts/dinnext/DinNextBold.woff?v=1') format('woff'), url('/css/fonts/dinnext/DinNextBold.ttf?v=1') format('truetype'), url('/css/fonts/dinnext/DinNextBold.svg?v=1#DinNextBold') format('svg');}
+    *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-family:DinNext;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;color:#bf3822;text-decoration:none;}a:active,a:hover{outline:0}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.container{margin-left:auto;margin-right:auto;padding-right:15px;padding-left:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-left:auto;margin-right:auto;padding-right:15px;padding-left:15px}.row{margin-right:-15px;margin-left:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:right}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:right}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:right}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:right}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}}.nav{margin-bottom:0;padding-right:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}@media (min-width:768px){.nav-tabs.nav-justified>li>a{border-bottom:1px solid #ddd;border-radius:4px 4px 0 0}.nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>.active>a:hover,.nav-tabs.nav-justified>.active>a:focus{border-bottom-color:#fff}}.nav-pills>li{float:right}.nav-pills>li>a{border-radius:4px}.nav-pills>li+li{margin-right:2px}.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus{color:#fff;background-color:#bf3822}.nav-stacked>li{float:none}.nav-stacked>li+li{margin-top:2px;margin-right:0}.nav-justified{width:100%}.nav-justified>li{float:none}.nav-justified>li>a{text-align:center;margin-bottom:5px}.nav-justified>.dropdown .dropdown-menu{top:auto;right:auto}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar-header{float:right}}.navbar-fixed-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse{max-height:340px}.navbar-static-top{z-index:1000;border-width:0 0 1px}.navbar-fixed-top,.navbar-fixed-bottom{position:fixed;left:0;right:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top,.navbar-fixed-bottom{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-fixed-bottom{bottom:0;margin-bottom:0;border-width:1px 0 0}.navbar-brand{float:right;padding:15px 15px;font-size:18px;line-height:20px;height:50px}.navbar-brand:hover,.navbar-brand:focus{text-decoration:none}.navbar-brand>img{display:block}@media (min-width:768px){.navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand{margin-right:-15px}}@media (min-width:768px){.navbar-nav{float:right;margin:0}.navbar-nav>li{float:right}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-left{float:left !important}.navbar-right{float:right !important;margin-right:-15px}.navbar-right~.navbar-right{margin-right:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after,.form-horizontal .form-group:before,.form-horizontal .form-group:after,.nav:before,.nav:after,.navbar:before,.navbar:after,.navbar-header:before,.navbar-header:after,.navbar-collapse:before,.navbar-collapse:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after,.form-horizontal .form-group:after,.nav:after,.navbar:after,.navbar-header:after,.navbar-collapse:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}
+    .sr-only {position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0;}
+    @media (min-width: 991px){.navbar-toggle {display: none;}}
+    .navbar-toggle {position: relative;float: left;margin: 10px 0;padding: 6px 8px;background: transparent;border: 0;border-radius: 0;}
+    ul,ol{padding:0;margin:0;list-style: none;}.dropdown-menu{display:none}
+    body{background:#f6f6f6 url(/imgs/bdy_bg.jpg) repeat-x left -280px;font:18px/1.4 'DinNext', Arial, Helvetica, sans-serif;color:#5d5d5f;direction:rtl;text-align:right;margin-top:100px;}
+    body.home{margin-top:0;background-position:center top;}
+    .owl-carousel .owl-stage-outer {position: relative;overflow: hidden;}
+    .site-header{padding-top:30px;padding-bottom:30px;border-bottom:solid 3px #dcccbf;background:#fff;display:none;}
+    .home .site-header{display:block;}
+    .logo img{height:90px;}
+    .top-ad{text-align:left;}
+    .top-ad img, .top-ad iframe, .top-ad embed{max-width:100%;}
+    .topnav{background:#f2ece4;font-size:16px;margin-top:30px;display:none;}
+    .topnav:after{content:'';display:block;clear:both;}
+    .ittihad-pdf{background:#bf3822;color:#fff;display:block;height:50px;padding:8px 12px;line-height:32px;font-size:14px;font-weight:bold;}
+    .ittihad-pdf i{float:left;font-size:32px;line-height:50px;overflow:hidden;margin-right:8px;margin:-8px 20px -8px 0;}
+    .ittihad-pdf i:after{margin:0;}
+    .ittihad-pdf:hover{background:#ba8d65;color:#fff;}
+    body:not(.home) .navbar {position:fixed;right:0;left:0;top:0;z-index:1030;}
+    nav.navbar{border-bottom:solid 2px #efefef;background:rgba(255, 255, 255, 0.9);border-radius:0;}
+    .navbar-fixed-top{box-shadow:0 1px 3px rgba(0, 0, 0, 0.05);}
+    nav.navbar:after{content:'';clear:both;display:block;}
+    .navbar-logo{padding:10px 0;margin-left:20px;height:60px;-webkit-transition:all .4s ease-in-out;-moz-transition:all .4s ease-in-out;-o-transition:all .4s ease-in-out;transition:all .4s ease-in-out;}
+    .navbar-logo img{max-height:100%;max-width:100%;width:auto;height:auto;}
+    .home .navbar-logo{height:1px;margin-left:0;overflow:hidden;}
+    .home .navbar-fixed-top .navbar-logo{height:60px;margin-left:20px;}
+    nav.navbar .navbar-collapse{padding:0;}
+    .navbar-nav > li{padding-left:10px;}
+    .navbar-nav > li > a{position:relative;display:block;padding:15px 10px;line-height:28px;font-size:16px;color:#000;}
+    .navbar-nav > li > a span{position:relative;z-index:20;}
+    .navbar-nav > li > a:after{content:'';width:100%;height:3px;background:#000;position:absolute;left:0;right:0;bottom:0;z-index:10;-webkit-transition:all .4s ease-in-out;-moz-transition:all .4s ease-in-out;-o-transition:all .4s ease-in-out;transition:all .4s ease-in-out;}
+    .navbar-nav > li > a i{font-size:11px;margin-right:5px;position:relative;z-index:20;line-height:1; display: inline-block}
+    .navbar-nav > li > a:hover, .navbar-nav > li.on > a, .navbar-nav > li.open > a{color:#fff;background:transparent;}
+    .navbar-nav > li > a:hover:after, .navbar-nav > li.on > a:after, .navbar-nav > li.open > a:after{height:100%;}
+    .navbar-nav .dropdown-menu{left:auto!important;background:#000;border:0;border-radius:0;margin:0;padding:0 10px;width:100%;box-shadow:0 1px 4px rgba(0, 0, 0, 0.1)}
+    .navbar-nav .dropdown-menu li a{display:block;color:#fff;line-height:42px;font-size:14px;border-bottom:solid 1px rgba(255, 255, 255, 0.2);width:100%;padding:0;}
+    .navbar-nav .dropdown-menu li a:hover, .navbar-nav .dropdown-menu li a:focus{background:rgba(255, 255, 255, 0.2);padding-right:5px;}
+    .navbar-nav > li.light-cyan > a:after{background:#4ee8fc;}
+    .navbar-nav > li.deep-cyan > a:after{background:#1f7089;}
+    .navbar-nav > li.vivid-orange > a:after{background:#f5800b;}
+    .navbar-nav > li.aquamarine > a:after{background:#1ee38e;}
+    .navbar-nav > li.strong-violet > a:after{background:#7a39c1;}
+    .navbar-nav > li.moderate-brown > a:after{background:#b38e6b;}
+    .navbar-nav > li.solid-black > a:after{background:#000000;}
+    .navbar-nav > li.strong-scarlet > a:after{background:#bf3822;}
+    .navbar-nav > li.bright-yellow > a:after{background:#ff9f1c;}
+    .navbar-nav > li.rose-madder > a:after{background:#e71d36;}
+    .navbar-nav > li.steel-blue > a:after{background:#348aa7;}
+    .navbar-nav > li.independence > a:after{background:#4f4f59;}
+    .navbar-nav > li.emerald > a:after{background:#32936f;}
+    .navbar-nav > li.fluorescent-orange > a:after{background:#ffbf00;}
+    .navbar-nav > li.paradise-pink > a:after{background:#e83f6f;}
+    .navbar-nav > li.lapis-lazuli > a:after{background:#2274a5;}
+    .navbar-nav > li.maximum-green > a:after{background:#679436;}
+    .navbar-nav > li.limerick > a:after{background:#a5be00;}
+    .navbar-nav > li.anti-flash > a:after{background:#ebf2fa;}
+    .navbar-nav > li.queen-blue > a:after{background:#427aa1;}
+    .navbar-nav > li.sea-blue > a:after{background:#05668d;}
+    .navbar-nav .light-cyan .dropdown-menu{background:#4ee8fc;}
+    .navbar-nav .deep-cyan .dropdown-menu{background:#1f7089;}
+    .navbar-nav .vivid-orange .dropdown-menu{background:#f5800b;}
+    .navbar-nav .aquamarine .dropdown-menu{background:#1ee38e;}
+    .navbar-nav .strong-violet .dropdown-menu{background:#7a39c1;}
+    .navbar-nav .moderate-brown .dropdown-menu{background:#b38e6b;}
+    .navbar-nav .solid-black .dropdown-menu{background:#000000;}
+    .navbar-nav .strong-scarlet .dropdown-menu{background:#bf3822;}
+    .navbar-nav .bright-yellow .dropdown-menu{background:#ff9f1c;}
+    .navbar-nav .rose-madder .dropdown-menu{background:#e71d36;}
+    .navbar-nav .steel-blue .dropdown-menu{background:#348aa7;}
+    .navbar-nav .independence .dropdown-menu{background:#4f4f59;}
+    .navbar-nav .emerald .dropdown-menu{background:#32936f;}
+    .navbar-nav .fluorescent-orange .dropdown-menu{background:#ffbf00;}
+    .navbar-nav .paradise-pink .dropdown-menu{background:#e83f6f;}
+    .navbar-nav .lapis-lazuli .dropdown-menu{background:#2274a5;}
+    .navbar-nav .maximum-green .dropdown-menu{background:#679436;}
+    .navbar-nav .limerick .dropdown-menu{background:#a5be00;}
+    .navbar-nav .anti-flash .dropdown-menu{background:#ebf2fa;}
+    .navbar-nav .queen-blue .dropdown-menu{background:#427aa1;}
+    .navbar-nav .sea-blue .dropdown-menu{background:#05668d;}
+    .site-search{margin-top:10px;background:#fff;border:solid 1px #f2ece4;height:40px;padding-left:40px;position:relative;}
+    .site-search input{height:34px;border:0;padding:0 15px;line-height:34px;font-size:20px;color:#000;width:200px;}
+    .site-search input::placeholder{color:#000;}
+    .site-search a{display:block;width:38px;height:38px;position:absolute;left:0;top:0;color:#000;font-size:22px;line-height:36px;text-align:center;}
+    .site-search a:hover{color:#bf3822;}
+    .mobile-search{display:none;width:40px;height:52px;color:#000;font-size:22px;line-height:46px;text-align:center;margin-top:8px;}
+    .mobile-search.open{background:#efefef;}
+    .navbar-toggle{margin:10px 0;padding:6px 8px;border-radius:0;background:#000;}
+    .navbar-toggle.collapsed{background:transparent;}
+    .navbar-toggle .icon-bar{height:4px;margin-bottom:3px;background:#fff;width:30px;transform:skewx(-54deg);-moz-transform:skewx(-54deg);-webkit-transform:skewx(-54deg);}
+    .navbar-toggle .icon-bar:last-child{margin-bottom:0;}
+    .navbar-toggle.collapsed .icon-bar{background:#000;}
+    .navbar-toggle{margin:10px 0;padding:6px 8px;border-radius:0;background:#000;}
+    .navbar-toggle.collapsed{background:transparent;}
+    .navbar-toggle .icon-bar{height:4px;margin-bottom:3px;background:#fff;width:30px;transform:skewx(-54deg);-moz-transform:skewx(-54deg);-webkit-transform:skewx(-54deg);}
+    .navbar-toggle .icon-bar:last-child{margin-bottom:0;}
+    .navbar-toggle.collapsed .icon-bar{background:#000;}
+    .mainpagewrap{opacity:0;-webkit-transition:all .6s ease-in-out;-moz-transition:all .6s ease-in-out;-o-transition:all .6s ease-in-out;transition:all .6s ease-in-out;}
+    .slim-list-itm h4, .slim-list-itm h3{font-size: 14px;margin:0;font-weight:600;}
+    .slim-list-itm h4 a, .slim-list-itm h3 a{color:#000;}
+    .slim-list-itm h4 a:hover, .slim-list-itm h3 a:hover{color:#bf3822;}
+    .overlay-color h2, .overlay-color h3{font-size:23px;line-height:27px;width:auto;max-width:90%;padding:8px 30px 16px 80px;right:auto;left:-55px;bottom:30px;}
+    .overlay a, a.overlay{color:#fff;-webkit-transition: color 0 ease-in-out;-moz-transition: color 0 ease-in-out;-o-transition: color 0 ease-in-out;transition: color 0 ease-in-out}
+    @media (max-width:1200px){.container{width:990px;}
+      .navbar-nav > li{padding-left:5px;}
+      .navbar-nav > li > a{padding:15px 5px;}
+    }
+    @media (max-width:992px){
+      .container{width:760px;}
+      .site-header{padding-top:15px;padding-bottom:15px;}
+      .site-header .logo{text-align:center;}
+      .top-ad{text-align:center;padding:15px 15px 0;}
+      .navbar-nav{margin:0;}
+      .navbar-collapse{clear:both;overflow-y:auto;}
+      .navbar-nav, .navbar-nav>li{float:none;padding:0;margin-bottom:1px;}
+      .navbar-nav > li > a{padding:5px 10px;position:relative;}
+      .navbar-nav > li > a:after{height:1px;}
+      .navbar-nav > li > a i{position:absolute;left:0;top:0;width:40px;height:100%;text-align:center;line-height:38px;}
+      .navbar-nav>li>.dropdown-menu{position:static;float:none;box-shadow:0 0 0;}
+      .site-search{display:none;}
+      .navbar-collapse {clear: both;overflow-y: auto;display:none;}
+    }
+    @media (max-width:767px){
+      .container{width:100%;}
+      /*.top-ad {display:none;}*/
+      .topnav{position:relative;margin-top:15px;}
+      .topnav > .container{padding:0;}
+      body{margin-top:80px;}
+      body.home{margin-top:0;}
+    }
+    @media (max-width:619px){
+      .logo img{height:49px;}
+    }
+  </style>
+  <title>
+   صحيفة الاتحاد - في دوري أبطال أوروبا.. الجميع يريد تجنب ليفربول وأتلتيكو
+  </title>
+  <script async="" src="/js/jquery.min.js">
+  </script>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Article" property="og:type"/>
+  <meta content="380003235874128" property="fb:app_id"/>
+  <meta content="ar_AR" property="og:locale"/>
+  <!-- GPT Header Part Tag End-->
+  <script>
+   var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function() {
+   var gads = document.createElement('script');
+   gads.async = true;
+   var useSSL = 'https:' == document.location.protocol;
+   gads.src = (useSSL ? 'https:' : 'http:') +
+       '//www.googletagservices.com/tag/js/gpt.js';
+   var node = document.getElementsByTagName('script')[0];
+   node.parentNode.insertBefore(gads, node);
+ })();
+  </script>
+  <script>
+   var gptAdSlots = [];
+ googletag.cmd.push(function() {
+
+
+  var mapping1= googletag.sizeMapping().
+   addSize([100, 100], [88, 31]). 
+   addSize([320, 400], [[320, 50], [300, 50]]). 
+   addSize([320, 700], [[320, 50], [300, 50]]).
+   addSize([750, 200], [728, 90]). 
+   addSize([1050, 200], [[728, 90],[970, 90],[970,250]]).build();
+   
+    var mapping2= googletag.sizeMapping().
+   addSize([100, 100], [88, 31]). 
+   addSize([320, 400], [300, 250]). 
+   addSize([320, 700], [300, 250]).
+   addSize([750, 200], [300, 250]). 
+   addSize([1050, 200], [300, 600]).build();
+   
+   var mapping3= googletag.sizeMapping().
+   addSize([100, 100], [88, 31]). 
+   addSize([320, 400], [300, 250]). 
+   addSize([320, 700], [300, 250]).
+   addSize([750, 200], [300, 250]). 
+   addSize([1050, 200], [300, 250]).build();
+   
+  
+  
+   var mapping4= googletag.sizeMapping().
+   addSize([100, 100], [1, 1]). 
+   addSize([320, 400],[1, 1]). 
+   addSize([320, 700], [1, 1]).
+   addSize([750, 200], [1, 1]). 
+   addSize([1050, 200], [1, 1]).build();
+
+  gptAdSlots[1] = googletag.defineSlot('/5730/alittihad.ae_sport', [320, 20], 'leaderboard').							
+  defineSizeMapping(mapping1).
+  setCollapseEmptyDiv(true).
+  addService(googletag.pubads());
+
+  gptAdSlots[2] = googletag.defineSlot('/5730/alittihad.ae_sport', [300, 250], 'HPB').							
+  defineSizeMapping(mapping2).
+  setCollapseEmptyDiv(true).
+  addService(googletag.pubads());
+  
+  gptAdSlots[3] = googletag.defineSlot('/5730/alittihad.ae_sport', [300, 250], 'mpu').							
+  defineSizeMapping(mapping3).
+  setCollapseEmptyDiv(true).
+  addService(googletag.pubads());
+  
+  gptAdSlots[4] = googletag.defineSlot('/5730/alittihad.ae_sport', [1, 1], 'skin').							
+  defineSizeMapping(mapping4).
+  addService(googletag.pubads());
+  
+  googletag.defineOutOfPageSlot('/5730/alittihad.ae_sport', 'overlay').addService(googletag.pubads());
+    
+    googletag.defineSlot('/5730/alittihad_native_videos', ['fluid'], 'div-gpt-ad-1543874238718-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+  </script>
+  <!-- GPT Header Part Tag End-->
+  <!-- Google Tag Manager -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-52067102-1">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-52067102-1');
+  </script>
+  <!-- End Google Tag Manager -->
+  <link href="https://www.alittihad.ae/article/80442/2018/في-دوري-أبطال-أوروبا--الجميع-يريد-تجنب-ليفربول-وأتلتيكو" rel="canonical"/>
+  <link href="https://www.alittihad.ae/articleamp/80442/2018/في-دوري-أبطال-أوروبا--الجميع-يريد-تجنب-ليفربول-وأتلتيكو" rel="amphtml">
+   <meta content="في دوري أبطال أوروبا.. الجميع يريد تجنب ليفربول وأتلتيكو" name="title"/>
+   <meta content="في دوري أبطال أوروبا.. الجميع يريد تجنب ليفربول وأتلتيكو" name="twitter:title"/>
+   <meta content="
+
+" name="twitter:description"/>
+   <meta content="قرعة دوري أبطال أوروبا، ريال مدريد، برشلونة، ليفربول، مانشستر سيتي، أهداف دوري الأبطال" name="Keywords"/>
+   <meta content="
+
+" name="description"/>
+   <meta content="
+
+" property="og:description"/>
+   <meta content="في دوري أبطال أوروبا.. الجميع يريد تجنب ليفربول وأتلتيكو" property="og:title"/>
+   <meta content="https://www.alittihad.ae/article/80442/2018/" property="og:url"/>
+   <meta content="https://www.alittihad.ae/assets/images/Articles/750x425/2018/12/20181216181557906E2.jpg" property="og:image"/>
+   <meta content="https://www.alittihad.ae/assets/images/Articles/750x425/2018/12/20181216181557906E2.jpg" property="twitter:image"/>
+  </link>
+ </head>
+ <body id="PgBody">
+  <form action="./في-دوري-أبطال-أوروبا--الجميع-يريد-تجنب-ليفربول-وأتلتيكو?ArticleId=80442&amp;YearID=2018" id="form1" method="post" onsubmit="javascript:return WebForm_OnSubmit();">
+   <div class="aspNetHidden">
+    <input id="__EVENTTARGET" name="__EVENTTARGET" type="hidden" value=""/>
+    <input id="__EVENTARGUMENT" name="__EVENTARGUMENT" type="hidden" value=""/>
+    <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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"/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+   </script>
+   <script src="/WebResource.axd?d=eSwvJ29ASq6IIbITfzi4JCEeqU6aBpF7oiOkdXUR0iSs49cSiJBOIGLkUl32r5MS6pR1A6tkKhDdv_KjR55YHOnTQs01&amp;t=636639624820249788" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=v_-IKDmePWh1bStP4mbAWGK3_1BI8xPY99DWEK1XNq0-V5HdryoS1XijYNEygmfXNK840-0C05KZPs-3KB1ldrJCviZs9ckH43NYoIly9fcG6yUMYFI9MXIZ8lnLWXfRuhYZd6MA-7NfBdxBouQxeRxMmTA1&amp;t=ffffffffcd955fc1" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=k0wZR7DILkQp4Hdq-WpaCGcKaYjXOLFn-fCc-PJfxlRTWlP88PSgUEhc5rQ7wOoNKXVxQBRCxCHO-FokXwZ_j4JgghI2F7FrYCYM_f6IhuvRbY1U-FCkgFsODrA7l0uILvD8vNQGu10CrnqlZb-h1aYlHaM1&amp;t=ffffffffcd368728" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=o5t_tgCtzrkE6D9rfE181m5cIuK3vFC2uWvEbe9RicKT7yqx0vO-1_noJFuriqr58V6BgJZ9nCm4LCRR3344seX4ZK_IhJ9SYLNlLnu2RpBCHoAZybW-70rlfNcWmZG-6yG9PshYE98i0J4iaoeuwrGASyGtYYHyyu7i-UTSxhwCYLM_0&amp;t=ffffffffcd368728" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+   </script>
+   <div class="aspNetHidden">
+    <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="2173C2F0"/>
+    <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="vEjJ++Owk5jaVYjfrEcHaglcv851EYNK5xYM9sjSkXzDWjRxW235zR3vGtmiyZRCxEaHgxqgx2oKwTudTOPl5bEMDfveYIvmpY5JqSui7UjGI+PrRaDDhN7w8PNJc1ltGYtAl3cWuroRjUqildQez6CDwyH49ZrAmAE2c+x7uvUNdZ1iyoK+TSK7Gg39jv8X/SECu16pimQOcEkALKJujdjpA9TlBnKRZ6BQGUdD3jTJT/CmkBp4r0fVaV+go0AThdQdhuW80sLj0w8fjLl9C4In+fCpZRbeD+auvVzHPrcmzpP6EYFUtGIHd0A5l2ajuofcPBWKrwMDY4jFnrvTgD7t3nvvFfYtNhwnbssolbgQO51AH4bnjns62+CcpmpXcAbT9U9RVKSIUQCNZiHTWtbdHiug1oZZcc6Rfkn2I3uiWiqnX437hRkvzTMbyF75McpsrJebfl6wijXuXJG1R1029KA="/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$sc1', 'form1', ['tctl00$upmailList','upmailList'], [], [], 90, 'ctl00');
+//]]>
+   </script>
+   <nav class="navbar">
+    <div class="container">
+     <div class="navbar-wrap">
+      <div class="navbar-logo pull-right">
+       <a href="/" title="صحيفة الاتحاد">
+        <img alt="صحيفة الاتحاد" src="/imgs/logo.png"/>
+       </a>
+      </div>
+      <div class="navbar-header pull-right">
+       <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#mainnav-collapse" data-toggle="collapse" type="button">
+        <span class="sr-only">
+         القائمة الرئيسية
+        </span>
+        <span class="icon-bar">
+        </span>
+        <span class="icon-bar">
+        </span>
+        <span class="icon-bar">
+        </span>
+       </button>
+      </div>
+      <div class="pull-left mobile-search">
+       <i class="co-search">
+       </i>
+      </div>
+      <div class="navbar-left site-search" id="PnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'LinkSearch')">
+       <input class="search-txt" id="txtSearch" name="ctl00$txtSearch" placeholder="ابحث هنا" type="text"/>
+       <a class="search-btn" href="javascript:__doPostBack('ctl00$LinkSearch','')" id="LinkSearch">
+        <i class="co-search">
+        </i>
+       </a>
+      </div>
+      <div class="collapse navbar-collapse" id="mainnav-collapse">
+       <ul class="nav navbar-nav">
+        <li class="dropdown light-cyan">
+         <a href="/section/2/الإمارات">
+          <span>
+           الإمارات
+           <input id="RepHeaderMenu_HiddenSecID_0" name="ctl00$RepHeaderMenu$ctl00$HiddenSecID" type="hidden" value="2"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown sea-blue">
+         <a href="/section/3/عربي-ودولي">
+          <span>
+           عربي ودولي
+           <input id="RepHeaderMenu_HiddenSecID_1" name="ctl00$RepHeaderMenu$ctl01$HiddenSecID" type="hidden" value="3"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown bright-yellow">
+         <a href="/section/26/الاقتصادي">
+          <span>
+           الاقتصادي
+           <input id="RepHeaderMenu_HiddenSecID_2" name="ctl00$RepHeaderMenu$ctl02$HiddenSecID" type="hidden" value="26"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown emerald">
+         <a href="/section/51/الرياضي">
+          <span>
+           الرياضي
+           <input id="RepHeaderMenu_HiddenSecID_3" name="ctl00$RepHeaderMenu$ctl03$HiddenSecID" type="hidden" value="51"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown independence">
+         <a href="/wejhat.aspx">
+          <span>
+           وجهات نظر
+           <input id="RepHeaderMenu_HiddenSecID_4" name="ctl00$RepHeaderMenu$ctl04$HiddenSecID" type="hidden" value="55"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown strong-violet">
+         <a href="/section/33/منوعات">
+          <span>
+           منوعات
+           <input id="RepHeaderMenu_HiddenSecID_5" name="ctl00$RepHeaderMenu$ctl05$HiddenSecID" type="hidden" value="33"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown moderate-brown">
+         <a href="/section/78/ثقافة">
+          <span>
+           ثقافة
+           <input id="RepHeaderMenu_HiddenSecID_6" name="ctl00$RepHeaderMenu$ctl06$HiddenSecID" type="hidden" value="78"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown lapis-lazuli">
+         <a href="/section/133/ملفات">
+          <span>
+           ملفات
+           <input id="RepHeaderMenu_HiddenSecID_7" name="ctl00$RepHeaderMenu$ctl07$HiddenSecID" type="hidden" value="133"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+     </div>
+    </div>
+   </nav>
+   <div class="mainpagewrap">
+    <div class="container">
+     <div class="box-home box-ad">
+      <div id="leaderboard">
+       <script>
+        googletag.cmd.push(function() { googletag.display('leaderboard'); });
+       </script>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-md-8 article-content">
+       <div class="articlecontentt">
+        <article class="box-home article-page emerald" id="ContentPlaceHolder1_ArticleTag" itemscope="" itemtype="http://schema.org/NewsArticle">
+         <meta content="ar" itemprop="inLanguage"/>
+         <meta content="True" itemprop="isFamilyFriendly"/>
+         <meta content="https://www.alittihad.ae/article/80442/2018/في-دوري-أبطال-أوروبا--الجميع-يريد-تجنب-ليفربول-وأتلتيكو" itemprop="url"/>
+         <meta content="تسحب الإثنين في نيون السويسرية قرعة الدور ثمن النهائي لمسابقة دوري أبطال أوروبا لكرة القدم، حيث تأمل الفرق المصنفة أولى تجنب كل من ليفربول الإنجليزي وصيف البطل وأتلتيكو مدريد الإسباني.واعتقدت فرق كبيرة مثل ريال مدريد الإسباني حامل اللقب وغريمه المحلي برشلونة مع نجمه الأرجنتيني ليونيل ميسي، أو يوفنتوس الإيطالي ونجمه ..." itemprop="description"/>
+         <meta content="قرعة دوري أبطال أوروبا، ريال مدريد، برشلونة، ليفربول، مانشستر سيتي، أهداف دوري الأبطال" itemprop="keywords"/>
+         <meta content="تسحب الإثنين في نيون السويسرية قرعة الدور ثمن النهائي لمسابقة دوري أبطال أوروبا لكرة القدم، حيث تأمل الفرق المصنفة أولى تجنب كل من ليفربول الإنجليزي وصيف البطل وأتلتيكو مدريد الإسباني.واعتقدت فرق كبيرة مثل ريال مدريد الإسباني حامل اللقب وغريمه المحلي برشلونة مع نجمه الأرجنتيني ليونيل ميسي، أو يوفنتوس الإيطالي ونجمه ..." id="ContentPlaceHolder1_MetaItemEntity" itemprop="mainEntityOfPage"/>
+         <div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization" style="display: none;">
+          <span itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+           <img alt="الاتحاد" itemprop="url" src="/imgs/logo.png"/>
+          </span>
+          <span itemprop="name">
+           الاتحاد
+          </span>
+          <meta content="https://www.alittihad.ae" itemprop="url"/>
+          <meta content="https://www.facebook.com/aletihadae" itemprop="sameAs"/>
+          <meta content="https://twitter.com/aletihadae" itemprop="sameAs"/>
+          <meta content="https://instagram.com/aletihadae/" itemprop="sameAs"/>
+          <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+           <meta content="Office 1006 Indigo Icon Tower Jumeirah Lakes Towers Cluster F" itemprop="streetAddress"/>
+           <meta content="Dubai" itemprop="addressLocality"/>
+           <meta content="393475" itemprop="postalCode"/>
+           <meta content="UAE" itemprop="addressCountry"/>
+          </div>
+         </div>
+         <header>
+          <p class="box-home-title box-cat-title">
+           <span>
+            الرياضي
+           </span>
+          </p>
+          <h1 itemprop="name headline">
+           في دوري أبطال أوروبا.. الجميع يريد تجنب ليفربول وأتلتيكو
+          </h1>
+          <div class="article-meta">
+           <span class="article-meta-date">
+            <time datetime="2018-12-16T18:15:58+04:00" id="ContentPlaceHolder1_TimePubDate" itemprop="dateCreated datePublished dateModified">
+             16 ديسمبر 2018  -  06:15 PM
+            </time>
+           </span>
+          </div>
+         </header>
+         <div class="article-media">
+          <span>
+           <img alt="قرعة دوري أبطال أوروبا" id="ContentPlaceHolder1_Img1" itemprop="thumbnailUrl image" src="/assets/images/Articles/750x425/2018/12/20181216181557906E2.jpg">
+            <p class="article-media-tit">
+             قرعة دوري أبطال أوروبا
+            </p>
+           </img>
+          </span>
+         </div>
+         <div class="article-tags">
+          <a href="/tag/قرعة دوري أبطال أوروبا">
+           قرعة دوري أبطال أوروبا
+          </a>
+          <a href="/tag/ريال مدريد">
+           ريال مدريد
+          </a>
+          <a href="/tag/برشلونة">
+           برشلونة
+          </a>
+          <a href="/tag/ليفربول">
+           ليفربول
+          </a>
+          <a href="/tag/مانشستر سيتي">
+           مانشستر سيتي
+          </a>
+          <a href="/tag/أهداف دوري الأبطال">
+           أهداف دوري الأبطال
+          </a>
+         </div>
+         <div class="article-meta" id="ContentPlaceHolder1_DivSourceMetaWriter" itemprop="author" itemscope="" itemtype="http://schema.org/Person" style="display:none">
+          <span class="article-meta-writer" itemprop="name">
+           صحيفة الاتحاد
+          </span>
+         </div>
+         <div class="article-content-editor" itemprop="articleBody">
+          <p>
+           تسحب الإثنين في نيون السويسرية قرعة الدور ثمن النهائي لمسابقة دوري أبطال أوروبا لكرة القدم، حيث تأمل الفرق المصنفة أولى تجنب كل من ليفربول الإنجليزي وصيف البطل وأتلتيكو مدريد الإسباني.
+           <br/>
+           واعتقدت فرق كبيرة مثل ريال مدريد الإسباني حامل اللقب وغريمه المحلي برشلونة مع نجمه الأرجنتيني ليونيل ميسي، أو يوفنتوس الإيطالي ونجمه الجديد البرتغالي كريستيانو رونالدو، وبايرن ميونيخ الألماني مع هدافه البولندي روبرت ليفاندوفسكي، وباريس سان جرمان الفرنسي ونجمه البرازيلي نيمار، أن تصدرها لمجموعاتها في الدور الأول سيفتح الطريق أمامها لمهمة سهلة في ثمن النهائي.
+           <br/>
+           لكن فرق المستوى الثاني التي حلت وصيفة لها في مجموعاتها، تضم منافسين من الطراز الرفيع على غرار ليفربول وأتلتيكو مدريد الفائز الموسم الماضي بلقب مسابقة "يوروبا ليغ".
+           <br/>
+           ويحلم أتلتيكو بتعويض الخيبة التي عاشها عامي 2014 و2016 حين خسر النهائي بطريقة دراماتيكية أمام جاره اللدود ريال، لاسيما أن المباراة النهائية ستقام في الأول من يونيو على ملعبه "واندا متروبوليتانو".
+           <br/>
+           ومن حسن حظ ريال وبرشلونة، أن القرعة تقضي بعدم مواجهة فريقين من نفس البلد في الدور الثاني من المسابقة القارية، أو بين فريقين لعبا معاً في دور المجموعات.
+           <br/>
+           ونتيجة ذلك، تبدو الفرضية الأقوى بالنسبة لعملاقي إسبانيا التواجه مع الثلاثي الإنجليزي ليفربول ومانشستر يونايتد وتوتنهام التي حلت ثانية في مجموعاتها إلى جانب أياكس الهولندي وروما الإيطالي وليون الفرنسي وشالكه الألماني.
+           <br/>
+           - إعادة لنهائي 2018؟ - وفي حال أوقعت القرعة ريال مع ليفربول، ستكون "القارة العجوز" على موعد مع مواجهة ثأرية حامية بين الفريقين، لاسيما بين المصري محمد صلاح وقائد النادي الملكي سيرخيو راموس.
+           <br/>
+           وكان ريال حينها بقيادة المدرب الفرنسي زين الدين زيدان الذي قاده إلى لقب ثالث على التوالي بالفوز على "الحمر" 3-1 في المباراة النهائية التي شهدت خروج صلاح بعد تدخل مثير للجدل من راموس، ما تسبب بإصابة المصري في كتفه.
+           <br/>
+           وتغير ريال كثيراً بعد تلك المباراة، إذ استقال زيدان من منصبه واستبدل أولاً بجولن لوبيتيجي ثم بالأرجنتيني سانتياجو سولاري، كما خسر النادي الملكي جهود نجمه المطلق البرتغالي كريستيانو رونالدو الذي انتقل الصيف المنصرم للدفاع عن ألوان يوفنتوس الإيطالي.
+           <br/>
+           وخلافاً لمانشستر سيتي بطل إنجلترا، برشلونة، ريال وباريس سان جرمان، لن يكون بإمكان بايرن ميونيخ ويوفنتوس تجنب أتلتيكو أو ليفربول، ما يمهد لمواجهة نارية منذ الدور ثمن النهائي.
+           <br/>
+           ومن المؤكد أن القرعة الأفضل بالنسبة لأبطال المجموعات، هو الوقوع بمواجهة شالكه، أياكس، روما، أو حتى مانشستر يونايتد الذي يقدم أداء متأرجحاً جداً بقيادة مدربه البرتغالي جوزيه مورينيو ويفتقد لاعبوه إلى الثقة بالنفس على غرار النجم الفرنسي بول بوجبا أو الهداف البلجيكي روميلو لوكاكو.
+           <br/>
+           وخلافاً ليونايتد، يبدو توتنهام، وعلى الرغم من خبرته المتواضعة إلى حد ما في المسابقة القارية، خصماً صعباً جداً في ظل المستوى الذي يقدمه هذا الموسم رجال المدرب الأرجنتيني ماوريسيو بوكيتينو الذين يحتلون المركز الثالث في الدوري الممتاز.
+           <br/>
+           وسيكون أياكس الذي عاد ليلعب دوراً يذكر بأيام المجد وألقابه الأربعة في المسابقة القارية الأم، تحت المجهر لمعرفة إذا كان بإمكان جيله الجديد من اللاعبين الواعدين، مثل ماتييس دي ليخت (19 عاما) وفرانكي دي يونغ (21)، التعامل مع الضغط في مواجهة فرق متمرسة مثل برشلونة، مانشستر سيتي، أو سان جرمان...
+           <br/>
+           ويبدو بورتو البرتغالي بطل 1987 و2004، أو حتى بوروسيا دورتموند الألماني بطل 1997، الخيار الأمثل لشبان أياكس من أجل محاولة مواصلة المغامرة في المسابقة القارية التي عاد للمشاركة فيها للمرة الأولى (دور المجموعات) منذ موسم 2014-2015، علماً بأن المرة الأخيرة التي تأهل فيها إلى ثمن النهائي تعود إلى موسم 2005-2006.
+           <br/>
+           وتقام مباريات الذهاب في 12 و13، و19 و20 فبراير، والإياب في 5 و6، و12 و13 مارس.
+          </p>
+         </div>
+         <div class="article-meta" id="ContentPlaceHolder1_DivSourceMeta">
+          <span class="article-meta-writer">
+           المصدر: وكالات
+          </span>
+         </div>
+        </article>
+       </div>
+      </div>
+      <div class="col-md-4 article-side">
+       <div class="article-side-cont">
+        <h2 class="article-quote" style="display: none">
+        </h2>
+        <div class="box-side box-s-ad">
+         <div id="mpu">
+          <script>
+           googletag.cmd.push(function() { googletag.display('mpu'); });
+          </script>
+         </div>
+        </div>
+        <div class="box-side box-s-ad">
+         <div id="HPB">
+          <script>
+           googletag.cmd.push(function() { googletag.display('HPB'); });
+          </script>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="row classic-grid-list article-related-list">
+      <h3 class="box-home-title">
+       <span>
+        اقرأ أيضا
+       </span>
+      </h3>
+      <div class="col-md-3 col-xs-6">
+       <div class="classic-grid-itm" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="1" itemprop="position"/>
+        <a href="/article/25406/2019/-الفرسان-يحلق-بجناحي-معنويات-الخمسة-" itemprop="url">
+         <img alt='"الفرسان" يُحلق بجناحي "معنويات الخمسة"' itemprop="image" src="/assets/images/Articles/360x210/2019/4/2019425005318KQ.jpg"/>
+        </a>
+        <h3 itemprop="name">
+         <a href="/article/25406/2019/-الفرسان-يحلق-بجناحي-معنويات-الخمسة-">
+          "الفرسان" يُحلق بجناحي "معنويات الخمسة"
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="col-md-3 col-xs-6">
+       <div class="classic-grid-itm" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="2" itemprop="position"/>
+        <a href="/article/25405/2019/الظفرة-x-النصر---دوترا-يحرم-الفارس-من-إنهاء-العقدة-الزرقاء-" itemprop="url">
+         <img alt=' الظفرة x النصر.... دوترا يحرم "الفارس" من إنهاء "العقدة الزرقاء"' itemprop="image" src="/assets/images/Articles/360x210/2019/4/2019425006740GO.jpg"/>
+        </a>
+        <h3 itemprop="name">
+         <a href="/article/25405/2019/الظفرة-x-النصر---دوترا-يحرم-الفارس-من-إنهاء-العقدة-الزرقاء-">
+          الظفرة x النصر.... دوترا يحرم "الفارس" من إنهاء "العقدة الزرقاء"
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="col-md-3 col-xs-6">
+       <div class="classic-grid-itm" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="3" itemprop="position"/>
+        <a href="/article/25402/2019/-شبح-2013-يطارد-الزعيم--" itemprop="url">
+         <img alt='"شبح 2013" يطارد "الزعيم" !' itemprop="image" src="/assets/images/Articles/360x210/2019/4/20194250010178I0.jpg"/>
+        </a>
+        <h3 itemprop="name">
+         <a href="/article/25402/2019/-شبح-2013-يطارد-الزعيم--">
+          "شبح 2013" يطارد "الزعيم" !
+         </a>
+        </h3>
+        <div class="nads_ad" id="div-gpt-ad-1543874238718-0">
+         <script>
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1543874238718-0'); });
+         </script>
+        </div>
+       </div>
+      </div>
+      <div class="col-md-3 col-xs-6">
+       <div class="classic-grid-itm" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="4" itemprop="position"/>
+        <a href="/article/25401/2019/ريجيكامب-ألتمس-العذر-لـ-الفهود-بسبب-البرد-" itemprop="url">
+         <img alt='ريجيكامب: ألتمس العذر لـ "الفهود" بسبب "البرد"!' itemprop="image" src="/assets/images/Articles/360x210/2019/4/2019425006959SF.jpg"/>
+        </a>
+        <h3 itemprop="name">
+         <a href="/article/25401/2019/ريجيكامب-ألتمس-العذر-لـ-الفهود-بسبب-البرد-">
+          ريجيكامب: ألتمس العذر لـ "الفهود" بسبب "البرد"!
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="col-md-3 col-xs-6">
+       <div class="classic-grid-itm" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="5" itemprop="position"/>
+        <a href="/article/25399/2019/اتحاد-الكرة-يرفض-إلغاء-نسبة-العقود" itemprop="url">
+         <img alt="اتحاد الكرة يرفض إلغاء نسبة العقود" itemprop="image" src="/assets/images/Articles/360x210/2019/4/20194250016149OG.jpg"/>
+        </a>
+        <h3 itemprop="name">
+         <a href="/article/25399/2019/اتحاد-الكرة-يرفض-إلغاء-نسبة-العقود">
+          اتحاد الكرة يرفض إلغاء نسبة العقود
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="col-md-3 col-xs-6">
+       <div class="classic-grid-itm" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="6" itemprop="position"/>
+        <a href="/article/25398/2019/تحت-رعاية-محمد-بن-زايد--سيف-بن-زايد-يفتتح-النسخة-الـ-11-لـ-عالمية-أبوظبي-للجو-جيتسو" itemprop="url">
+         <img alt='تحت رعاية محمد بن زايد.. سيف بن زايد يفتتح النسخة الـ 11 لـ "عالمية أبوظبي" للجو جيتسو' itemprop="image" src="/assets/images/Articles/360x210/2019/4/2019425007459TW.jpg"/>
+        </a>
+        <h3 itemprop="name">
+         <a href="/article/25398/2019/تحت-رعاية-محمد-بن-زايد--سيف-بن-زايد-يفتتح-النسخة-الـ-11-لـ-عالمية-أبوظبي-للجو-جيتسو">
+          تحت رعاية محمد بن زايد.. سيف بن زايد يفتتح النسخة الـ 11 لـ "عالمية أبوظبي" للجو جيتسو
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="col-md-3 col-xs-6">
+       <div class="classic-grid-itm" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="7" itemprop="position"/>
+        <a href="/article/25397/2019/-عالمية-أبوظبي-للجو-جيتسو--الفضلي-يتوشح-بذهب-الأزرق-وريم-عبدالله-على-قمة-49-" itemprop="url">
+         <img alt='"عالمية أبوظبي للجو جيتسو".. الفضلي يتوشح بذهب الأزرق وريم عبدالله على "قمة 49"' itemprop="image" src="/assets/images/Articles/360x210/2019/4/2019425047150GP.jpg"/>
+        </a>
+        <h3 itemprop="name">
+         <a href="/article/25397/2019/-عالمية-أبوظبي-للجو-جيتسو--الفضلي-يتوشح-بذهب-الأزرق-وريم-عبدالله-على-قمة-49-">
+          "عالمية أبوظبي للجو جيتسو".. الفضلي يتوشح بذهب الأزرق وريم عبدالله على "قمة 49"
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="col-md-3 col-xs-6">
+       <div class="classic-grid-itm" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="8" itemprop="position"/>
+        <a href="/article/25395/2019/أريام-بطولة-أبوظبي-الأهم-على-مستوى-العالم" itemprop="url">
+         <img alt="أريام: بطولة أبوظبي الأهم على مستوى العالم" itemprop="image" src="/assets/images/Articles/360x210/2019/4/201942504556WF.jpg"/>
+        </a>
+        <h3 itemprop="name">
+         <a href="/article/25395/2019/أريام-بطولة-أبوظبي-الأهم-على-مستوى-العالم">
+          أريام: بطولة أبوظبي الأهم على مستوى العالم
+         </a>
+        </h3>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="container footer-line">
+    </div>
+    <div class="box-home box-ad container" style="display:none">
+    </div>
+   </div>
+   <footer class="main-footer">
+    <div class="footer-logo">
+     <div class="container">
+      <a href="/" title="صحيفة الاتحاد">
+       <img alt="صحيفة الاتحاد" src="/imgs/logo.png"/>
+      </a>
+     </div>
+    </div>
+    <div class="social-footer">
+     <div class="container">
+      <h4>
+       تواصل معنا
+      </h4>
+      <ul>
+       <li>
+        <a href="https://www.facebook.com/aletihadae" id="a_Website_Facebook" target="_blank" title="Facebook">
+         <i class="co-facebook-official">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a href="https://twitter.com/aletihadae" id="a_Website_Twitter" target="_blank" title="Twitter">
+         <i class="co-twitter-1">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a href="https://instagram.com/aletihadae/" id="a_Website_Instagram" target="_blank" title="Instagram">
+         <i class="co-instagram">
+         </i>
+        </a>
+       </li>
+       <li style="display:none">
+        <a href="#" target="_blank">
+         <i class="co-whatsapp">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a href="/rss_feed.aspx" id="a_Website_RSS" title="RSS Feed">
+         <i class="co-rss">
+         </i>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer-blocks">
+     <div class="container">
+      <div class="row">
+       <div class="col-md-4 footer-links-list">
+        <a href="/section/2/الإمارات">
+         الإمارات
+        </a>
+        <a href="/section/3/عربي-ودولي">
+         عربي ودولي
+        </a>
+        <a href="/section/26/الاقتصادي">
+         الاقتصادي
+        </a>
+        <a href="/section/51/الرياضي">
+         الرياضي
+        </a>
+        <a href="/section/55/وجهات-نظر">
+         وجهات نظر
+        </a>
+        <a href="/section/33/منوعات">
+         منوعات
+        </a>
+        <a href="/section/78/ثقافة">
+         ثقافة
+        </a>
+        <a href="/section/133/ملفات">
+         ملفات
+        </a>
+       </div>
+       <div class="col-md-8 footer-maillist">
+        <h4>
+         الاشتراك للحصول على ملخص أسبوعي علي بريدك الإلكتروني
+        </h4>
+        <div id="upmailList">
+         <div class="maillist-form">
+          <input id="txtEmailList" name="ctl00$txtEmailList" placeholder="بريدك الإلكتروني" type="text"/>
+          <span class="alert alert-danger" id="RequiredFieldValidator2" style="display:none;">
+           من فضلك ادخل بريدك الالكتروني
+          </span>
+          <span class="alert alert-danger" id="RegEmail" style="display:none;">
+           من فضلك أدخل بريد الكتروني صحيح
+          </span>
+          <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$LinkMailList", "", true, "EmailListVGroup", "", false, true))' id="LinkMailList">
+           اشترك
+          </a>
+         </div>
+        </div>
+        <div class="mobile-download">
+         <p>
+          تحميل التطبيق
+         </p>
+         <a href="https://play.google.com/store/apps/details?id=com.aletihadnew.distribution" target="_blank">
+          <i class="co-android">
+          </i>
+         </a>
+         <a href="https://itunes.apple.com/ae/app/al-etihad-%D8%A7%D9%84%D8%A7%D8%AA%D8%AD%D8%A7%D8%AF/id987908202" target="_blank">
+          <i class="co-apple">
+          </i>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="row footer-rits">
+       <div class="col-md-4">
+        حقوق النشر محفوظة لصحيفة الاتحاد 2019
+       </div>
+       <div class="col-md-8 footer-rits-links">
+        <a href="/about-emirates">
+         عن الإمارات
+        </a>
+        <a href="/about-us">
+         عن الاتحاد
+        </a>
+        <a href="/privacy">
+         بيان الخصوصية
+        </a>
+        <a href="/Terms">
+         شروط الخدمة
+        </a>
+        <a href="https://www.tawzea.ae/ar/adm-publications" target="_blank">
+         الاشتراكات
+        </a>
+        <a href="/map.aspx">
+         خريطة الموقع
+        </a>
+        <a href="/contact.aspx">
+         اتصل بنا
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+   <div class="social-share" id="DivSocialShare">
+    <a class="share-desktop" href="#">
+     <i class="co-left-open-1">
+     </i>
+    </a>
+    <a class="share-mobile" href="#">
+     <i class="co-down-open-1">
+     </i>
+    </a>
+    <div class="social-share-links">
+     <a class="fb a_FaceBook" href="javascript:void(0)" id="a_FaceBook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.alittihad.ae/article/80442/2018/&amp;t=', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600')" title="شارك المحتوي علي فيسبوك">
+      <i class="co-facebook">
+      </i>
+     </a>
+     <a class="tw a_Twitter" href="javascript:void(0)" id="a_Twitter" onclick="window.open('http://twitter.com/intent/tweet?url=https://www.alittihad.ae/article/80442/2018/&amp;text=في دوري أبطال أوروبا.. الجميع يريد تجنب ليفربول وأتلتيكو&amp;via=aletihadae', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600')" title="شارك المحتوي علي تويتر">
+      <i class="co-twitter-1">
+      </i>
+     </a>
+     <a class="gp a_GPlus" href="javascript:void(0)" id="a_GPlus" onclick="window.open('https://plus.google.com/share?url=https://www.alittihad.ae/article/80442/2018/', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600')" title="شارك المحتوي علي جوجل بلس">
+      <i class="co-gplus-1">
+      </i>
+     </a>
+     <a class="wa a_whatsapp hidden-lg" data-text="" href="whatsapp://send?text= %0A https://www.alittihad.ae/article/80442/2018/" id="a_whatsapp" title="شارك المحتوي علي واتساب">
+      <i class="co-whatsapp">
+      </i>
+     </a>
+    </div>
+   </div>
+   <link href="/css/components.min.css?ver=2.8" rel="stylesheet"/>
+   <link href="/css/style.css?ver=3.7" rel="stylesheet"/>
+   <script src="/js/components.min.js?ver=2.8">
+   </script>
+   <script src="/js/scripts.min.js?ver=1.5?ver=2.9">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+var Page_Validators =  new Array(document.getElementById("RequiredFieldValidator2"), document.getElementById("RegEmail"));
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+var RequiredFieldValidator2 = document.all ? document.all["RequiredFieldValidator2"] : document.getElementById("RequiredFieldValidator2");
+RequiredFieldValidator2.controltovalidate = "txtEmailList";
+RequiredFieldValidator2.errormessage = "من فضلك ادخل بريدك الالكتروني";
+RequiredFieldValidator2.display = "Dynamic";
+RequiredFieldValidator2.validationGroup = "EmailListVGroup";
+RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator2.initialvalue = "";
+var RegEmail = document.all ? document.all["RegEmail"] : document.getElementById("RegEmail");
+RegEmail.controltovalidate = "txtEmailList";
+RegEmail.errormessage = "من فضلك أدخل بريد الكتروني صحيح";
+RegEmail.display = "Dynamic";
+RegEmail.validationGroup = "EmailListVGroup";
+RegEmail.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+RegEmail.validationexpression = "\\w+([-.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator2'));
+}
+
+document.getElementById('RegEmail').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegEmail'));
+}
+//]]>
+   </script>
+  </form>
+ </body>
+</html>

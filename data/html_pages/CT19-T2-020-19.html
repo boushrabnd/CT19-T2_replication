@@ -1,0 +1,1584 @@
+<!DOCTYPE doctype html>
+<html class="no-js" dir="rtl" lang="ar">
+ <head>
+  <script async="" src="https://cdn.onthe.io/io.js/1AcYN5Vc58rx">
+  </script>
+  <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);
+  </script>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <link href="http://www.aleqt.com/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+  <meta content='تواجه مينج وانتشو المديرة المالية لمجموعة "هواوي" الصينية العملاقة للاتصالات شبهات أمريكية بالقيام بأعمال تجارية للالتفاف على العقوبات المفروضة على إيران. وبحسب "الفرنسية"، فإن القضاء الأمريكي طلب تسليم مينج وانتشو ابنة مؤسس مجموعة "هواوي"، للولايات المتحدة بعد توقيفها في كندا بطلب من واشنطن السبت الماضي. وبعد مداولات استمرت ساعات أمام قاض في المحكمة العليا في فانكوفر، رفعت' name="description"/>
+  <meta content="Drupal 7 (https://www.drupal.org)" name="generator"/>
+  <link href="http://www.aleqt.com/2018/12/09/article_1503426.html" rel="canonical"/>
+  <link href="http://www.aleqt.com/node/1503426" rel="shortlink"/>
+  <meta content="صحيفة الاقتصادية" property="og:site_name"/>
+  <meta content="article" property="og:type"/>
+  <meta content='واشنطن تتجه لمحاكمة مسؤولة "هواوي" بتهمة التحايل على عقوبات إيران' property="og:title"/>
+  <meta content="http://www.aleqt.com/2018/12/09/article_1503426.html" property="og:url"/>
+  <meta content='تواجه مينج وانتشو المديرة المالية لمجموعة "هواوي" الصينية العملاقة للاتصالات شبهات أمريكية بالقيام بأعمال تجارية للالتفاف على العقوبات المفروضة على إيران. وبحسب "الفرنسية"، فإن القضاء الأمريكي طلب تسليم مينج وانتشو ابنة مؤسس مجموعة "هواوي"، للولايات المتحدة بعد توقيفها في كندا بطلب من واشنطن السبت الماضي. وبعد مداولات استمرت ساعات أمام قاض في المحكمة العليا في فانكوفر، رفعت الجلسة على أن تستأنف الإثنين. ويفترض أن يقرر القاضي في تلك الجلسة الإفراج بكفالة عن مينج التي ستبقى حتى ذلك الحين موقوفة في إحدى ضواحي فانكوفر.' property="og:description"/>
+  <meta content="2018-12-09T10:59:26+03:00" property="og:updated_time"/>
+  <meta content="http://www.aleqt.com/sites/default/files/rbitem/2018/12/8/960871-305917602.jpg" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="http://www.aleqt.com/2018/12/09/article_1503426.html" name="twitter:url"/>
+  <meta content='واشنطن تتجه لمحاكمة مسؤولة "هواوي" بتهمة التحايل على عقوبات إيران' name="twitter:title"/>
+  <meta content='تواجه مينج وانتشو المديرة المالية لمجموعة "هواوي" الصينية العملاقة للاتصالات شبهات أمريكية بالقيام بأعمال تجارية للالتفاف على العقوبات المفروضة على إيران. وبحسب "الفرنسية"، فإن القضاء الأمريكي طلب' name="twitter:description"/>
+  <meta content="2018-12-09T00:33:33+03:00" property="article:published_time"/>
+  <meta content="2018-12-09T10:59:26+03:00" property="article:modified_time"/>
+  <meta content='واشنطن تتجه لمحاكمة مسؤولة "هواوي" بتهمة التحايل على عقوبات إيران' itemprop="name"/>
+  <meta content='تواجه مينج وانتشو المديرة المالية لمجموعة "هواوي" الصينية العملاقة للاتصالات شبهات أمريكية بالقيام بأعمال تجارية للالتفاف على العقوبات المفروضة على إيران. وبحسب "الفرنسية"، فإن القضاء الأمريكي طلب تسليم مينج وانتشو ابنة مؤسس مجموعة "هواوي"، للولايات المتحدة بعد توقيفها في كندا بطلب من واشنطن السبت الماضي. وبعد مداولات استمرت ساعات أمام قاض في المحكمة العليا في فانكوفر، رفعت الجلسة على أن تستأنف الإثنين. ويفترض أن يقرر القاضي في تلك الجلسة الإفراج بكفالة عن مينج التي ستبقى حتى ذلك الحين موقوفة في إحدى ضواحي فانكوفر.' itemprop="description"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   واشنطن تتجه لمحاكمة مسؤولة "هواوي" بتهمة التحايل على عقوبات إيران | صحيفة الاقتصادية
+  </title>
+  <style media="all" type="text/css">
+   @import url("http://www.aleqt.com/modules/system/system.base.css?ppnqs4");
+@import url("http://www.aleqt.com/modules/system/system.base-rtl.css?ppnqs4");
+@import url("http://www.aleqt.com/modules/system/system.messages-rtl.css?ppnqs4");
+  </style>
+  <style media="all" type="text/css">
+   @import url("http://www.aleqt.com/misc/ui/jquery.ui.core.css?ppnqs4");
+@import url("http://www.aleqt.com/misc/ui/jquery.ui.theme.css?ppnqs4");
+@import url("http://www.aleqt.com/misc/ui/jquery.ui.autocomplete.css?ppnqs4");
+  </style>
+  <style media="all" type="text/css">
+   @import url("http://www.aleqt.com/sites/all/modules/date/date_api/date.css?ppnqs4");
+@import url("http://www.aleqt.com/sites/all/modules/date/date_api/date-rtl.css?ppnqs4");
+@import url("http://www.aleqt.com/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?ppnqs4");
+@import url("http://www.aleqt.com/sites/all/modules/date/date_repeat_field/date_repeat_field.css?ppnqs4");
+@import url("http://www.aleqt.com/modules/field/theme/field-rtl.css?ppnqs4");
+@import url("http://www.aleqt.com/sites/all/modules/google_cse/google_cse.css?ppnqs4");
+@import url("http://www.aleqt.com/modules/search/search-rtl.css?ppnqs4");
+@import url("http://www.aleqt.com/modules/user/user-rtl.css?ppnqs4");
+@import url("http://www.aleqt.com/sites/all/modules/views/css/views-rtl.css?ppnqs4");
+@import url("http://www.aleqt.com/sites/all/modules/ckeditor/css/ckeditor.css?ppnqs4");
+@import url("http://www.aleqt.com/sites/all/modules/ckeditor/css/ckeditor-rtl.css?ppnqs4");
+  </style>
+  <style media="all" type="text/css">
+   @import url("http://www.aleqt.com/sites/all/modules/ctools/css/ctools.css?ppnqs4");
+  </style>
+  <style media="all" type="text/css">
+   @import url("http://www.aleqt.com/sites/all/themes/aleqtisadiah/css/app.css?ppnqs4");
+  </style>
+  <script src="http://www.aleqt.com/misc/jquery.js?v=1.4.4" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/misc/jquery.once.js?v=1.2" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/misc/drupal.js?ppnqs4" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/misc/ui/jquery.ui.core.min.js?v=1.8.7" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/misc/ui/jquery.ui.widget.min.js?v=1.8.7" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/misc/ui/jquery.ui.position.min.js?v=1.8.7" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/misc/ui/jquery.ui.autocomplete.min.js?v=1.8.7" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/misc/jquery.cookie.js?v=1.0" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/misc/jquery.form.js?v=2.52" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/misc/ajax.js?v=7.61" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/sites/all/modules/google_cse/google_cse.js?ppnqs4" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/sites/all/modules/gss/scripts/autocomplete.js?ppnqs4" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/sites/default/files/languages/ar_Yi0DnSuUttB6R2vbk7ADg9ZLqPnyqgHD66-ZHj2LVHU.js?ppnqs4" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/sites/all/modules/themekey/themekey_redirect/themekey_redirect.js?ppnqs4" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/sites/all/modules/views/js/base.js?ppnqs4" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/misc/progress.js?v=7.61" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/sites/all/modules/views/js/ajax_view.js?ppnqs4" type="text/javascript">
+  </script>
+  <script src="http://www.aleqt.com/sites/all/themes/aleqtisadiah/js/modernizr.min.gn.js?ppnqs4" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   <!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"aleqtisadiah","theme_token":"OWiPAr4mB7iV_soDXXTfdIj7-4xYABXALKtknjulBMA","js":{"0":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/ui\/jquery.ui.widget.min.js":1,"misc\/ui\/jquery.ui.position.min.js":1,"misc\/ui\/jquery.ui.autocomplete.min.js":1,"misc\/jquery.cookie.js":1,"misc\/jquery.form.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/google_cse\/google_cse.js":1,"sites\/all\/modules\/gss\/scripts\/autocomplete.js":1,"public:\/\/languages\/ar_Yi0DnSuUttB6R2vbk7ADg9ZLqPnyqgHD66-ZHj2LVHU.js":1,"sites\/all\/modules\/themekey\/themekey_redirect\/themekey_redirect.js":1,"sites\/all\/modules\/views\/js\/base.js":1,"misc\/progress.js":1,"sites\/all\/modules\/views\/js\/ajax_view.js":1,"sites\/all\/themes\/aleqtisadiah\/js\/modernizr.min.gn.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.base-rtl.css":1,"modules\/system\/system.messages-rtl.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.autocomplete.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_api\/date-rtl.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field-rtl.css":1,"sites\/all\/modules\/google_cse\/google_cse.css":1,"modules\/search\/search-rtl.css":1,"modules\/user\/user-rtl.css":1,"sites\/all\/modules\/views\/css\/views-rtl.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor-rtl.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/themes\/aleqtisadiah\/css\/fonts.css":1,"sites\/all\/themes\/aleqtisadiah\/css\/app.css":1}},"googleCSE":{"cx":"","language":"","resultsWidth":600,"domain":"www.google.com","showWaterMark":true},"gss":{"key":""},"ThemeKeyRedirect":{"checkOnce":false,"redirectOnce":false},"urlIsAjaxTrusted":{"\/2018\/12\/09\/article_1503426.html":true},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:557412b5285c42839dc3131916ca45c8":{"view_name":"news_ticker","view_display_id":"block","view_args":"","view_path":"node\/1503426","view_base_path":null,"view_dom_id":"557412b5285c42839dc3131916ca45c8","pager_element":0}}}});
+//--><!]]>
+  </script>
+  <script src="/sites/all/themes/aleqtisadiah/js/hijricalendar.js?1s233">
+  </script>
+  <script type="text/javascript">
+   (function() {
+var useSSL = 'https:' == document.location.protocol;
+var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+  </script>
+  <script type="text/javascript">
+   googletag.defineSlot('/5910/eqt/IN', [1, 1], 'div-gpt-ad-1373535616909-0').addService(googletag.pubads());
+googletag.defineSlot('/5910/eqt/IN', [728, 90], 'div-gpt-ad-1373535616909-1').addService(googletag.pubads());
+googletag.defineSlot('/5910/eqt/IN', [300, 250], 'div-gpt-ad-1373535616909-2').addService(googletag.pubads());
+googletag.defineSlot('/5910/eqt/IN', [300, 600], 'div-gpt-ad-1373535616909-3').addService(googletag.pubads());
+googletag.defineSlot('/5910/eqt/IN', [300, 60], 'div-gpt-ad-1373535616909-4').addService(googletag.pubads());
+googletag.defineSlot('/5910/eqt/IN', [300, 150], 'div-gpt-ad-1373535616909-5').addService(googletag.pubads());
+googletag.defineOutOfPageSlot('/5910/eqt/IN', 'div-gpt-ad-1373535616909-0-oop').addService(googletag.pubads());
+googletag.pubads().setTargeting("post_url_sha1","5b11a4d7c4573d2a38faafb7432456ca832cb581");
+
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs(); 
+
+googletag.enableServices();
+  </script>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-6437170-1">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-6437170-1');
+  
+  function trackClickView(href) {
+	gtag('config', 'UA-6437170-1', {'page_path': href});
+	gtag('event', 'page_view');
+	};
+
+  function refreshEM(href) {
+        var date = new Date();
+          var measure = document.createElement('script'); 
+          measure.type = 'text/javascript'; 
+          measure.async = true;
+          measure.src = ((location.protocol.indexOf('https')>-1?'https://me-ssl':'http://me-cdn')) +unescape('.effectivemeasure.net/em.js?t='+date.getTime());
+          var s = document.getElementsByTagName('script')[0]; 
+          s.parentNode.insertBefore(measure, s);
+          var s = document.getElementsByTagName('script')[0]; 
+          s.parentNode.removeChild(s); 
+          _em.trackAjaxPageview(href);
+      }
+  </script>
+  <script type="text/javascript">
+   (function($) {
+          Drupal.behaviors.pagerView = {
+
+              attach: function(context, settings) {
+                  $(document).ajaxSuccess(function() {
+                      var trackURL = jQuery(location).attr("pathname");
+                      if (trackURL != 'undefined') {
+
+                          try {
+                              trackClickView(trackURL);
+                          } catch (e) {
+                              console.log("failed to send a ping to GA");
+                          }
+
+                          try {
+                              refreshEM(trackURL);
+                          } catch (e) {
+                              console.log("failed to ping EM");
+                          }
+
+                      }
+                  });
+              }
+          };
+      })(jQuery);
+  </script>
+  <script>
+   function hitgoogle_analytic(){
+	  var trackURL = jQuery(location).attr("pathname");
+	  if (trackURL != 'undefined') {
+
+		  try {
+			  trackClickView(trackURL);
+		  } catch (e) {
+			  console.log("failed to send a ping to GA");
+		  }
+
+		  try {
+			  refreshEM(trackURL);
+		  } catch (e) {
+			  console.log("failed to ping EM");
+		  }
+
+	  }
+                
+  };
+  </script>
+  <script type="text/javascript">
+   (function(){
+  var foxscript = document.createElement('script');
+  foxscript.src = '//js.foxpush.com/aleqtcom.js?v='+Math.random();
+  foxscript.type = 'text/javascript';
+  foxscript.async = 'true';
+  var fox_s = document.getElementsByTagName('script')[0];
+  fox_s.parentNode.insertBefore(foxscript, fox_s);})();
+  </script>
+ </head>
+ <body>
+  <img src="//mena-gmtdmp.mookie1.com/t/v2/learn?tagid=V2_605775&amp;src.rand=[timestamp]" style="display:none;"/>
+  <div id="div-gpt-ad-1373535616909-0-oop">
+   <script type="text/javascript">
+    googletag.display('div-gpt-ad-1373535616909-0-oop');
+   </script>
+  </div>
+  <div id="div-gpt-ad-1373535616909-0">
+   <script type="text/javascript">
+    googletag.display('div-gpt-ad-1373535616909-0');
+   </script>
+  </div>
+  <div id="main-wrap">
+   <div class="container">
+    <nav id="menu-panel">
+     <ul class="menu">
+      <li class="first expanded menu-3711">
+       <a class="menu-3711" href="/sections/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9" title="">
+        أخبار اقتصادية
+       </a>
+       <ul class="menu">
+        <li class="first leaf menu-3871">
+         <a class="menu-3871" href="/sections/%D9%85%D8%AD%D9%84%D9%8A%D8%A9" title="">
+          محلية
+         </a>
+        </li>
+        <li class="leaf menu-3976">
+         <a class="menu-3976" href="/sections/%D8%AE%D9%84%D9%8A%D8%AC%D9%8A%D8%A9" title="">
+          خليجية
+         </a>
+        </li>
+        <li class="last leaf menu-3981">
+         <a class="menu-3981" href="/sections/%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9" title="">
+          عالمية
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="leaf menu-3856">
+       <a class="menu-3856" href="/sections/%D8%AA%D9%82%D8%A7%D8%B1%D9%8A%D8%B1-%D9%88-%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D8%A7%D8%AA" title="">
+        تقارير وتحليلات
+       </a>
+      </li>
+      <li class="expanded menu-3986">
+       <a class="menu-3986" href="/sections/%D8%A3%D8%B3%D9%88%D8%A7%D9%82-%D8%A7%D9%84%D8%A3%D8%B3%D9%87%D9%85" title="">
+        أسواق الأسهم
+       </a>
+       <ul class="menu">
+        <li class="first leaf menu-3991">
+         <a class="menu-3991" href="/sections/%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9" title="">
+          السعودية
+         </a>
+        </li>
+        <li class="leaf menu-3996">
+         <a class="menu-3996" href="/sections/%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D8%AC%D9%8A%D8%A9" title="">
+          الخليجية
+         </a>
+        </li>
+        <li class="last leaf menu-4001">
+         <a class="menu-4001" href="/sections/%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9" title="">
+          العالمية
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="expanded menu-4006">
+       <a class="menu-4006" href="/sections/%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9" title="">
+        الطاقة
+       </a>
+       <ul class="menu">
+        <li class="first leaf menu-4011">
+         <a class="menu-4011" href="/sections/%D8%A7%D9%84%D9%86%D9%81%D8%B7" title="">
+          النفط
+         </a>
+        </li>
+        <li class="leaf menu-4016">
+         <a class="menu-4016" href="/sections/%D8%A7%D9%84%D8%BA%D8%A7%D8%B2" title="">
+          الغاز
+         </a>
+        </li>
+        <li class="leaf menu-4021">
+         <a class="menu-4021" href="/sections/%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D8%AF%D9%86" title="">
+          المعادن
+         </a>
+        </li>
+        <li class="last leaf menu-4026">
+         <a class="menu-4026" href="/sections/%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%AC%D8%AF%D8%AF%D8%A9" title="">
+          الطاقة المتجددة
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="expanded menu-5026">
+       <a class="menu-5026 nolink" title="">
+        الأسواق
+       </a>
+       <ul class="menu">
+        <li class="first leaf menu-5031">
+         <a class="menu-5031" href="/marketdetail/KSA" title="">
+          سوق السعودية
+         </a>
+        </li>
+        <li class="leaf menu-5036">
+         <a class="menu-5036" href="/marketdetail/AEDU" title="">
+          سوق دبي
+         </a>
+        </li>
+        <li class="leaf menu-5041">
+         <a class="menu-5041" href="/marketdetail/AEAD" title="">
+          سوق أبوظبي
+         </a>
+        </li>
+        <li class="leaf menu-5046">
+         <a class="menu-5046" href="/marketdetail/OM" title="">
+          سوق مسقط
+         </a>
+        </li>
+        <li class="leaf menu-5226">
+         <a class="menu-5226" href="/marketdetail/BH" title="">
+          سوق البحرين
+         </a>
+        </li>
+        <li class="leaf menu-5246">
+         <a class="menu-5246" href="/marketdetail/KW" title="">
+          سوق الكويت
+         </a>
+        </li>
+        <li class="last leaf menu-5261">
+         <a class="menu-5261" href="/marketdetail/EG" title="">
+          سوق مصر
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="expanded menu-4031">
+       <a class="menu-4031" href="/sections/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA" title="">
+        أخبار الشركات
+       </a>
+       <ul class="menu">
+        <li class="first leaf menu-4036">
+         <a class="menu-4036" href="/sections/%D9%85%D8%AD%D9%84%D9%8A%D8%A9-1" title="">
+          المحلية
+         </a>
+        </li>
+        <li class="leaf menu-4041">
+         <a class="menu-4041" href="/sections/%D8%AE%D9%84%D9%8A%D8%AC%D9%8A%D8%A9-1" title="">
+          الخليجية
+         </a>
+        </li>
+        <li class="last leaf menu-4046">
+         <a class="menu-4046" href="/sections/%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9-1" title="">
+          العالمية
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="expanded menu-4051">
+       <a class="menu-4051" href="/sections/%D8%B9%D9%82%D8%A7%D8%B1%D8%A7%D8%AA" title="">
+        عقارات
+       </a>
+       <ul class="menu">
+        <li class="first leaf menu-4056">
+         <a class="menu-4056" href="/sections/%D9%85%D8%AD%D9%84%D9%8A%D8%A9-0" title="">
+          محلية
+         </a>
+        </li>
+        <li class="leaf menu-4061">
+         <a class="menu-4061" href="/sections/%D8%AE%D9%84%D9%8A%D8%AC%D9%8A%D8%A9-0" title="">
+          خليجية
+         </a>
+        </li>
+        <li class="last leaf menu-4066">
+         <a class="menu-4066" href="/sections/%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9-0" title="">
+          عالمية
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="leaf menu-4476">
+       <a class="menu-4476" href="/sections/%D9%85%D8%A4%D8%B4%D8%B1-%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1%D9%8A" title="">
+        مؤشر الاقتصادية العقاري
+       </a>
+      </li>
+      <li class="leaf menu-4071">
+       <a class="menu-4071" href="/sections/%D8%B1%D8%A4%D9%8A%D8%A9-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D9%A2%D9%A0%D9%A3%D9%A0" title="">
+        رؤية السعودية 2030
+       </a>
+      </li>
+      <li class="leaf menu-3721">
+       <a class="menu-3721" href="/taxonomy/term/15" title="">
+        FINANCIAL TIMES
+       </a>
+      </li>
+      <li class="leaf menu-3726">
+       <a class="menu-3726" href="/opinion" title="">
+        المقالات
+       </a>
+      </li>
+      <li class="leaf menu-3251">
+       <a class="menu-3251" href="/sections/%D8%B5%D9%88%D8%AA-%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86" title="">
+        صوت القانون
+       </a>
+      </li>
+      <li class="leaf menu-3671">
+       <a class="menu-3671" href="/tags/%D8%B4%D8%A8%D8%A7%D8%A8-%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84" title="">
+        رواد الأعمال
+       </a>
+      </li>
+      <li class="leaf menu-3731">
+       <a class="menu-3731" href="/sections/%D8%A7%D8%AA%D8%B5%D8%A7%D9%84%D8%A7%D8%AA-%D9%88%D8%AA%D9%82%D9%86%D9%8A%D8%A9" title="">
+        اتصالات وتقنية
+       </a>
+      </li>
+      <li class="leaf menu-4076">
+       <a class="menu-4076" href="/sections/%D8%B3%D9%81%D8%B1-%D9%88%D8%B3%D9%8A%D8%A7%D8%AD%D8%A9" title="">
+        سفر وسياحة
+       </a>
+      </li>
+      <li class="leaf menu-4081">
+       <a class="menu-4081" href="/sections/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1" title="">
+        أخبار
+       </a>
+      </li>
+      <li class="leaf menu-3241">
+       <a class="menu-3241" href="/sections/%D8%AB%D9%82%D8%A7%D9%81%D8%A9-%D9%88%D9%81%D9%86%D9%88%D9%86" title="">
+        ثقافة وفنون
+       </a>
+      </li>
+      <li class="leaf menu-4471">
+       <a class="menu-4471" href="/sections/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D8%A7%D9%82" title="">
+        المشراق
+       </a>
+      </li>
+      <li class="leaf menu-3256">
+       <a class="menu-3256" href="/sections/%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D8%A9" title="">
+        الرياضة
+       </a>
+      </li>
+      <li class="leaf menu-5216">
+       <a class="menu-5216" href="/sections/%D8%A7%D9%84%D9%86%D8%A7%D8%B3" title="الناس">
+        الناس
+       </a>
+      </li>
+      <li class="last leaf menu-5231">
+       <a class="menu-5231" href="/sections/%D8%A7%D9%84%D8%A3%D8%AE%D9%8A%D8%B1%D8%A9" title="">
+        الأخيرة
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <script>
+     // jQuery.ajax({
+								  // url: '/views/ajax',
+								  // type: 'post',
+								  // data: {
+									// view_name: 'news_ticker',
+									// view_display_id: 'block', //your display id
+									// view_args: {}, // your views arguments
+								  // },
+								  // dataType: 'json',
+								  // success: function (response) {
+									// if (response[1] !== undefined) {
+									   // jQuery('#newsticker').append(response[1].data);
+									  // // Drupal.attachBehaviors();
+									 // //  Drupal.attachBehaviors($('#raayleft'), Drupal.settings);
+									// }
+									
+								  // }
+								// });
+    </script>
+    <header>
+     <div class="top-header">
+      <div class="mag-meta text-center medium-text-right">
+       <div class="row expanded collapse">
+        <div class="small-12 medium-8 columns">
+         <time>
+          <script type="text/javascript">
+           document.write(" <span class='date'>"+writeGregorianDate() +"</span>  | <span class='hijri'>"+ writeIslamicDate(0) +"</span>");
+          </script>
+         </time>
+        </div>
+        <div class="small-12 medium-4 columns">
+         <div class="socials">
+          <a class="social-btn rss-btn round" href="/page/view/rss">
+           <i class="icon-feed ">
+           </i>
+          </a>
+          <a class="social-btn youtube-btn round" href="http://www.youtube.com/user/eqttv">
+           <i class="icon-youtube2">
+           </i>
+          </a>
+          <a class="social-btn gplus-btn round" href="https://plus.google.com/116838441585019869844">
+           <i class="icon-google-plus">
+           </i>
+          </a>
+          <a class="social-btn twitter-btn round" href="https://twitter.com/aleqtisadiah">
+           <i class="icon-twitter">
+           </i>
+          </a>
+          <a class="social-btn facebook-btn round" href="http://www.facebook.com/pages/%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9-%D8%A7%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9/163677042373">
+           <i class="icon-facebook">
+           </i>
+          </a>
+          <a class="social-btn instagram-btn round" href="https://www.instagram.com/aleqtisadiah/">
+           <i class="icon-instagram">
+           </i>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="middle-header clearfix" id="sticky-header">
+      <div class="hamburger-icon">
+       <a class="hamburger hamburger--slider" href="#menu-panel">
+        <span class="hamburger-box">
+         <span class="hamburger-inner">
+         </span>
+        </span>
+       </a>
+      </div>
+      <div class="logo">
+       <a href="/">
+        <img alt="صحيفة الاقتصادية" src="/sites/all/themes/aleqtisadiah/img/logo.png?bnbdn"/>
+       </a>
+      </div>
+      <nav class="main-menu" id="sticky-nav">
+       <ul class="menu">
+        <li class="active">
+         <a href="/">
+          <i class="icon-home">
+          </i>
+         </a>
+        </li>
+        <li class="first expanded menu-3056">
+         <a class="menu-3056" href="/sections/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9" title="">
+          أخبار اقتصادية
+         </a>
+         <ul class="">
+          <li class="first leaf menu-3866">
+           <a class="menu-3866" href="/sections/%D9%85%D8%AD%D9%84%D9%8A%D8%A9" title="">
+            محلية
+           </a>
+          </li>
+          <li class="leaf menu-3876">
+           <a class="menu-3876" href="/sections/%D8%AE%D9%84%D9%8A%D8%AC%D9%8A%D8%A9" title="">
+            خليجية
+           </a>
+          </li>
+          <li class="last leaf menu-3881">
+           <a class="menu-3881" href="/sections/%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9" title="">
+            عالمية
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="leaf menu-3886">
+         <a class="menu-3886" href="/sections/%D8%AA%D9%82%D8%A7%D8%B1%D9%8A%D8%B1-%D9%88-%D8%AA%D8%AD%D9%84%D9%8A%D9%84%D8%A7%D8%AA" title="">
+          تقارير وتحليلات
+         </a>
+        </li>
+        <li class="expanded menu-3891">
+         <a class="menu-3891" href="/sections/%D8%A3%D8%B3%D9%88%D8%A7%D9%82-%D8%A7%D9%84%D8%A3%D8%B3%D9%87%D9%85" title="">
+          أسواق الأسهم
+         </a>
+         <ul class="">
+          <li class="first leaf menu-3896">
+           <a class="menu-3896" href="/sections/%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9" title="">
+            السعودية
+           </a>
+          </li>
+          <li class="leaf menu-3901">
+           <a class="menu-3901" href="/sections/%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D8%AC%D9%8A%D8%A9" title="">
+            الخليجية
+           </a>
+          </li>
+          <li class="last leaf menu-3906">
+           <a class="menu-3906" href="/sections/%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9" title="">
+            العالمية
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="expanded menu-3911">
+         <a class="menu-3911" href="/sections/%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9" title="">
+          الطاقة
+         </a>
+         <ul class="">
+          <li class="first leaf menu-3916">
+           <a class="menu-3916" href="/sections/%D8%A7%D9%84%D9%86%D9%81%D8%B7" title="">
+            النفط
+           </a>
+          </li>
+          <li class="leaf menu-3921">
+           <a class="menu-3921" href="/sections/%D8%A7%D9%84%D8%BA%D8%A7%D8%B2" title="">
+            الغاز
+           </a>
+          </li>
+          <li class="last leaf menu-3926">
+           <a class="menu-3926" href="/sections/%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%AC%D8%AF%D8%AF%D8%A9" title="">
+            الطاقة المتجددة
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="expanded menu-5001">
+         <a class="menu-5001 nolink" title="">
+          الأسواق
+         </a>
+         <ul class="">
+          <li class="first leaf menu-5006">
+           <a class="menu-5006" href="/marketdetail/KSA" title="">
+            سوق السعودية
+           </a>
+          </li>
+          <li class="leaf menu-5016">
+           <a class="menu-5016" href="/marketdetail/AEAD" title="">
+            سوق أبوظبي
+           </a>
+          </li>
+          <li class="leaf menu-5011">
+           <a class="menu-5011" href="/marketdetail/AEDU" title="">
+            سوق دبي
+           </a>
+          </li>
+          <li class="leaf menu-5021">
+           <a class="menu-5021" href="/marketdetail/OM" title="">
+            سوق مسقط
+           </a>
+          </li>
+          <li class="leaf menu-5221">
+           <a class="menu-5221" href="/marketdetail/BH" title="">
+            سوق البحرين
+           </a>
+          </li>
+          <li class="leaf menu-5241">
+           <a class="menu-5241" href="/marketdetail/KW" title="">
+            سوق الكويت
+           </a>
+          </li>
+          <li class="last leaf menu-5256">
+           <a class="menu-5256" href="/marketdetail/EG" title="">
+            سوق مصر
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="expanded menu-3931">
+         <a class="menu-3931" href="/sections/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA" title="">
+          أخبار الشركات
+         </a>
+         <ul class="">
+          <li class="first leaf menu-3936">
+           <a class="menu-3936" href="/sections/%D9%85%D8%AD%D9%84%D9%8A%D8%A9-1" title="">
+            المحلية
+           </a>
+          </li>
+          <li class="leaf menu-3941">
+           <a class="menu-3941" href="/sections/%D8%AE%D9%84%D9%8A%D8%AC%D9%8A%D8%A9-1" title="">
+            الخليجية
+           </a>
+          </li>
+          <li class="last leaf menu-3946">
+           <a class="menu-3946" href="/sections/%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9-1" title="">
+            العالمية
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="expanded menu-3951">
+         <a class="menu-3951" href="/sections/%D8%B9%D9%82%D8%A7%D8%B1%D8%A7%D8%AA" title="">
+          عقارات
+         </a>
+         <ul class="">
+          <li class="first leaf menu-3956">
+           <a class="menu-3956" href="/sections/%D9%85%D8%AD%D9%84%D9%8A%D8%A9-0" title="">
+            محلية
+           </a>
+          </li>
+          <li class="leaf menu-3961">
+           <a class="menu-3961" href="/sections/%D8%AE%D9%84%D9%8A%D8%AC%D9%8A%D8%A9-0" title="">
+            خليجية
+           </a>
+          </li>
+          <li class="last leaf menu-3966">
+           <a class="menu-3966" href="/sections/%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9-0" title="">
+            عالمية
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="leaf menu-4946">
+         <a class="menu-4946" href="/opinion" title="">
+          المقالات
+         </a>
+        </li>
+        <li class="last leaf menu-3971">
+         <a class="menu-3971" href="/sections/%D8%B1%D8%A4%D9%8A%D8%A9-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D9%A2%D9%A0%D9%A3%D9%A0" title="">
+          رؤية ٢٠٣٠
+         </a>
+        </li>
+       </ul>
+      </nav>
+      <div class="search-area">
+       <div class="search-wrapper">
+        <div class="input-holder">
+         <form accept-charset="UTF-8" action="/2018/12/09/article_1503426.html" class="gss" id="search-block-form--2" method="post">
+          <div>
+           <div class="form-item form-type-textfield form-item-search-block-form">
+            <label class="element-invisible" for="edit-search-block-form--4">
+             ‏بحث ‏
+            </label>
+            <input class="search-input form-text" id="edit-search-block-form--4" maxlength="128" name="search_block_form" placeholder="أكتب كلمة البحث" size="15" title="searchhere" type="text" value=""/>
+           </div>
+           <div class="form-actions form-wrapper" id="edit-actions--2">
+            <input class="search-icon form-submit" id="edit-submit--2" name="op" onclick="searchToggle(this, event);" type="submit" value=""/>
+           </div>
+           <input name="form_build_id" type="hidden" value="form-YX-0h1XavGZBfX5AuUfG7e_aKh7Tj0hNW00_KymxPoM"/>
+           <input name="form_id" type="hidden" value="search_block_form"/>
+          </div>
+         </form>
+        </div>
+        <span class="close" onclick="searchToggle(this, event);">
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="bottom-header">
+      <div class="hide-for-small-only" id="news-ticker" style="height: 38px; overflow: hidden;">
+       <ul id="newsticker" style="height: 0; overflow: hidden;">
+        <li>
+         <span class="field-content">
+          <a href="/2019/04/24/article_1587136.html">
+           اليورو يهبط لأدنى مستوى في عامين
+          </a>
+         </span>
+        </li>
+        <li>
+         <span class="field-content">
+          <a href="/2019/04/24/article_1587111.html">
+           مصرفيون عالميون: السعودية وضعت "سجادة حمراء" في طريق المستثمرين الدوليين
+          </a>
+         </span>
+        </li>
+       </ul>
+      </div>
+      <div class="row">
+       <div class="small-12 columns">
+        <div class="ad-holder text-center">
+         <div id="div-gpt-ad-1373535616909-1">
+          <script type="text/javascript">
+           googletag.display('div-gpt-ad-1373535616909-1');
+          </script>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main>
+     <div class="breadcrumbs-area">
+      <div class="row">
+       <div class="small-12 columns">
+        <h2 class="element-invisible">
+         أنت هنا
+        </h2>
+        <ul class="breadcrumbs hide-for-small-only">
+         <li class="breadcrumb-1">
+          <a href="/">
+           الرئيسية
+          </a>
+         </li>
+         <li class="breadcrumb-2">
+          <a href="/sections/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9">
+           أخبار اقتصادية
+          </a>
+         </li>
+         <li class="breadcrumb-3">
+          <a href="/sections/%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9">
+           عالمية
+          </a>
+         </li>
+         <li class="breadcrumb-last current">
+          واشنطن تتجه لمحاكمة مسؤولة "هواوي" بتهمة التحايل على عقوبات إيران
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="row">
+      <div class="small-12 columns">
+       <div class="page-title">
+        <h2>
+         <span class="title-inner">
+          <i class="round-icon icon-money">
+          </i>
+          <span>
+           أخبار اقتصادية- عالمية
+          </span>
+         </span>
+        </h2>
+       </div>
+      </div>
+     </div>
+     <div class="row sides-wrapper">
+      <div class="small-12 large-8 columns">
+       <div class="content-wrap">
+        <div class="region region-content">
+         <div class="block block-system" id="block-system-main">
+          <div class="content">
+           <script>
+            window._io_config = window._io_config || {};
+		window._io_config["0.2.0"] = window._io_config["0.2.0"] || [];
+		window._io_config["0.2.0"].push({
+		    page_url: "http://www.aleqt.com/2018/12/09/article_1503426.html",
+		    page_url_canonical: "http://www.aleqt.com/2018/12/09/article_1503426.html",
+		    page_title: "واشنطن تتجه لمحاكمة مسؤولة هواوي بتهمة التحايل على عقوبات إيران",
+		    page_type: "article",
+		    page_language: "ar",
+		    article_authors: ["الاقتصادية من الرياض"],
+		    article_categories: ["عالمية"],			article_type: "longread",
+		    article_publication_date: "Sun, 9 Dec 2018 21:15:00 +0300"		});
+           </script>
+           <article class="entry-article">
+            <div class="printable-area" style="direction: rtl;text-align: right;">
+             <div class="logo show-for-printable-area">
+              <img src="/sites/all/themes/aleqtisadiah/img/logo.png"/>
+             </div>
+             <div class="entry-header">
+              <div class="entry-title">
+               <h1>
+                واشنطن تتجه لمحاكمة مسؤولة "هواوي" بتهمة التحايل على عقوبات إيران
+               </h1>
+              </div>
+              <div class="entry-meta clearfix">
+               <div class="float-right">
+                <div class="meta-field post-date">
+                 <i class="icon-clock2">
+                 </i>
+                 <time>
+                  الاحد 9 ديسمبر 2018
+                 </time>
+                </div>
+               </div>
+               <div class="float-left no-print">
+                <div class="socials">
+                 <a class="addthis_button_google_plusone_share social-btn gplus-btn round" href="#">
+                  <i class="icon-google-plus">
+                  </i>
+                 </a>
+                 <a class="addthis_button_twitter social-btn twitter-btn round" href="#">
+                  <i class="icon-twitter">
+                  </i>
+                 </a>
+                 <a class="addthis_button_facebook social-btn facebook-btn round" href="#">
+                  <i class="icon-facebook">
+                  </i>
+                 </a>
+                 <a class="addthis_button_linkedin social-btn linkedin-btn round" href="#">
+                  <i class="icon-linkedin">
+                  </i>
+                 </a>
+                 <a class="addthis_button_whatsapp social-btn whatsapp-btn round" href="#">
+                  <i class="icon-whatsapp">
+                  </i>
+                 </a>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="entry-media">
+              <div class="show-for-printable-area">
+               <img alt="" src="http://www.aleqt.com/sites/default/files/styles/scale_660/public/rbitem/2018/12/8/960871-305917602.jpg?itok=OojVyEc6" typeof="foaf:Image">
+               </img>
+              </div>
+              <div class="media-slider no-print">
+               <div>
+                <img alt="" src="http://www.aleqt.com/sites/default/files/styles/scale_660/public/rbitem/2018/12/8/960871-305917602.jpg?itok=OojVyEc6" typeof="foaf:Image">
+                 <p>
+                 </p>
+                </img>
+               </div>
+              </div>
+             </div>
+             <div class="entry-meta">
+              <div class="meta-field author">
+               <i class="icon-pen">
+               </i>
+               <span>
+                "الاقتصادية" من الرياض
+               </span>
+              </div>
+             </div>
+             <div id="vid-player-container-641">
+             </div>
+             <script type="text/javascript">
+              var _c = new Date().getTime();
+		document.write('<script type="text/javascript" src="//players.vidssp.com/641.js?cb=' + _c + '" async><\/script>');
+             </script>
+             <div id="vid-player-container-1974">
+             </div>
+             <script type="text/javascript">
+              var _c = new Date().getTime();
+		document.write('<script type="text/javascript" src="//players.vidssp.com/1974.js?cb=' + _c + '" async><\/script>');
+             </script>
+             <div class="entry-content" data-io-article-url="http://www.aleqt.com/2018/12/09/article_1503426.html">
+              <p>
+               تواجه مينج وانتشو المديرة المالية لمجموعة "هواوي" الصينية العملاقة للاتصالات شبهات أمريكية بالقيام بأعمال تجارية للالتفاف على العقوبات المفروضة على إيران.
+               <br/>
+               وبحسب "الفرنسية"، فإن القضاء الأمريكي طلب تسليم مينج وانتشو ابنة مؤسس مجموعة "هواوي"، للولايات المتحدة بعد توقيفها في كندا بطلب من واشنطن السبت الماضي.
+               <br/>
+               وبعد مداولات استمرت ساعات أمام قاض في المحكمة العليا في فانكوفر، رفعت الجلسة على أن تستأنف الإثنين. ويفترض أن يقرر القاضي في تلك الجلسة الإفراج بكفالة عن مينج التي ستبقى حتى ذلك الحين موقوفة في إحدى ضواحي فانكوفر.
+               <br/>
+               وكشف محامي الحكومة الكندية جون غيب-كارسلي في قاعة المحكمة التي كانت مكتظة بالحضور أنه يشتبه بأن وانتشو (46 عاما) كذبت على عديد من المصارف بشأن العلاقات بين "هواوي" وأحد فروعها "سكايكوم"، ما سمح لهذه الشركة بدخول السوق الإيرانية في انتهاك للعقوبات الأمريكية.
+               <br/>
+               ويبدو أن وانتشو شخصيا كذبت على مصرفيين أمريكيين في 2013 بنفيها وجود أي علاقة بين "هواوي" و"سكايكوم" بينما "سكايكوم هي هواوي" على ما قالت السلطات الأمريكية.
+               <br/>
+               وأضاف المحامي أن وانتشو متهمة "بالاحتيال على حساب عدد من المؤسسات المالية"، وهي عقوبة يعاقب عليها القانون الأمريكي بالسجن ثلاثين عاما لكل واقعة.
+               <br/>
+               واعترض وكيل الحكومة على الإفراج المشروط عن مينج ابنة رين تشينجفي مؤسس "هواوي" في 1987 والمهندس السابق في الجيش الصيني، وقد رأى أن وانتشو تملك كل الأسباب لمحاولة الهرب من كندا والعودة إلى الصين.
+               <br/>
+               وقال إنها تملك الوسائل المالية، مشيرا إلى أن الصين والولايات المتحدة لم توقعا اتفاقا لتسليم الملاحقين.
+               <br/>
+               وأوضح أنها "اعتادت على تجنب الولايات المتحدة منذ أن عرفت أن تحقيقا جنائيا يستهدفها".
+               <br/>
+               من جهته، ذكر محامي وانتشو أن موكلته لن تجازف "بالتسبب بالعار" لوالدها وشركتها وبلدها عبر الهرب، وهي تتعهد بتسليم جوازات سفرها ووضع سوار إلكتروني وتمويل مراقبتها خلال إجراءات محاكمتها.
+               <br/>
+               وأكدت مجموعة "هواوي" في بيان أمس أنها "ستواصل متابعة الجلسات" الأسبوع المقبل، معبرة عن "ثقتها بأن النظامين القضائيين الأمريكي والكندي سيتوصلان إلى النتائج الصحيحة".
+               <br/>
+               واعتقلت وانتشو في مدينة فانكوفر في الأول من كانون الأول (ديسمبر) خلال توقف لتبديل الطائرة في رحلة بين هونج كونج والمكسيك.
+               <br/>
+               ويمكن لإجراءات التسليم في إطار اتفاق ثنائي بين كندا والولايات المتحدة أن تستغرق أشهرا وحتى سنوات قبل أن تصل إلى نتيجة، بسبب إمكانات الطعن العديدة.
+               <br/>
+               وتم توقيف وانتشو في كندا في اليوم الذي عقدت فيه قمة بين الرئيس الأمريكي دونالد ترمب ونظيره الصيني شي جين بينج اتفقا خلالها على هدنة في الحرب التجارية المستعرة بين البلدين، وأعلن توقيفها بعد أيام من ذلك.
+               <br/>
+               وقال البيت الأبيض إنه أُبلغ مسبقا بتوقيف المسؤولة في المجموعة الصينية في اليوم نفسه الذي كان فيه ترمب يلتقي شي على العشاء.
+               <br/>
+               وقال جون بولتون مستشار الأمن القومي في البيت الأبيض لإذاعة "إن بي آر"، "كنت أعرف ذلك مسبقا"، لكنه لم يوضح ما إذا كان ترمب أبلغ شخصيا بتوقيف وانتشو في فانكوفر، معتبرا أن أمورا كهذه تحدث دائما ولا نبلغ الرئيس بها في كل مرة.
+               <br/>
+               ودانت وسائل الإعلام الصينية الرسمية أمس توقيف وانتشو، بينما عبرت بكين عن احتجاجها وطالبت الولايات المتحدة وكندا بـ"توضيح" أسبابه.
+               <br/>
+               وأفاد جينج شوانج الناطق باسم وزارة الخارجية الصينية في مؤتمر صحافي في بكين، "في الأيام السبعة الأخيرة لم تقدم كندا ولا الولايات المتحدة أي دليل على تورط في مخالفة قوانين في أي من البلدين".
+              </p>
+             </div>
+            </div>
+            <div class="entry-share clearfix">
+             <div class="actions-icons float-left">
+              <a class="print-btn" href="#">
+               <i class="icon-printer">
+               </i>
+              </a>
+             </div>
+             <div class="socials float-right">
+              <span>
+               إنشرها
+              </span>
+              <a class="addthis_button_google_plusone_share social-btn gplus-btn round" href="#">
+               <i class="icon-google-plus">
+               </i>
+              </a>
+              <a class="addthis_button_twitter social-btn twitter-btn round" href="#">
+               <i class="icon-twitter">
+               </i>
+              </a>
+              <a class="addthis_button_facebook social-btn facebook-btn round" href="#">
+               <i class="icon-facebook">
+               </i>
+              </a>
+              <a class="addthis_button_linkedin social-btn linkedin-btn round" href="#">
+               <i class="icon-linkedin">
+               </i>
+              </a>
+              <a class="addthis_button_whatsapp social-btn whatsapp-btn round" href="#">
+               <i class="icon-whatsapp">
+               </i>
+              </a>
+             </div>
+            </div>
+           </article>
+           <div class="comments-area">
+            <div class="section-wrapper">
+             <div class="section-title">
+              <h4>
+               أضف تعليق
+              </h4>
+             </div>
+             <div class="section-content">
+             </div>
+            </div>
+           </div>
+           <script async="" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57c89ea7f8cd02ad" type="text/javascript">
+           </script>
+           <script>
+            function EmbedScript() {
+    var _Impulser = window.parent.document.createElement('script'); _Impulser.type = 'text/javascript';
+    _Impulser.async = true;
+    _Impulser.src = ('https:' == window.parent.document.location.protocol ? 'https://' : 'http://') + 'impulse.forkcdn.com/impulse3/config/impulse.js';
+    var _scripter = window.parent.document.getElementsByTagName('script')[0]; _scripter.parentNode.insertBefore(_Impulser, _scripter);
+};
+function inIframe() {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+        return true;
+    }
+}
+if (inIframe()) {
+    window.parent.$ImpulseID = "IMPL-ALEQT-ALEQT-RESP-GENERIC"; EmbedScript();
+} else {
+    $ImpulseID = "IMPL-ALEQT-ALEQT-RESP-GENERIC"; EmbedScript();
+}
+           </script>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="small-12 large-4 columns">
+       <div class="sidebar">
+        <div id="div-gpt-ad-1373535616909-2">
+         <script type="text/javascript">
+          googletag.display('div-gpt-ad-1373535616909-2');
+         </script>
+        </div>
+        <div class="region region-left">
+         <script>
+          jQuery.ajax({
+								  url: '/views/ajax',
+								  type: 'post',
+								  data: {
+									view_name: 'leftside_opinion',
+									view_display_id: 'block', //your display id
+									view_args: {}, // your views arguments
+								  },
+								  dataType: 'json',
+								  success: function (response) {
+									if (response[1] !== undefined) {
+									   jQuery('#raayleft').append(response[1].data);
+									  // Drupal.attachBehaviors();
+									 //  Drupal.attachBehaviors($('#raayleft'), Drupal.settings);
+									}
+									 
+								  },
+								  complete:function(){
+									  jQuery(".author-slick").slick("getSlick").refresh();
+									  //jQuery('.author-slick').slick('refresh');
+									 // jQuery('.author-slick').slick('setPosition');
+									  //jQuery('.author-slick').slick('unslick').slick('reinit');
+								  }
+								});
+         </script>
+         <div class="block-wrapper" id="raayleft">
+         </div>
+         <div class="block-wrapper">
+          <div class="ad-holder text-center">
+           <div id="div-gpt-ad-1373535616909-5">
+            <script type="text/javascript">
+             googletag.display('div-gpt-ad-1373535616909-5');
+            </script>
+           </div>
+          </div>
+         </div>
+         <div class="block block-aleqtisadiah-solr" id="block-aleqtisadiah-solr-solr-top-viewed-section-node">
+          <div class="content">
+           <div class="block-wrapper">
+            <div class="block-content">
+             <div class="posts-tabs-area">
+              <ul class="tabs expand-2" data-tabs="" id="most-list-tabs">
+               <li class="tabs-title is-active fullWidth">
+                <a aria-selected="true" href="#panel1">
+                 الأكثر قراءة
+                </a>
+               </li>
+              </ul>
+              <div class="tabs-content" data-tabs-content="most-list-tabs">
+               <div class="tabs-panel is-active" id="panel1">
+                <ul class="rows-list with-arrow scrollable-content paneltab scrollpanel1 light">
+                 <li>
+                  <a href="/node/1576106">
+                   <i class="icon-arrow-left2">
+                   </i>
+                   <span>
+                    سوق الهواتف المحمولة.. ضغوط أمريكية- أوروبية لتطويق طموحات «هواوي»
+                   </span>
+                  </a>
+                 </li>
+                 <li>
+                  <a href="/node/1503071">
+                   <i class="icon-arrow-left2">
+                   </i>
+                   <span>
+                    أوروبا: التعامل مع «هواوي» مخيف.. واليابان توقف شراء منتجاتها
+                   </span>
+                  </a>
+                 </li>
+                 <li>
+                  <a href="/node/1564566">
+                   <i class="icon-arrow-left2">
+                   </i>
+                   <span>
+                    سعر الدولار يسجل أكبر تراجع له في سوق الصرافة المصرية
+                   </span>
+                  </a>
+                 </li>
+                 <li>
+                  <a href="/node/1586056">
+                   <i class="icon-arrow-left2">
+                   </i>
+                   <span>
+                    "الداخلية": تنفيذ القتل تعزيرا وإقامة حد الحرابة على 37 مواطنا لتبنيهم الفكر الإرهابي المتطرف
+                   </span>
+                  </a>
+                 </li>
+                 <li>
+                  <a href="/node/1510981">
+                   <i class="icon-arrow-left2">
+                   </i>
+                   <span>
+                    رواتب خيالية لمديري أكبر 100 شركة سويسرية.. 1.6 مليار دولار في عام
+                   </span>
+                  </a>
+                 </li>
+                 <li>
+                  <a href="/node/1565981">
+                   <i class="icon-arrow-left2">
+                   </i>
+                   <span>
+                    الليرة التركية تهوي 6.8 %.. وتكلفة التأمين على الديون تقفز لأعلى مستوى في 4 أشهر
+                   </span>
+                  </a>
+                 </li>
+                 <li>
+                  <a href="/node/1471786">
+                   <i class="icon-arrow-left2">
+                   </i>
+                   <span>
+                    البطالة في المملكة المتحدة في أدنى معدلاتها منذ 43 عاما
+                   </span>
+                  </a>
+                 </li>
+                 <li>
+                  <a href="/node/1502316">
+                   <i class="icon-arrow-left2">
+                   </i>
+                   <span>
+                    أمريكا تطالب كندا بتسليم مسؤولة في "هواوي" بعد انتهاكها للعقوبات التجارية على إيران
+                   </span>
+                  </a>
+                 </li>
+                 <li>
+                  <a href="/node/1572421">
+                   <i class="icon-arrow-left2">
+                   </i>
+                   <span>
+                    ثالث أكبر اقتصاد في العالم يفتح أبوابه لمئات الآلاف من العمال الأجانب
+                   </span>
+                  </a>
+                 </li>
+                 <li>
+                  <a href="/node/1491226">
+                   <i class="icon-arrow-left2">
+                   </i>
+                   <span>
+                    أغنى رجل في العالم: "أمازون" ستفلس.. وسنحاول تأخير هذا الأمر
+                   </span>
+                  </a>
+                 </li>
+                </ul>
+               </div>
+              </div>
+              <div class="arrow-btn" onclick="$('').mCustomScrollbar('scrollTo','-=140')">
+               <i class="icon-arrow-down">
+               </i>
+              </div>
+              <div class="arrow-btn" onclick="$('').mCustomScrollbar('scrollTo','+=140')">
+               <i class="icon-arrow-up">
+               </i>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         ﻿
+         <div class="block-wrapper">
+          <div class="block-content">
+           <div class="twitter-area text-center">
+            <a class="twitter-timeline" data-height="300" href="https://twitter.com/aleqtisadiah">
+             Tweets by aleqtisadiah
+            </a>
+            <script async="" charset="utf-8" src="//platform.twitter.com/widgets.js">
+            </script>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div id="div-gpt-ad-1373535616909-3">
+         <script type="text/javascript">
+          googletag.display('div-gpt-ad-1373535616909-3');
+         </script>
+        </div>
+       </div>
+      </div>
+     </div>
+     <script>
+      jQuery(document).ready(function(){
+									$.get( "/ajax-reader/676", function( data ) {
+										$('#ajax-target').append('<style>.pager--infinite-scroll{display:none;}#pagerinfinite{display: block;}</style>'); 
+										if(data!=''){
+													$('#ajax-target').append(data); 
+											//$('#ajax-target2').append('$ls');
+												jQuery('#loading_block').css("display","none");
+										}
+													
+													
+												});
+									});
+     </script>
+     <div class="row">
+      <div class="small-12 columns">
+       <div class="section-wrapper">
+        <div class="section-title with-bg">
+         <h4>
+          المزيد من
+أخبار اقتصادية- عالمية
+         </h4>
+        </div>
+        <div class="section-content">
+         <div class="objects-list wide-mode">
+          <div id="loading_block" style="text-align: center; margin-top: 50px; margin-bottom: 50px;">
+           <img src="/sites/all/themes/aleqtisadiah//img/ajax-loader.gif"/>
+          </div>
+          <div id="ajax-target">
+          </div>
+          <ul class=" text-center pager pager--infinite-scroll " id="pagerinfinite">
+           <li class="pager__item">
+            <input id="thidden" type="hidden" value="1"/>
+            <button class="button" onclick="myModule_ajax_load(676)">
+             المزيد
+            </button>
+            <div class="ajax-progress ajax-progress-throbber" style="display:none;">
+             <div class="throbber">
+             </div>
+            </div>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </main>
+    <script type="text/javascript">
+     <!--//--><![CDATA[//><!--
+	function myModule_ajax_load(i) {
+				$("html, body").animate({scrollTop: jQuery('#pagerinfinite').offset().top-150}, 2000, function () {
+								}); 
+					jQuery('.pager--infinite-scroll button').attr('disabled', 'true');
+					jQuery('.ajax-progress-throbber').css("display","block");
+					
+					var p=1;
+					var p = document.getElementById("thidden").value;
+					var c=parseFloat(p) +1;
+					
+					var ll ="/ajax-reader/"+i+"?page="+p;
+					var html='';
+					
+						$.ajax({
+							url:ll,  
+							success:function(data) {
+							  $('#ajax-target').append(data); 
+								document.getElementById("thidden").value=c;
+								jQuery('.pager--infinite-scroll button').removeAttr("disabled");
+									jQuery('.ajax-progress-throbber').css("display","none");
+								hitgoogle_analytic();			
+							},
+							  error: function(){
+								jQuery('.pager--infinite-scroll button').css("display","none");
+							  }
+						  });
+				}
+			
+//--><!]]>
+    </script>
+    <footer>
+     <div class="top-footer">
+      <div class="row">
+       <div class="small-12 medium-12 large-8 columns">
+        <div class="footer-menu clearfix">
+         <ul class="menu vertical with-arrow">
+          <li>
+           <a href="/">
+            <i class="icon-arrow-left">
+            </i>
+            الرئيسية
+           </a>
+          </li>
+          <li>
+           <a href="/taxonomy/term/10">
+            <i class="icon-arrow-left">
+            </i>
+            أخبار اقتصادية
+           </a>
+           <ul class="menu vertical nested">
+            <li>
+             <a href="/taxonomy/term/666">
+              محلية
+             </a>
+            </li>
+            <li>
+             <a href="/taxonomy/term/671">
+              خليجية
+             </a>
+            </li>
+            <li>
+             <a href="/taxonomy/term/676">
+              عالمية
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="/taxonomy/term/611">
+            <i class="icon-arrow-left">
+            </i>
+            تقارير وتحليلات
+           </a>
+          </li>
+         </ul>
+         <ul class="menu vertical with-arrow">
+          <li>
+           <a href="/taxonomy/term/681">
+            <i class="icon-arrow-left">
+            </i>
+            أسواق الأسهم
+           </a>
+           <ul class="menu vertical nested">
+            <li>
+             <a href="/taxonomy/term/686">
+              السعودية
+             </a>
+            </li>
+            <li>
+             <a href="/taxonomy/term/691">
+              الخليجية
+             </a>
+            </li>
+            <li>
+             <a href="/taxonomy/term/696">
+              العالمية
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="/taxonomy/term/701">
+            <i class="icon-arrow-left">
+            </i>
+            الطاقة
+           </a>
+           <ul class="menu vertical nested">
+            <li>
+             <a href="/taxonomy/term/706">
+              النفط
+             </a>
+            </li>
+            <li>
+             <a href="/taxonomy/term/711">
+              الغاز
+             </a>
+            </li>
+            <li>
+             <a href="/taxonomy/term/721">
+              الطاقة المتجددة
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+         <ul class="menu vertical with-arrow">
+          <li>
+           <a href="/taxonomy/term/751">
+            <i class="icon-arrow-left">
+            </i>
+            أخبار الشركات
+           </a>
+           <ul class="menu vertical nested">
+            <li>
+             <a href="/taxonomy/term/756">
+              المحلية
+             </a>
+            </li>
+            <li>
+             <a href="/taxonomy/term/761">
+              الخليجية
+             </a>
+            </li>
+            <li>
+             <a href="/taxonomy/term/766">
+              العالمية
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="/taxonomy/term/55">
+            <i class="icon-arrow-left">
+            </i>
+            عقارات
+           </a>
+           <ul class="menu vertical nested">
+            <li>
+             <a href="/taxonomy/term/726">
+              محلية
+             </a>
+            </li>
+            <li>
+             <a href="/taxonomy/term/731">
+              خليجية
+             </a>
+            </li>
+            <li>
+             <a href="/taxonomy/term/736">
+              عالمية
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+         <ul class="menu vertical with-arrow">
+          <li>
+           <a href="/node/1166811">
+            <i class="icon-arrow-left">
+            </i>
+            عن الاقتصادية
+           </a>
+           <ul class="menu vertical nested">
+            <li>
+             <a href="/page/view/editors">
+              إدارة التحرير
+             </a>
+            </li>
+            <li>
+             <a href="http://www.alkhaleejiah.com/contact_us">
+              للإعلانات
+             </a>
+            </li>
+            <li>
+             <a href="/page/view/subscription">
+              الاشتراكات
+             </a>
+            </li>
+            <li>
+             <a href="/page/view/offices">
+              المكاتب
+             </a>
+            </li>
+            <li>
+             <a href="/contact">
+              راسلنا
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="small-12 medium-12 large-4 columns">
+        <div class="newsletter-area">
+         <h5 class="font-alt-reg">
+          انضم إلى النشرة الإلكترونية
+         </h5>
+         <p>
+          احصل على النشرة الإلكترونية وتابع أهم المستجدات
+         </p>
+         <form action="//aleqt.us14.list-manage.com/subscribe/post?u=c7c9ba54de1706afb47f60d92&amp;id=0603e00135" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+          <div class="input-group with-radius">
+           <div class="mc-field-group ">
+            <input class="input-group-field" id="mce-EMAIL" name="EMAIL" placeholder="أدخل بريدك الإلكتروني" type="email"/>
+           </div>
+           <div class="input-group-button">
+            <input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value=""/>
+           </div>
+          </div>
+          <div class="mce_inline_error" for="mce-EMAIL">
+          </div>
+          <div>
+           <div class="clear" id="mce-responses">
+            <div class="response" id="mce-error-response" style="display:none">
+            </div>
+            <div class="response" id="mce-success-response" style="display:none">
+            </div>
+           </div>
+           <div aria-hidden="true" style="position: absolute; right: -5000px;">
+            <input name="b_c7c9ba54de1706afb47f60d92_0603e00135" tabindex="-1" type="text" value=""/>
+           </div>
+          </div>
+         </form>
+         <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" type="text/javascript">
+         </script>
+         <script type="text/javascript">
+          (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+         </script>
+        </div>
+        <div class="socials">
+         <span>
+          تابعنا
+         </span>
+         <a class="social-btn rss-btn round" href="/page/view/rss">
+          <i class="icon-feed ">
+          </i>
+         </a>
+         <a class="social-btn youtube-btn round" href="http://www.youtube.com/user/eqttv">
+          <i class="icon-youtube2">
+          </i>
+         </a>
+         <a class="social-btn gplus-btn round" href="https://plus.google.com/116838441585019869844">
+          <i class="icon-google-plus">
+          </i>
+         </a>
+         <a class="social-btn twitter-btn round" href="https://twitter.com/aleqtisadiah">
+          <i class="icon-twitter">
+          </i>
+         </a>
+         <a class="social-btn facebook-btn round" href="http://www.facebook.com/pages/%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9-%D8%A7%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9/163677042373">
+          <i class="icon-facebook">
+          </i>
+         </a>
+         <a class="social-btn instagram-btn round" href="https://www.instagram.com/aleqtisadiah/">
+          <i class="icon-instagram">
+          </i>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bottom-footer">
+      <div class="row">
+       <div class="small-12 columns">
+        <p>
+         جميع الحقوق محفوظة للشركة السعودية للأبحاث والنشر وتخضع لشروط واتفاق الاستخدام ©
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="/sites/all/themes/aleqtisadiah/js/app.js?ddds1556136901">
+  </script>
+  <script async="true" class="teads" src="//a.teads.tv/page/25670/tag" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   (function(t,r,a,c,k,n,o,w){t['em_ns']=k;w=1*new Date();t[k]=t[k]||function(){
+     (t[k].q=t[k].q||[]).push(arguments)},t[k].t=w;n=r.createElement(a);n.async=1;
+     n.src=c+'/tag'+(t.addEventListener&&'.'||'_.')+'js?'+parseInt(w/1e9, 10);
+     o=r.getElementsByTagName(a)[0];o.parentNode.insertBefore(n,o)
+   })(window,document,'script','https://t.effectivemeasure.net','_em');
+  </script>
+  <noscript>
+   <img alt="" src="https://collector.effectivemeasure.net/noscript" style="position:absolute; left:-5px;">
+   </img>
+  </noscript>
+  <script async="true" src="https://fo-api.omnitagjs.com/fo-api/ot.js?Placement=5be29bb0b68337ca58a5bd03491172f6" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"cc46b38bc5","applicationID":"37289588","transactionName":"NVxWZBdSVhFYUkRdCQwWdVMRWlcMFl9fUAM9SVVXAGxOC1xG","queueTime":0,"applicationTime":507,"atts":"GRtVEl9IRR8=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>

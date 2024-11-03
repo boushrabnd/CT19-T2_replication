@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html lang="ar" locale="ar">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info = {"agent":"","beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"57bf006cf6","applicationID":"21814487","applicationTime":68.801658,"transactionName":"NFYGNUBWCEBRV0UKDQ0cIRlCRQNAQ15CTCUmZ0tOCFsHXVccVA1PNmAYCEZLD1dMVUMfBw1PDRVOXgJPUUYYTFgTUhAJZV4SW19BRS8DDVRMOh9WS0lxGWtTT1ocO1xvHE8MHg5DBgwHVhYsXVMDG0dRUx8EAVoFHVNaFhoP","queueTime":0,"ttGuid":"16b01f5ec64d51","agentToken":null}; (window.NREUM||(NREUM={})).loader_config={xpid:"VQcHVlJaChACVVlTAwUPUQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(18),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(19),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(21)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(21)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(21)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(21)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(21)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(16);n.exports={generateTraceHeader:r}},{}],11:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(12),u=t(10).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(15),w=t(14),v=window.XMLHttpRequest;s.features.xhr=!0,t(9),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],12:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],13:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(18),s=t(19),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],14:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],15:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],16:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],17:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],18:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],19:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],20:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],21:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(19),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(18),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(18),u=t("ee"),d=t(17),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:x,userAgent:d};t(13),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(20)},{}]},{},["loader",2,11,4,3]);
+  </script>
+  <link href="/static/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="/static/favicon/android-touch-icon.png" rel="android-touch-icon" sizes="180x180"/>
+  <link href="/static/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="/static/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="/static/favicon/manifest.json" rel="manifest"/>
+  <link color="#e81b23" href="/static/favicon/safari-pinned-tab.svg" rel="mask-icon"/>
+  <meta content="Corebine" name="apple-mobile-web-app-title"/>
+  <meta content="Corebine" name="application-name"/>
+  <meta content="#98082b" name="theme-color"/>
+  <meta content="https://www.asroma.com/static/img/logo.png" name="app-logo"/>
+  <link href="/static/css/all.min.css?v=de53e00797" rel="stylesheet">
+   <script>
+    window.corebine = window.corebine || {};
+                    corebine.pageSettings = {
+                        
+                        attachments: {"currentSeason":{"_entityId":"3b8d1d7295522f7481d65ded","_type":"Corebine.Core.Sport.Season","name":"2018-19","year":2018,"startDate":"2018-07-01T00:00:00Z","endDate":"2019-05-31T00:00:00Z"}},
+                        page: {"native":false,"chromeless":false,"renderMode":"web","devMode":false,"originalPath":"/ar/news/2018/7/transfer-agreed-for-alisson-to-join-liverpool","host":"www.asroma.com","lang":"ar","locale":"ar","url":{"path":["ar","news","2018","7","transfer-agreed-for-alisson-to-join-liverpool"]},"path":"/ar/news/2018/7/transfer-agreed-for-alisson-to-join-liverpool"},
+                        bootstrap: {"_type":"Corebine.Core.Bootstrap.Sport","clientId":"asroma2","title":"AS Roma Official App","author":"A.S. Roma S.p.A.","android":{"storeId":"asroma.mobile","storeUrl":"https://play.google.com/store/apps/details?id=asroma.mobile","minimumSupportedVersion":"3.0.53","recommendedVersion":"3.0.53"},"ios":{"storeId":"518424485","storeUrl":"https://itunes.apple.com/app/id518424485","minimumSupportedVersion":"3.2","recommendedVersion":"3.2"},"web":{"baseUrl":"https://www.asroma.com/","paths":{"flags":"/static/img/flags","search":"/search","tag":"/tag","localized":{"en":{"search":"/search","tag":"/tag","login":"/login","schedule":"/schedule","standings":"/standings","matches":"/matches","teams":"/teams","players":"/players","terms":"/club/terms-of-use","privacy":"/privacy-newsletter-full"},"it":{"search":"/search","tag":"/tag","login":"/login","schedule":"/schedule","standings":"/standings","matches":"/matches","teams":"/teams","players":"/players","terms":"/club/termini-di-utilizzo","privacy":"/informativaprivacy"},"id":{"search":"/search","tag":"/tag","login":"/login","schedule":"/schedule","standings":"/standings","matches":"/matches","teams":"/teams","players":"/players","terms":"/klub/syarat-ketentuan","privacy":"/cookie"},"ar":{"search":"/search","tag":"/tag","login":"/login","schedule":"/schedule","standings":"/standings","matches":"/matches","teams":"/teams","players":"/players","terms":"/club/terms-of-use","privacy":"/privacy-notice-full"}},"fixed":{"flags":"/static/img/flags"}}},"api":{"baseUrl":"https://www.asroma.com/","paths":{"cards":"/api/cards","page":"/api/page","pageContent":"/api/page/content","pages":"/api/pages","localization":"/api/localization","sport":"/api/sport","sportLive":"/api/sport/live","sportLiveEvents":"/api/sport/live/events","s3":"/api/s3","s3Live":"/api/s3/live"},"files":{"_type":"Corebine.Core.Bootstrap.Config.Api.Files.Sport.Spec.Soccer","teams":"teams.json","matches":"matches.json","liveMatches":"live-matches.json"}},"locales":{"items":[{"title":"English","key":"en","code":"en-US"},{"title":"Italian","key":"it","code":"it"},{"title":"Indonesian","key":"id","code":"id"},{"title":"Arabic","key":"ar","code":"ar"}],"defaultKey":"en","urlLangTokenBypassed":false},"googleAnalytics":{"trackingId":"","mobileTrackingId":"UA-113910481-4"},"googleTagManager":{"id":"GTM-MKJHVPH","corebine":{"core":{"id":"GTM-WHWCS9D"},"client":{"id":"GTM-P3GZ2ND"}}},"facebook":{"appId":"000000000000000"},"cloudinary":{"baseUrl":"http://res.cloudinary.com/asroma2-production/image/upload/","cloudName":"asroma2-production","dirName":"asroma2-prod","paths":{"teams":"assets/teams","players":"assets/players","competitions":"assets/competitions"}},"bing":{"baseUrl":"https://api.cognitive.microsoft.com/bing/v7.0/search","token":"57bfa2426e1c404aa271dcdbaa8751ac"},"search":{"baseUrl":"https://api.cognitive.microsoft.com/bing/v7.0/search","provider":{"_type":"Corebine.Core.Search.Provider.Bing","token":"57bfa2426e1c404aa271dcdbaa8751ac"}},"recaptcha":{"apiKey":"6LeVoy8UAAAAAIZDWEGGuMRVPP0iA6kTCCdg2Uvm","verificationUrl":"https://ext-auth.omnigonprosuite.com/validate"},"sport":{"teams":[{"name":"Roma","shortName":"RMA","_entityId":"346f0799c5f9c2e65078c99d","_type":"Corebine.Core.Sport.Team","externalId":"121"}]},"auth":{"provider":{"_type":"Corebine.Core.Auth.Provider.Auth0","name":"AUTH_0","clientId":"YWWr22bjb9C1tA7IkB5SXpqxyvit0Bmv","domain":"asroma-production.eu.auth0.com","metadataNamespace":"https://usermetadata.com","customLanguages":["id","ar"]},"siteId":"asroma2","clientId":"10997","url":"https://ext-auth.omnigonprosuite.com/validate","baseUrl":"https://ext-auth.omnigonprosuite.com/"},"mailChimp":{"url":"https://asroma-api-prod.corebine.com/mailchimp"},"sportsRocket":{"realmUuid":"32b56ba0bc19fbbc7bd1eebf4876bd99"}},
+                        config: {
+                            imgPath: '/static/img',
+                            theme: 'white-lion',
+                            skin: ''
+                        }
+                    };
+                    corebine.i18n = {"Completed match":"مباراة كاملة","Full Time":"نهاية المباراة","FT":"نهاية المباراة","Group A":"المجموعة  الأولى","Game Day 1":"المباراة رقم 1","1st Half":"الشوط الأول ","1st":"الأول","2nd Half":"الشوط الثاني","2nd":"الثاني","Live match with extra time in overtime":"مباراة مباشرة والوقت بدل الإضافي","1st Overtime":"الشوط الإضافي الأول","OT1":"الإضافي الأول","2nd Overtime":"الشوط الإضافي الثاني","OT2":"الإضافي الثاني","Upcoming match":"المباراة القادمة","Defender":"المدافع","DE":"مدافع ","Midfielder":"وسط الملعب","MF":"وسط","Goalkeeper":"الحارس","GK":"ح.مرمى","Opta Rating":"تقييم أوبتا","Forward":"أمام","FW":"خطأ ل","Substitutes":"البدلاء","Average Position":"المركز المتوسط","Formation":"التشكيل","Penalty Goal":"ضربة جزاء","Shooter":"المسدد","Keeper":"حارس مرمى","Penalty Miss":"ضربة جزاء ضائعة","Penalty Save":"تصدي لضربة الجزاء","Shots On Target":"التسديدات على المرمى","Shots Off Target":"تسديدة خارج المرمى","Goals":"أهداف","goal":"هدف","Start of Match":"بداية المباراة","Goal":"هدف","Goalscorer":"مسجل الهدف","Assist":"صناعة ","Assisted By":"صنع عن طريق","Own Goal":"هدف خطأ في مرماه","Own Goal By":"هدف خطأ في مرماه","Yellow Card":"بطاقة صفراء","Live Key Player Stats":"إحصائيات مباشرة للاعب","Position":"مركز","Height":"الارتفاع","cm":"سم","Weight":"الوزن","kg":"كجم","Club":"النادي","Nationality":"الجنسية","German":"ألمانيا","Czech":"التشيك","Age":"العمر","Live Stats":"إحصائيات مباشرة ","Games Played":"المشاركات","Clean Sheets":"شباك نظيفة","Goals Conceded":"استقبال الأهداف","Punches":"تصديات بقبضة اليد","Passing Accuracy":"دقة التمريرات","Catches":"إمساك الكرة","Penalty Goals Conceded":"الأهداف المتلقاة من ضربات جزاء","Recoveries":"الاستردادات الناجحة","Successful Distributions":"التوزيع الناجح","Clearances":"تشتيت الكرة","Accuracy":"دقة","Total Passes":"إجمالي التمريرات","Accurate":"صحيح","Inaccurate":"غير صحيح","Goals By Type":"أهداف حسب النوع","Shooting Tendency":"نزعة التسديد","Left":"يسار","Header":"ضربة رأسية","Right":"يمين","Other":"آخر","Goals And Shots":"أهداف وتسديدات","Shots":"تسديدات","Shots Off":"أهداف حسب النوع","Opta Player Rating":"تقييم اللاعب حسب أوبتا ","Minutes Played":"دقائق اللعب","Assists":"صناعة الأهداف","Shooting Accurac":"دقة التسديد","Tackles":"استخلاص الكرة","Blocks":"اعتراض التسديدات","Interceptions":"اعتراضات الكرة","Duels Won":"الالتحامات الناجحة","Sooting Accuracy":"دقة التسديد","Total Shots":"إجمالي التسديدات","On Target":"على المرمى ","Off Target":"خارج المرمى","Passes":"تمريرات","Possession":"استحواذ","Possession Breakdown":"توزيع الاستحواذ ","Attacking":"هجوم","Defensive":"دفاع","Middle":"منتصف","Corners":"ركلات ركنية","Crosses":"العرضيات","Fouls":"أخطاء","Offsides":"تسللات","Starts":"المشاركات كأساسي","Sub Off":"خروج","Key Stats":"إحصائيات أساسية","Shooting Accuracy":"دقة التسديد","Touches":"اللمسات","Hit Woodwork":"كرات ارتطمت بالعارضة","Key Passes":"التمريرات الحاسمة","Debuts":"المباراة الأولى مع الفريق","Birth Date":"تاريخ الميلاد","Birth Place":"مكان الميلاد","Shots On":"تسديدات على المرمى","Goals From Position":"أهداف من المنطقة","Goals Inside Box":"أهداف من داخل منطقة الجزاء","Goals Outside Box":"أهداف من خارج منطقة الجزاء","Set Pieces":"ركلات حرة","Due For A Goal":"ما قبل هدف","Mins Per Goal":"الدقائق اللازمة لتسجيل هدف واحد","Since Last Goal":"عدد الدقائق منذ آخر هدف","Fouls Won":"أخطاء لصالحه","Fouls Conceded":"أخطاء ضده","Cards":"البطاقات","Yellow Cards":"البطاقات الصفراء","Red cards":"البطاقات الحمراء","Accurate Passes":"تمريرات صحيحة","Inaccurate Passes":"تمريرات خاطئة","Accurate Passes %":"تمريرات صحيحة بنسبة %","Successful Assists":"تمريرات حاسمة","Chances Created":"صناعة الفرص","Successful Long Passes %":"تمريرات طويلة بنسبة %","Successful Crosses":"عرضيات صحيحة","Open Play Crosses":"عرضيات من لعب مفتوح","Passing Accuracy %":"دقة التمرير","Own Half":"نصف ملعبنا","Opp. half":"شوط الخصم","Passing Direction %":"اتجاهات التمرير %","Backward":"خلف","Saves Made":"التصديات الناجحة","Statistic":"إحصائيات","Save To Shot Ratio":"معدل التصدي مقابل التسديد","Pens. Saved":"ركلاء جزاء تم التصدي لها","Drops":"أوقع الكرة","Completed match with aggregated scores and shootouts":"إنتهاء المباراة بنتيجة إجمالية و ....","Full Time/Penalty Kicks":"نهاية الوقت الأساسي للمباراة/ ركلات الترجيح","Live match with aggregated scores and extra time":"مباراة مباشرة بنتيجة إجمالية ووقت إضافي ","Completed match with overtime":"نهاية المباراة بوقت إضافي ","Full Time/Overtime":"نهاية المباراة / وقت إضافي","FT/OT":"نهاية/و.إضافي","Played":"لعبت","P":"ت. قبضة","Home":"صاحب الأرض","Wins":"انتصارات","W":"ف","Draws":"تعادلات","D":"أ. كرة","Losses":"هزائم","L":"خ","Goals For":"أهداف لـ","GF":"هدف ل","Goals Against":"أهداف ضد","GA":"هدف ضد","Away":"خارج الأرض","Goals Difference":"فرق الأهداف","GD":"ف. هدف","Points":"نقاط","Pts":"نق.","Tournament Ranking":"تصنيف البطولة","Team Key Stats":"إحصائيات الفريق","Drawn":"تعادل","Win Ratio":"معدل فوز","Games Won":"الفوز بالمباريات","Lost":"الخسارة","Team Basic Stats":"إحصائيات الفريق الأساسية","Correct Passes":"تمريرات صحيحة","Unsuccessful Passes":"تمريرات غير صحيحة","Pass Accuracy":"دقة التمرير","Vice Coach":"المدرب المساعد","Coach and Staff":"المدرب والطاقم التدريبي","Head Coach":"المدير الفني","GP":"م","CC":"ص. ف.","TP":"اجمالي ت.","Total Crosses":"إجمالي العرضيات","TC":"عرضيات إ.","CS":"ش. ن.","GS":"ت. أ.","Total Clearances":"إجمالي الكرات المشتتة","TCL":"ك. م.","TS":"إ. تصدي","A":"ص.ه.","Red Cards":"بطاقات حمراء","RC":"ب. ح.","Shots Faced":"مواجهة التسديدات","SF":"م. ت.","SA":"ت. ح.","Minutes Per Goal":"دقائق\\هدف","MPG":"د\\ه","Goals From Inside The Box":"هدف من داخل منطقة الجزاء","GIB":"هدف خارج المنطقة","Goals From Outside The Box":"هدف من خارج منطقة الجزاء","GOB":"هدف داخل المنطقة","Conversion Rate":"نسبة تسجيل الأهداف","CR":"ن.تسجيل","TCK":"استخلاص","Tackles Won":"استخلاصات ناجحة","TCKW":"استخلاص ناجح","CL":"تش.","FC":"خطأ ضد","Passes Long":"تمريرات طويلة","PL":"تمرير طويل","PA":"تمرير دقة","Passes Per Game":"التمريرات في المباراة الواحدة","PPG":"تمرير/مباراة","SC":"عرضية ناجحة","Shot Assists":"تسديدة من تمريرة حاسمة","MP":"د.ل.","ST":"أساسي","Substitution On":"تغيير بدخول اللاعب","SON":"تغ. دخول","Substitution Off":"تغيير بخروج اللاعب","SOFF":"تغ. خروج","Duels won":"الفوز في الصراعات الثنائية","DW":"ف. صراع ثنائي","Aerial Duels won":"الفوز في الصراعات الثنائية الهوائية","ADW":"ف. صراع هوائي","I":"اع. كرة","GC":"ه. أمام","Total Saves":"إجمالي التصديات","Saves/Shots Ratio":"نسبة التصديات/ التسديدات","SS":"ت/ت","CA":"إ.ك.","Penalty Saves":"تصدي لركلات الجزاء","PS":"ت. ركلة جزاء","Ratio Goals/Games":"نسبة الأهداف/ المباريات","Goals and Penalties":"أهداف وركلات جزاء","Per Game":"في المباراة الواحدة","Penalties Conceded":"ركلات جزاء محتسبة ضده","Tackles and Duels":"استخلاص وصراعات ثنائية","Tackles Won / Tackles":"استخلاصات ناجحة/ استخلاصات","Duels Won / Duels":"الفوز في الصراعات الثنائية/ الصراعات الثنائية","Aerial Duels Won / Aerial Duels":"الفوز في الصراعات الثنائية الهوائية/ صراعات ثنائية هوائية","181 Accurate Passes181 Accurate Passes181 Accurate Passes":"181 تمرير صحيحة","205 Total Passes205 Total Passes205 Total Passes":"إجمالي التمريرات 205 تمريرة","Opp. Half":"نصف ملعب الخصم","Passing Direction":"اتجاه التمريرات","Please enter a valid e-mail format":"برجاء إدخال بريد إلكتروني صحيح","Please check the Terms of Use":"برجاء التحقق من شروط الاستخدام","User subscribed successfully":"تم الاشتراك بنجاح","An error occurred during subscription":"حدث خطأ أثناء الاشتراك","I have read and agreed to the":"قرأت وموافق على","terms and conditions":"الشروط والأحكام","Form has been successfully submitted":"تم إرسال النموذج بنجاح","Form failed to submit":"فشل في الإرسال","Submit":"إرسال","Please provide your correct":"برجاء توفير الصحيح (ماذا؟)","Share":"مشاركة","Tweet":"تغريد","Follow":"متابعة","Retweet":"إعادة تغريد","Copy URL":"نسخ الرابط","Read this next":"قراءة التالي","Sponsored by":"برعاية","Advertisement":"إعلان","See also":"شاهد أيضاً","By":"بواسطة","This website uses cookies to improve your experience.":"هذا الموقع يستخدم ملفات الكوكيز لتحسين تجربتك","Learn more":"اعرف المزيد","Close":"إغلاق","Select":"اختر","Now":"الآن","hours ago":"منذ ساعة","h":"س","1h":"1س","m":"د","minutes ago":"منذ دقيقة","Select a state/region":"اختر دولة / منطقة","Date":"التاريخ","Jan":"يناير","Feb":"فبراير","Mar":"مارس","Apr":"أبريل","May":"مايو","Jun":"يونيو","Jul":"يوليو","Aug":"أغسطس","Sep":"سبتمبر","Oct":"أكتوبر","Nov":"نوفمبر","Dec":"ديسمبر","An error occurred. Please, try again late":"حدث خطأ ما، حاول لاحقاً","Sorry, something went wrong":"نعتذر، لقد حدث خطأ ما.","Watch video":"شاهد الفيديو ","Teams":"فرق ","Sorry, content is not available":"نعتذر، المحتوى غير موجود","Tag":"إشارة","Search":"بحث","Select a country":"اختر الدولة","Page not found":"لم يتم العثور على الصفحة","Download":"تنزيل","Loading...":"جاري التحميل...","Nothing found":"لا يوجد شيء","No data available":"البيانات غير موجودة","Open on Facebook":"افتح فيسبوك","Open on Instagram":"افتح انستجرام ","Open on Twitter":"افتح تويتر","Feeds are not available":"الصفحة غير متاحة","Scroll down":"تصفح للأسفل","US":"الولايات المتحدة الأمريكية","Country Select Field":"حقل تحديد البلد","Regions/States Select Field":"المناطق / الولايات حدد المجال","Region Or State":"المنطقة أو الدولة","Last Match":"المباراة السابقة","Next Match":"المباراة القادمة ","Buy Tickets":"أحصل على تذاكر","Login":"دخول ","Match Center":"مركز المباراة ","Sign In":"تسجيل الدخول","Register":"تسجيل ","Standings":"جدول الترتيب","Play-By-Play":"اللعب عن طريق اللعب","Statistics":"إحصائيات","Team Stats":"إحصائيات الفريق","Player Stats":"إحصائيات اللاعبين","Line-Ups":"تشكيل الفريقين","Pitch View":"نظرة من الملعب","Shots and Goals":"التسديدات والأهداف","Profile":"الملف","Distribution":"التوزيع","Attack":"الهجوم","Discipline":"إلتزام","Comparison":"مقارنة","Overview":"نظرة عامة","Defence":"الدفاع","Team Comparision":"مقارنة","General":"عام","Goalkeeping":"حراسة المرمى","Player Ranking":"تصنيف اللاعبين","All Players and Staff":"اللاعبون والجهاز المعاون","Official AS Roma Website":"الموقع الرسمي لنادي AS Roma","Back to homepage":"العودة إلى الصفحة الرئيسية","player_stats_distribution_left":"اليسار","team_stats_distribution_left":"اليسار","team_stats_distribution_forward":"إلى الأمام","team_stats_distribution_right":"حق","Upcoming Matches":"المباريات القادمة","Chance Conversion %":"فرصة التحويل٪","player_stats_distribution_right":"حق","From":"من عند","action_assist":"مساعدة","Value":"القيمة","Refresh":"تحديث","Goalies":"غليس","Player info is not available":"معلومات اللاعب غير متوفرة","Game Center":"مركز الالعاب","Beta":"بيتا","No results found. Please change filter settings and try again.":"لا توجد نتائج. يرجى تغيير إعدادات الفلتر والمحاولة مرة أخرى.","Shots Details":"تفاصيل لقطات","Passes Details":"تفاصيل لقطات","Possession Details":"تفاصيل لقطات","League Position":"مركز الفريق في جدول الدوري","Draw":"تعادل","Games Win %":"نسبة الفوز %","Goalkeepers":"حراس المرمى","Defenders":"المدافعين","Forwards":"المهاجمين","Player":"لاعبي الوسط","YC":"بطاقة صفراء","Add to calendar":"ضف للجدول","FT/PK":"نهاية المباراة/ ركلات الجزاء","Pickups":"امساكات","Saves":"تصديات","Line-up":"التشكيل","End of Match":"نهاية المباراة","Player Out":"خروج لاعب","Player In":"دخول لاعب","Sign Up":"تسجيل الدخول","Serie A Debut":"المشاركة الأولى في الدوري الإيطالي","Key Player Stats":"إحصائيات لاعب هام","From 25,00 €":"من 25000 يورو","Pos":"مركز","POS":"مركز","TEAM":"الفريق","Group 1":"مجموعة 1","Group 2":"مجموعة 2","Group 3":"مجموعة 3","Group 4":"مجموعة 4","Group B":"مجموعة B","Group C":"مجموعة C","Group D":"مجموعة D","Group E":"مجموعة E","Group F":"مجموعة F","Group G":"مجموعة G","Group H":"مجموعة H","Sign in":"تسجيل الدخول","Not a member yet?":"لست عضوا حتى الآن؟","Team Comparison":"فريق مقارنة","B":"ب","Successful long passes %":"نجاحات طويلة ناجحة٪","Opp.Half":"مقابل. نصف","player_stats_distribution_forward":"إلى الأمام","Nearest matches":"أقرب المباريات","Full Schedule":"الجدول الزمني الكامل","Signup":"سجل","Midfielders":"لاعبو الوسط","player_stats_attack_left":"اليسار","Error 404! Oops, something went wrong.":"خطأ 404! تبا شيء ما حدث بشكل خاطئ.","Show More":"أظهر المزيد","Total":"مجموع","auth0":{"error":{"forgotPassword":{"too_many_requests":"لقد وصلت لأقصى عدد ممكن من محاولات تغيير كلمة المرور، رجاء الانتظار قبل المحاولة مجددًا.","lock.fallback":"عفوًا، حدث خطأ عن طلبك تغيير كلمة المرور"},"login":{"blocked_user":"تم حظر المستخدم","invalid_user_password":"اسم مستخدم أو كلمة سر خاطئة","lock.fallback":"عفوًا، حدث خطأ وقت محاولة تسجيل الدخول","lock.invalid_code":"رمز خاطئ","lock.invalid_email_password":"خطأ في البريد الإلكتروني أو كلمة المرور","lock.invalid_username_password":"خطأ في اسم المستخدم أو كلمة المرور","lock.network":"تعذر الوصول للشبكة، يرجى التحقق من جهة الاتصال ثم حاول مرة أخرى","lock.popup_closed":"تم اغلاق الصفحة. حاول مرة أخرى.","lock.unauthorized":"لم تحصل على المميزات الخاصة. حاول مرة أخرى","lock.mfa_registration_required":"سجل جهازك في جدولة المميزات.","lock.mfa_invalid_code":"رمز خاطئ، حاول مرة أخرى.","password_change_required":"عليك تحديث كلمة المرور حيث أنها المرة الأولى لك في تسجيل الدخول، أو بسبب انتهاء صلاحية كلمة المرور الخاصة بك.","password_leaked":"اكتشفنا مشكلة أمنية في هذا الحساب. لحماية حسابك، حظرنا تسجيل الدخول هنا وتم إرسال رسالة إلكترونية لك تتضمن إرشادات حول كيفية إلغاء حظر حسابك.","too_many_attempts":"تم حظر حسابك بعد عدة محاولات متتالية لتسجيل الدخول.","session_missing":"تعذر إكمال طلبك، الرجاء المحاولة مجددًا بعد التأكد من حفظ بياناتك.","hrd.not_matching_email":"استخدم بريدك الإلكتروني الخاص بعملك للدخول."},"passwordless":{"bad.email":"بريد إلكتروني غير صالح.","bad.phone_number":"رقم جوال غير صالح.","lock.fallback":"عفوًا، لقد حدث خطأ."},"signUp":{"invalid_password":"كلمة مرور غير صالحة.","lock.fallback":". عفوًا، حدث خطأ أثناء محاولتك التسجيل.","password_dictionary_error":" كلمة مرور شائعة.","password_no_user_info_error":"كلمة المرور مبنية على معلومات المستخدم","password_strength_error":"كلمة مرور ضعيفة.","user_exists":"هذا الحساب موجود من قبل.","username_exists":"اسم المستخدم موجود من قبل."}},"success":{"logIn":"شكرًا لتسجيل دخولك.","forgotPassword":"لقد أرسلنا إليك رسالة إلكترونية لإعادة تعيين كلمة المرور. ","magicLink":"أرسلنا لك رابط لتسجيل الدخول %s.","signUp":"شكرًا لتسجيلك."},"blankErrorHint":"لا يمكن تركه فارغًا.","codeInputPlaceholder":"رمزك","databaseEnterpriseLoginInstructions":"","databaseEnterpriseAlternativeLoginInstructions":"أو","databaseSignUpInstructions":"","databaseAlternativeSignUpInstructions":"أو","emailInputPlaceholder":"yours@example.com","enterpriseLoginIntructions":"سجل الدخول باستخدام بيانات اعتماد شركتك.","enterpriseActiveLoginInstructions":"الرجاء إدخال بيانات اعتماد الشركة على %s.","failedLabel":"فشل!","forgotPasswordTitle":"أعد ضبط كلمة المرور.","forgotPasswordAction":" نسيت كلمة المرور؟","forgotPasswordInstructions":"من فضلك ادخل بريدك الإلكتروني. سوف نرسل لك رسالة إلكتروني لإعادة تعيين كلمة المرور.","forgotPasswordSubmitLabel":"ارسل بريد إلكتروني.","invalidErrorHint":"غير صالح.","lastLoginInstructions":"آخر مرة سجلت فيها الدخول.","loginAtLabel":"سجل حسابك في %s","loginLabel":"تسجيل الدخول","loginSubmitLabel":"تسجيل الدخول","loginWithLabel":"تسجيل الدخول مع %s","notYourAccountAction":"ليس حسابك؟","passwordInputPlaceholder":"كلمة مرورك","passwordStrength":{"containsAtLeast":"عليك أن تستخدم حروف وأرقام مثل %d","identicalChars":"لا يمكنك استخدام أكثر من مرة متتالية,","nonEmpty":"لا يمكنك ترك كلمة المرور دون كتابتها","numbers":" أرقام (من 1 إلى 9)","lengthAtLeast":"يجب أن يكون عدد %d من الحروف والأرقام","lowerCase":"يجب أن تكون حروف صغرى (a-z)","shouldContain":"يجب أن يتضمن","specialCharacters":"استخدم أشياء مثل (!@#$%^&*)","upperCase":"يجب أن تكون حروف كبرى (A-Z)"},"passwordlessEmailAlternativeInstructions":"وإلا، أدخل بريدك الإلكتروني لتسجيل الدخول، أو أنشأ حساب جديد","passwordlessEmailCodeInstructions":"بريد إلكتروني يحتوي على الرمز تم أرساله إلى %s","passwordlessEmailInstructions":"أدخل بريدك الإلكتروني لتسجيل الدخول، أو أنشأ حساب جديد","passwordlessSMSAlternativeInstructions":"وإلا، أدخل رقم جوالك لتسجيل الدخول، أو أنشأ حساب جديد","passwordlessSMSCodeInstructions":"رسالة نصية تحتوي على الرمز تم أرسالها إلى %s","passwordlessSMSInstructions":"أدخل رقم جوالك لتسجيل الدخول، أو أنشأ حساب جديد","phoneNumberInputPlaceholder":"رقم جوالك","resendCodeAction":"لم يصلك الرمز؟","resendLabel":"إعادة الإرسال","resendingLabel":"يتم إعادة الإرسال…","retryLabel":"إعادة المحاولة","sentLabel":"تم الإرسال!","showPassword":"أظهر كلمة المرور","signupTitle":"سجل الآن","signUpLabel":"سجل الآن","signUpSubmitLabel":"Sسجل الآن","signUpWithLabel":"سجل بـ %s","socialLoginInstructions":"","socialSignUpInstructions":"","ssoEnabled":"التسجيل الأولي متاح","submitLabel":"خضع","unrecoverableError":"حدث خطأ ما، برجاء التواصل مع الدعم الفني","usernameFormatErrorHint":"استخدم حروف  %d-%d من وأرقام وأشكال: '_', '.', '+', '-'","usernameInputPlaceholder":"اسم المستخدم","usernameOrEmailInputPlaceholder":"اسم المستخدم/البريد الإلكتروني","title":"تسجيل دخول","onFirstLoginError":"لقد قمنا بتحديث نظام عملية التسجيل. من فضلك قم بـإعادة ظبط كلمة السر من خلال استخدام رابط نسيت كلمة السر بالأسفل","welcome":"أهلاً وسهلاً %s!","windowsAuthInstructions":"أنت متصل من شبكة الشركة & هيليب؛","windowsAuthLabel":"مصادقة ويندوز","mfaInputPlaceholder":"الشفرة","mfaLoginTitle":"خطوتين للتحقق","mfaLoginInstructions":"برجاء إدخال الرقم الذي تم ارساله بواسطة تطبيق الجوال","mfaSubmitLabel":"سجل الدخول","mfaCodeErrorHint":"استخدم %d أرقام","firstNamePlaceholder":"الإسم الأول","lastNamePlaceholder":"الإسم الثاني","nationPlaceholder":"اختر دولتك","dateOfBirthPlaceholder":"يوم الميلاد","firstNameErrorHint":"لا يمكن أن تكون فارغة","fullNameErrorHint":"لا يمكن أن تكون فارغة","dateOfBirthErrorHint":"لا يمكن أن تكون فارغة","consentPlaceholder":"Fornisco il mio consenso per analisi delle mie preferenze: esaminare i miei dati, le mie preferenze ed acquisti, la mia partecipazione a iniziative e concorsi nonché la mia navigazione all'interno del sito per migliorare la vostra offerta commerciale","subscribePlaceholder":"Fornisco il mio consenso per attività di marketing: per inviarmi materiale pubblicitario e promozionale, anche personalizzato in base alle mie preferenze, ed aggiornarmi  (mediante newsletter, e-mail, telefono, instant messaging, post, messaggi o comunicazioni di iniziative su social network ed applicazioni, ecc.), su prodotti, servizi o iniziative (es. promozioni, concorsi, giochi, attività, eventi), , che le Società ed i loro Partner commerciali riservano agli iscritti, nonché per svolgere ricerche di mercato","privacyPlaceholder":"Leggi <a class='terms-link' target='_blank' href='http://www.asroma.com/it/privacy'>l’informativa privacy</a>","signUpTerms":"Hai letto ed accetti i <a class='terms-link' target='_blank' href='http://www.asroma.com/it/club/termini-di-utilizzo'>termini di utilizzo</a> del sito"},"AS Roma":"مجموع","VIEW":"VIEW","On the App Store":"On the App Store","In Google Play":"In Google Play","In Windows store":"In Windows store","FREE":"FREE","Logout":"Logout","Menu":"Menu","an hour ago":"an hour ago","Schedule":"Schedule","Select a state":"Select a state"};
+   </script>
+   <title>
+    تم انضمام الحارس أليسون لصفوف ليفربول
+   </title>
+   <meta content="تم انضمام الحارس أليسون لصفوف ليفربول" itemprop="name"/>
+   <meta content="تم انضمام الحارس أليسون لصفوف ليفربول" name="twitter:title"/>
+   <meta content="تم انضمام الحارس أليسون لصفوف ليفربول" property="og:title">
+    <meta content="تم التوصل إلى اتفاق بين روما وليفربول من أجل انتقال حارس المرمى أليسون بيكر، في صفقة تبلغ قيمتها 72.5 مليون يورو." name="description">
+     <meta content="تم التوصل إلى اتفاق بين روما وليفربول من أجل انتقال حارس المرمى أليسون بيكر، في صفقة تبلغ قيمتها 72.5 مليون يورو." itemprop="description"/>
+     <meta content="تم التوصل إلى اتفاق بين روما وليفربول من أجل انتقال حارس المرمى أليسون بيكر، في صفقة تبلغ قيمتها 72.5 مليون يورو." name="twitter:description"/>
+     <meta content="تم التوصل إلى اتفاق بين روما وليفربول من أجل انتقال حارس المرمى أليسون بيكر، في صفقة تبلغ قيمتها 72.5 مليون يورو." property="og:description">
+      <meta content="https://res.cloudinary.com/asroma2-production/image/upload/v1/asroma-uat/jll3gnue7tpv8iupgzhv" itemprop="image"/>
+      <meta content="summary_large_image" name="twitter:card"/>
+      <meta content="https://res.cloudinary.com/asroma2-production/image/upload/v1/asroma-uat/jll3gnue7tpv8iupgzhv" name="twitter:image:src"/>
+      <meta content="https://res.cloudinary.com/asroma2-production/image/upload/v1/asroma-uat/jll3gnue7tpv8iupgzhv" property="og:image">
+       <!-- Tracking head -->
+       <!-- Google Tag Manager - Corebine Main Container -->
+       <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                                'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                                f.parentNode.insertBefore(j,f);
+                        })(window,document,'script','dataLayer','GTM-WHWCS9D');
+       </script>
+       <!-- End Google Tag Manager - Corebine Main Container -->
+       <!-- Google Tag Manager - Clients Container -->
+       <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                                'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                                f.parentNode.insertBefore(j,f);
+                        })(window,document,'script','dataLayer','GTM-P3GZ2ND');
+       </script>
+       <!-- End Google Tag Manager - Clients Container -->
+       <!-- Google Tag Manager -->
+       <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-MKJHVPH');
+       </script>
+       <!-- End Google Tag Manager -->
+       <!-- End Tracking head -->
+       <script src="/static/js/bundle/common.bundle.js?v=66dd83506769bc3867cb">
+       </script>
+       <script src="/static/js/bundle/scripts/app.bundle.js?v=66dd83506769bc3867cb">
+       </script>
+       <script>
+        corebine.import = corebine.bundleLoader(
+                        '/static/js/bundle',
+                        '',
+                        '66dd83506769bc3867cb'
+                    );
+       </script>
+       <meta content="app-id=518424485" name="apple-itunes-app">
+        <meta content="app-id=asroma.mobile" name="google-play-app">
+         <script>
+          corebine.import('scripts/app-banner').then(function (module) {
+                            module.AppBanner({
+                                daysHidden: 15,   // days to hide banner after close button is clicked (defaults to 15)
+                                daysReminder: 90, // days to hide banner after "VIEW" button is clicked (defaults to 90)
+                                appStoreLanguage: 'ar', // language code for the App Store (defaults to user's browser language)
+                                title: 'AS Roma Official App',
+                                author: 'A.S. Roma S.p.A.',
+                                button: 'VIEW',
+                                store: {
+                                    ios: 'On the App Store',
+                                    android: 'In Google Play',
+                                    windows: 'In Windows store'
+                                },
+                                price: {
+                                    ios: 'FREE',
+                                    android: 'FREE',
+                                    windows: 'FREE'
+                                }
+                                // , theme: '' // put platform type ('ios', 'android', etc.) here to force single theme on all device
+                                // , icon: '' // full path to icon image if not using website icon image
+                                // , force: 'ios' // Uncomment for platform emulation
+                            })
+                        });
+         </script>
+        </meta>
+       </meta>
+      </meta>
+     </meta>
+    </meta>
+   </meta>
+  </link>
+ </head>
+ <body class="is-soccer">
+  <div class="l-page-wrapper ">
+   <header class="m-navigation-tool is-rtl" id="id-258672381">
+    <div class="s-navigation-tool-panel-header">
+     <div class="m-sport-soccer-live-ticker" id="id-258672385">
+     </div>
+     <script>
+      corebine.import('markups/modules/sport/spec/soccer/live-ticker/live-ticker').then(function (module) {
+                            module.render(
+                                    {
+                                        feedUrl: 'https://www.asroma.com/api/s3/live?q=live-matches.json'
+                                    },
+                                    document.getElementById('id-258672385')
+                            );
+                        });
+     </script>
+    </div>
+    <div class="s-navigation-tool-floating-placeholder js-floating-placeholder">
+     <div class="s-navigation-tool-floating-placeholder__panel js-floating-panel">
+      <section class="s-navigation-tool-panel-primary is-rtl">
+       <div class="s-navigation-tool-panel-primary__holder js-navigation-container">
+        <div class="s-navigation-tool-panel-primary-holder-tools">
+         <form action="/ar/search" class="s-navigation-tool-search" method="get">
+          <fieldset class="s-navigation-tool-search-set">
+           <input class="s-navigation-tool-search-set__input js-search-input" name="search" placeholder="بحث" type="text"/>
+           <div class="b-image-svg" id="id-258672389">
+           </div>
+           <script>
+            corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                    module.render(
+                                                        {
+                                                            source: '/svg.svg#icon-search',
+                                                            className: 's-navigation-tool-search-set__icon'
+                                                        },
+                                                        document.getElementById('id-258672389')
+                                                    );
+                                                });
+           </script>
+           <input class="s-navigation-tool-search-set__submit" type="submit" value="بحث"/>
+           <div class="b-image-svg" id="id-258672391">
+           </div>
+           <script>
+            corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                    module.render(
+                                                        {
+                                                            source: '/svg.svg#icon-close',
+                                                            className: 's-navigation-tool-search-set__close'
+                                                        },
+                                                        document.getElementById('id-258672391')
+                                                    );
+                                                });
+           </script>
+          </fieldset>
+         </form>
+         <nav class="s-navigation-tool-lang-switcher">
+          <div class="s-navigation-tool-lang-switcher-unit js-navigational-item">
+           <em class="s-navigation-tool-lang-switcher-unit__link js-navigational-trigger">
+            ar
+            <div class="b-image-svg" id="id-258672394">
+            </div>
+            <script>
+             corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                            module.render(
+                                                                {
+                                                                    source: '/svg.svg#icon-arrow',
+                                                                    className: 's-navigation-tool-lang-switcher-unit-link-icon s-navigation-tool-lang-switcher-unit-link-icon--dropdown'
+                                                                },
+                                                                document.getElementById('id-258672394')
+                                                            );
+                                                        });
+            </script>
+           </em>
+           <nav class="s-navigation-tool-lang-switcher-unit-list js-navigational-menu">
+            <div class="s-navigation-tool-lang-switcher-unit-list-item">
+             <a class="s-navigation-tool-lang-switcher-unit-list-item__link" data-lang="en" href="/en">
+              en
+             </a>
+            </div>
+            <div class="s-navigation-tool-lang-switcher-unit-list-item">
+             <a class="s-navigation-tool-lang-switcher-unit-list-item__link" data-lang="it" href="/it">
+              it
+             </a>
+            </div>
+            <div class="s-navigation-tool-lang-switcher-unit-list-item">
+             <a class="s-navigation-tool-lang-switcher-unit-list-item__link" data-lang="id" href="/id">
+              id
+             </a>
+            </div>
+           </nav>
+          </div>
+         </nav>
+         <nav class="s-navigation-tool-social-media">
+          <div class="s-navigation-tool-social-media-unit">
+           <a class="s-navigation-tool-social-media-unit__link s-navigation-tool-social-media-unit__link--facebook" href="https://www.facebook.com/officialasroma" target="_blank">
+            <div class="b-image-svg" id="id-258672398">
+            </div>
+            <script>
+             corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        source: '/svg.svg#icon-facebook',
+                                                                        className: 's-navigation-tool-social-media-unit-link-icon s-navigation-tool-social-media-unit-link-icon--social'
+                                                                    },
+                                                                    document.getElementById('id-258672398')
+                                                                );
+                                                            });
+            </script>
+           </a>
+          </div>
+          <div class="s-navigation-tool-social-media-unit">
+           <a class="s-navigation-tool-social-media-unit__link s-navigation-tool-social-media-unit__link--twitter" href="https://twitter.com/asromaen" target="_blank">
+            <div class="b-image-svg" id="id-258672401">
+            </div>
+            <script>
+             corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                source: '/svg.svg#icon-twitter',
+                                                                                className: 's-navigation-tool-social-media-unit-link-icon s-navigation-tool-social-media-unit-link-icon--social'
+                                                                            },
+                                                                            document.getElementById('id-258672401')
+                                                                        );
+                                                                    });
+            </script>
+           </a>
+          </div>
+          <div class="s-navigation-tool-social-media-unit">
+           <a class="s-navigation-tool-social-media-unit__link s-navigation-tool-social-media-unit__link--instagram" href="https://www.instagram.com/officialasroma/" target="_blank">
+            <div class="b-image-svg" id="id-258672404">
+            </div>
+            <script>
+             corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        source: '/svg.svg#icon-instagram',
+                                                                        className: 's-navigation-tool-social-media-unit-link-icon s-navigation-tool-social-media-unit-link-icon--social'
+                                                                    },
+                                                                    document.getElementById('id-258672404')
+                                                                );
+                                                            });
+            </script>
+           </a>
+          </div>
+          <div class="s-navigation-tool-social-media-unit">
+           <a class="s-navigation-tool-social-media-unit__link s-navigation-tool-social-media-unit__link--youtube" href="https://www.youtube.com/asroma" target="_blank">
+            <div class="b-image-svg" id="id-258672407">
+            </div>
+            <script>
+             corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        source: '/svg.svg#icon-youtube',
+                                                                        className: 's-navigation-tool-social-media-unit-link-icon s-navigation-tool-social-media-unit-link-icon--social'
+                                                                    },
+                                                                    document.getElementById('id-258672407')
+                                                                );
+                                                            });
+            </script>
+           </a>
+          </div>
+         </nav>
+         <div class="s-navigation-tool-login js-navigational-item">
+          <div class="js-navigational-trigger">
+           <div class="s-navigation-tool-login__icons">
+            <div class="b-image-svg" id="id-258672410">
+            </div>
+            <script>
+             corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                        module.render(
+                                                            {
+                                                                source: '/svg.svg#icon-profile',
+                                                                className: 's-navigation-tool-login-icon-profile'
+                                                            },
+                                                            document.getElementById('id-258672410')
+                                                        );
+                                                    });
+            </script>
+            <div class="b-image-svg" id="id-258672412">
+            </div>
+            <script>
+             corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                        module.render(
+                                                            {
+                                                                source: '/svg.svg#icon-arrow',
+                                                                className: 's-navigation-tool-login-icon-arrow'
+                                                            },
+                                                            document.getElementById('id-258672412')
+                                                        );
+                                                    });
+            </script>
+           </div>
+          </div>
+          <div class="s-navigation-tool-login__popup js-navigational-menu">
+           <ul class="s-navigation-tool-login-signup js-login-signup">
+            <li class="s-navigation-tool-login-signup-unit">
+             <span class="s-navigation-tool-login-signup-unit__item js-login">
+              دخول
+             </span>
+            </li>
+            <li class="s-navigation-tool-login-signup-unit">
+             <span class="s-navigation-tool-login-signup-unit__item js-signup">
+              سجل
+             </span>
+            </li>
+           </ul>
+           <ul class="s-navigation-tool-login-profile js-login-profile">
+            <li class="s-navigation-tool-login-profile-unit s-navigation-tool-login-profile-unit--name js-login-profile-full-name">
+            </li>
+            <li class="s-navigation-tool-login-profile-unit">
+             <button class="s-navigation-tool-login-profile-unit__logout js-logout">
+              Logout
+             </button>
+            </li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <strong class="s-product-logo s-product-logo--default-transparent s-product-logo--default-solid js-brand-logo">
+         <a class="s-product-logo__link" href="/ar">
+          <span class="s-product-logo-link-text">
+           الموقع الرسمي لنادي AS Roma
+          </span>
+         </a>
+        </strong>
+        <div class="s-navigation-tool-panel-primary-content js-navigation-content">
+         <div class="s-navigation-tool-sponsor">
+          <a class="s-navigation-tool-sponsor__item s-navigation-tool-sponsor__item--quatar" href="https://www.qatarairways.com/en-us/homepage.html" target="_blank">
+           Quatar
+          </a>
+          <a class="s-navigation-tool-sponsor__item s-navigation-tool-sponsor__item--nike" href="https://www.nike.com/us/en_us/" target="_blank">
+           Nike
+          </a>
+          <a class="s-navigation-tool-sponsor__item s-navigation-tool-sponsor__item--betway" href="https://sports.betway.it/it/sports/cat/soccer/" target="_blank">
+           Betway
+          </a>
+          <a class="s-navigation-tool-sponsor__item s-navigation-tool-sponsor__item--hundai" href="https://www.hyundai.it" target="_blank">
+           Hundai
+          </a>
+         </div>
+         <nav class="s-navigation-tool-navigational js-navigational-menu" id="id-258672416">
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672418">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                        module.render(
+                                                            {
+                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbe75","isWeb":false,"pageType":"Hub.Home","title":"Homepage","className":"s-navigation-tool-navigational-unit__link"},
+                                                                content: '    الرئيسية ',
+                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                            },
+                                                            document.getElementById('id-258672418')
+                                                        );
+                                                    });
+           </script>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672422">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                        module.render(
+                                                            {
+                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/schedule","target":"same-window","pageEntityId":"11f79095dfdb08ea41dbe3f7","isWeb":false,"pageType":"Schedule","title":"Schedule and results","className":"s-navigation-tool-navigational-unit__link js-navigational-trigger"},
+                                                                content: '    المباريات         &lt;div class&#x3D;&quot;b-image-svg&quot; id&#x3D;&quot;id-258672424&quot;&gt;                  &lt;/div&gt;                  &lt;script&gt;             corebine.import(&#x27;markups/components/image-svg/image-svg&#x27;).then(function (module) {                 module.render(                     {                         source: &#x27;/svg.svg#icon-arrow&#x27;,                         className: &#x27;s-navigation-tool-navigational-unit-link-icon s-navigation-tool-navigational-unit-link-icon--dropdown&#x27;                     },                     document.getElementById(&#x27;id-258672424&#x27;)                 );             });         &lt;/script&gt; ',
+                                                                className: 's-navigation-tool-navigational-unit__link js-navigational-trigger'
+                                                            },
+                                                            document.getElementById('id-258672422')
+                                                        );
+                                                    });
+           </script>
+           <nav class="s-navigation-tool-navigational js-navigational-menu" id="id-258672426">
+            <div class="s-navigation-tool-navigational-unit js-navigational-item">
+             <div class="b-link" id="id-258672428">
+             </div>
+             <script>
+              corebine.import('markups/components/link/link').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/schedule","target":"same-window","pageEntityId":"11f79095dfdb08ea41dbe3f7","isWeb":false,"pageType":"Schedule","title":"Schedule and results","className":"s-navigation-tool-navigational-unit__link"},
+                                                                                content: '    الجدول والنتائج ',
+                                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                                            },
+                                                                            document.getElementById('id-258672428')
+                                                                        );
+                                                                    });
+             </script>
+            </div>
+            <div class="s-navigation-tool-navigational-unit js-navigational-item">
+             <div class="b-link" id="id-258672432">
+             </div>
+             <script>
+              corebine.import('markups/components/link/link').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/standings","target":"same-window","pageEntityId":"32a024bbc2c2d97893b616be","isWeb":false,"pageType":"Standings","title":"جدول الترتيب","className":"s-navigation-tool-navigational-unit__link"},
+                                                                                content: '    جدول ',
+                                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                                            },
+                                                                            document.getElementById('id-258672432')
+                                                                        );
+                                                                    });
+             </script>
+            </div>
+           </nav>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672436">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                        module.render(
+                                                            {
+                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbe6f","isWeb":false,"className":"s-navigation-tool-navigational-unit__link js-navigational-trigger"},
+                                                                content: '    التذاكر         &lt;div class&#x3D;&quot;b-image-svg&quot; id&#x3D;&quot;id-258672438&quot;&gt;                  &lt;/div&gt;                  &lt;script&gt;             corebine.import(&#x27;markups/components/image-svg/image-svg&#x27;).then(function (module) {                 module.render(                     {                         source: &#x27;/svg.svg#icon-arrow&#x27;,                         className: &#x27;s-navigation-tool-navigational-unit-link-icon s-navigation-tool-navigational-unit-link-icon--dropdown&#x27;                     },                     document.getElementById(&#x27;id-258672438&#x27;)                 );             });         &lt;/script&gt; ',
+                                                                className: 's-navigation-tool-navigational-unit__link js-navigational-trigger'
+                                                            },
+                                                            document.getElementById('id-258672436')
+                                                        );
+                                                    });
+           </script>
+           <nav class="s-navigation-tool-navigational js-navigational-menu" id="id-258672440">
+            <div class="s-navigation-tool-navigational-unit js-navigational-item">
+             <div class="b-link" id="id-258672442">
+             </div>
+             <script>
+              corebine.import('markups/components/link/link').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/tickets/buy-tickets","target":"same-window","pageEntityId":"0a1db8a3061c5665ec06f9ef","isWeb":false,"pageType":"Hub.Tickets","title":"Tickets","className":"s-navigation-tool-navigational-unit__link"},
+                                                                                content: '    شراء التذاكر ',
+                                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                                            },
+                                                                            document.getElementById('id-258672442')
+                                                                        );
+                                                                    });
+             </script>
+            </div>
+            <div class="s-navigation-tool-navigational-unit js-navigational-item">
+             <div class="b-link" id="id-258672446">
+             </div>
+             <script>
+              corebine.import('markups/components/link/link').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/tickets/seating-plan","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbecd","isWeb":true,"pageType":"Static","title":"مخطط المقاعد بالإستاد الأوليمبى","className":"s-navigation-tool-navigational-unit__link"},
+                                                                                content: '    مخطط المقاعد ',
+                                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                                            },
+                                                                            document.getElementById('id-258672446')
+                                                                        );
+                                                                    });
+             </script>
+            </div>
+           </nav>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672450">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                        module.render(
+                                                            {
+                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbe8d","isWeb":true,"className":"s-navigation-tool-navigational-unit__link js-navigational-trigger"},
+                                                                content: '    الفريق         &lt;div class&#x3D;&quot;b-image-svg&quot; id&#x3D;&quot;id-258672452&quot;&gt;                  &lt;/div&gt;                  &lt;script&gt;             corebine.import(&#x27;markups/components/image-svg/image-svg&#x27;).then(function (module) {                 module.render(                     {                         source: &#x27;/svg.svg#icon-arrow&#x27;,                         className: &#x27;s-navigation-tool-navigational-unit-link-icon s-navigation-tool-navigational-unit-link-icon--dropdown&#x27;                     },                     document.getElementById(&#x27;id-258672452&#x27;)                 );             });         &lt;/script&gt; ',
+                                                                className: 's-navigation-tool-navigational-unit__link js-navigational-trigger'
+                                                            },
+                                                            document.getElementById('id-258672450')
+                                                        );
+                                                    });
+           </script>
+           <nav class="s-navigation-tool-navigational js-navigational-menu" id="id-258672454">
+            <div class="s-navigation-tool-navigational-unit js-navigational-item">
+             <div class="b-link" id="id-258672456">
+             </div>
+             <script>
+              corebine.import('markups/components/link/link').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/team/players-and-staff","target":"same-window","pageEntityId":"7194085ac48c0a0915d8ac53","isWeb":true,"pageType":"Hub.Players","title":"Players and Staff","className":"s-navigation-tool-navigational-unit__link"},
+                                                                                content: '    الفريق والجهاز المعاون ',
+                                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                                            },
+                                                                            document.getElementById('id-258672456')
+                                                                        );
+                                                                    });
+             </script>
+            </div>
+            <div class="s-navigation-tool-navigational-unit js-navigational-item">
+             <div class="b-link" id="id-258672460">
+             </div>
+             <script>
+              corebine.import('markups/components/link/link').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/team","target":"same-window","pageEntityId":"3734932cddf1f846f9882c14","isWeb":true,"pageType":"Team","title":"الفريق","className":"s-navigation-tool-navigational-unit__link"},
+                                                                                content: '    إحصائيات الفريق ',
+                                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                                            },
+                                                                            document.getElementById('id-258672460')
+                                                                        );
+                                                                    });
+             </script>
+            </div>
+           </nav>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672464">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                        module.render(
+                                                            {
+                                                                link: {"_type":"Corebine.Core.Type.Link.External","url":"https://www.asromastore.com","target":"same-window","className":"s-navigation-tool-navigational-unit__link js-navigational-trigger"},
+                                                                content: '    المتجر         &lt;div class&#x3D;&quot;b-image-svg&quot; id&#x3D;&quot;id-258672466&quot;&gt;                  &lt;/div&gt;                  &lt;script&gt;             corebine.import(&#x27;markups/components/image-svg/image-svg&#x27;).then(function (module) {                 module.render(                     {                         source: &#x27;/svg.svg#icon-arrow&#x27;,                         className: &#x27;s-navigation-tool-navigational-unit-link-icon s-navigation-tool-navigational-unit-link-icon--dropdown&#x27;                     },                     document.getElementById(&#x27;id-258672466&#x27;)                 );             });         &lt;/script&gt; ',
+                                                                className: 's-navigation-tool-navigational-unit__link js-navigational-trigger'
+                                                            },
+                                                            document.getElementById('id-258672464')
+                                                        );
+                                                    });
+           </script>
+           <nav class="s-navigation-tool-navigational js-navigational-menu" id="id-258672468">
+            <div class="s-navigation-tool-navigational-unit js-navigational-item">
+             <div class="b-link" id="id-258672470">
+             </div>
+             <script>
+              corebine.import('markups/components/link/link').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                link: {"_type":"Corebine.Core.Type.Link.External","url":"http://www.asromastore.com/","target":"new-window","className":"s-navigation-tool-navigational-unit__link"},
+                                                                                content: '    المتجر الإلكتروني ',
+                                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                                            },
+                                                                            document.getElementById('id-258672470')
+                                                                        );
+                                                                    });
+             </script>
+            </div>
+            <div class="s-navigation-tool-navigational-unit js-navigational-item">
+             <div class="b-link" id="id-258672474">
+             </div>
+             <script>
+              corebine.import('markups/components/link/link').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/store-locations","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbecb","isWeb":true,"pageType":"Static","title":"أماكن المتجر","className":"s-navigation-tool-navigational-unit__link"},
+                                                                                content: '    عناوين المتاجر ',
+                                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                                            },
+                                                                            document.getElementById('id-258672474')
+                                                                        );
+                                                                    });
+             </script>
+            </div>
+           </nav>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672478">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                        module.render(
+                                                            {
+                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/club/history","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbed1","isWeb":true,"pageType":"Static","title":"نبذة تاريخية","className":"s-navigation-tool-navigational-unit__link js-navigational-trigger"},
+                                                                content: '    النادي         &lt;div class&#x3D;&quot;b-image-svg&quot; id&#x3D;&quot;id-258672480&quot;&gt;                  &lt;/div&gt;                  &lt;script&gt;             corebine.import(&#x27;markups/components/image-svg/image-svg&#x27;).then(function (module) {                 module.render(                     {                         source: &#x27;/svg.svg#icon-arrow&#x27;,                         className: &#x27;s-navigation-tool-navigational-unit-link-icon s-navigation-tool-navigational-unit-link-icon--dropdown&#x27;                     },                     document.getElementById(&#x27;id-258672480&#x27;)                 );             });         &lt;/script&gt; ',
+                                                                className: 's-navigation-tool-navigational-unit__link js-navigational-trigger'
+                                                            },
+                                                            document.getElementById('id-258672478')
+                                                        );
+                                                    });
+           </script>
+           <nav class="s-navigation-tool-navigational js-navigational-menu" id="id-258672482">
+            <div class="s-navigation-tool-navigational-unit js-navigational-item">
+             <div class="b-link" id="id-258672484">
+             </div>
+             <script>
+              corebine.import('markups/components/link/link').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/club/honours","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbe7b","isWeb":true,"pageType":"Static","title":"الألقاب","className":"s-navigation-tool-navigational-unit__link"},
+                                                                                content: '    الألقاب ',
+                                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                                            },
+                                                                            document.getElementById('id-258672484')
+                                                                        );
+                                                                    });
+             </script>
+            </div>
+            <div class="s-navigation-tool-navigational-unit js-navigational-item">
+             <div class="b-link" id="id-258672488">
+             </div>
+             <script>
+              corebine.import('markups/components/link/link').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/club/hall-of-fame","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbead","isWeb":true,"pageType":"Static","title":"قائمة المشاهير","className":"s-navigation-tool-navigational-unit__link"},
+                                                                                content: '    قائمة المشاهير ',
+                                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                                            },
+                                                                            document.getElementById('id-258672488')
+                                                                        );
+                                                                    });
+             </script>
+            </div>
+            <div class="s-navigation-tool-navigational-unit js-navigational-item">
+             <div class="b-link" id="id-258672492">
+             </div>
+             <script>
+              corebine.import('markups/components/link/link').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/club/stadio-della-roma","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbe93","isWeb":true,"pageType":"Static","title":"ستاد روما","className":"s-navigation-tool-navigational-unit__link"},
+                                                                                content: '    ستاديو ديلا روما  ',
+                                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                                            },
+                                                                            document.getElementById('id-258672492')
+                                                                        );
+                                                                    });
+             </script>
+            </div>
+            <div class="s-navigation-tool-navigational-unit js-navigational-item">
+             <div class="b-link" id="id-258672496">
+             </div>
+             <script>
+              corebine.import('markups/components/link/link').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/terms-and-conditions","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbe61","isWeb":true,"pageType":"Static","title":"شروط وأحكام الاستخدام","className":"s-navigation-tool-navigational-unit__link"},
+                                                                                content: '    وسائل الإعلام ',
+                                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                                            },
+                                                                            document.getElementById('id-258672496')
+                                                                        );
+                                                                    });
+             </script>
+            </div>
+            <div class="s-navigation-tool-navigational-unit js-navigational-item">
+             <div class="b-link" id="id-258672500">
+             </div>
+             <script>
+              corebine.import('markups/components/link/link').then(function (module) {
+                                                                        module.render(
+                                                                            {
+                                                                                link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/club/as-roma-esports","target":"same-window","pageEntityId":"5c103541cd49515066730859","isWeb":true,"pageType":"Static","title":"أعلن نادي روما عن دخوله عالم الرياضة الألكترونية مع إنشاء فريق FIFA في فبراير 2017","className":"s-navigation-tool-navigational-unit__link"},
+                                                                                content: '    روما ESports ',
+                                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                                            },
+                                                                            document.getElementById('id-258672500')
+                                                                        );
+                                                                    });
+             </script>
+            </div>
+           </nav>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672504">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                        module.render(
+                                                            {
+                                                                link: {"_type":"Corebine.Core.Type.Link.External","url":"https://www.asroma.com/en/video","target":"new-window","className":"s-navigation-tool-navigational-unit__link"},
+                                                                content: '    الفيديو ',
+                                                                className: 's-navigation-tool-navigational-unit__link'
+                                                            },
+                                                            document.getElementById('id-258672504')
+                                                        );
+                                                    });
+           </script>
+          </div>
+         </nav>
+        </div>
+        <button class="s-navigation-tool-burger-button js-burger-button">
+         <strong class="s-navigation-tool-burger-button-state s-navigation-tool-burger-button-state--menu">
+          <div class="b-image-svg" id="id-258672508">
+          </div>
+          <script>
+           corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                            module.render(
+                                                {
+                                                    source: '/svg.svg#icon-menu',
+                                                    className: 's-navigation-tool-burger-button-state__icon'
+                                                },
+                                                document.getElementById('id-258672508')
+                                            );
+                                        });
+          </script>
+          <span class="s-navigation-tool-burger-button-state__caption">
+           Menu
+          </span>
+         </strong>
+         <strong class="s-navigation-tool-burger-button-state s-navigation-tool-burger-button-state--close">
+          <div class="b-image-svg" id="id-258672510">
+          </div>
+          <script>
+           corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                            module.render(
+                                                {
+                                                    source: '/svg.svg#icon-close',
+                                                    className: 's-navigation-tool-burger-button-state__icon'
+                                                },
+                                                document.getElementById('id-258672510')
+                                            );
+                                        });
+          </script>
+         </strong>
+        </button>
+       </div>
+      </section>
+     </div>
+    </div>
+    <div class="s-navigation-tool-burger">
+     <div class="s-navigation-tool-sponsor">
+      <a class="s-navigation-tool-sponsor__item s-navigation-tool-sponsor__item--quatar" href="https://www.qatarairways.com/en-us/homepage.html" target="_blank">
+       Quatar
+      </a>
+      <a class="s-navigation-tool-sponsor__item s-navigation-tool-sponsor__item--nike" href="https://www.nike.com/us/en_us/" target="_blank">
+       Nike
+      </a>
+      <a class="s-navigation-tool-sponsor__item s-navigation-tool-sponsor__item--betway" href="https://sports.betway.it/it/sports/cat/soccer/" target="_blank">
+       Betway
+      </a>
+      <a class="s-navigation-tool-sponsor__item s-navigation-tool-sponsor__item--hundai" href="https://www.hyundai.it" target="_blank">
+       Hundai
+      </a>
+     </div>
+     <div class="s-navigation-tool-burger-menus">
+      <section class="s-navigation-tool-burger-menus__item">
+       <nav class="s-navigation-tool-navigational js-navigational-menu" id="id-258672515">
+        <div class="s-navigation-tool-navigational-unit js-navigational-item">
+         <div class="b-link" id="id-258672517">
+         </div>
+         <script>
+          corebine.import('markups/components/link/link').then(function (module) {
+                                                module.render(
+                                                    {
+                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbe75","isWeb":false,"pageType":"Hub.Home","title":"Homepage","className":"s-navigation-tool-navigational-unit__link"},
+                                                        content: '    الرئيسية ',
+                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                    },
+                                                    document.getElementById('id-258672517')
+                                                );
+                                            });
+         </script>
+        </div>
+        <div class="s-navigation-tool-navigational-unit js-navigational-item">
+         <div class="b-link" id="id-258672521">
+         </div>
+         <script>
+          corebine.import('markups/components/link/link').then(function (module) {
+                                                module.render(
+                                                    {
+                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/schedule","target":"same-window","pageEntityId":"11f79095dfdb08ea41dbe3f7","isWeb":false,"pageType":"Schedule","title":"Schedule and results","className":"s-navigation-tool-navigational-unit__link js-navigational-trigger"},
+                                                        content: '    المباريات         &lt;div class&#x3D;&quot;b-image-svg&quot; id&#x3D;&quot;id-258672523&quot;&gt;                  &lt;/div&gt;                  &lt;script&gt;             corebine.import(&#x27;markups/components/image-svg/image-svg&#x27;).then(function (module) {                 module.render(                     {                         source: &#x27;/svg.svg#icon-arrow&#x27;,                         className: &#x27;s-navigation-tool-navigational-unit-link-icon s-navigation-tool-navigational-unit-link-icon--dropdown&#x27;                     },                     document.getElementById(&#x27;id-258672523&#x27;)                 );             });         &lt;/script&gt; ',
+                                                        className: 's-navigation-tool-navigational-unit__link js-navigational-trigger'
+                                                    },
+                                                    document.getElementById('id-258672521')
+                                                );
+                                            });
+         </script>
+         <nav class="s-navigation-tool-navigational js-navigational-menu" id="id-258672525">
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672527">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/schedule","target":"same-window","pageEntityId":"11f79095dfdb08ea41dbe3f7","isWeb":false,"pageType":"Schedule","title":"Schedule and results","className":"s-navigation-tool-navigational-unit__link"},
+                                                                        content: '    الجدول والنتائج ',
+                                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                                    },
+                                                                    document.getElementById('id-258672527')
+                                                                );
+                                                            });
+           </script>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672531">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/standings","target":"same-window","pageEntityId":"32a024bbc2c2d97893b616be","isWeb":false,"pageType":"Standings","title":"جدول الترتيب","className":"s-navigation-tool-navigational-unit__link"},
+                                                                        content: '    جدول ',
+                                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                                    },
+                                                                    document.getElementById('id-258672531')
+                                                                );
+                                                            });
+           </script>
+          </div>
+         </nav>
+        </div>
+        <div class="s-navigation-tool-navigational-unit js-navigational-item">
+         <div class="b-link" id="id-258672535">
+         </div>
+         <script>
+          corebine.import('markups/components/link/link').then(function (module) {
+                                                module.render(
+                                                    {
+                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbe6f","isWeb":false,"className":"s-navigation-tool-navigational-unit__link js-navigational-trigger"},
+                                                        content: '    التذاكر         &lt;div class&#x3D;&quot;b-image-svg&quot; id&#x3D;&quot;id-258672537&quot;&gt;                  &lt;/div&gt;                  &lt;script&gt;             corebine.import(&#x27;markups/components/image-svg/image-svg&#x27;).then(function (module) {                 module.render(                     {                         source: &#x27;/svg.svg#icon-arrow&#x27;,                         className: &#x27;s-navigation-tool-navigational-unit-link-icon s-navigation-tool-navigational-unit-link-icon--dropdown&#x27;                     },                     document.getElementById(&#x27;id-258672537&#x27;)                 );             });         &lt;/script&gt; ',
+                                                        className: 's-navigation-tool-navigational-unit__link js-navigational-trigger'
+                                                    },
+                                                    document.getElementById('id-258672535')
+                                                );
+                                            });
+         </script>
+         <nav class="s-navigation-tool-navigational js-navigational-menu" id="id-258672539">
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672541">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/tickets/buy-tickets","target":"same-window","pageEntityId":"0a1db8a3061c5665ec06f9ef","isWeb":false,"pageType":"Hub.Tickets","title":"Tickets","className":"s-navigation-tool-navigational-unit__link"},
+                                                                        content: '    شراء التذاكر ',
+                                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                                    },
+                                                                    document.getElementById('id-258672541')
+                                                                );
+                                                            });
+           </script>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672545">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/tickets/seating-plan","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbecd","isWeb":true,"pageType":"Static","title":"مخطط المقاعد بالإستاد الأوليمبى","className":"s-navigation-tool-navigational-unit__link"},
+                                                                        content: '    مخطط المقاعد ',
+                                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                                    },
+                                                                    document.getElementById('id-258672545')
+                                                                );
+                                                            });
+           </script>
+          </div>
+         </nav>
+        </div>
+        <div class="s-navigation-tool-navigational-unit js-navigational-item">
+         <div class="b-link" id="id-258672549">
+         </div>
+         <script>
+          corebine.import('markups/components/link/link').then(function (module) {
+                                                module.render(
+                                                    {
+                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbe8d","isWeb":true,"className":"s-navigation-tool-navigational-unit__link js-navigational-trigger"},
+                                                        content: '    الفريق         &lt;div class&#x3D;&quot;b-image-svg&quot; id&#x3D;&quot;id-258672551&quot;&gt;                  &lt;/div&gt;                  &lt;script&gt;             corebine.import(&#x27;markups/components/image-svg/image-svg&#x27;).then(function (module) {                 module.render(                     {                         source: &#x27;/svg.svg#icon-arrow&#x27;,                         className: &#x27;s-navigation-tool-navigational-unit-link-icon s-navigation-tool-navigational-unit-link-icon--dropdown&#x27;                     },                     document.getElementById(&#x27;id-258672551&#x27;)                 );             });         &lt;/script&gt; ',
+                                                        className: 's-navigation-tool-navigational-unit__link js-navigational-trigger'
+                                                    },
+                                                    document.getElementById('id-258672549')
+                                                );
+                                            });
+         </script>
+         <nav class="s-navigation-tool-navigational js-navigational-menu" id="id-258672553">
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672555">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/team/players-and-staff","target":"same-window","pageEntityId":"7194085ac48c0a0915d8ac53","isWeb":true,"pageType":"Hub.Players","title":"Players and Staff","className":"s-navigation-tool-navigational-unit__link"},
+                                                                        content: '    الفريق والجهاز المعاون ',
+                                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                                    },
+                                                                    document.getElementById('id-258672555')
+                                                                );
+                                                            });
+           </script>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672559">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/team","target":"same-window","pageEntityId":"3734932cddf1f846f9882c14","isWeb":true,"pageType":"Team","title":"الفريق","className":"s-navigation-tool-navigational-unit__link"},
+                                                                        content: '    إحصائيات الفريق ',
+                                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                                    },
+                                                                    document.getElementById('id-258672559')
+                                                                );
+                                                            });
+           </script>
+          </div>
+         </nav>
+        </div>
+        <div class="s-navigation-tool-navigational-unit js-navigational-item">
+         <div class="b-link" id="id-258672563">
+         </div>
+         <script>
+          corebine.import('markups/components/link/link').then(function (module) {
+                                                module.render(
+                                                    {
+                                                        link: {"_type":"Corebine.Core.Type.Link.External","url":"https://www.asromastore.com","target":"same-window","className":"s-navigation-tool-navigational-unit__link js-navigational-trigger"},
+                                                        content: '    المتجر         &lt;div class&#x3D;&quot;b-image-svg&quot; id&#x3D;&quot;id-258672565&quot;&gt;                  &lt;/div&gt;                  &lt;script&gt;             corebine.import(&#x27;markups/components/image-svg/image-svg&#x27;).then(function (module) {                 module.render(                     {                         source: &#x27;/svg.svg#icon-arrow&#x27;,                         className: &#x27;s-navigation-tool-navigational-unit-link-icon s-navigation-tool-navigational-unit-link-icon--dropdown&#x27;                     },                     document.getElementById(&#x27;id-258672565&#x27;)                 );             });         &lt;/script&gt; ',
+                                                        className: 's-navigation-tool-navigational-unit__link js-navigational-trigger'
+                                                    },
+                                                    document.getElementById('id-258672563')
+                                                );
+                                            });
+         </script>
+         <nav class="s-navigation-tool-navigational js-navigational-menu" id="id-258672567">
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672569">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        link: {"_type":"Corebine.Core.Type.Link.External","url":"http://www.asromastore.com/","target":"new-window","className":"s-navigation-tool-navigational-unit__link"},
+                                                                        content: '    المتجر الإلكتروني ',
+                                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                                    },
+                                                                    document.getElementById('id-258672569')
+                                                                );
+                                                            });
+           </script>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672573">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/store-locations","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbecb","isWeb":true,"pageType":"Static","title":"أماكن المتجر","className":"s-navigation-tool-navigational-unit__link"},
+                                                                        content: '    عناوين المتاجر ',
+                                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                                    },
+                                                                    document.getElementById('id-258672573')
+                                                                );
+                                                            });
+           </script>
+          </div>
+         </nav>
+        </div>
+        <div class="s-navigation-tool-navigational-unit js-navigational-item">
+         <div class="b-link" id="id-258672577">
+         </div>
+         <script>
+          corebine.import('markups/components/link/link').then(function (module) {
+                                                module.render(
+                                                    {
+                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/club/history","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbed1","isWeb":true,"pageType":"Static","title":"نبذة تاريخية","className":"s-navigation-tool-navigational-unit__link js-navigational-trigger"},
+                                                        content: '    النادي         &lt;div class&#x3D;&quot;b-image-svg&quot; id&#x3D;&quot;id-258672579&quot;&gt;                  &lt;/div&gt;                  &lt;script&gt;             corebine.import(&#x27;markups/components/image-svg/image-svg&#x27;).then(function (module) {                 module.render(                     {                         source: &#x27;/svg.svg#icon-arrow&#x27;,                         className: &#x27;s-navigation-tool-navigational-unit-link-icon s-navigation-tool-navigational-unit-link-icon--dropdown&#x27;                     },                     document.getElementById(&#x27;id-258672579&#x27;)                 );             });         &lt;/script&gt; ',
+                                                        className: 's-navigation-tool-navigational-unit__link js-navigational-trigger'
+                                                    },
+                                                    document.getElementById('id-258672577')
+                                                );
+                                            });
+         </script>
+         <nav class="s-navigation-tool-navigational js-navigational-menu" id="id-258672581">
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672583">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/club/honours","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbe7b","isWeb":true,"pageType":"Static","title":"الألقاب","className":"s-navigation-tool-navigational-unit__link"},
+                                                                        content: '    الألقاب ',
+                                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                                    },
+                                                                    document.getElementById('id-258672583')
+                                                                );
+                                                            });
+           </script>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672587">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/club/hall-of-fame","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbead","isWeb":true,"pageType":"Static","title":"قائمة المشاهير","className":"s-navigation-tool-navigational-unit__link"},
+                                                                        content: '    قائمة المشاهير ',
+                                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                                    },
+                                                                    document.getElementById('id-258672587')
+                                                                );
+                                                            });
+           </script>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672591">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/club/stadio-della-roma","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbe93","isWeb":true,"pageType":"Static","title":"ستاد روما","className":"s-navigation-tool-navigational-unit__link"},
+                                                                        content: '    ستاديو ديلا روما  ',
+                                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                                    },
+                                                                    document.getElementById('id-258672591')
+                                                                );
+                                                            });
+           </script>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672595">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/terms-and-conditions","target":"same-window","pageEntityId":"5bf52a90a7e45e4a709fbe61","isWeb":true,"pageType":"Static","title":"شروط وأحكام الاستخدام","className":"s-navigation-tool-navigational-unit__link"},
+                                                                        content: '    وسائل الإعلام ',
+                                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                                    },
+                                                                    document.getElementById('id-258672595')
+                                                                );
+                                                            });
+           </script>
+          </div>
+          <div class="s-navigation-tool-navigational-unit js-navigational-item">
+           <div class="b-link" id="id-258672599">
+           </div>
+           <script>
+            corebine.import('markups/components/link/link').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        link: {"_type":"Corebine.Core.Type.Link.Internal","url":"/club/as-roma-esports","target":"same-window","pageEntityId":"5c103541cd49515066730859","isWeb":true,"pageType":"Static","title":"أعلن نادي روما عن دخوله عالم الرياضة الألكترونية مع إنشاء فريق FIFA في فبراير 2017","className":"s-navigation-tool-navigational-unit__link"},
+                                                                        content: '    روما ESports ',
+                                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                                    },
+                                                                    document.getElementById('id-258672599')
+                                                                );
+                                                            });
+           </script>
+          </div>
+         </nav>
+        </div>
+        <div class="s-navigation-tool-navigational-unit js-navigational-item">
+         <div class="b-link" id="id-258672603">
+         </div>
+         <script>
+          corebine.import('markups/components/link/link').then(function (module) {
+                                                module.render(
+                                                    {
+                                                        link: {"_type":"Corebine.Core.Type.Link.External","url":"https://www.asroma.com/en/video","target":"new-window","className":"s-navigation-tool-navigational-unit__link"},
+                                                        content: '    الفيديو ',
+                                                        className: 's-navigation-tool-navigational-unit__link'
+                                                    },
+                                                    document.getElementById('id-258672603')
+                                                );
+                                            });
+         </script>
+        </div>
+       </nav>
+       <form action="/ar/search" class="s-navigation-tool-search" method="get">
+        <fieldset class="s-navigation-tool-search-set">
+         <input class="s-navigation-tool-search-set__input js-search-input" name="search" placeholder="بحث" type="text">
+          <div class="b-image-svg" id="id-258672607">
+          </div>
+          <script>
+           corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                            module.render(
+                                                {
+                                                    source: '/svg.svg#icon-search',
+                                                    className: 's-navigation-tool-search-set__icon'
+                                                },
+                                                document.getElementById('id-258672607')
+                                            );
+                                        });
+          </script>
+          <input class="s-navigation-tool-search-set__submit" type="submit" value="بحث"/>
+          <div class="b-image-svg" id="id-258672609">
+          </div>
+          <script>
+           corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                            module.render(
+                                                {
+                                                    source: '/svg.svg#icon-close',
+                                                    className: 's-navigation-tool-search-set__close'
+                                                },
+                                                document.getElementById('id-258672609')
+                                            );
+                                        });
+          </script>
+         </input>
+        </fieldset>
+       </form>
+       <nav class="s-navigation-tool-lang-switcher">
+        <div class="s-navigation-tool-lang-switcher-unit js-navigational-item">
+         <em class="s-navigation-tool-lang-switcher-unit__link js-navigational-trigger">
+          ar
+          <div class="b-image-svg" id="id-258672612">
+          </div>
+          <script>
+           corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                    module.render(
+                                                        {
+                                                            source: '/svg.svg#icon-arrow',
+                                                            className: 's-navigation-tool-lang-switcher-unit-link-icon s-navigation-tool-lang-switcher-unit-link-icon--dropdown'
+                                                        },
+                                                        document.getElementById('id-258672612')
+                                                    );
+                                                });
+          </script>
+         </em>
+         <nav class="s-navigation-tool-lang-switcher-unit-list js-navigational-menu">
+          <div class="s-navigation-tool-lang-switcher-unit-list-item">
+           <a class="s-navigation-tool-lang-switcher-unit-list-item__link" data-lang="en" href="/en">
+            en
+           </a>
+          </div>
+          <div class="s-navigation-tool-lang-switcher-unit-list-item">
+           <a class="s-navigation-tool-lang-switcher-unit-list-item__link" data-lang="it" href="/it">
+            it
+           </a>
+          </div>
+          <div class="s-navigation-tool-lang-switcher-unit-list-item">
+           <a class="s-navigation-tool-lang-switcher-unit-list-item__link" data-lang="id" href="/id">
+            id
+           </a>
+          </div>
+         </nav>
+        </div>
+       </nav>
+       <nav class="s-navigation-tool-social-media">
+        <div class="s-navigation-tool-social-media-unit">
+         <a class="s-navigation-tool-social-media-unit__link s-navigation-tool-social-media-unit__link--facebook" href="https://www.facebook.com/officialasroma" target="_blank">
+          <div class="b-image-svg" id="id-258672616">
+          </div>
+          <script>
+           corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                        module.render(
+                                                            {
+                                                                source: '/svg.svg#icon-facebook',
+                                                                className: 's-navigation-tool-social-media-unit-link-icon s-navigation-tool-social-media-unit-link-icon--social'
+                                                            },
+                                                            document.getElementById('id-258672616')
+                                                        );
+                                                    });
+          </script>
+         </a>
+        </div>
+        <div class="s-navigation-tool-social-media-unit">
+         <a class="s-navigation-tool-social-media-unit__link s-navigation-tool-social-media-unit__link--twitter" href="https://twitter.com/asromaen" target="_blank">
+          <div class="b-image-svg" id="id-258672619">
+          </div>
+          <script>
+           corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                                module.render(
+                                                                    {
+                                                                        source: '/svg.svg#icon-twitter',
+                                                                        className: 's-navigation-tool-social-media-unit-link-icon s-navigation-tool-social-media-unit-link-icon--social'
+                                                                    },
+                                                                    document.getElementById('id-258672619')
+                                                                );
+                                                            });
+          </script>
+         </a>
+        </div>
+        <div class="s-navigation-tool-social-media-unit">
+         <a class="s-navigation-tool-social-media-unit__link s-navigation-tool-social-media-unit__link--instagram" href="https://www.instagram.com/officialasroma/" target="_blank">
+          <div class="b-image-svg" id="id-258672622">
+          </div>
+          <script>
+           corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                        module.render(
+                                                            {
+                                                                source: '/svg.svg#icon-instagram',
+                                                                className: 's-navigation-tool-social-media-unit-link-icon s-navigation-tool-social-media-unit-link-icon--social'
+                                                            },
+                                                            document.getElementById('id-258672622')
+                                                        );
+                                                    });
+          </script>
+         </a>
+        </div>
+        <div class="s-navigation-tool-social-media-unit">
+         <a class="s-navigation-tool-social-media-unit__link s-navigation-tool-social-media-unit__link--youtube" href="https://www.youtube.com/asroma" target="_blank">
+          <div class="b-image-svg" id="id-258672625">
+          </div>
+          <script>
+           corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                        module.render(
+                                                            {
+                                                                source: '/svg.svg#icon-youtube',
+                                                                className: 's-navigation-tool-social-media-unit-link-icon s-navigation-tool-social-media-unit-link-icon--social'
+                                                            },
+                                                            document.getElementById('id-258672625')
+                                                        );
+                                                    });
+          </script>
+         </a>
+        </div>
+       </nav>
+       <div class="s-navigation-tool-login js-navigational-item">
+        <div class="js-navigational-trigger">
+         <div class="s-navigation-tool-login__icons">
+          <div class="b-image-svg" id="id-258672628">
+          </div>
+          <script>
+           corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                module.render(
+                                                    {
+                                                        source: '/svg.svg#icon-profile',
+                                                        className: 's-navigation-tool-login-icon-profile'
+                                                    },
+                                                    document.getElementById('id-258672628')
+                                                );
+                                            });
+          </script>
+          <div class="b-image-svg" id="id-258672630">
+          </div>
+          <script>
+           corebine.import('markups/components/image-svg/image-svg').then(function (module) {
+                                                module.render(
+                                                    {
+                                                        source: '/svg.svg#icon-arrow',
+                                                        className: 's-navigation-tool-login-icon-arrow'
+                                                    },
+                                                    document.getElementById('id-258672630')
+                                                );
+                                            });
+          </script>
+         </div>
+        </div>
+        <div class="s-navigation-tool-login__popup js-navigational-menu">
+         <ul class="s-navigation-tool-login-signup js-login-signup">
+          <li class="s-navigation-tool-login-signup-unit">
+           <span class="s-navigation-tool-login-signup-unit__item js-login">
+            دخول
+           </span>
+          </li>
+          <li class="s-navigation-tool-login-signup-unit">
+           <span class="s-navigation-tool-login-signup-unit__item js-signup">
+            سجل
+           </span>
+          </li>
+         </ul>
+         <ul class="s-navigation-tool-login-profile js-login-profile">
+          <li class="s-navigation-tool-login-profile-unit s-navigation-tool-login-profile-unit--name js-login-profile-full-name">
+          </li>
+          <li class="s-navigation-tool-login-profile-unit">
+           <button class="s-navigation-tool-login-profile-unit__logout js-logout">
+            Logout
+           </button>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </section>
+      <section class="s-navigation-tool-burger-menus__item">
+      </section>
+     </div>
+    </div>
+   </header>
+   <script>
+    corebine.import('markups/modules/navigation-tool/index').then(function (module) {
+                module.NavigationModule('#id-258672381', {
+                    isTransparent: false,
+                    cookieDisclaimer: {"text":"","action":{"caption":"","link":{"_type":"Corebine.Core.Type.Link.External","url":"","target":"new-window"}}}
+                });
+            });
+   </script>
+   <main class="l-page-content">
+    <section class="l-one-column ">
+     <div class="m-article is-rtl ">
+      <div id="id-258672639">
+       <div class="b-article-headline ">
+        <div class="b-article-headline__wrapper">
+         <div class="s-article-headline-header">
+          <div class="s-article-headline-header__title">
+           تم انضمام الحارس أليسون لصفوف ليفربول
+          </div>
+          <div class="s-article-headline-byline">
+           <span class="s-article-headline-byline__share">
+            <div id="id-258672642--sc">
+            </div>
+            <script>
+             corebine.import('markups/components/social-share/social-share').then(function(module) {
+                                                        module.render(
+                                                            {
+                                                                title: "تم انضمام الحارس أليسون لصفوف ليفربول",
+                                                                description: "تم التوصل إلى اتفاق بين روما وليفربول من أجل انتقال حارس المرمى أليسون بيكر، في صفقة تبلغ قيمتها 72.5 مليون يورو.",
+                                                                url: "https://www.asroma.com/ar/news/2018/7/transfer-agreed-for-alisson-to-join-liverpool"
+                                                            },
+                                                            document.getElementById('id-258672642--sc')
+                                                        );
+                                                    });
+            </script>
+           </span>
+           <div class="s-article-headline-byline__tip">
+            <div class="b-tags">
+             <span class="s-tags-items s-tags-items--huge">
+              <span class="s-tags-items__item">
+               <a class="s-tags-items__item" href="/ar/tag?id=5bf52a96a7e45e4a709fcb9b&amp;name=أخبار الإنتقالات">
+                أخبار الإنتقالات
+               </a>
+              </span>
+             </span>
+            </div>
+            <span class="s-article-headline-byline-tip-date">
+             ١٩ يوليو ٢٠١٨
+            </span>
+            <span class="s-article-headline-byline-tip-author">
+             بواسطة روما
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="s-article-headline-media">
+         <div id="id-258672644">
+         </div>
+         <script>
+          corebine.import('markups/components/image-corebine/image-corebine').then(function (module) {
+                                                        module.render(
+                                                            {
+                                                                image: {"_type":"Corebine.Core.Image.Cloudinary","focus":"center","crop":"fit","id":"asroma-uat/jll3gnue7tpv8iupgzhv","className":"s-article-headline-media__background","asBackground":true},
+                                                                type: undefined,
+                                                                source: undefined,
+                                                                width: undefined,
+                                                                height: undefined,
+                                                                options: {
+                                                                    focus: 'center',
+                                                                    crop: 'fit',
+                                                                    dpr: ''
+                                                                },
+                                                                alt: '',
+                                                                visible: undefined,
+                                                                asBackground: true,
+                                                                className: 's-article-headline-media__background',
+                                                                errorClassName: '',
+                                                                successClassName: ''
+                                                            },
+                                                            document.getElementById('id-258672644')
+                                                        );
+                                                    });
+         </script>
+         <div id="id-258672646">
+         </div>
+         <script>
+          corebine.import('markups/components/image-corebine/image-corebine').then(function (module) {
+                                                    module.render(
+                                                        {
+                                                            image: {"_type":"Corebine.Core.Image.Cloudinary","focus":"center","crop":"fit","id":"asroma-uat/jll3gnue7tpv8iupgzhv","className":"s-article-headline-media__image","asBackground":true},
+                                                            type: undefined,
+                                                            source: undefined,
+                                                            width: undefined,
+                                                            height: undefined,
+                                                            options: {
+                                                                focus: 'center',
+                                                                crop: 'fit',
+                                                                dpr: ''
+                                                            },
+                                                            alt: '',
+                                                            visible: undefined,
+                                                            asBackground: true,
+                                                            className: 's-article-headline-media__image',
+                                                            errorClassName: '',
+                                                            successClassName: ''
+                                                        },
+                                                        document.getElementById('id-258672646')
+                                                    );
+                                                });
+         </script>
+        </div>
+        <div class="s-article-headline-caption">
+        </div>
+       </div>
+       <div class="s-article-container js-article-container">
+        <div class="s-left-column">
+         <article class="s-article">
+          <dfn class="b-anchor" id="518061442172440304220897">
+          </dfn>
+          <div class="b-article-block ">
+           <div class="b-article-text is-first-text-block ">
+            <p>
+             <strong>
+              تم التوص�� إلى اتفاق بين روما وليفربول من أجل انتقال حارس المرمى أليسون بيكر، في صفقة تبلغ قيمتها 72.5 مليون يورو.
+             </strong>
+            </p>
+            <p>
+             سينضم أليسون البالغ من العمر 25 عامًا إلى الدوري الإنجليزي مقابل 62.5 مليون يورو، وبذلك يصبح أغلى حارس مرمى في على الإطلاق.
+            </p>
+            <p>
+             وتتضمن الاتفاقية أيضًا عددًا من الشروط المتعلقة بالأداء من جانب اللاعب والنادي الإنجليزي، والتي تصل إلى 10 ملايين يورو إضافية.
+            </p>
+            <p>
+             انضم الحارس الدولي البرازيلي إلى روما مقابل 8 مليون يورو في يوليو 2016، ليصبح الرقم 1 في موسم 2017- 2018.
+            </p>
+            <p>
+             خلال هذا الموسم كان حاضرًا في حصول الجيالوروسي على المركز الثالث في الدوري الإيطالي والوصول إلى نصف نهائي دوري أبطال أوروبا.
+            </p>
+            <p>
+             لعب أليسون مع الذئاب 64 مباراة في جميع المسابقات.
+            </p>
+            <p>
+             وأخيرًا، يود النادي أن يشكر الحارس أليسون بيكر على ما قدمه، ويتمنى له كل التوفيق في المستقبل.
+            </p>
+           </div>
+          </div>
+          <dfn class="b-anchor" id="131785122889539266923714">
+          </dfn>
+          <div class="b-article-ad" id="id-258672654">
+           <div class="s-ad-box">
+            <div class="s-ad-box__code">
+            </div>
+            <div class="s-ad-box__label">
+             إعلان
+            </div>
+           </div>
+          </div>
+          <div class="s-article__tags">
+           <div class="b-tags ">
+            <span class="b-tags__title">
+             شاهد أيضاً:
+            </span>
+            <span class="s-tags-items s-tags-items--huge">
+             <span class="s-tags-items__item">
+              <a class="s-tags-items__item" href="/ar/tag?id=5bf52a96a7e45e4a709fcb9b&amp;name=أخبار الإنتقالات">
+               أخبار الإنتقالات
+              </a>
+             </span>
+             <span class="s-tags-items__item">
+              <a class="s-tags-items__item" href="/ar/tag?id=5bf52a8fa7e45e4a709fbe45&amp;name=أليسون">
+               أليسون
+              </a>
+             </span>
+            </span>
+           </div>
+          </div>
+         </article>
+        </div>
+        <div class="s-right-column js-right-rail-container-id-258672638" id="right-rail-id-258672638">
+         <script>
+          corebine.import('markups/components/right-rail/right-rail').then(function (module) {
+                                            module.render({
+                                                baseFeedsUrl: '/api/pages/ar',
+                                                cardTypes: 'Corebine.Core.Page',
+                                                pageTypes: 'Article',
+                                                loaderType: 'none',
+                                                tags: [{"_type":"Corebine.Core.Tag","locale":"ar","title":"أخبار الإنتقالات","externalSource":"asroma2","_publishDate":"2018-11-21T09:51:18.992Z","_entityId":"5bf52a96a7e45e4a709fcb9b"},{"_type":"Corebine.Core.Tag","locale":"ar","title":"أليسون","externalSource":"asroma2","_publishDate":"2018-11-21T09:51:11.736Z","_entityId":"5bf52a8fa7e45e4a709fbe45"}],
+                                                limit: 3,
+                                                groupId: '850563967136167809084806',
+                                                rightRailContainer: '.js-right-rail-container-id-258672638',
+                                                ad: {}
+                                            }, document.getElementById('right-rail-id-258672638'));
+                                        });
+         </script>
+        </div>
+       </div>
+       <div class="js-articles-content">
+       </div>
+       <div id="loader-id-258672660">
+       </div>
+       <script>
+        corebine.import('markups/blocks/loader/loader').then(function (module) {
+                                module.render({ className: 'js-loader' }, document.getElementById('loader-id-258672660'));
+                            });
+       </script>
+       <div class="js-articles-bottom">
+       </div>
+      </div>
+      <script>
+       corebine.import('markups/modules/article/article').then(function (module) {
+                            module.ArticleModule('#id-258672639', {
+                                baseFeedsUrl: '/api/pages/ar',
+                                source: {
+                                    types: [
+                                        'Corebine.Core.Page'
+                                    ],
+                                    pageTypes: [
+                                        'Article'
+                                    ],
+                                    infiniteScroll: true,
+                                    excludeContent: true,
+                                    tags: []
+                                },
+                                groupId: '850563967136167809084806',
+                                fixtures: '',
+                                pageLang: 'ar',
+                                isNative: false,
+                                pageType: 'Article',
+                                title: 'تم انضمام الحارس أليسون لصفوف ليفربول',
+                                basePageUrl: 'https://www.asroma.com/',
+                                infiniteScrollEnabled: true,
+                                separatorClassName: 's-article-separator'
+                            });
+                        });
+      </script>
+      <script>
+       corebine.import('scripts/social/ga').then(function (analytics) {
+                            var tags = [{"_type":"Corebine.Core.Tag","locale":"ar","title":"أخبار الإنتقالات","externalSource":"asroma2","_publishDate":"2018-11-21T09:51:18.992Z","_entityId":"5bf52a96a7e45e4a709fcb9b"},{"_type":"Corebine.Core.Tag","locale":"ar","title":"أليسون","externalSource":"asroma2","_publishDate":"2018-11-21T09:51:11.736Z","_entityId":"5bf52a8fa7e45e4a709fbe45"}];
+                            tags = tags.map(function (tag) {
+                                return tag.title;
+                            }).join(',');
+            
+                            analytics.GoogleAnalytics.setProperty('content_tag', tags);
+                        });
+      </script>
+     </div>
+    </section>
+   </main>
+   <footer class="m-footer is-rtl" id="id-258672666">
+    <div class="m-footer__wrap">
+     <div class="s-primary-sponsors">
+      <a class="s-primary-sponsors__link ga-tracking-link" data-action="click" data-category="sponsor" data-label="Qatar Airways" href="https://www.qatarairways.com/index.html" target="_blank">
+       <div id="id-258672669">
+       </div>
+       <script>
+        corebine.import('markups/components/image-corebine/image-corebine').then(function (module) {
+                                                module.render(
+                                                    {
+                                                        image: {"_type":"Corebine.Core.Image.Cloudinary","id":"asroma2-prod/qtar","crop":"fit","focus":"center","className":"s-primary-sponsors__image","alt":"Qatar Airways"},
+                                                        type: undefined,
+                                                        source: undefined,
+                                                        width: undefined,
+                                                        height: undefined,
+                                                        options: {
+                                                            focus: 'center',
+                                                            crop: 'fit',
+                                                            dpr: ''
+                                                        },
+                                                        alt: 'Qatar Airways',
+                                                        visible: undefined,
+                                                        asBackground: undefined,
+                                                        className: 's-primary-sponsors__image',
+                                                        errorClassName: '',
+                                                        successClassName: ''
+                                                    },
+                                                    document.getElementById('id-258672669')
+                                                );
+                                            });
+       </script>
+      </a>
+      <a class="s-primary-sponsors__link ga-tracking-link" data-action="click" data-category="sponsor" data-label="Nike" href="https://www.nike.com/us/en_us/" target="_blank">
+       <div id="id-258672671">
+       </div>
+       <script>
+        corebine.import('markups/components/image-corebine/image-corebine').then(function (module) {
+                                                module.render(
+                                                    {
+                                                        image: {"_type":"Corebine.Core.Image.Cloudinary","id":"asroma2-prod/N","crop":"fit","focus":"center","className":"s-primary-sponsors__image","alt":"Nike"},
+                                                        type: undefined,
+                                                        source: undefined,
+                                                        width: undefined,
+                                                        height: undefined,
+                                                        options: {
+                                                            focus: 'center',
+                                                            crop: 'fit',
+                                                            dpr: ''
+                                                        },
+                                                        alt: 'Nike',
+                                                        visible: undefined,
+                                                        asBackground: undefined,
+                                                        className: 's-primary-sponsors__image',
+                                                        errorClassName: '',
+                                                        successClassName: ''
+                                                    },
+                                                    document.getElementById('id-258672671')
+                                                );
+                                            });
+       </script>
+      </a>
+     </div>
+     <div class="s-secondary-sponsors">
+      <div class="s-secondary-sponsor">
+       <a class="s-secondary-sponsors__link ga-tracking-link" data-action="click" data-category="sponsor" data-label="Betway" href="https://sports.betway.it/it/sports/cat/soccer/" target="_blank">
+        <div id="id-258672674">
+        </div>
+        <script>
+         corebine.import('markups/components/image-corebine/image-corebine').then(function (module) {
+                                                    module.render(
+                                                        {
+                                                            image: {"_type":"Corebine.Core.Image.Cloudinary","id":"asroma2-prod/Bet","crop":"fit","focus":"center","className":"s-secondary-sponsors__image","alt":"Betway"},
+                                                            type: undefined,
+                                                            source: undefined,
+                                                            width: undefined,
+                                                            height: undefined,
+                                                            options: {
+                                                                focus: 'center',
+                                                                crop: 'fit',
+                                                                dpr: ''
+                                                            },
+                                                            alt: 'Betway',
+                                                            visible: undefined,
+                                                            asBackground: undefined,
+                                                            className: 's-secondary-sponsors__image',
+                                                            errorClassName: '',
+                                                            successClassName: ''
+                                                        },
+                                                        document.getElementById('id-258672674')
+                                                    );
+                                                });
+        </script>
+       </a>
+      </div>
+      <div class="s-secondary-sponsor">
+       <a class="s-secondary-sponsors__link ga-tracking-link" data-action="click" data-category="sponsor" data-label="Hyundai" href="https://www.hyundai.it" target="_blank">
+        <div id="id-258672676">
+        </div>
+        <script>
+         corebine.import('markups/components/image-corebine/image-corebine').then(function (module) {
+                                                    module.render(
+                                                        {
+                                                            image: {"_type":"Corebine.Core.Image.Cloudinary","id":"asroma2-prod/Hy","crop":"fit","focus":"center","className":"s-secondary-sponsors__image","alt":"Hyundai"},
+                                                            type: undefined,
+                                                            source: undefined,
+                                                            width: undefined,
+                                                            height: undefined,
+                                                            options: {
+                                                                focus: 'center',
+                                                                crop: 'fit',
+                                                                dpr: ''
+                                                            },
+                                                            alt: 'Hyundai',
+                                                            visible: undefined,
+                                                            asBackground: undefined,
+                                                            className: 's-secondary-sponsors__image',
+                                                            errorClassName: '',
+                                                            successClassName: ''
+                                                        },
+                                                        document.getElementById('id-258672676')
+                                                    );
+                                                });
+        </script>
+       </a>
+      </div>
+      <div class="s-secondary-sponsor">
+       <a class="s-secondary-sponsors__link ga-tracking-link" data-action="click" data-category="sponsor" data-label="Sky" href="http://www.sky.it/acquista/index.html" target="_blank">
+        <div id="id-258672678">
+        </div>
+        <script>
+         corebine.import('markups/components/image-corebine/image-corebine').then(function (module) {
+                                                    module.render(
+                                                        {
+                                                            image: {"_type":"Corebine.Core.Image.Cloudinary","id":"asroma2-prod/Sky-Q-Mono-White-2019-RGB-v1","focus":"center","crop":"fit","className":"s-secondary-sponsors__image","alt":"Sky"},
+                                                            type: undefined,
+                                                            source: undefined,
+                                                            width: undefined,
+                                                            height: undefined,
+                                                            options: {
+                                                                focus: 'center',
+                                                                crop: 'fit',
+                                                                dpr: ''
+                                                            },
+                                                            alt: 'Sky',
+                                                            visible: undefined,
+                                                            asBackground: undefined,
+                                                            className: 's-secondary-sponsors__image',
+                                                            errorClassName: '',
+                                                            successClassName: ''
+                                                        },
+                                                        document.getElementById('id-258672678')
+                                                    );
+                                                });
+        </script>
+       </a>
+      </div>
+      <div class="s-secondary-sponsor">
+       <a class="s-secondary-sponsors__link ga-tracking-link" data-action="click" data-category="sponsor" data-label="Frecciarossa" href="http://www.trenitalia.com/tcom/Le-Frecce" target="_blank">
+        <div id="id-258672680">
+        </div>
+        <script>
+         corebine.import('markups/components/image-corebine/image-corebine').then(function (module) {
+                                                    module.render(
+                                                        {
+                                                            image: {"_type":"Corebine.Core.Image.Cloudinary","id":"asroma2-prod/Trains","crop":"fit","focus":"center","className":"s-secondary-sponsors__image","alt":"Frecciarossa"},
+                                                            type: undefined,
+                                                            source: undefined,
+                                                            width: undefined,
+                                                            height: undefined,
+                                                            options: {
+                                                                focus: 'center',
+                                                                crop: 'fit',
+                                                                dpr: ''
+                                                            },
+                                                            alt: 'Frecciarossa',
+                                                            visible: undefined,
+                                                            asBackground: undefined,
+                                                            className: 's-secondary-sponsors__image',
+                                                            errorClassName: '',
+                                                            successClassName: ''
+                                                        },
+                                                        document.getElementById('id-258672680')
+                                                    );
+                                                });
+        </script>
+       </a>
+      </div>
+      <div class="s-secondary-sponsor">
+       <a class="s-secondary-sponsors__link ga-tracking-link" data-action="click" data-category="sponsor" data-label="La Molisana" href="http://www.lamolisana.it/en" target="_blank">
+        <div id="id-258672682">
+        </div>
+        <script>
+         corebine.import('markups/components/image-corebine/image-corebine').then(function (module) {
+                                                    module.render(
+                                                        {
+                                                            image: {"_type":"Corebine.Core.Image.Cloudinary","id":"asroma2-prod/Lasana","crop":"fit","focus":"center","className":"s-secondary-sponsors__image","alt":"La Molisana"},
+                                                            type: undefined,
+                                                            source: undefined,
+                                                            width: undefined,
+                                                            height: undefined,
+                                                            options: {
+                                                                focus: 'center',
+                                                                crop: 'fit',
+                                                                dpr: ''
+                                                            },
+                                                            alt: 'La Molisana',
+                                                            visible: undefined,
+                                                            asBackground: undefined,
+                                                            className: 's-secondary-sponsors__image',
+                                                            errorClassName: '',
+                                                            successClassName: ''
+                                                        },
+                                                        document.getElementById('id-258672682')
+                                                    );
+                                                });
+        </script>
+       </a>
+      </div>
+      <div class="s-secondary-sponsor">
+       <a class="s-secondary-sponsors__link ga-tracking-link" data-action="click" data-category="sponsor" data-label="Natalucci &amp; Partners" href="http://www.grupponatalucciepartners.it" target="_blank">
+        <div id="id-258672684">
+        </div>
+        <script>
+         corebine.import('markups/components/image-corebine/image-corebine').then(function (module) {
+                                                    module.render(
+                                                        {
+                                                            image: {"_type":"Corebine.Core.Image.Cloudinary","id":"asroma2-prod/Nat","crop":"fit","focus":"center","className":"s-secondary-sponsors__image","alt":"Natalucci & Partners"},
+                                                            type: undefined,
+                                                            source: undefined,
+                                                            width: undefined,
+                                                            height: undefined,
+                                                            options: {
+                                                                focus: 'center',
+                                                                crop: 'fit',
+                                                                dpr: ''
+                                                            },
+                                                            alt: 'Natalucci &amp; Partners',
+                                                            visible: undefined,
+                                                            asBackground: undefined,
+                                                            className: 's-secondary-sponsors__image',
+                                                            errorClassName: '',
+                                                            successClassName: ''
+                                                        },
+                                                        document.getElementById('id-258672684')
+                                                    );
+                                                });
+        </script>
+       </a>
+      </div>
+      <div class="s-secondary-sponsor">
+       <a class="s-secondary-sponsors__link ga-tracking-link" data-action="click" data-category="sponsor" data-label="Linkem" href="http://web.linkem.com" target="_blank">
+        <div id="id-258672686">
+        </div>
+        <script>
+         corebine.import('markups/components/image-corebine/image-corebine').then(function (module) {
+                                                    module.render(
+                                                        {
+                                                            image: {"_type":"Corebine.Core.Image.Cloudinary","id":"asroma2-prod/Lem","crop":"fit","focus":"center","className":"s-secondary-sponsors__image","alt":"Linkem"},
+                                                            type: undefined,
+                                                            source: undefined,
+                                                            width: undefined,
+                                                            height: undefined,
+                                                            options: {
+                                                                focus: 'center',
+                                                                crop: 'fit',
+                                                                dpr: ''
+                                                            },
+                                                            alt: 'Linkem',
+                                                            visible: undefined,
+                                                            asBackground: undefined,
+                                                            className: 's-secondary-sponsors__image',
+                                                            errorClassName: '',
+                                                            successClassName: ''
+                                                        },
+                                                        document.getElementById('id-258672686')
+                                                    );
+                                                });
+        </script>
+       </a>
+      </div>
+      <div class="s-secondary-sponsor">
+       <a class="s-secondary-sponsors__link ga-tracking-link" data-action="click" data-category="sponsor" data-label="Lyoness" href="https://cashback.asroma.com/it-as" target="_blank">
+        <div id="id-258672688">
+        </div>
+        <script>
+         corebine.import('markups/components/image-corebine/image-corebine').then(function (module) {
+                                                    module.render(
+                                                        {
+                                                            image: {"_type":"Corebine.Core.Image.Cloudinary","id":"asroma2-prod/LYONESS","crop":"fit","focus":"center","className":"s-secondary-sponsors__image","alt":"Lyoness"},
+                                                            type: undefined,
+                                                            source: undefined,
+                                                            width: undefined,
+                                                            height: undefined,
+                                                            options: {
+                                                                focus: 'center',
+                                                                crop: 'fit',
+                                                                dpr: ''
+                                                            },
+                                                            alt: 'Lyoness',
+                                                            visible: undefined,
+                                                            asBackground: undefined,
+                                                            className: 's-secondary-sponsors__image',
+                                                            errorClassName: '',
+                                                            successClassName: ''
+                                                        },
+                                                        document.getElementById('id-258672688')
+                                                    );
+                                                });
+        </script>
+       </a>
+      </div>
+      <div class="s-secondary-sponsor">
+       <a class="s-secondary-sponsors__link ga-tracking-link" data-action="click" data-category="sponsor" data-label="Manpower" href="https://www.manpower.it/" target="_blank">
+        <div id="id-258672690">
+        </div>
+        <script>
+         corebine.import('markups/components/image-corebine/image-corebine').then(function (module) {
+                                                    module.render(
+                                                        {
+                                                            image: {"_type":"Corebine.Core.Image.Cloudinary","id":"asroma2-prod/MPG_logo_oriz_W","crop":"fit","focus":"center","className":"s-secondary-sponsors__image","alt":"Manpower"},
+                                                            type: undefined,
+                                                            source: undefined,
+                                                            width: undefined,
+                                                            height: undefined,
+                                                            options: {
+                                                                focus: 'center',
+                                                                crop: 'fit',
+                                                                dpr: ''
+                                                            },
+                                                            alt: 'Manpower',
+                                                            visible: undefined,
+                                                            asBackground: undefined,
+                                                            className: 's-secondary-sponsors__image',
+                                                            errorClassName: '',
+                                                            successClassName: ''
+                                                        },
+                                                        document.getElementById('id-258672690')
+                                                    );
+                                                });
+        </script>
+       </a>
+      </div>
+     </div>
+     <div class="s-social">
+      <ul class="s-social__list">
+      </ul>
+     </div>
+     <div class="s-nav">
+      <ul class="s-nav__list">
+      </ul>
+     </div>
+     <div class="s-copyright">
+      <span class="s-copyright__text">
+       © © 2018 SOCCER S.A.S. DI BRAND MANAGEMENT S.R.L. – P.IVA VAT 09305501000 - ALL RIGHTS RESERVED. THE AS ROMA NAMES, LOGOS AND ARTWORK ARE REGISTERED OR UNREGISTERED TRADEMARKS OF SOCCER S.A.S. DI BRAND MANAGEMENT S.R.L. ALL OTHER TRADEMARKS MAY BE THE PROPERTY OF THEIR RESPECTIVE HOLDERS.
+      </span>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <!-- Tracking Body -->
+  <!-- Google Tag Manager (noscript) - Corebine Main Web -->
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WHWCS9D" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) - Clients -->
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-P3GZ2ND" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-MKJHVPH" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- End Tracking Body -->
+ </body>
+</html>

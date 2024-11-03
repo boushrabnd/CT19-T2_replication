@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html class="no-js" dir="rtl" lang="ar">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://vdcnsy.com/xmlrpc.php">
+
+<title>مداهمات واعتقالات في قرية آشكان وبريمجة وداركير وجوقي بعفرين شمال حلب &#8211; مركز توثيق الانتهاكات في شمال سوريا</title>
+<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly92ZGNuc3kuY29t"
+		+ "&wpcomid=147789537"
+		+ "&time=1556193035";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//vdcnsy.wordpress.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="مركز توثيق الانتهاكات في شمال سوريا &raquo; الخلاصة" href="https://vdcnsy.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="مركز توثيق الانتهاكات في شمال سوريا &raquo; خلاصة التعليقات" href="https://vdcnsy.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1550249335h&ver=5.2-beta3-45264"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/wp-content/mu-plugins/wpcom-smileys/rtl/wpcom-smileys-rtl.css?m=1459241938h&cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_related-posts-rtl-css'  href='https://s0.wp.com/wp-content/mu-plugins/related-posts/related-posts-rtl.css?m=1554981652h&#038;ver=20190204' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s2.wp.com/wp-content/mu-plugins/likes/rtl/jetpack-likes-rtl.css?m=1543866895h&cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-rtl-css'  href='https://s2.wp.com/wp-includes/css/dist/block-library/style-rtl.min.css?m=1546888462h&#038;ver=5.2-beta3-45264' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-4-1' href='https://s0.wp.com/_static/??-eJx9jtEKwjAMRX/IGOZk7kX8lq0GF9e0pWnZ75sNVATZS8i9yckNLglcDIVCQamQfH1wUHQxk/mShoK2IXTngTyJrR2d6gH/Y5K6N5WL3+Q0uFnB1B63JKNgHFMmVbAqXAXKZIG6xxm1vgSeZzKlusX+uN9oxhAL2xX9NOvgJtfm3HaXvj31zfMFlp9k5A==?cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='fonts-css'  href='https://fonts.googleapis.com/css?family=Lato%3A400%2C700%2C900%2C400italic%2C700italic%7CMerriweather%3A700%2C900%2C400italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-6-1' href='https://s0.wp.com/_static/??-eJyFjtEOgjAMRX/IWU0g4oPxW8Ysc9KtZC0Z/r3jTWKCbz333pMUymQcJ8WkoE+MKDDNPWQuFJKHoVbGFhSOuIGjEznAviz6pt9hnM1Esw9JoISHRxUYrMOeeTQUxnos/02PbIid1cBpA2YgG/KemrEn9n59sK4gK31FpuIq3+Pt3DbX5nTp2u71AQ/Ybbs=?cssminify=yes' type='text/css' media='all' />
+<style id='style-inline-css' type='text/css'>
+.post-tags, .post-meta-author { clip: rect(1px, 1px, 1px, 1px); height: 1px; position: absolute; overflow: hidden; width: 1px; }
+</style>
+<link rel='stylesheet' id='print-css-7-1' href='https://s1.wp.com/wp-content/mu-plugins/global-print/rtl/global-print-rtl.css?m=1465851035h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-8-1' href='https://s0.wp.com/_static/??-eJyFy9EKwjAMheEXsmZD6534LFmpbSVNSpPh6zumoMLQu5zwf3BvLghbZIM6u0ZzKqyAwYrwhB260Xu5Ze2D6g62WRM1dyUsHTRjL5xW/7r/aZVQkBxJEn26j8cmthxrVMjHNU8k05L/Dr+jSz2P3p8Gfxj8eHsAn9hjKw==?cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJyFj+EKwjAMhF/Irug6/CU+S91iSW3T2rQb+vS2oD8cQyEQjnzcXeQSBdLoygQsbZ17gfR4r87yTv4ChEeTdIbOI33gMVAGyo2NgbMHZm1g4+rDBR2IwpAqQLnGXMOa80VEVwwSywSuRk2iua7Uhvv3I0gzwvIXs5CjHm8iAeOzdT77034Y1KHvj0rZFzMJcHE='></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://vdcnsy.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='الفصائل التابعة لتركيا تعتقل كاتب كردي في عفرين شمال&nbsp;حلب' href='https://vdcnsy.com/2018/09/06/%d8%a7%d9%84%d9%81%d8%b5%d8%a7%d8%a6%d9%84-%d8%a7%d9%84%d8%aa%d8%a7%d8%a8%d8%b9%d8%a9-%d9%84%d8%aa%d8%b1%d9%83%d9%8a%d8%a7-%d8%aa%d8%b9%d8%aa%d9%82%d9%84-%d9%83%d8%a7%d8%aa%d8%a8-%d9%83%d8%b1%d8%af/' />
+<link rel='next' title='Gunmen raided villages in Ma’abata area  in Afrin, north of Aleppo, and kidnapped dozens of&nbsp;civilians' href='https://vdcnsy.com/2018/09/06/afrin-area-gunmen-raided-villages-in-maabata-area-in-afrin-north-of-aleppo-and-kidnapped-dozens-of-civilians/' />
+<link rel="stylesheet" href="https://s2.wp.com/wp-content/themes/pub/rowling/rtl.css?m=1519665763" type="text/css" media="screen" /><meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://vdcnsy.com/2018/09/06/%d9%85%d8%af%d8%a7%d9%87%d9%85%d8%a7%d8%aa-%d9%88%d8%a7%d8%b9%d8%aa%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d9%81%d9%8a-%d9%82%d8%b1%d9%8a%d8%a9-%d8%a2%d8%b4%d9%83%d8%a7%d9%86-%d9%88%d8%a8%d8%b1%d9%8a%d9%85-2/" />
+<link rel='shortlink' href='https://wp.me/pa06Od-18A' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fvdcnsy.com%2F2018%2F09%2F06%2F%25d9%2585%25d8%25af%25d8%25a7%25d9%2587%25d9%2585%25d8%25a7%25d8%25aa-%25d9%2588%25d8%25a7%25d8%25b9%25d8%25aa%25d9%2582%25d8%25a7%25d9%2584%25d8%25a7%25d8%25aa-%25d9%2581%25d9%258a-%25d9%2582%25d8%25b1%25d9%258a%25d8%25a9-%25d8%25a2%25d8%25b4%25d9%2583%25d8%25a7%25d9%2586-%25d9%2588%25d8%25a8%25d8%25b1%25d9%258a%25d9%2585-2%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fvdcnsy.com%2F2018%2F09%2F06%2F%25d9%2585%25d8%25af%25d8%25a7%25d9%2587%25d9%2585%25d8%25a7%25d8%25aa-%25d9%2588%25d8%25a7%25d8%25b9%25d8%25aa%25d9%2582%25d8%25a7%25d9%2584%25d8%25a7%25d8%25aa-%25d9%2581%25d9%258a-%25d9%2582%25d8%25b1%25d9%258a%25d8%25a9-%25d8%25a2%25d8%25b4%25d9%2583%25d8%25a7%25d9%2586-%25d9%2588%25d8%25a8%25d8%25b1%25d9%258a%25d9%2585-2%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="مداهمات واعتقالات في قرية آشكان وبريمجة وداركير وجوقي بعفرين شمال حلب" />
+<meta property="og:url" content="https://vdcnsy.com/2018/09/06/%d9%85%d8%af%d8%a7%d9%87%d9%85%d8%a7%d8%aa-%d9%88%d8%a7%d8%b9%d8%aa%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d9%81%d9%8a-%d9%82%d8%b1%d9%8a%d8%a9-%d8%a2%d8%b4%d9%83%d8%a7%d9%86-%d9%88%d8%a8%d8%b1%d9%8a%d9%85-2/" />
+<meta property="og:description" content="شهدت قرى في ريف منطقة عفرين سلسلة من الانتهاكات تعرض لها المواطنين من حملة مداهمات واعتقالات قامت بها الفصائل المسلحة التابعة لتركيا، &#8220;فصيل الحمزات&#8221; قام بحملة دهم واختطاف في قريتي &amp;#822…" />
+<meta property="article:published_time" content="2018-09-06T14:53:14+00:00" />
+<meta property="article:modified_time" content="2018-09-06T15:39:09+00:00" />
+<meta property="og:site_name" content="مركز توثيق الانتهاكات في شمال سوريا" />
+<meta property="og:image" content="https://vdcnsy.files.wordpress.com/2018/08/880x495_a191a541-7113-5283-b67b-2d83acaf0996-3106062.jpg" />
+<meta property="og:image:width" content="616" />
+<meta property="og:image:height" content="347" />
+<meta property="og:locale" content="ar_AR" />
+<meta name="twitter:creator" content="@vdcnsy" />
+<meta name="twitter:site" content="@vdcnsy" />
+<meta name="twitter:text:title" content="مداهمات واعتقالات في قرية آشكان وبريمجة وداركير وجوقي بعفرين شمال&nbsp;حلب" />
+<meta name="twitter:image" content="https://vdcnsy.files.wordpress.com/2018/08/880x495_a191a541-7113-5283-b67b-2d83acaf0996-3106062.jpg?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="search" type="application/opensearchdescription+xml" href="https://vdcnsy.com/osd.xml" title="مركز توثيق الانتهاكات في شمال سوريا" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+	<style type="text/css">
+	body {font-family: Tahoma, Arial, sans-serif;}
+	</style>
+	<meta name="application-name" content="مركز توثيق الانتهاكات في شمال سوريا" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="مِرْقاب" /><meta name="msapplication-task" content="name=اشترك;action-uri=https://vdcnsy.com/feed/;icon-uri=https://vdcnsy.files.wordpress.com/2018/08/cropped-bda37618b41d833f75700a4d5ccfc040.jpg?w=16" /><meta name="msapplication-task" content="name=سجّل اشتراكك في مدوّنة مجانية;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=دعم وردبرس.كوم;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=منتديات وردبرس.كوم;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="description" content="شهدت قرى في ريف منطقة عفرين سلسلة من الانتهاكات تعرض لها المواطنين من حملة مداهمات واعتقالات قامت بها الفصائل المسلحة التابعة لتركيا، &quot;فصيل الحمزات&quot; قام بحملة دهم واختطاف في قريتي &quot;جوقي&quot; و&quot;داركير&quot; في ناحية موباتا وأسفرت عن اختطاف نحو 30 مواطنا كرديا عرف منهم &quot;كاوا عمر&quot; البالغ من العمر 32 عاما، وتم اقتيادهم إلى سجن&hellip;" />
+<link rel="amphtml" href="https://vdcnsy.com/2018/09/06/%d9%85%d8%af%d8%a7%d9%87%d9%85%d8%a7%d8%aa-%d9%88%d8%a7%d8%b9%d8%aa%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d9%81%d9%8a-%d9%82%d8%b1%d9%8a%d8%a9-%d8%a2%d8%b4%d9%83%d8%a7%d9%86-%d9%88%d8%a8%d8%b1%d9%8a%d9%85-2/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<style type="text/css" id="custom-colors-css">.post-tags a,.tagcloud .widget-content a,.widget_tag_cloud .widget-content a,#infinite-handle span button:hover{background:#ccc}.header-top-menu li.menu-item-has-children a:after,.header-top-menu li.page_item_has_children a:after{border-top-color:#d3d3d3}.post-tags a:before,.tagcloud .widget-content a:before,.widget_tag_cloud .widget-content a:before{border-right-color:#ccc}.entry-author .author-bio,.site-description,.post-author .description,.header-top-menu ul a,.header-top-menu>li>a,.social-menu a,.credits .attribution,.credits .attribution a{color:#d3d3d3}.widget-content,.rowling-widget-list .excerpt{color:#6d6d6d}.nav-toggle .bar,.nav-toggle.active .bar{background:#383838}.header-bottom-menu>li.menu-item-has-children:after,.header-bottom-menu>li.page_item_has_children:after{border-top-color:#383838}.header-top-menu li.menu-item-has-children:hover a:after,.header-top-menu li.page_item_has_children:hover a:after{border-top-color:#fff}.post-author .title a,.social-menu a:hover,.social-menu a.active{border-color:#fff}.header-bottom-menu ul a,.header-bottom-menu>li>a,.header-bottom-menu>li:hover>a,.header-bottom-menu ul li:hover>a,.header-bottom-menu>li.current_menu_item>a,.header-bottom-menu>li.current_page_item>a,.navigation .section-inner,.sticky.post .sticky-tag,.single-post .post .sticky-tag,.post-content .page-links a:hover,.post-content fieldset legend,.post-content fieldset legend,.post-content input[type=submit],.post-content input[type=reset],.post-content input[type=button],.post-content input[type=submit]:hover,.post-content input[type=reset]:hover,.post-content input[type=button]:hover,.post-tags a:hover,.tagcloud .widget-content a:hover,.widget_tag_cloud .widget-content a:hover,.comment-respond input[type=submit],.to-the-top .fa{color:#383838}.site-title a{color:#fff}.header-top-menu li.current-menu-item>a,.header-top-menu li.current_page_item>a,.header-top-menu li:hover>a,.header-top-menu ul li:hover>a,.social-menu a:hover,.social-menu a.active{color:#fff}body,.post-title a,.post-title a:hover,.single-post .post-image-caption,.page-links>span:nth-of-type(2),.post-navigation .navigation-post-title,.post-content caption,.post-content th,.post-content div#jp-relatedposts div.jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a,.pingbacks-title,.pingbacklist a,.comment-respond form label{color:#111}.content:before{background:#fff}.entry-author,.header-wrapper,.posts .post-image,.post-author,.credits{background:#0f5889}.top-nav{background:#126ca7}.header-top-menu ul li,.header-top-menu>li:hover>a{background:#106298}.social-menu a{border-color:#0f5889}.entry-author:before,.post-author:before{border-bottom-color:#0f5889}.header-bottom-menu ul,.navigation .section-inner,.header-bottom-menu,.nav-toggle,.sticky.post .sticky-tag,.single-post .post .sticky-tag,.post-content .page-links a:hover,.post-tags a:hover,.tagcloud .widget-content a:hover,.widget_tag_cloud .widget-content a:hover,.post-content fieldset legend,.post-content input[type=submit],.post-content input[type=reset],.post-content input[type=button],.post-content input[type=submit]:hover,.post-content input[type=reset]:hover,.post-content input[type=button]:hover,.comment-respond input[type=submit],#infinite-handle span button,.to-the-top{background:#65b2e6}.bypostauthor .comment-author-icon{background:#1e74ad}.sticky.post .sticky-tag:after,.single-post .post .sticky-tag:after,.post-tags a:hover:before,.tagcloud .widget-content a:hover:before,.widget_tag_cloud .widget-content a:hover:before{border-right-color:#65b2e6}.post-content a:hover,.pingbacks-title,.widget_flickr #flickr_badge_uber_wrapper a:last-of-type{border-bottom-color:#65b2e6}.sticky.post .sticky-tag:after{border-left-color:#65b2e6}.comments-title-link a:hover,.page-edit-link .post-edit-link:hover{border-color:#1e74ad}.nav-links>div a:hover,.comments-nav a:hover,.archive-nav a:hover{border-top-color:#1e74ad}.widget-title,.widget-content a:hover,.page-title h4{border-bottom-color:#1e74ad}body a,body a:hover,body a:active,.post-content a,.post-content a:hover,.post-content p.intro,.post-content blockquote:after,.post-categories,.single-post .post-meta a,.single-post .post-image-caption .fa,.search-container .search-button:hover,.comments-title .fa,.comment-reply-title .fa,.comments-title-link a,.comment-meta .vcard a,.no-comments .fa,.comment-header h4 a,.pingbacklist a:hover,.comments-nav a:hover,.page-edit-link,.related-post .category,.nav-links>div a:hover span,.credits .copyright a:hover,.wrapper .search-button:hover,.archive-nav a:hover,#wp-calendar thead th,#wp-calendar tfoot a:hover,.widget-content a:hover,.widget-content a:hover:before,.widget-content li a:hover,.widget-content li a:hover:before,.widget_flickr #flickr_badge_uber_wrapper a:last-of-type{color:#1e74ad}.site-title a:hover{color:#b8d9ee}</style>
+<link rel="icon" href="https://vdcnsy.files.wordpress.com/2018/08/cropped-bda37618b41d833f75700a4d5ccfc040.jpg?w=32" sizes="32x32" />
+<link rel="icon" href="https://vdcnsy.files.wordpress.com/2018/08/cropped-bda37618b41d833f75700a4d5ccfc040.jpg?w=192" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://vdcnsy.files.wordpress.com/2018/08/cropped-bda37618b41d833f75700a4d5ccfc040.jpg?w=180" />
+<meta name="msapplication-TileImage" content="https://vdcnsy.files.wordpress.com/2018/08/cropped-bda37618b41d833f75700a4d5ccfc040.jpg?w=270" />
+
+</head>
+
+	<body class="rtl post-template-default single single-post postid-4376 single-format-gallery mp6 customizer-styles-applied has-featured-image tags-hidden author-hidden highlander-enabled highlander-light">
+
+		<a class="skip-link screen-reader-text" href="#main">التجاوز إلى المحتوى</a>
+
+		
+			<nav class="top-nav">
+
+				<div class="section-inner clear-fix">
+
+					<ul class="header-top-menu">
+
+						<li id="menu-item-2342" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2342"><a href="https://vdcnsy.com/%d9%81%d8%b1%d9%8a%d9%82-%d8%a7%d9%84%d8%b9%d9%85%d9%84/">فريق العمل</a></li>
+<li id="menu-item-2343" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2343"><a href="https://vdcnsy.com/%d9%85%d9%86-%d9%86%d8%ad%d9%86%d8%9f/">للتواصل</a></li>
+<li id="menu-item-2345" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2345"><a href="https://vdcnsy.com/%d9%85%d8%b5%d8%b7%d9%84%d8%ad%d8%a7%d8%aa/">مصطلحات</a></li>
+<li id="menu-item-2461" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2461"><a href="https://vdcnsy.com/category/en/">En</a></li>
+<li id="menu-item-3420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3420"><a href="https://vdcnsy.com/%d9%81%d8%b1%d8%b5-%d8%b9%d9%85%d9%84/">فرص عمل</a></li>
+<li id="menu-item-3424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3424"><a href="https://vdcnsy.com/%d8%b4%d8%a7%d8%b1%d9%83/">شارك</a></li>
+
+					</ul> <!-- /header-top-menu -->
+
+					<ul class="social-menu">
+
+						<li id="menu-item-151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-151"><a class="search-toggle" href="#"><span class="screen-reader-text">Search</span></a></li>
+					</ul> <!-- /social-menu -->
+
+				</div> <!-- /section-inner -->
+
+			</nav> <!-- /top-nav -->
+
+		
+		<div class="search-container">
+
+			<div class="section-inner">
+
+				
+<form method="get" class="search-form" action="https://vdcnsy.com/">
+	<label>
+		<span class="screen-reader-text">البحث عن:</span>
+		<input type="search" class="search-field" placeholder="بحث" value="" name="s" title="البحث عن:" />
+	</label>
+	<button type="submit" class="search-button"><span class="fa fw fa-search"></span><span class="screen-reader-text">بحث </span></button>
+</form>
+
+			</div> <!-- /section-inner -->
+
+		</div> <!-- /search-container -->
+
+		<header class="header-wrapper">
+
+			<div class="header">
+
+				<div class="section-inner">
+
+					
+						
+						<h2 class="site-title">
+							<a href="https://vdcnsy.com/" title="مركز توثيق الانتهاكات في شمال سوريا &mdash; مِرْقاب" rel="home">مركز توثيق الانتهاكات في شمال سوريا</a>
+						</h2>
+
+													<h4 class="site-description">مِرْقاب</h4>
+						
+					
+										<div class="nav-toggle">
+
+						<div class="bars">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+
+					</div> <!-- /nav-toggle -->
+					
+				</div> <!-- /section-inner -->
+
+			</div> <!-- /header -->
+
+						<nav class="navigation">
+
+				<div class="section-inner clear-fix">
+
+					<ul class="header-bottom-menu">
+
+					<li id="menu-item-4143" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4143"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%a7%d8%ae%d8%a8%d8%a7%d8%b1/">الاخبار</a></li>
+<li id="menu-item-4141" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-4141"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%88%d8%ab%d9%8a%d9%82-%d8%a7%d9%84%d9%8a%d9%88%d9%85%d9%8a/">التوثيق اليومي</a>
+<ul class="sub-menu">
+	<li id="menu-item-4142" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-4142"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%88%d8%ab%d9%8a%d9%82-%d8%a7%d9%84%d9%8a%d9%88%d9%85%d9%8a/%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%b9%d9%81%d8%b1%d9%8a%d9%86/">منطقة عفرين</a></li>
+	<li id="menu-item-4150" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4150"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%88%d8%ab%d9%8a%d9%82-%d8%a7%d9%84%d9%8a%d9%88%d9%85%d9%8a/%d8%a7%d9%84%d8%b4%d9%87%d8%a8%d8%a7%d8%a1/">الشهباء</a></li>
+	<li id="menu-item-4149" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4149"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%88%d8%ab%d9%8a%d9%82-%d8%a7%d9%84%d9%8a%d9%88%d9%85%d9%8a/%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%a3%d8%b9%d8%b2%d8%a7%d8%b2/">منطقة أعزاز</a></li>
+	<li id="menu-item-4145" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4145"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%88%d8%ab%d9%8a%d9%82-%d8%a7%d9%84%d9%8a%d9%88%d9%85%d9%8a/%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d9%85%d9%86%d8%a8%d8%ac/">منطقة منبج</a></li>
+	<li id="menu-item-4146" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4146"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%88%d8%ab%d9%8a%d9%82-%d8%a7%d9%84%d9%8a%d9%88%d9%85%d9%8a/%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%ac%d8%b1%d8%a7%d8%a8%d9%84%d8%b3/">منطقة جرابلس</a></li>
+	<li id="menu-item-4147" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4147"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%88%d8%ab%d9%8a%d9%82-%d8%a7%d9%84%d9%8a%d9%88%d9%85%d9%8a/%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%a7%d9%84%d8%a8%d8%a7%d8%a8/">منطقة الباب</a></li>
+	<li id="menu-item-4148" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4148"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%88%d8%ab%d9%8a%d9%82-%d8%a7%d9%84%d9%8a%d9%88%d9%85%d9%8a/%d8%a7%d8%af%d9%84%d8%a8/">ادلب</a></li>
+	<li id="menu-item-4843" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4843"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%88%d8%ab%d9%8a%d9%82-%d8%a7%d9%84%d9%8a%d9%88%d9%85%d9%8a/%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d9%83%d9%88%d8%a8%d8%a7%d9%86%d9%8a/">منطقة كوباني</a></li>
+	<li id="menu-item-4844" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4844"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%88%d8%ab%d9%8a%d9%82-%d8%a7%d9%84%d9%8a%d9%88%d9%85%d9%8a/%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%aa%d9%84-%d8%a7%d8%a8%d9%8a%d8%b6/">منطقة تل ابيض</a></li>
+	<li id="menu-item-4845" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4845"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%88%d8%ab%d9%8a%d9%82-%d8%a7%d9%84%d9%8a%d9%88%d9%85%d9%8a/%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%a7%d9%84%d8%ac%d8%b2%d9%8a%d8%b1%d8%a9/">منطقة الجزيرة</a></li>
+</ul>
+</li>
+<li id="menu-item-4153" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4153"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%82%d8%b1%d9%8a%d8%b1-%d8%a7%d9%84%d8%a7%d8%b3%d8%a8%d9%88%d8%b9%d9%8a/">التقرير الاسبوعي</a></li>
+<li id="menu-item-4154" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4154"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%82%d8%b1%d9%8a%d8%b1-%d8%a7%d9%84%d8%b4%d9%87%d8%b1%d9%8a/">التقرير الشهري</a></li>
+<li id="menu-item-4144" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4144"><a href="https://vdcnsy.com/category/%d8%aa%d9%82%d8%a7%d8%b1%d9%8a%d8%b1/">تقارير</a></li>
+<li id="menu-item-4851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4851"><a href="https://vdcnsy.com/%d8%b4%d8%a7%d8%b1%d9%83/">شارك</a></li>
+
+					</ul>
+
+				</div><!-- /header-bottom-menu -->
+
+			</nav> <!-- /navigation -->
+			
+		</header> <!-- /header-wrapper -->
+
+<div class="wrapper section-inner">
+
+	<main id="main" class="content">
+
+	
+		
+		
+			<article id="post-4376" class="single clear-fix post-4376 post type-post status-publish format-gallery has-post-thumbnail hentry category-95043847 post_format-post-format-gallery">
+
+				<header class="post-header">
+
+											<p class="post-categories"><a href="https://vdcnsy.com/category/%d8%a7%d9%84%d8%aa%d9%88%d8%ab%d9%8a%d9%82-%d8%a7%d9%84%d9%8a%d9%88%d9%85%d9%8a/%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%b9%d9%81%d8%b1%d9%8a%d9%86/" rel="category tag">منطقة عفرين</a></p>
+					
+					<h1 class="post-title">مداهمات واعتقالات في قرية آشكان وبريمجة وداركير وجوقي بعفرين شمال&nbsp;حلب</h1>
+				</header> <!-- /post-header -->
+
+				
+					
+				
+				<div class="post-meta">
+
+					<span class="post-meta-date">التاريخ: <a href="https://vdcnsy.com/2018/09/06/%d9%85%d8%af%d8%a7%d9%87%d9%85%d8%a7%d8%aa-%d9%88%d8%a7%d8%b9%d8%aa%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d9%81%d9%8a-%d9%82%d8%b1%d9%8a%d8%a9-%d8%a2%d8%b4%d9%83%d8%a7%d9%86-%d9%88%d8%a8%d8%b1%d9%8a%d9%85-2/">6 سبتمبر، 2018</a></span><span class="post-meta-author">الكاتب: <a href="https://vdcnsy.com/author/mustefaebdi/">vdcnsy</a></span> 
+					
+					
+				</div> <!-- /post-meta -->
+
+				<div class="post-inner">
+
+					
+						<div class="post-content">
+
+							<p>شهدت قرى في ريف منطقة عفرين سلسلة من الانتهاكات تعرض لها المواطنين من حملة مداهمات واعتقالات قامت بها الفصائل المسلحة التابعة لتركيا، &#8220;فصيل الحمزات&#8221; قام بحملة دهم واختطاف في قريتي &#8220;جوقي&#8221; و&#8221;داركير&#8221; في ناحية موباتا وأسفرت عن اختطاف نحو 30 مواطنا كرديا عرف منهم &#8220;كاوا عمر&#8221; البالغ من العمر 32 عاما، وتم اقتيادهم إلى سجن معراته، الذي يحوي المئات من المساجين المدنيين من أهالي عفرين.<br />بينما اقتحمت عناصر من &#8220;كتيبة لواء وقّاص&#8221; الموالية لتركيا، قرية &#8220;آشكان غربي&#8221; التابعة لناحية جنديرسة في عفرين واعتقلت عدداً من الشبان، واقتادوهم إلى مكان مجهول، وعرف منهم: (عدنان علي رشو، مصطفى محمد أوسو، عبدالرحمن كمال عمر، خليل محمد أوسو).<br />هذه الحملة شملت أماكن مختلفة وباساليب متعددة، حيث فرض المسلحون حصاراً خانقاً على قرية &#8220;بريمجة&#8221; بعد اقتحامها وتم حجز الرجال والنساء فيها، وذلك عن طريق منع دخول أو خروج أيّ شخص منها، في حين تعرضت قرية &#8220;جويق&#8221; ومركز مدينة عفرين لعملية تفتيش على الهواتف ومواقع التواصل الاجتماعي على الحواجز.<br />كما وعثر الاهالي على جثة شخص مجهول الهوية مصاب بطلق ناري مرمية بين أشجار الزيتون على الطريق الواصل كل من قرية ، تل سلور ، وقرية ، المحمدية ، التابعتين لبلدة جنديرس ريف عفرين تبين ان اسمه &#8220;ابو الدرداء خشام&#8221; وهو احد عناصر جيش الشرقية.<br />وفي إطار عملية استهداف عناصر الفصائل المسلحة الموالية لتركيا من قبل وحدات حماية الشعب، قال المركز الإعلامي التابع لوحدات حماية الشعب وخلال بيان نشر اليوم ، إنّ مقاتليهم نفذوا عملية استهدفت عناصر الجبهة الشامية بناحية شرا في عفرين، وذلك من خلال &#8220;كمين&#8221; نصب لآلية عسكرية تقل العناصر، بينهم مسؤول عن نهب ممتلكات الأهالي في قرية ديكمداش، وأسفر الكمين عن مقتل عنصرين وإصابة اثنين آخرين بجروح، وهم : حسين عليطو من تل رفعت، مازن جاويش من الشام، عمر كنو من اعزاز، والمسؤول عن مجموعة النهب عبد الرحمن الجادر من جرابلس.<br />كما أعلنت غرفة عمليات غضب الزيتون عن قتل عنصر في فصيل ما يعرف بالجبهة الشامية المدعو فايز صالح الطه، الملقب بأبو صالح الغوطاني خلال عملية لمقاتليهم.</p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">شارك هذا الموضوع</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-4376" class="share-twitter sd-button share-icon no-text" href="https://vdcnsy.com/2018/09/06/%d9%85%d8%af%d8%a7%d9%87%d9%85%d8%a7%d8%aa-%d9%88%d8%a7%d8%b9%d8%aa%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d9%81%d9%8a-%d9%82%d8%b1%d9%8a%d8%a9-%d8%a2%d8%b4%d9%83%d8%a7%d9%86-%d9%88%d8%a8%d8%b1%d9%8a%d9%85-2/?share=twitter" target="_blank" title="اضغط للمشاركة على تويتر"><span></span><span class="sharing-screen-reader-text">اضغط للمشاركة على تويتر (فتح في نافذة جديدة)</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-4376" class="share-facebook sd-button share-icon no-text" href="https://vdcnsy.com/2018/09/06/%d9%85%d8%af%d8%a7%d9%87%d9%85%d8%a7%d8%aa-%d9%88%d8%a7%d8%b9%d8%aa%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d9%81%d9%8a-%d9%82%d8%b1%d9%8a%d8%a9-%d8%a2%d8%b4%d9%83%d8%a7%d9%86-%d9%88%d8%a8%d8%b1%d9%8a%d9%85-2/?share=facebook" target="_blank" title="Click to share on Facebook"><span></span><span class="sharing-screen-reader-text">Click to share on Facebook (فتح في نافذة جديدة)</span></a></li><li class="share-telegram"><a rel="nofollow noopener noreferrer" data-shared="" class="share-telegram sd-button share-icon no-text" href="https://vdcnsy.com/2018/09/06/%d9%85%d8%af%d8%a7%d9%87%d9%85%d8%a7%d8%aa-%d9%88%d8%a7%d8%b9%d8%aa%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d9%81%d9%8a-%d9%82%d8%b1%d9%8a%d8%a9-%d8%a2%d8%b4%d9%83%d8%a7%d9%86-%d9%88%d8%a8%d8%b1%d9%8a%d9%85-2/?share=telegram" target="_blank" title="Click to share on Telegram"><span></span><span class="sharing-screen-reader-text">Click to share on Telegram (فتح في نافذة جديدة)</span></a></li><li class="share-jetpack-whatsapp"><a rel="nofollow noopener noreferrer" data-shared="" class="share-jetpack-whatsapp sd-button share-icon no-text" href="https://vdcnsy.com/2018/09/06/%d9%85%d8%af%d8%a7%d9%87%d9%85%d8%a7%d8%aa-%d9%88%d8%a7%d8%b9%d8%aa%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d9%81%d9%8a-%d9%82%d8%b1%d9%8a%d8%a9-%d8%a2%d8%b4%d9%83%d8%a7%d9%86-%d9%88%d8%a8%d8%b1%d9%8a%d9%85-2/?share=jetpack-whatsapp" target="_blank" title="Click to share on WhatsApp"><span></span><span class="sharing-screen-reader-text">Click to share on WhatsApp (فتح في نافذة جديدة)</span></a></li><li class="share-skype"><a rel="nofollow noopener noreferrer" data-shared="sharing-skype-4376" class="share-skype sd-button share-icon no-text" href="https://vdcnsy.com/2018/09/06/%d9%85%d8%af%d8%a7%d9%87%d9%85%d8%a7%d8%aa-%d9%88%d8%a7%d8%b9%d8%aa%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d9%81%d9%8a-%d9%82%d8%b1%d9%8a%d8%a9-%d8%a2%d8%b4%d9%83%d8%a7%d9%86-%d9%88%d8%a8%d8%b1%d9%8a%d9%85-2/?share=skype" target="_blank" title="Click to share on Skype"><span></span><span class="sharing-screen-reader-text">Click to share on Skype (فتح في نافذة جديدة)</span></a></li><li class="share-end"></li></ul></div></div></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>مرتبط</em></h3>
+</div></div>
+							
+						</div>
+
+					
+					<footer class="post-footer">
+
+						
+						
+					</footer>
+
+				</div> <!-- /post-inner -->
+
+			</article> <!-- /post -->
+
+		
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">التنقل بين المواضيع</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://vdcnsy.com/2018/09/06/%d8%a7%d9%84%d9%81%d8%b5%d8%a7%d8%a6%d9%84-%d8%a7%d9%84%d8%aa%d8%a7%d8%a8%d8%b9%d8%a9-%d9%84%d8%aa%d8%b1%d9%83%d9%8a%d8%a7-%d8%aa%d8%b9%d8%aa%d9%82%d9%84-%d9%83%d8%a7%d8%aa%d8%a8-%d9%83%d8%b1%d8%af/" rel="prev"><span class="meta-nav" aria-hidden="true">السابق</span> <span class="screen-reader-text">المقالة السابقة:</span> <span class="navigation-post-title previous-post-title">الفصائل التابعة لتركيا تعتقل كاتب كردي في عفرين شمال&nbsp;حلب</span></a></div><div class="nav-next"><a href="https://vdcnsy.com/2018/09/06/afrin-area-gunmen-raided-villages-in-maabata-area-in-afrin-north-of-aleppo-and-kidnapped-dozens-of-civilians/" rel="next"><span class="meta-nav" aria-hidden="true">التالي</span> <span class="screen-reader-text">المقالة التالية:</span> <span class="navigation-post-title next-post-title">Gunmen raided villages in Ma’abata area  in Afrin, north of Aleppo, and kidnapped dozens of&nbsp;civilians</span></a></div></div>
+	</nav>
+		
+<div id="comments" class="comments-area clear-fix">
+
+	
+</div><!-- #comments -->
+		
+	
+	</main> <!-- /content -->
+
+	
+<div class="sidebar">
+			<aside id="recent-posts-5" class="widget widget_recent_entries"><div class="widget-content">		<h3 class="widget-title">آخر خبر</h3>		<ul>
+											<li>
+					<a href="https://vdcnsy.com/2018/10/31/%d8%aa%d8%ad%d8%af%d9%8a%d8%ab-%d8%b1%d8%a7%d8%a8%d8%b7-%d8%a7%d9%84%d9%85%d8%b1%d9%83%d8%b2/">تحديث رابط المركز</a>
+									</li>
+											<li>
+					<a href="https://vdcnsy.com/2018/10/22/%d8%a7%d8%b9%d8%af%d8%a7%d9%85-%d8%a5%d9%85%d8%b1%d8%a3%d8%a9-%d8%b1%d9%85%d9%8a%d8%a7%d9%8b-%d8%a8%d8%a7%d9%84%d8%b1%d8%b5%d8%a7%d8%b5/">اعدام إمرأة رمياً&nbsp;بالرصاص</a>
+									</li>
+											<li>
+					<a href="https://vdcnsy.com/2018/10/21/%d8%a7%d8%ad%d8%aa%d8%ac%d8%a7%d8%ac%d8%a7%d8%aa-%d8%b4%d8%b9%d8%a8%d9%8a%d8%a9-%d8%aa%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d8%b7%d8%b1%d8%af-%d8%a7%d9%84%d9%85%d8%b3%d9%84%d8%ad%d9%8a%d9%86-%d8%a7%d9%84/">احتجاجات شعبية تطالب بطرد المسلحين التابعين لتركيا من بلدات بريف حلب&nbsp;الشرقي</a>
+									</li>
+											<li>
+					<a href="https://vdcnsy.com/2018/10/21/%d9%86%d8%a7%d8%b4%d8%b7%d9%88%d9%86-%d9%81%d9%8a-%d8%a3%d9%84%d9%85%d8%a7%d9%86%d9%8a%d8%a7-%d9%8a%d9%86%d8%b8%d9%85%d9%88%d9%86-%d8%a7%d8%b9%d8%aa%d8%b5%d8%a7%d9%85%d8%a7%d9%8b-%d8%aa%d8%b6%d8%a7/">ناشطون في المانيا ينظمون اعتصاماً تضامنياً مع أهالي عفرين للتنديد بانتهاكات القوات&nbsp;التركية</a>
+									</li>
+											<li>
+					<a href="https://vdcnsy.com/2018/10/21/%d8%a7%d9%84%d8%af%d9%81%d8%a7%d8%b9-%d8%a7%d9%84%d8%b1%d9%88%d8%b3%d9%8a%d8%a9-%d8%aa%d8%b9%d8%b1%d8%b6-%d9%85%d9%88%d8%a7%d9%82%d8%b9-%d8%a7%d9%84%d9%82%d9%88%d8%a7%d8%aa-%d8%a7%d9%84%d8%b3%d9%88/">الدفاع الروسية: تعرض مواقع القوات السورية للقصف في تل رفعت من جهة&nbsp;عفرين</a>
+									</li>
+											<li>
+					<a href="https://vdcnsy.com/2018/10/21/%d8%b9%d9%81%d8%b1%d9%8a%d9%86-%d8%b3%d8%a7%d8%ad%d8%a9-%d8%a7%d9%86%d8%aa%d9%87%d8%a7%d9%83%d8%a7%d8%aa/">عفرين ساحة انتهاكات</a>
+									</li>
+											<li>
+					<a href="https://vdcnsy.com/2018/10/21/%d9%85%d8%af%d9%8a%d8%b1-%d8%a7%d9%84%d9%85%d8%aa%d8%a7%d8%ad%d9%81-%d8%a7%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a9-%d8%a7%d9%84%d8%a2%d8%ab%d8%a7%d8%b1-%d8%a7%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a9-%d9%81/">مدير المتاحف السورية: الآثار السورية في منطقة عفرين تتعرض للتعدي من قبل&nbsp;تركيا</a>
+									</li>
+											<li>
+					<a href="https://vdcnsy.com/2018/10/20/%d8%aa%d8%ac%d8%af%d8%af-%d8%ad%d8%a7%d9%84%d8%a7%d8%aa-%d8%ad%d8%b1%d9%82-%d8%a7%d9%84%d8%ba%d8%a7%d8%a8%d8%a7%d8%aa-%d9%81%d9%8a-%d8%b9%d9%81%d8%b1%d9%8a%d9%86-%d8%a8%d8%b1%d9%8a%d9%81-%d8%ad%d9%84/">تجدد حالات حرق الغابات في عفرين بريف&nbsp;حلب</a>
+									</li>
+											<li>
+					<a href="https://vdcnsy.com/2018/10/20/%d9%81%d8%b5%d8%a7%d8%a6%d9%84-%d8%b3%d9%88%d8%b1%d9%8a%d8%a9-%d9%85%d8%b1%d8%aa%d8%a8%d8%b7%d8%a9-%d8%a8%d8%aa%d8%b1%d9%83%d9%8a%d8%a7-%d8%aa%d9%81%d8%b1%d8%b6-%d8%a7%d9%84%d8%ac%d8%b2%d9%8a%d8%a9/">فصائل سورية مرتبطة بتركيا تفرض الجزية على زيتون&nbsp;عفرين</a>
+									</li>
+											<li>
+					<a href="https://vdcnsy.com/2018/10/20/%d9%85%d8%b3%d9%84%d8%ad%d9%88%d9%86-%d9%8a%d9%82%d8%b5%d9%81%d9%88%d9%86-%d9%85%d9%86%d8%a7%d8%b2%d9%84-%d8%a7%d9%84%d9%85%d8%af%d9%86%d9%8a%d9%8a%d9%86-%d9%85%d8%b9-%d8%a7%d8%b3%d8%aa%d9%85%d8%b1/">مسلحون يقصفون منازل المدنيين مع استمرار انتهاكات في عفرين/شمال&nbsp;حلب</a>
+									</li>
+					</ul>
+		</div><div class="clear"></div></aside><aside id="search-1" class="widget widget_search"><div class="widget-content"><h3 class="widget-title">بحث</h3>
+<form method="get" class="search-form" action="https://vdcnsy.com/">
+	<label>
+		<span class="screen-reader-text">البحث عن:</span>
+		<input type="search" class="search-field" placeholder="بحث" value="" name="s" title="البحث عن:" />
+	</label>
+	<button type="submit" class="search-button"><span class="fa fw fa-search"></span><span class="screen-reader-text">بحث </span></button>
+</form>
+</div><div class="clear"></div></aside><aside id="categories-3" class="widget widget_categories"><div class="widget-content"><h3 class="widget-title">التصنيفات</h3><form action="https://vdcnsy.com" method="get"><label class="screen-reader-text" for="cat">التصنيفات</label><select  name='cat' id='cat' class='postform' >
+	<option value='-1'>اختر التصنيف</option>
+	<option class="level-0" value="10221">En</option>
+	<option class="level-0" value="411475677">منطقة كوباني</option>
+	<option class="level-0" value="438714757">منطقة منبج</option>
+	<option class="level-0" value="462548698">منطقة أعزاز</option>
+	<option class="level-0" value="238580119">منطقة الباب</option>
+	<option class="level-0" value="250930893">منطقة الجزيرة</option>
+	<option class="level-0" value="649532519">منطقة تل ابيض</option>
+	<option class="level-0" value="422190551">منطقة جرابلس</option>
+	<option class="level-0" value="95043847">منطقة عفرين</option>
+	<option class="level-0" value="928904">الاخبار</option>
+	<option class="level-0" value="50858591">التقرير الاسبوعي</option>
+	<option class="level-0" value="137085080">التقرير الشهري</option>
+	<option class="level-0" value="196487570">التقرير الصحفي</option>
+	<option class="level-0" value="27806384">الشهباء</option>
+	<option class="level-0" value="6030001">ادلب</option>
+	<option class="level-0" value="967335">تقارير</option>
+	<option class="level-0" value="1336082">رأي</option>
+</select>
+</form>
+<script type='text/javascript'>
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+			</div><div class="clear"></div></aside><aside id="calendar-3" class="widget widget_calendar"><div class="widget-content"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>سبتمبر 2018</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="السبت">س</th>
+		<th scope="col" title="الأحد">د</th>
+		<th scope="col" title="الإثنين">ن</th>
+		<th scope="col" title="الثلاثاء">ث</th>
+		<th scope="col" title="الأربعاء">ع</th>
+		<th scope="col" title="الخميس">خ</th>
+		<th scope="col" title="الجمعة">ج</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://vdcnsy.com/2018/08/">&laquo; أغسطس</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="https://vdcnsy.com/2018/10/">أكتوبر &raquo;</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr><td><a href="https://vdcnsy.com/2018/09/01/" aria-label="مقالات نُشرت بتاريخ September 1, 2018">1</a></td><td><a href="https://vdcnsy.com/2018/09/02/" aria-label="مقالات نُشرت بتاريخ September 2, 2018">2</a></td><td><a href="https://vdcnsy.com/2018/09/03/" aria-label="مقالات نُشرت بتاريخ September 3, 2018">3</a></td><td>4</td><td><a href="https://vdcnsy.com/2018/09/05/" aria-label="مقالات نُشرت بتاريخ September 5, 2018">5</a></td><td><a href="https://vdcnsy.com/2018/09/06/" aria-label="مقالات نُشرت بتاريخ September 6, 2018">6</a></td><td><a href="https://vdcnsy.com/2018/09/07/" aria-label="مقالات نُشرت بتاريخ September 7, 2018">7</a></td>
+	</tr>
+	<tr>
+		<td><a href="https://vdcnsy.com/2018/09/08/" aria-label="مقالات نُشرت بتاريخ September 8, 2018">8</a></td><td><a href="https://vdcnsy.com/2018/09/09/" aria-label="مقالات نُشرت بتاريخ September 9, 2018">9</a></td><td><a href="https://vdcnsy.com/2018/09/10/" aria-label="مقالات نُشرت بتاريخ September 10, 2018">10</a></td><td><a href="https://vdcnsy.com/2018/09/11/" aria-label="مقالات نُشرت بتاريخ September 11, 2018">11</a></td><td><a href="https://vdcnsy.com/2018/09/12/" aria-label="مقالات نُشرت بتاريخ September 12, 2018">12</a></td><td><a href="https://vdcnsy.com/2018/09/13/" aria-label="مقالات نُشرت بتاريخ September 13, 2018">13</a></td><td><a href="https://vdcnsy.com/2018/09/14/" aria-label="مقالات نُشرت بتاريخ September 14, 2018">14</a></td>
+	</tr>
+	<tr>
+		<td><a href="https://vdcnsy.com/2018/09/15/" aria-label="مقالات نُشرت بتاريخ September 15, 2018">15</a></td><td><a href="https://vdcnsy.com/2018/09/16/" aria-label="مقالات نُشرت بتاريخ September 16, 2018">16</a></td><td><a href="https://vdcnsy.com/2018/09/17/" aria-label="مقالات نُشرت بتاريخ September 17, 2018">17</a></td><td><a href="https://vdcnsy.com/2018/09/18/" aria-label="مقالات نُشرت بتاريخ September 18, 2018">18</a></td><td><a href="https://vdcnsy.com/2018/09/19/" aria-label="مقالات نُشرت بتاريخ September 19, 2018">19</a></td><td><a href="https://vdcnsy.com/2018/09/20/" aria-label="مقالات نُشرت بتاريخ September 20, 2018">20</a></td><td><a href="https://vdcnsy.com/2018/09/21/" aria-label="مقالات نُشرت بتاريخ September 21, 2018">21</a></td>
+	</tr>
+	<tr>
+		<td><a href="https://vdcnsy.com/2018/09/22/" aria-label="مقالات نُشرت بتاريخ September 22, 2018">22</a></td><td><a href="https://vdcnsy.com/2018/09/23/" aria-label="مقالات نُشرت بتاريخ September 23, 2018">23</a></td><td><a href="https://vdcnsy.com/2018/09/24/" aria-label="مقالات نُشرت بتاريخ September 24, 2018">24</a></td><td><a href="https://vdcnsy.com/2018/09/25/" aria-label="مقالات نُشرت بتاريخ September 25, 2018">25</a></td><td><a href="https://vdcnsy.com/2018/09/26/" aria-label="مقالات نُشرت بتاريخ September 26, 2018">26</a></td><td><a href="https://vdcnsy.com/2018/09/27/" aria-label="مقالات نُشرت بتاريخ September 27, 2018">27</a></td><td><a href="https://vdcnsy.com/2018/09/28/" aria-label="مقالات نُشرت بتاريخ September 28, 2018">28</a></td>
+	</tr>
+	<tr>
+		<td><a href="https://vdcnsy.com/2018/09/29/" aria-label="مقالات نُشرت بتاريخ September 29, 2018">29</a></td><td><a href="https://vdcnsy.com/2018/09/30/" aria-label="مقالات نُشرت بتاريخ September 30, 2018">30</a></td>
+		<td class="pad" colspan="5">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></div><div class="clear"></div></aside><aside id="facebook-likebox-5" class="widget widget_facebook_likebox"><div class="widget-content">		<div id="fb-root"></div>
+		<div class="fb-page" data-href="https://www.facebook.com/%D9%85%D8%B1%D9%83%D8%B2-%D8%AA%D9%88%D8%AB%D9%8A%D9%82-%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D9%87%D8%A7%D9%83%D8%A7%D8%AA-%D9%81%D9%8A-%D8%B4%D9%85%D8%A7%D9%84-%D8%B3%D9%88%D8%B1%D9%8A%D8%A7-1955774967788999/" data-width="340"  data-height="432" data-hide-cover="true" data-show-facepile="true" data-show-posts="false">
+		<div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/%D9%85%D8%B1%D9%83%D8%B2-%D8%AA%D9%88%D8%AB%D9%8A%D9%82-%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D9%87%D8%A7%D9%83%D8%A7%D8%AA-%D9%81%D9%8A-%D8%B4%D9%85%D8%A7%D9%84-%D8%B3%D9%88%D8%B1%D9%8A%D8%A7-1955774967788999/"><a href="https://www.facebook.com/%D9%85%D8%B1%D9%83%D8%B2-%D8%AA%D9%88%D8%AB%D9%8A%D9%82-%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D9%87%D8%A7%D9%83%D8%A7%D8%AA-%D9%81%D9%8A-%D8%B4%D9%85%D8%A7%D9%84-%D8%B3%D9%88%D8%B1%D9%8A%D8%A7-1955774967788999/"></a></blockquote></div>
+		</div>
+		</div><div class="clear"></div></aside></div>
+
+	<div class="clear"></div>
+
+</div> <!-- /wrapper -->
+
+
+<footer class="site-footer">
+
+	<div class="section-inner">
+		<a href="#" class="to-the-top" title="للأعلى"><div class="fa fw fa-arrow-up"></div></a>
+		<p class="copyright">&copy; 2019 <a href="https://vdcnsy.com/" title="مركز توثيق الانتهاكات في شمال سوريا &mdash; مِرْقاب" rel="home">مركز توثيق الانتهاكات في شمال سوريا</a></p>
+		<p class="attribution"><a href="https://ar.wordpress.com/?ref=footer_custom_com">WordPress.com</a>. | قالب: Rowling بواسطة <a href="http://www.andersnoren.se" rel="designer">Anders Nor&eacute;n</a>.</p>
+	</div>
+
+</footer> <!-- /site-footer -->
+
+<!--  -->
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201917y'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/vdcnsy.com\/2018\/09\/06\/%d9%85%d8%af%d8%a7%d9%87%d9%85%d8%a7%d8%aa-%d9%88%d8%a7%d8%b9%d8%aa%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d9%81%d9%8a-%d9%82%d8%b1%d9%8a%d8%a9-%d8%a2%d8%b4%d9%83%d8%a7%d9%86-%d9%88%d8%a8%d8%b1%d9%8a%d9%85-2\/":4376};
+	</script>
+				<script type='text/javascript'>
+/* <![CDATA[ */
+var comment_like_text = {"loading":"\u062a\u062d\u0645\u064a\u0644..."};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jpfbembed = {"appid":"249643311490","locale":"ar_AR"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var actionbardata = {"siteID":"147789537","siteName":"\u0645\u0631\u0643\u0632 \u062a\u0648\u062b\u064a\u0642 \u0627\u0644\u0627\u0646\u062a\u0647\u0627\u0643\u0627\u062a \u0641\u064a \u0634\u0645\u0627\u0644 \u0633\u0648\u0631\u064a\u0627","siteURL":"http:\/\/vdcnsy.com","icon":"<img alt='' src='https:\/\/vdcnsy.files.wordpress.com\/2018\/08\/cropped-bda37618b41d833f75700a4d5ccfc040.jpg?w=50' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/rowling","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fvdcnsy.com%2F2018%2F09%2F06%2F%D9%85%D8%AF%D8%A7%D9%87%D9%85%D8%A7%D8%AA-%D9%88%D8%A7%D8%B9%D8%AA%D9%82%D8%A7%D9%84%D8%A7%D8%AA-%D9%81%D9%8A-%D9%82%D8%B1%D9%8A%D8%A9-%D8%A2%D8%B4%D9%83%D8%A7%D9%86-%D9%88%D8%A8%D8%B1%D9%8A%D9%85-2%2F&signup_flow=account&domain=vdcnsy.com","themeURL":"https:\/\/wordpress.com\/theme\/rowling\/","xhrURL":"https:\/\/vdcnsy.com\/wp-admin\/admin-ajax.php","nonce":"adfa120fc4","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"93efc54aa5\" \/>","referer":"https:\/\/vdcnsy.com\/2018\/09\/06\/%D9%85%D8%AF%D8%A7%D9%87%D9%85%D8%A7%D8%AA-%D9%88%D8%A7%D8%B9%D8%AA%D9%82%D8%A7%D9%84%D8%A7%D8%AA-%D9%81%D9%8A-%D9%82%D8%B1%D9%8A%D8%A9-%D8%A2%D8%B4%D9%83%D8%A7%D9%86-%D9%88%D8%A8%D8%B1%D9%8A%D9%85-2\/","canFollow":"1","feedID":"89496473","statusMessage":"","customizeLink":"https:\/\/vdcnsy.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fvdcnsy.wordpress.com%2F2018%2F09%2F06%2F%25D9%2585%25D8%25AF%25D8%25A7%25D9%2587%25D9%2585%25D8%25A7%25D8%25AA-%25D9%2588%25D8%25A7%25D8%25B9%25D8%25AA%25D9%2582%25D8%25A7%25D9%2584%25D8%25A7%25D8%25AA-%25D9%2581%25D9%258A-%25D9%2582%25D8%25B1%25D9%258A%25D8%25A9-%25D8%25A2%25D8%25B4%25D9%2583%25D8%25A7%25D9%2586-%25D9%2588%25D8%25A8%25D8%25B1%25D9%258A%25D9%2585-2%2F","postID":"4376","shortlink":"https:\/\/wp.me\/pa06Od-18A","canEditPost":"","editLink":"https:\/\/wordpress.com\/post\/vdcnsy.com\/4376","statsLink":"https:\/\/wordpress.com\/stats\/post\/4376\/vdcnsy.com","i18n":{"view":"\u0645\u0634\u0627\u0647\u062f\u0629 \u0627\u0644\u0645\u0648\u0642\u0639","follow":"\u062a\u0627\u0628\u0639","following":"\u0645\u062a\u0627\u0628\u0639 ","edit":"\u062a\u062d\u0631\u064a\u0631","login":"\u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u062f\u062e\u0648\u0644","signup":"\u0633\u062c\u0651\u0644 \u0628\u0627\u0644\u0645\u0648\u0642\u0639!","customize":"\u062a\u062e\u0635\u064a\u0635","report":"\u0625\u0628\u0644\u0627\u063a \u0639\u0646 \u0647\u0630\u0627 \u0627\u0644\u0645\u062d\u062a\u0648\u0649","themeInfo":"\u0627\u0644\u062d\u0635\u0648\u0644 \u0639\u0644\u0649 \u0642\u0627\u0644\u0628: Rowling","shortlink":"\u0646\u0633\u062e \u0627\u0644\u0631\u0627\u0628\u0637 \u0627\u0644\u0642\u0635\u064a\u0631","copied":"\u062a\u0645 \u0627\u0644\u0646\u0633\u062e","followedText":"\u0633\u062a\u0638\u0647\u0631 \u0645\u0642\u0627\u0644\u0627\u062a \u062c\u062f\u064a\u062f\u0629 \u0645\u0646 \u0647\u0630\u0627 \u0627\u0644\u0645\u0648\u0642\u0639 \u0641\u064a <a href=\"https:\/\/wordpress.com\/\">\u0627\u0644\u0642\u0627\u0631\u0626<\/a> \u0627\u0644\u062e\u0627\u0635 \u0628\u0643","foldBar":"\u0637\u064a \u0647\u0630\u0627 \u0627\u0644\u0634\u0631\u064a\u0637","unfoldBar":"\u062a\u0648\u0633\u064a\u0639 \u0647\u0630\u0627 \u0627\u0644\u0634\u0631\u064a\u0637","editSubs":"\u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643\u0627\u062a","viewReader":"\u0645\u0634\u0627\u0647\u062f\u0629 \u0627\u0644\u0645\u0648\u0642\u0639 \u0641\u064a \u0648\u0636\u0639 \"\u0627\u0644\u0642\u0627\u0631\u0626\"","viewReadPost":"View post in Reader","subscribe":"\u0633\u062c\u0644 \u062f\u062e\u0648\u0644\u064a","enterEmail":"\u0623\u0643\u062a\u0628 \u0628\u0631\u064a\u062f\u0643 \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a","followers":"\u0627\u0646\u0636\u0645 2\u066c897 \u0645\u062a\u0627\u0628\u0639\u0648\u0646 \u0622\u062e\u0631\u064a\u0646","alreadyUser":"\u0623\u0644\u062f\u064a\u0643 \u062d\u0633\u0627\u0628 \u0648\u0631\u062f\u0628\u0631\u0633.\u0643\u0648\u0645 \u0628\u0627\u0644\u0641\u0639\u0644\u061f <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fvdcnsy.com%2F2018%2F09%2F06%2F%D9%85%D8%AF%D8%A7%D9%87%D9%85%D8%A7%D8%AA-%D9%88%D8%A7%D8%B9%D8%AA%D9%82%D8%A7%D9%84%D8%A7%D8%AA-%D9%81%D9%8A-%D9%82%D8%B1%D9%8A%D8%A9-%D8%A2%D8%B4%D9%83%D8%A7%D9%86-%D9%88%D8%A8%D8%B1%D9%8A%D9%85-2%2F&signup_flow=account&domain=vdcnsy.com\">\u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u062f\u062e\u0648\u0644 \u0627\u0644\u0622\u0646.<\/a>","stats":"\u0625\u062d\u0635\u0627\u0626\u064a\u0627\u062a"}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyVketOwzAMhV+IzAJRif5APArKxe3cOnHIZRtvTypg2uhUsV+x7PMd+ThwjMpKKBgKTBkcHshiPO2m/AAXI19V5DpSyMA0Y4aPihX3OjjGtCG24n1rqW9oWmgD+UgR74GuGn/BskffZLEaSHJkCuOC5Jli04dZDWJrVgOtMt0GB8ZTZnLrWLf1TqphLDoWGeV/yMhiNP9qKViu7jpowsifO09h40oTlqjtDO/NAAZt0YjMCr1Bt0Fp11yV0Qm8zgVTq5QcMCVaVjj37nQoqW2y+plLyBaSsEDnakMdJRc1sKYEea/Tcraft0Fv/vWx6577vn/pnqYv6RgIOw=='></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-telegram', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtelegram', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-skype', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomskype', 'menubar=1,resizable=1,width=305,height=665' );
+				return false;
+			});
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?60" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'147789537','blog_tz':'3','user_lang':'ar','blog_lang':'ar','user_id':'0'}]);
+_stq.push(['view', {'blog':'147789537','v':'wpcom','tz':'3','user_id':'0','post':'4376','subd':'vdcnsy'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1TaVhzUzFMbjdWNHpwZGhTayxPSUFCMGNrd29+Smw0TDhnZmRTK0hlRi9QSGh6bi9GXVhBJWIlZlR5U1JMLU8/MkNtblkvY1dMeCxaOWZXPzFCUj9bd3h2MlNPTGxIRElrJmtyZVRkZ3hXZE9MU1stP3JRM01bZi1WVX5HZXVken4yNng2VjEtSDJHb3E/Z1pmMGc1SWc2PWolUC5FRV01ZWg9c01Pek14SVFiT19QeDdGRUY4eUtkekZzQjJTTHByTyx8OEdbOCtJNUR5cmU4K0VEeHxoTVdMLUlzQ2l5ZTJsbTJbeHV1UG1sa3oxRnxYTTJTNm5FZUR0TzZySW9WQnRTYmglL3lPXU1JWnhKK0hTSVVGOVFXWCVzP1AtPVRdbm5B'}]);
+_stq.push([ 'clickTrackerInit', '147789537', '4376' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>

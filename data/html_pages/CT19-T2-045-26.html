@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);
+  </script>
+  <meta content="index,follow" name="ROBOTS"/>
+  <meta content="Arabic" name="language"/>
+  <meta content="Al-Hayat" name="copyright"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+  <title>
+   الإعدام لـ  8 عناصر من «داعش سيناء» - جريدة الحياة
+  </title>
+  <link href="http://www.alhayat.com/article/4610993/سياسة/العرب/الإعدام-ل-8-عناصر-من-داعش-سيناء" rel="canonical"/>
+  <base href="http://www.alhayat.com/themes/hayat/"/>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-112484265-1">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+function gtag()
+{dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-112484265-1');
+  </script>
+  <link href="http://www.alhayat.com/css/bootstrap.min.css" rel="stylesheet">
+   <link href="http://www.alhayat.com/css/bootstrap-rtl.min.css" rel="stylesheet"/>
+   <link href="http://www.alhayat.com/css/select2.min.css" rel="stylesheet"/>
+   <link href="http://www.alhayat.com/css/jquery-ui.min.css" rel="stylesheet"/>
+   <link href="http://www.alhayat.com/css/jquery-ui.structure.min.css" rel="stylesheet"/>
+   <link href="http://www.alhayat.com/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+   <link href="http://www.alhayat.com/css/focuspoint.min.css" rel="stylesheet" type="text/css"/>
+   <link href="css/hayat.min.css" rel="stylesheet"/>
+   <link href="css/icons.min.css" rel="stylesheet"/>
+   <link href="css/header.min.css" rel="stylesheet"/>
+   <link href="css/footer.min.css" rel="stylesheet"/>
+   <link href="images/logo.png" rel="icon" type="image/png"/>
+   <script>
+    var device = 'desktop';
+		if ((navigator.userAgent).indexOf("Mobile") > 0){
+			device = 'mobile';
+		}
+		var bodyWidth =window.innerWidth;
+		if(bodyWidth > 747 && bodyWidth < 1000){
+				device = 'tablets';
+		}
+
+			var signal =  {
+
+				"User": {
+					"UserId": null,
+					"isLoggedIn": false,
+					"EmailHash": null,
+					"Gender": null,
+					"Age": null
+				},
+				"Content": {
+											"ContentCategoryLevel1": 'سياسة',
+					
+					"ContentCategoryLevel2": 'العرب',
+					"Keywords": ['الإعدام','لـ','8','عناصر','داعش','سيناء'],
+					"ArticleId": '4610993',
+					"ArticleTitle": 'الإعدام لـ  8 عناصر من «داعش سيناء»',
+					"ArticleAuthorName": 'القاهرة – «الحياة»',
+					"ArticlePublishDate": '2018-11-08 06:00:00',
+					"ContentType": 'article',
+					"SearchTerm": null
+				},
+				"Page": {
+					"ChannelLevel1": "Politics",
+					"ChannelLevel2": "Arab"				},
+				"Device": {
+					"Device": device
+				}
+			}
+   </script>
+   <script src="http://www.alhayat.com/js/jquery.min.js">
+   </script>
+   <script id="tagjs">
+    $(function(){
+		$( document ).ready(function() {
+			var tagjs = document.createElement("script");
+			var s = document.getElementsByTagName("script")[0];
+			tagjs.async = true;
+			tagjs.src = "//s.btstatic.com/tag.js#site=tkasP4G";
+			s.parentNode.insertBefore(tagjs, s);
+		});
+	});
+   </script>
+   <link href="widgets/full-ad/full-ad.min.css" rel="stylesheet" type="text/css"/>
+   <link href="widgets/breaking-news/breaking-news.min.css" rel="stylesheet" type="text/css"/>
+   <link href="../../css/jquery.fancybox.min.css" rel="stylesheet" type="text/css"/>
+   <link href="widgets/article-details/article-details.min.css" rel="stylesheet" type="text/css"/>
+   <link href="pages/article-media/article-media.min.css" rel="stylesheet" type="text/css"/>
+   <link href="widgets/recent-news-most-read/recent-news-most-read.min.css" rel="stylesheet" type="text/css"/>
+   <link href="widgets/square-ad/square-ad.min.css" rel="stylesheet" type="text/css"/>
+   <link href="widgets/four-articles-with-grey/four-articles-with-grey.min.css" rel="stylesheet" type="text/css"/>
+   <meta content="الإعدام لـ  8 عناصر من «داعش سيناء»" name="description"/>
+   <meta content="الإعدام,لـ,8,عناصر,داعش,سيناء" name="keywords"/>
+   <meta content="40225" name="Idkeywords"/>
+   <meta content="article" name="pageType"/>
+   <meta content="http://www.alhayat.com/article/4610993" name="url"/>
+   <meta content="2018-11-08 06:00:00" name="datePublished"/>
+   <meta content="2018-11-08 06:00:00" name="dateModified"/>
+   <meta content="القاهرة – «الحياة»" name="author"/>
+   <meta content="en" name="inLanguage"/>
+   <meta content="http://www.alhayat.com/article/4610993/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9/%D8%A7%D9%84%D8%B9%D8%B1%D8%A8/%D8%A7%D9%84%D8%A5%D8%B9%D8%AF%D8%A7%D9%85-%D9%84-8-%D8%B9%D9%86%D8%A7%D8%B5%D8%B1-%D9%85%D9%86-%D8%AF%D8%A7%D8%B9%D8%B4-%D8%B3%D9%8A%D9%86%D8%A7%D8%A1" property="og:url"/>
+   <meta content="الإعدام لـ  8 عناصر من «داعش سيناء»" property="og:title"/>
+   <meta content="الإعدام لـ  8 عناصر من «داعش سيناء»" property="og:description"/>
+   <meta content="article" property="og:type"/>
+   <meta content="en_GB" property="og:locale"/>
+   <meta content="Hayat" property="og:site_name"/>
+   <meta content="2018-11-08 06:00:00" property="article:published_time"/>
+   <meta content="القاهرة – «الحياة»" property="article:author"/>
+   <meta content="سياسة" property="article:section"/>
+   <meta content="summary_large_image" name="twitter:card"/>
+   <meta content="الإعدام لـ  8 عناصر من «داعش سيناء»" name="twitter:title"/>
+   <meta content="الإعدام لـ  8 عناصر من «داعش سيناء»" name="twitter:description"/>
+   <meta content="http://www.alhayat.com/uploads/images/2018/11/07/43937.jpg" property="og:image"/>
+   <meta content="http://www.alhayat.com/uploads/images/2018/11/07/43937.jpg" name="twitter:image"/>
+   <meta content="http://www.alhayat.com/uploads/images/2018/11/07/43937.jpg" name="thumbnailUrl"/>
+   <meta content="4610993" itemprop="identifier"/>
+   <meta content="الإعدام لـ  8 عناصر من «داعش سيناء»" itemprop="headline"/>
+   <meta content="article" itemprop="pageType"/>
+   <meta content="سياسة" itemprop="articleSection"/>
+   <meta content="2018-11-08 06:00:00" itemprop="datePublished"/>
+   <meta content="2018-11-07 22:11:15" itemprop="dateModified"/>
+   <meta content="4610993" itemprop="url"/>
+   <meta content="ar" itemprop="inLanguage"/>
+   <meta content="القاهرة – «الحياة»" itemprop="author"/>
+   <meta content="uploads/images/2018/11/07/43937.jpg" itemprop="image"/>
+   <meta content="uploads/images/2018/11/07/43937.jpg" itemprop="thumbnailUrl"/>
+   <meta content="NEWSPAPER_NAME" itemprop="publisher"/>
+   <!-- google recaptcha-->
+   <script src="https://www.google.com/recaptcha/api.js">
+   </script>
+   <!-- BEGIN NARRATIIVE CODE -->
+   <script type="text/javascript">
+    (function(t,r,a,c,k,n,o,w){t['em_ns']=k;w=1*new Date();t[k]=t[k]||function(){
+     (t[k].q=t[k].q||[]).push(arguments)},t[k].t=w;n=r.createElement(a);n.async=1;
+     n.src=c+'/tag'+(t.addEventListener&&'.'||'_.')+'js?'+parseInt(w/1e9, 10);
+     o=r.getElementsByTagName(a)[0];o.parentNode.insertBefore(n,o)
+   })(window,document,'script','https://t.effectivemeasure.net','_em');
+   </script>
+   <noscript>
+    <img alt="" src="https://collector.effectivemeasure.net/noscript" style="position:absolute; left:-5px;"/>
+   </noscript>
+   <!-- END NARRATIIVE CODE -->
+  </link>
+ </head>
+ <body class="rtl">
+  <noscript>
+   <iframe height="1" src="//s.thebrighttag.com/iframe?c=tkasP4G" style="border:0px;overflow:hidden;margin:0" width="1">
+   </iframe>
+  </noscript>
+  <input id="BASE_URL" type="hidden" value="http://www.alhayat.com/"/>
+  <div id="fb-root">
+  </div>
+  <!--HEADER-->
+  <header class="no-print">
+   <!--header.phtml-->
+   <div class="modal fade" id="advSearch" role="dialog" style="display: none;z-index:999999999999;">
+   </div>
+   <nav class="navbar navbar-default">
+    <div class="container ">
+     <div class="navbar-header">
+      <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+       <span class="sr-only">
+        Toggle navigation
+       </span>
+       <span class="icon-bar">
+       </span>
+       <span class="icon-bar">
+       </span>
+       <span class="icon-bar">
+       </span>
+      </button>
+      <a class="navbar-brand" href="http://www.alhayat.com/">
+       <img alt="logo" src="images/alhayat-logo.jpg"/>
+      </a>
+      <div class="dropdown visible-xs" id="mobileSearch">
+       <a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="mobileSearchBtn">
+        <i class="icon-search">
+        </i>
+       </a>
+       <div aria-labelledby="mobileSearchBtn" class="dropdown-menu search-field" id="mobileSearchField">
+        <div class="input-group">
+         <input class="form-control query" placeholder="ابحث" type="text"/>
+         <span class="input-group-btn">
+          <input class="btn btn-default submitSearch" type="button" value="بحث"/>
+         </span>
+        </div>
+        <span class="searchBtn" data-target="#advSearch" data-toggle="modal" onclick="advancedSearch();" style="color:white;cursor:pointer;margin-top:10px;" tabindex="1">
+         بحث متقدم
+        </span>
+       </div>
+      </div>
+      <div class="dropdown visible-xs" id="mobileBoxPdfButton">
+       <a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="mobilePdfButton">
+        <img alt="logo" height="29" src="images/pdfIcon.png" width="29"/>
+       </a>
+       <div aria-labelledby="mobilePdfButton" class="dropdown-menu search-field" style="right:48px;padding:0 3px; margin-top: -10px; ">
+        <div class="input-group">
+         <h5>
+          <a href="http://alhayatweb.com/services/pdf/free/" style="cursor:pointer;" target="_blank">
+           الطبعة الدولية
+          </a>
+         </h5>
+         <h5>
+          <a href="http://alhayatweb.com/services/pdf/ksa/" style="cursor:pointer;" target="_blank">
+           الطبعة السعودية
+          </a>
+         </h5>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <div class="container">
+      <ul class="nav navbar-nav">
+       <li class="">
+        <a href="http://www.alhayat.com/الرئيسية">
+         <span>
+          الرئيسية
+          <i class="icon-angle-down hidden">
+          </i>
+         </span>
+        </a>
+        <div class="dd-nav">
+        </div>
+       </li>
+       <li class="has-sub ">
+        <a href="http://www.alhayat.com/سياسة">
+         <span>
+          سياسة
+          <i class="icon-angle-down ">
+          </i>
+         </span>
+        </a>
+        <div class="dd-nav">
+         <a href="http://www.alhayat.com/العالم">
+          العالم
+         </a>
+         <a href="http://www.alhayat.com/العرب">
+          العرب
+         </a>
+         <a href="http://www.alhayat.com/الخليج">
+          الخليج
+         </a>
+        </div>
+       </li>
+       <li class="has-sub ">
+        <a href="http://www.alhayat.com/رياضة">
+         <span>
+          رياضة
+          <i class="icon-angle-down ">
+          </i>
+         </span>
+        </a>
+        <div class="dd-nav">
+         <a href="http://www.alhayat.com/بطولات-الكرة">
+          بطولات الكرة
+         </a>
+         <a href="http://www.alhayat.com/بطولات-القوى-البدنية">
+          بطولات القوى البدنية
+         </a>
+        </div>
+       </li>
+       <li class="has-sub ">
+        <a href="http://www.alhayat.com/اقتصاد">
+         <span>
+          اقتصاد
+          <i class="icon-angle-down ">
+          </i>
+         </span>
+        </a>
+        <div class="dd-nav">
+         <a href="http://www.alhayat.com/طاقة">
+          طاقة
+         </a>
+         <a href="http://www.alhayat.com/شركات">
+          شركات
+         </a>
+         <a href="http://www.alhayat.com/أسواق">
+          أسواق
+         </a>
+         <a href="http://www.alhayat.com/استثمار">
+          استثمار
+         </a>
+         <a href="http://www.alhayat.com/الصناعة">
+          الصناعة
+         </a>
+        </div>
+       </li>
+       <li class="has-sub ">
+        <a href="http://www.alhayat.com/ثقافة-و-مجتمع">
+         <span>
+          ثقافة و مجتمع
+          <i class="icon-angle-down ">
+          </i>
+         </span>
+        </a>
+        <div class="dd-nav">
+         <a href="http://www.alhayat.com/منوعات">
+          منوعات
+         </a>
+         <a href="http://www.alhayat.com/تلفزيون">
+          تلفزيون
+         </a>
+         <a href="http://www.alhayat.com/علوم-وتكنولوجيا">
+          علوم وتكنولوجيا
+         </a>
+         <a href="http://www.alhayat.com/شباب">
+          شباب
+         </a>
+         <a href="http://www.alhayat.com/آداب-وفنون">
+          آداب وفنون
+         </a>
+         <a href="http://www.alhayat.com/آفاق">
+          آفاق
+         </a>
+         <a href="http://www.alhayat.com/ازياء">
+          ازياء
+         </a>
+         <a href="http://www.alhayat.com/بيئة">
+          بيئة
+         </a>
+         <a href="http://www.alhayat.com/اعلام">
+          اعلام
+         </a>
+         <a href="http://www.alhayat.com/سينما">
+          سينما
+         </a>
+         <a href="http://www.alhayat.com/صحة-وتغذية">
+          صحة وتغذية
+         </a>
+         <a href="http://www.alhayat.com/مجتمع">
+          مجتمع
+         </a>
+         <a href="http://www.alhayat.com/تراث">
+          تراث
+         </a>
+         <a href="http://www.alhayat.com/سيارات">
+          سيارات
+         </a>
+        </div>
+       </li>
+       <li class="has-sub ">
+        <a href="http://www.alhayat.com/رأي">
+         <span>
+          رأي
+          <i class="icon-angle-down ">
+          </i>
+         </span>
+        </a>
+        <div class="dd-nav">
+         <a href="http://www.alhayat.com/رأي-سياسي">
+          سياسي
+         </a>
+         <a href="http://www.alhayat.com/رأي-سعودي">
+          سعودي
+         </a>
+         <a href="http://www.alhayat.com/رأي-ثقافي">
+          ثقافي
+         </a>
+         <a href="http://www.alhayat.com/رأي-رياضي">
+          رياضي
+         </a>
+         <a href="http://www.alhayat.com/رأي-إقتصادي">
+          اقتصادي
+         </a>
+         <a href="http://www.alhayat.com/رأي-بريد-القراء">
+          بريد القراء
+         </a>
+         <a href="http://www.alhayat.com/رأي-الصحافة-العالمية">
+          الصحافة العالمية
+         </a>
+         <a href="http://www.alhayat.com/رأي-تيارات">
+          تيارات
+         </a>
+         <a href="http://www.alhayat.com/كاريكاتير-">
+          كاريكاتير
+         </a>
+        </div>
+       </li>
+       <li class="">
+        <a href="http://www.alhayat.com/تحقيق">
+         <span>
+          تحقيق
+          <i class="icon-angle-down hidden">
+          </i>
+         </span>
+        </a>
+        <div class="dd-nav">
+        </div>
+       </li>
+       <li class="hidden-xs dropdown " style="float:left;margin-top:3px;">
+        <a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lgSearchBtn">
+         <img alt="logo" height="29" src="images/pdfIcon.png" width="29"/>
+        </a>
+        <div aria-labelledby="lgSearchBtn" class="dropdown-menu search-field" style="right:-110px;padding:0 3px;">
+         <div class="input-group">
+          <h5>
+           <a href="http://alhayatweb.com/services/pdf/free/" style="cursor:pointer;" target="_blank">
+            الطبعة الدولية
+           </a>
+          </h5>
+          <h5>
+           <a href="http://alhayatweb.com/services/pdf/ksa/" style="cursor:pointer;" target="_blank">
+            الطبعة السعودية
+           </a>
+          </h5>
+         </div>
+        </div>
+       </li>
+       <li class="hidden-xs dropdown" id="lgSearch">
+        <a aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" id="lgSearchBtn2">
+         <i class="icon-search">
+         </i>
+        </a>
+        <div aria-labelledby="lgSearchBtn2" class="dropdown-menu search-field">
+         <div class="input-group">
+          <input class="form-control query" placeholder="ابحث" type="text"/>
+          <span class="input-group-btn">
+           <input class="btn btn-default submitSearch" type="button" value="بحث"/>
+          </span>
+          <span class="input-group-btn searchBtn" data-target="#advSearch" data-toggle="modal" onclick="advancedSearch();" style="color:#000;cursor:pointer;font-size:12px;" tabindex="1">
+           بحث متقدم
+          </span>
+         </div>
+        </div>
+       </li>
+       <li class="social-editions">
+        <div class="container">
+         <!--cookie :  -->
+         <div class="hayat-editions dropdown text-right">
+          <a onclick="getCountry(0);" style="cursor:pointer;color:#b91625 ">
+           النسخة الدولية
+          </a>
+          <a onclick="getCountry(13);" style="cursor:pointer;color:#333">
+           النسخة السعودية
+          </a>
+         </div>
+         <div class="hayat-social">
+          <!--<a href="javascript://" title="editions"><i class="icon-newspaper-o"></i></a>-->
+          <a href="https://twitter.com/alhayatdaily" target="_blank" title="twitter">
+           <i class="icon-twitter">
+           </i>
+          </a>
+          <a href="https://www.facebook.com/alhayatdaily/" target="_blank" title="facebook">
+           <i class="icon-facebook">
+           </i>
+          </a>
+         </div>
+         <div class="date-weather hidden-xs">
+          <span>
+           25 أبريل 2019								10:47
+          </span>
+          |
+          <span class="dir-ltr">
+           <i class="icon-sunny">
+           </i>
+           <i id="weather">
+           </i>
+          </span>
+         </div>
+        </div>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </nav>
+   <!-- END header.phtml-->
+   <nav class="cat-nav dropdown">
+    <div class="container">
+     <nav id="catNavs" style="float: left;">
+      <span class="visible-xs pull-left">
+       أقسام
+       <i class="icon-angle-down">
+       </i>
+      </span>
+     </nav>
+     <a class="menuTitle" href="http://www.alhayat.com/سياسة">
+      سياسة
+     </a>
+     <a class="visible-xs sub-cat-title right">
+      العرب
+     </a>
+     <ul aria-labelledby="catNav" class="dropdown-menu">
+      <li>
+       <a class="" href="http://www.alhayat.com/العالم">
+        العالم
+       </a>
+      </li>
+      <li>
+       <a class="active" href="http://www.alhayat.com/العرب">
+        العرب
+       </a>
+      </li>
+      <li>
+       <a class="" href="http://www.alhayat.com/الخليج">
+        الخليج
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+  </header>
+  <section>
+   <div class="container">
+    <nav id="nav">
+     <div class="adv1">
+     </div>
+     <div class="adv2">
+     </div>
+    </nav>
+    <div class="clear">
+    </div>
+    <input id="cmsArticleId" type="hidden" value="4610993"/>
+    <div class="row">
+     <div class="col-md-12 noPadding col-xs-12">
+      <!--big-->
+      <div class="fullAd">
+       <div class="ad leaderboard text-center">
+        <div id="Leaderboard">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="row">
+     <div class="col-md-12 noPadding col-xs-12">
+      <!--breaking-news.tpl.php-->
+      <div class="head-BrNews">
+       <div class="breaking-news">
+        <span class="bgLine">
+        </span>
+        <div class="clearfix">
+         <div class="title">
+          آخر خبر
+         </div>
+         <div class="bn-headlines">
+          <div class="ticker" id="ticker-roll">
+           <ul>
+            <li>
+             <a href="http://www.alhayat.com/article/4628165/السعودية-محليات/نور-يتجاوز-حاجز-ال400-ألف-طلب-في-الثانية">
+              "نور" يتجاوز حاجز الـ400 ألف طلب في الثانية
+             </a>
+            </li>
+            <li>
+             <a href="http://www.alhayat.com/article/4628167/سياسة/العرب/الحريري-السعودية-لم-تميز-بمساعداتها-بين-الحليف-ومن-لا-يحبها-الربيعة-إعادة-الإعمار-في-سورية-تحتاج-أمنا-واستقرارا">
+              الحريري: السعودية لم تميز بمساعداتها بين الحليف ومن لا يحبها الربيعة: إعادة الإعمار في سورية تحتاج أمنا واستقرارا
+             </a>
+            </li>
+            <li>
+             <a href="http://www.alhayat.com/article/4628147/سياسة/العالم/اسكتلندا-تعتزم-تنظيم-استفتاء-ثان-على-استقلالها">
+              اسكتلندا تعتزم تنظيم استفتاء ثانٍ على استقلالها
+             </a>
+            </li>
+            <li>
+             <a href="http://www.alhayat.com/article/4628170/سياسة/العالم/إيران-واثقة-من-صمودها-بعد-تصفير-صادراتها-النفطية">
+              إيران واثقة من «صمودها» بعد «تصفير» صادراتها النفطية
+             </a>
+            </li>
+            <li>
+             <a href="http://www.alhayat.com/article/4628173/اقتصاد/الهيئات-الاقتصادية-في-لبنان-تحذر-سياسة-تسجيل-النقاط-والمزايدات-سترفع-من-المخاطر">
+              الهيئات الاقتصادية في لبنان تحذر: سياسة تسجيل النقاط والمزايدات سترفع من المخاطر
+             </a>
+            </li>
+           </ul>
+          </div>
+          <!--/#ticker -->
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="row">
+     <div class="col-md-9 col-xs-12">
+      <!--CMS: 4610993-->
+      <!--NP: 40225-->
+      <!--ISOLD: 0-->
+      <!--OLD: 0-->
+      <article>
+       <header class="clearfix">
+        <h2>
+        </h2>
+        <h1>
+         الإعدام لـ  8 عناصر من «داعش سيناء»
+        </h1>
+       </header>
+       <div class="row article-content">
+        <div class="col-sm-12">
+         <a class="fancybox" data-fancybox-group="gallery" href="http://www.alhayat.com/uploads/images/2018/11/07/43937.jpg" title="محكمة مصرية. (ارشيفية)">
+          <figure class="article-main-img">
+           <img data-img="http://www.alhayat.com/uploads/images/2018/11/07/43937.jpg" src="http://www.alhayat.com/uploads/images/2018/11/07/43937.jpg" title="محكمة مصرية. (ارشيفية)"/>
+           <figcaption>
+            محكمة مصرية. (ارشيفية)
+           </figcaption>
+          </figure>
+         </a>
+         <div style="max-width: 730px;margin: 0 auto;">
+         </div>
+         <div class="meta">
+          <span>
+           القاهرة – «الحياة»
+          </span>
+          |
+          <time>
+           منذ
+							8 نوفمبر 2018 / 06:00													- اخر تحديث في
+							7 نوفمبر 2018 / 22:11
+          </time>
+         </div>
+         <div class="article-centered-box article-txt">
+          <p>
+           قضت محكمة عسكرية مصرية أمس، بالإعدام في حق 8 متهمين (هاربين) والسجن المؤبد (25 سنة) في حق 32 آخرين من عناصر تنظيم «داعش» في سيناء، في القضية المعروفة بـ «ولاية سيناء» بعدما دينوا في استهداف مكامن للقوات المسلحة، وقتل 14 عسكرياً. ويحق للمتهمين الطعن بالحكم أمام النيابة العسكرية أو المحكمة العليا للطعون العسكرية خلال 60 يوماً من إعلان الحكم المصادق عليه، علماً أنه لا يقبل طعن المتهمين المحكومين غيابياً ما لم يسلموا أنفسهم لتنفيذ الحكم قبل نظر الطعن.
+           <br/>
+           <div class="hidden visible-xs visible-sm" style="width:300px;margin:0 auto;">
+            <div id="MPU">
+            </div>
+           </div>
+           <br/>
+           وتضمن الحكم أمس السجن المشدد 15 سنة في حق متهمين آخرين في القضية، كما برأت المحكمة متهمين من التهم المنسوبة إليهم. وواجه المتهمون في القضية ارتكاب جرائم «التعدي على أهداف عسكرية من مكامن وأفراد ومعدات للقوات المسلحة ما أسفر عن مقتل 14 عسكرياً والشروع في قتل 16 آخرين، واستخدامهم أسلحة نارية وقذائف ومتفجرات.
+           <!--mobileAd-->
+           <br/>
+           <br/>
+           في غضون ذلك، استمعت محكمة جنايات القاهرة أمس، إلى شهادة رئيس مكتب استخبارات حرس الحدود في شمال سيناء إبان ثورة كانون الثاني (يناير) 2011، في إعادة محاكمة الرئيس المعزول محمد مرسي وعدد من قيادات جماعة «الإخوان المسلمين» (المصنفة إرهابية)، في قضية «اقتحام السجون، في وقت أوضح المسؤول العسكري اختراق حركة «حماس» الفلسطينية مصر إبان الثورة عبر الأنفاق.
+           <br/>
+           <br/>
+           وأضاف الشاهد وفق وسائل إعلام محلية أنه في يوم 28 كانون الثاني 2011، توافرت معلومات حول اقتحام قسم شرطة الشيخ زويد، إذ تلقينا استغاثة من داخل القسم، لافتاً إلى سيطرة عناصر تابعة للجهاز كانت متواجدة بالقرب من القسم على العناصر البدوية، وتابع: «أبلغنا بأن هناك عناصر أخرى تابعة لحركة حماس، عناصر بأكملها مسلحة تسللت من قطاع غزة».
+           <br/>
+           <br/>
+           كما تطرق الشاهد إلى عملية اختطاف 3 من ضباط الشرطة في شمال سيناء في شباط (فبراير) من العام نفسه، حيث طالب الخاطفون استبدالهم بشقيق زعيم تنظيم «القاعدة» محمد الظواهري وآخرين.
+           <br/>
+           <br/>
+           وكانت محكمة النقض ألغت أحكاماً بالإعدام والسجن المؤبد في حق المتهمين العام الماضي، وقررت إعادة محاكمتهم من جديد في القضية.
+           <br/>
+           <br/>
+           إلى ذلك، أودعت المحكمة العسكرية للجنايات أول من أمس حيثيات حكمها الصادر في 27 كانون الأول (ديسمبر) الماضي، والذي قضى بإعدام الإرهابي هشام عشماوي و10 آخرين، والسجن المؤبد لـ9 متهمين في القضية المعروفة بـ «أنصار بيت المقدس 3»، وتضمنت قيام عشماوي، المكني «أبو مهند»، و8 آخرين بتولي قيادة إحدى المستويات العليا في الهيكل التنظيمي بقيادة جماعة أسست على خلاف أحكام القانون الغرض منها الدعوة إلى أحكام الدستور والقوانين ومنع السلطات العامة من ممارسة أعمالها، والاعتداء على الحرية الشخصية للمواطنين، والإضرار بالوحدة الوطنية والسلام الاجتماعي بالقيام بأعمال من شأنها إحداث اضطراب وتغيير في نظام المجتمع بأن قاموا بتسيير أعمال الجماعة الإرهابية «أنصار بيت المقدس».
+           <div class="clear">
+           </div>
+           <br>
+            <div class="pagingWrap" style="display:none;">
+             <a class="button grey prevBtn" href="http://www.alhayat.com/article/4610993/سياسة?page=0" style="display:none;">
+              &lt; Previous Page
+             </a>
+             <a class="button grey nextBtn" href="http://www.alhayat.com/article/4610993/سياسة?page=2" style="display:none;">
+              Next Page &gt;
+             </a>
+            </div>
+           </br>
+          </p>
+         </div>
+         <div class="article-centered-box">
+          <footer>
+           <div>
+            <span class="shareIcons hidden-xs right">
+             شارك المقال
+            </span>
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="right">
+             <div class="addthis_inline_share_toolbox right">
+             </div>
+            </div>
+            <div class="clear">
+            </div>
+           </div>
+          </footer>
+         </div>
+        </div>
+       </div>
+      </article>
+      <!--related-articles-->
+      <div id="related">
+       <div class="small-title">
+        <a>
+         ذات علاقة
+        </a>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="relatedItem" href="http://www.alhayat.com/article/4610359/سياسة/العرب/7-عناصر-من-داعش-الإسكندرية-تلقوا-تدريبات-في-الخارج">
+          <div class="img small">
+           <span class="ratio4-3">
+            <img src="http://www.alhayat.com/uploads/images/2018/11/03/43185.jpg"/>
+           </span>
+          </div>
+          7 عناصر من «داعش الإسكندرية» تلقوا تدريبات في الخارج
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="relatedItem" href="http://www.alhayat.com/article/4610340/سياسة/العرب/واشنطن-تناقض-قسد-لم-نضاعف-دورياتنا-في-عين-العرب">
+          <div class="img small">
+           <span class="ratio4-3">
+            <img src="http://www.alhayat.com/uploads/images/2018/11/03/43149.jpg"/>
+           </span>
+          </div>
+          واشنطن تناقض «قسد»: لم نضاعف دورياتنا في عين العرب
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="relatedItem" href="http://www.alhayat.com/article/4610158/سياسة/الخليج/تحصينات-للجيش-العراقي-و-الحشد-لصد-داعش-على-الحدود-مع-سورية">
+          <div class="img small">
+           <span class="ratio4-3">
+            <img src="http://www.alhayat.com/uploads/images/2018/11/02/42932.jpg"/>
+           </span>
+          </div>
+          تحصينات للجيش العراقي و «الحشد» لصد «داعش» على الحدود مع سورية
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="relatedItem" href="http://www.alhayat.com/article/4609883/سياسة/العرب/اغتيالات-داعش-تطاولمزيدا-من-عناصر-قسد">
+          <div class="img small">
+           <span class="ratio4-3">
+            <img src="http://www.alhayat.com/uploads/images/2018/10/31/42653.jpg"/>
+           </span>
+          </div>
+          اغتيالات «داعش» تطاولمزيداً من عناصر «قسد»
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="relatedItem" href="http://www.alhayat.com/article/4609918/سياسة/العرب/المؤبد-لمدانين-بالعنف-جنوب-القاهرة">
+          <div class="img small">
+           <span class="ratio4-3">
+            <img src="http://www.alhayat.com/uploads/images/2018/10/31/42699.jpg"/>
+           </span>
+          </div>
+          المؤبد لمدانين بالعنف جنوب القاهرة
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="relatedItem" href="http://www.alhayat.com/article/4609938/سياسة/العالم/سجن-متشدد-جزائري-إرلندي-خطط-لهجمات-في-أوروبا">
+          <div class="img small">
+           <span class="ratio4-3">
+            <img src="http://www.alhayat.com/uploads/images/2018/10/31/42722.jpeg"/>
+           </span>
+          </div>
+          سجن متشدد جزائري إرلندي خطط لهجمات في أوروبا
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="col-md-3 col-xs-12">
+      <!--share-article.tpl.php-->
+      <!--<div class="share-article pull-left visible-lg shareArticle">
+	<span class="hidden-xs">شارك المقال</span>
+	<a href="" class="facebook-share"><i class="icon-facebook"></i></a>
+	<a href="" class="twitter-share"><i class="icon-twitter"></i></a>
+	<a href="" class="gplus-share"><i class="icon-google-plus"></i></a>
+	<a href="" class="email-share"><i class="icon-mail"></i></a>
+</div>
+<div class="clear"></div>-->
+      <div>
+       <span class="shareIcons hidden-xs right">
+        شارك المقال
+       </span>
+       <!-- Go to www.addthis.com/dashboard to customize your tools -->
+       <div class="right">
+        <div class="addthis_inline_share_toolbox right">
+        </div>
+       </div>
+       <div class="clear">
+       </div>
+      </div>
+      <!--recent-news-most-read.tpl.php-->
+      <div class="row recentNewsMostRead " style="margin-top:0;">
+       <div class="col-sm-12">
+        <div class="most-read" style="min-height: auto;">
+         <div class="most-read-title">
+          الأكثر قراءة في
+          <span class="red">
+           سياسة
+          </span>
+         </div>
+         <!-- Nav tabs -->
+         <ul class="nav nav-tabs" data-sectionid="2" data-subsectionid="2" data-type="most_read" data-widgetid="29" role="tablist">
+          <li class="timeSpan active" role="presentation">
+           <a data-timespan="daily">
+            اليوم
+           </a>
+          </li>
+          <li class="timeSpan" role="presentation">
+           <a data-timespan="weekly">
+            هذا الاسبوع
+           </a>
+          </li>
+          <li class="timeSpan" role="presentation">
+           <a data-timespan="monthly">
+            هذا الشهر
+           </a>
+          </li>
+         </ul>
+         <!--tab-article-list.tpl.php-->
+         <div class="tab-content" id="tab-29">
+          <!-- tab-article-list.tpl.php -->
+          <div class="tab-pane active" role="tabpanel">
+           <div>
+            <h5>
+             <a href="http://www.alhayat.com/article/4628167/سياسة/العرب/الحريري-السعودية-لم-تميز-بمساعداتها-بين-الحليف-ومن-لا-يحبها-الربيعة-إعادة-الإعمار-في-سورية-تحتاج-أمنا-واستقرارا" title="الحريري: السعودية لم تميز بمساعداتها بين الحليف ومن لا يحبها الربيعة: إعادة الإعمار في سورية تحتاج أمنا واستقرارا">
+              الحريري: السعودية لم تميز بمساعداتها بين الحليف ومن لا يحبها…
+             </a>
+            </h5>
+           </div>
+           <div>
+            <h5>
+             <a href="http://www.alhayat.com/article/4628160/سياسة/العرب/وزير-الدفاع-اللبناني-يجول-وقائد-الجيش-جنوبا-ويربط-البحث-في-إستراتيجيا-الدفاع-بزوال-أخطار-إسرائيل" title="وزير الدفاع اللبناني يجول وقائد الجيش جنوبا ويربط البحث في إستراتيجيا الدفاع بزوال أخطار إسرائيل">
+              وزير الدفاع اللبناني يجول وقائد الجيش جنوبا ويربط البحث في…
+             </a>
+            </h5>
+           </div>
+           <div>
+            <h5>
+             <a href="http://www.alhayat.com/article/4628110/سياسة/العرب/مقتل-16-شخصا-بتفجيرين-في-جسر-الشغور-ودمشق" title="مقتل 16 شخصاً بتفجيرين في جسر الشغور ودمشق">
+              مقتل 16 شخصاً بتفجيرين في جسر الشغور ودمشق
+             </a>
+            </h5>
+           </div>
+           <div>
+            <h5>
+             <a href="http://www.alhayat.com/article/4628161/سياسة/العرب/الرئيس-العراقي-يؤكد-المضي-نحو-الشراكة-الاستراتيجية-مع-مجلس-التعاون" title="الرئيس العراقي يؤكد المضي نحو الشراكة الاستراتيجية مع مجلس التعاون">
+              الرئيس العراقي يؤكد المضي نحو الشراكة الاستراتيجية مع مجلس التعاون
+             </a>
+            </h5>
+           </div>
+           <div>
+            <h5>
+             <a :="" href="http://www.alhayat.com/article/4628159/سياسة/العرب/فرنجية-من-بيت-الكتائب-للقيام-بقراءة-مالية-جديدة-الجميل-مقبلون-على-مشاكل-كبيرة-ومستعدون-للتعاون" title="فرنجية من بيت " الجميل:="" الكتائب"="" بقراءة="" جديدة="" على="" كبيرة="" للتعاون"="" للقيام="" مالية="" مشاكل="" مقبلون="" ومستعدون="">
+              فرنجية من بيت "الكتائب" : للقيام بقراءة مالية جديدة الجميل: مقبلون…
+             </a>
+            </h5>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!--square-ad.tpl.php-->
+      <div class="row square-ads verticalArticles">
+       <div class="col-sm-12" style="padding: 0;">
+        <div id="MPU">
+        </div>
+       </div>
+      </div>
+      <!--vertical-articles.tpl.php-->
+      <div class="verticalArticles">
+       <div class="small-title">
+        المزيد  من سياسة
+       </div>
+       <div class="bloc">
+        <div class="img ">
+         <a class="ratio4-3" href="http://www.alhayat.com/article/4628167/سياسة/العرب/الحريري-السعودية-لم-تميز-بمساعداتها-بين-الحليف-ومن-لا-يحبها-الربيعة-إعادة-الإعمار-في-سورية-تحتاج-أمنا-واستقرارا">
+          <img src="http://www.alhayat.com/uploads/images/2019/04/24/63288.JPG"/>
+         </a>
+        </div>
+        <div class="bloc-details">
+         <h3 class="lines-2">
+          <a href="http://www.alhayat.com/article/4628167/سياسة/العرب/الحريري-السعودية-لم-تميز-بمساعداتها-بين-الحليف-ومن-لا-يحبها-الربيعة-إعادة-الإعمار-في-سورية-تحتاج-أمنا-واستقرارا" title="الحريري: السعودية لم تميز بمساعداتها بين الحليف ومن لا يحبها الربيعة: إعادة الإعمار في سورية تحتاج أمنا واستقرارا">
+           الحريري: السعودية لم تميز بمساعداتها بين الحليف ومن لا يحبها الربيعة: إعادة الإعمار في سورية تحتاج أمنا واستقرارا
+          </a>
+         </h3>
+         <div class="meta">
+          منذ
+          <time>
+           9 ساعات
+          </time>
+          في
+          <a class="meta-section" href="http://www.alhayat.com/morearticles/سياسة">
+           سياسة
+          </a>
+          .
+          <a class="meta-subsection" href="http://www.alhayat.com/morearticles/سياسة/العرب">
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="bloc">
+        <div class="img ">
+         <a class="ratio4-3" href="http://www.alhayat.com/article/4628147/سياسة/العالم/اسكتلندا-تعتزم-تنظيم-استفتاء-ثان-على-استقلالها">
+          <img src="http://www.alhayat.com/uploads/images/2019/04/24/63266.jpg"/>
+         </a>
+        </div>
+        <div class="bloc-details">
+         <h3 class="lines-2">
+          <a href="http://www.alhayat.com/article/4628147/سياسة/العالم/اسكتلندا-تعتزم-تنظيم-استفتاء-ثان-على-استقلالها" title="اسكتلندا تعتزم تنظيم استفتاء ثانٍ على استقلالها">
+           اسكتلندا تعتزم تنظيم استفتاء ثانٍ على استقلالها
+          </a>
+         </h3>
+         <div class="meta">
+          منذ
+          <time>
+           10 ساعات
+          </time>
+          في
+          <a class="meta-section" href="http://www.alhayat.com/morearticles/سياسة">
+           سياسة
+          </a>
+          .
+          <a class="meta-subsection" href="http://www.alhayat.com/morearticles/سياسة/العالم">
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="bloc">
+        <div class="img ">
+         <a class="ratio4-3" href="http://www.alhayat.com/article/4628170/سياسة/العالم/إيران-واثقة-من-صمودها-بعد-تصفير-صادراتها-النفطية">
+          <img src="http://www.alhayat.com/uploads/images/2019/04/24/63291.jpg"/>
+         </a>
+        </div>
+        <div class="bloc-details">
+         <h3 class="lines-2">
+          <a href="http://www.alhayat.com/article/4628170/سياسة/العالم/إيران-واثقة-من-صمودها-بعد-تصفير-صادراتها-النفطية" title="إيران واثقة من «صمودها» بعد «تصفير» صادراتها النفطية">
+           إيران واثقة من «صمودها» بعد «تصفير» صادراتها النفطية
+          </a>
+         </h3>
+         <div class="meta">
+          منذ
+          <time>
+           10 ساعات
+          </time>
+          في
+          <a class="meta-section" href="http://www.alhayat.com/morearticles/سياسة">
+           سياسة
+          </a>
+          .
+          <a class="meta-subsection" href="http://www.alhayat.com/morearticles/سياسة/العالم">
+           العالم
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!--related-section-articles.tpl.php-->
+     </div>
+    </div>
+    <div class="row">
+     <div class="col-md-12 noPadding col-xs-12">
+      <!--four-articles.tpl.php-->
+      <div class="more-news">
+       <div class="small-title">
+        المزيد  من العرب
+       </div>
+       <div class="row">
+        <div class="col-sm-3">
+         <div class="bloc">
+          <div class="img ">
+           <a class="ratio4-3" href="http://www.alhayat.com/article/4628167/سياسة/العرب/الحريري-السعودية-لم-تميز-بمساعداتها-بين-الحليف-ومن-لا-يحبها-الربيعة-إعادة-الإعمار-في-سورية-تحتاج-أمنا-واستقرارا">
+            <img src="http://www.alhayat.com/uploads/images/2019/04/24/63288.JPG"/>
+           </a>
+          </div>
+          <div class="bloc-details">
+           <h3 class="lines-2">
+            <a href="http://www.alhayat.com/article/4628167/سياسة/العرب/الحريري-السعودية-لم-تميز-بمساعداتها-بين-الحليف-ومن-لا-يحبها-الربيعة-إعادة-الإعمار-في-سورية-تحتاج-أمنا-واستقرارا" title="الحريري: السعودية لم تميز بمساعداتها بين الحليف ومن لا يحبها الربيعة: إعادة الإعمار في سورية تحتاج أمنا واستقرارا">
+             الحريري: السعودية لم تميز بمساعداتها بين الحليف ومن لا يحبها الربيعة: إعادة الإعمار في سورية تحتاج أمنا واستقرارا
+            </a>
+           </h3>
+          </div>
+         </div>
+        </div>
+        <div class="col-sm-3">
+         <div class="bloc">
+          <div class="img ">
+           <a class="ratio4-3" href="http://www.alhayat.com/article/4628146/سياسة/العرب/الحريري-السعودية-حريصة-على-دعم-لبنان-بكل-طوائفه">
+            <img src="http://www.alhayat.com/uploads/images/2019/04/24/63264.jpeg"/>
+           </a>
+          </div>
+          <div class="bloc-details">
+           <h3 class="lines-2">
+            <a href="http://www.alhayat.com/article/4628146/سياسة/العرب/الحريري-السعودية-حريصة-على-دعم-لبنان-بكل-طوائفه" title="الحريري: السعودية حريصة على دعم لبنان بكل طوائفه">
+             الحريري: السعودية حريصة على دعم لبنان بكل طوائفه
+            </a>
+           </h3>
+          </div>
+         </div>
+        </div>
+        <div class="col-sm-3">
+         <div class="bloc">
+          <div class="img ">
+           <a class="ratio4-3" href="http://www.alhayat.com/article/4628161/سياسة/العرب/الرئيس-العراقي-يؤكد-المضي-نحو-الشراكة-الاستراتيجية-مع-مجلس-التعاون">
+            <img src="http://www.alhayat.com/uploads/images/2019/04/24/63284.jpg"/>
+           </a>
+          </div>
+          <div class="bloc-details">
+           <h3 class="lines-2">
+            <a href="http://www.alhayat.com/article/4628161/سياسة/العرب/الرئيس-العراقي-يؤكد-المضي-نحو-الشراكة-الاستراتيجية-مع-مجلس-التعاون" title="الرئيس العراقي يؤكد المضي نحو الشراكة الاستراتيجية مع مجلس التعاون">
+             الرئيس العراقي يؤكد المضي نحو الشراكة الاستراتيجية مع مجلس التعاون
+            </a>
+           </h3>
+          </div>
+         </div>
+        </div>
+        <div class="col-sm-3">
+         <div class="bloc">
+          <div class="img ">
+           <a class="ratio4-3" href="http://www.alhayat.com/article/4628160/سياسة/العرب/وزير-الدفاع-اللبناني-يجول-وقائد-الجيش-جنوبا-ويربط-البحث-في-إستراتيجيا-الدفاع-بزوال-أخطار-إسرائيل">
+            <img src="http://www.alhayat.com/uploads/images/2019/04/24/63283.JPG"/>
+           </a>
+          </div>
+          <div class="bloc-details">
+           <h3 class="lines-2">
+            <a href="http://www.alhayat.com/article/4628160/سياسة/العرب/وزير-الدفاع-اللبناني-يجول-وقائد-الجيش-جنوبا-ويربط-البحث-في-إستراتيجيا-الدفاع-بزوال-أخطار-إسرائيل" title="وزير الدفاع اللبناني يجول وقائد الجيش جنوبا ويربط البحث في إستراتيجيا الدفاع بزوال أخطار إسرائيل">
+             وزير الدفاع اللبناني يجول وقائد الجيش جنوبا ويربط البحث في إستراتيجيا الدفاع بزوال أخطار إسرائيل
+            </a>
+           </h3>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="row">
+     <div class="col-md-12 noPadding col-xs-12">
+      <!--four-articles-with-grey-->
+      <div class="more-news gray fourArticleWithGray">
+       <div class="absoluteFourArticleGrey">
+        <line>
+        </line>
+       </div>
+       <div class="col-sm-12">
+        <div class="small-title">
+         آخر الأخبار
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-sm-3">
+         <div class="bloc">
+          <div class="img ">
+           <a class="ratio4-3" href="http://www.alhayat.com/article/4628165/السعودية-محليات/نور-يتجاوز-حاجز-ال400-ألف-طلب-في-الثانية">
+            <img src="http://www.alhayat.com/uploads/images/2019/04/24/63280.jpg"/>
+           </a>
+          </div>
+          <div class="bloc-details">
+           <h3 class="lines-3-without-height">
+            <a href="http://www.alhayat.com/" title="الرياض - " الحياة""="">
+             الرياض - "الحياة"
+            </a>
+           </h3>
+           <h3 class="lines-2">
+            <a href="http://www.alhayat.com/article/4628165/السعودية-محليات/نور-يتجاوز-حاجز-ال400-ألف-طلب-في-الثانية" title="" ألف="" الثانية"="" الـ400="" حاجز="" طلب="" في="" نور"="" يتجاوز="">
+             "نور" يتجاوز حاجز الـ400 ألف طلب في الثانية
+            </a>
+           </h3>
+           <div class="meta">
+            منذ
+            <time>
+             7 ساعات
+            </time>
+            في
+            <a class="meta-section" href="http://www.alhayat.com/morearticles/السعودية-محليات">
+             السعودية محليات
+            </a>
+            .
+            <a class="meta-subsection" href="http://www.alhayat.com/morearticles/السعودية-محليات">
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="col-sm-3">
+         <div class="bloc">
+          <div class="img ">
+           <a class="ratio4-3" href="http://www.alhayat.com/article/4628167/سياسة/العرب/الحريري-السعودية-لم-تميز-بمساعداتها-بين-الحليف-ومن-لا-يحبها-الربيعة-إعادة-الإعمار-في-سورية-تحتاج-أمنا-واستقرارا">
+            <img src="http://www.alhayat.com/uploads/images/2019/04/24/63288.JPG"/>
+           </a>
+          </div>
+          <div class="bloc-details">
+           <h3 class="lines-3-without-height">
+            <a href="http://www.alhayat.com/" title="بيروت - " الحياة""="">
+             بيروت - "الحياة"
+            </a>
+           </h3>
+           <h3 class="lines-2">
+            <a href="http://www.alhayat.com/article/4628167/سياسة/العرب/الحريري-السعودية-لم-تميز-بمساعداتها-بين-الحليف-ومن-لا-يحبها-الربيعة-إعادة-الإعمار-في-سورية-تحتاج-أمنا-واستقرارا" title="الحريري: السعودية لم تميز بمساعداتها بين الحليف ومن لا يحبها الربيعة: إعادة الإعمار في سورية تحتاج أمنا واستقرارا">
+             الحريري: السعودية لم تميز بمساعداتها بين الحليف ومن لا يحبها الربيعة: إعادة الإعمار في سورية تحتاج أمنا واستقرارا
+            </a>
+           </h3>
+           <div class="meta">
+            منذ
+            <time>
+             9 ساعات
+            </time>
+            في
+            <a class="meta-section" href="http://www.alhayat.com/morearticles/سياسة">
+             سياسة
+            </a>
+            .
+            <a class="meta-subsection" href="http://www.alhayat.com/morearticles/سياسة/العرب">
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="col-sm-3">
+         <div class="bloc">
+          <div class="img ">
+           <a class="ratio4-3" href="http://www.alhayat.com/article/4628147/سياسة/العالم/اسكتلندا-تعتزم-تنظيم-استفتاء-ثان-على-استقلالها">
+            <img src="http://www.alhayat.com/uploads/images/2019/04/24/63266.jpg"/>
+           </a>
+          </div>
+          <div class="bloc-details">
+           <h3 class="lines-3-without-height">
+            <a href="http://www.alhayat.com/" title="لندن - أ ف ب، رويترز">
+             لندن - أ ف ب، رويترز
+            </a>
+           </h3>
+           <h3 class="lines-2">
+            <a href="http://www.alhayat.com/article/4628147/سياسة/العالم/اسكتلندا-تعتزم-تنظيم-استفتاء-ثان-على-استقلالها" title="اسكتلندا تعتزم تنظيم استفتاء ثانٍ على استقلالها">
+             اسكتلندا تعتزم تنظيم استفتاء ثانٍ على استقلالها
+            </a>
+           </h3>
+           <div class="meta">
+            منذ
+            <time>
+             10 ساعات
+            </time>
+            في
+            <a class="meta-section" href="http://www.alhayat.com/morearticles/سياسة">
+             سياسة
+            </a>
+            .
+            <a class="meta-subsection" href="http://www.alhayat.com/morearticles/سياسة/العالم">
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="col-sm-3">
+         <div class="bloc">
+          <div class="img ">
+           <a class="ratio4-3" href="http://www.alhayat.com/article/4628170/سياسة/العالم/إيران-واثقة-من-صمودها-بعد-تصفير-صادراتها-النفطية">
+            <img src="http://www.alhayat.com/uploads/images/2019/04/24/63291.jpg"/>
+           </a>
+          </div>
+          <div class="bloc-details">
+           <h3 class="lines-3-without-height">
+            <a href="http://www.alhayat.com/" title="طهران - أ ف ب، رويترز">
+             طهران - أ ف ب، رويترز
+            </a>
+           </h3>
+           <h3 class="lines-2">
+            <a href="http://www.alhayat.com/article/4628170/سياسة/العالم/إيران-واثقة-من-صمودها-بعد-تصفير-صادراتها-النفطية" title="إيران واثقة من «صمودها» بعد «تصفير» صادراتها النفطية">
+             إيران واثقة من «صمودها» بعد «تصفير» صادراتها النفطية
+            </a>
+           </h3>
+           <div class="meta">
+            منذ
+            <time>
+             10 ساعات
+            </time>
+            في
+            <a class="meta-section" href="http://www.alhayat.com/morearticles/سياسة">
+             سياسة
+            </a>
+            .
+            <a class="meta-subsection" href="http://www.alhayat.com/morearticles/سياسة/العالم">
+             العالم
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="clear">
+    </div>
+   </div>
+  </section>
+  <footer class="no-print">
+   <!--footer.pthml-->
+   <div class="footer">
+    <div class="container">
+     <nav>
+      <a href="http://www.alhayat.com/من-نحن">
+       من نحن
+      </a>
+      <a href="http://www.lahamag.com/Global">
+       مجلة لها
+      </a>
+      <a href="http://www.alhayat.com/أعلن-معنا">
+       أعلن معنا
+      </a>
+      <a href="http://alhayat.com/data-center">
+       مركز معلومات دار الحياة
+      </a>
+      <a href="http://www.alhayat.com/اتصل-بنا">
+       اتصل بنا
+      </a>
+      <a onclick="getCountry(0);" style="cursor:pointer;color:#b91625">
+       النسخة الدولية
+      </a>
+      <a onclick="getCountry(13);" style="cursor:pointer;">
+       النسخة السعودية
+      </a>
+     </nav>
+     <p>
+      جميع حقوق الطبع محفوظة لموقع الحياة 2019
+     </p>
+     <div class="newsPress" style="line-height: 30px;">
+      <span>
+       Powered by
+       <a href="http://layoutintl.com" target="_blank">
+        NewsPress
+       </a>
+      </span>
+     </div>
+    </div>
+   </div>
+   <input id="FOOTER_HEIGHT" type="hidden" value="">
+   </input>
+  </footer>
+  <script>
+   /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'lhy-1';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script');
+        s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+  </script>
+  <script>
+   var addthis_config = addthis_config || {};
+    addthis_config.data_track_addressbar = false;
+    addthis_config.data_track_clickback = false;
+  </script>
+  <script src="http://www.alhayat.com/js/bootstrap.min.js">
+  </script>
+  <script src="http://www.alhayat.com/js/alertify.min.js">
+  </script>
+  <script src="http://www.alhayat.com/js/select2.min.js">
+  </script>
+  <script src="http://www.alhayat.com/js/jquery-ui.min.js">
+  </script>
+  <script src="js/jquery.simpleTicker.min.js">
+  </script>
+  <script src="http://www.alhayat.com/js/jquery.datepick-ar.min.js">
+  </script>
+  <script src="http://www.alhayat.com/js/jquery.validationEngine.min.js">
+  </script>
+  <script src="http://www.alhayat.com/js/jquery.validationEngine-en.min.js">
+  </script>
+  <script src="http://www.alhayat.com/js/master.min.js">
+  </script>
+  <script src="http://www.alhayat.com/js/jquery.simpleWeather.min.js">
+  </script>
+  <script src="http://www.alhayat.com/js/focuspoint.min.js">
+  </script>
+  <script src="js/script.min.js">
+  </script>
+  <script src="js/jquery.simpleTicker.min.js" type="text/javascript">
+  </script>
+  <script src="../../js/jquery.fancybox.min.js" type="text/javascript">
+  </script>
+  <script src="../../js/owl.carousel.min.js" type="text/javascript">
+  </script>
+  <script src="../../js/owl.carousel2.thumbs.js" type="text/javascript">
+  </script>
+  <script src="../../js/jquery.cycle2.min.js" type="text/javascript">
+  </script>
+  <script src="../../js/clipboard.min.js" type="text/javascript">
+  </script>
+  <script src="widgets/article-details/article-details.min.js" type="text/javascript">
+  </script>
+  <script src="widgets/recent-news-most-read/recent-news-most-read.min.js" type="text/javascript">
+  </script>
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-590c1ad3809d60a3">
+  </script>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"1042bec495","applicationID":"187021211","transactionName":"M1VaN0BWWkVTB00MDQofeQBGXltYHQVLEQsHXF0nV0NVX14XbgwGA1VM","queueTime":0,"applicationTime":171,"atts":"HxJZQQhMSUs=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>

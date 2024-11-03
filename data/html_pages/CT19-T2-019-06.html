@@ -1,0 +1,2806 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" prefix="og: http://ogp.me/ns#">
+ <head>
+  <script src="/cdn-cgi/apps/head/UB93bGI0DlPa0ptzUL0sNU9AAlY.js">
+  </script>
+  <script type="99c56f9ae426c206f7857b00-text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={xpid:"VwcEUldRGwEIU1BXBwc="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(u){try{i("ierr",[u,c.now(),!0])}catch(d){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),u=t("gos"),f=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(5),t(4),"addEventListener"in window&&t(3),c.xhrWrappable&&t(6),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(u(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(f);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[f,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),u=XMLHttpRequest,f="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(u.prototype)):u.prototype.hasOwnProperty(f)&&(o(window),o(u.prototype)),a.on(f+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],4:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],5:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",u="clearTimeout",f="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[u,"clearImmediate"],u+d),i.on(c+f,r),i.on(s+f,o)},{}],6:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=f.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,f.emit("xhr-resolved",[],t)),d.inPlace(t,x,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):v?v(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(3);var u=t("ee"),f=u.get("xhr"),d=t(18)(f),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",x=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=f;var y=window.XMLHttpRequest=function(t){var n=new p(t);try{f.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}return n};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),f.on("send-xhr-start",function(t,n){r(t,n),i(n)}),f.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else u.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],7:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(13);n.exports={generateTraceHeader:r}},{}],8:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return v(r)}function i(t,n){var e=u(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),u=t(9),f=t(7).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(12),v=t(11),w=window.XMLHttpRequest;s.features.xhr=!0,t(6),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=f();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=v(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof w&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof w&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof w&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],9:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],10:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[u.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),u=t("loader"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){f[n]=o(l+n,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,f.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[u.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[u.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[u.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,u.now(),!1,n])}},{}],11:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],12:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],13:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],14:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(u){l([u,"",[r,a,o],s])}f(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw f(n+"err",[r,a,d],s),d}finally{f(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function u(t,n,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,u?s+o:o,i,s))}function f(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=u,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,u=0;u<c;u++)s[u].apply(a,r);var d=f[g[e]];return d&&d.push([y,e,r,a]),a}}function p(t,n){x[t]=m(t).concat(n)}function h(t,n){var e=x[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return x[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){u(t,function(t,e){n=n||"feature",g[e]=n,n in f||(f[n]=[])})}var x={},g={},y={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return y}function i(){return new r}function a(){(f.api||f.feature)&&(l.aborted=!0,f=l.backlog={})}var s="nr@context",c=t("gos"),u=t(15),f={},d={},l=n.exports=o();l.backlog=f},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return f.abort();u(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),u=t(15),f=t("ee"),d=t(14),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var x=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},y=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:x,features:{},xhrWrappable:y,userAgent:d};t(10),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(17)},{}]},{},["loader",2,8]);
+  </script>
+  <meta charset="utf-8"/>
+  <link href="https://gmpg.org/xfn/11" rel="profile"/>
+  <link href="https://iphoneislam.com/wp-content/themes/remal/style.css?x83298" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://iphoneislam.com/xmlrpc.php" rel="pingback"/>
+  <link href="/superpwa-manifest.json?x83298" rel="manifest"/>
+  <meta content="#D5E0EB" name="theme-color"/>
+  <meta content="https://iphoneislam.com/wp-content/uploads/2018/03/apl17_apple_iphone_x_wireless_charging.jpg" property="og:image">
+   <!--[if lt IE 9]>
+<script src="https://iphoneislam.com/wp-content/themes/remal/js/html5.js?x83298"></script>
+<script src="https://iphoneislam.com/wp-content/themes/remal/js/selectivizr-min.js?x83298"></script>
+<![endif]-->
+   <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" media="all" href="https://iphoneislam.com/wp-content/themes/remal/css/ie8.css?x83298" />
+<![endif]-->
+   <!--[if IE 7]>
+<link rel="stylesheet" type="text/css" media="all" href="https://iphoneislam.com/wp-content/themes/remal/css/ie7.css?x83298" />
+<![endif]-->
+   <title>
+    هل الشحن اللاسلكي خطر على البطارية؟
+   </title>
+   <meta content="توصل أحدث الدراسات والأبحاث إلى أن الشحن اللاسلكي المستخدم في شحن الهواتف ربما يكون خطر على البطارية ويعمل على اتلافها بسرعة كبيرة، تعرف كيف يتم ذلك." name="description"/>
+   <link href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408" rel="canonical">
+    <meta content="ar_AR" property="og:locale"/>
+    <meta content="article" property="og:type"/>
+    <meta content="هل الشحن اللاسلكي خطر على البطارية؟" property="og:title"/>
+    <meta content="توصل أحدث الدراسات والأبحاث إلى أن الشحن اللاسلكي المستخدم في شحن الهواتف ربما يكون خطر على البطارية ويعمل على اتلافها بسرعة كبيرة، تعرف كيف يتم ذلك." property="og:description"/>
+    <meta content="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408" property="og:url"/>
+    <meta content="آي-فون إسلام" property="og:site_name"/>
+    <meta content="https://www.facebook.com/iPhoneIslam" property="article:publisher"/>
+    <meta content="شاحن" property="article:tag"/>
+    <meta content="آبل" property="article:tag"/>
+    <meta content="آي-فون X" property="article:tag"/>
+    <meta content="أبل" property="article:tag"/>
+    <meta content="Qi" property="article:tag"/>
+    <meta content="معلومات" property="article:tag"/>
+    <meta content="ملحقات" property="article:tag"/>
+    <meta content="لاسلكي" property="article:tag"/>
+    <meta content="تحليل و نقاش" property="article:section"/>
+    <meta content="2018-03-18T10:34:22+00:00" property="article:published_time"/>
+    <meta content="https://iphoneislam.com/wp-content/uploads/2018/03/apl17_apple_iphone_x_wireless_charging.jpg" property="og:image"/>
+    <meta content="https://iphoneislam.com/wp-content/uploads/2018/03/apl17_apple_iphone_x_wireless_charging.jpg" property="og:image:secure_url"/>
+    <meta content="700" property="og:image:width"/>
+    <meta content="467" property="og:image:height"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="توصل أحدث الدراسات والأبحاث إلى أن الشحن اللاسلكي المستخدم في شحن الهواتف ربما يكون خطر على البطارية ويعمل على اتلافها بسرعة كبيرة، تعرف كيف يتم ذلك." name="twitter:description"/>
+    <meta content="هل الشحن اللاسلكي خطر على البطارية؟" name="twitter:title"/>
+    <meta content="@iPhoneIslam" name="twitter:site"/>
+    <meta content="https://iphoneislam.com/wp-content/uploads/2018/03/apl17_apple_iphone_x_wireless_charging.jpg" name="twitter:image"/>
+    <meta content="@iPhoneIslam" name="twitter:creator"/>
+    <script class="yoast-schema-graph yoast-schema-graph--main" type="application/ld+json">
+     {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://iphoneislam.com/#website","url":"https://iphoneislam.com/","name":"\u0622\u064a-\u0641\u0648\u0646 \u0625\u0633\u0644\u0627\u0645","publisher":{"@id":"https://iphoneislam.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://iphoneislam.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#webpage","url":"https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408","inLanguage":"ar","name":"\u0647\u0644 \u0627\u0644\u0634\u062d\u0646 \u0627\u0644\u0644\u0627\u0633\u0644\u0643\u064a \u062e\u0637\u0631 \u0639\u0644\u0649 \u0627\u0644\u0628\u0637\u0627\u0631\u064a\u0629\u061f","isPartOf":{"@id":"https://iphoneislam.com/#website"},"image":{"@type":"ImageObject","@id":"https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#primaryimage","url":"https://iphoneislam.com/wp-content/uploads/2018/03/apl17_apple_iphone_x_wireless_charging.jpg","caption":""},"primaryImageOfPage":{"@id":"https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#primaryimage"},"datePublished":"2018-03-18T10:34:22+00:00","dateModified":"2018-03-18T10:34:22+00:00","description":"\u062a\u0648\u0635\u0644 \u0623\u062d\u062f\u062b \u0627\u0644\u062f\u0631\u0627\u0633\u0627\u062a \u0648\u0627\u0644\u0623\u0628\u062d\u0627\u062b \u0625\u0644\u0649 \u0623\u0646 \u0627\u0644\u0634\u062d\u0646 \u0627\u0644\u0644\u0627\u0633\u0644\u0643\u064a \u0627\u0644\u0645\u0633\u062a\u062e\u062f\u0645 \u0641\u064a \u0634\u062d\u0646 \u0627\u0644\u0647\u0648\u0627\u062a\u0641 \u0631\u0628\u0645\u0627 \u064a\u0643\u0648\u0646 \u062e\u0637\u0631 \u0639\u0644\u0649 \u0627\u0644\u0628\u0637\u0627\u0631\u064a\u0629 \u0648\u064a\u0639\u0645\u0644 \u0639\u0644\u0649 \u0627\u062a\u0644\u0627\u0641\u0647\u0627 \u0628\u0633\u0631\u0639\u0629 \u0643\u0628\u064a\u0631\u0629\u060c \u062a\u0639\u0631\u0641 \u0643\u064a\u0641 \u064a\u062a\u0645 \u0630\u0644\u0643."},{"@type":"Article","@id":"https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#article","isPartOf":{"@id":"https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#webpage"},"author":{"@id":"https://iphoneislam.com/author/mr-sharaf#author","name":"\u0645\u062d\u0645\u0648\u062f \u0634\u0631\u0641"},"publisher":{"@id":"https://iphoneislam.com/#organization"},"headline":"\u0647\u0644 \u0627\u0644\u0634\u062d\u0646 \u0627\u0644\u0644\u0627\u0633\u0644\u0643\u064a \u062e\u0637\u0631 \u0639\u0644\u0649 \u0627\u0644\u0628\u0637\u0627\u0631\u064a\u0629\u061f","datePublished":"2018-03-18T10:34:22+00:00","dateModified":"2018-03-18T10:34:22+00:00","commentCount":"36","mainEntityOfPage":"https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#webpage","image":{"@id":"https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#primaryimage"},"keywords":"\u0634\u0627\u062d\u0646,\u0622\u0628\u0644,\u0622\u064a-\u0641\u0648\u0646 X,\u0623\u0628\u0644,Qi,\u0645\u0639\u0644\u0648\u0645\u0627\u062a,\u0645\u0644\u062d\u0642\u0627\u062a,\u0644\u0627\u0633\u0644\u0643\u064a","articleSection":"\u062a\u062d\u0644\u064a\u0644 \u0648 \u0646\u0642\u0627\u0634"},{"@type":"Person","@id":"https://iphoneislam.com/author/mr-sharaf#author","name":"\u0645\u062d\u0645\u0648\u062f \u0634\u0631\u0641","image":{"@type":"ImageObject","@id":"https://iphoneislam.com/#personlogo","url":"https://secure.gravatar.com/avatar/3730702d76dc46c4bc07ffc48b9c0287?s=96&d=mm&r=g","caption":"\u0645\u062d\u0645\u0648\u062f \u0634\u0631\u0641"},"sameAs":[]}]}
+    </script>
+    <link href="//s0.wp.com" rel="dns-prefetch"/>
+    <link href="//s.w.org" rel="dns-prefetch"/>
+    <link href="https://iphoneislam.com/feed" rel="alternate" title="آي-فون إسلام « الخلاصة" type="application/rss+xml"/>
+    <link href="https://iphoneislam.com/comments/feed" rel="alternate" title="آي-فون إسلام « خلاصة التعليقات" type="application/rss+xml"/>
+    <link href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408/feed" rel="alternate" title="آي-فون إسلام « هل الشحن اللاسلكي خطر على البطارية؟ خلاصة التعليقات" type="application/rss+xml"/>
+    <script type="99c56f9ae426c206f7857b00-text/javascript">
+     window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/iphoneislam.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+     img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+    </style>
+    <link href="https://iphoneislam.com/wp-content/plugins/arqam/assets/style.css?x83298" id="arqam-style-css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="https://iphoneislam.com/wp-includes/css/dist/block-library/style-rtl.min.css?x83298" id="wp-block-library-rtl-css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="https://iphoneislam.com/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?x83298" id="social-logos-css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="https://iphoneislam.com/wp-content/plugins/jetpack/css/jetpack-rtl.css?x83298" id="jetpack_css-rtl-css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="https://iphoneislam.com/wp-includes/js/jquery/jquery.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+    </script>
+    <script src="https://iphoneislam.com/wp-includes/js/jquery/jquery-migrate.min.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+    </script>
+    <script type="99c56f9ae426c206f7857b00-text/javascript">
+     /* <![CDATA[ */
+var Settings  = {"ajaxurl":"https:\/\/iphoneislam.com\/wp-admin\/admin-ajax.php","pluginImgUrl":"https:\/\/iphoneislam.com\/wp-content\/plugins\/myAjaxComments\/img","post_id":"65408","default_comments_page":"oldest","moreLinkTitle":"\u0639\u0631\u0636 \u0627\u0644\u0645\u0632\u064a\u062f \u0645\u0646 \u0627\u0644\u062a\u0639\u0644\u064a\u0642\u0627\u062a"};
+/* ]]> */
+    </script>
+    <script src="https://iphoneislam.com/wp-content/plugins/myAjaxComments/js/app.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+    </script>
+    <script src="https://iphoneislam.com/wp-content/themes/remal/js/tie-scripts.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+    </script>
+    <link href="https://iphoneislam.com/wp-json/" rel="https://api.w.org/"/>
+    <link href="https://iphoneislam.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+    <link href="https://iphoneislam.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+    <link href="https://iphoneislam.com/wp-content/themes/remal/rtl.css?x83298" media="screen" rel="stylesheet" type="text/css"/>
+    <meta content="WordPress 5.1.1" name="generator"/>
+    <link href="https://iphoneislam.com/?p=65408" rel="shortlink"/>
+    <link href="https://iphoneislam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fiphoneislam.com%2F2018%2F03%2Fis-wireless-charging-bad-for-your-smartphone%2F65408" rel="alternate" type="application/json+oembed"/>
+    <link href="https://iphoneislam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fiphoneislam.com%2F2018%2F03%2Fis-wireless-charging-bad-for-your-smartphone%2F65408&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+    <link href="https://iphoneislam.com/wp-content/plugins/app3ad/css/style.css?x83298" media="all" rel="stylesheet" type="text/css"/>
+    <style media="screen" type="text/css">
+     .arqam-widget-counter.arq-colored li.arq-facebook a i,
+					.arqam-widget-counter.arq-flat li.arq-facebook a,
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-facebook:hover a i{
+						background-color:#355ebf !important;
+					}
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-facebook a i{
+						border-color:#355ebf;
+						color: #355ebf;
+					}
+
+					
+					.arqam-widget-counter.arq-colored li.arq-twitter a i,
+					.arqam-widget-counter.arq-flat li.arq-twitter a,
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-twitter:hover a i{
+						background-color:#58c2e2 !important;
+					}
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-twitter a i{
+						border-color:#58c2e2;
+						color: #58c2e2;
+					}
+
+					
+					.arqam-widget-counter.arq-colored li.arq-google a i,
+					.arqam-widget-counter.arq-flat li.arq-google a,
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-google:hover a i{
+						background-color:#7f1c19 !important;
+					}
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-google a i{
+						border-color:#7f1c19;
+						color: #7f1c19;
+					}
+
+					
+					.arqam-widget-counter.arq-colored li.arq-youtube a i,
+					.arqam-widget-counter.arq-flat li.arq-youtube a,
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-youtube:hover a i{
+						background-color:#f70000 !important;
+					}
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-youtube a i{
+						border-color:#f70000;
+						color: #f70000;
+					}
+    </style>
+    <meta content="142481719428" property="fb:pages"/>
+    <meta content="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408?ia_markup=1" property="ia:markup_url"/>
+    <meta content="app-id=362375140, affiliate-data=11l7wK, app-argument=zamen://?open_news_internal=65408&amp;source_name=iphoneislam" name="apple-itunes-app"/>
+    <meta content="zamen://?open_news_internal=65408&amp;source_name=iphoneislam" property="al:ios:url"/>
+    <meta content="362375140" property="al:ios:app_store_id"/>
+    <meta content="Zamen | زامن" property="al:ios:app_name"/>
+    <meta content="zamen://?open_news_internal=65408&amp;source_name=iphoneislam" property="al:iphone:url"/>
+    <meta content="362375140" property="al:iphone:app_store_id"/>
+    <meta content="Zamen | زامن" property="al:iphone:app_name"/>
+    <meta content="zamen://?open_news_internal=65408&amp;source_name=iphoneislam" property="al:ipad:url"/>
+    <meta content="362375140" property="al:ipad:app_store_id"/>
+    <meta content="Zamen | زامن" property="al:ipad:app_name"/>
+    <meta content="https://iphoneislam.com/?p=65408" property="al:web:url"/>
+    <link href="//widgets.wp.com" rel="dns-prefetch"/>
+    <link href="//s0.wp.com" rel="dns-prefetch"/>
+    <link href="//0.gravatar.com" rel="dns-prefetch"/>
+    <link href="//1.gravatar.com" rel="dns-prefetch"/>
+    <link href="//2.gravatar.com" rel="dns-prefetch"/>
+    <style type="text/css">
+     img#wpstats{display:none}
+    </style>
+    <link href="https://iphoneislam.com/favicon.ico?x83298" rel="shortcut icon" title="Favicon"/>
+    <script type="99c56f9ae426c206f7857b00-text/javascript">
+     /* <![CDATA[ */
+var tie = {"ajaxurl":"https://iphoneislam.com/wp-admin/admin-ajax.php","paged" : "1" ,"maxPages" : "0","loading":"جاري التحميل ..." , "width" : "340" , "prettyPhoto" : "light_rounded" , "query" : "p=65408&year=2018&monthnum=03&name=is-wireless-charging-bad-for-your-smartphone"  };
+/* ]]> */
+jQuery.Isotope.prototype._positionAbs = function( x, y ) {
+  return { right: x, top: y };
+};
+var transforms = false;
+    </script>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+     <style media="screen" type="text/css">
+      body {background: #f6eee3 url(https://iphoneislam.com/wp-content/themes/remal/images/patterns/body-bg1.png) center;}
+	a {
+	color: #3176bf;	}
+a:hover {
+	color: #2c4194;	}
+header {background:#e6e6e6 url('')    ;}
+.header-bar {border-top-color: #6997c9;}
+#main-nav , #main-nav ul ul {background:#eee9e3 url('')    ;}
+#main-nav ul li a , #main-nav ul ul a {
+	color: #8f8f8f !important;}
+#main-nav ul li a:hover, #main-nav ul li:hover > a, #main-nav ul :hover > a  {
+	color: #c9af8e !important;}
+.scrollToTop {
+	background-color: #6997c9 ;
+}
+.pagination span.current {
+	background-color: #6997c9 ;
+}
+.post .entry a {
+	color: #fc4857;	}
+.post .entry a:hover {
+	color: #6997c9;	}
+/*Fix/*
+.iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  max-width: 100% !important;
+}
+
+/* Drop Cap */
+p.dropcap {overflow: hidden; font-size: 120% !important; line-height: inherit !important;}
+span.dropcap {font-size: 200%; margin: -4px 5px 0 15px; line-height: 100%; float: left;display: block; color: #666;}
+
+/* Notice Styles */
+.alert {color: #D0583F;background-image: url(/wp-content/typography/alert.png);background-color: #FFFBFB;border-bottom: 1px solid #F8C9BB;border-right: 1px solid #F8C9BB;}
+.approved {color: #6CB656;background-image: url(/wp-content/typography/approved.png);background-color: #FAFDF9;border-bottom: 1px solid #C1CEC1;border-right: 1px solid #C1CEC1;}
+.attention {color: #E1B42F;background-image: url(/wp-content/typography/attention.png);background-color: #FFFDF6;border-bottom: 1px solid #E4E4D5;border-right: 1px solid #E4E4D5;}
+.camera {color: #55A0B4;background-image: url(/wp-content/typography/camera.png);background-color: #F6FBFB;border-bottom: 1px solid #C9D5D8;border-right: 1px solid #C9D5D8;}
+.cart {color: #559726;background-image: url(/wp-content/typography/cart.png);background-color: #FCFCFC;border-bottom: 1px solid #D3D3D3;border-right: 1px solid #D3D3D3;}
+.doc {color: #666666;background-image: url(/wp-content/typography/doc.png);background-color: #FFFFFF;border-bottom: 1px solid #E5E5E5;border-right: 1px solid #E5E5E5;}
+.download {color: #666666;background-image: url(/wp-content/typography/download.png);background-color: #FCFCFC;border-bottom: 1px solid #D3D3D3;border-right: 1px solid #D3D3D3;}
+.media {color: #8D79A9;background-image: url(/wp-content/typography/media.png);background-color: #FBF9FD;border-bottom: 1px solid #DBE1E6;border-right: 1px solid #DBE1E6;}
+.note {color: #B76F38;background-image: url(/wp-content/typography/note.png);background-color: #FFFAF6;border-bottom: 1px solid #E6DAD2;border-right: 1px solid #E6DAD2;}
+.notice {color: #6187B3;background-image: url(/wp-content/typography/notice.png);background-color: #FAFCFD;border-bottom: 1px solid #C7CDDA;border-right: 1px solid #C7CDDA;}
+.quote {color: #727272;background-image: url(/wp-content/typography/quote.png);background-color: #F3F3F3;border-bottom: 1px solid #D4D4D4;border-right: 1px solid #D4D4D4;}
+
+/* RTL Stuff */
+span.dropcap {margin: -4px 5px 0 15px;float: right;}
+.typo-icon {padding: 8px 0px 0px 10px;margin: 15px 0;background-position: 99% 12px;}
+
+/* Comments */
+.byuser .comment-avatar{ background:#3176bf}
+.bypostauthor .comment-avatar{ background:#ffffad;}
+.bypostauthor {background:#ffffad;}
+
+
+/* SubMenu Codes */
+.cat_4 .post-footer{border-top: 3px solid #9fbcaa;}
+.cat_4 a.more-link, .acat_4{background:#9fbcaa;}
+
+.cat_6 .post-footer{border-top: 3px solid #eab69d;}
+.cat_6 a.more-link, .acat_6{background:#eab69d;}
+
+.cat_3 .post-footer{border-top: 3px solid #d5c5af;}
+.cat_3 a.more-link, .acat_3{background:#d5c5af;}
+
+.cat_9 .post-footer{border-top: 3px solid #97aebf;}
+.cat_9 a.more-link, .acat_9{background:#97aebf;}
+
+.cat_88 .post-footer{border-top: 3px solid #b4a992;}
+.cat_88 a.more-link, .acat_88{background:#b4a992;}
+
+.cat_54 .post-footer{border-top: 3px solid #cca0a0;}
+.cat_54 a.more-link, .acat_54{background:#cca0a0;}
+
+.cat_22 .post-footer{border-top: 3px solid #bba0cc;}
+.cat_22 a.more-link, .acat_22{background:#bba0cc;}
+
+.cat_1 .post-footer{border-top: 3px solid #cca0c5;}
+.cat_1 a.more-link, .acat_1{background:#cca0c5;}
+
+.cat_14 .post-footer{border-top: 3px solid #a0b4cc;}
+.cat_14 a.more-link, .acat_14{background:#a0b4cc;}
+
+.cat_86 .post-footer{border-top: 3px solid #a0ccc0;}
+.cat_86 a.more-link, .acat_86{background:#a0ccc0;}
+
+.cat_7 .post-footer{border-top: 3px solid #a8cca0;}
+.cat_7 a.more-link, .acat_7{background:#a8cca0;}
+
+.cat_31 .post-footer{border-top: 3px solid #99aaaa;}
+.cat_31 a.more-link, .acat_31{background:#99aaaa;}
+
+.cat_124 .post-footer{border-top: 3px solid #d9b96d;}
+.cat_124 a.more-link, .acat_124{background:#d9b96d;}
+
+.cat_15 .post-footer{border-top: 3px solid #7788bb;}
+.cat_15 a.more-link, .acat_15{background:#7788bb;}
+
+.cat_10 .post-footer{border-top: 3px solid #444444;}
+.cat_10 a.more-link, .acat_10{background:#444444;}
+     </style>
+     <script type="99c56f9ae426c206f7857b00-text/javascript">
+      var _prum = [['id', '54a9ed26abe53df1181855a7'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+     </script>
+     <meta content="2f3a85cdb92a2cd978a096e3e35dab49" name="inmobi-site-verification"/>
+     <meta content="آي-فون إسلام" name="apple-mobile-web-app-title"/>
+     <link href="/apple-touch-icon.png?x83298" rel="apple-touch-icon"/>
+     <link href="/apple-touch-icon-57x57.png?x83298" rel="apple-touch-icon" sizes="57x57"/>
+     <link href="/apple-touch-icon-72x72.png?x83298" rel="apple-touch-icon" sizes="72x72"/>
+     <link href="/apple-touch-icon-76x76.png?x83298" rel="apple-touch-icon" sizes="76x76"/>
+     <link href="/apple-touch-icon-114x114.png?x83298" rel="apple-touch-icon" sizes="114x114"/>
+     <link href="/apple-touch-icon-120x120.png?x83298" rel="apple-touch-icon" sizes="120x120"/>
+     <link href="/apple-touch-icon-144x144.png?x83298" rel="apple-touch-icon" sizes="144x144"/>
+     <link href="/apple-touch-icon-152x152.png?x83298" rel="apple-touch-icon" sizes="152x152"/>
+     <meta content="wordpress-plugin" name="onesignal">
+      <link href="https://iphoneislam.com/superpwa-manifest.json?x83298" rel="manifest"/>
+      <script async="" src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" type="99c56f9ae426c206f7857b00-text/javascript">
+      </script>
+      <script type="99c56f9ae426c206f7857b00-text/javascript">
+       window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("https://iphoneislam.com");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '839edb97-27ba-43a0-8356-85c9ffdad792';
+oneSignal_options['autoRegister'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "آي-فون إسلام";
+oneSignal_options['welcomeNotification']['message'] = "شكراً لك، سوف يتم أشعارك عند وجود مقالات جديدة";
+oneSignal_options['welcomeNotification']['url'] = "iphoneislam.com";
+oneSignal_options['path'] = "https://iphoneislam.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.3cd6b41f-0715-4da8-9007-02ca4af2dc44";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['promptOptions']['actionMessage'] = 'يرغب في عرض الإشعارات';
+oneSignal_options['promptOptions']['exampleNotificationTitleDesktop'] = 'هذا مثال للإشعارات';
+oneSignal_options['promptOptions']['exampleNotificationMessageDesktop'] = 'آي-فون إسلام: مقال جديد رائع';
+oneSignal_options['promptOptions']['exampleNotificationTitleMobile'] = 'آي-فون إسلام: مقال جديد رائع';
+oneSignal_options['promptOptions']['exampleNotificationMessageMobile'] = 'آي-فون إسلام: مقال جديد رائع';
+oneSignal_options['promptOptions']['exampleNotificationCaption'] = 'آي-فون إسلام';
+oneSignal_options['promptOptions']['acceptButtonText'] = 'تابع';
+oneSignal_options['promptOptions']['cancelButtonText'] = 'لا شكراً';
+oneSignal_options['promptOptions']['siteName'] = 'آي-فون إسلام';
+oneSignal_options['promptOptions']['autoAcceptTitle'] = 'اضغط للسماح';
+oneSignal_options['notifyButton'] = { };
+oneSignal_options['notifyButton']['enable'] = true;
+oneSignal_options['notifyButton']['position'] = 'bottom-left';
+oneSignal_options['notifyButton']['theme'] = 'default';
+oneSignal_options['notifyButton']['size'] = 'medium';
+oneSignal_options['notifyButton']['prenotify'] = true;
+oneSignal_options['notifyButton']['showCredit'] = false;
+oneSignal_options['notifyButton']['text'] = {};
+oneSignal_options['notifyButton']['text']['message.prenotify'] = 'اضغط هنا لتشترك في الإشعارات';
+oneSignal_options['notifyButton']['text']['tip.state.unsubscribed'] = 'انت غير مشترك في الإشعارات';
+oneSignal_options['notifyButton']['text']['tip.state.subscribed'] = 'انت مشترك في الإشعارات';
+oneSignal_options['notifyButton']['text']['tip.state.blocked'] = 'لقد قمت بحجب الإشعارات من المتصفح';
+oneSignal_options['notifyButton']['text']['message.action.subscribed'] = 'شكراً لك، سوف يتم أشعارك عند وجود مقالات جديدة';
+oneSignal_options['notifyButton']['text']['message.action.resubscribed'] = 'شكراً لك، سوف يتم أشعارك عند وجود مقالات جديدة';
+oneSignal_options['notifyButton']['text']['message.action.unsubscribed'] = 'لن يصلك إشعارات منا مرة اخرى';
+oneSignal_options['notifyButton']['text']['dialog.main.title'] = 'إدارة الإشعارات';
+oneSignal_options['notifyButton']['text']['dialog.main.button.subscribe'] = 'اشترك';
+oneSignal_options['notifyButton']['text']['dialog.main.button.unsubscribe'] = 'الغي الإشتراك';
+oneSignal_options['notifyButton']['text']['dialog.blocked.title'] = 'قم بإلغاء حجب الإشعارات';
+oneSignal_options['notifyButton']['text']['dialog.blocked.message'] = 'اتبع هذه التعليمات لإلغاء حجب الإشعارات';
+              OneSignal.init(window._oneSignalInitOptions);
+                    });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+      </script>
+      <link href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408/amp" rel="amphtml"/>
+     </meta>
+    </meta>
+   </link>
+  </meta>
+ </head>
+ <body class="rtl post-template-default single single-post postid-65408 single-format-standard" id="top">
+  <div class="background-cover">
+  </div>
+  <div class="wrapper">
+   <header class="header layout2">
+    <div class="header-content">
+     <div class="logo">
+      <a href="https://iphoneislam.com/" title="آي-فون إسلام">
+       <img alt="آي-فون إسلام" src="https://iphoneislam.com/images/iphoneislam-logo.png?x83298"/>
+       <strong>
+        آي-فون إسلام برامج عربية و أخبار الأيفون, الأيبود تاتش و الأيباد – Arabic iPhone, iPod Touch, iPad News &amp; Apps
+       </strong>
+      </a>
+     </div>
+     <div class="social-icons">
+      <a class="tooldown" href="https://iphoneislam.com/feed" target="_blank" title="Rss">
+       <img alt="RSS" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/rss_24.png?x83298"/>
+      </a>
+      <a class="tooldown" href="https://plus.google.com/+iphoneislam/" target="_blank" title="Google+">
+       <img alt="Google+" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/google_plus_24.png?x83298"/>
+      </a>
+      <a class="tooldown" href="https://www.facebook.com/iphoneislam" target="_blank" title="Facebook">
+       <img alt="Facebook" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/facebook_24.png?x83298"/>
+      </a>
+      <a class="tooldown" href="https://www.twitter.com/iphoneislam" target="_blank" title="Twitter">
+       <img alt="Twitter" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/twitter_24.png?x83298"/>
+      </a>
+      <a class="tooldown" href="https://www.linkedin.com/company/iphoneislam" target="_blank" title="LinkedIn">
+       <img alt="LinkedIn" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/linkedin_24.png?x83298"/>
+      </a>
+      <a class="tooldown" href="https://www.youtube.com/iphoneislamtube" target="_blank" title="Youtube">
+       <img alt="YouTube" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/youtube_24.png?x83298"/>
+      </a>
+      <a class="tooldown" href="https://www.instagram.com/iphoneislam/" target="_blank" title="instagram">
+       <img alt="instagram" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/instagram_24.png?x83298"/>
+      </a>
+     </div>
+     <div class="search-block">
+      <form action="https://iphoneislam.com/" id="searchform" method="get">
+       <input class="search-button" type="submit" value=""/>
+       <input data-cf-modified-99c56f9ae426c206f7857b00-="" id="s" name="s" onblur="if (!window.__cfRLUnblockHandlers) return false; if (this.value == '') {this.value = 'أدخل كلمة البحث ...';}" onfocus="if (!window.__cfRLUnblockHandlers) return false; if (this.value == 'أدخل كلمة البحث ...') {this.value = '';}" type="text" value="أدخل كلمة البحث ..."/>
+      </form>
+     </div>
+     <div class="clear">
+     </div>
+    </div>
+    <nav id="main-nav">
+     <div class="main-menu">
+      <ul class="menu" id="menu-main-menu">
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7838" id="menu-item-7838">
+        <a href="http://www.iphoneislam.com/">
+         الرئيسية
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7840" id="menu-item-7840">
+        <a href="https://iphoneislam.com/roadmap">
+         إنجازاتنا
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9085" id="menu-item-9085">
+        <a href="https://iphoneislam.com/ourapps">
+         تطبيقاتنا
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10523" id="menu-item-10523">
+        <a href="https://iphoneislam.com/faq">
+         اسئلة متكررة
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7844" id="menu-item-7844">
+        <a href="https://iphoneislam.com/firmware">
+         ملفات النظام
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70640" id="menu-item-70640">
+        <a href="/shortcuts">
+         اختصارات
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7843" id="menu-item-7843">
+        <a href="https://iphoneislam.com/contactus">
+         اتصل بنا
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70641" id="menu-item-70641">
+        <a href="#">
+         تصنيفات
+        </a>
+        <ul class="sub-menu">
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70642" id="menu-item-70642">
+          <a href="https://iphoneislam.com/category/news">
+           أخبار
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70643" id="menu-item-70643">
+          <a href="https://iphoneislam.com/category/apps">
+           برامج
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70651" id="menu-item-70651">
+          <a href="https://iphoneislam.com/category/ios_updates">
+           تحديثات النظام
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70649" id="menu-item-70649">
+          <a href="https://iphoneislam.com/category/problems">
+           مشاكل و حلول
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-70644" id="menu-item-70644">
+          <a href="https://iphoneislam.com/category/analysis">
+           تحليل و نقاش
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70645" id="menu-item-70645">
+          <a href="https://iphoneislam.com/category/tipsandtricks">
+           نصائح وألاعيب
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70646" id="menu-item-70646">
+          <a href="https://iphoneislam.com/category/iphoneislam">
+           آي-فون إسلام
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70647" id="menu-item-70647">
+          <a href="https://iphoneislam.com/category/howto">
+           كيف
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70648" id="menu-item-70648">
+          <a href="https://iphoneislam.com/category/general">
+           عام
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70650" id="menu-item-70650">
+          <a href="https://iphoneislam.com/category/featured">
+           مميز
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </div>
+     <div class="menu-mob">
+      <select id="main-menu-mob">
+       <option selected="selected" value="">
+        إذهب إلى ...
+       </option>
+       <option value="http://www.iphoneislam.com/">
+        الرئيسية
+       </option>
+       <option value="https://iphoneislam.com/roadmap">
+        إنجازاتنا
+       </option>
+       <option value="https://iphoneislam.com/ourapps">
+        تطبيقاتنا
+       </option>
+       <option value="https://iphoneislam.com/faq">
+        اسئلة متكررة
+       </option>
+       <option value="https://iphoneislam.com/firmware">
+        ملفات النظام
+       </option>
+       <option value="/shortcuts">
+        اختصارات
+       </option>
+       <option value="https://iphoneislam.com/contactus">
+        اتصل بنا
+       </option>
+       <option value="#">
+        تصنيفات
+       </option>
+       <option value="https://iphoneislam.com/category/news">
+        - أخبار
+       </option>
+       <option value="https://iphoneislam.com/category/apps">
+        - برامج
+       </option>
+       <option value="https://iphoneislam.com/category/ios_updates">
+        - تحديثات النظام
+       </option>
+       <option value="https://iphoneislam.com/category/problems">
+        - مشاكل و حلول
+       </option>
+       <option value="https://iphoneislam.com/category/analysis">
+        - تحليل و نقاش
+       </option>
+       <option value="https://iphoneislam.com/category/tipsandtricks">
+        - نصائح وألاعيب
+       </option>
+       <option value="https://iphoneislam.com/category/iphoneislam">
+        - آي-فون إسلام
+       </option>
+       <option value="https://iphoneislam.com/category/howto">
+        - كيف
+       </option>
+       <option value="https://iphoneislam.com/category/general">
+        - عام
+       </option>
+       <option value="https://iphoneislam.com/category/featured">
+        - مميز
+       </option>
+      </select>
+     </div>
+    </nav>
+   </header>
+   <div class="container sidebar-left" id="content-container">
+    <div id="content">
+     <div id="crumbs">
+      <a href="https://iphoneislam.com">
+       الرئيسية
+      </a>
+      /
+      <a href="https://iphoneislam.com/category/analysis">
+       تحليل و نقاش
+      </a>
+      /
+      <span class="current">
+       هل الشحن اللاسلكي خطر على البطارية؟
+      </span>
+     </div>
+     <div class="ads-post">
+      <a href="https://ar.imobie.com/afftracking.php?src=https://iphoneislam.com/&amp;des=https://ar.imobie.com/phonerescue/index.htm&amp;ecommerce=avangate&amp;aid=107270" target="_blank">
+       <img alt="" class="size-full wp-image-67306 aligncenter" height="72" src="https://iphoneislam.com/wp-content/uploads/2018/06/PhoneRescue_AD.jpg?x83298" width='400"'/>
+      </a>
+     </div>
+     <article class="item-list post-65408 post type-post status-publish format-standard has-post-thumbnail hentry category-analysis tag-charger tag-apple tag---x tag-207 tag-qi tag-info tag-accessories tag-548 cat_88">
+      <div class="post-inner">
+       <h1 class="entry-title">
+        هل الشحن اللاسلكي خطر على البطارية؟
+       </h1>
+       <p class="post-meta">
+        <span>
+         نشرت بواسطة:
+         <a href="https://iphoneislam.com/author/mr-sharaf" title="">
+          محمود شرف
+         </a>
+        </span>
+        <span>
+         بتاريخ 18 مارس 2018
+        </span>
+        <span>
+         في
+         <a href="https://iphoneislam.com/category/analysis" rel="category tag">
+          تحليل و نقاش
+         </a>
+        </span>
+        <span>
+         <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comments">
+          36 تعليق
+         </a>
+        </span>
+        <span class="entry-likes alignleft">
+         <a class="tie-likes" href="#" rel="65408" title="">
+          6
+         </a>
+        </span>
+       </p>
+       <div class="clear">
+       </div>
+       <div class="entry">
+        <p style="text-align: justify;">
+         تستخدم تقنية الشحن اللاسلكي مجالا كهرومغناطيسيا لنقل الطاقة بين جسمين، ويمكن تبسيط ألية الشحن بأن الجسم الأول “الشاحن” يقوم بتحويل الكهرباء إلى مجال كهرومغناطيسي والجسيم الثاني “الهاتف مثلاً” يلتقط هذا المجال ويعيده إلى كهرباء يستخدمها في شحن الهاتف. واتجهت كثير من شركات الهواتف المحمولة إلى استخدام تلك التقنية خاصة أنها تدعم الشحن السريع. فهل هذه التفاعلات الكهرومغناطيسية لها تأثير على مكونات البطارية الداخلية وعلى ما يجري فيها من تفاعلات كيمائية؟
+        </p>
+        <p style="text-align: center;">
+         <img alt="هل الشحن اللاسلكي خطر على البطارية؟" class="aligncenter wp-image-65410 size-large" data-attachment-id="65410" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="apl17_apple_iphone_x_wireless_charging" data-large-file="https://iphoneislam.com/wp-content/uploads/2018/03/apl17_apple_iphone_x_wireless_charging-590x394.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2018/03/apl17_apple_iphone_x_wireless_charging-320x213.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2018/03/apl17_apple_iphone_x_wireless_charging.jpg" data-orig-size="700,467" data-permalink="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408/apl17_apple_iphone_x_wireless_charging" height="394" sizes="(max-width: 590px) 100vw, 590px" src="https://iphoneislam.com/wp-content/uploads/2018/03/apl17_apple_iphone_x_wireless_charging-590x394.jpg?x83298" srcset="https://iphoneislam.com/wp-content/uploads/2018/03/apl17_apple_iphone_x_wireless_charging-590x394.jpg 590w, https://iphoneislam.com/wp-content/uploads/2018/03/apl17_apple_iphone_x_wireless_charging-320x213.jpg 320w, https://iphoneislam.com/wp-content/uploads/2018/03/apl17_apple_iphone_x_wireless_charging.jpg 700w" width="590"/>
+         <span id="more-65408">
+         </span>
+        </p>
+        <hr/>
+        <p style="text-align: justify;">
+         طالب مستخدمي أجهزة آبل بتوفير ميزة الشحن اللاسلكي أسوة بشركات أخرى على رأسها سامسونج. وتمت إضافتها أخيراً في الآي-فون 8 وآي-فون X ، وكأن آبل أضافت هذه التقنية إلى أجهزتها على استحياء، أو ربما كان في تأخيرها دراسة متأنية، لعلمها أن هذه التقنية لا بد لها من معايير معينة حتى لا يكون لها تأثير سيء على الأجهزة. وبالفعل قامت آبل باستخدام معيار Qi للشحن اللاسلكي.
+        </p>
+        <p style="text-align: justify;">
+         والغريب أن أبل قدمت التقنية بشكل بطيء وهو 7.5 وات عند استخدام شواحن خاصة مصممه للآي فون وإذا تم استخدام أي شاحن آخر يتم الشحن بـ 5 وات. في حين أن منافس أبل مثلاً سامسونج يقدم منذ سنوات شاحن 10 وات. هذا الأمر له كان لهذا دلالاته بعد ذلك، فقد يكون استخدام تلك التقنية ليس جيدا لشحن هاتفك وفقا لأبحاث تم اجراؤها على تقنية الشحن اللاسلكي وتوصلت إلى وجود علاقة بينها وبين تلف البطاريات بسرعة كبيرة.
+        </p>
+        <p style="text-align: justify;">
+         من تلك الأبحاث: بحث قام به Adrian Kingsley-Hughes من موقع ZDNet توصل إلى أن الشحن اللاسلكي المستخدم في شحن هاتفه يعمل على تآكل بطاريته بسرعة كبيرة.
+        </p>
+        <hr/>
+        <h2 style="text-align: justify;">
+         طريقة الشحن وتأثيرها على البطارية؟
+        </h2>
+        <p style="text-align: justify;">
+         قال Venkat Srinivasan مدير مركز أرجون التعاوني لعلوم تخزين الطاقة ” ACCESS”، إن إبقاء البطارية مشحونة بالكامل أو قريبا من ذلك سيعجّل من تلفها. وهذا ما يحدث عندما تمتلك شاحنا لاسلكيا في بيتك أو في مكتبك، فإنك تضع جهازك عليه طول الوقت لتبقي هاتفك مشحونا بنسبة عالية حتى تشعر بالرضا والارتياح.
+        </p>
+        <p style="text-align: justify;">
+         وقال أيضا: ” كلما ارتفعت حالة الشحن إلى 90% أو 95% أو 100%  مع الإبقاء على هذه النسب وقت أطول، كلما بدأت حالة البطارية في التدهور بشكل أسرع، ويعتمد ذلك على طبيعة بطاريات الليثيوم.
+        </p>
+        <p style="text-align: justify;">
+         الغريب أن دراسات قامت بها شركات الشحن أثبتت أيضاً أن الشحن والتفريغ بشكل كامل له ضرر على البطارية ويختلف شدة الضرر على حسب نوع البطارية. وقالت الدراسة أن إعادة شحن البطارية في مستوى مرتفع مثل 50% يمكن أن يؤدي إلى زيادة عمرها بقيم قد تصل إلى 4 أضعاف القيمة التي قد تصل إليها عند الشحن من صفر إلى 100%
+        </p>
+        <p style="text-align: center;">
+         <img alt="" class="aligncenter size-full wp-image-65429" data-attachment-id="65429" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"1"}' data-image-title="Charging" data-large-file="https://iphoneislam.com/wp-content/uploads/2018/03/Charging.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2018/03/Charging-320x261.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2018/03/Charging.jpg" data-orig-size="589,481" data-permalink="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408/charging" height="481" sizes="(max-width: 589px) 100vw, 589px" src="https://iphoneislam.com/wp-content/uploads/2018/03/Charging.jpg?x83298" srcset="https://iphoneislam.com/wp-content/uploads/2018/03/Charging.jpg 589w, https://iphoneislam.com/wp-content/uploads/2018/03/Charging-320x261.jpg 320w" width="589"/>
+        </p>
+        <hr/>
+        <h2 style="text-align: justify;">
+         طبيعة شحن بطارية الليثيوم
+        </h2>
+        <p style="text-align: justify;">
+         عند شحن بطارية الليثيوم وتفريغها، تمر الأيونات ذهابا وإيابا بين قطب موجب “مصنوع من أكسيد الليثيوم-كوبالت أو ليثيوم-فوسفات الحديد” وبين قطب سالب “مصنوع من جرافيت الكربون”. عند شحن البطارية، تنطلق أيونات الليثيوم من القطب الموجب إلى القطب السالب ويتم تخزينها كطاقة. وعند تفريغ البطارية، تعود تلك الأيونات إلى القطب الموجب لاستخدامها كطاقة كهربائية. وبينما تتحرك تلك الأيونات ذهابا وإيابا، تبدأ مادة “الكهرل أو الإلكتروليت Electrolyte” – وهي مادة تحتوي على أيونات حرة تشكل وسطا ناقلا للكهرباء- تبدأ بالتلف مع مرور الوقت. وبذلك كلما ارتفعت نسبة الشحن لديك، كلما كان تحلل تلك المادة وتلفها أسرع.
+        </p>
+        <p style="text-align: justify;">
+         لذلك من الأفضل عدم جعل الهاتف مشحونا بنسب عالية طوال الوقت، أو شحنه من الصفر إلى تمام الشحن طول الوقت، وذلك من أجل الحفاظ على حركة بندول الشحن والتفريغ من التأرجح بشكل كبير. ويفضل أن تتراوح نسبة الشحن لديك من 45% إلى 80%.
+        </p>
+        <hr/>
+        <p style="text-align: justify;">
+         وبالإضافة إلى ذلك، فأن عمر البطارية يعتمد في الأساس على عدد مرات دورات الشحن التي مرت بها. ولمعلومات أكثر عن هذا الموضوع يمكنك مراجعة مقال
+         <a href="https://iphoneislam.com/2014/05/you-ask-and-i4islam-answer-about-battery/35466">
+          أنت تسأل وآي-فون إسلام يجيب عن بطارية أبل
+         </a>
+         .
+        </p>
+        <hr/>
+        <h2 style="text-align: justify;">
+         الفرق بين الشحن السلكي والشحن اللاسلكي
+        </h2>
+        <p style="text-align: center;">
+         <img alt="" class="aligncenter wp-image-65411 size-large" data-attachment-id="65411" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="wireless-charging-VS-wired-charging" data-large-file="https://iphoneislam.com/wp-content/uploads/2018/03/wireless-charging-VS-wired-charging-590x311.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2018/03/wireless-charging-VS-wired-charging-320x169.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2018/03/wireless-charging-VS-wired-charging.jpg" data-orig-size="600,316" data-permalink="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408/wireless-charging-vs-wired-charging" height="311" sizes="(max-width: 590px) 100vw, 590px" src="https://iphoneislam.com/wp-content/uploads/2018/03/wireless-charging-VS-wired-charging-590x311.jpg?x83298" srcset="https://iphoneislam.com/wp-content/uploads/2018/03/wireless-charging-VS-wired-charging-590x311.jpg 590w, https://iphoneislam.com/wp-content/uploads/2018/03/wireless-charging-VS-wired-charging-320x169.jpg 320w, https://iphoneislam.com/wp-content/uploads/2018/03/wireless-charging-VS-wired-charging.jpg 600w" width="590"/>
+        </p>
+        <p style="text-align: justify;">
+         من الصعب المقارنة بين الشواحن اللاسلكية والشواحن السلكية فلكل منهما مميزات وعيوب، نذكر مقارنة بسيطة بين النوعين فيما يلي:
+        </p>
+        <p style="text-align: justify;">
+         ◉ عند توصيل الهاتف بتيار متردد AC عن طريق الشحن السلكي، فإن البطارية تفصل الشحن تلقائيا عند اكتمال الشحن وتأخذ فترة راحة، وتنتظر إزالة سلك الشحن فقط في حالة عدم استخدام الهاتف، أما في حالة استخدام الهاتف أثناء الشحن فإن الشحن سيستمر لتعويض ما تفقده البطارية أثناء تشغيل الهاتف. (وبالطبع الاستخدام يقصد به أمر عنيف مثل الألعاب وليس استخدام عادي كالشبكة مثلا”.
+        </p>
+        <p style="text-align: justify;">
+         أما بالنسبة للشحن اللاسلكي فإنه يستخدم تيار ثابت، ولا يعطي البطارية فترة راحة بعد اكتمال عملية الشحن. فأثناء تدفق البيانات من الجهاز وإليه، يتم تشغيل الشاشة للتنبيهات والاشعارات وغيرها عند ذلك يتم شحن البطارية باستمرار وتعويض أي نقص صغير في البطارية، وبالتالي يتم حسابه في عدد دورات الشحن، مما يؤدي إلى إنهاك البطارية وتعرضها للتلف.
+        </p>
+        <p style="text-align: justify;">
+         ◉ الشحن اللاسلكي عادة ما يؤدي إلى ارتفاع درجة حرارة البطارية والجهاز مما قد يعرضهما للتلف السريع بخلاف الشحن باستخدام السلك. لذا يفضل عدم الشحن في أماكن مغلقة وعديمة التهوية إذ لا بد لهواء يبدد تلك الحرارة.
+        </p>
+        <p style="text-align: justify;">
+         ◉ الشواحن اللاسلكية الموثوقة مرتفعة الثمن مقارنة بالشواحن التقليدية السلكية.
+        </p>
+        <p style="text-align: justify;">
+         ◉ التعرض المباشر للإشعاع الكهرومغناطيسي الصادر من الشواحن اللاسلكية يمكن أن يكون ضارا بالجسم على المدى الطويل، ويمكن القضاء على ذلك الضرر تماما إذا تم استخدام شاحن محمي بشكل صحيح ويتوفر ذلك في الشواحن الموثوقة التي تستخدم معايير Qi .
+        </p>
+        <hr/>
+        <p style="text-align: justify;">
+         ومن المعلوم، أن معظم شركات تصنيع بطاريات الهواتف الذكية يصممون البطارية لتدوم صلاحيتها ما بين عامين إلى ثلاثة أعوام، وإذا كنت ممن يستبدل هاتفه خلال تلك الفترة، فلا داعي للقلق من البطارية وسرعة تلفها وخاصة أن الشركات الآن مثل أبل توفر بطاريات بديله بأسعار 20-30 دولار وهو مبلغ زهيد بالمقارنة بسعر الهاتف.
+        </p>
+        <div class="notice">
+         <h4 class="typo-icon" style="text-align: center;">
+          إذا كنت من مستخدمي الشواحن اللاسلكية، هل تعرضت لمشكلة ما معها؟ أخبرنا في التعليقات.
+         </h4>
+        </div>
+        <p style="font-size: 8pt; text-align: justify;">
+         المصادر:
+        </p>
+        <p class="sources" style="font-size: 8pt; text-align: center;">
+         <a href="https://www.computerworld.com/article/3229750/mobile-wireless/is-wireless-charging-bad-for-your-smartphone.html#" rel="noopener noreferrer" target="_blank">
+          1
+         </a>
+         |
+         <a href="https://www.techrepublic.com/article/how-wireless-charging-could-ruin-your-iphone-battery/" rel="noopener noreferrer" target="_blank">
+          2
+         </a>
+         |
+         <a href="https://medium.com/@china_electronics_gadgets/jjkkk-9001149e20cf" rel="noopener noreferrer" target="_blank">
+          3
+         </a>
+         |
+         <a href="https://www.ipitaka.com/blogs/news/wireless-charging-vs-wired-charging-which-one-is-better" rel="noopener noreferrer" target="_blank">
+          4
+         </a>
+         |
+        </p>
+        <p>
+        </p>
+        <div class="sharedaddy sd-sharing-enabled">
+         <div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
+          <h3 class="sd-title">
+           شارك هذا الموضوع:
+          </h3>
+          <div class="sd-content">
+           <ul>
+            <li class="share-facebook">
+             <a class="share-facebook sd-button share-icon" data-shared="sharing-facebook-65408" href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408?share=facebook" rel="nofollow noopener noreferrer" target="_blank" title="انقر للمشاركة على فيسبوك">
+              <span>
+               فيس بوك
+              </span>
+             </a>
+            </li>
+            <li class="share-twitter">
+             <a class="share-twitter sd-button share-icon" data-shared="sharing-twitter-65408" href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408?share=twitter" rel="nofollow noopener noreferrer" target="_blank" title="اضغط للمشاركة على تويتر">
+              <span>
+               تويتر
+              </span>
+             </a>
+            </li>
+            <li class="share-telegram">
+             <a class="share-telegram sd-button share-icon" data-shared="" href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408?share=telegram" rel="nofollow noopener noreferrer" target="_blank" title="انقر للمشاركة على Telegram">
+              <span>
+               Telegram
+              </span>
+             </a>
+            </li>
+            <li class="share-jetpack-whatsapp">
+             <a class="share-jetpack-whatsapp sd-button share-icon" data-shared="" href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408?share=jetpack-whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="انقر للمشاركة على WhatsApp">
+              <span>
+               WhatsApp
+              </span>
+             </a>
+            </li>
+            <li class="share-email">
+             <a class="share-email sd-button share-icon" data-shared="" href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408?share=email" rel="nofollow noopener noreferrer" target="_blank" title="اضغط لإرسال هذا الموضوع لصديق بواسطة البريد الإلكتروني">
+              <span>
+               البريد الإلكتروني
+              </span>
+             </a>
+            </li>
+            <li>
+             <a class="sharing-anchor sd-button share-more" href="#">
+              <span>
+               المزيد
+              </span>
+             </a>
+            </li>
+            <li class="share-end">
+            </li>
+           </ul>
+           <div class="sharing-hidden">
+            <div class="inner" style="display: none;">
+             <ul>
+              <li class="share-pocket">
+               <a class="share-pocket sd-button share-icon" data-shared="" href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408?share=pocket" rel="nofollow noopener noreferrer" target="_blank" title="اضغط للمشاركة على Pocket">
+                <span>
+                 Pocket
+                </span>
+               </a>
+              </li>
+              <li class="share-skype">
+               <a class="share-skype sd-button share-icon" data-shared="sharing-skype-65408" href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408?share=skype" rel="nofollow noopener noreferrer" target="_blank" title="انقر للمشاركة على Skype">
+                <span>
+                 Skype
+                </span>
+               </a>
+              </li>
+              <li class="share-end">
+              </li>
+              <li class="share-linkedin">
+               <a class="share-linkedin sd-button share-icon" data-shared="sharing-linkedin-65408" href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408?share=linkedin" rel="nofollow noopener noreferrer" target="_blank" title="اضغط لتشارك على LinkedIn">
+                <span>
+                 LinkedIn
+                </span>
+               </a>
+              </li>
+              <li class="share-pinterest">
+               <a class="share-pinterest sd-button share-icon" data-shared="sharing-pinterest-65408" href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408?share=pinterest" rel="nofollow noopener noreferrer" target="_blank" title="اضغط للمشاركة على Pinterest">
+                <span>
+                 Pinterest
+                </span>
+               </a>
+              </li>
+              <li class="share-end">
+              </li>
+              <li class="share-tumblr">
+               <a class="share-tumblr sd-button share-icon" data-shared="" href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408?share=tumblr" rel="nofollow noopener noreferrer" target="_blank" title="اضغط للمشاركة على Tumblr">
+                <span>
+                 Tumblr
+                </span>
+               </a>
+              </li>
+              <li class="share-reddit">
+               <a class="share-reddit sd-button share-icon" data-shared="" href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408?share=reddit" rel="nofollow noopener noreferrer" target="_blank" title="اضغط لمشاركة الموضوع على Reddit">
+                <span>
+                 Reddit
+                </span>
+               </a>
+              </li>
+              <li class="share-end">
+              </li>
+              <li class="share-print">
+               <a class="share-print sd-button share-icon" data-shared="" href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#print" rel="nofollow noopener noreferrer" target="_blank" title="اضغط للطباعة">
+                <span>
+                 طباعة
+                </span>
+               </a>
+              </li>
+              <li class="share-end">
+              </li>
+             </ul>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" data-name="like-post-frame-64050452-65408-5cc0c39a57bff" data-src="https://widgets.wp.com/likes/#blog_id=64050452&amp;post_id=65408&amp;origin=iphoneislam.com&amp;obj_id=64050452-65408-5cc0c39a57bff" id="like-post-wrapper-64050452-65408-5cc0c39a57bff">
+         <h3 class="sd-title">
+          معجب بهذه:
+         </h3>
+         <div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;">
+          <span class="button">
+           <span>
+            إعجاب
+           </span>
+          </span>
+          <span class="loading">
+           تحميل...
+          </span>
+         </div>
+         <span class="sd-text-color">
+         </span>
+         <a class="sd-link-color">
+         </a>
+        </div>
+       </div>
+       <div class="share-post">
+        <ul>
+         <li>
+          <a class="twitter-share-button" data-lang="en" data-text="هل الشحن اللاسلكي خطر على البطارية؟" data-url="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408" data-via="iPhoneIslam" href="https://twitter.com/share">
+           tweet
+          </a>
+          <script type="99c56f9ae426c206f7857b00-text/javascript">
+           !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+          </script>
+         </li>
+         <li>
+          <iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://www.facebook.com/plugins/like.php?href=https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408&amp;layout=button_count&amp;show_faces=false&amp;width=110&amp;action=like&amp;colorscheme=light&amp;height=21" style="border:none; overflow:hidden; width:110px; height:21px;">
+          </iframe>
+         </li>
+        </ul>
+        <div class="clear">
+        </div>
+       </div>
+      </div>
+     </article>
+     <p class="post-tag">
+      الوسوم :
+      <a href="https://iphoneislam.com/tag/charger" rel="tag">
+       شاحن
+      </a>
+      <a href="https://iphoneislam.com/tag/apple" rel="tag">
+       آبل
+      </a>
+      <a href="https://iphoneislam.com/tag/%d8%a2%d9%8a-%d9%81%d9%88%d9%86-x" rel="tag">
+       آي-فون X
+      </a>
+      <a href="https://iphoneislam.com/tag/%d8%a3%d8%a8%d9%84" rel="tag">
+       أبل
+      </a>
+      <a href="https://iphoneislam.com/tag/qi" rel="tag">
+       Qi
+      </a>
+      <a href="https://iphoneislam.com/tag/info" rel="tag">
+       معلومات
+      </a>
+      <a href="https://iphoneislam.com/tag/accessories" rel="tag">
+       ملحقات
+      </a>
+      <a href="https://iphoneislam.com/tag/%d9%84%d8%a7%d8%b3%d9%84%d9%83%d9%8a" rel="tag">
+       لاسلكي
+      </a>
+     </p>
+     <div class="ads-post">
+      <center>
+       <div id="amzn-assoc-ad-0b57d92a-3cd7-4074-a1e0-146dc5fd65ed">
+       </div>
+       <script async="" src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=0b57d92a-3cd7-4074-a1e0-146dc5fd65ed" type="99c56f9ae426c206f7857b00-text/javascript">
+       </script>
+      </center>
+     </div>
+     <div class="post-navigation">
+      <div class="post-previous">
+       <a href="https://iphoneislam.com/2018/03/apple-announce-27th-event-and-that-what-we-expect-to-see/65420" rel="prev">
+        <span>
+         السابق:
+        </span>
+        ماذا نتوقع أن نرى في مؤتمر أبل التعليمي؟
+       </a>
+      </div>
+      <div class="post-next">
+       <a href="https://iphoneislam.com/2018/03/will-face-id-be-the-next-airport-bass-system/65334" rel="next">
+        <span>
+         التالي:
+        </span>
+        هل تقدم تقنية التعرف على الوجوه ثورة في تسهيل إجراءات المطارات؟
+       </a>
+      </div>
+     </div>
+     <section id="related_posts">
+      <div class="block-head">
+       <h3>
+        مقالات مشابهة
+       </h3>
+       <div class="stripe-line">
+       </div>
+      </div>
+      <div class="item-list">
+       <div class="related-item">
+        <div class="post-thumbnail">
+         <a href="https://iphoneislam.com/2019/04/why-apple-wait-alot-before-release-new-tech/72401" rel="bookmark" title="رابط ثابت لـ هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟">
+          <img alt="هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟" class="attachment-thumbnail size-thumbnail" data-attachment-id="72412" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Foldable iPhone" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone-590x332.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone-320x180.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone.jpg" data-orig-size="1280,720" data-permalink="https://iphoneislam.com/2019/04/why-apple-wait-alot-before-release-new-tech/72401/foldable-iphone" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone-120x120.jpg?x83298" title="" width="120"/>
+         </a>
+        </div>
+        <h3>
+         <a href="https://iphoneislam.com/2019/04/why-apple-wait-alot-before-release-new-tech/72401" rel="bookmark" title="رابط ثابت لـ هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟">
+          هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟
+         </a>
+        </h3>
+        <p class="post-meta">
+         21 أبريل 2019
+        </p>
+       </div>
+       <div class="related-item">
+        <div class="post-thumbnail">
+         <a href="https://iphoneislam.com/2019/04/will-apple-kill-itunes-soon-and-why/72345" rel="bookmark" title="رابط ثابت لـ هل اقتربت نهاية الآي-تيونز؟">
+          <img alt="هل اقتربت نهاية الآي-تيونز؟" class="attachment-thumbnail size-thumbnail" data-attachment-id="72346" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="itunes" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/itunes-590x332.jpeg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/itunes-320x180.jpeg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/itunes.jpeg" data-orig-size="989,556" data-permalink="https://iphoneislam.com/2019/04/will-apple-kill-itunes-soon-and-why/72345/itunes-10" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/itunes-120x120.jpeg?x83298" title="" width="120"/>
+         </a>
+        </div>
+        <h3>
+         <a href="https://iphoneislam.com/2019/04/will-apple-kill-itunes-soon-and-why/72345" rel="bookmark" title="رابط ثابت لـ هل اقتربت نهاية الآي-تيونز؟">
+          هل اقتربت نهاية الآي-تيونز؟
+         </a>
+        </h3>
+        <p class="post-meta">
+         17 أبريل 2019
+        </p>
+       </div>
+       <div class="related-item">
+        <div class="post-thumbnail">
+         <a href="https://iphoneislam.com/2019/04/why-eu-did-not-find-apple-for-antitrust-like-google/72122" rel="bookmark" title="رابط ثابت لـ لماذا لا تحاكم أبل بقضايا الاحتكار مثل جوجل؟">
+          <img alt="لماذا لا تحاكم أبل بقضايا الاحتكار مثل جوجل؟" class="attachment-thumbnail size-thumbnail" data-attachment-id="72168" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"1"}' data-image-title="google-fined-2" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/google-fined-2-590x331.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/google-fined-2-320x180.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/google-fined-2.jpg" data-orig-size="590,331" data-permalink="https://iphoneislam.com/2019/04/why-eu-did-not-find-apple-for-antitrust-like-google/72122/google-fined-2" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/google-fined-2-120x120.jpg?x83298" title="" width="120"/>
+         </a>
+        </div>
+        <h3>
+         <a href="https://iphoneislam.com/2019/04/why-eu-did-not-find-apple-for-antitrust-like-google/72122" rel="bookmark" title="رابط ثابت لـ لماذا لا تحاكم أبل بقضايا الاحتكار مثل جوجل؟">
+          لماذا لا تحاكم أبل بقضايا الاحتكار مثل جوجل؟
+         </a>
+        </h3>
+        <p class="post-meta">
+         3 أبريل 2019
+        </p>
+       </div>
+       <div class="clear">
+       </div>
+      </div>
+     </section>
+     <div id="comments">
+      <h3 id="comments-title">
+       36 تعليق
+      </h3>
+      <div class="navigation">
+       <div class="nav-previous">
+       </div>
+       <div class="nav-next">
+        <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408/comment-page-2#comments">
+         تعليقات أحدث
+         <span class="meta-nav">
+          →
+         </span>
+        </a>
+       </div>
+      </div>
+      <ol class="commentlist">
+       <li id="comment-662579">
+        <div class="comment even thread-even depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/85c82457c554dcaaf36b8c2779da322a?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/85c82457c554dcaaf36b8c2779da322a?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           عامر
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662579">
+            18 مارس 2018 في 5:20 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           اتمنى يخترعون بطارية تقعد اسبوع بعد الشحن عادي لو تتغير بعد سنة اهم شي تقعد اسبوع
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على عامر" class="comment-reply-link" data-belowelement="comment-662579" data-commentid="662579" data-postid="65408" data-respondelement="respond" href="#comment-662579" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+       </li>
+       <li id="comment-662578">
+        <div class="comment odd alt thread-odd thread-alt depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/1932af2f94dea0e5aa8ef22c74c22c0e?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/1932af2f94dea0e5aa8ef22c74c22c0e?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           Amr Yousry
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662578">
+            18 مارس 2018 في 5:09 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           لا استخدم الشحن اللسلكي و اري انها تقنيه لا فائده منها بالوضع الحال الا اذا تطورت التقنيه عن الان و ايضاً واضح من المقال انها تضر بالبطاريه و الهاتف ايضاً اري ان افضل و ءأمن شاحن هو الشاحن الاصلي الذي ياتي مع الهاتف ،، دائماً مقالات الاستاذ محمود ممتعه جداً👍👍😍
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على Amr Yousry" class="comment-reply-link" data-belowelement="comment-662578" data-commentid="662578" data-postid="65408" data-respondelement="respond" href="#comment-662578" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+        <ul class="children">
+         <li id="comment-662583">
+          <div class="comment even depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             <a class="url" href="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11273172_493482387466919_63781267_n.jpg" rel="external nofollow">
+              ⭕️نور•اللهم اغفر لوالديّ ولإخوتي⭕️
+             </a>
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662583">
+              18 مارس 2018 في 6:04 م
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             👍🏻👍🏻
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+         <li id="comment-662588">
+          <div class="comment odd alt depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/c79853df3a548116c30ae0c2e7940ee3?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/c79853df3a548116c30ae0c2e7940ee3?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             <a class="url" href="http://اركان/عساف" rel="external nofollow">
+              أركان عساف
+             </a>
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662588">
+              18 مارس 2018 في 8:15 م
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             انا معك فيما تقول فعلا هذا المقال قد يثير الريبة وانا ارى ان تقنية الشحن اللاسلكي لا تنفع الا اثناء النوم
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+         <li id="comment-662601">
+          <div class="comment even depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/3730702d76dc46c4bc07ffc48b9c0287?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/3730702d76dc46c4bc07ffc48b9c0287?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             محمــود شــــــرف
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662601">
+              19 مارس 2018 في 2:41 ص
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             استاذ عمرو
+             <br/>
+             جزاك الله خيرا على هذه الروح الطيبة
+             <br/>
+             وتحليلاتك الرائعة.
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+        </ul>
+       </li>
+       <li id="comment-662577">
+        <div class="comment odd alt thread-even depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/d6ed61e3d217a95d5972b32c518cdfc5?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/d6ed61e3d217a95d5972b32c518cdfc5?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           Mohamed Elbiali
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662577">
+            18 مارس 2018 في 4:16 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           شاحن لاسلكي من ايام اللاسلكي ولا ليها اي لازمه طالما تقيدك بهاتفك😅
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على Mohamed Elbiali" class="comment-reply-link" data-belowelement="comment-662577" data-commentid="662577" data-postid="65408" data-respondelement="respond" href="#comment-662577" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+       </li>
+       <li id="comment-662574">
+        <div class="comment even thread-odd thread-alt depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/77584f13af9e0396e8445139803d0257?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/77584f13af9e0396e8445139803d0257?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           محمود سعيد
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662574">
+            18 مارس 2018 في 2:37 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           الشحن اللاسلكي حتى الان يعتبر تقنية لا جدوى منها و كنت اتمنى ان تقدمها ابل بطريقة مختلفة وهي الشحن الاسلكي عن بعد دون الحاجة لوضع الايفون على قاعدة الشحن يعني الجهاز يشحن هو و بإيدك
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على محمود سعيد" class="comment-reply-link" data-belowelement="comment-662574" data-commentid="662574" data-postid="65408" data-respondelement="respond" href="#comment-662574" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+        <ul class="children">
+         <li id="comment-662575">
+          <div class="comment odd alt depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             <a class="url" href="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11273172_493482387466919_63781267_n.jpg" rel="external nofollow">
+              ⭕️نور•اللهم اغفر لوالديّ ولإخوتي⭕️
+             </a>
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662575">
+              18 مارس 2018 في 2:39 م
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             👍🏻👍🏻
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+        </ul>
+       </li>
+       <li id="comment-662572">
+        <div class="comment even thread-even depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/6292c462c6ae8a7f31da7b66694bd91c?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/6292c462c6ae8a7f31da7b66694bd91c?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           Armani
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662572">
+            18 مارس 2018 في 2:28 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           لحد الساعة لم اقتنع تماما بجدوى الشحن اللاسلكي عدا انها مجرد استعراض تقني من الشركات اكثر منها عملية للمستخدم ..ناهيك عن تكاليف لواحق الشحن اللاسلكي…قد تتطور التقنية و تسمح لنا بشحن لا سلكي حقيقي بحيث يشحن الهاتف و هو في يدك بعيدا عن منصة الشحن..
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على Armani" class="comment-reply-link" data-belowelement="comment-662572" data-commentid="662572" data-postid="65408" data-respondelement="respond" href="#comment-662572" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+        <ul class="children">
+         <li id="comment-662573">
+          <div class="comment odd alt depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             <a class="url" href="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11273172_493482387466919_63781267_n.jpg" rel="external nofollow">
+              ⭕️نور•اللهم اغفر لوالديّ ولإخوتي⭕️
+             </a>
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662573">
+              18 مارس 2018 في 2:32 م
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             فعلا التقنية حاليا تقيد استخدام الهاتف وتحتاج للتطوير كثيرا إلى ان تصل لمرحلة ان تكون فعلا تقنية للشحن اللاسلكي بمعنى الكلمة حيث استطيع شحن هاتفي بعيدا عن منصة الشحن👍🏻
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+        </ul>
+       </li>
+       <li id="comment-662571">
+        <div class="comment even thread-odd thread-alt depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           <a class="url" href="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11273172_493482387466919_63781267_n.jpg" rel="external nofollow">
+            ⭕️نور•اللهم اغفر لوالديّ ولإخوتي⭕️
+           </a>
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662571">
+            18 مارس 2018 في 2:28 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           غالبا اضع جميع اجهزتي من ايفون وايباد وحتى اللابتوب في الشاحن طوال اليوم سواء نائمه او مستيقظة! اظن ان هذا التصرف له اثر سلبي كبير على البطاريات
+           <br/>
+           اما بالنسبة للشحن اللاسلكي فلست من محبيه ولامن مؤيديه ابدا
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على ⭕️نور•اللهم اغفر لوالديّ ولإخوتي⭕️" class="comment-reply-link" data-belowelement="comment-662571" data-commentid="662571" data-postid="65408" data-respondelement="respond" href="#comment-662571" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+        <ul class="children">
+         <li id="comment-662602">
+          <div class="comment odd alt depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/3730702d76dc46c4bc07ffc48b9c0287?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/3730702d76dc46c4bc07ffc48b9c0287?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             محمــود شــــــرف
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662602">
+              19 مارس 2018 في 2:45 ص
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             لا بأس من وضع ربط هاتفك بالشاحن السلكي. فالبطارية تفصل تلقائيا عند اكتمال الشحن. فلا 😟 قلق من ذلك. ولعملك افعل ذلك باستمرار. وإلا فكيف اذهب الى العمل وهاتفي ما به إلا خمس في المائة 😂. لا بدّ أن يكون ١٠٠٪‏
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+         <li id="comment-662604">
+          <div class="comment even depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             <a class="url" href="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11273172_493482387466919_63781267_n.jpg" rel="external nofollow">
+              ⭕️نور•اللهم اغفر لوالديّ ولإخوتي⭕️
+             </a>
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662604">
+              19 مارس 2018 في 3:39 ص
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             صراحة فيه بأس مافيه بأس هي اصلا خربانه خربانه معي من ناحية اهتمامي بجوالي فعادي لو خرب وكان فيه ضرر حقيقي من السلكي😅
+             <br/>
+             موفّق في عملك ان شاء الله، مقالاتك اخي رائعه كالعادة👍🏻
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+         <li id="comment-662739">
+          <div class="comment odd alt depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/9085cd503dfd6c1629d76f11abc8a7fd?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/9085cd503dfd6c1629d76f11abc8a7fd?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             <a class="url" href="https://www.youtube.com/channel/UCjKkDIzCxBAAXVZYDnJQ4wA" rel="external nofollow">
+              علي حسين سالم صالح المرفدي
+             </a>
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662739">
+              23 مارس 2018 في 4:28 ص
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             ‏ايوه صحيح تطلع كلمة تتكون من حرفين بالإنجليزي عن طاقة البطارية ولكن هل تؤثر في بطارية لأن دائما استخدم هذه الميزة عندما انام اقوم بتوصيل ال iPhone والمشكلة بنفس الغرفة اللي انام فيها
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+        </ul>
+       </li>
+       <li id="comment-662568">
+        <div class="comment even thread-even depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/c066a5530d70f02facc9282c744c4b0e?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/c066a5530d70f02facc9282c744c4b0e?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           ابو محمد
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662568">
+            18 مارس 2018 في 2:10 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           طيب واللي يحط الجوال على الشاحن اذا نام طول الليل ويفصله في الصباح هل يأثر على البطاريه ؟
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على ابو محمد" class="comment-reply-link" data-belowelement="comment-662568" data-commentid="662568" data-postid="65408" data-respondelement="respond" href="#comment-662568" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+        <ul class="children">
+         <li id="comment-662569">
+          <div class="comment odd alt depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             <a class="url" href="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11273172_493482387466919_63781267_n.jpg" rel="external nofollow">
+              ⭕️نور•اللهم اغفر لوالديّ ولإخوتي⭕️
+             </a>
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662569">
+              18 مارس 2018 في 2:24 م
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             نفس السؤال👍🏻
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+         <li id="comment-662584">
+          <div class="comment even depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/564950a52b02ff3fb5580265aeb2e6c9?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/564950a52b02ff3fb5580265aeb2e6c9?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             <a class="url" href="http://ihn-lb.com" rel="external nofollow">
+              اسماعيل نصرالدين
+             </a>
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662584">
+              18 مارس 2018 في 6:15 م
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             اخي الكريم ،
+            </p>
+            <p>
+             لدى استخدام الشاحن السلكي قبل النوم .. لا يشكل ذلك ضررا كبيرا على ذلك لان الجهاز بطبيعته يفصل الشاحن بعد اكتماله..
+            </p>
+            <p>
+             اما الشحن السلكي فيحسب المقال له من الضرر اكثر في هذه الحالة
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+         <li id="comment-662590">
+          <div class="comment odd alt depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/9a4d95dfd896fa627dab4c9a3002026e?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/9a4d95dfd896fa627dab4c9a3002026e?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             Ahmedsy
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662590">
+              18 مارس 2018 في 8:47 م
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             كررت السلكي مرتين ماعاد نعرف انو افضل السلكي ولا اللاسلكي 🙂
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+         <li id="comment-662591">
+          <div class="comment even depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/c066a5530d70f02facc9282c744c4b0e?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/c066a5530d70f02facc9282c744c4b0e?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             ابو محمد
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662591">
+              18 مارس 2018 في 8:53 م
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             اخي الكريم ليتك ما تنصح احد الا وانت مركز
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+         <li id="comment-662592">
+          <div class="comment odd alt depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             <a class="url" href="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11273172_493482387466919_63781267_n.jpg" rel="external nofollow">
+              ⭕️نور•اللهم اغفر لوالديّ ولإخوتي⭕️
+             </a>
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662592">
+              18 مارس 2018 في 9:10 م
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             يا اخواني كلها حرفين اللي نسى يكتبهم قبل السلكي “لا” 😅
+             <br/>
+             صحيح انها لخبطتكم لكن نسيانها لايلغي حُسن نصيحته فشكرا له👍🏻
+             <br/>
+             واعتقد انه مع وجود اللخبطة مازال واضح ان اخر جزء من التعليق يقصد به ان (اللا سلكي) هو اكثر ضررا كما ذُكر في المقال👍🏻
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+         <li id="comment-662593">
+          <div class="comment even depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/564950a52b02ff3fb5580265aeb2e6c9?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/564950a52b02ff3fb5580265aeb2e6c9?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             <a class="url" href="http://ihn-lb.com" rel="external nofollow">
+              اسماعيل نصرالدين
+             </a>
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662593">
+              18 مارس 2018 في 9:22 م
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             اعتذر عن الخطأ الذي سقط سهوا .. وشكرا لك اخ ابو محمد على رحابة صدرك..
+            </p>
+            <p>
+             كما ذكرت الاخت نور المقطع الاخير هو ما قصدنا به الشحن اللاسلكي ..
+            </p>
+            <p>
+             نعتذر مجددا على الخطأ ..
+            </p>
+            <p>
+             مع التحية والتقدير للجميع
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+         <li id="comment-662594">
+          <div class="comment odd alt depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             <a class="url" href="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11273172_493482387466919_63781267_n.jpg" rel="external nofollow">
+              ⭕️نور•اللهم اغفر لوالديّ ولإخوتي⭕️
+             </a>
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662594">
+              18 مارس 2018 في 9:34 م
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             العفو اخي😉👍🏻
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+         <li id="comment-662598">
+          <div class="comment even depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/c066a5530d70f02facc9282c744c4b0e?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/c066a5530d70f02facc9282c744c4b0e?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             ابو محمد
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662598">
+              19 مارس 2018 في 12:03 ص
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             بارك الله فيك
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+        </ul>
+       </li>
+       <li id="comment-662567">
+        <div class="comment odd alt thread-odd thread-alt depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/5c70c627728d2a1d8a12c85a5d9292fd?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/5c70c627728d2a1d8a12c85a5d9292fd?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           رفيق الحريري
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662567">
+            18 مارس 2018 في 2:08 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           شكرا للمعلومة المفيدة ولكن هذه هي الحياة كل شي له عمر محدد وانا افضل استخدام الشاحن اللاسلكي لانه يسهل من عملي وبكل سنة اغير البطارية ب 20 يورو لامشكلة ولكن الاهم ان استمتع بالامر لان الحياة قصيرة والوقت محدود
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على رفيق الحريري" class="comment-reply-link" data-belowelement="comment-662567" data-commentid="662567" data-postid="65408" data-respondelement="respond" href="#comment-662567" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+       </li>
+       <li id="comment-662566">
+        <div class="comment even thread-even depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/e6c2556e5e48df9de79ba14a9ecfa1d1?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/e6c2556e5e48df9de79ba14a9ecfa1d1?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           <a class="url" href="http://abutaqi79@facebook.com" rel="external nofollow">
+            ابو تقي
+           </a>
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662566">
+            18 مارس 2018 في 1:53 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           مع كثرة عيوب الشحن اللاسلكي (ارتفاع السعر / رفع حرارة الهاتف / بطء الشحن / استهلاك البطارية / تقييد استخدام الهاتف …) اعتقد ان الحل بايجاد بديل للبطاريات المستخدمة اليوم ، فالموبايل لم يعد لغرض الاتصال الصوتي او التراسل فحسب … بل اصبح جهازاً ذكياً ، بل ان اقل ما يستخدم به هو الاتصال على الشريحة ، وباقي الاستخدامات كلها تستنزف البطارية التي لا تواكب سرعة تطور .
+           <br/>
+           لست مشجعاً للشحن اللاسلكي بوضعه الحالي .
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على ابو تقي" class="comment-reply-link" data-belowelement="comment-662566" data-commentid="662566" data-postid="65408" data-respondelement="respond" href="#comment-662566" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+        <ul class="children">
+         <li id="comment-662570">
+          <div class="comment odd alt depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             <a class="url" href="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11273172_493482387466919_63781267_n.jpg" rel="external nofollow">
+              ⭕️نور•اللهم اغفر لوالديّ ولإخوتي⭕️
+             </a>
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662570">
+              18 مارس 2018 في 2:24 م
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             👍🏻👍🏻👍🏻👍🏻
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+        </ul>
+       </li>
+       <li id="comment-662565">
+        <div class="comment even thread-odd thread-alt depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/a511178fd8892c030e886da7da348b70?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/a511178fd8892c030e886da7da348b70?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           يوسف الفهد
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#comment-662565">
+            18 مارس 2018 في 1:31 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           بعد 10 سنوات سنكتشف انه احد الاختراعات الغبية جداً
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على يوسف الفهد" class="comment-reply-link" data-belowelement="comment-662565" data-commentid="662565" data-postid="65408" data-respondelement="respond" href="#comment-662565" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+       </li>
+      </ol>
+      <div class="navigation">
+       <div class="nav-previous">
+       </div>
+       <div class="nav-next">
+        <a href="https://iphoneislam.com/2018/03/is-wireless-charging-bad-for-your-smartphone/65408/comment-page-2#comments">
+         تعليقات أحدث
+         <span class="meta-nav">
+          →
+         </span>
+        </a>
+       </div>
+      </div>
+      <div class="comment-respond" id="respond">
+       <h3 class="comment-reply-title" id="reply-title">
+        أضف تعليقاً
+        <small>
+         <a href="/2018/03/is-wireless-charging-bad-for-your-smartphone/65408#respond" id="cancel-comment-reply-link" rel="nofollow" style="display:none;">
+          إلغاء الرد
+         </a>
+        </small>
+       </h3>
+       <form action="https://iphoneislam.com/wp-comments-post.php" class="comment-form" id="commentform" method="post">
+        <p class="comment-notes">
+         لن يتم نشر البريد الإلكتروني . الحقول المطلوبة مشار لها بـ
+         <span class="required">
+          *
+         </span>
+        </p>
+        <p class="comment-form-comment">
+         <label for="comment">
+          التعليق
+         </label>
+         <textarea cols="45" id="comment" maxlength="65525" name="comment" required="required" rows="8"></textarea>
+        </p>
+        <p class="comment-form-author">
+         <label for="author">
+          الإسم
+         </label>
+         <span class="required">
+          *
+         </span>
+         <input aria-required="true" id="author" name="author" size="30" type="text" value=""/>
+        </p>
+        <p class="comment-form-email">
+         <label for="email">
+          البريد
+         </label>
+         <span class="required">
+          *
+         </span>
+         <input aria-required="true" id="email" name="email" size="30" type="text" value=""/>
+        </p>
+        <p class="comment-form-url">
+         <label for="url">
+          الموقع
+         </label>
+         <input id="url" name="url" size="30" type="text" value=""/>
+        </p>
+        <p class="form-submit">
+         <p class="comment-subscription-form">
+          <input id="subscribe_comments" name="subscribe_comments" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" type="checkbox" value="subscribe"/>
+          <label class="subscribe-label" for="subscribe_comments" id="subscribe-label">
+           أعلمني بمتابعة التعليقات بواسطة البريد الإلكتروني.
+          </label>
+         </p>
+         <p class="comment-subscription-form">
+          <input id="subscribe_blog" name="subscribe_blog" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" type="checkbox" value="subscribe"/>
+          <label class="subscribe-label" for="subscribe_blog" id="subscribe-blog-label">
+           أعلمني بالمواضيع الجديدة بواسطة البريد الإلكتروني.
+          </label>
+         </p>
+         <input class="submit" id="submit" name="submit" type="submit" value="أضف التعليق"/>
+         <input id="comment_post_ID" name="comment_post_ID" type="hidden" value="65408"/>
+         <input id="comment_parent" name="comment_parent" type="hidden" value="0"/>
+        </p>
+        <p style="display: none;">
+         <input id="akismet_comment_nonce" name="akismet_comment_nonce" type="hidden" value="5896d7b819"/>
+        </p>
+        <p style="display: none;">
+         <input id="ak_js" name="ak_js" type="hidden" value="18"/>
+        </p>
+       </form>
+      </div>
+     </div>
+    </div>
+    <aside id="sidebar">
+     <div class="arqam-widget-counter arq-outer-frame arq-col3">
+      <ul>
+       <li class="arq-facebook">
+        <a href="https://www.facebook.com/iPhoneIslam" target="_blank">
+         <i class="counter-icon arqicon-facebook">
+         </i>
+         <span>
+          218k
+         </span>
+         <small>
+          متابعين
+         </small>
+        </a>
+       </li>
+       <li class="arq-twitter">
+        <a href="https://twitter.com/iPhoneIslam" target="_blank">
+         <i class="counter-icon arqicon-twitter">
+         </i>
+         <span>
+          303k
+         </span>
+         <small>
+          متابعين
+         </small>
+        </a>
+       </li>
+       <li class="arq-google">
+        <a href="https://plus.google.com/115060091433152517350" target="_blank">
+         <i class="counter-icon arqicon-google-plus">
+         </i>
+         <span>
+          1٬595
+         </span>
+         <small>
+          متابعين
+         </small>
+        </a>
+       </li>
+       <li class="arq-youtube">
+        <a href="https://youtube.com/user/iPhoneIslamTube" target="_blank">
+         <i class="counter-icon arqicon-youtube">
+         </i>
+         <span>
+          15٬747
+         </span>
+         <small>
+          مشتركين
+         </small>
+        </a>
+       </li>
+       <li class="arq-posts">
+        <a href="" target="_blank">
+         <i class="counter-icon arqicon-file-text">
+         </i>
+         <span>
+          4٬276
+         </span>
+         <small>
+          إجمالي المقالات
+         </small>
+        </a>
+       </li>
+       <li class="arq-comments">
+        <a href="" target="_blank">
+         <i class="counter-icon arqicon-comments">
+         </i>
+         <span>
+          447k
+         </span>
+         <small>
+          إجمالي التعليقات
+         </small>
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="widget" id="tabbed-widget">
+      <div class="widget-container">
+       <div class="widget-top">
+        <ul class="tabs posts-taps">
+         <li class="tabs">
+          <a href="#tab1">
+           الأخيرة
+          </a>
+         </li>
+         <li class="tabs">
+          <a href="#tab2">
+           مميز
+          </a>
+         </li>
+         <li class="tabs">
+          <a href="#tab3">
+           تعليقات
+          </a>
+         </li>
+         <li class="tabs" style="margin-left:0">
+          <a href="#tab4">
+           الوسوم
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="tabs-wrap" id="tab1">
+        <ul>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2019/04/how-to-hide-iphone-notch-in-second/72444" rel="bookmark" title="رابط ثابت لـ إخفاء النوتش بطريقة ذكية وفي ثوان معدودة">
+            <img alt="إخفاء النوتش بطريقة ذكية وفي ثوان معدودة" class="attachment-thumbnail size-thumbnail" data-attachment-id="72447" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="denotchify-iphone-x-wallpaper-notch" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/denotchify-iphone-x-wallpaper-notch-590x310.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/denotchify-iphone-x-wallpaper-notch-320x168.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/denotchify-iphone-x-wallpaper-notch.jpg" data-orig-size="1200,630" data-permalink="https://iphoneislam.com/2019/04/how-to-hide-iphone-notch-in-second/72444/denotchify-iphone-x-wallpaper-notch" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/denotchify-iphone-x-wallpaper-notch-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2019/04/how-to-hide-iphone-notch-in-second/72444">
+            إخفاء النوتش بطريقة ذكية وفي ثوان معدودة
+           </a>
+          </h3>
+          <span class="date">
+           24 أبريل 2019
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2019/04/apple-watch-save-80-years-old-women-life/72422" rel="bookmark" title="رابط ثابت لـ ساعة أبل تنقذ سيدة تبلغ من العمر 80 عاما!">
+            <img alt="ساعة أبل تنقذ سيدة تبلغ من العمر 80 عاما!" class="attachment-thumbnail size-thumbnail" data-attachment-id="72439" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Elderly-woman-falling-down-0" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/Elderly-woman-falling-down-0-590x434.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/Elderly-woman-falling-down-0-320x236.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/Elderly-woman-falling-down-0.jpg" data-orig-size="1280,942" data-permalink="https://iphoneislam.com/2019/04/apple-watch-save-80-years-old-women-life/72422/elderly-woman-falling-down-0" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/Elderly-woman-falling-down-0-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2019/04/apple-watch-save-80-years-old-women-life/72422">
+            ساعة أبل تنقذ سيدة تبلغ من العمر 80 عاما!
+           </a>
+          </h3>
+          <span class="date">
+           23 أبريل 2019
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2019/04/leaks-for-next-iphone-design/72415" rel="bookmark" title="رابط ثابت لـ تسريب قوالب أجهزة آي-فون 2019 XI و XI Max">
+            <img alt="تسريب قوالب أجهزة آي-فون 2019 XI و XI Max" class="attachment-thumbnail size-thumbnail" data-attachment-id="72416" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="iphonexi" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/iphonexi-590x457.png" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/iphonexi-320x248.png" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/iphonexi.png" data-orig-size="960,743" data-permalink="https://iphoneislam.com/2019/04/leaks-for-next-iphone-design/72415/iphonexi" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/iphonexi-120x120.png?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2019/04/leaks-for-next-iphone-design/72415">
+            تسريب قوالب أجهزة آي-فون 2019 XI و XI Max
+           </a>
+          </h3>
+          <span class="date">
+           22 أبريل 2019
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2019/04/why-apple-wait-alot-before-release-new-tech/72401" rel="bookmark" title="رابط ثابت لـ هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟">
+            <img alt="هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟" class="attachment-thumbnail size-thumbnail" data-attachment-id="72412" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Foldable iPhone" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone-590x332.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone-320x180.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone.jpg" data-orig-size="1280,720" data-permalink="https://iphoneislam.com/2019/04/why-apple-wait-alot-before-release-new-tech/72401/foldable-iphone" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2019/04/why-apple-wait-alot-before-release-new-tech/72401">
+            هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟
+           </a>
+          </h3>
+          <span class="date">
+           21 أبريل 2019
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2019/04/shortcuts-with-long-touch-in-iphone/72397" rel="bookmark" title="رابط ثابت لـ للمبتدئين: اختصارات اللمس المطول في مركز التحكم">
+            <img alt="للمبتدئين: اختصارات اللمس المطول في مركز التحكم" class="attachment-thumbnail size-thumbnail" data-attachment-id="72399" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Apple CC" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/Apple-CC-590x372.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/Apple-CC-320x202.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/Apple-CC.jpg" data-orig-size="1400,882" data-permalink="https://iphoneislam.com/2019/04/shortcuts-with-long-touch-in-iphone/72397/apple-cc" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/Apple-CC-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2019/04/shortcuts-with-long-touch-in-iphone/72397">
+            للمبتدئين: اختصارات اللمس المطول في مركز التحكم
+           </a>
+          </h3>
+          <span class="date">
+           20 أبريل 2019
+          </span>
+         </li>
+        </ul>
+       </div>
+       <div class="tabs-wrap" id="tab2">
+        <ul>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2018/08/what-is-802-11n-update-that-make-iphone-update-free/67839" rel="bookmark" title="رابط ثابت لـ قصة تحديث 802.11n التي جعلت تحديثات الآي فون مجانية">
+            <img alt="قصة تحديث 802.11n التي جعلت تحديثات الآي فون مجانية" class="attachment-thumbnail size-thumbnail" data-attachment-id="67843" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="iOS Update" data-large-file="https://iphoneislam.com/wp-content/uploads/2018/08/iOS-Update-590x310.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2018/08/iOS-Update-320x168.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2018/08/iOS-Update.jpg" data-orig-size="590,310" data-permalink="https://iphoneislam.com/2018/08/what-is-802-11n-update-that-make-iphone-update-free/67839/ios-update" height="120" src="https://iphoneislam.com/wp-content/uploads/2018/08/iOS-Update-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2018/08/what-is-802-11n-update-that-make-iphone-update-free/67839">
+            قصة تحديث 802.11n التي جعلت تحديثات الآي فون مجانية
+           </a>
+          </h3>
+          <span class="date">
+           6 أغسطس 2018
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2018/06/every-company-steal-each-other/67122" rel="bookmark" title="رابط ثابت لـ آبل، جوجل، سامسونج: من أكثر سرقة للأفكار؟">
+            <img alt="آبل، جوجل، سامسونج: من أكثر سرقة للأفكار؟" class="attachment-thumbnail size-thumbnail" data-attachment-id="67159" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Apple-and-google-and-samsung-oh-my" data-large-file="https://iphoneislam.com/wp-content/uploads/2018/06/Apple-and-google-and-samsung-oh-my-443x590.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2018/06/Apple-and-google-and-samsung-oh-my-320x427.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2018/06/Apple-and-google-and-samsung-oh-my.jpg" data-orig-size="720,960" data-permalink="https://iphoneislam.com/2018/06/every-company-steal-each-other/67122/apple-and-google-and-samsung-oh-my" height="120" src="https://iphoneislam.com/wp-content/uploads/2018/06/Apple-and-google-and-samsung-oh-my-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2018/06/every-company-steal-each-other/67122">
+            آبل، جوجل، سامسونج: من أكثر سرقة للأفكار؟
+           </a>
+          </h3>
+          <span class="date">
+           20 يونيو 2018
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2018/05/what-fines-did-not-stop-companies-from-copying-patents/66636" rel="bookmark" title="رابط ثابت لـ لماذا لا تردع قضايا التعويضات الشركات حقاً؟">
+            <img alt="لماذا لا تردع قضايا التعويضات الشركات حقاً؟" class="attachment-thumbnail size-thumbnail" data-attachment-id="66640" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"intheskies - Fotolia","camera":"","caption":"Abstract word cloud for Patent war with related tags and terms","created_timestamp":"0","copyright":"intheskies - Fotolia","focal_length":"0","iso":"0","shutter_speed":"0","title":"Word cloud for Patent war","orientation":"1"}' data-image-title="Word cloud for Patent war" data-large-file="https://iphoneislam.com/wp-content/uploads/2018/05/Patent-war-590x393.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2018/05/Patent-war-320x213.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2018/05/Patent-war.jpg" data-orig-size="590,393" data-permalink="https://iphoneislam.com/2018/05/what-fines-did-not-stop-companies-from-copying-patents/66636/word-cloud-for-patent-war" height="120" src="https://iphoneislam.com/wp-content/uploads/2018/05/Patent-war-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2018/05/what-fines-did-not-stop-companies-from-copying-patents/66636">
+            لماذا لا تردع قضايا التعويضات الشركات حقاً؟
+           </a>
+          </h3>
+          <span class="date">
+           29 مايو 2018
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2018/01/big-data-between-prediction-and-ethical-problems/64172" rel="bookmark" title="رابط ثابت لـ البيانات الضخمة، بين التنبؤ والمشاكل الأخلاقية">
+            <img alt="البيانات الضخمة، بين التنبؤ والمشاكل الأخلاقية" class="attachment-thumbnail size-thumbnail" data-attachment-id="64173" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Data-Science-vs.-Big-Data-vs" data-large-file="https://iphoneislam.com/wp-content/uploads/2018/01/Data-Science-vs.-Big-Data-vs-590x332.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2018/01/Data-Science-vs.-Big-Data-vs-320x180.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2018/01/Data-Science-vs.-Big-Data-vs.jpg" data-orig-size="848,477" data-permalink="https://iphoneislam.com/2018/01/big-data-between-prediction-and-ethical-problems/64172/data-science-vs-big-data-vs" height="120" src="https://iphoneislam.com/wp-content/uploads/2018/01/Data-Science-vs.-Big-Data-vs-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2018/01/big-data-between-prediction-and-ethical-problems/64172">
+            البيانات الضخمة، بين التنبؤ والمشاكل الأخلاقية
+           </a>
+          </h3>
+          <span class="date">
+           8 يناير 2018
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2017/03/who-will-win-in-tech-company-country-war/58714" rel="bookmark" title="رابط ثابت لـ من ينتصر في صراع الشركات والحكومات">
+            <img alt="من ينتصر في صراع الشركات والحكومات" class="attachment-thumbnail size-thumbnail" data-attachment-id="58717" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"1"}' data-image-title="World" data-large-file="https://iphoneislam.com/wp-content/uploads/2017/03/World-590x393.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2017/03/World-280x187.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2017/03/World.jpg" data-orig-size="590,393" data-permalink="https://iphoneislam.com/2017/03/who-will-win-in-tech-company-country-war/58714/world" height="70" src="https://iphoneislam.com/wp-content/uploads/2017/03/World-70x70.jpg?x83298" title="" width="70"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2017/03/who-will-win-in-tech-company-country-war/58714">
+            من ينتصر في صراع الشركات والحكومات
+           </a>
+          </h3>
+          <span class="date">
+           20 مارس 2017
+          </span>
+         </li>
+        </ul>
+       </div>
+       <div class="tabs-wrap" id="tab3">
+        <ul>
+         <li>
+          <div class="post-thumbnail">
+           <img alt="" class="avatar avatar-50 photo" height="50" src="https://secure.gravatar.com/avatar/6292c462c6ae8a7f31da7b66694bd91c?s=50&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/6292c462c6ae8a7f31da7b66694bd91c?s=100&amp;d=mm&amp;r=g 2x" width="50"/>
+          </div>
+          <a href="https://iphoneislam.com/2019/04/how-to-hide-iphone-notch-in-second/72444#comment-690314">
+           Armani: إلى الأخ ناصر الزيادي هذا الاختصار يغنيك عن البحث.....يحمل ا...
+          </a>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <img alt="" class="avatar avatar-50 photo" height="50" src="https://secure.gravatar.com/avatar/4cbba28ff5952387df8e5cf8f182bca3?s=50&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/4cbba28ff5952387df8e5cf8f182bca3?s=100&amp;d=mm&amp;r=g 2x" width="50"/>
+          </div>
+          <a href="https://iphoneislam.com/2019/04/apple-watch-save-80-years-old-women-life/72422#comment-690313">
+           mustapha phone: الضسارة الخاوية ومن طلب من الطريقة أصلا.. أنا أعرف الطريقة ا...
+          </a>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <img alt="" class="avatar avatar-50 photo" height="50" src="https://secure.gravatar.com/avatar/d0d4b7ecc2a2442427984b7dcd757bcb?s=50&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/d0d4b7ecc2a2442427984b7dcd757bcb?s=100&amp;d=mm&amp;r=g 2x" width="50"/>
+          </div>
+          <a href="https://iphoneislam.com/2019/04/how-to-hide-iphone-notch-in-second/72444#comment-690310">
+           ناصر الزيادي: ان شاء الله 🌹🌹...
+          </a>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <img alt="" class="avatar avatar-50 photo" height="50" src="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=50&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=100&amp;d=mm&amp;r=g 2x" width="50"/>
+          </div>
+          <a href="https://iphoneislam.com/2019/04/how-to-hide-iphone-notch-in-second/72444#comment-690309">
+           نور وسام: مشكورين جدا...
+          </a>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <img alt="" class="avatar avatar-50 photo" height="50" src="https://secure.gravatar.com/avatar/f38c18fe2e821edc945a330336404761?s=50&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/f38c18fe2e821edc945a330336404761?s=100&amp;d=mm&amp;r=g 2x" width="50"/>
+          </div>
+          <a href="https://iphoneislam.com/2019/04/apple-watch-save-80-years-old-women-life/72422#comment-690308">
+           adil: شكرا لكم على هذا الموضوع الجميل...
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="tabs-wrap tagcloud" id="tab4">
+        <a class="tag-cloud-link tag-link-42 tag-link-position-1" href="https://iphoneislam.com/tag/appstore" style="font-size: 8pt;">
+         متجر البرامج
+        </a>
+        <a class="tag-cloud-link tag-link-207 tag-link-position-2" href="https://iphoneislam.com/tag/%d8%a3%d8%a8%d9%84" style="font-size: 8pt;">
+         أبل
+        </a>
+        <a class="tag-cloud-link tag-link-95 tag-link-position-3" href="https://iphoneislam.com/tag/ios" style="font-size: 8pt;">
+         iOS
+        </a>
+        <a class="tag-cloud-link tag-link-24 tag-link-position-4" href="https://iphoneislam.com/tag/apple" style="font-size: 8pt;">
+         آبل
+        </a>
+        <a class="tag-cloud-link tag-link-85 tag-link-position-5" href="https://iphoneislam.com/tag/video" style="font-size: 8pt;">
+         فيديو
+        </a>
+        <a class="tag-cloud-link tag-link-203 tag-link-position-6" href="https://iphoneislam.com/tag/side-news" style="font-size: 8pt;">
+         على الهامش
+        </a>
+        <a class="tag-cloud-link tag-link-49 tag-link-position-7" href="https://iphoneislam.com/tag/accessories" style="font-size: 8pt;">
+         ملحقات
+        </a>
+        <a class="tag-cloud-link tag-link-40 tag-link-position-8" href="https://iphoneislam.com/tag/info" style="font-size: 8pt;">
+         معلومات
+        </a>
+        <a class="tag-cloud-link tag-link-67 tag-link-position-9" href="https://iphoneislam.com/tag/google" style="font-size: 8pt;">
+         جوجل
+        </a>
+        <a class="tag-cloud-link tag-link-76 tag-link-position-10" href="https://iphoneislam.com/tag/gamesstore" style="font-size: 8pt;">
+         متجر الألعاب
+        </a>
+        <a class="tag-cloud-link tag-link-23 tag-link-position-11" href="https://iphoneislam.com/tag/our_exclusive" style="font-size: 8pt;">
+         حصري
+        </a>
+        <a class="tag-cloud-link tag-link-21 tag-link-position-12" href="https://iphoneislam.com/tag/hackers" style="font-size: 8pt;">
+         هاكرز
+        </a>
+        <a class="tag-cloud-link tag-link-197 tag-link-position-13" href="https://iphoneislam.com/tag/samsung" style="font-size: 8pt;">
+         سامسونج
+        </a>
+        <a class="tag-cloud-link tag-link-52 tag-link-position-14" href="https://iphoneislam.com/tag/creativity" style="font-size: 8pt;">
+         الإبداع
+        </a>
+        <a class="tag-cloud-link tag-link-199 tag-link-position-15" href="https://iphoneislam.com/tag/conferences" style="font-size: 8pt;">
+         مؤتمرات
+        </a>
+        <a class="tag-cloud-link tag-link-37 tag-link-position-16" href="https://iphoneislam.com/tag/tricks" style="font-size: 8pt;">
+         حيل
+        </a>
+        <a class="tag-cloud-link tag-link-29 tag-link-position-17" href="https://iphoneislam.com/tag/arabic_apps" style="font-size: 8pt;">
+         برامج عربية
+        </a>
+        <a class="tag-cloud-link tag-link-45 tag-link-position-18" href="https://iphoneislam.com/tag/cydia" style="font-size: 8pt;">
+         سيديا
+        </a>
+        <a class="tag-cloud-link tag-link-43 tag-link-position-19" href="https://iphoneislam.com/tag/android" style="font-size: 8pt;">
+         أندرويد
+        </a>
+        <a class="tag-cloud-link tag-link-90 tag-link-position-20" href="https://iphoneislam.com/tag/beginer" style="font-size: 8pt;">
+         مبتدئين
+        </a>
+        <a class="tag-cloud-link tag-link-93 tag-link-position-21" href="https://iphoneislam.com/tag/ipad" style="font-size: 8pt;">
+         آي-باد
+        </a>
+        <a class="tag-cloud-link tag-link-382 tag-link-position-22" href="https://iphoneislam.com/tag/%d8%a8%d8%b1%d8%a7%d9%85%d8%ac-%d9%85%d8%ac%d8%a7%d9%86%d9%8a%d8%a9" style="font-size: 8pt;">
+         برامج مجانية
+        </a>
+        <a class="tag-cloud-link tag-link-25 tag-link-position-23" href="https://iphoneislam.com/tag/islamic_apps" style="font-size: 8pt;">
+         برامج إسلامية
+        </a>
+        <a class="tag-cloud-link tag-link-89 tag-link-position-24" href="https://iphoneislam.com/tag/itunes" style="font-size: 8pt;">
+         أيتيونز
+        </a>
+        <a class="tag-cloud-link tag-link-134 tag-link-position-25" href="https://iphoneislam.com/tag/photo_apps" style="font-size: 8pt;">
+         برامج الصور
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="transparent-widget widget">
+      <div class="social-icons">
+       <a class="ttip" href="https://iphoneislam.com/feed" target="_blank" title="Rss">
+        <img alt="RSS" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/rss_32.png?x83298"/>
+       </a>
+       <a class="ttip" href="https://plus.google.com/+iphoneislam/" target="_blank" title="Google+">
+        <img alt="Google+" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/google_plus_32.png?x83298"/>
+       </a>
+       <a class="ttip" href="https://www.facebook.com/iphoneislam" target="_blank" title="Facebook">
+        <img alt="Facebook" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/facebook_32.png?x83298"/>
+       </a>
+       <a class="ttip" href="https://www.twitter.com/iphoneislam" target="_blank" title="Twitter">
+        <img alt="Twitter" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/twitter_32.png?x83298"/>
+       </a>
+       <a class="ttip" href="https://www.linkedin.com/company/iphoneislam" target="_blank" title="LinkedIn">
+        <img alt="LinkedIn" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/linkedin_32.png?x83298"/>
+       </a>
+       <a class="ttip" href="https://www.youtube.com/iphoneislamtube" target="_blank" title="Youtube">
+        <img alt="YouTube" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/youtube_32.png?x83298"/>
+       </a>
+       <a class="ttip" href="https://www.instagram.com/iphoneislam/" target="_blank" title="instagram">
+        <img alt="instagram" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/instagram_32.png?x83298"/>
+       </a>
+      </div>
+     </div>
+     <div class="widget facebook-widget" id="facebook-widget-2">
+      <h4 class="widget-top">
+       تابعنا على فيسبوك
+      </h4>
+      <div class="facebook-box">
+       <iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/iphoneislam&amp;width=260&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false&amp;height=210" style="background:#FFF; border:none; overflow:hidden; width:260px; height:210px;">
+       </iframe>
+      </div>
+     </div>
+     <div class="widget widget_text" id="text-2">
+      <h4 class="widget-top">
+       تابعنا على تويتر
+      </h4>
+      <div class="textwidget">
+       <center>
+        <a class="twitter-follow-button" data-lang="ar" data-show-count="false" href="https://twitter.com/iPhoneIslam">
+         تابِع @iPhoneIslam
+        </a>
+        <script type="99c56f9ae426c206f7857b00-text/javascript">
+         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        </script>
+        <br/>
+        <a class="twitter-follow-button" data-lang="ar" data-show-count="false" href="https://twitter.com/App3ad">
+         تابِع @App3ad
+        </a>
+        <script type="99c56f9ae426c206f7857b00-text/javascript">
+         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        </script>
+        <br/>
+        <a class="twitter-follow-button" data-lang="ar" data-show-count="false" href="https://twitter.com/iTarek">
+         تابِع @iTarek
+        </a>
+        <script type="99c56f9ae426c206f7857b00-text/javascript">
+         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        </script>
+        <center>
+        </center>
+       </center>
+      </div>
+     </div>
+     <div class="widget widget_text" id="text-5">
+      <h4 class="widget-top">
+       اشترك في القائمة البريدية
+      </h4>
+      <div class="textwidget">
+       <div align="center">
+        <form action="https://feedburner.google.com/fb/a/mailverify" data-cf-modified-99c56f9ae426c206f7857b00-="" method="post" onsubmit="if (!window.__cfRLUnblockHandlers) return false; window.open('https://feedburner.google.com/fb/a/mailverify?uri=iphoneislam/rss', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="border:1px solid #ccc;padding:3px;text-align:center;" target="popupwindow">
+         <p>
+          ادخل بريدك الاكتروني:
+         </p>
+         <p>
+          <input name="email" style="width:140px" type="text"/>
+         </p>
+         <input name="uri" type="hidden" value="iphoneislam/rss"/>
+         <input name="loc" type="hidden" value="en_US"/>
+         <input type="submit" value="“اشترك”"/>
+         <p>
+          Delivered by
+          <a href="https://feedburner.google.com" target="_blank">
+           FeedBurner
+          </a>
+         </p>
+        </form>
+       </div>
+      </div>
+     </div>
+     <div class="widget widget_text" id="text-4">
+      <h4 class="widget-top">
+       نزل تطبيق آي-فون إسلام الان
+      </h4>
+      <div class="textwidget">
+       <div align="center">
+        <iframe frameborder="1" src="https://banners.itunes.apple.com/banner.html?partnerId=&amp;aId=11l7wK&amp;id=362375140&amp;c=eg&amp;l=en-GB&amp;bt=catalog&amp;t=catalog_white&amp;w=180&amp;h=150" style="overflow-x:hidden;overflow-y:hidden;width:100%;height:150px;border:1px">
+        </iframe>
+       </div>
+      </div>
+     </div>
+     <div class="widget widget_text" id="text-3">
+      <h4 class="widget-top">
+       نزل تطبيق آب-عاد الان
+      </h4>
+      <div class="textwidget">
+       <div align="center">
+        <iframe frameborder="1" src="https://banners.itunes.apple.com/banner.html?partnerId=&amp;aId=11l7wK&amp;id=546419082&amp;c=eg&amp;l=en-GB&amp;bt=catalog&amp;t=catalog_white&amp;w=180&amp;h=150" style="overflow-x:hidden;overflow-y:hidden;width:100%;height:150px;border:1px">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </aside>
+    <div class="clear">
+    </div>
+   </div>
+   <footer id="footer2">
+    <div class="footer-1c" id="footer-widget-area">
+     <div class="footer-widgets-box" id="footer-first">
+      <div class="text-html-box" style="text-align:center;">
+       <div class="i4s-apps">
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=586106611" original-title="إلى صلاتي" target="_blank">
+         <img src="//iphoneislam.com/wp-content/uploads/2013/06/Ela-Salaty_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=588904998" original-title="محرر الصور" target="_blank">
+         <img src="//iphoneislam.com/wp-content/uploads/2013/05/Arabic-PhotoEdiotr-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=553297278" original-title="إرسم ولون" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/11/Ersm-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=578102003" original-title="أصحاب تيمو" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/11/Timo-iPad-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=508695339" original-title="لعبة حروف مبعثرة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/09/Scattered-Letters-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=546419082" original-title="آب-عاد" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/01/App3ad-Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=562891153" original-title="الرسائل الملونة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/10/ColorMessages-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=543646326" original-title="الفانوس - محرك بحث قرآني متقدم" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/04/Alfanous_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=518698206" original-title="أصحاب تيمو - الاحترام" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/05/Timo-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=509064341" original-title="القبلة في الواقع الإفتراضي" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/02/Qibla-AR_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=485534181" original-title="قاموس آي-فون إسلام" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/12/Dic-Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=474299392" original-title="كلمات متقاطعة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/11/CrossWord_AR_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=466715015" original-title="الساعة الناطقة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/10/ArabicClock00-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=437140234" original-title="اقتباس" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/09/Quote00-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=453617439" original-title="أبو يوسف" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/08/AbuYoussef-Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=455069146" original-title="الفتوى" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/08/ALFatwa_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=439416454" original-title="مفكرتي الشخصية" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/05/mofakerty-icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=420375781" original-title="لعبة شباب الثورة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/05/Thawra_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=434105489" original-title="الشيخ محمد حسين يعقوب" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/04/Droos_Yaqoob-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=406975865" original-title="الرجل المشنوق" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/03/HangMan_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=419746550" original-title="الأحاديث غير الصحيحة المنتشرة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/02/Weak-Hadiths-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=413856661" original-title="آي4إسلام راديو" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/01/i4islam_radio-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=405843449" original-title="الأسماء" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/12/Names_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=388188730" original-title="تكلم" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/11/EtkalemAppIcon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=386599485" original-title="بطاقات إسلامية" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/08/IslamicCards_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=362375140" original-title="زامن" target="_blank">
+         <img src="//iphoneislam.com/wp-content/uploads/2016/03/ZamenIcon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=564948137" original-title="معلوماتك الشاملة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/03/M3lomatk-AlShamla-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=328962407" original-title="المصحف" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/06/AlMushaf-114-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=355812042" original-title="This is Mohammad" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/02/ThisIsMohammad_Icon.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=335067636" original-title="التقويم الإسلامي المطور" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/11/IslamicCalendar_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=318480521" original-title="هل تعلم ؟" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/01/DoYouKnowIcon.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=301048982" original-title="آي أذكار" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/04/iazkar-70x70.png?x83298"/>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="clear">
+    </div>
+   </footer>
+   <div class="clear">
+   </div>
+   <div class="footer-bottom">
+    <div class="container">
+     <p class="footer-hint">
+      <img alt="" src="//iphoneislam.com/images/mimv.png?x83298"/>
+      <br>
+       نحن لا نتحمل أي مسؤولية لأية اساءة في استعمال المعلومات المذكورة اعلاه. آي-فون إسلام لا ينتمي ولا يمثل شركة آبل. اي-فون و آبل واسم اي منتج آخر، واسماء الخدمات أو الشعارات المشار اليها هنا هي علامات تجارية او علامات تجارية مسجلة للابل كمبيوتر.
+      </br>
+     </p>
+     <div class="alignright">
+      <div style="font-family: Tahoma;">
+       كافة الحقوق محفوظة لموقع آي-فون إسلام © 2007-2017
+      </div>
+     </div>
+     <div class="alignleft">
+      <div style="font-family: Tahoma;">
+       تصميم:
+       <a href="http://www.mo3aser.com/?p=2650" target="_blank">
+        المُعاصر
+       </a>
+       | إدارة الخوادم:
+       <a href="http://www.arabhosters.com/" target="_blank">
+        المستضيفون العرب
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="scrollToTop">
+    إلى الأعلى
+   </div>
+  </div>
+  <script type="99c56f9ae426c206f7857b00-text/javascript">
+   !function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = '//platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+  </script>
+  <script type="99c56f9ae426c206f7857b00-text/javascript">
+   var skimlinks_domain = "go.iphoneislam.com";
+  </script>
+  <script src="//s.skimresources.com/js/101755X1557917.skimlinks.js" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <style type="text/css">
+   #airpress_debugger {
+				width:100%;
+				font-family: monospace;
+				padding:50px;
+				font-size: 12px;
+				padding-top:100px;
+				display:none;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				color:#000000;
+				background-color: #f7f7f7;
+				z-index:99998;
+			}
+
+			#airpress_debugger .expander {
+				color: blue !important;
+			}
+			#airpress_debugger .expandable {
+				padding: 20px;
+				border: 1px dashed #cccccc;
+				display: none;
+				white-space: pre-wrap;
+			}
+  </style>
+  <script type="99c56f9ae426c206f7857b00-text/javascript">
+   jQuery(document).ready(function(){
+			jQuery("#wp-admin-bar-airpress_debugger_toggle").click(function(e){
+				e.preventDefault();
+				jQuery("#airpress_debugger").toggle();
+				jQuery('html, body').animate({ scrollTop: 0 }, 'fast');
+			});
+
+			jQuery(".expander").click(function(e){
+				e.preventDefault();
+				jQuery(this).next().fadeToggle();
+			});
+		});
+  </script>
+  <div id="airpress_debugger">
+  </div>
+  <script data-dojo-config="usePlainJson: true, isDebug: false" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script type="99c56f9ae426c206f7857b00-text/javascript">
+   window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us5.list-manage.com","uuid":"90b555c783e78894291585a39","lid":"869f7bc943","uniqueMethods":true}) })
+  </script>
+  <script type="99c56f9ae426c206f7857b00-text/javascript">
+   window.WPCOM_sharing_counts = {"https:\/\/iphoneislam.com\/2018\/03\/is-wireless-charging-bad-for-your-smartphone\/65408":65408};
+  </script>
+  <div id="sharing_email" style="display: none;">
+   <form action="/2018/03/is-wireless-charging-bad-for-your-smartphone/65408" method="post">
+    <label for="target_email">
+     إرسال إلى بريد إلكتروني
+    </label>
+    <input id="target_email" name="target_email" type="email" value=""/>
+    <label for="source_name">
+     إسمك
+    </label>
+    <input id="source_name" name="source_name" type="text" value=""/>
+    <label for="source_email">
+     بريدك الإلكتروني
+    </label>
+    <input id="source_email" name="source_email" type="email" value=""/>
+    <input autocomplete="off" class="input" id="jetpack-source_f_name" name="source_f_name" size="25" title="هذا الحقل مخصص للتحقق من الصحة ولا ينبغي تغييره" type="text" value=""/>
+    <img alt="loading" class="loading" height="16" src="https://iphoneislam.com/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif?x83298" style="float: right; display: none" width="16">
+     <input class="sharing_send" type="submit" value="إرسال بريد إلكتروني"/>
+     <a class="sharing_cancel" href="#cancel" rel="nofollow" role="button">
+      إلغاء
+     </a>
+     <div class="errors errors-1" style="display: none;">
+      لم يتم إرسال الموضوع - تحقق من عناوين بريدك الإلكترونية!
+     </div>
+     <div class="errors errors-2" style="display: none;">
+      فشل التأكد من البريد الإلكتروني، من فضلك أعد المحاولة
+     </div>
+     <div class="errors errors-3" style="display: none;">
+      عفواً، لا يستطيع موقعك مشاركة المواضيع من خلال البريد الإلكتروني.
+     </div>
+    </img>
+   </form>
+  </div>
+  <script src="https://iphoneislam.com/wp-content/plugins/arqam/assets/js/scripts.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201917" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script type="99c56f9ae426c206f7857b00-text/javascript">
+   /* <![CDATA[ */
+var superpwa_sw = {"url":"\/OneSignalSDKWorker.js.php"};
+/* ]]> */
+  </script>
+  <script src="https://iphoneislam.com/wp-content/plugins/super-progressive-web-apps/public/js/register-sw.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script src="https://iphoneislam.com/wp-includes/js/comment-reply.min.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script src="https://iphoneislam.com/wp-includes/js/wp-embed.min.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script src="https://iphoneislam.com/wp-content/plugins/jetpack/_inc/build/spin.min.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script src="https://iphoneislam.com/wp-content/plugins/jetpack/_inc/build/jquery.spin.min.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script type="99c56f9ae426c206f7857b00-text/javascript">
+   /* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"ar","ajaxurl":"https:\/\/iphoneislam.com\/wp-admin\/admin-ajax.php","nonce":"5b31c7fef5","display_exif":"0","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"\u062a\u0639\u0644\u064a\u0642","post_comment":"\u0623\u0636\u0641 \u062a\u0639\u0644\u064a\u0642\u0627\u064b","write_comment":"\u0627\u0643\u062a\u0628 \u062a\u0639\u0644\u064a\u0642\u0627\u064b...","loading_comments":"\u062a\u062d\u0645\u064a\u0644 \u0627\u0644\u062a\u0639\u0644\u064a\u0642\u0627\u062a...","download_original":"\u0639\u0631\u0636 \u0628\u0627\u0644\u062d\u062c\u0645 \u0627\u0644\u0643\u0627\u0645\u0644 <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"\u064a\u0631\u062c\u0649 \u0627\u0644\u062a\u0623\u0643\u062f \u0645\u0646 \u0643\u062a\u0627\u0628\u0629 \u0628\u0639\u0636 \u0627\u0644\u0646\u0635\u0648\u0635 \u062f\u0627\u062e\u0644 \u062a\u0639\u0644\u064a\u0642\u0643.","no_comment_email":"\u0631\u062c\u0627\u0621 \u0642\u0645 \u0628\u062a\u0641\u0639\u064a\u0644 \u0628\u0631\u064a\u062f\u0643 \u0627\u0644\u0627\u0644\u0643\u062a\u0631\u0648\u0646\u064a \u0644\u0648\u0636\u0639 \u062a\u0639\u0644\u064a\u0642\u0643.","no_comment_author":"\u0631\u062c\u0627\u0621 \u0642\u0645 \u0628\u062a\u0641\u0639\u064a\u0644 \u0623\u0633\u0645\u0643 \u0644\u0648\u0636\u0639 \u062a\u0639\u0644\u064a\u0642\u0643.","comment_post_error":"\u0639\u0641\u0648\u0627\u064b\u060c \u0644\u0643\u0646 \u0647\u0646\u0627\u0643 \u0645\u0634\u0643\u0644\u0629 \u0628\u0646\u0634\u0631 \u062a\u0639\u0644\u064a\u0642\u0643. \u064a\u0631\u062c\u0649 \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649 \u0644\u0627\u062d\u0642\u0627\u064b.","comment_approved":"\u062a\u0645\u062a \u0627\u0644\u0645\u0648\u0627\u0641\u0642\u0629 \u0639\u0644\u0649 \u062a\u0639\u0644\u064a\u0642\u0643.","comment_unapproved":"\u062a\u0639\u0644\u064a\u0642\u0643 \u0628\u062d\u0627\u062c\u0629 \u0644\u0645\u0648\u0627\u0641\u0642\u0629 \u0627\u0644\u0645\u062f\u064a\u0631.","camera":"\u0627\u0644\u0643\u0627\u0645\u064a\u0631\u0627","aperture":"\u0641\u062a\u062d\u0629 \u0627\u0644\u0639\u062f\u0633\u0629","shutter_speed":"\u0633\u0631\u0639\u0629 \u0627\u0644\u063a\u0627\u0644\u0642","focal_length":"\u0627\u0644\u0628\u0639\u062f \u0627\u0644\u0628\u0624\u0631\u064a","copyright":"\u062d\u0642\u0648\u0642 \u0627\u0644\u0646\u0634\u0631","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/iphoneislam.com\/wp-login.php?redirect_to=https%3A%2F%2Fiphoneislam.com%2F2018%2F03%2Fis-wireless-charging-bad-for-your-smartphone%2F65408","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">\u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a (\u0645\u0637\u0644\u0648\u0628)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">\u0627\u0644\u0627\u0633\u0645 (\u0645\u0637\u0644\u0648\u0628)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">\u0627\u0644\u0645\u0648\u0642\u0639<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>"};
+/* ]]> */
+  </script>
+  <script src="https://iphoneislam.com/wp-content/plugins/jetpack/_inc/build/carousel/jetpack-carousel.min.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script src="https://iphoneislam.com/wp-content/plugins/jetpack/_inc/build/postmessage.min.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script src="https://iphoneislam.com/wp-content/plugins/jetpack/_inc/build/jquery.jetpack-resize.min.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script src="https://iphoneislam.com/wp-content/plugins/jetpack/_inc/build/likes/queuehandler.min.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script async="async" src="https://iphoneislam.com/wp-content/plugins/akismet/_inc/form.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script type="99c56f9ae426c206f7857b00-text/javascript">
+   /* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+  </script>
+  <script src="https://iphoneislam.com/wp-content/plugins/jetpack/_inc/build/sharedaddy/sharing.min.js?x83298" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script type="99c56f9ae426c206f7857b00-text/javascript">
+   var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-telegram', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtelegram', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-pocket', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcompocket', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-skype', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomskype', 'menubar=1,resizable=1,width=305,height=665' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-linkedin', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-tumblr', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtumblr', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+  </script>
+  <iframe id="likes-master" name="likes-master" scrolling="no" src="https://widgets.wp.com/likes/master.html?ver=201917#ver=201917&amp;lang=ar" style="display:none;">
+  </iframe>
+  <div id="likes-other-gravatars">
+   <div class="likes-text">
+    <span>
+     %d
+    </span>
+    مدونون معجبون بهذه:
+   </div>
+   <ul class="wpl-avatars sd-like-gravatars">
+   </ul>
+  </div>
+  <script async="async" defer="defer" src="https://stats.wp.com/e-201917.js" type="99c56f9ae426c206f7857b00-text/javascript">
+  </script>
+  <script type="99c56f9ae426c206f7857b00-text/javascript">
+   _stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.2.1',blog:'64050452',post:'65408',tz:'2',srv:'iphoneislam.com'} ]);
+	_stq.push([ 'clickTrackerInit', '64050452', '65408' ]);
+  </script>
+  <script type="99c56f9ae426c206f7857b00-text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7c784b082f","applicationID":"2871506","transactionName":"Y1MHYkZXVxICVkNaDFoZJFVAX1YPTEZeXQRYUw==","queueTime":0,"applicationTime":2007,"atts":"TxQEFA5NRBw=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+  <script data-cf-settings="99c56f9ae426c206f7857b00-|49" defer="" src="https://ajax.cloudflare.com/cdn-cgi/scripts/a2bd7673/cloudflare-static/rocket-loader.min.js">
+  </script>
+ </body>
+</html>

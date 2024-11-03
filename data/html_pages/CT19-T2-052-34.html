@@ -1,0 +1,1650 @@
+<!DOCTYPE doctype html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="wikiwand" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="wikiwand" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="wikiwand" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" ng-app="wikiwand" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
+ <!--<![endif]-->
+ <head>
+  <!--header generic -->
+  <!--this is the original url for google fonts-->
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Lora:400,700,400italic,700italic|Merriweather:400italic,400,300italic,300,700,700italic|Open+Sans:300italic,400italic,700italic,700,300,400&amp;subset=latin,cyrillic-ext,greek-ext,greek,devanagari,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://chrome.google.com/webstore/detail/emffkefkbkpkgpdeeooapgaicgmcbolj" rel="chrome-webstore-item"/>
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <!--<script type="text/javascript"  src="//assets.wikiwand.com/ads.js"></script>-->
+  <link href="//assets.wikiwand.com/img/wikiwand_icon_apple.png" rel="apple-touch-icon">
+   <script>
+    function detectWidth(){
+            var w = window;
+            var d = w.document;
+            var e = d.documentElement;
+            var clientWidth = screen.width || w.innerWidth || e.offsetWidth || e.clientWidth;
+            return clientWidth;
+        }
+
+        var EXCHANGE_RATE = 1;
+        var PREBID_TIMEOUT = 1800;
+
+        if(detectWidth() < 768) PREBID_TIMEOUT = 1800;
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+
+        function initAdserver() {
+            if (pbjs.initAdserverSet) return;
+            //load GPT library here
+            loadScript('//www.googletagservices.com/tag/js/gpt.js');
+            pbjs.initAdserverSet = true;
+        }
+        setTimeout(initAdserver, PREBID_TIMEOUT);
+        var pbjs = pbjs || {};
+        pbjs.que = pbjs.que || [];
+        loadScript('//assets.wikiwand.com/js/prebid.js'); //Add Your Script Here
+
+        pbjs.que.push(function() {
+            pbjs.setConfig({
+                enableSendAllBids: true
+            });
+        });
+
+        function loadScript(scriptSrc) {
+            var script = document.createElement('script');
+            script.async=true;
+            script.type = 'text/javascript';
+            script.src = scriptSrc;
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(script, node);
+        }
+
+        pbjs.que.push(function() {
+            var adUnits = [{
+                code: 'div-gpt-ad-1527601425745-0',
+                mediaTypes: {
+                    banner: {
+                        sizes: [320, 50]
+                    }
+                },
+                bids: [
+                    {bidder: 'appnexus' ,params: {placementId: '14178733'}},
+                    {bidder: 'audienceNetwork' ,params: {placementId: '2108823939380318_2108906992705346'}}
+                ]
+            },{
+                code: 'div-gpt-ad-1527601425745-2',
+                mediaTypes: {
+                    banner: {
+                        sizes: [300, 250]
+                    }
+                },
+                bids: [
+                    {bidder: 'appnexus' ,params: {placementId: '14178714'}},
+                    {bidder: 'audienceNetwork' ,params: {placementId: '2108823939380318_2108906782705367'}}
+                ]
+            },{
+                code: 'div-gpt-ad-1527601425745-3',
+                mediaTypes: {
+                    banner: {
+                        sizes: [300, 250]
+                    }
+                },
+                bids: [
+                    {bidder: 'appnexus' ,params: {placementId: '14178714'}},
+                    {bidder: 'audienceNetwork' ,params: {placementId: '2108823939380318_2114674888795223'}}
+                ]
+            }];
+
+
+            pbjs.addAdUnits(adUnits);
+            pbjs.requestBids({
+                bidsBackHandler: function(bidResponses) {
+                    initAdserver();
+                },
+                timeout : PREBID_TIMEOUT
+            });
+
+            pbjs.bidderSettings = {
+                //standard applies to all bidders
+                standard: {
+                    adserverTargeting: [{
+                        key: "hb_bidder",
+                        val: function(bidResponse) {
+                            return bidResponse.bidderCode;
+                        }
+                    }, {
+                        key: "hb_adid",
+                        val: function(bidResponse) {
+                            return bidResponse.adId;
+                        }
+                    }, {
+                        key: "hb_pb",
+                        val: function(bidResponse) {
+                            if(bidResponse.cpm >= 20) return '20.00';
+                            return (Math.floor(bidResponse.cpm * 20) / 20).toFixed(2);
+                        }
+                    }]
+                },
+                appnexus: {
+                    bidCpmAdjustment: function (bidCpm) {
+                        return bidCpm * EXCHANGE_RATE * .90;
+                    },
+                    alwaysUseBid: true
+                },
+                audienceNetwork: {
+                    bidCpmAdjustment: function(bidCpm) {
+                        return bidCpm * EXCHANGE_RATE * .80;
+                    },
+                    alwaysUseBid: true
+                }
+            };
+        });  //end push command
+
+        // Wrapper for Adnimation, generated on 2018-10-18T03:08:23-04:00, version 2018.04.02
+        pbjs.que.push(function() {
+
+            var confiantWrap = function confiantWrap(a,b,c,d,e){function f(a){return(m(a)||"")[s]("/","_")[s]("+","-")}function g(b,c,d){var e=w+n(b)+"&d="+c,f="err__"+1*new Date;k[f]=d;var g="<"+q+" on"+t+'="void('+f+'())" '+r+'="'+e+'" type="text/java'+q+'" ></'+q+">";a[v](g)}function h(){var c=f(d+"/"+x.k.hb_bidder[0]+":"+x.k.hb_size[0]),h={wh:c,wd:l.parse(l[u](x)),wr:0};g(c,f(l[u](h)),function(){a[v](b.ad)});var i={prebid:{adId:b.adId,cpm:b.cpm}},j={d:h,t:b.ad,cb:e,id:i};k[d]={},k[d][c]=j}var i=b.bidder,j=b.size,k=a.parentWindow||a.defaultView,l=k.JSON,m=k.btoa,n=k.encodeURIComponent;if(!l||!m)return!1;var o="t",p="i",q="script",r="src",s="replace",t="error",u="stringify",v="wr"+p+o+"e",w="https://"+c+"/?wrapper="+n(d)+"&tpid=",x={k:{hb_bidder:[i],hb_size:[j]}};return h(),a.close(),!0};
+
+            // keep a reference to original renderAd function
+            var w = window;
+            w._clrm = w._clrm || {};
+            w._clrm.renderAd = w._clrm.renderAd || pbjs.renderAd;
+            var config = w._clrm.prebid || {
+                /* Enables sandboxing on a device group
+                     All:1 , Desktop:2, Mobile: 3, iOS: 4, Android: 5, Off: 0
+                 */
+                sandbox: 0
+            };
+
+            var isGoogleFrame = function (c) {
+                return c.tagName === 'IFRAME' && c.id && c.id.indexOf('google_ads_iframe_') > -1;
+            };
+
+            var shouldSandbox = function () {
+                var uaToRegexMap = {
+                        "mobile": /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/i,
+                        "ios": /(.+)(iPhone|iPad|iPod)(.+)OS[\s|\_](\d)\_?(\d)?[\_]?(\d)?.+/i,
+                        "android": /Android/i
+                    },
+                    sbStr = "" +config.sandbox;
+                if (sbStr === "1") {
+                    // all environments
+                    return true;
+                } else if (sbStr === "2") {
+                    // desktop
+                    return !navigator.userAgent.match(uaToRegexMap["mobile"]);
+                } else if (sbStr === "3") {
+                    // mobile
+                    return navigator.userAgent.match(uaToRegexMap["mobile"]);
+                } else if (sbStr === "4") {
+                    // ios only
+                    return navigator.userAgent.match(uaToRegexMap["ios"]);
+                } else if (sbStr === "5") {
+                    // android
+                    return navigator.userAgent.match(uaToRegexMap["android"]);
+                } else {
+                    return false;
+                }
+            };
+
+            Node.prototype.appendChild = (function (original) {
+                return function (child) {
+                    if (isGoogleFrame(child) && shouldSandbox() && !child.getAttribute('sandbox')) {
+                        child.setAttribute('sandbox', 'allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation');
+                        child.setAttribute('data-forced-sandbox', true);
+                    }
+                    return original.call(this, child);
+                };
+            }(Node.prototype.appendChild));
+
+
+            // override renderAd
+            pbjs.renderAd = function(doc, id) {
+                if (doc && id) {
+                    try {
+
+                        // get pbjs bids
+                        var bids = [],
+                            bidResponses = pbjs.getBidResponses(),
+                            highestBids = pbjs.getHighestCpmBids();
+                        for (var slot in bidResponses) {
+                            bids = bids.concat(bidResponses[slot].bids);
+                        }
+                        bids = bids.concat(highestBids);
+
+                        // lookup ad by ad Id (avoid ES6 array functions)
+                        var bid, i;
+                        for (i=0; i<bids.length; i++) {
+                            if (bids[i].adId === id) {
+                                bid = bids[i];
+                                break;
+                            }
+                        }
+
+                        // Optional: list of bidders that don't need wrapping, array of strings, e.g.: ["bidder1", "bidder2"]
+                        var confiantExcludeBidders = [];
+
+                        // check bidder exclusion (avoid ES6 array functions)
+                        var excludeBidder = false;
+                        for (i=0; i<confiantExcludeBidders.length; i++) {
+                            if (bid.bidder === confiantExcludeBidders[i]) {
+                                excludeBidder = true;
+                                break;
+                            }
+                        }
+
+                        if (bid && bid.ad && !excludeBidder) {
+                            // Neutralize document
+                            var docwrite = doc.write;
+                            var docclose = doc.close;
+                            doc.write = doc.close = function() {};
+                            // call renderAd with our neutralized doc.write
+                            window._clrm.renderAd(doc, id);
+                            // Restore document
+                            delete doc.write;
+                            delete doc.close;
+
+                            var callback = function(blockingType, blockingId, isBlocked, wrapperId, tagId, impressionData) {
+                                console.log("w00t one more bad ad nixed.", arguments);
+                            };
+
+                            // do the actual ad serving and fall back on document.write if failure
+                            if (!confiantWrap(doc, bid, 'clarium.global.ssl.fastly.net', 'd2ehZtyVAa1kXxOtMxFp7XciXcU', callback)) {
+                                doc.write(bid.ad);
+                                doc.close();
+                            }
+
+                            return;
+                        }
+                    } catch (e) {
+                        console.log(e);
+                    }
+                }
+
+                // if bid.ad is not defined or if any error occurs, call renderAd to serve the creative
+                window._clrm.renderAd(doc, id);
+            };
+
+        });
+
+
+        pbjs.que.push(function() {
+            pbjs.enableAnalytics({
+                provider: 'ga',
+                options: {
+                    global: 'ga',
+                    enableDistribution: false,
+                    sampling: 0.10
+                }
+            });
+        });
+   </script>
+   <script>
+    var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+   </script>
+   <script>
+    googletag.cmd.push(function() {
+
+        var TopBannerMapping = googletag.sizeMapping().
+            addSize([0, 0], [320, 50]).
+            addSize([730, 200], [728, 90]).
+            build();
+
+        var SideBarBannerMapping = googletag.sizeMapping().
+            addSize([0, 0], []).
+            addSize([730, 200], [160, 600]).
+            build();
+
+
+        var MiddleBannerMapping = googletag.sizeMapping().
+            addSize([0, 0], [300, 250]).
+            addSize([730, 200], [728, 90]).
+            build();
+
+        var BottomBannerMapping = googletag.sizeMapping().
+            addSize([0, 0], [300, 250]).
+            addSize([730, 200], [728, 90]).
+            build();
+
+        googletag.
+            defineSlot('/339474670/Wikiwand/ATF', [[728, 90], [320, 50]], 'div-gpt-ad-1527601425745-0').
+            defineSizeMapping(TopBannerMapping).
+            addService(googletag.pubads());
+
+        googletag.
+            defineSlot('/339474670/Wikiwand/SideBar', [[160, 600], [120, 600]], 'div-gpt-ad-1527601425745-1').
+            defineSizeMapping(SideBarBannerMapping).
+            addService(googletag.pubads());
+
+        googletag.
+            defineSlot('/339474670/Wikiwand/BTF', [[728, 90], [300, 250]], 'div-gpt-ad-1527601425745-2').
+            defineSizeMapping(MiddleBannerMapping).
+            addService(googletag.pubads());
+
+        googletag.
+            defineSlot('/339474670/Wikiwand/Bottom', [[728, 90], [300, 250]], 'div-gpt-ad-1527601425745-3').
+            defineSizeMapping(BottomBannerMapping).
+            addService(googletag.pubads());
+
+        pbjs.que.push(function() {
+            pbjs.setTargetingForGPTAsync();
+        });
+
+        googletag.enableServices();
+    });
+   </script>
+   <script>
+    (function () {
+            var node = document.getElementsByTagName('script')[0],
+            rvbP = document.createElement('script');
+            window.CMT = { appId: '97173451-3aaa-4889-b6d0-38984809ec49' };
+            rvbP.defer = true;
+            rvbP.type = 'text/javascript';
+            rvbP.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                '//revboostprocdnadsprod.azureedge.net/scripts/latest/min.js';
+            node.parentNode.insertBefore(rvbP, node);
+        })();
+   </script>
+   <style>
+    @media screen and (max-width: 1680px) {
+        .sideplacement {
+            right: -160px !important;
+        }
+    }
+    @media screen and (max-width: 1400px) {
+        .sideplacement {
+            display: none
+        }
+    }
+   </style>
+   <!--BEGIN FIRSTIMPRESSION TAG - wikiwand.com -->
+   <script data-cfasync="false" type="text/javascript">
+    window.disableAdLayout = false;
+        window.apd_options = { 'websiteId': 7350, 'runFromFrame': false };
+        (function() {
+            var w = window.apd_options.runFromFrame ? window.top : window;
+            if(window.apd_options.runFromFrame && w!==window.parent) w=window.parent;
+            if (w.location.hash.indexOf('apdAdmin') !== -1){if(typeof(Storage) !== 'undefined') {w.localStorage.apdAdmin = 1;}}
+            var adminMode = ((typeof(Storage) == 'undefined') || (w.localStorage.apdAdmin == 1));
+            w.apd_options=window.apd_options;
+            var apd = w.document.createElement('script'); apd.type = 'text/javascript'; apd.async = true;
+            apd.src = '//' + (adminMode ? 'cdn' : 'ecdn') + '.firstimpression.io/' + (adminMode ? 'fi.js?id=' + window.apd_options.websiteId : 'fi_client.js') ;
+            var s = w.document.getElementsByTagName('head')[0]; s.appendChild(apd);
+        })();
+   </script>
+   <!-- END FIRSTIMPRESSION TAG -->
+   <img height="0" id="imagePlaceHolder" src="" style="opacity:0;position:fixed" width="0"/>
+   <script>
+    console.time('time up to showArticleContents');
+        var precache_from_extension = false;
+        if (window.location.hash.indexOf('precache_from_extension=true') > -1) {
+            precache_from_extension = true;
+        }
+        var pageLoadStart = new Date().getTime();
+        var pageHTMLReceived = (new Date()).getTime();
+        var genericData = {
+            debug: {
+                pageLoadedTimestamp: (new Date()).getTime()
+            }
+        };
+        var localContentHtml;
+        var localContentHtmlPartial;
+        var attempts = 0;
+        function tempConditioning(mystring) {
+            //this is to migrate old article contents until we do a database recaching (advance version)
+            //replace old pic-placeholder with one which supports both protocols
+            if (location.protocol == 'https:') {
+                var newstring = mystring.split('http://assets.cdn.wikiwand.com/img/pic-placeholder.gif').join('//assets.wikiwand.com/img/pic-placeholder.gif');
+            } else {
+                newstring = mystring;
+            }
+            return newstring;
+        }
+
+        function httpGet(theUrl, type) {
+            var xmlHttp = null;
+            xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState == 4) // Finished
+                {
+                    if (xmlHttp.status == 200) {
+                        if (theUrl.indexOf('_PARTIAL_DOWNLOAD') == -1) {
+                            //console.log('got full text');
+                            localContentHtml = xmlHttp.responseText;
+                        } else {
+                            //console.log('got partial text');
+                            localContentHtmlPartial = xmlHttp.responseText;
+                        }
+                    }
+                    else {
+                        console.log('failed with status ',xmlHttp.status);
+                        attempts++;
+                        if (attempts < 10 && (theUrl.indexOf('_PARTIAL_DOWNLOAD') == -1)) {
+                            console.log("DOWNLOAD FAILED, TRYING AGAIN ", theUrl);
+                            if (xmlHttp.status == 0) {
+                                if (theUrl.indexOf('s3.amazonaws.com') != -1) {
+                                    if (attempts==9) {
+
+                                        setTimeout(function() {
+                                            var element;
+                                            if (typeof(noAdblock) == 'undefined') {
+                                                element = '#adblockNotice';
+                                            } else {
+                                                element = '#httpsEverywhereNotice';
+                                            }
+                                            if ($(element).length > 0) {
+                                                console.log(' element exists');
+                                                $(element).show();
+                                                $(element).css('opacity', 1);
+                                                $(element).detach().prependTo('#content');
+                                            }
+                                        }, 6000);
+                                    }
+                                }
+                                var urlOnS3 = 'https://s3.amazonaws.com/ww-article-cache-1/ar/%25D8%25A7%25D9%2584%25D9%2582%25D9%2585%25D8%25B1';
+                                urlOnS3 = urlOnS3.replace('http://', '//').replace('https://', '//');
+                                urlOnS3 = urlOnS3.replace(/\+/g, '%2B');
+                                httpGet(urlOnS3, 'html');
+                                httpGet(urlOnS3, 'html');
+                            } else {
+                                //console.log('status ', xmlHttp);
+                                setTimeout(function() {
+                                    httpGet(theUrl, 'html');
+                                }, 500);
+                            }
+                        }
+                    }
+                }
+            };
+            xmlHttp.open("GET", theUrl, true);
+            xmlHttp.send(null);
+        }
+   </script>
+   <script>
+    //console.log('have cdn file in generic header, this is cached');
+        var loadedFromCache = true;
+        var urlOnCdn = 'https://db0nus869y26v.cloudfront.net/ar/%25D8%25A7%25D9%2584%25D9%2582%25D9%2585%25D8%25B1?rev=1555537970293';
+        urlOnCdn = urlOnCdn.replace('http://', '//').replace('https://', '//');
+        urlOnCdn = urlOnCdn.replace(/\+/g, '%2B');
+        httpGet(urlOnCdn, 'html');
+        //var partialDownloadUrl=urlOnCdn.replace('?rev','_PARTIAL_DOWNLOAD?rev');
+        //httpGet(partialDownloadUrl,'html');
+        try {
+            var mainImageUrl = '//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Geologic_Map_of_the_Near_Side_of_the_Moon.jpg/1280px-Geologic_Map_of_the_Near_Side_of_the_Moon.jpg';
+            mainImageUrl = mainImageUrl.replace('https://', '//').replace('http://', '//');
+            var image = document.getElementById("imagePlaceHolder");
+            image.src = mainImageUrl;
+        }
+        catch (e) {console.log('error predownloading image', e);}
+   </script>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+   </script>
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js">
+   </script>
+   <!--
+    
+    <link rel="stylesheet" href="//assets.wikiwand.com/css/fonts.92ff4698.css" type="text/css" media="screen"/>
+    
+    -->
+   <script>
+    var CURRENT_USER_ID=null;
+   </script>
+   <link href="//assets.wikiwand.com/css/wikiwand.early.min.fd1a9197.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="//assets.wikiwand.com/js/wikiwand.early.min.d470c7d7.js" type="text/javascript">
+    </script>
+    <!-- BEGIN TRACKJS -->
+    <script type="text/javascript">
+     var LOAD_TRACKJS = false;
+        if (LOAD_TRACKJS && !precache_from_extension) {
+            window._trackJs = {
+                token: '9bcd9b3d130a4b8eb9f58ff06e6781b5',
+                callback: {enabled: false},
+                console: {enabled: true, display: true, error: false},
+                network: {enabled: false},
+                visitor: {enabled: false},
+                window: {enabled: false},
+                onError: function(payload, error) {
+
+                    // List borrowed from the awesome @pamelafox
+                    // https://gist.github.com/pamelafox/1878283
+                    var i, commonCrypticExtensionErrors = [
+                        "top.GLOBALS",
+                        "originalCreateNotification",
+                        "canvas.contentDocument",
+                        "MyApp_RemoveAllHighlights",
+                        "http://tt.epicplay.com",
+                        "Can't find variable: ZiteReader",
+                        "jigsaw is not defined",
+                        "ComboSearch is not defined",
+                        "http://loading.retry.widdit.com/",
+                        "atomicFindClose",
+                        "fb_xd_fragment",
+                        "Script error",
+                        "__adg_gm_commands_api",
+                        "A Chrome Web Store installation is already pending.",
+                        "‘-×´]/: Range out of order in character class"
+                    ];
+                    for (i = 0; i < commonCrypticExtensionErrors.length; i++) {
+                        if (payload.message.indexOf(commonCrypticExtensionErrors[i]) > -1) {
+                            // returning any kind of falsy value will reject error
+                            return false;
+                        }
+                    }
+                    return true; // Return any kind of truthy value here to allow transmission of error
+                }
+            };
+            var fileref = document.createElement('script');
+            fileref.setAttribute("type", "text/javascript");
+            fileref.setAttribute("src", "//d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js");
+            if (typeof fileref != "undefined")    document.getElementsByTagName("head")[0].appendChild(fileref);
+        }
+    </script>
+    <link href="//fonts.googleapis.com/earlyaccess/droidarabickufi.css" rel="stylesheet" type="text/css"/>
+    <script>
+     // disable all logs
+		if (document.location.search.indexOf('debug_logs=1') == -1) {
+			console.log = function() {};
+			console.time = function() {};
+			console.timeEnd = function() {};
+		}
+    </script>
+    <script>
+     var serverData={"fromSearchEngine":false,"layout":"wikiwand","publisherMonetization":"false","showTOC":"true","agent":{"string":"Mozilla/5.0","ua":{"family":"Other","major":null,"minor":null,"patch":null},"userAgent":{"family":"Other","major":null,"minor":null,"patch":null},"os":{"family":"Other","major":null,"minor":null,"patch":null,"patchMinor":null},"device":{"family":"Other"},"family":"Other","isMobileRes":false,"extensionInstalled":false,"fromSearchWidget":false,"isBot":false,"isHuman":false},"config":{"environment":"production","features":{"news":false,"map":true,"toc":true,"gallery":true,"partials":true,"apiCache":true,"invites":false,"articlePromo":true,"classification":false,"moduleYouTubeVideo":false,"webSocket":false,"snippet":true,"userManagement":false,"comments":false,"reportBoardActions":true,"paywall":false,"boards":false,"comparisons":false},"agent":{"string":"Mozilla/5.0","ua":{"family":"Other","major":null,"minor":null,"patch":null},"userAgent":{"family":"Other","major":null,"minor":null,"patch":null},"os":{"family":"Other","major":null,"minor":null,"patch":null,"patchMinor":null},"device":{"family":"Other"},"family":"Other","isMobileRes":false,"extensionInstalled":false,"fromSearchWidget":false,"isBot":false,"isHuman":false},"facebook":{"appId":"823404911083396"}},"cpu":null,"callToInstallExtension":false,"settings":{"tests":{},"monPlus":false}};
+		
+		
+		
+
+		
+			var articleData={"cache":{"cacheDBVer":54,"cacheDate":1555537970293,"hash":"b091efd8d48735c8daa773835a574d57","key":"/ar/%D8%A7%D9%84%D9%82%D9%85%D8%B1","wikiRevision":"34014272","canonical":"/ar/%D8%A7%D9%84%D9%82%D9%85%D8%B1","isCanonical":true,"S3FileUrl":"https://s3.amazonaws.com/ww-article-cache-1/ar/%25D8%25A7%25D9%2584%25D9%2582%25D9%2585%25D8%25B1","CDNFileUrl":"https://db0nus869y26v.cloudfront.net/ar/%25D8%25A7%25D9%2584%25D9%2582%25D9%2585%25D8%25B1?rev=1555537970293"},"langCodeUrl":"ar","rawArticlePath":"%D8%A7%D9%84%D9%82%D9%85%D8%B1","fonts":{"arabic":true},"bodyClasses":["rtl","lg_arabic"],"hasInfobox":true,"facts":[{"key":"الحضيض","keyLink":"/ar/%D9%82%D8%A8%D8%A7","val":"363,104 <span class=\"need_ref\" style=\"cursor:help;border-bottom:1px solid grey;\" title=\"&#x645;&#x646; &#x62A;&#x642;&#x635;&#x62F;\"><a href=\"/ar/%D9%83%D9%85\" class=\"mw-redirect mw-disambig int-link\" title=\"&#x643;&#x645;\">كم</a></span> أو 0.0024 <a href=\"/ar/%D9%88%D8%AD%D8%AF%D8%A9_%D9%81%D9%84%D9%83%D9%8A%D8%A9\" title=\"&#x648;&#x62D;&#x62F;&#x629; &#x641;&#x644;&#x643;&#x64A;&#x629;\" class=\"int-link\">وحدة فلكية</a>","section":"خصائص المدار"},{"key":"نصف المحور الرئيسي","keyLink":"/ar/%D9%86%D8%B5%D9%81_%D8%A7%D9%84%D9%85%D8%AD%D9%88%D8%B1_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A","val":"384,399 كم أو","section":"خصائص المدار"},{"key":"الشذوذ المداري","keyLink":"/ar/%D8%B4%D8%B0%D9%88%D8%B0_%D9%85%D8%AF%D8%A7%D8%B1%D9%8A","val":"0.0549","section":"خصائص المدار"},{"key":"فترة الدوران","keyLink":"/ar/%D9%81%D8%AA%D8%B1%D8%A9_%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D8%A7%D9%86","val":"27.321582 يوم","section":"خصائص المدار"},{"key":"الفترة الإقترانية","keyLink":"/ar/%D9%81%D8%AA%D8%B1%D8%A9_%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D8%A7%D9%86","val":"29.530589 يوم","section":"خصائص المدار"},{"key":"متوسط السرعة المدارية","keyLink":"/ar/%D8%B3%D8%B1%D8%B9%D8%A9_%D9%85%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9","val":"1.022 كم/ثا","section":"خصائص المدار"},{"key":"الميل المداري","keyLink":"/ar/%D8%B2%D8%A7%D9%88%D9%8A%D8%A9_%D9%85%D9%8A%D9%84%D8%A7%D9%86","val":"5.145° بالنسبة <a href=\"/ar/%D9%85%D8%B3%D8%A7%D8%B1_%D8%A7%D9%84%D8%B4%D9%85%D8%B3\" title=\"&#x645;&#x633;&#x627;&#x631; &#x627;&#x644;&#x634;&#x645;&#x633;\" class=\"int-link\">لمسار الشمس</a> <br>و ما بين 18.29° و28.58° بالنسبة <br>لخط استواء الأرض","section":"خصائص المدار"},{"key":"زاوية نقطة الاعتدال","keyLink":"/ar/%D8%B2%D8%A7%D9%88%D9%8A%D8%A9_%D8%A7%D9%84%D8%B9%D9%82%D8%AF%D8%A9_%D8%A7%D9%84%D9%85%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9","val":"تراجع درجة واحدة كل 18.6 سنة","section":"خصائص المدار"},{"key":"زاوية الحضيض","keyLink":"/ar/%D9%82%D8%A8%D8%A7","val":"تراجع درجة واحدة كل 18.85 سنة","section":"خصائص المدار"},{"key":"تابع إلى","keyLink":"/ar/%D9%82%D9%85%D8%B1_%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A","val":"<a href=\"/ar/%D8%A7%D9%84%D8%A3%D8%B1%D8%B6\" title=\"&#x627;&#x644;&#x623;&#x631;&#x636;\" class=\"int-link\">الأرض</a>","section":"خصائص المدار"},{"key":"نصف القطر الإستوائي","keyLink":"/ar/%D8%AE%D8%B7_%D8%A7%D9%84%D8%A5%D8%B3%D8%AA%D9%88%D8%A7%D8%A1","val":"1,738.14 كم","section":"الخصائص الفيزيائية"},{"key":"نصف القطر القطبي","keyLink":"/ar/%D9%82%D8%B7%D8%A8_(%D8%AA%D9%88%D8%B6%D9%8A%D8%AD)","val":"1,735.97 كم","section":"الخصائص الفيزيائية"},{"key":"التفلطح","keyLink":"/ar/%D8%AA%D8%B3%D8%B7%D9%8A%D8%AD","val":"0.00125","section":"الخصائص الفيزيائية"},{"key":"المحيط","keyLink":null,"val":"10,921 عند خط الاستواء","section":"الخصائص الفيزيائية"},{"key":"مساحة السطح","keyLink":"/ar/%D8%B3%D8%B7%D8%AD_%D9%83%D8%B1%D9%88%D9%8A","val":"3.793 × 10 كم","section":"الخصائص الفيزيائية"},{"key":"الحجم","keyLink":"/ar/%D8%AD%D8%AC%D9%85","val":"2.1958× 10 كم","section":"الخصائص الفيزيائية"},{"key":"الكتلة","keyLink":"/ar/%D9%83%D8%AA%D9%84%D8%A9","val":"7.3477 × 10 كغ","section":"الخصائص الفيزيائية"},{"key":"متوسط الكثافة","keyLink":"/ar/%D9%83%D8%AB%D8%A7%D9%81%D8%A9","val":"1.622 غ/سم","section":"الخصائص الفيزيائية"},{"key":"جاذبية السطح","keyLink":"/ar/%D8%AC%D8%A7%D8%B0%D8%A8%D9%8A%D8%A9","val":"1.622 م/ثا","section":"الخصائص الفيزيائية"},{"key":"سرعة الإفلات","keyLink":"/ar/%D8%B3%D8%B1%D8%B9%D8%A9_%D8%A7%D9%84%D8%A5%D9%81%D9%84%D8%A7%D8%AA","val":"2.38 كم/ثا","section":"الخصائص الفيزيائية"},{"key":"سرعة الدوران","keyLink":null,"val":"4.627 م/ثا","section":"الخصائص الفيزيائية"},{"key":"بياض","keyLink":"/ar/%D8%A8%D9%8A%D8%A7%D8%B6","val":"0.136","section":"الخصائص الفيزيائية"},{"key":"القدر الظاهري","keyLink":"/ar/%D8%A7%D9%84%D9%82%D8%AF%D8%B1_%D8%A7%D9%84%D8%B8%D8%A7%D9%87%D8%B1%D9%8A","val":"−2.5 إلى −12.9","section":""},{"key":"القطر الزاوي","keyLink":"/ar/%D9%82%D8%B7%D8%B1_%D8%B2%D8%A7%D9%88","val":"29.3 إلى 34.1 <a href=\"/ar/%D8%AF%D9%82%D9%8A%D9%82%D8%A9_%D9%82%D9%88%D8%B3%D9%8A%D8%A9\" title=\"&#x62F;&#x642;&#x64A;&#x642;&#x629; &#x642;&#x648;&#x633;&#x64A;&#x629;\" class=\"int-link\">دقيقة قوسية</a>","section":""},{"key":"الضغط السطحي","keyLink":null,"val":"10 نهاراً\nو 10 ليلاً","section":"الغلاف الجوي"},{"key":"العناصر","keyLink":null,"val":"<span class=\"need_ref\" style=\"cursor:help;border-bottom:1px solid grey;\" title=\"&#x645;&#x646; &#x62A;&#x642;&#x635;&#x62F;\"><a href=\"/ar/%D8%A7%D9%84%D8%A3%D8%B1%D8%BA%D9%88%D9%86\" class=\"mw-redirect mw-disambig int-link\" title=\"&#x627;&#x644;&#x623;&#x631;&#x63A;&#x648;&#x646;\">الأرغون</a></span> <a href=\"/ar/%D8%A7%D9%84%D9%87%D9%8A%D9%84%D9%8A%D9%88%D9%85\" class=\"mw-redirect int-link\" title=\"&#x627;&#x644;&#x647;&#x64A;&#x644;&#x64A;&#x648;&#x645;\">والهيليوم</a> <a href=\"/ar/%D8%A7%D9%84%D8%B5%D9%88%D8%AF%D9%8A%D9%88%D9%85\" class=\"mw-redirect int-link\" title=\"&#x627;&#x644;&#x635;&#x648;&#x62F;&#x64A;&#x648;&#x645;\">والصوديوم</a> <br><a href=\"/ar/%D8%A7%D9%84%D8%A8%D9%88%D8%AA%D8%A7%D8%B3%D9%8A%D9%88%D9%85\" class=\"mw-redirect int-link\" title=\"&#x627;&#x644;&#x628;&#x648;&#x62A;&#x627;&#x633;&#x64A;&#x648;&#x645;\">والبوتاسيوم</a> <a href=\"/ar/%D8%A7%D9%84%D9%87%D9%8A%D8%AF%D8%B1%D9%88%D8%AC%D9%8A%D9%86\" class=\"mw-redirect int-link\" title=\"&#x627;&#x644;&#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;\">والهيدروجين</a> <a href=\"/ar/%D8%A7%D9%84%D8%B1%D8%A7%D8%AF%D9%88%D9%86\" class=\"mw-redirect int-link\" title=\"&#x627;&#x644;&#x631;&#x627;&#x62F;&#x648;&#x646;\">والرادون</a>","section":"الغلاف الجوي"}],"photos":[{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Moon_structure.svg/260px-Moon_structure.svg.png","w":260,"h":260},{"url":"//upload.wikimedia.org/wikipedia/ar/thumb/a/a0/MoonTopoLOLA1.png/250px-MoonTopoLOLA1.png","w":250,"h":172},{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Moon-craters.jpg/230px-Moon-craters.jpg","w":230,"h":225},{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Lagrange_points_Earth_vs_Moon.jpg/230px-Lagrange_points_Earth_vs_Moon.jpg","w":230,"h":197},{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/9/96/Earth-Moon1.png/220px-Earth-Moon1.png","w":220,"h":139},{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Callisto_Earth_Moon_Comparison.png/220px-Callisto_Earth_Moon_Comparison.png","w":220,"h":148},{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Lunar_libration_with_phase_Oct_2007_450px.gif/220px-Lunar_libration_with_phase_Oct_2007_450px.gif","w":220,"h":220},{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/a/a8/NASA-Apollo8-Dec24-Earthrise.jpg/240px-NASA-Apollo8-Dec24-Earthrise.jpg","w":240,"h":240},{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/As11-40-5886%2C_uncropped.jpg/220px-As11-40-5886%2C_uncropped.jpg","w":220,"h":222},{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Aldrin_Apollo_11.jpg/240px-Aldrin_Apollo_11.jpg","w":240,"h":240}],"title":"القمر","geo":null,"TOC":{"type":"ul","id":"toc_btn_article-root-section","href":"article-root-section","text":"","children":[{"type":"od","classesHtml":"","special":false,"id":"toc_btn_overview","href":"overview","text":"مقدمة","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_نشوء_القمر","href":"نشوء_القمر","text":"نشوء القمر","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_الخصائص_الفيزيائية","href":"الخصائص_الفيزيائية","text":"الخصائص الفيزيائية","children":[{"type":"li","classesHtml":"","special":false,"id":"toc_btn_التركيب_الداخلي","href":"التركيب_الداخلي","text":"التركيب الداخلي","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_جيولوجيا_السطح","href":"جيولوجيا_السطح","text":"جيولوجيا السطح","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_التضاريس_البركانية","href":"التضاريس_البركانية","text":"التضاريس البركانية","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_الفوهات_الصدمية","href":"الفوهات_الصدمية","text":"الفوهات الصدمية","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_وجود_الماء","href":"وجود_الماء","text":"وجود الماء","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_الجاذبية_والحقل_المغناطيسي","href":"الجاذبية_والحقل_المغناطيسي","text":"الجاذبية والحقل المغناطيسي","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_الغلاف_الجوي","href":"الغلاف_الجوي","text":"الغلاف الجوي","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_الفصول","href":"الفصول","text":"الفصول","children":[]}],"hasChildren":true},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_العلاقة_مع_الأرض","href":"العلاقة_مع_الأرض","text":"العلاقة مع الأرض","children":[{"type":"li","classesHtml":"","special":false,"id":"toc_btn_المدار","href":"المدار","text":"المدار","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_الحجم_النسبي","href":"الحجم_النسبي","text":"الحجم النسبي","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_الرؤية_من_الأرض","href":"الرؤية_من_الأرض","text":"الرؤية من الأرض","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_الخسوف_والكسوف","href":"الخسوف_والكسوف","text":"الخسوف والكسوف","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_تأثير_المد_والجزر","href":"تأثير_المد_والجزر","text":"تأثير المد والجزر","children":[]}],"hasChildren":true},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_تاريخ_الاستكشاف","href":"تاريخ_الاستكشاف","text":"تاريخ الاستكشاف","children":[{"type":"li","classesHtml":"","special":false,"id":"toc_btn_الدراسات_المبكرة","href":"الدراسات_المبكرة","text":"الدراسات المبكرة","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_الاستكشافات_الأولى","href":"الاستكشافات_الأولى","text":"الاستكشافات الأولى","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_الاستكشافات_منذ_سنة_1990_إلى_الآن","href":"الاستكشافات_منذ_سنة_1990_إلى_الآن","text":"الاستكشافات منذ سنة 1990 إلى الآن","children":[]}],"hasChildren":true},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_القمر_في_الثقافة","href":"القمر_في_الثقافة","text":"القمر في الثقافة","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_الوضع_القانوني","href":"الوضع_القانوني","text":"الوضع القانوني","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_انظر_أيضاً","href":"انظر_أيضاً","text":"انظر أيضاً","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_الملاحظات","href":"الملاحظات","text":"الملاحظات","children":[]},{"type":"od","classesHtml":" class='special'","special":true,"id":"toc_btn_المراجع","href":"المراجع","text":"المراجع","children":[]},{"type":"od","classesHtml":" class='special'","special":true,"id":"toc_btn_المصادر","href":"المصادر","text":"المصادر","children":[]},{"type":"od","classesHtml":" class='special'","special":true,"id":"toc_btn_وصلات_خارجية","href":"وصلات_خارجية","text":"وصلات خارجية","children":[]}],"hasChildren":true},"mainImage":{"mode":"new_cover","info":{"license":{"artist":"Don E. Wilhems and John F. McCauley (USGS)","name":"Public domain","usageTerms":"Public domain"}},"wikipediaPageFullUrl":"https://commons.wikimedia.org/wiki/File:Geologic_Map_of_the_Near_Side_of_the_Moon.jpg","wikipediaPageRelativeUrl":"/wiki/File:Geologic_Map_of_the_Near_Side_of_the_Moon.jpg","thumb":{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Geologic_Map_of_the_Near_Side_of_the_Moon.jpg/440px-Geologic_Map_of_the_Near_Side_of_the_Moon.jpg","width":440,"height":294},"full":{"originalUrl":"https://upload.wikimedia.org/wikipedia/commons/4/47/Geologic_Map_of_the_Near_Side_of_the_Moon.jpg","urlDesktop":"//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Geologic_Map_of_the_Near_Side_of_the_Moon.jpg/1280px-Geologic_Map_of_the_Near_Side_of_the_Moon.jpg","urlMobile":"//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Geologic_Map_of_the_Near_Side_of_the_Moon.jpg/640px-Geologic_Map_of_the_Near_Side_of_the_Moon.jpg","width":8016,"height":5341},"fromEnglishWikipedia":true},"pageIsArticle":true,"links":{"selfRead":"http://wikiwand.com/ar/%D8%A7%D9%84%D9%82%D9%85%D8%B1","wikipediaRead":"https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%82%D9%85%D8%B1?oldformat=true","wikipediaEdit":"https://ar.wikipedia.org/w/index.php?title=%D8%A7%D9%84%D9%82%D9%85%D8%B1&action=edit","wikipediaHistory":"https://ar.wikipedia.org/w/index.php?title=%D8%A7%D9%84%D9%82%D9%85%D8%B1&action=history","wikipediaPrint":"https://ar.wikipedia.org/w/index.php?title=%D8%A7%D9%84%D9%82%D9%85%D8%B1&printable=yes","wikipediaTalk":"https://ar.wikipedia.org/wiki/Talk:%D8%A7%D9%84%D9%82%D9%85%D8%B1?oldformat=true","wikipediaDownload":"https://ar.wikipedia.org/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=%D8%A7%D9%84%D9%82%D9%85%D8%B1&writer=rl"},"meta":{"title":"القمر | Wikiwand","keywords":"qw, القمر, العربية","description":"القمر هو القمر الطبيعي الوَحيد للأرض [ملاحظة 1][3] بالإضافة إلى أنه خامس أكبر قمرٍ طبيعيٍ في المجموعة الشمسية. فهو يُعَدُ أكبر قمرٍ طبيعيٍ في المجموعة الشمسية من ناحية نسبة حجمه إلى كوكبه التابع له، حيث أن قطره يصل إلى ربع قطر الأرض، كما أن كتلته تصل إلى 1 على 81 من كتلة الأرض، هذا بالإضافة إلى أنه يُعَدُ ثاني أعلى قمرٍ من ناحية الكثافة بعد قمر إيو. هذا ويتسم القمر الأرضي حركته التزامنية مع كوكبه ، عارضاً دائماً الوجه نفسه؛ حيث يتميز الجانب القريب بمنطقةٍ بركانيةٍ منخفضةٍ مظلمةٍ، والتي تقع فيما بين مرتفعات القشرة الأرضية القديمة البراقة والفوهات الصدمية الشاهقة. كما يُلاحظ أن القمر الأرضي هو أكثر جسمٍ لامعٍ في السماء ليلاً، وعموماً هو الجسم الأكثر لمعاناً بعد الشمس، وهذا على الرغم من أن سطحه معتم جداً، حيث أن له انعكاساً مماثلاً للفحم. كان بروز القمر في السماء المظلمة ليلاً، ودورته المنتظمة الأطوار قد جعل له على مر العصور القديمة تأثيراً ثقافياً هاماً على كلٍ من اللغة، التقويم القمري، الفنون [الإنجليزية]، والأساطير القديمة، المتمثلة في آلهة القمر والتي منها عبر الحضارات: \"خونسو\" في الديانة المصرية القديمة، \"تشانغ\" في الحضارة الصينية وكذلك \"ماما قيلا\" في حضارة الإنكا. ومن السمات الكامنة للقمر كذلك، تأثير جاذبيته التي تسفر عن وقوع عمليتي مد وجزر المحيطات وإطالة الدقيقة لليوم. مع ملاحظة أن المسافة المدارية الحالية للقمر، والتي تُقَدَرُ بثلاثين مرةٍ قدر قطر الكرة الأرضية، تتسبب في أن يبدو القمر أغلب الوقت بنفس حجمه دون تغيير في السماء كما هو الحال مع الشمس، مما يسمح له بأن يغطي الشمس بصورةٍ شبه تامةٍ في ظاهرة الكسوف الكلي للشمس.","robots":"index,follow","url":"http://www.wikiwand.com/ar/%D8%A7%D9%84%D9%82%D9%85%D8%B1","image":"//assets.wikiwand.com/img/wikiwand_icon.png"},"fromWikipedia":"من ويكيبيديا، الموسوعة الحرة","disambiguations":["<div class=\"&#x635;&#x648;&#x631;&#x629;\" style=\"display:inline\"></div>  <div style=\"display:inline\"><div class=\"image_wrapper small_img_wrapper\">\n\t<div class=\"img_container\" ng-click=\"$root.galleryOpen($event)\"><img class=\"immediate ntmb\" width=\"20\" height=\"20\" data-w=\"40\" data-h=\"40\" data-fw=\"200\" data-fh=\"200\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/4/46/Disambigua_compass.svg/40px-Disambigua_compass.svg.png\" data-original=\"//upload.wikimedia.org/wikipedia/commons/thumb/4/46/Disambigua_compass.svg/40px-Disambigua_compass.svg.png\" data-href=\"/wiki/%D9%85%D9%84%D9%81:Disambigua_compass.svg\" alt=\"\"><i class=\"img_enlarge\"></i></div>\n</div> هذه المقالة عن <span class=\"m\">جرم القمر التابع للأرض</span>. لتصفح عناوين مشابهة، انظر <span class=\"m\"><a href=\"/ar/%D9%82%D9%85%D8%B1_(%D8%AA%D9%88%D8%B6%D9%8A%D8%AD)\" class=\"mw-disambig int-link\" title=\"&#x642;&#x645;&#x631; (&#x62A;&#x648;&#x636;&#x64A;&#x62D;)\">قمر (توضيح)</a></span>.</div>"],"searchTranslation":"ابحث في ويكيبيديا","availableLanguages":[{"langEnglishName":"Abkhaz","langNativeName":"Аҧсшәа","langAbberviation":"ab","langCodeHTML":0,"langCodeURL":"ab","articleTitle":"Амза","articleLink":"/ab/%D0%90%D0%BC%D0%B7%D0%B0","score":0},{"langEnglishName":"Afrikaans","langNativeName":"Afrikaans","langAbberviation":"af","langCodeHTML":0,"langCodeURL":"af","articleTitle":"Maan","articleLink":"/af/Maan","score":0},{"langEnglishName":"Albanian","langNativeName":"shqip","langAbberviation":"sq","langCodeHTML":0,"langCodeURL":"sq","articleTitle":"Hëna","articleLink":"/sq/H%C3%ABna","score":0},{"langEnglishName":"Amharic","langNativeName":"አማርኛ","langAbberviation":"am","langCodeHTML":0,"langCodeURL":"am","articleTitle":"ጨረቃ","articleLink":"/am/%E1%8C%A8%E1%88%A8%E1%89%83","score":0},{"langEnglishName":"Arabic","langNativeName":"العربية","langAbberviation":"ar","langCodeHTML":0,"langCodeURL":"ar","articleTitle":"القمر","articleLink":"/ar/%D8%A7%D9%84%D9%82%D9%85%D8%B1","score":0},{"langEnglishName":"Aragonese","langNativeName":"aragonés","langAbberviation":"an","langCodeHTML":0,"langCodeURL":"an","articleTitle":"Luna","articleLink":"/an/Luna","score":0},{"langEnglishName":"Armenian","langNativeName":"Հայերեն","langAbberviation":"hy","langCodeHTML":0,"langCodeURL":"hy","articleTitle":"Լուսին","articleLink":"/hy/%D4%BC%D5%B8%D6%82%D5%BD%D5%AB%D5%B6","score":0},{"langEnglishName":"Arpitan","langNativeName":"arpetan","langAbberviation":"fr","langCodeHTML":0,"langCodeURL":"frp","articleTitle":"Lena","articleLink":"/frp/Lena","score":0},{"langEnglishName":"Assamese","langNativeName":"অসমীয়া","langAbberviation":"as","langCodeHTML":0,"langCodeURL":"as","articleTitle":"চন্দ্ৰ","articleLink":"/as/%E0%A6%9A%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A7%8D%E0%A7%B0","score":0},{"langEnglishName":"Asturian","langNativeName":"asturianu","langAbberviation":"as","langCodeHTML":0,"langCodeURL":"ast","articleTitle":"Lluna","articleLink":"/ast/Lluna","score":0},{"langEnglishName":"Avaric","langNativeName":"авар","langAbberviation":"av","langCodeHTML":0,"langCodeURL":"av","articleTitle":"МоцІ (зоб)","articleLink":"/av/%D0%9C%D0%BE%D1%86%D0%86_(%D0%B7%D0%BE%D0%B1)","score":0},{"langEnglishName":"Aymara","langNativeName":"Aymar aru","langAbberviation":"ay","langCodeHTML":0,"langCodeURL":"ay","articleTitle":"Phaxsi (alaxpacha yänakata)","articleLink":"/ay/Phaxsi_(alaxpacha_y%C3%A4nakata)","score":0},{"langEnglishName":"Azerbaijani","langNativeName":"azərbaycanca","langAbberviation":"az","langCodeHTML":0,"langCodeURL":"az","articleTitle":"Ay","articleLink":"/az/Ay","score":0},{"langEnglishName":"Bashkir","langNativeName":"башҡортса","langAbberviation":"ba","langCodeHTML":0,"langCodeURL":"ba","articleTitle":"Ай (юлдаш)","articleLink":"/ba/%D0%90%D0%B9_(%D1%8E%D0%BB%D0%B4%D0%B0%D1%88)","score":0},{"langEnglishName":"Basque","langNativeName":"euskara","langAbberviation":"eu","langCodeHTML":0,"langCodeURL":"eu","articleTitle":"Ilargia","articleLink":"/eu/Ilargia","score":0},{"langEnglishName":"Bavarian","langNativeName":"Boarisch","langAbberviation":"ba","langCodeHTML":0,"langCodeURL":"bar","articleTitle":"Mond","articleLink":"/bar/Mond","score":0},{"langEnglishName":"Belarussian","langNativeName":"беларуская","langAbberviation":"be","langCodeHTML":0,"langCodeURL":"be","articleTitle":"Месяц (спадарожнік Зямлі)","articleLink":"/be/%D0%9C%D0%B5%D1%81%D1%8F%D1%86_(%D1%81%D0%BF%D0%B0%D0%B4%D0%B0%D1%80%D0%BE%D0%B6%D0%BD%D1%96%D0%BA_%D0%97%D1%8F%D0%BC%D0%BB%D1%96)","score":0},{"langEnglishName":"Bengali","langNativeName":"বাংলা","langAbberviation":"bn","langCodeHTML":0,"langCodeURL":"bn","articleTitle":"চাঁদ","articleLink":"/bn/%E0%A6%9A%E0%A6%BE%E0%A6%81%E0%A6%A6","score":0},{"langEnglishName":"Bhojpuri","langNativeName":"भोजपुरी","langAbberviation":"bh","langCodeHTML":0,"langCodeURL":"bh","articleTitle":"चंद्रमा","articleLink":"/bh/%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A4%BE","score":0},{"langEnglishName":"Bosnian","langNativeName":"bosanski","langAbberviation":"bs","langCodeHTML":0,"langCodeURL":"bs","articleTitle":"Mjesec (satelit)","articleLink":"/bs/Mjesec_(satelit)","score":0},{"langEnglishName":"Breton","langNativeName":"brezhoneg","langAbberviation":"br","langCodeHTML":0,"langCodeURL":"br","articleTitle":"Loar","articleLink":"/br/Loar","score":0},{"langEnglishName":"Bulgarian","langNativeName":"български","langAbberviation":"bg","langCodeHTML":0,"langCodeURL":"bg","articleTitle":"Луна","articleLink":"/bg/%D0%9B%D1%83%D0%BD%D0%B0","score":0},{"langEnglishName":"Burmese","langNativeName":"မြန်မာဘာသာ","langAbberviation":"my","langCodeHTML":0,"langCodeURL":"my","articleTitle":"လ (ကမ္ဘာရံဂြိုဟ်)","articleLink":"/my/%E1%80%9C_(%E1%80%80%E1%80%99%E1%80%B9%E1%80%98%E1%80%AC%E1%80%9B%E1%80%B6%E1%80%82%E1%80%BC%E1%80%AD%E1%80%AF%E1%80%9F%E1%80%BA)","score":0},{"langEnglishName":"Catalan; Valencian","langNativeName":"català","langAbberviation":"ca","langCodeHTML":0,"langCodeURL":"ca","articleTitle":"Lluna","articleLink":"/ca/Lluna","score":0},{"langEnglishName":"Cebuano","langNativeName":"Cebuano","langAbberviation":"ce","langCodeHTML":0,"langCodeURL":"ceb","articleTitle":"Bulan (astronomiya)","articleLink":"/ceb/Bulan_(astronomiya)","score":0},{"langEnglishName":"Central Khmer","langNativeName":"ភាសាខ្មែរ","langAbberviation":"km","langCodeHTML":0,"langCodeURL":"km","articleTitle":"ព្រះច័ន្ទ","articleLink":"/km/%E1%9E%96%E1%9F%92%E1%9E%9A%E1%9F%87%E1%9E%85%E1%9F%90%E1%9E%93%E1%9F%92%E1%9E%91","score":0},{"langEnglishName":"Central Kurdish/Kurdish Sorani","langNativeName":"کوردی","langAbberviation":"ck","langCodeHTML":0,"langCodeURL":"ckb","articleTitle":"مانگ","articleLink":"/ckb/%D9%85%D8%A7%D9%86%DA%AF","score":0},{"langEnglishName":"Chechen","langNativeName":"нохчийн","langAbberviation":"ce","langCodeHTML":0,"langCodeURL":"ce","articleTitle":"Бутт (планета)","articleLink":"/ce/%D0%91%D1%83%D1%82%D1%82_(%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0)","score":0},{"langEnglishName":"Cherokee","langNativeName":"ᏣᎳᎩ","langAbberviation":"ch","langCodeHTML":0,"langCodeURL":"chr","articleTitle":"ᏅᏓ ᏒᏃᏱ ᎡᎯ","articleLink":"/chr/%E1%8F%85%E1%8F%93_%E1%8F%92%E1%8F%83%E1%8F%B1_%E1%8E%A1%E1%8E%AF","score":0},{"langEnglishName":"Cheyenne","langNativeName":"Tsetsêhestâhese","langAbberviation":"ch","langCodeHTML":0,"langCodeURL":"chy","articleTitle":"Taa'é-eše'he","articleLink":"/chy/Taa%27%C3%A9-e%C5%A1e%27he","score":0},{"langEnglishName":"Chinese","langNativeName":"中文","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh","articleTitle":"月球","articleLink":"/zh/%E6%9C%88%E7%90%83","score":0},{"langEnglishName":"Church Slavic","langNativeName":"словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ","langAbberviation":"cu","langCodeHTML":0,"langCodeURL":"cu","articleTitle":"Мѣсѧць","articleLink":"/cu/%D0%9C%D1%A3%D1%81%D1%A7%D1%86%D1%8C","score":0},{"langEnglishName":"Chuvash","langNativeName":"Чӑвашла","langAbberviation":"cv","langCodeHTML":0,"langCodeURL":"cv","articleTitle":"Уйăх (спутник)","articleLink":"/cv/%D0%A3%D0%B9%C4%83%D1%85_(%D1%81%D0%BF%D1%83%D1%82%D0%BD%D0%B8%D0%BA)","score":0},{"langEnglishName":"Cornish","langNativeName":"kernowek","langAbberviation":"kw","langCodeHTML":0,"langCodeURL":"kw","articleTitle":"Loor","articleLink":"/kw/Loor","score":0},{"langEnglishName":"Corsican","langNativeName":"corsu","langAbberviation":"co","langCodeHTML":0,"langCodeURL":"co","articleTitle":"Luna","articleLink":"/co/Luna","score":0},{"langEnglishName":"Crimean Tatar","langNativeName":"qırımtatarca","langAbberviation":"cr","langCodeHTML":0,"langCodeURL":"crh","articleTitle":"Ay (kök cismi)","articleLink":"/crh/Ay_(k%C3%B6k_cismi)","score":0},{"langEnglishName":"Croatian","langNativeName":"hrvatski","langAbberviation":"hr","langCodeHTML":0,"langCodeURL":"hr","articleTitle":"Mjesec","articleLink":"/hr/Mjesec","score":0},{"langEnglishName":"Czech","langNativeName":"česky","langAbberviation":"cs","langCodeHTML":0,"langCodeURL":"cs","articleTitle":"Měsíc","articleLink":"/cs/M%C4%9Bs%C3%ADc","score":0},{"langEnglishName":"Danish","langNativeName":"dansk","langAbberviation":"da","langCodeHTML":0,"langCodeURL":"da","articleTitle":"Månen","articleLink":"/da/M%C3%A5nen","score":0},{"langEnglishName":"Divehi","langNativeName":"ދިވެހިބަސް","langAbberviation":"dv","langCodeHTML":0,"langCodeURL":"dv","articleTitle":"ހަނދު","articleLink":"/dv/%DE%80%DE%A6%DE%82%DE%8B%DE%AA","score":0},{"langEnglishName":"Dutch","langNativeName":"Nederlands","langAbberviation":"nl","langCodeHTML":0,"langCodeURL":"nl","articleTitle":"Maan","articleLink":"/nl/Maan","score":0},{"langEnglishName":"Egyptian Arabic","langNativeName":"مصرى","langAbberviation":"ar","langCodeHTML":0,"langCodeURL":"arz","articleTitle":"قمر","articleLink":"/arz/%D9%82%D9%85%D8%B1","score":0},{"langEnglishName":"English","langNativeName":"English","langAbberviation":"en","langCodeHTML":0,"langCodeURL":"en","articleTitle":"Moon","articleLink":"/en/Moon","score":1},{"langEnglishName":"Erzya","langNativeName":"эрзянь","langAbberviation":"my","langCodeHTML":0,"langCodeURL":"myv","articleTitle":"Ков (Моданть ки лангонь ялга)","articleLink":"/myv/%D0%9A%D0%BE%D0%B2_(%D0%9C%D0%BE%D0%B4%D0%B0%D0%BD%D1%82%D1%8C_%D0%BA%D0%B8_%D0%BB%D0%B0%D0%BD%D0%B3%D0%BE%D0%BD%D1%8C_%D1%8F%D0%BB%D0%B3%D0%B0)","score":0},{"langEnglishName":"Esperanto","langNativeName":"Esperanto","langAbberviation":"eo","langCodeHTML":0,"langCodeURL":"eo","articleTitle":"Luno","articleLink":"/eo/Luno","score":0},{"langEnglishName":"Estonian","langNativeName":"eesti","langAbberviation":"et","langCodeHTML":0,"langCodeURL":"et","articleTitle":"Kuu","articleLink":"/et/Kuu","score":0},{"langEnglishName":"Extremaduran","langNativeName":"estremeñu","langAbberviation":"ex","langCodeHTML":0,"langCodeURL":"ext","articleTitle":"Luna","articleLink":"/ext/Luna","score":0},{"langEnglishName":"Faroese","langNativeName":"føroyskt","langAbberviation":"fo","langCodeHTML":0,"langCodeURL":"fo","articleTitle":"Mánin","articleLink":"/fo/M%C3%A1nin","score":0},{"langEnglishName":"Fiji Hindi","langNativeName":"Fiji Hindi","langAbberviation":"hi","langCodeHTML":0,"langCodeURL":"hif","articleTitle":"Chandarma","articleLink":"/hif/Chandarma","score":0},{"langEnglishName":"Finnish","langNativeName":"suomi","langAbberviation":"fi","langCodeHTML":0,"langCodeURL":"fi","articleTitle":"Kuu","articleLink":"/fi/Kuu","score":0},{"langEnglishName":"French","langNativeName":"français","langAbberviation":"fr","langCodeHTML":0,"langCodeURL":"fr","articleTitle":"Lune","articleLink":"/fr/Lune","score":1},{"langEnglishName":"Friulian","langNativeName":"furlan","langAbberviation":"fu","langCodeHTML":0,"langCodeURL":"fur","articleTitle":"Lune","articleLink":"/fur/Lune","score":0},{"langEnglishName":"Fulah","langNativeName":"Fulfulde","langAbberviation":"ff","langCodeHTML":0,"langCodeURL":"ff","articleTitle":"Lewru","articleLink":"/ff/Lewru","score":0},{"langEnglishName":"Gaelic; Scottish Gaelic","langNativeName":"Gàidhlig","langAbberviation":"gd","langCodeHTML":0,"langCodeURL":"gd","articleTitle":"Gealach","articleLink":"/gd/Gealach","score":0},{"langEnglishName":"Galician","langNativeName":"galego","langAbberviation":"gl","langCodeHTML":0,"langCodeURL":"gl","articleTitle":"Lúa","articleLink":"/gl/L%C3%BAa","score":0},{"langEnglishName":"Gan Chinese","langNativeName":"贛語","langAbberviation":"ga","langCodeHTML":0,"langCodeURL":"gan","articleTitle":"月光","articleLink":"/gan/%E6%9C%88%E5%85%89","score":0},{"langEnglishName":"Georgian","langNativeName":"ქართული","langAbberviation":"ka","langCodeHTML":0,"langCodeURL":"ka","articleTitle":"მთვარე","articleLink":"/ka/%E1%83%9B%E1%83%97%E1%83%95%E1%83%90%E1%83%A0%E1%83%94","score":0},{"langEnglishName":"German","langNativeName":"Deutsch","langAbberviation":"de","langCodeHTML":0,"langCodeURL":"de","articleTitle":"Mond","articleLink":"/de/Mond","score":1},{"langEnglishName":"Greek","langNativeName":"Ελληνικά","langAbberviation":"el","langCodeHTML":0,"langCodeURL":"el","articleTitle":"Σελήνη","articleLink":"/el/%CE%A3%CE%B5%CE%BB%CE%AE%CE%BD%CE%B7","score":0},{"langEnglishName":"Guarani","langNativeName":"Avañe'ẽ","langAbberviation":"gn","langCodeHTML":0,"langCodeURL":"gn","articleTitle":"Jasy","articleLink":"/gn/Jasy","score":0},{"langEnglishName":"Gujarati","langNativeName":"ગુજરાતી","langAbberviation":"gu","langCodeHTML":0,"langCodeURL":"gu","articleTitle":"ચંદ્ર","articleLink":"/gu/%E0%AA%9A%E0%AA%82%E0%AA%A6%E0%AB%8D%E0%AA%B0","score":0},{"langEnglishName":"Haitian; Haitian Creole","langNativeName":"Kreyòl ayisyen","langAbberviation":"ht","langCodeHTML":0,"langCodeURL":"ht","articleTitle":"Lalin","articleLink":"/ht/Lalin","score":0},{"langEnglishName":"Hakka Chinese","langNativeName":"Hak-kâ-fa","langAbberviation":"ha","langCodeHTML":0,"langCodeURL":"hak","articleTitle":"Ngie̍t-khiù","articleLink":"/hak/Ngie%CC%8Dt-khi%C3%B9","score":0},{"langEnglishName":"Hausa","langNativeName":"Hausa","langAbberviation":"ha","langCodeHTML":0,"langCodeURL":"ha","articleTitle":"Wata","articleLink":"/ha/Wata","score":0},{"langEnglishName":"Hawaiian","langNativeName":"Hawai`i","langAbberviation":"ha","langCodeHTML":0,"langCodeURL":"haw","articleTitle":"Mahina","articleLink":"/haw/Mahina","score":0},{"langEnglishName":"Hebrew","langNativeName":"עברית","langAbberviation":"he","langCodeHTML":0,"langCodeURL":"he","articleTitle":"הירח","articleLink":"/he/%D7%94%D7%99%D7%A8%D7%97","score":0},{"langEnglishName":"Hindi","langNativeName":"हिन्दी","langAbberviation":"hi","langCodeHTML":0,"langCodeURL":"hi","articleTitle":"चन्द्रमा","articleLink":"/hi/%E0%A4%9A%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A4%BE","score":0},{"langEnglishName":"Hungarian","langNativeName":"magyar","langAbberviation":"hu","langCodeHTML":0,"langCodeURL":"hu","articleTitle":"Hold","articleLink":"/hu/Hold","score":0},{"langEnglishName":"Icelandic","langNativeName":"íslenska","langAbberviation":"is","langCodeHTML":0,"langCodeURL":"is","articleTitle":"Tunglið","articleLink":"/is/Tungli%C3%B0","score":0},{"langEnglishName":"Ido","langNativeName":"Ido","langAbberviation":"io","langCodeHTML":0,"langCodeURL":"io","articleTitle":"Luno","articleLink":"/io/Luno","score":0},{"langEnglishName":"Iloko","langNativeName":"Ilokano","langAbberviation":"il","langCodeHTML":0,"langCodeURL":"ilo","articleTitle":"Bulan","articleLink":"/ilo/Bulan","score":0},{"langEnglishName":"Indonesian","langNativeName":"Bahasa Indonesia","langAbberviation":"id","langCodeHTML":0,"langCodeURL":"id","articleTitle":"Bulan","articleLink":"/id/Bulan","score":0},{"langEnglishName":"Interlingua","langNativeName":"interlingua","langAbberviation":"ia","langCodeHTML":0,"langCodeURL":"ia","articleTitle":"Luna","articleLink":"/ia/Luna","score":0},{"langEnglishName":"Interlingue; Occidental","langNativeName":"Interlingue","langAbberviation":"ie","langCodeHTML":0,"langCodeURL":"ie","articleTitle":"Lune","articleLink":"/ie/Lune","score":0},{"langEnglishName":"Inuktitut","langNativeName":"ᐃᓄᒃᑎᑐᑦ/inuktitut","langAbberviation":"iu","langCodeHTML":0,"langCodeURL":"iu","articleTitle":"ᑕᖅᑭᖅ","articleLink":"/iu/%E1%91%95%E1%96%85%E1%91%AD%E1%96%85","score":0},{"langEnglishName":"Irish","langNativeName":"Gaeilge","langAbberviation":"ga","langCodeHTML":0,"langCodeURL":"ga","articleTitle":"An Ghealach","articleLink":"/ga/An_Ghealach","score":0},{"langEnglishName":"Italian","langNativeName":"italiano","langAbberviation":"it","langCodeHTML":0,"langCodeURL":"it","articleTitle":"Luna","articleLink":"/it/Luna","score":0},{"langEnglishName":"Japanese","langNativeName":"日本語","langAbberviation":"ja","langCodeHTML":0,"langCodeURL":"ja","articleTitle":"月","articleLink":"/ja/%E6%9C%88","score":0},{"langEnglishName":"Javanese","langNativeName":"Basa Jawa","langAbberviation":"jv","langCodeHTML":0,"langCodeURL":"jv","articleTitle":"Rembulan","articleLink":"/jv/Rembulan","score":0},{"langEnglishName":"Kabardian","langNativeName":"Адыгэбзэ","langAbberviation":"kb","langCodeHTML":0,"langCodeURL":"kbd","articleTitle":"Мазэ","articleLink":"/kbd/%D0%9C%D0%B0%D0%B7%D1%8D","score":0},{"langEnglishName":"Kabyle","langNativeName":"Taqbaylit","langAbberviation":"ka","langCodeHTML":0,"langCodeURL":"kab","articleTitle":"Ayyur (itri)","articleLink":"/kab/Ayyur_(itri)","score":0},{"langEnglishName":"Kalaallisut; Greenlandic","langNativeName":"kalaallisut","langAbberviation":"kl","langCodeHTML":0,"langCodeURL":"kl","articleTitle":"Qaammat","articleLink":"/kl/Qaammat","score":0},{"langEnglishName":"Kannada","langNativeName":"ಕನ್ನಡ","langAbberviation":"kn","langCodeHTML":0,"langCodeURL":"kn","articleTitle":"ಚಂದ್ರ","articleLink":"/kn/%E0%B2%9A%E0%B2%82%E0%B2%A6%E0%B3%8D%E0%B2%B0","score":0},{"langEnglishName":"Kara-Kalpak","langNativeName":"Qaraqalpaqsha","langAbberviation":"ka","langCodeHTML":0,"langCodeURL":"kaa","articleTitle":"Ay","articleLink":"/kaa/Ay","score":0},{"langEnglishName":"Kashmiri","langNativeName":"कॉशुर / کٲشُر","langAbberviation":"ks","langCodeHTML":0,"langCodeURL":"ks","articleTitle":"ज़ून","articleLink":"/ks/%E0%A4%9C%E0%A4%BC%E0%A5%82%E0%A4%A8","score":0},{"langEnglishName":"Kashubian","langNativeName":"kaszëbsczi","langAbberviation":"cs","langCodeHTML":0,"langCodeURL":"csb","articleTitle":"Miesądz","articleLink":"/csb/Mies%C4%85dz","score":0},{"langEnglishName":"Kazakh","langNativeName":"қазақша","langAbberviation":"kk","langCodeHTML":0,"langCodeURL":"kk","articleTitle":"Ай (серік)","articleLink":"/kk/%D0%90%D0%B9_(%D1%81%D0%B5%D1%80%D1%96%D0%BA)","score":0},{"langEnglishName":"Komi","langNativeName":"коми","langAbberviation":"kv","langCodeHTML":0,"langCodeURL":"kv","articleTitle":"Тӧлысь","articleLink":"/kv/%D0%A2%D3%A7%D0%BB%D1%8B%D1%81%D1%8C","score":0},{"langEnglishName":"Komi-Permyak","langNativeName":"Перем Коми","langAbberviation":"ko","langCodeHTML":0,"langCodeURL":"koi","articleTitle":"Тӧлісь","articleLink":"/koi/%D0%A2%D3%A7%D0%BB%D1%96%D1%81%D1%8C","score":0},{"langEnglishName":"Korean","langNativeName":"한국어","langAbberviation":"ko","langCodeHTML":0,"langCodeURL":"ko","articleTitle":"달","articleLink":"/ko/%EB%8B%AC","score":0},{"langEnglishName":"Kurdish","langNativeName":"Kurdî","langAbberviation":"ku","langCodeHTML":0,"langCodeURL":"ku","articleTitle":"Heyv","articleLink":"/ku/Heyv","score":0},{"langEnglishName":"Kyrgyz","langNativeName":"Кыргызча","langAbberviation":"ky","langCodeHTML":0,"langCodeURL":"ky","articleTitle":"Ай","articleLink":"/ky/%D0%90%D0%B9","score":0},{"langEnglishName":"Kölsch","langNativeName":"Ripoarisch","langAbberviation":"ks","langCodeHTML":0,"langCodeURL":"ksh","articleTitle":"Moond (Ääd)","articleLink":"/ksh/Moond_(%C3%84%C3%A4d)","score":0},{"langEnglishName":"Ladino","langNativeName":"Ladino","langAbberviation":"la","langCodeHTML":0,"langCodeURL":"lad","articleTitle":"Luna","articleLink":"/lad/Luna","score":0},{"langEnglishName":"Lao","langNativeName":"ລາວ","langAbberviation":"lo","langCodeHTML":0,"langCodeURL":"lo","articleTitle":"ດວງຈັນ","articleLink":"/lo/%E0%BA%94%E0%BA%A7%E0%BA%87%E0%BA%88%E0%BA%B1%E0%BA%99","score":0},{"langEnglishName":"Latin","langNativeName":"Latina","langAbberviation":"la","langCodeHTML":0,"langCodeURL":"la","articleTitle":"Luna","articleLink":"/la/Luna","score":0},{"langEnglishName":"Latvian","langNativeName":"latviešu","langAbberviation":"lv","langCodeHTML":0,"langCodeURL":"lv","articleTitle":"Mēness","articleLink":"/lv/M%C4%93ness","score":0},{"langEnglishName":"Lezghian","langNativeName":"лезги","langAbberviation":"le","langCodeHTML":0,"langCodeURL":"lez","articleTitle":"Варз","articleLink":"/lez/%D0%92%D0%B0%D1%80%D0%B7","score":0},{"langEnglishName":"Ligurian","langNativeName":"Ligure","langAbberviation":"li","langCodeHTML":0,"langCodeURL":"lij","articleTitle":"Lunn-a","articleLink":"/lij/Lunn-a","score":0},{"langEnglishName":"Limburgan","langNativeName":"Limburgs","langAbberviation":"li","langCodeHTML":0,"langCodeURL":"li","articleTitle":"Maon","articleLink":"/li/Maon","score":0},{"langEnglishName":"Lingala","langNativeName":"lingála","langAbberviation":"ln","langCodeHTML":0,"langCodeURL":"ln","articleTitle":"Sánzá (monzɔ́tɔ)","articleLink":"/ln/S%C3%A1nz%C3%A1_(monz%C9%94%CC%81t%C9%94)","score":0},{"langEnglishName":"Lithuanian","langNativeName":"lietuvių","langAbberviation":"lt","langCodeHTML":0,"langCodeURL":"lt","articleTitle":"Mėnulis","articleLink":"/lt/M%C4%97nulis","score":0},{"langEnglishName":"Lojban","langNativeName":"Lojban","langAbberviation":"jb","langCodeHTML":0,"langCodeURL":"jbo","articleTitle":"lunra","articleLink":"/jbo/lunra","score":0},{"langEnglishName":"Lombard","langNativeName":"lumbaart","langAbberviation":"lm","langCodeHTML":0,"langCodeURL":"lmo","articleTitle":"Lüna","articleLink":"/lmo/L%C3%BCna","score":0},{"langEnglishName":"Low Saxon","langNativeName":"Plattdüütsch","langAbberviation":"nd","langCodeHTML":0,"langCodeURL":"nds","articleTitle":"Maand (Eer)","articleLink":"/nds/Maand_(Eer)","score":0},{"langEnglishName":"Luxembourgish","langNativeName":"Lëtzebuergesch","langAbberviation":"lb","langCodeHTML":0,"langCodeURL":"lb","articleTitle":"Äerdmound","articleLink":"/lb/%C3%84erdmound","score":0},{"langEnglishName":"Macedonian","langNativeName":"македонски","langAbberviation":"mk","langCodeHTML":0,"langCodeURL":"mk","articleTitle":"Месечина","articleLink":"/mk/%D0%9C%D0%B5%D1%81%D0%B5%D1%87%D0%B8%D0%BD%D0%B0","score":0},{"langEnglishName":"Malagasy","langNativeName":"Malagasy","langAbberviation":"mg","langCodeHTML":0,"langCodeURL":"mg","articleTitle":"Volana","articleLink":"/mg/Volana","score":0},{"langEnglishName":"Malay","langNativeName":"Bahasa Melayu","langAbberviation":"ms","langCodeHTML":0,"langCodeURL":"ms","articleTitle":"Bulan (satelit)","articleLink":"/ms/Bulan_(satelit)","score":0},{"langEnglishName":"Malayalam","langNativeName":"മലയാളം","langAbberviation":"ml","langCodeHTML":0,"langCodeURL":"ml","articleTitle":"ചന്ദ്രൻ","articleLink":"/ml/%E0%B4%9A%E0%B4%A8%E0%B5%8D%E0%B4%A6%E0%B5%8D%E0%B4%B0%E0%B5%BB","score":0},{"langEnglishName":"Maltese","langNativeName":"Malti","langAbberviation":"mt","langCodeHTML":0,"langCodeURL":"mt","articleTitle":"Qamar","articleLink":"/mt/Qamar","score":0},{"langEnglishName":"Manx","langNativeName":"Gaelg","langAbberviation":"gv","langCodeHTML":0,"langCodeURL":"gv","articleTitle":"Yn Eayst","articleLink":"/gv/Yn_Eayst","score":0},{"langEnglishName":"Marathi","langNativeName":"मराठी","langAbberviation":"mr","langCodeHTML":0,"langCodeURL":"mr","articleTitle":"चंद्र","articleLink":"/mr/%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0","score":0},{"langEnglishName":"Min Dong Chinese","langNativeName":"Mìng-dĕ̤ng-ngṳ̄","langAbberviation":"cd","langCodeHTML":0,"langCodeURL":"cdo","articleTitle":"Nguŏk-giù","articleLink":"/cdo/Ngu%C5%8Fk-gi%C3%B9","score":0},{"langEnglishName":"Mingrelian","langNativeName":"მარგალური","langAbberviation":"xm","langCodeHTML":0,"langCodeURL":"xmf","articleTitle":"თუთა (ალმაშარე)","articleLink":"/xmf/%E1%83%97%E1%83%A3%E1%83%97%E1%83%90_(%E1%83%90%E1%83%9A%E1%83%9B%E1%83%90%E1%83%A8%E1%83%90%E1%83%A0%E1%83%94)","score":0},{"langEnglishName":"Mirandese","langNativeName":"Mirandés","langAbberviation":"mw","langCodeHTML":0,"langCodeURL":"mwl","articleTitle":"Luna","articleLink":"/mwl/Luna","score":0},{"langEnglishName":"Moksha","langNativeName":"мокшень","langAbberviation":"md","langCodeHTML":0,"langCodeURL":"mdf","articleTitle":"Ков","articleLink":"/mdf/%D0%9A%D0%BE%D0%B2","score":0},{"langEnglishName":"Mongolian","langNativeName":"монгол","langAbberviation":"mn","langCodeHTML":0,"langCodeURL":"mn","articleTitle":"Сар","articleLink":"/mn/%D0%A1%D0%B0%D1%80","score":0},{"langEnglishName":"Nahuatl Languages","langNativeName":"Nāhuatl","langAbberviation":"na","langCodeHTML":0,"langCodeURL":"nah","articleTitle":"Metztli","articleLink":"/nah/Metztli","score":0},{"langEnglishName":"Nauru","langNativeName":"Dorerin Naoero","langAbberviation":"na","langCodeHTML":0,"langCodeURL":"na","articleTitle":"Maraman","articleLink":"/na/Maraman","score":0},{"langEnglishName":"Navajo","langNativeName":"Diné bizaad","langAbberviation":"nv","langCodeHTML":0,"langCodeURL":"nv","articleTitle":"Ooljééʼ","articleLink":"/nv/Oolj%C3%A9%C3%A9%CA%BC","score":0},{"langEnglishName":"Neopolitan","langNativeName":"Nnapulitano","langAbberviation":"na","langCodeHTML":0,"langCodeURL":"nap","articleTitle":"Luna","articleLink":"/nap/Luna","score":0},{"langEnglishName":"Nepal Bhasa/Newari","langNativeName":"नेपाल भाषा","langAbberviation":"ne","langCodeHTML":0,"langCodeURL":"new","articleTitle":"तिमिला","articleLink":"/new/%E0%A4%A4%E0%A4%BF%E0%A4%AE%E0%A4%BF%E0%A4%B2%E0%A4%BE","score":0},{"langEnglishName":"Nepali","langNativeName":"नेपाली","langAbberviation":"ne","langCodeHTML":0,"langCodeURL":"ne","articleTitle":"चन्द्रमा","articleLink":"/ne/%E0%A4%9A%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A4%BE","score":0},{"langEnglishName":"NONE","langNativeName":"Armãneashti","langCodeHTML":0,"langCodeURL":"rup","articleTitle":"Lunâ","articleLink":"/roa-rup/Lun%C3%A2","score":0},{"langEnglishName":"NONE","langNativeName":"Bân-lâm-gú","langCodeHTML":0,"langCodeURL":"nan","articleTitle":"Goe̍h-niû","articleLink":"/zh-min-nan/Goe%CC%8Dh-ni%C3%BB","score":0},{"langEnglishName":"NONE","langNativeName":"Kabɩyɛ","langCodeHTML":0,"langCodeURL":"kbp","articleTitle":"Fenaɣ","articleLink":"/kbp/Fena%C9%A3","score":0},{"langEnglishName":"NONE","langNativeName":"Արեւմտահայերէն","langCodeHTML":0,"langCodeURL":"hyw","articleTitle":"Լուսին","articleLink":"/hyw/%D4%BC%D5%B8%D6%82%D5%BD%D5%AB%D5%B6","score":0},{"langEnglishName":"NONE","langNativeName":"Alemannisch","langCodeHTML":0,"langCodeURL":"gsw","articleTitle":"Mond","articleLink":"/als/Mond","score":0},{"langEnglishName":"NONE","langNativeName":"Žemaitėška","langCodeHTML":0,"langCodeURL":"sgs","articleTitle":"Mienolis","articleLink":"/bat-smg/Mienolis","score":0},{"langEnglishName":"NONE","langNativeName":"ತುಳು","langCodeHTML":0,"langCodeURL":"tcy","articleTitle":"ಚಂದ್ರೆ","articleLink":"/tcy/%E0%B2%9A%E0%B2%82%E0%B2%A6%E0%B3%8D%E0%B2%B0%E0%B3%86","score":0},{"langEnglishName":"NONE","langNativeName":"Lingua Franca Nova","langCodeHTML":0,"langCodeURL":"lfn","articleTitle":"Luna","articleLink":"/lfn/Luna","score":0},{"langEnglishName":"NONE","langNativeName":"Emiliàn e rumagnòl","langCodeHTML":0,"langCodeURL":"egl","articleTitle":"Lónna","articleLink":"/eml/L%C3%B3nna","score":0},{"langEnglishName":"NONE","langNativeName":"डोटेली","langCodeHTML":0,"langCodeURL":"dty","articleTitle":"चन्द्रमा","articleLink":"/dty/%E0%A4%9A%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A4%BE","score":0},{"langEnglishName":"NONE","langNativeName":"Беларуская (тарашкевіца)‎","langCodeHTML":0,"langCodeURL":"be-tarask","articleTitle":"Месяц (спадарожнік)","articleLink":"/be-x-old/%D0%9C%D0%B5%D1%81%D1%8F%D1%86_(%D1%81%D0%BF%D0%B0%D0%B4%D0%B0%D1%80%D0%BE%D0%B6%D0%BD%D1%96%D0%BA)","score":0},{"langEnglishName":"NONE","langNativeName":"粵語","langCodeHTML":0,"langCodeURL":"yue","articleTitle":"月光","articleLink":"/zh-yue/%E6%9C%88%E5%85%89","score":0},{"langEnglishName":"NONE","langNativeName":"Nouormand","langCodeHTML":0,"langCodeURL":"nrf","articleTitle":"Leune","articleLink":"/nrm/Leune","score":0},{"langEnglishName":"NONE","langNativeName":"ᱥᱟᱱᱛᱟᱲᱤ","langCodeHTML":0,"langCodeURL":"sat","articleTitle":"ᱧᱤᱫᱟᱹ ᱪᱟᱸᱫᱚ","articleLink":"/sat/%E1%B1%A7%E1%B1%A4%E1%B1%AB%E1%B1%9F%E1%B1%B9_%E1%B1%AA%E1%B1%9F%E1%B1%B8%E1%B1%AB%E1%B1%9A","score":0},{"langEnglishName":"NONE","langNativeName":"تۆرکجه","langCodeHTML":0,"langCodeURL":"azb","articleTitle":"آی","articleLink":"/azb/%D8%A2%DB%8C","score":0},{"langEnglishName":"NONE","langNativeName":"文言","langCodeHTML":0,"langCodeURL":"lzh","articleTitle":"月","articleLink":"/zh-classical/%E6%9C%88","score":0},{"langEnglishName":"NONE","langNativeName":"Võro","langCodeHTML":0,"langCodeURL":"vro","articleTitle":"Kuu","articleLink":"/fiu-vro/Kuu","score":0},{"langEnglishName":"NONE","langNativeName":"ГӀалгӀай","langCodeHTML":0,"langCodeURL":"inh","articleTitle":"Бутт (новкъар)","articleLink":"/inh/%D0%91%D1%83%D1%82%D1%82_(%D0%BD%D0%BE%D0%B2%D0%BA%D1%8A%D0%B0%D1%80)","score":0},{"langEnglishName":"NONE","langNativeName":"Patois","langCodeHTML":0,"langCodeURL":"jam","articleTitle":"Muun","articleLink":"/jam/Muun","score":0},{"langEnglishName":"NONE","langNativeName":"Nedersaksies","langCodeHTML":0,"langCodeURL":"nds-NL","articleTitle":"Maone (eerde)","articleLink":"/nds-nl/Maone_(eerde)","score":0},{"langEnglishName":"NONE","langNativeName":"Simple English","langCodeHTML":0,"langCodeURL":"en-simple","articleTitle":"Moon","articleLink":"/simple/Moon","score":0},{"langEnglishName":"Northern Frisian","langNativeName":"Nordfriisk","langAbberviation":"fr","langCodeHTML":0,"langCodeURL":"frr","articleTitle":"Moune","articleLink":"/frr/Moune","score":0},{"langEnglishName":"Northern Sami","langNativeName":"sámegiella","langAbberviation":"se","langCodeHTML":0,"langCodeURL":"se","articleTitle":"Mánnu","articleLink":"/se/M%C3%A1nnu","score":0},{"langEnglishName":"Norwegian (Bokmål)","langNativeName":"norsk (bokmål)","langAbberviation":"no","langCodeHTML":0,"langCodeURL":"no","articleTitle":"Månen","articleLink":"/no/M%C3%A5nen","score":0},{"langEnglishName":"Norwegian (Nynorsk)","langNativeName":"norsk (nynorsk)‎","langAbberviation":"nn","langCodeHTML":0,"langCodeURL":"nn","articleTitle":"Månen","articleLink":"/nn/M%C3%A5nen","score":0},{"langEnglishName":"Novial","langNativeName":"ovial","langAbberviation":"no","langCodeHTML":0,"langCodeURL":"nov","articleTitle":"Lune","articleLink":"/nov/Lune","score":0},{"langEnglishName":"Occitan","langNativeName":"occitan","langAbberviation":"oc","langCodeHTML":0,"langCodeURL":"oc","articleTitle":"Luna","articleLink":"/oc/Luna","score":0},{"langEnglishName":"Odia","langNativeName":"ଓଡ଼ିଆ","langAbberviation":"or","langCodeHTML":0,"langCodeURL":"or","articleTitle":"ଜହ୍ନ","articleLink":"/or/%E0%AC%9C%E0%AC%B9%E0%AD%8D%E0%AC%A8","score":0},{"langEnglishName":"Official Aramaic","langNativeName":"ܐܪܡܝܐ","langAbberviation":"ar","langCodeHTML":0,"langCodeURL":"arc","articleTitle":"ܣܗܪܐ","articleLink":"/arc/%DC%A3%DC%97%DC%AA%DC%90","score":0},{"langEnglishName":"Old English","langNativeName":"Ænglisc","langAbberviation":"an","langCodeHTML":0,"langCodeURL":"ang","articleTitle":"Mōna","articleLink":"/ang/M%C5%8Dna","score":0},{"langEnglishName":"Ossetian","langNativeName":"Ирон","langAbberviation":"os","langCodeHTML":0,"langCodeURL":"os","articleTitle":"Мæй (Зæххы æмбæлццон)","articleLink":"/os/%D0%9C%C3%A6%D0%B9_(%D0%97%C3%A6%D1%85%D1%85%D1%8B_%C3%A6%D0%BC%D0%B1%C3%A6%D0%BB%D1%86%D1%86%D0%BE%D0%BD)","score":0},{"langEnglishName":"Pampanga","langNativeName":"Kapampangan","langAbberviation":"pa","langCodeHTML":0,"langCodeURL":"pam","articleTitle":"Bulan","articleLink":"/pam/Bulan","score":0},{"langEnglishName":"Pashto","langNativeName":"پښتو","langAbberviation":"ps","langCodeHTML":0,"langCodeURL":"ps","articleTitle":"سپوږمۍ","articleLink":"/ps/%D8%B3%D9%BE%D9%88%DA%96%D9%85%DB%8D","score":0},{"langEnglishName":"Persian","langNativeName":"فارسی","langAbberviation":"fa","langCodeHTML":0,"langCodeURL":"fa","articleTitle":"ماه","articleLink":"/fa/%D9%85%D8%A7%D9%87","score":0},{"langEnglishName":"Piedmontese","langNativeName":"Piemontèis","langAbberviation":"pm","langCodeHTML":0,"langCodeURL":"pms","articleTitle":"Lun-a","articleLink":"/pms/Lun-a","score":0},{"langEnglishName":"Polish","langNativeName":"polski","langAbberviation":"pl","langCodeHTML":0,"langCodeURL":"pl","articleTitle":"Księżyc","articleLink":"/pl/Ksi%C4%99%C5%BCyc","score":0},{"langEnglishName":"Pontic","langNativeName":"Ποντιακά","langAbberviation":"pn","langCodeHTML":0,"langCodeURL":"pnt","articleTitle":"Φέγγος","articleLink":"/pnt/%CE%A6%CE%AD%CE%B3%CE%B3%CE%BF%CF%82","score":0},{"langEnglishName":"Portuguese","langNativeName":"português","langAbberviation":"pt","langCodeHTML":0,"langCodeURL":"pt","articleTitle":"Lua","articleLink":"/pt/Lua","score":1},{"langEnglishName":"Punjabi","langNativeName":"ਪੰਜਾਬੀ","langAbberviation":"pa","langCodeHTML":0,"langCodeURL":"pa","articleTitle":"ਚੰਦਰਮਾ","articleLink":"/pa/%E0%A8%9A%E0%A9%B0%E0%A8%A6%E0%A8%B0%E0%A8%AE%E0%A8%BE","score":0},{"langEnglishName":"Quechuan (Runa Simi)","langNativeName":"Runa Simi","langAbberviation":"qu","langCodeHTML":0,"langCodeURL":"qu","articleTitle":"Killa","articleLink":"/qu/Killa","score":0},{"langEnglishName":"Romani","langNativeName":"Romani","langAbberviation":"rm","langCodeHTML":0,"langCodeURL":"rmy","articleTitle":"Chhon (chereski)","articleLink":"/rmy/Chhon_(chereski)","score":0},{"langEnglishName":"Romanian","langNativeName":"română","langAbberviation":"ro","langCodeHTML":0,"langCodeURL":"ro","articleTitle":"Luna","articleLink":"/ro/Luna","score":0},{"langEnglishName":"Romansh","langNativeName":"rumantsch","langAbberviation":"rm","langCodeHTML":0,"langCodeURL":"rm","articleTitle":"Glina","articleLink":"/rm/Glina","score":0},{"langEnglishName":"Russia Buriat","langNativeName":"буряад","langAbberviation":"bx","langCodeHTML":0,"langCodeURL":"bxr","articleTitle":"Һара","articleLink":"/bxr/%D2%BA%D0%B0%D1%80%D0%B0","score":0},{"langEnglishName":"Russian","langNativeName":"русский","langAbberviation":"ru","langCodeHTML":0,"langCodeURL":"ru","articleTitle":"Луна","articleLink":"/ru/%D0%9B%D1%83%D0%BD%D0%B0","score":0},{"langEnglishName":"Rusyn","langNativeName":"русиньскый","langAbberviation":"ru","langCodeHTML":0,"langCodeURL":"rue","articleTitle":"Місяць (сателіт)","articleLink":"/rue/%D0%9C%D1%96%D1%81%D1%8F%D1%86%D1%8C_(%D1%81%D0%B0%D1%82%D0%B5%D0%BB%D1%96%D1%82)","score":0},{"langEnglishName":"Sanskrit","langNativeName":"संस्कृतम्","langAbberviation":"sa","langCodeHTML":0,"langCodeURL":"sa","articleTitle":"चन्द्रः","articleLink":"/sa/%E0%A4%9A%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%83","score":0},{"langEnglishName":"Sardinian","langNativeName":"sardu","langAbberviation":"sc","langCodeHTML":0,"langCodeURL":"sc","articleTitle":"Luna","articleLink":"/sc/Luna","score":0},{"langEnglishName":"Saterlandic","langNativeName":"Seeltersk","langAbberviation":"st","langCodeHTML":0,"langCodeURL":"stq","articleTitle":"Moune","articleLink":"/stq/Moune","score":0},{"langEnglishName":"Scots","langNativeName":"Scots","langAbberviation":"sc","langCodeHTML":0,"langCodeURL":"sco","articleTitle":"Muin","articleLink":"/sco/Muin","score":0},{"langEnglishName":"Serbian","langNativeName":"српски / srpski","langAbberviation":"sr","langCodeHTML":0,"langCodeURL":"sr","articleTitle":"Месец","articleLink":"/sr/%D0%9C%D0%B5%D1%81%D0%B5%D1%86","score":0},{"langEnglishName":"Serbo-Croatian","langNativeName":"srpskohrvatski / српскохрватски","langAbberviation":"sh","langCodeHTML":0,"langCodeURL":"sh","articleTitle":"Mjesec","articleLink":"/sh/Mjesec","score":0},{"langEnglishName":"Shona","langNativeName":"chiShona","langAbberviation":"sn","langCodeHTML":0,"langCodeURL":"sn","articleTitle":"Mwedzi (mutumbi)","articleLink":"/sn/Mwedzi_(mutumbi)","score":0},{"langEnglishName":"Sichuan Yi; Nuosu","langNativeName":"ꆇꉙ","langAbberviation":"ii","langCodeHTML":0,"langCodeURL":"ii","articleTitle":"ꆪ","articleLink":"/ii/%EA%86%AA","score":0},{"langEnglishName":"Sicilian","langNativeName":"sicilianu","langAbberviation":"sc","langCodeHTML":0,"langCodeURL":"scn","articleTitle":"Luna","articleLink":"/scn/Luna","score":0},{"langEnglishName":"Silesian","langNativeName":"ślůnski","langAbberviation":"sz","langCodeHTML":0,"langCodeURL":"szl","articleTitle":"Mjeśůnczek","articleLink":"/szl/Mje%C5%9B%C5%AFnczek","score":0},{"langEnglishName":"Simplified Chinese","langNativeName":"中文（简体)","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-hans","articleTitle":"月球","articleLink":"/zh-hans/%E6%9C%88%E7%90%83","score":0},{"langEnglishName":"Simplified Chinese (China)","langNativeName":"中文（中国大陆)","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-cn","articleTitle":"月球","articleLink":"/zh-cn/%E6%9C%88%E7%90%83","score":0},{"langEnglishName":"Simplified Chinese (Singapore)","langNativeName":"中文（新加坡）","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-sg","articleTitle":"月球","articleLink":"/zh-sg/%E6%9C%88%E7%90%83","score":0},{"langEnglishName":"Sindhi","langNativeName":"سنڌي","langAbberviation":"sd","langCodeHTML":0,"langCodeURL":"sd","articleTitle":"چنڊ","articleLink":"/sd/%DA%86%D9%86%DA%8A","score":0},{"langEnglishName":"Sinhala","langNativeName":"සිංහල","langAbberviation":"si","langCodeHTML":0,"langCodeURL":"si","articleTitle":"චන්ද්‍රයා","articleLink":"/si/%E0%B6%A0%E0%B6%B1%E0%B7%8A%E0%B6%AF%E0%B7%8A%E2%80%8D%E0%B6%BB%E0%B6%BA%E0%B7%8F","score":0},{"langEnglishName":"Slovak","langNativeName":"slovenčina","langAbberviation":"sk","langCodeHTML":0,"langCodeURL":"sk","articleTitle":"Mesiac","articleLink":"/sk/Mesiac","score":0},{"langEnglishName":"Slovenian","langNativeName":"slovenščina","langAbberviation":"sl","langCodeHTML":0,"langCodeURL":"sl","articleTitle":"Luna","articleLink":"/sl/Luna","score":0},{"langEnglishName":"Somali","langNativeName":"Soomaaliga","langAbberviation":"so","langCodeHTML":0,"langCodeURL":"so","articleTitle":"Bil","articleLink":"/so/Bil","score":0},{"langEnglishName":"Spanish","langNativeName":"español","langAbberviation":"es","langCodeHTML":0,"langCodeURL":"es","articleTitle":"Luna","articleLink":"/es/Luna","score":1},{"langEnglishName":"Sundanese","langNativeName":"Basa Sunda","langAbberviation":"su","langCodeHTML":0,"langCodeURL":"su","articleTitle":"Bulan (satelit)","articleLink":"/su/Bulan_(satelit)","score":0},{"langEnglishName":"Swahili","langNativeName":"Kiswahili","langAbberviation":"sw","langCodeHTML":0,"langCodeURL":"sw","articleTitle":"Mwezi","articleLink":"/sw/Mwezi","score":0},{"langEnglishName":"Swedish","langNativeName":"svenska","langAbberviation":"sv","langCodeHTML":0,"langCodeURL":"sv","articleTitle":"Månen","articleLink":"/sv/M%C3%A5nen","score":0},{"langEnglishName":"Tagalog","langNativeName":"Tagalog","langAbberviation":"tl","langCodeHTML":0,"langCodeURL":"tl","articleTitle":"Buwan (astronomiya)","articleLink":"/tl/Buwan_(astronomiya)","score":0},{"langEnglishName":"Tajik","langNativeName":"тоҷикӣ","langAbberviation":"tg","langCodeHTML":0,"langCodeURL":"tg","articleTitle":"Моҳтоб","articleLink":"/tg/%D0%9C%D0%BE%D2%B3%D1%82%D0%BE%D0%B1","score":0},{"langEnglishName":"Tamil","langNativeName":"தமிழ்","langAbberviation":"ta","langCodeHTML":0,"langCodeURL":"ta","articleTitle":"நிலா","articleLink":"/ta/%E0%AE%A8%E0%AE%BF%E0%AE%B2%E0%AE%BE","score":0},{"langEnglishName":"Tatar","langNativeName":"татарча/tatarça","langAbberviation":"tt","langCodeHTML":0,"langCodeURL":"tt","articleTitle":"Ай (иярчен)","articleLink":"/tt/%D0%90%D0%B9_(%D0%B8%D1%8F%D1%80%D1%87%D0%B5%D0%BD)","score":0},{"langEnglishName":"Telugu","langNativeName":"తెలుగు","langAbberviation":"te","langCodeHTML":0,"langCodeURL":"te","articleTitle":"చంద్రుడు","articleLink":"/te/%E0%B0%9A%E0%B0%82%E0%B0%A6%E0%B1%8D%E0%B0%B0%E0%B1%81%E0%B0%A1%E0%B1%81","score":0},{"langEnglishName":"Thai","langNativeName":"ไทย","langAbberviation":"th","langCodeHTML":0,"langCodeURL":"th","articleTitle":"ดวงจันทร์","articleLink":"/th/%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B8%88%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C","score":0},{"langEnglishName":"Tibetan","langNativeName":"བོད་ཡིག","langAbberviation":"bo","langCodeHTML":0,"langCodeURL":"bo","articleTitle":"ཟླ་བ།","articleLink":"/bo/%E0%BD%9F%E0%BE%B3%E0%BC%8B%E0%BD%96%E0%BC%8D","score":0},{"langEnglishName":"Tok Pisin","langNativeName":"Tok Pisin","langAbberviation":"tp","langCodeHTML":0,"langCodeURL":"tpi","articleTitle":"Mun (i stap long heven)","articleLink":"/tpi/Mun_(i_stap_long_heven)","score":0},{"langEnglishName":"Traditional Chinese","langNativeName":"中文（繁體）","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-hant","articleTitle":"月球","articleLink":"/zh-hant/%E6%9C%88%E7%90%83","score":0},{"langEnglishName":"Traditional Chinese (Hong Kong)","langNativeName":"中文（香港）","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-hk","articleTitle":"月球","articleLink":"/zh-hk/%E6%9C%88%E7%90%83","score":0},{"langEnglishName":"Traditional Chinese (Macau)","langNativeName":"中文（澳門）","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-mo","articleTitle":"月球","articleLink":"/zh-mo/%E6%9C%88%E7%90%83","score":0},{"langEnglishName":"Traditional Chinese (Taiwan)","langNativeName":"中文（台灣）","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-tw","articleTitle":"月球","articleLink":"/zh-tw/%E6%9C%88%E7%90%83","score":0},{"langEnglishName":"Turkish","langNativeName":"Türkçe","langAbberviation":"tr","langCodeHTML":0,"langCodeURL":"tr","articleTitle":"Ay","articleLink":"/tr/Ay","score":0},{"langEnglishName":"Turkmen","langNativeName":"Türkmençe","langAbberviation":"tk","langCodeHTML":0,"langCodeURL":"tk","articleTitle":"Aý (hemra)","articleLink":"/tk/A%C3%BD_(hemra)","score":0},{"langEnglishName":"Tuvinian","langNativeName":"тыва дыл","langAbberviation":"ty","langCodeHTML":0,"langCodeURL":"tyv","articleTitle":"Ай","articleLink":"/tyv/%D0%90%D0%B9","score":0},{"langEnglishName":"Twi","langNativeName":"Twi","langAbberviation":"tw","langCodeHTML":0,"langCodeURL":"tw","articleTitle":"Ɔbosome","articleLink":"/tw/%C6%86bosome","score":0},{"langEnglishName":"Udmurt","langNativeName":"удмурт","langAbberviation":"ud","langCodeHTML":0,"langCodeURL":"udm","articleTitle":"Толэзь (астрономия)","articleLink":"/udm/%D0%A2%D0%BE%D0%BB%D1%8D%D0%B7%D1%8C_(%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%8F)","score":0},{"langEnglishName":"Ukranian","langNativeName":"українська","langAbberviation":"uk","langCodeHTML":0,"langCodeURL":"uk","articleTitle":"Місяць (супутник)","articleLink":"/uk/%D0%9C%D1%96%D1%81%D1%8F%D1%86%D1%8C_(%D1%81%D1%83%D0%BF%D1%83%D1%82%D0%BD%D0%B8%D0%BA)","score":0},{"langEnglishName":"Upper Sorbian","langNativeName":"hornjoserbsce","langAbberviation":"hs","langCodeHTML":0,"langCodeURL":"hsb","articleTitle":"Měsačk","articleLink":"/hsb/M%C4%9Bsa%C4%8Dk","score":0},{"langEnglishName":"Urdu","langNativeName":"اردو","langAbberviation":"ur","langCodeHTML":0,"langCodeURL":"ur","articleTitle":"چاند","articleLink":"/ur/%DA%86%D8%A7%D9%86%D8%AF","score":0},{"langEnglishName":"Uzbek","langNativeName":"oʻzbekcha","langAbberviation":"uz","langCodeHTML":0,"langCodeURL":"uz","articleTitle":"Oy","articleLink":"/uz/Oy","score":0},{"langEnglishName":"Venetian","langNativeName":"vèneto","langAbberviation":"ve","langCodeHTML":0,"langCodeURL":"vec","articleTitle":"Łuna","articleLink":"/vec/%C5%81una","score":0},{"langEnglishName":"Veps","langNativeName":"vepsän kel’","langAbberviation":"ve","langCodeHTML":0,"langCodeURL":"vep","articleTitle":"Kudmaine","articleLink":"/vep/Kudmaine","score":0},{"langEnglishName":"Vietnamese","langNativeName":"Tiếng Việt","langAbberviation":"vi","langCodeHTML":0,"langCodeURL":"vi","articleTitle":"Mặt Trăng","articleLink":"/vi/M%E1%BA%B7t_Tr%C4%83ng","score":0},{"langEnglishName":"Vlaams","langNativeName":"West-Vlams","langAbberviation":"vl","langCodeHTML":0,"langCodeURL":"vls","articleTitle":"Moane","articleLink":"/vls/Moane","score":0},{"langEnglishName":"Volapük","langNativeName":"Volapük","langAbberviation":"vo","langCodeHTML":0,"langCodeURL":"vo","articleTitle":"Mun","articleLink":"/vo/Mun","score":0},{"langEnglishName":"Walloon","langNativeName":"walon","langAbberviation":"wa","langCodeHTML":0,"langCodeURL":"wa","articleTitle":"Lune","articleLink":"/wa/Lune","score":0},{"langEnglishName":"Waray","langNativeName":"Winaray","langAbberviation":"wa","langCodeHTML":0,"langCodeURL":"war","articleTitle":"Bulan (astronomiya)","articleLink":"/war/Bulan_(astronomiya)","score":0},{"langEnglishName":"Welsh","langNativeName":"Cymraeg","langAbberviation":"cy","langCodeHTML":0,"langCodeURL":"cy","articleTitle":"Lleuad","articleLink":"/cy/Lleuad","score":0},{"langEnglishName":"Western Frisian","langNativeName":"Frysk","langAbberviation":"fy","langCodeHTML":0,"langCodeURL":"fy","articleTitle":"Moanne (natuerlike satellyt fan de Ierde)","articleLink":"/fy/Moanne_(natuerlike_satellyt_fan_de_Ierde)","score":0},{"langEnglishName":"Western Punjabi","langNativeName":"پنجابی","langAbberviation":"pn","langCodeHTML":0,"langCodeURL":"pnb","articleTitle":"چن","articleLink":"/pnb/%DA%86%D9%86","score":0},{"langEnglishName":"Wuu Chinese","langNativeName":"吴语","langAbberviation":"wu","langCodeHTML":0,"langCodeURL":"wuu","articleTitle":"月球","articleLink":"/wuu/%E6%9C%88%E7%90%83","score":0},{"langEnglishName":"Yakut","langNativeName":"саха тыла","langAbberviation":"sa","langCodeHTML":0,"langCodeURL":"sah","articleTitle":"Ый","articleLink":"/sah/%D0%AB%D0%B9","score":0},{"langEnglishName":"Yiddish","langNativeName":"ייִדיש","langAbberviation":"yi","langCodeHTML":0,"langCodeURL":"yi","articleTitle":"לבנה","articleLink":"/yi/%D7%9C%D7%91%D7%A0%D7%94","score":0},{"langEnglishName":"Yoruba","langNativeName":"Yorùbá","langAbberviation":"yo","langCodeHTML":0,"langCodeURL":"yo","articleTitle":"Òṣùpá","articleLink":"/yo/%C3%92%E1%B9%A3%C3%B9p%C3%A1","score":0},{"langEnglishName":"Zeeuws","langNativeName":"Zeêuws","langAbberviation":"ze","langCodeHTML":0,"langCodeURL":"zea","articleTitle":"Maen (Aerde)","articleLink":"/zea/Maen_(Aerde)","score":0},{"langEnglishName":"Zhuang","langNativeName":"Vahcuengh","langAbberviation":"za","langCodeHTML":0,"langCodeURL":"za","articleTitle":"Ronghndwen","articleLink":"/za/Ronghndwen","score":0},{"langEnglishName":"Zulu","langNativeName":"isiZulu","langAbberviation":"zu","langCodeHTML":0,"langCodeURL":"zu","articleTitle":"Inyanga","articleLink":"/zu/Inyanga","score":0}],"englishLink":{"langEnglishName":"English","langNativeName":"English","langAbberviation":"en","langCodeHTML":0,"langCodeURL":"en","articleTitle":"Moon","articleLink":"/en/Moon","score":1}};
+    </script>
+    <script>
+     if (location.host=='translate.googleusercontent.com' && location.search){
+
+			var requestedLang=location.search.split('tl=')[1];
+			if (requestedLang) {
+				requestedLang = requestedLang.split('&')[0];
+				var desiredLink = articleData.links.selfRead.replace('http://', 'https://');
+				for (idx in articleData.availableLanguages) {
+					var lang = articleData.availableLanguages[idx];
+					if (lang.langCodeURL == requestedLang) {
+						desiredLink = 'https://www.wikiwand.com' + lang.articleLink;
+						break;
+					}
+				}
+				window.location = desiredLink;
+				var dontReport=true;
+			}
+		}
+    </script>
+    <title>
+     القمر - Wikiwand
+    </title>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="@wikiwand" name="twitter:site"/>
+    <meta content="wikiwand-article://ar/%D8%A7%D9%84%D9%82%D9%85%D8%B1" name="twitter:app:url:iphone">
+     <meta content="wikiwand-article://ar/%D8%A7%D9%84%D9%82%D9%85%D8%B1" name="twitter:app:url:ipad">
+      <meta content="823404911083396" property="fb:app_id">
+       <meta content="index,follow" name="robots"/>
+       <meta content="article" property="og:type"/>
+       <meta content="Wikiwand" property="og:site_name"/>
+       <meta content="http://www.wikiwand.com/ar/%D8%A7%D9%84%D9%82%D9%85%D8%B1" property="og:url"/>
+       <meta content="القمر | Wikiwand" property="og:title"/>
+       <meta content="القمر | Wikiwand" property="twitter:title"/>
+       <meta content='القمر هو القمر الطبيعي الوَحيد للأرض [ملاحظة 1][3] بالإضافة إلى أنه خامس أكبر قمرٍ طبيعيٍ في المجموعة الشمسية. فهو يُعَدُ أكبر قمرٍ طبيعيٍ في المجموعة الشمسية من ناحية نسبة حجمه إلى كوكبه التابع له، حيث أن قطره يصل إلى ربع قطر الأرض، كما أن كتلته تصل إلى 1 على 81 من كتلة الأرض، هذا بالإضافة إلى أنه يُعَدُ ثاني أعلى قمرٍ من ناحية الكثافة بعد قمر إيو. هذا ويتسم القمر الأرضي حركته التزامنية مع كوكبه ، عارضاً دائماً الوجه نفسه؛ حيث يتميز الجانب القريب بمنطقةٍ بركانيةٍ منخفضةٍ مظلمةٍ، والتي تقع فيما بين مرتفعات القشرة الأرضية القديمة البراقة والفوهات الصدمية الشاهقة. كما يُلاحظ أن القمر الأرضي هو أكثر جسمٍ لامعٍ في السماء ليلاً، وعموماً هو الجسم الأكثر لمعاناً بعد الشمس، وهذا على الرغم من أن سطحه معتم جداً، حيث أن له انعكاساً مماثلاً للفحم. كان بروز القمر في السماء المظلمة ليلاً، ودورته المنتظمة الأطوار قد جعل له على مر العصور القديمة تأثيراً ثقافياً هاماً على كلٍ من اللغة، التقويم القمري، الفنون [الإنجليزية]، والأساطير القديمة، المتمثلة في آلهة القمر والتي منها عبر الحضارات: "خونسو" في الديانة المصرية القديمة، "تشانغ" في الحضارة الصينية وكذلك "ماما قيلا" في حضارة الإنكا. ومن السمات الكامنة للقمر كذلك، تأثير جاذبيته التي تسفر عن وقوع عمليتي مد وجزر المحيطات وإطالة الدقيقة لليوم. مع ملاحظة أن المسافة المدارية الحالية للقمر، والتي تُقَدَرُ بثلاثين مرةٍ قدر قطر الكرة الأرضية، تتسبب في أن يبدو القمر أغلب الوقت بنفس حجمه دون تغيير في السماء كما هو الحال مع الشمس، مما يسمح له بأن يغطي الشمس بصورةٍ شبه تامةٍ في ظاهرة الكسوف الكلي للشمس.' property="og:description"/>
+       <meta content='القمر هو القمر الطبيعي الوَحيد للأرض [ملاحظة 1][3] بالإضافة إلى أنه خامس أكبر قمرٍ طبيعيٍ في المجموعة الشمسية. فهو يُعَدُ أكبر قمرٍ طبيعيٍ في المجموعة الشمسية من ناحية نسبة حجمه إلى كوكبه التابع له، حيث أن قطره يصل إلى ربع قطر الأرض، كما أن كتلته تصل إلى 1 على 81 من كتلة الأرض، هذا بالإضافة إلى أنه يُعَدُ ثاني أعلى قمرٍ من ناحية الكثافة بعد قمر إيو. هذا ويتسم القمر الأرضي حركته التزامنية مع كوكبه ، عارضاً دائماً الوجه نفسه؛ حيث يتميز الجانب القريب بمنطقةٍ بركانيةٍ منخفضةٍ مظلمةٍ، والتي تقع فيما بين مرتفعات القشرة الأرضية القديمة البراقة والفوهات الصدمية الشاهقة. كما يُلاحظ أن القمر الأرضي هو أكثر جسمٍ لامعٍ في السماء ليلاً، وعموماً هو الجسم الأكثر لمعاناً بعد الشمس، وهذا على الرغم من أن سطحه معتم جداً، حيث أن له انعكاساً مماثلاً للفحم. كان بروز القمر في السماء المظلمة ليلاً، ودورته المنتظمة الأطوار قد جعل له على مر العصور القديمة تأثيراً ثقافياً هاماً على كلٍ من اللغة، التقويم القمري، الفنون [الإنجليزية]، والأساطير القديمة، المتمثلة في آلهة القمر والتي منها عبر الحضارات: "خونسو" في الديانة المصرية القديمة، "تشانغ" في الحضارة الصينية وكذلك "ماما قيلا" في حضارة الإنكا. ومن السمات الكامنة للقمر كذلك، تأثير جاذبيته التي تسفر عن وقوع عمليتي مد وجزر المحيطات وإطالة الدقيقة لليوم. مع ملاحظة أن المسافة المدارية الحالية للقمر، والتي تُقَدَرُ بثلاثين مرةٍ قدر قطر الكرة الأرضية، تتسبب في أن يبدو القمر أغلب الوقت بنفس حجمه دون تغيير في السماء كما هو الحال مع الشمس، مما يسمح له بأن يغطي الشمس بصورةٍ شبه تامةٍ في ظاهرة الكسوف الكلي للشمس.' name="description"/>
+       <meta content='القمر هو القمر الطبيعي الوَحيد للأرض [ملاحظة 1][3] بالإضافة إلى أنه خامس أكبر قمرٍ طبيعيٍ في المجموعة الشمسية. فهو يُعَدُ أكبر قمرٍ طبيعيٍ في المجموعة الشمسية من ناحية نسبة حجمه إلى كوكبه التابع له، حيث أن قطره يصل إلى ربع قطر الأرض، كما أن كتلته تصل إلى 1 على 81 من كتلة الأرض، هذا بالإضافة إلى أنه يُعَدُ ثاني أعلى قمرٍ من ناحية الكثافة بعد قمر إيو. هذا ويتسم القمر الأرضي حركته التزامنية مع كوكبه ، عارضاً دائماً الوجه نفسه؛ حيث يتميز الجانب القريب بمنطقةٍ بركانيةٍ منخفضةٍ مظلمةٍ، والتي تقع فيما بين مرتفعات القشرة الأرضية القديمة البراقة والفوهات الصدمية الشاهقة. كما يُلاحظ أن القمر الأرضي هو أكثر جسمٍ لامعٍ في السماء ليلاً، وعموماً هو الجسم الأكثر لمعاناً بعد الشمس، وهذا على الرغم من أن سطحه معتم جداً، حيث أن له انعكاساً مماثلاً للفحم. كان بروز القمر في السماء المظلمة ليلاً، ودورته المنتظمة الأطوار قد جعل له على مر العصور القديمة تأثيراً ثقافياً هاماً على كلٍ من اللغة، التقويم القمري، الفنون [الإنجليزية]، والأساطير القديمة، المتمثلة في آلهة القمر والتي منها عبر الحضارات: "خونسو" في الديانة المصرية القديمة، "تشانغ" في الحضارة الصينية وكذلك "ماما قيلا" في حضارة الإنكا. ومن السمات الكامنة للقمر كذلك، تأثير جاذبيته التي تسفر عن وقوع عمليتي مد وجزر المحيطات وإطالة الدقيقة لليوم. مع ملاحظة أن المسافة المدارية الحالية للقمر، والتي تُقَدَرُ بثلاثين مرةٍ قدر قطر الكرة الأرضية، تتسبب في أن يبدو القمر أغلب الوقت بنفس حجمه دون تغيير في السماء كما هو الحال مع الشمس، مما يسمح له بأن يغطي الشمس بصورةٍ شبه تامةٍ في ظاهرة الكسوف الكلي للشمس.' name="twitter:description"/>
+       <link href="//assets.wikiwand.com/img/wikiwand_icon.png" rel="image_src">
+        <meta content="//assets.wikiwand.com/img/wikiwand_icon.png" property="og:image"/>
+        <meta content="//assets.wikiwand.com/img/wikiwand_icon.png" property="twitter:image:src"/>
+        <meta content="qw, القمر, العربية" name="keywords"/>
+       </link>
+      </meta>
+     </meta>
+    </meta>
+   </link>
+  </link>
+ </head>
+ <body class="rtl lg_arabic bsp1 bsp2 lang_ar bsp3" ng-class="$root.userBodyStyle" ng-controller="ShellController" ng-init="initializeShellController()">
+  <div id="body_wrapp" ng-click="clickedOutside()" ng-mousedown="clickedAnywhere($event)">
+   <div ng-cloak="" ng-if="precache_from_extension">
+    For faster navigation, this Iframe is preloading the Wikiwand page for
+    <b>
+     القمر
+    </b>
+    .
+   </div>
+   <nav class=" unselectable" id="header" ng-class="{active:!$root.tocShow}" ng-cloak="" ng-controller="ToolbarController" ng-hide="$root.serverData.agent.iOSWebView" ng-if="!hideToolbar">
+    <ul class="menu " id="main_menu" ng-class="{ios_focus: $root.iosFocus}">
+     <li class="toc_folded" ng-class="{activated:!$root.tocShow, gone: searchFocus}" ng-click="$root.tocFold(); $root.userClick(true, 'toolbar-toc-show');">
+      <i>
+      </i>
+     </li>
+     <li class="article_btn article" ng-class="{active:showWikiwandMenu, gone: searchFocus}" ng-click="toggleWikiwandMenu($event); $root.userClick(showWikiwandMenu, 'toolbar-mainmenu');">
+      <img alt="wikiwand logo" class="logo_img unselectable" src="/img/logo_new.svg">
+       <img alt="wikiwand w" class="hide logo_w unselectable" src="/img/w.svg"/>
+       <i>
+       </i>
+       <div class="drop_down" ng-click="clickedInside($event)" ng-show="showWikiwandMenu">
+        <ul id="feadback_list" ng-show="!showUserVoice &amp;&amp; !showCoverReport">
+         <li>
+          <a href="/">
+           <i class="home_icon">
+           </i>
+           Home
+          </a>
+         </li>
+         <li>
+          <a href="/news">
+           <i class="news_icon">
+           </i>
+           News
+          </a>
+         </li>
+         <li>
+          <a href="/random/ar">
+           <i class="random_icon">
+           </i>
+           Random Article
+          </a>
+         </li>
+         <li ng-if="!activation.extensionInstalled">
+          <a href="#" ng-click="$root.showInstall = true" onclick="event.preventDefault();">
+           <i class="install_icon">
+           </i>
+           Install Wikiwand
+          </a>
+         </li>
+         <li>
+          <a href="#" ng-click="$root.showFollow = true; loadGplusScript()" onclick="event.preventDefault();">
+           <i class="follow_icon">
+           </i>
+           Follow Us
+          </a>
+         </li>
+         <!--<li><a href="http://wikiwand.uservoice.com" target="_blank"><i class="support_icon"></i>Support</a></li>-->
+         <!--
+						<li ng-hide="$root.minimalStyle"><a href="javascript:void(0);" ng-click="showCoverReport=true" onclick="event.preventDefault()"><i class="cover_icon"></i>Report cover photo</a></li>
+						-->
+         <!--<!<li><a href="javascript:void(0);" ng-click="showUserVoice=true; openUserVoiceDialog()" onclick="event.preventDefault()"><i class="report_icon"></i>Report a problem</a></li>-->
+         <li>
+          <a href="http://wikiwand.uservoice.com/forums/247843-wikiwand-website-extensions" ng-click="closeAllMenus()" target="_blank">
+           <i class="idea_icon">
+           </i>
+           Send a suggestion
+          </a>
+         </li>
+         <li ng-if="activation.extensionInstalled">
+          <a href="/extension/uninstall/menu" target="_blank">
+           <i class="uninstall_icon">
+           </i>
+           Uninstall Wikiwand
+          </a>
+         </li>
+         <!--<li ng-if="$root.activation.showSwitchToWikipedia"><a href="javascript:void(0);" ng-click="closeAllMenus(); $root.walkthroughs['switch_to_wp'].showWalkthrough=true;" onclick="event.preventDefault()"><i class="wiki_icon"></i>Switch to Wikipedia</a></li>-->
+         <!--<li ng-if="!$root.activation.showSwitchToWikipedia"><a href="javascript:void(0);" ng-click="closeAllMenus()" ng-href="{{::articleData.links.wikipediaRead }}" target="_blank"><i class="wiki_icon"></i>Switch to Wikipedia</a></li>-->
+        </ul>
+        <div id="user_voice_wrapper" ng-show="showUserVoice">
+        </div>
+        <div id="cover_report" ng-show="showCoverReport">
+         <article ng-cloak="" ng-show="$root.showReportCoverImageText1">
+          <h3>
+           Our magic isn't perfect
+          </h3>
+          <p>
+           You can help our automatic cover photo selection by reporting an unsuitable photo.
+          </p>
+          <div ng-click="$root.reportImage($event,'disturbing',articleData.mainImage.full.originalUrl)">
+           The cover is visually disturbing
+          </div>
+          <div ng-click="$root.reportImage($event,'irrelevant',articleData.mainImage.full.originalUrl)">
+           The cover is not a good choice
+          </div>
+         </article>
+         <article ng-cloak="" ng-show="$root.showReportCoverImageText2">
+          <h4>
+           Thank you for helping!
+          </h4>
+          <br/>
+          <p>
+           Your input will affect cover photo selection, along with input from other users.
+           <br/>
+          </p>
+         </article>
+        </div>
+        <div id="feadback_back" ng-click="showUserVoice=false;showCoverReport=false;$root.showReportCoverImageText1=true;$root.showReportCoverImageText2=false;" ng-show="showUserVoice || showCoverReport">
+         &lt; back
+        </div>
+       </div>
+      </img>
+     </li>
+     <li class="search_btn menu-tooltip" ng-click="$root.openSearch('open'); $root.userClick(true, 'toolbar-search');" title="Search">
+      <i>
+      </i>
+     </li>
+     <li class="per_btn menu-tooltip" ng-class="{active:showPerMenu, gone: searchFocus}" ng-click="togglePerMenu($event); $root.userClick(showPerMenu, 'toolbar-pers');" title="Personalize">
+      <i>
+      </i>
+      <div class="drop_down menu_per" id="pref_drop_down" ng-click="prefClick(); clickedInside($event)" ng-controller="UserPrefsController" ng-if="showPerMenu" ng-init="initPrefsController()" ng-show="preMenuReady">
+       <ul class="main_theme">
+        <li ng-class="{active: $root.minimalStyle == false}" ng-click="$root.layoutHandler('rich')">
+         Rich
+        </li>
+        <li ng-class="{active: $root.minimalStyle == true}" ng-click="$root.layoutHandler('minimal')">
+         Minimal
+        </li>
+       </ul>
+       <div class="per_slider two style per_serif">
+        <span class="hover" ng-click="$root.fontStyleHandler(0, true)">
+         Serif
+        </span>
+        <div class="toggle_slider" id="font_style_slider">
+        </div>
+        <span class="hover" ng-click="$root.fontStyleHandler(1, true)">
+         Sans
+        </span>
+       </div>
+       <div class="per_slider two theme">
+        <span class="hover" ng-click="$root.themesHandler(0, true)">
+        </span>
+        <div class="toggle_slider" id="theme_slider">
+        </div>
+        <span class="hover" ng-click="$root.themesHandler(1, true)">
+        </span>
+       </div>
+       <div class="per_slider three size">
+        <span class="hover" ng-click="fontSizeSlider =  Math.max(fontSizeSlider - 1, 0); $root.txtSizeHandler(fontSizeSlider, true);">
+        </span>
+        <div class="step_slider" id="font_size_slider">
+        </div>
+        <span class="hover" ng-click="fontSizeSlider =  Math.min(fontSizeSlider + 1, 2); $root.txtSizeHandler(fontSizeSlider, true);">
+        </span>
+       </div>
+       <div class="per_slider three column">
+        <span class="hover" ng-click="columnWidthSlider =  Math.max(columnWidthSlider - 1, 0); $root.columnWidthHandler(columnWidthSlider, true)">
+        </span>
+        <div class="step_slider" id="column_slider">
+        </div>
+        <span class="hover" ng-click="columnWidthSlider =  Math.min(columnWidthSlider + 1, 2); $root.columnWidthHandler(columnWidthSlider, true)">
+        </span>
+       </div>
+       <div class="per_justify" ng-click="$root.justifyHandler(!$root.justifyTxt)">
+        <i ng-class="{active: $root.justifyTxt}">
+        </i>
+        Justify Text
+       </div>
+       <a class="upgrade_button small activation_install preferences_install" href="javascript:void(0);" ng-class="{active: btnHover}" ng-click="hidePerMenu($event); $root.reportClick('fromPrefs');$root.activationButtonClicked('');$root.extensionPopup('click');" ng-cloak="" ng-if="$root.callToPersonalize &amp;&amp; $root.prefsTouched" ng-mouseenter="$root.activationHover('enter')" ng-mouseleave="$root.activationHover('leave')">
+        Get Wikiwand
+        <i>
+        </i>
+       </a>
+       <!--<div class="per_reset" ng-click="$root.resetPreferences();">Reset</div>-->
+       <div class="per_httpsnotice" ng-if="::isHttps">
+        Note: preferences and languages are saved separately in https mode
+       </div>
+      </div>
+     </li>
+     <!--
+			<li class="find_btn menu-tooltip" title="Find in article" ng-class="{active: showFindMenu}">
+				<i></i>
+			</li>
+			-->
+     <li class="lang_btn menu-tooltip" ng-class="{active:showLanguageMenu, gone: searchFocus}" ng-click="toggleLanguageMenu($event); $root.userClick(showLanguageMenu, 'toolbar-lang');" title="Other Languages">
+      <i ng-cloak="">
+       {{::langAbbreviation}}
+      </i>
+      <ul class="drop_down" ng-cloak="" ng-controller="PreferredLanguagesController" ng-show="showLanguageMenu">
+       <li class="favourite_lang" ng-class="{current_lang: lang.lang == articleData, no_lang: !lang.hasArticle}" ng-cloak="" ng-repeat="lang in list">
+        <a href="{{::lang.articleLink}}" hreflang="{{::lang.CodeHTML}}" ng-if="::lang.fav" rel="alternate" title="{{::lang.tooltip}}">
+         <i>
+          {{::lang.langAbberviation}}
+         </i>
+         {{::lang.NameEnglish}}
+         <span>
+          {{::lang.articleTitle}}
+         </span>
+        </a>
+       </li>
+       <li class="favourite_lang lang_open" ng-if="articleData.availableLanguages.length &gt; numOfAvailablePreferredLanguages">
+        <a href="javascript:void(0);" ng-click="$root.$broadcast('showAllArticleLanguagesFunc')">
+         <i>
+          ∙∙∙
+         </i>
+         230 other languages
+        </a>
+       </li>
+       <li class="lang_pref">
+        <a href="javascript:void(0);" ng-click="$root.$broadcast('showAllWikipediaLanguagesFunc')">
+         <i>
+         </i>
+         Language preferences
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="share_btn article menu-tooltip" ng-class="{active:showShareMenu, gone: searchFocus}" ng-click="toggleShareMenu($event); $root.userClick(showShareMenu, 'toolbar-share');" title="Share Article ">
+      <i>
+      </i>
+      <div class="drop_down menu_share" id="share_drop_down" ng-click="clickedInside($event)" ng-show="showShareMenu">
+       <ul class="share_links">
+        <li class="share-facebook">
+         <a class="hover" href="#" ng-click="$root.userClick(showShareMenu, 'toolbar-share-facebook');" target="_blank">
+         </a>
+        </li>
+        <li class="share-gplus">
+         <a class="hover" href="#" ng-click="$root.userClick(showShareMenu, 'toolbar-share-gplus');" target="_blank">
+         </a>
+        </li>
+        <!--<li class="share-reddit"><a class="hover" href="#" target="_blank" ng-click="$root.userClick(showShareMenu, 'toolbar-share-reddit');"></a></li>-->
+        <li class="share-twitter">
+         <a class="hover" href="#" ng-click="$root.userClick(showShareMenu, 'toolbar-share-twitter');" target="_blank">
+         </a>
+        </li>
+        <li class="share-gmail">
+         <a class="hover" href="#" ng-click="$root.userClick(showShareMenu, 'toolbar-share-gmail');" target="_blank">
+         </a>
+        </li>
+       </ul>
+      </div>
+     </li>
+     <li class="feedback_btn article menu-tooltip" ng-class="{active:showFeedbackMenu, gone: searchFocus}" ng-click="toggleFeedbackMenu($event); $root.userClick(showFeedbackMenu, 'toolbar-report');" title="Wikipedia Tools">
+      <i>
+      </i>
+      <ul class="drop_down menu_feedback" id="feedback_drop_down" ng-show="showFeedbackMenu">
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaRead }}" target="_blank">
+         <i class="read_w_icon">
+         </i>
+         Read On Wikipedia
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaEdit }}" target="_blank">
+         <i class="edit_w_icon">
+         </i>
+         Edit
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaHistory }}" target="_blank">
+         <i class="history_w_icon">
+         </i>
+         History
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaTalk }}" target="_blank">
+         <i class="talk_w_icon">
+         </i>
+         Talk Page
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaPrint }}" target="_blank">
+         <i class="print_w_icon">
+         </i>
+         Print
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaDownload }}" target="_blank">
+         <i class="download_w_icon">
+         </i>
+         Download PDF
+        </a>
+       </li>
+       <!--<li class="wikipedia_list"><a ng-href="https://en.wikipedia.org/wiki/Special:Watchlist" target="_blank"><i class="watch_icon"></i>Your Watchlist</a></li>-->
+       <!--<li class="wikipedia_list"><a ng-href="https://{{::articleData.langCodeUrl }}.wikipedia.org" target="_blank"><i class="home_icon"></i>Wikipedia Home Page</a></li>-->
+      </ul>
+     </li>
+     <span class="menu_line">
+     </span>
+     <li class="upgrade_btn menu-tooltip {{::$root.activation.nextAction}}" ng-class="{active: hover}" ng-click="$root.reportClick('toolbar');$root.activationButtonClicked();  $root.extensionPopup('click');" ng-cloak="" ng-if="$root.activation.nextAction != ''" ng-mouseenter="hover = true; $root.extensionPopup('enter');" ng-mouseleave="hover = false; $root.extensionPopup('leave');" title="{{::$root.activation.tooltip}}">
+      <span class="upgrade_txt" ng-if="$root.activation.nextAction != 'activation_share'">
+       {{::$root.activation.text}}
+      </span>
+      <span class="upgrade_txt" ng-if="$root.activation.nextAction == 'activation_share'">
+       {{::$root.activation.toolbarText}}
+      </span>
+      <i>
+      </i>
+     </li>
+     <!--
+<a href="javascript:void(0);" ng-cloak ng-class="{active: hover}"
+	ng-mouseenter="hover = true"  ng-mouseleave="hover = false"
+	ng-click="activationButtonClicked();" class="upgrade_button activation_button_toolbar small {{::activation.action}}" >
+	<span>{{activation.text}}</span><i></i>
+</a>
+-->
+    </ul>
+   </nav>
+   <!--*************************** content  *************************-->
+   <div class=" new_image" id="content" ng-class="{limit: $root.limitPage, active:!$root.tocShow}">
+    <!--************ news Article section ************-->
+    <!--************ main_image ************-->
+    <div id="cover_image_wrapper" ng-hide="$root.minimalStyle">
+     <div id="cover_image" ng-class="{active:!$root.tocShow}" ng-cloak="" ng-controller="CoverImageController" ng-if="!hideCoverImageLandscape" ng-mouseenter="hoveredImg = true" ng-mouseleave="hoveredImg = false" ng-style="{'background-image' : 'url({{articleData.mainImage.full.urlDesktop}})'}">
+      <div class="report tooltip_top" ng-class="{active: hoveredImg}" ng-click="$root.showCoverImageReportPopup=true;$root.showReportCoverImageText1=true;$root.showReportCoverImageText2=false;" title="Unsuitable photo">
+      </div>
+      <a class="pin_btn tooltip_top" href="http://www.pinterest.com/pin/create/button/?url={{::articleData.links.selfRead}}&amp;media={{::finalImageURL}}&amp;description=From Wikiwand:%20{{articleData.title}}" ng-class="{active: hoveredImg}" target="_blank" title="Pin it">
+      </a>
+     </div>
+    </div>
+    <!--************ main_image ENDS ************-->
+    <article class=" padded " id="article_content_wrapper" ng-class="{withGist: $root.gistOn, minimal_margin: $root.minimalStyle, loaded: showArticleContents, narrow_column: $root.columnWidth=='narrow', wide_column: $root.columnWidth=='wide',
+	full_column: $root.columnWidth=='full', no_cover: articleMarginTop=='noCover', margin_initial: articleMarginTop=='initial', margin_low: articleMarginTop=='low', margin_middle: articleMarginTop=='middle', margin_high: articleMarginTop=='high'}" ng-cloak="" ng-controller="ArticleContentController">
+     <section class="title_wrapper">
+      <h1 class="firstHeading">
+       <span class="">
+        القمر
+       </span>
+       <span class="title_icon disambig-wrapper unselectable" onclick="event.stopPropagation()">
+       </span>
+       <a class="title_icon edit_article edit_section tooltip_top" href="{{::articleData.links.wikipediaEdit }}" target="_blank" title="Edit Article">
+       </a>
+       <!--<span class="title_icon geo-location tooltip_top" title="Browse map" ng-if="$root.map.exists" ng-class="{loading: $root.mapLoading}" onClick="loadGoogleMaps();"></span>
+
+			<span class="title_icon like_buttons unselectable" onclick="event.stopPropagation()"></span>-->
+      </h1>
+      <!-- READ MORE SECTION-->
+      <nav id="read_more" ng-style="{opacity:showReadMore}">
+       <svg height="25px" version="1.1" width="25px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+        <path d="M9.512,8.692L8.073,7.331C8.24,7.026,8.344,6.682,8.344,6.31c0-1.179-0.956-2.135-2.135-2.135	c-1.18,0-2.137,0.955-2.137,2.135s0.957,2.136,2.137,2.136c0.416,0,0.801-0.124,1.129-0.33l1.438,1.359	C8.993,9.188,9.238,8.924,9.512,8.692z">
+        </path>
+        <path d="M15.603,8.522l1.912-3.22c0.188,0.054,0.384,0.093,0.589,0.093c1.182,0,2.138-0.956,2.138-2.136 c0-1.179-0.956-2.134-2.138-2.134c-1.18,0-2.135,0.955-2.135,2.134c0,0.586,0.236,1.115,0.618,1.501l-1.907,3.21	C15.008,8.119,15.316,8.305,15.603,8.522z">
+        </path>
+        <path d="M22.199,11.217c-0.918,0-1.696,0.583-1.998,1.397l-2.657-0.262c0,0.02,0.003,0.039,0.003,0.059 c0,0.346-0.039,0.685-0.107,1.012l2.657,0.263c0.16,1.019,1.038,1.801,2.103,1.801c1.18,0,2.135-0.955,2.135-2.135	C24.334,12.173,23.379,11.217,22.199,11.217z">
+        </path>
+        <path d="M14.865,19.612l-0.594-2.597c-0.336,0.117-0.685,0.201-1.049,0.243l0.596,2.596c-0.683,0.357-1.153,1.063-1.153,1.887 c0,1.18,0.954,2.134,2.137,2.134c1.179,0,2.134-0.954,2.134-2.134C16.937,20.584,16.015,19.646,14.865,19.612z">
+        </path>
+        <path d="M7.896,13.441L4.587,14.55c-0.382-0.583-1.039-0.97-1.787-0.97c-1.18,0-2.135,0.955-2.135,2.135 c0,1.181,0.955,2.136,2.135,2.136c1.179,0,2.136-0.955,2.136-2.136c0-0.049-0.011-0.095-0.015-0.144l3.319-1.111	C8.092,14.138,7.973,13.798,7.896,13.441z">
+        </path>
+        <circle cx="12.666" cy="12.411" r="3.662">
+        </circle>
+       </svg>
+       <h4 ng-if="showTextEnglish">
+        Connected to:
+       </h4>
+       <a class="read_more_link int-link" href="{{::readMoreArticle.link}}" ng-class="{no_thumb: readMoreArticle.thumb == 'none'}" ng-mousedown="reportReadMore('click')" ng-mouseenter="reportReadMore('hover')" ng-repeat="readMoreArticle in readMoreArticles | limitTo:3">
+        <span class="title">
+         {{::readMoreArticle.title}}
+        </span>
+       </a>
+      </nav>
+      <!-- /339474670/Wikiwand/ATF -->
+      <div id="div-gpt-ad-1527601425745-0" style="margin-bottom:10px">
+       <script>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527601425745-0'); });
+       </script>
+      </div>
+      <h2>
+       من ويكيبيديا، الموسوعة الحرة
+      </h2>
+     </section>
+     <!-- the styling below is used for the smooth transition between the partial content and the final content -->
+     <style>
+      .content-absolute {
+			position: absolute;
+			z-index: 200;
+		}
+		#partialContent {
+			min-height: 1000px;
+		}
+     </style>
+     <!--<div id='partialContent'></div>-->
+     <!-- /339474670/Wikiwand/SideBar -->
+     <div class="sideplacement" id="div-gpt-ad-1527601425745-1" style="position:absolute;right:-170px">
+      <script>
+       googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527601425745-1'); });
+      </script>
+     </div>
+     <div id="fullContent">
+     </div>
+     <a ng-click="onBottomLinkClick()" ng-href="{{bottomLinkUrl}}" target="_blank">
+      <span id="bottom_link" ng-cloak="" ng-if="showBottomLink" style="display: block; text-align:center; font-family: 'Lora', serif; line-height: 1.5em; font-size: 24px; padding: 20px 15px; border-radius: 5px; box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); background: linear-gradient(to bottom, #40bbe1 -100%, #1559b5 100%); direction: ltr;">
+       <span style="display:block; font-size: 0.8em; color: rgba(255,255,255,0.85)">
+        {{bottomLinkPreText}}
+       </span>
+       <span style="display:block; font-size: 1em; color: white">
+        {{bottomLinkText}}
+       </span>
+      </span>
+     </a>
+     <section class="page_copyright" ng-cloak="" ng-init="mainImage = articleData.mainImage" ng-show="$root.showArticleContents">
+      This page is based on a
+      <a ng-href="http://www.wikipedia.org" rel="nofollow" target="_blank">
+       Wikipedia
+      </a>
+      article written by
+      <a href="{{::articleData.links.wikipediaHistory }}" rel="nofollow" target="_blank">
+       contributors
+      </a>
+      (
+      <a ng-href="{{::articleData.links.wikipediaRead }}" rel="nofollow" target="_blank">
+       read
+      </a>
+      /
+      <a href="{{::articleData.links.wikipediaEdit }}" rel="nofollow" target="_blank">
+       edit
+      </a>
+      ).
+      <br/>
+      Text is available under the
+      <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license,nofollow" target="_blank">
+       CC BY-SA 4.0
+      </a>
+      license; additional terms may apply.
+      <br/>
+      Images, videos and audio are available under their respective licenses.
+      <br/>
+      <div ng-if="mainImage.wikipediaPageFullUrl">
+       <span ng-show="mainImage.info.license.url">
+        Cover photo is available under
+        <a href="{{::mainImage.info.license.url}}" target="_blank">
+         {{::mainImage.info.license.name || 'Unknown'}}
+        </a>
+        license.
+       </span>
+       <span ng-show="!mainImage.info.license.url">
+        Cover photo is available under {{::mainImage.info.license.name || 'Unknown'}} license.
+       </span>
+       Credit:
+       <span ng-bind-html="mainImage.info.license.artist">
+       </span>
+       (
+       <a href="{{::mainImage.wikipediaPageFullUrl}}" target="_blank">
+        see original file
+       </a>
+       ).
+      </div>
+      <div class="line">
+      </div>
+     </section>
+     <!-- /339474670/Wikiwand/Bottom -->
+     <div class="OUTBRAIN" data-ob-template="Admination" data-widget-id="AR_12">
+     </div>
+     <script src="//widgets.outbrain.com/outbrain.js" type="text/javascript">
+     </script>
+    </article>
+    <!--************ wikiwand_footer ************-->
+    <footer class="wikiwand_footer" ng-cloak="" ng-show="$root.showArticleContents || !articleData.pageIsArticle">
+     <div ng-if="$root.activation.nextAction != ''">
+      <!-- touch devices footer share -->
+      <div class="mobile_share" ng-if="$root.touchDevice">
+       <div class="footer_icon">
+       </div>
+       <div class="h2">
+        Enjoying Wikiwand?
+       </div>
+       <div class="h3" ng-cloak="" ng-if="!activation.extensionInstalled">
+        Give good old Wikipedia a great new look:
+       </div>
+       <a class="upgrade_button {{::$root.activation.nextAction}}" href="javascript:void(0);" ng-class="{active: btnHover}" ng-click="$root.reportClick('footer');$root.activationButtonClicked(''); $root.extensionPopup('click');" ng-cloak="" ng-mouseenter="$root.activationHover('enter')" ng-mouseleave="$root.activationHover('leave')">
+        <span>
+         {{::$root.activation.text}}
+        </span>
+        <i>
+        </i>
+       </a>
+      </div>
+      <!-- desktop upsale -->
+      <div class="desktop_upsale" ng-if="!$root.touchDevice">
+       <!-- desktop: rate -->
+       <div ng-if="$root.activation.extensionInstalled &amp;&amp; $root.activation.nextAction == 'activation_rate'">
+        <div class="footer_icon">
+        </div>
+        <div class="h2">
+         Enjoying Wikiwand?
+        </div>
+        <a class="upgrade_button {{::$root.activation.nextAction}}" href="javascript:void(0);" ng-class="{active: btnHover}" ng-click="$root.reportClick('footer');$root.activationButtonClicked(''); $root.extensionPopup('click');" ng-cloak="" ng-mouseenter="$root.activationHover('enter')" ng-mouseleave="$root.activationHover('leave')">
+         <span>
+          {{::$root.activation.text}}
+         </span>
+         <i>
+         </i>
+        </a>
+        <div class="stars" ng-bind-html="activation.ratedText">
+        </div>
+       </div>
+       <!-- desktop: share -->
+       <div ng-if="$root.activation.extensionInstalled &amp;&amp; $root.activation.nextAction == 'activation_share'">
+        <div class="hide_before_angular">
+         <div class="invite_box footer_invite_box active anim">
+          <h4>
+           Tell your friends about Wikiwand!
+          </h4>
+          <a href="http://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=&amp;su=Have you seen Wikiwand%3F&amp;body=Check out Wikiwand - it's an awesome new interface for Wikipedia:%0Ahttp://www.wikiwand.com/{{::$root.refString}}%0AGive it a try, you'll thank me later :)" ng-click="$root.pressedTellAFriendLink('gmail','footer')" style="background-color:#bb0000" target="_blank">
+           <i style="background-position: 0 -96px">
+           </i>
+           Gmail
+          </a>
+          <a href="http://www.facebook.com/sharer.php?u=http://www.wikiwand.com/{{::$root.refString}}" ng-click="$root.pressedTellAFriendLink('facebook','footer')" style="background-color:#3B5999" target="_blank">
+           <i style="background-position: -120px -96px">
+           </i>
+           Facebook
+          </a>
+          <a href="http://twitter.com/share?text=Wikiwand gives good old Wikipedia a great new look - check it out:&amp;hashtags=wikipedia,ux,design&amp;url=http://www.wikiwand.com/{{::$root.refString}}&amp;related=wikiwand" ng-click="$root.pressedTellAFriendLink('twitter','footer')" style="background-color:#0084b4" target="_blank">
+           <i style="background-position: -150px -96px">
+           </i>
+           Twitter
+          </a>
+          <a class="link" href="javascript:void(0);" ng-class="{wide: wideLink}" ng-click="$root.pressedTellAFriendLink('link','footer')" style="background-color:#615a5f">
+           <i style="background-position: -90px -97px">
+           </i>
+           <input ng-blur="wideLink = false" ng-focus="wideLink = true" onclick="this.setSelectionRange(0, this.value.length)" type="text" value="http://www.wikiwand.com/"/>
+           Link
+          </a>
+          <br/>
+          <br/>
+         </div>
+        </div>
+       </div>
+       <!-- desktop: install -->
+       <div ng-if="!$root.activation.extensionInstalled &amp;&amp; $root.activation.nextAction == 'activation_install'">
+        <div class="footer_icon">
+        </div>
+        <div class="h2">
+         Enjoying Wikiwand?
+        </div>
+        <div class="h3">
+         Give good old Wikipedia a great new look:
+        </div>
+        <a class="upgrade_button {{::$root.activation.nextAction}}" href="javascript:void(0);" ng-class="{active: btnHover}" ng-click="$root.reportClick('footer');$root.activationButtonClicked(''); $root.extensionPopup('click');" ng-cloak="" ng-mouseenter="$root.activationHover('enter')" ng-mouseleave="$root.activationHover('leave')">
+         <span>
+          {{::$root.activation.text}}
+         </span>
+         <i>
+         </i>
+        </a>
+       </div>
+      </div>
+     </div>
+     <ul class="social_links" ng-show="(!activation.extensionInstalled || activation.nextAction != 'activation_share') &amp;&amp; !$root.showContentRecommendations">
+      <li class="facebook">
+       <a class="hover" href="https://www.facebook.com/wikiwandapp" target="_blank">
+       </a>
+      </li>
+      <li class="twitter">
+       <a class="hover" href="https://twitter.com/wikiwand" target="_blank">
+       </a>
+      </li>
+      <li class="gplus">
+       <a class="hover" href="https://plus.google.com/+Wikiwand" target="_blank">
+       </a>
+      </li>
+      <li class="linkedin">
+       <a class="hover" href="http://www.linkedin.com/company/wikiwand" target="_blank">
+       </a>
+      </li>
+     </ul>
+     <ul class="footer_links">
+      <li>
+       <a href="/">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="/about">
+        About Us
+       </a>
+      </li>
+      <li>
+       <a href="/press">
+        Press
+       </a>
+      </li>
+      <li>
+       <a href="/sitemap">
+        Site Map
+       </a>
+      </li>
+      <li>
+       <a href="/terms">
+        Terms Of Service
+       </a>
+      </li>
+      <li>
+       <a href="/privacy">
+        Privacy Policy
+       </a>
+      </li>
+      <!--<li style="font-weight: 400"><a href="javascript:void(0);" ng-mouseenter="loadUserVoice()"  data-uv-trigger="contact">Send Feedback</a></li>-->
+     </ul>
+    </footer>
+    <!--************ wikiwand_footer ENDS ************-->
+   </div>
+   <!--**************************** content ENDS *****************************-->
+   <!--************ gallery & lang  ************-->
+   <!--************ TOC  ************-->
+   <div id="toc_wrapper" ng-class="{active: $root.tocShow}" ng-cloak="" ng-controller="TableOfContentsController" ng-show="$root.tocShow" ng-swipe-left="$root.tocFold('swipeLeft')" ng-swipe-right="$root.tocFold('swipeRight')">
+    <div id="toc_swipe" ng-click="$root.tocFold()" ng-cloak="" ng-show="$root.tocShow" ng-swipe-left="$root.tocFold('swipeLeft')" ng-swipe-right="$root.tocFold('swipeRight')">
+    </div>
+    <div id="toc_btn">
+     <span ng-cloak="">
+      القمر
+     </span>
+     <i id="content_icon" ng-click="tocFold(); $root.userClick(true, 'toolbar-toc-hide');">
+     </i>
+    </div>
+    <aside class="unselectable lang_ar" id="wikiwand_toc" ng-cloak="">
+     <ul class="toc_list">
+      <li class="{special:line.special}" id="toc_btn_overview" ng-click="tocMobileFold()">
+       <a href="#overview" ng-click="button.doClick($event)">
+        مقدمة
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_نشوء_القمر" ng-click="tocMobileFold()">
+       <a href="#نشوء_القمر" ng-click="button.doClick($event)">
+        نشوء القمر
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_الخصائص_الفيزيائية" ng-click="tocMobileFold()">
+       <a href="#الخصائص_الفيزيائية" ng-click="button.doClick($event)">
+        الخصائص الفيزيائية
+       </a>
+       <ol class="sub_toc_list">
+        <li class="" id="toc_btn_التركيب_الداخلي">
+         <a href="#التركيب_الداخلي" ng-click="button.doClick($event)">
+          التركيب الداخلي
+         </a>
+        </li>
+        <li class="" id="toc_btn_جيولوجيا_السطح">
+         <a href="#جيولوجيا_السطح" ng-click="button.doClick($event)">
+          جيولوجيا السطح
+         </a>
+        </li>
+        <li class="" id="toc_btn_التضاريس_البركانية">
+         <a href="#التضاريس_البركانية" ng-click="button.doClick($event)">
+          التضاريس البركانية
+         </a>
+        </li>
+        <li class="" id="toc_btn_الفوهات_الصدمية">
+         <a href="#الفوهات_الصدمية" ng-click="button.doClick($event)">
+          الفوهات الصدمية
+         </a>
+        </li>
+        <li class="" id="toc_btn_وجود_الماء">
+         <a href="#وجود_الماء" ng-click="button.doClick($event)">
+          وجود الماء
+         </a>
+        </li>
+        <li class="" id="toc_btn_الجاذبية_والحقل_المغناطيسي">
+         <a href="#الجاذبية_والحقل_المغناطيسي" ng-click="button.doClick($event)">
+          الجاذبية والحقل المغناطيسي
+         </a>
+        </li>
+        <li class="" id="toc_btn_الغلاف_الجوي">
+         <a href="#الغلاف_الجوي" ng-click="button.doClick($event)">
+          الغلاف الجوي
+         </a>
+        </li>
+        <li class="" id="toc_btn_الفصول">
+         <a href="#الفصول" ng-click="button.doClick($event)">
+          الفصول
+         </a>
+        </li>
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_العلاقة_مع_الأرض" ng-click="tocMobileFold()">
+       <a href="#العلاقة_مع_الأرض" ng-click="button.doClick($event)">
+        العلاقة مع الأرض
+       </a>
+       <ol class="sub_toc_list">
+        <li class="" id="toc_btn_المدار">
+         <a href="#المدار" ng-click="button.doClick($event)">
+          المدار
+         </a>
+        </li>
+        <li class="" id="toc_btn_الحجم_النسبي">
+         <a href="#الحجم_النسبي" ng-click="button.doClick($event)">
+          الحجم النسبي
+         </a>
+        </li>
+        <li class="" id="toc_btn_الرؤية_من_الأرض">
+         <a href="#الرؤية_من_الأرض" ng-click="button.doClick($event)">
+          الرؤية من الأرض
+         </a>
+        </li>
+        <li class="" id="toc_btn_الخسوف_والكسوف">
+         <a href="#الخسوف_والكسوف" ng-click="button.doClick($event)">
+          الخسوف والكسوف
+         </a>
+        </li>
+        <li class="" id="toc_btn_تأثير_المد_والجزر">
+         <a href="#تأثير_المد_والجزر" ng-click="button.doClick($event)">
+          تأثير المد والجزر
+         </a>
+        </li>
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_تاريخ_الاستكشاف" ng-click="tocMobileFold()">
+       <a href="#تاريخ_الاستكشاف" ng-click="button.doClick($event)">
+        تاريخ الاستكشاف
+       </a>
+       <ol class="sub_toc_list">
+        <li class="" id="toc_btn_الدراسات_المبكرة">
+         <a href="#الدراسات_المبكرة" ng-click="button.doClick($event)">
+          الدراسات المبكرة
+         </a>
+        </li>
+        <li class="" id="toc_btn_الاستكشافات_الأولى">
+         <a href="#الاستكشافات_الأولى" ng-click="button.doClick($event)">
+          الاستكشافات الأولى
+         </a>
+        </li>
+        <li class="" id="toc_btn_الاستكشافات_منذ_سنة_1990_إلى_الآن">
+         <a href="#الاستكشافات_منذ_سنة_1990_إلى_الآن" ng-click="button.doClick($event)">
+          الاستكشافات منذ سنة 1990 إلى الآن
+         </a>
+        </li>
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_القمر_في_الثقافة" ng-click="tocMobileFold()">
+       <a href="#القمر_في_الثقافة" ng-click="button.doClick($event)">
+        القمر في الثقافة
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_الوضع_القانوني" ng-click="tocMobileFold()">
+       <a href="#الوضع_القانوني" ng-click="button.doClick($event)">
+        الوضع القانوني
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_انظر_أيضاً" ng-click="tocMobileFold()">
+       <a href="#انظر_أيضاً" ng-click="button.doClick($event)">
+        انظر أيضاً
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_الملاحظات" ng-click="tocMobileFold()">
+       <a href="#الملاحظات" ng-click="button.doClick($event)">
+        الملاحظات
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_المراجع" ng-click="tocMobileFold()">
+       <a href="#المراجع" ng-click="button.doClick($event)">
+        المراجع
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_المصادر" ng-click="tocMobileFold()">
+       <a href="#المصادر" ng-click="button.doClick($event)">
+        المصادر
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_وصلات_خارجية" ng-click="tocMobileFold()">
+       <a href="#وصلات_خارجية" ng-click="button.doClick($event)">
+        وصلات خارجية
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+     </ul>
+    </aside>
+   </div>
+   <div ng-controller="BookmarkController">
+    <!-- gist -->
+    <!-- bookmark -->
+   </div>
+   <!--************ gallery ************-->
+   <div class="hide_before_angular" id="gallery" ng-class="{full: galleryFull}" ng-cloak="" ng-controller="GalleryController" ng-show="galleryActive">
+    <div class="bg" ng-click="closeGallery()">
+    </div>
+    <div id="gallery_bg">
+     <!--************ gallery image ************-->
+     <div class="unselectable" id="gallery_img" ng-class="{active: infoOpen}" ng-cloak="">
+      <div class="loadThumb unselectable" id="gallery_img_placeholder" ng-mouseenter="hoveredImg = true" ng-mouseleave="hoveredImg = false" ng-swipe-left="onNextClick()" ng-swipe-right="onPrevClick()">
+       <div class="loaderAnim unselectable" id="img_loading" ng-if="!current.bucket.loaded">
+       </div>
+       <img alt="" class="gallery_main bucket unselectable" ng-class="{active:current.bucket.loaded}" ng-show="current.info.type == 'image'" ng-src="{{::current.bucket.src}}"/>
+       <div class="gallery_main bucket video unselectable" ng-class="{active:current.bucket.loaded}" ng-show="current.info.type == 'video'">
+        <div class="payload_container">
+        </div>
+       </div>
+      </div>
+      <div class="gallery_arrow next unselectable" ng-click="onNextClick()" ng-show="current.index != items.length-1">
+       <i>
+       </i>
+      </div>
+      <div class="gallery_arrow prev unselectable" ng-click="onPrevClick()" ng-show="current.index != 0">
+       <i>
+       </i>
+      </div>
+      <div id="img_counter" ng-cloak="" ng-mouseenter="hoveredImg = true" ng-mouseleave="hoveredImg = false">
+       {{current.index+1}} of {{items.length}}
+       <a class="pin_btn tooltip_top" href="http://www.pinterest.com/pin/create/button/?url={{articleData.links.selfRead}}&amp;media={{current.bucket.src}}&amp;description=From Wikiwand:%20{{current.titleTxt}}" ng-class="{active: hoveredImg}" ng-show="current.info.type == 'image'" target="_blank" title="Pin it">
+       </a>
+       <div class="report tooltip_top" ng-class="{active: hoveredImg}" ng-click="$root.showCoverImageSuggestPopup=true;$root.showSuggestImageText1=true;$root.showSuggestImageText2=false;" ng-show="current.info.type == 'image'" title="Suggest as cover photo">
+       </div>
+      </div>
+      <div id="img_title" ng-bind-html="current.title">
+      </div>
+      <!--************ gallery thumbs ************-->
+      <div class="unselectable" id="gallery_thumbs_con">
+       <!--<div id="gallery_thumbs_pull" class="unselectable"></div>-->
+       <div class="unselectable" id="gallery_thumbs_scroll">
+        <ul class="unselectable" id="gallery_thumbs">
+         <li class="unselectable" ng-class="{active:item.active, video:item.info.type == 'video'}" ng-click="onThumbClick($event, item)" ng-repeat="item in items" ng-style="{'background-image': item.urlString}">
+         </li>
+        </ul>
+       </div>
+      </div>
+      <!--************ gallery btns ************-->
+      <ul id="gallery_btn">
+       <li id="gallery_info_pull" ng-class="{active: infoOpen}" ng-click="infoOpen = !infoOpen">
+       </li>
+       <li id="gallery_close" ng-click="closeGallery()">
+       </li>
+       <li id="full_screen" ng-class="{active:fullScreenActive, unactive:!fullScreenActive}" ng-click="toggleFullScreen()">
+       </li>
+      </ul>
+     </div>
+     <!--************ gallery info  ************-->
+     <div id="gallery_info" ng-show="infoOpen" ng-swipe-right="infoOpen = false">
+      <div id="gallery_info_wrap">
+       <div class="image_caption" ng-bind-html="current.title" ng-if="current.title">
+       </div>
+       <ul>
+        <li class="unselectable img_desc" ng-show="current.info.description">
+         <i>
+         </i>
+         <div class="description_text" ng-bind-html="current.info.descriptionSafe">
+         </div>
+        </li>
+        <li class="img_date" ng-show="current.info.dateOriginal">
+         <i>
+         </i>
+         Date: {{current.info.dateOriginal || 'Unknown'}}
+        </li>
+        <li class="img_date" ng-show="!current.info.dateOriginal">
+         <i>
+         </i>
+         Date: {{(current.info.date | date:'mediumDate') || 'Unknown'}}
+        </li>
+        <li class="with-child unselectable img_credit" ng-click="subInfoOpen1 = !subInfoOpen1" ng-show="current.info.license.artist">
+         <i>
+         </i>
+         Credit:
+         <span ng-bind-html="current.info.license.artist">
+         </span>
+         <ul ng-show="subInfoOpen1">
+          <li>
+           Uploaded by: {{current.info.uploadUser}} on {{current.info.uploadDate | date:'mediumDate'}}
+          </li>
+          <li>
+           <span ng-bind-html="current.info.license.credit">
+           </span>
+          </li>
+         </ul>
+        </li>
+        <li class="img_license" ng-show="current.info.license.url">
+         <i>
+         </i>
+         License:
+         <a href="{{current.info.license.url}}" target="_blank">
+          {{current.info.license.usageTerms || current.info.license.name || current.info.license.detected || 'Unknown'}}
+         </a>
+        </li>
+        <li class="img_license" ng-show="!current.info.license.url">
+         <i>
+         </i>
+         License: {{current.info.license.usageTerms || current.info.license.name || current.info.license.detected || 'Unknown'}}
+        </li>
+        <li class="img_original">
+         <i>
+         </i>
+         <a href="{{current.wikipediaPageFullUrl}}" target="_blank">
+          View file on Wikipedia
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div class="report_popup_wrapp suggest" ng-show="$root.showCoverImageSuggestPopup">
+     <div class="bg" ng-click="$root.showCoverImageSuggestPopup = false">
+     </div>
+     <div class="report_popup">
+      <div ng-show="$root.showSuggestImageText1">
+       <h3>
+        Suggest as cover photo
+       </h3>
+       <p>
+        Would you like to suggest this photo as the cover photo for this article?
+       </p>
+       <a href="" ng-click="$root.suggestImage($event,'recommended',current.original.url);" target="_blank">
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+Yes, this would make a good choice
+<a href="" ng-click="$root.showCoverImageSuggestPopup=false" target="_blank">
+</a>
+No, never mind
+<div ng-show="$root.showSuggestImageText2">
+ <h3>
+  Thank you for helping!
+ </h3>
+ <br/>
+ <p>
+  Your input will affect cover photo selection, along with input from other users.
+  <br/>
+ </p>
+</div>
+<div class="ex" ng-click="$root.showCoverImageSuggestPopup = false">
+</div>
+<!--************ gallery ENDS ************-->
+<!-- fixed_btns at the bottom -->
+<div id="fixed_btns">
+ <!-- audio_player  -->
+ <div class="unselectable" id="audio_player">
+  <i class="unselectable">
+  </i>
+  <div class="unselectable">
+  </div>
+  <span class="listen hide">
+   Listen to this article
+  </span>
+ </div>
+ <div class="dialog_wrapper follow_dialog hide_before_angular" ng-cloak="" ng-if="$root.showVidReport">
+  <div class="bg" ng-click="$root.showVidReport = false">
+  </div>
+  <div class="dialog_box round active" ng-class="{active: $root.showVidReport}" style="height: auto;padding: 20px">
+   <p>
+    Thanks for reporting this video!
+   </p>
+  </div>
+ </div>
+</div>
+<script>
+ if (!precache_from_extension) {
+		if (typeof (analytics) != 'undefined') {
+			analytics.gaVirtualPageView('virtualpageview/impression-article-page');
+		}
+	} else {
+		if (typeof (analytics) != 'undefined') {
+			analytics.gaVirtualPageView('virtualpageview/iframe-precache-article');
+		}
+	}
+</script>
+<!--*************************** search  *************************-->
+<!--*************************** search  *************************-->
+<div id="wikiwand_search" ng-cloak="" ng-controller="ArticleSearchControllerRev2" ng-init="initSearch()" ng-show="$root.showSearch">
+ <div class="bg darkBlack" ng-click="$root.openSearch('close')">
+ </div>
+ <div id="search_list" ng-class="{on: search.query.length}">
+  <input autocomplete="off" class="toolbar-search" id="queryinput" ng-class="{selectedResult: noSelection, loading:waiting}" ng-keyup="testKeyboard($event)" ng-model="search.query" placeholder="بحث" type="text"/>
+  <div id="articleSearch" ng-show="search.query.length">
+   <ul class="results-container" ng-show="search.results.length">
+    <li class="searchResult" desc-attr="{{result.desc}}" id="result_{{$index}}" ng-class="{selectedResult:result.selected, rtl: result.rtl}" ng-click='resultClicked($event,"{{result.linkEncoded}}");' ng-repeat="result in search.results">
+     <span class="thumbicon" ng-style="{'background-image' :result.backgroundImageSring}">
+     </span>
+     <span class="langtag" ng-if="result.firstInlang">
+      <i>
+       {{result.lang}}
+      </i>
+     </span>
+     <span class="value">
+      {{result.T}}
+     </span>
+     <div class="suggestion-type-icon {{result.c}}">
+     </div>
+    </li>
+   </ul>
+   <div id="no_results" ng-if="noResults &amp;&amp; search.query &amp;&amp; !waiting">
+    No matching articles found
+   </div>
+   <a class="searchResult containing" href="/en/{{search.query}}?fullSearch=true" ng-class="{selectedResult:fullSearch}" ng-show="search.query &amp;&amp; !waiting">
+    <span class="value">
+     Search for articles containing:
+     <i>
+      {{search.query}}
+     </i>
+    </span>
+   </a>
+  </div>
+  <img id="search-hint" ng-if="!$root.touchDevices" src="/img/search_ctrl.svg" style="display: block; margin: 20px auto"/>
+ </div>
+ <div id="search_description">
+ </div>
+</div>
+<!--*************************** search ENDS *************************-->
+<!--*************************** search ENDS *************************-->
+<popups ng-if="$root.loadVariousPopups" ng-include="'/api/various_popups'">
+</popups>
+<!--************ follow dialog ************-->
+<div id="error_message" style="display:none;width:500px;padding: 20px;margin: 30vh auto;font-size:16px;text-align:center;">
+ <h1>
+  Oh no, there's been an error
+ </h1>
+ Please help us solve this error by emailing us at
+ <a href="http://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=support@wikiwand.com&amp;su=Encountered an error on Wikiwand" target="_blank">
+  support@wikiwand.com
+ </a>
+ <br/>
+ Let us know what you've done that caused this error, what browser you're using, and whether you have any special extensions/add-ons installed.
+ <br/>
+ Thank you!
+</div>
+<script>
+ var totalServingTime=0;
+</script>

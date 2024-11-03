@@ -1,0 +1,811 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7 ]><html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="ar">
+ <!--<![endif]-->
+ <head>
+  <meta charset="utf-8"/>
+  <link href="/images/favicon.ico" rel="shortcut icon"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+  <link href="/arabic/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+   <link href="/arabic/assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
+   <link href="/arabic/assets/fonts/stylesheet.css" rel="stylesheet" type="text/css"/>
+   <link href="/arabic/assets/Spryarabic/assets/SpryTabbedPanels.css" rel="stylesheet" type="text/css"/>
+   <script src="/arabic/assets/js/jquery-1.7.1.min.js">
+   </script>
+   <script src="/arabic/assets/Spryarabic/assets/SpryTabbedPanels.js" type="text/javascript">
+   </script>
+   <script src="/arabic/assets/js/menu.js" type="text/javascript">
+   </script>
+   <script src="/arabic/assets/js/jquery.cycle.all.js" type="text/javascript">
+   </script>
+   <script src="/arabic/assets/js/bootstrap-carousel.js" type="text/javascript">
+   </script>
+   <script src="/arabic/assets/js/jquery.selectbox-0.5.js" type="text/javascript">
+   </script>
+   <link href="/arabic/assets/skins/tango/skin.css" rel="stylesheet" type="text/css"/>
+   <script src="/arabic/assets/js/jquery.selectbox-0.5.js" type="text/javascript">
+   </script>
+   <script src="/arabic/assets/js/jquery.jcarousel.js" type="text/javascript">
+   </script>
+   <link href="/arabic/skins/tango/skin.css" rel="stylesheet" type="text/css"/>
+   <script type="text/javascript">
+    jQuery(document).ready(function () {
+            jQuery('#mycarousel, #mycarousel2').jcarousel();
+        });
+   </script>
+   <script src="/arabic/assets/js/html5.js" type="text/javascript">
+   </script>
+   <!--[if lt IE 9]>
+		<script src="assets/js/html5.js"></script>
+	  <![endif]-->
+   <script type="text/javascript">
+    $(function () {
+            $("<select />").appendTo(".navigation");
+
+            $("<option />", {
+                "selected": "selected",
+                "value": "",
+                "text": "Go to..."
+            }).appendTo(".navigation select");
+
+            $(".navigation a").each(function () {
+                var el = $(this);
+                $("<option />", {
+                    "value": el.attr("href"),
+                    "text": el.text()
+                }).appendTo(".navigation select");
+            });
+            $(".navigation select").change(function () {
+                window.location = $(this).find("option:selected").val();
+            });
+
+        });
+   </script>
+   <meta content="19 May 2014" http-equiv="expires"/>
+   <script src="/js/respond.src.js" type="text/javascript">
+   </script>
+   <meta content="KY_q3KAv7c88Yp7Ky0STz91yVXMcn9Mm6wkYRElA0As" name="google-site-verification">
+    <link href="/arabic/home" hreflang="ar" rel="alternate"/>
+    <meta content="ar" http-equiv="content-language"/>
+    <meta content='حتفلت اليوم مجموعة Aditya Birla Group، بالتعاون مع حكومة ماهاراشترا ومنظمة الروتاري الدولية "بمنح إقليم جنوب شرق آسيا شهادة خلو من فيروس شلل الأطفال من قبل منظمة الصحة العالمية" في راجبافان (مومباي)، بمشاركة محافظ ولاية ماهاراشترا السيد كي سانكارانارايان باعتباره الرئيس الضيف.' name="Description"/>
+    <meta content="الهند، خالية من مرض شلل الأطفال، السيدة راجاشري بيرلا(Mrs. Rajashree Birla)، منظمة الصحة العالمية تمنح إقليم جنوب شرق آسيا شهادة خلو من الأطفال" name="Keyword"/>
+    <title>
+     انتصار الهند على مرض شلل الأطفال
+    </title>
+   </meta>
+  </link>
+ </head>
+ <body>
+  <form action="./Indias-triumph-over-polio-celebrated-ara" id="form1" method="post">
+   <div class="aspNetHidden">
+    <input id="__EVENTTARGET" name="__EVENTTARGET" type="hidden" value=""/>
+    <input id="__EVENTARGUMENT" name="__EVENTARGUMENT" type="hidden" value=""/>
+    <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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"/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+   </script>
+   <div class="aspNetHidden">
+    <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="D0916606"/>
+    <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="jD8zdrBI2X1laJnyFIDiyWpW75Pv2BVTNgmQ8o9PMx1km91rcK9wMRZOVMjYXQ9CqEd85kf1wXn2rtLFWDX0xqhPjTAdYugUncpBBjZUzNIe2ErbGrGqJgGHKxORTd2cHrdgq5MUyfN1oIOLU/RZgw=="/>
+   </div>
+   <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+     <div class="container">
+      <a class="brand" href="/arabic/home">
+       <img alt="" src="/arabic/assets/img/logo.png"/>
+      </a>
+      <div class="nav-collapse collapse">
+       <div class="navbar-form pull-right">
+        <div class="navfbin">
+         <a class="icon1" href="https://www.facebook.com/AdityaBirlaGrp" target="_blank">
+          Facebook
+         </a>
+         <a class="icon2" href="http://www.youtube.com/adityabirlagroup" target="_blank">
+          fb
+         </a>
+         <a class="icon3" href="https://twitter.com/adityabirlagrp" target="_blank">
+          fb
+         </a>
+         <a class="icon5" href="http://www.linkedin.com/company/aditya-birla-group" target="_blank">
+          fb
+         </a>
+        </div>
+        <div class="selectivename">
+         <div id="languages">
+          <span>
+           Choose Language
+          </span>
+          <div class="langlist">
+           <ul>
+            <li>
+             <a href="/chinese/home" target="_blank">
+              Chinese
+             </a>
+            </li>
+            <li>
+             <a href="/">
+              English
+             </a>
+            </li>
+            <li>
+             <a href="/french/home" target="_blank">
+              French
+             </a>
+            </li>
+            <li>
+             <a href="/german/home" target="_blank">
+              German
+             </a>
+            </li>
+            <li>
+             <a href="/portuguese/home" target="_blank">
+              Portuguese
+             </a>
+            </li>
+            <li>
+             <a href="/spanish/home" target="_blank">
+              Spanish
+             </a>
+            </li>
+            <li>
+             <a href="/thai/home" target="_blank">
+              Thai
+             </a>
+            </li>
+           </ul>
+          </div>
+          <script charset="utf-8" type="text/javascript">
+           $(document).ready(function () {
+                                        $('#languages').click(function () {
+                                            $(this).find('.langlist').show();
+                                        })
+                                        $('.langlist').mouseleave(function () {
+                                            $(this).hide();
+                                        })
+                                    })
+          </script>
+         </div>
+         <div class="searchBox3">
+          <div id="pnlsearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'btnSearch')">
+           <input class="searchInp" id="txtSearch" maxlength="150" name="ctl00$txtSearch" onblur="if (this.value == '') { this.value='البحث عن طريق الكلمات'; }" onfocus="if(this.value == 'البحث عن طريق الكلمات') { this.value=''; }" type="text" value="البحث عن طريق الكلمات"/>
+           <a href="javascript:__doPostBack('ctl00$btnSearch','')" id="btnSearch">
+            <img src="/assets/img/searchmedia.gif"/>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="workarea">
+       <div class="mainheader">
+        <div class="navigation">
+         <ul>
+          <li>
+           <a href="/arabic/About-Us/overview">
+            من نحن
+           </a>
+           <div class="mymenu">
+            <div class="col1">
+             <div class="submenuContent">
+              <ul>
+               <li>
+                <a href="/arabic/About-Us/overview" target="_parent">
+                 نظرة عامة
+                </a>
+               </li>
+               <li>
+                <a href="/arabic/About-Us/vision-and-values" target="_parent">
+                 الرؤية والقيم
+                </a>
+               </li>
+               <li>
+                <a href="/arabic/About-Us/our_logo_ar" target="_parent">
+                 شعارنا
+                </a>
+               </li>
+               <li>
+                <a href="/arabic/About-Us/milestones" target="_parent">
+                 معالم
+                </a>
+               </li>
+               <li>
+                <a href="/arabic/About-Us/leadership_team_ar" target="_parent">
+                 فريق القيادة
+                </a>
+               </li>
+               <li>
+                <a href="/arabic/About-Us/heritage" target="_parent">
+                 تراث
+                </a>
+               </li>
+               <li>
+                <a href="http://www.adityabirlaretirees.com/" target="_blank">
+                 Aditya Birla Retirees
+                </a>
+               </li>
+               <li>
+                <a href="/arabic/About-Us/educational-institutes-ara" target="_parent">
+                 المؤسسات التعليمية
+                </a>
+               </li>
+              </ul>
+              <div class="clearfloat">
+              </div>
+             </div>
+            </div>
+            <div class="clearfloat">
+            </div>
+           </div>
+          </li>
+          <li>
+           <a href="/arabic/Innovation/abstc">
+            ابتكار
+           </a>
+           <div class="mymenu">
+            <div class="col1">
+             <div class="submenuContent">
+              <ul>
+               <li>
+                <a href="/arabic/Innovation/abstc" target="_parent">
+                 ABSTC
+                </a>
+               </li>
+               <li>
+                <a href="/arabic/Innovation/corporate_technical_energy_services_ar" target="_parent">
+                 الفنية للشركات وخدمات الطاقة
+                </a>
+               </li>
+              </ul>
+              <div class="clearfloat">
+              </div>
+             </div>
+            </div>
+            <div class="clearfloat">
+            </div>
+           </div>
+          </li>
+          <li>
+           <a href="/arabic/Businesses/companies">
+            الشركات
+           </a>
+           <div class="mymenu">
+            <div class="col1">
+             <div class="submenuContent">
+              <ul>
+               <li>
+                <a href="/arabic/Businesses/companies" target="_parent">
+                 الشركات
+                </a>
+               </li>
+               <li>
+                <a href="/arabic/Businesses/sectors" target="_parent">
+                 القطاعات
+                </a>
+               </li>
+              </ul>
+              <div class="clearfloat">
+              </div>
+             </div>
+            </div>
+            <div class="clearfloat">
+            </div>
+           </div>
+          </li>
+          <li>
+           <a href="/arabic/investors" target="_parent">
+            المستثمرين
+           </a>
+          </li>
+          <li>
+           <a href="/arabic/CSR/overview">
+            المسؤولية الاجتماعية للشركات
+           </a>
+           <div class="mymenu">
+            <div class="col1">
+             <div class="submenuContent">
+              <ul>
+               <li>
+                <a href="/arabic/CSR/overview" target="_parent">
+                 نظرة عامة
+                </a>
+               </li>
+               <li>
+                <a href="/arabic/CSR/csr-engagement" target="_parent">
+                 CSR engagement
+                </a>
+               </li>
+               <li>
+                <a href="/arabic/CSR/corporate-social-responsibility-policy-ara" target="_parent">
+                 CSR Policy
+                </a>
+               </li>
+               <li>
+                <a href="http://www.adityabirlahospital.com/" target="_blank">
+                 Aditya Birla Memorial Hospital
+                </a>
+               </li>
+               <li>
+                <a href="http://www.adityabirlascholars.net/" target="_blank">
+                 Scholarships
+                </a>
+               </li>
+              </ul>
+              <div class="clearfloat">
+              </div>
+             </div>
+            </div>
+            <div class="clearfloat">
+            </div>
+           </div>
+          </li>
+          <li class="activeDefault">
+           <a href="/arabic/Media/press-releases">
+            وسائل الإعلام
+           </a>
+           <div class="mymenu">
+            <div class="col1">
+             <div class="submenuContent">
+              <ul>
+               <li>
+                <a href="/arabic/Media/press-releases" target="_parent">
+                 النشرات الصحفية
+                </a>
+               </li>
+               <li>
+                <a href="/arabic/Media/press-reports" target="_parent">
+                 التقارير الصحفية
+                </a>
+               </li>
+               <li>
+                <a href="/arabic/Media/features" target="_parent">
+                 ملامح
+                </a>
+               </li>
+               <li>
+                <a href="/arabic/Media/press-kit" target="_parent">
+                 الملف الصحفي
+                </a>
+               </li>
+              </ul>
+              <div class="clearfloat">
+              </div>
+             </div>
+            </div>
+            <div class="clearfloat">
+            </div>
+           </div>
+          </li>
+          <li>
+           <a href="http://www.careers.adityabirla.com/" target="_blank">
+            مهن
+           </a>
+          </li>
+          <li>
+           <a href="http://www.careers.adityabirla.com/" target="_blank">
+            اتصل
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!--/.nav-collapse -->
+    </div>
+   </div>
+   <div class="container innerpages">
+    <div class="mainfooter2 row-fluid">
+     <div class="ineterestRight span10">
+      <div class="abtContainer banner">
+       <!-- Social Sharing Plugins -->
+       <div class="social social_share_outer">
+        <div class="addthis_toolbox addthis_default_style addthis_16x16_style">
+         <!--  <a class="addthis_button_facebook"></a>
+                        <a class="addthis_button_twitter"></a>
+                        <a class="addthis_button_pinterest_share"></a>
+                        <a class="addthis_button_google_plusone_share"></a>-->
+         <a class="addthis_button_compact">
+         </a>
+        </div>
+        <img alt="" class="share_btn" src="/assets/img/share_btn.png"/>
+       </div>
+       <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined" type="text/javascript">
+       </script>
+       <!-- AddThis Button END -->
+       <div id="contentPage_divContent">
+        <h1>
+         انتصار الهند على مرض شلل الأطفال
+        </h1>
+        <p>
+         <em>
+          منظمة الصحة العالمية(WHO) تمنح إقليم جنوب شرق آسيا شهادة الخلو من الأطفال
+         </em>
+        </p>
+        <p>
+         3 مايو 2014
+         <br/>
+         <table align="right" border="0" cellspacing="1" class="imgFR" width="25%">
+          <tbody>
+           <tr>
+            <td style="background-color: #dedede; height: 30px; padding-left: 6px;">
+             <strong>
+              Read in other languages
+             </strong>
+            </td>
+           </tr>
+           <tr>
+            <td style="background-color: #dedede;">
+             <ul>
+              <li>
+               <a href="http://www.adityabirla.com/media/press-releases/Indias-triumph-over-polio-celebrated" target="_blank">
+                English
+               </a>
+              </li>
+              <li>
+               <a href="http://www.adityabirla.com/chinese/Media/press-releases/Indias-triumph-over-polio-celebrated-chi" target="_blank">
+                Chinese
+               </a>
+              </li>
+              <li>
+               <a href="http://www.adityabirla.com/french/media/press-releases/Indias-triumph-over-polio-celebrated-fre" target="_blank">
+                French
+               </a>
+              </li>
+              <li>
+               <a href="http://www.adityabirla.com/portuguese/media/press-releases/Indias-triumph-over-polio-celebrated-por" target="_blank">
+                Portuguese
+               </a>
+              </li>
+              <li>
+               <a href="http://www.adityabirla.com/spanish/Media/press-releases/Indias-triumph-over-polio-celebrated-spa" target="_blank">
+                Spanish
+               </a>
+              </li>
+              <li>
+               <a href="http://www.adityabirla.com/german/Media/press-releases/Indias-triumph-over-polio-celebrated-ger" target="_blank">
+                German
+               </a>
+              </li>
+              <li>
+               <a href="http://www.adityabirla.com/thai/Media/press-releases/Indias-triumph-over-polio-celebrated-tha" target="_blank">
+                Thai
+               </a>
+              </li>
+             </ul>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <br/>
+         <img alt="" class="imgFL" src="/Content/polio_copy02.jpg" style="width: 200px; height: 160px;">
+          <strong>
+           مومباي:
+          </strong>
+          احتفلت اليوم مجموعة Aditya Birla Group، بالتعاون مع حكومة ماهاراشترا ومنظمة الروتاري الدولية "بمنح إقليم جنوب شرق آسياشهادةالخلومنفيروس شللالأطفال من قبل منظمة الصحة العالمية" في راجبافان (مومباي)، بمشاركة محافظ ولاية ماهاراشترا السيد كي سانكارانارايان Mr. K. Sankaranarayan باعتباره الرئيس الضيف.
+          <br/>
+          <br/>
+          وقد منح المحافظ كلاً من حكومة الهند ووزارة الصحة وحكومة ماهاراشترا ومؤسسةبومبايالبلدية ومنظمة الروتاري الدولية والسيدة راجاشري بيرلا Mrs. Rajashree Birla ومجموعة Aditya Birla Groupأوسمة الشرف تقديرًا للدور الذي لعبه كل منها في هذا الانتصار البارز على فيروس شلل الأطفال.
+          <br/>
+          <br/>
+          وكان من بين أكثر أبطال حملة القضاء على فيروس شلل الأطفال حماسة، "السيدة راجاشري بيرلا Mrs. Rajashree Birla حيث قالت "لعبت كلاً من حكومة الهند وحكومة ماهاراشترا ومؤسسةمومبايالبلدية ومنظمة الصحة العالمية ومنظمة الروتاري الدولية ومؤسسة بيل وميلندا جيتس وغيرهم دورًا بارزًا لإعلان الهند كدولة "خالية من شلل الأطفال" وتحقيق هذا الإنجاز. وندين بالفضل لهم في هذا الانتصار البارز على مرض شلل الأطفال. وقد عملنا، في مجموعة Aditya Birla Group، معهم جنبًا إلى جنب."
+          <br/>
+          <br/>
+          واستطردت السيدة بيرلا قائلة أننا حرصنا داخل 50 مصنعًا التابعة لمجموعة Aditya Birla Group وفي مومباي، على ضمان قيام فرق المسؤولية المجتمعية للشركات CRS بتطعيم جميع الأطفال من وقت ولادتهم حتى سن 5 سنوات بالأمصال اللازمة. على مدار السنوات الخمس الماضية، ساعدت مجموعة Aditya Birla Group في تطعيم ما يقرب من 22 مليون طفل, وإدارة 73,693 مقصورة لتطعيم الأطفال. علاوة على ذلك، حرصت فرق المجموعة على تطعيم الأطفال في محطات السكك الحديدة وغيرها من النقاط الحيوية. وذكرت السيدة بيرلا بعد أن منحت أوسمة الشرف لحكومة الهند وحكومة ماهاراشترا "بلغ عدد الأطفال الذين تم تطعيمهم خلال "اليوم الوطني للتحصين" 170 مليون طفل".
+          <br/>
+          <br/>
+          <img alt="" class="imgFR" src="/Content/polio_copy01.jpg" style="width: 260px; height: 190px;"/>
+          وأضافت السيدة بيرلا أيضًا كلمة تحذير بأنه "مازال مرض شلل الأطفال موجودًا في أفغانستان ونيجيريا وباكستان. وبكل أسف، يتم الإبلاغ عن حالات جديدة من الإصابة بفيروس شلل الأطفال من المناطق الريفية الخاضعة تحت سلطة حكومة فيدرالية وخیبربختونخوا Khyber Pakthunkhwa في باكستان – وتعتبر هذه المنطقة المحرك لانتقال فيروس شلل الأطفال في البلاد.
+          <br/>
+          <br/>
+          يبدو الوضع أفضل في أفغانستان ونيجيريا إلا أن الإبلاغ عن حالة واحدة يمثل عناءً كبيرًا. وقد عانت كلاً من سوريا والكاميرون وإيثوبيا وكنيا من تفشي حالات الإصابة بفيروس شلل الأطفال في 2013، بعدما تم إعلانها خالية من شلل الأطفال في 2012. ولذلك يُعد ظهور فيروس شلل الأطفال أمرًا يجب أخذه بعين الاعتبار. ومن ثم لا مجال للتهاون في ذلك. وفي الهند، علينا الاستمرار في النشاط. كما يتوجب علينا الحفاظ على المراقبة الحساسة وكما أوصت منظمة الصحة العاليمة يجب علينا ضمان المناعة العالية لدى الأطفال ذد فيروس شلل الأطفال. ويعد من الأمور الهامة والحيوية ضمان عدم استيراد أي سلالة جديدة من فيروس شلل الأطفال إلى بلادنا حتى يتم القضاء على فيروس شلل الأطفال في جميع أنحاء العالم."
+          <br/>
+          <br/>
+          وأثناء حديثه في الحفل، اعتبر السيد أشوك ماهاجان Mr. Ashok Mahajan، عضو في منظمة الروتاري الدولية، أن نهاية شلل الأطفال انجازًا عظيمًا وصرح قائلاً "هذا الإنجاز العظيم تحقق بحصول 11 بلدًا في إقليم شمال شرق آسيا (SEAR) على شهادة الخلو من شلل الأطفال – بنجلادش وبوتان وجمهورية كوريا الديمقراطية الشعبية وإندونيسيا وجزر المالديفوميانمار ونيبال وسريلانكا وتيمور الشرقية وتايلاندا. ويذكر أن SEAR موطنًا لما يقرب من 1.8 مليار شخص، ويعني هذا بعبارة أخرى أيضًا أن نحو 80 بالمائة من العالم أصبح الآن خالي من شلل الأطفال – وهو ما يُعد إنجازًا عظيمًا  في حملة القضاء على فيروس شلل الأطفال على مستوى العالم."
+          <br/>
+          <br/>
+          وفي وقت سابق قال السيد أيه كي آجاروالا Mr. A. K. Agarwala، مدير  مجموعة شركات Aditya Birla Group في كلمة الترحيب التي ألقاها في الحفل: "يُعد القضاء على شلل الأطفال في الهند من بين أعظم الإنجازات. وبهذا، تم منح كافة البلدان 11 في إقليم شمال شرق آسيا شهادة الخلو من شلل الأطفال."
+         </img>
+        </p>
+       </div>
+       <ul class="jcarousel-skin-tango" id="mycarouse13">
+       </ul>
+      </div>
+      <div class="clearfix">
+      </div>
+     </div>
+     <div class="span2">
+      <div class="interestBox">
+       <h2>
+        أيضا من الفائدة
+       </h2>
+       <ul>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/Businesses/companies">
+          الشركات
+         </a>
+        </li>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/Businesses/sectors">
+          القطاعات
+         </a>
+        </li>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/Innovation/facilities">
+          التسهيلات
+         </a>
+        </li>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/About-Us/overview">
+          الملف الشخصي المجموعة
+         </a>
+        </li>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/Media/press-releases">
+          النشرات الصحفية
+         </a>
+        </li>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/Media/press-reports">
+          التقارير الصحفية
+         </a>
+        </li>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/Media/features">
+          ملامح
+         </a>
+        </li>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/Media/press-kit">
+          الملف الصحفي
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="clearfix">
+      </div>
+      <div class="factSlider">
+       <h2>
+        حقائق
+       </h2>
+       <div id="facts2">
+        <ul class="jcarousel-skin-tango" id="mycarousel2">
+         <li>
+          <div class="slider1">
+           أكبر شركة على مستوى العالم لدلفنة الألومنيوم
+          </div>
+          <div class="slider1">
+           رقم 1 في إنتاج ألياف تيلة الفسكوز
+          </div>
+          <div class="slider1">
+           ضمن أكبر الشركات المنتجة للألومنيوم الرئيسي في آسيا.
+          </div>
+          <div class="slider1">
+           من بين أعلى 5 شركات منتجة للأسمنت على الصعيد الدولي
+          </div>
+         </li>
+         <li>
+          <div class="slider1">
+           أكبر منتج للكربون الأسود في العالم
+          </div>
+          <div class="slider1">
+           رابع أكبر شركة منتجة للكربون الأسود على مستوى العالم
+          </div>
+          <div class="slider1">
+           خامس أكبر منتجي فبر الإكريليك في العالم
+          </div>
+          <div class="slider1">
+           ضمن أفضل مصانع لإنتاج الأسمدة تستخدم الطاقة بكفاءة
+          </div>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="facts_new">
+    </div>
+    <div class="section-bottom">
+     <h3>
+      <strong>
+       وينبغي توجيه الاستفسارات الإعلامية إلى:
+      </strong>
+      (يرجى استخدام هذا الاتصال للحصول على استفسارات وسائل الإعلام فقط).
+     </h3>
+     <figure>
+      <!--<img src="/arabic/assets/img/Pragnyaram.jpg" alt="" />-->
+      <figcaption>
+       <p class="left">
+        <strong>
+         Dr. Pragnya Ram
+        </strong>
+        <br/>
+        الرئيس التنفيذي لمجموعة الاتصالات المؤسسية &amp; المسؤولية الاجتماعية للشركات
+        <br/>
+        أديتيا بيرلا إدارة شركة خاصة محدودة
+        <br/>
+        أديتيا بيرلا مركز، الطابق 1st، الجناح 'C'
+        <br/>
+        S.K. Ahire المرج، ورلي
+        <br/>
+        مومباي 400 030.
+       </p>
+      </figcaption>
+     </figure>
+     <address>
+      <p>
+       <strong>
+        هاتف:
+       </strong>
+       <br/>
+       91-22-6652 5000 /2499 5000
+       <br/>
+       بالفاكس: 91-22-6652 5741/ 42
+       <br/>
+       البريدالإلكتروني:
+       <a href="mailto:pragnya.ram@adityabirla.com">
+        pragnya.ram@adityabirla.com
+       </a>
+      </p>
+     </address>
+    </div>
+    <script type="text/javascript">
+     $(document).ready(function () {
+            custom_select();
+        })
+    </script>
+    <div class="mainfooter">
+     <div class="col1_new">
+      <h1>
+       حول الشركة
+      </h1>
+      <p>
+       شركة أديتا بيرلا جروب، مؤسسة أمريكية برأس مال 44.3 مليار دولار أمريكي في قائمة فورتشن 500 التي ترصد أكبر 500 شركة في أمريكا. تعمل الشركة بطاقة بشرية غير عادية تزيد على 120.000 موظف، ينتمون إلى 42 جنسية مختلفة.
+      </p>
+      <a href="http://www.adityabirla.com/arabic/About-Us/overview">
+       إقرأ المزيد
+      </a>
+     </div>
+     <div class="col1_new">
+      <h1>
+       روابط سريعة
+      </h1>
+      <div class="newleftin">
+       <ul>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/contact">
+          معلومات الاتصال
+         </a>
+        </li>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/About-Us/overview">
+          من نحن
+         </a>
+        </li>
+        <li>
+         <a href="http://www.careers.adityabirla.com/pages/home">
+          مهن
+         </a>
+        </li>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/About-Us/leadership_team_ar">
+          الملف الشخصي قادة
+         </a>
+        </li>
+       </ul>
+       <ul>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/Businesses/companies">
+          أعمالنا
+         </a>
+        </li>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/Innovation/abstc">
+          مرافق
+         </a>
+        </li>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/CSR/overview">
+          علاقة الاستدامة للشركات
+         </a>
+        </li>
+        <li>
+         <a href="http://www.adityabirla.com/arabic/Media/press-releases">
+          وسائل الإعلام
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <a class="col1_new coll_newlast" href="/arabic/contact">
+     </a>
+    </div>
+    <footer class="mainfooter3">
+     <p class="leftBox-bottom">
+      ©جميع الحقوق محفوظة 2019، أديتا بيرلا مانجمنت كوربوريشن بي في تي. ذات مسئولية محدودة
+     </p>
+     <ul class="rightBox-bottom">
+      <li>
+       <a href="/arabic/about/terms-and-conditions">
+        البنود والشروط
+       </a>
+      </li>
+      <li>
+       <a href="/arabic/about/privacy-policy">
+        سياسة الخصوصية
+       </a>
+      </li>
+      <li>
+       <a href="/arabic/about/site-map">
+        خريطة الموقع
+       </a>
+      </li>
+     </ul>
+    </footer>
+    <script type="text/javascript">
+     $(document).ready(function () {
+                $("#back-top").hide();
+                $(function () {
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > 100) {
+                            $('#back-top').fadeIn();
+                        } else {
+                            $('#back-top').fadeOut();
+                        }
+                    });
+                    $('#back-top a').click(function () {
+                        $('body,html').animate({
+                            scrollTop: 0
+                        }, 500);
+                        return false;
+                    });
+                });
+            });
+    </script>
+   </div>
+   <p id="back-top">
+    <a href="#top">
+     <span>
+      Top
+     </span>
+    </a>
+   </p>
+   <script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZL-FSXYQ91Ph7N78c-2iKRptzi_QwQAJWd4Hxt9N5ApP9I4tVk9u_EmqyaHYz4sXfQ2&amp;t=636765211280000000" type="text/javascript">
+   </script>
+  </form>
+  <script charset="utf-8" src="/arabic/assets/js/jquery.uniform.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" type="text/javascript">
+   function custom_select() {
+        $("textarea, select").uniform();
+    }
+  </script>
+  <link href="/arabic/assets/css/uniform.default.css" media="screen" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10996029-43']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+ </body>
+</html>

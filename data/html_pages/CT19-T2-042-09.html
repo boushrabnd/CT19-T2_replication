@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ar" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <link href="/imgs/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <style>
+   @font-face{font-family:'DinNext';font-style:normal;font-weight:400;src:url('/css/fonts/dinnext/DinNextRegular.eot?v=1');src:url('/css/fonts/dinnext/DinNextRegular.eot?v=1') format('embedded-opentype'), url('/css/fonts/dinnext/DinNextRegular.woff?v=1') format('woff'), url('/css/fonts/dinnext/DinNextRegular.ttf?v=1') format('truetype'), url('/css/fonts/dinnext/DinNextRegular.svg?v=1#DinNextRegular') format('svg');}@font-face{font-family:'DinNext';font-style:normal;font-weight:600;src:url('/css/fonts/dinnext/DinNextMedium.eot?v=1');src:url('/css/fonts/dinnext/DinNextMedium.eot?v=1') format('embedded-opentype'), url('/css/fonts/dinnext/DinNextMedium.woff?v=1') format('woff'), url('/css/fonts/dinnext/DinNextMedium.ttf?v=1') format('truetype'), url('/css/fonts/dinnext/DinNextMedium.svg?v=1#DinNextMedium') format('svg');}@font-face{font-family:'DinNext';font-style:normal;font-weight:700;src:url('/css/fonts/dinnext/DinNextBold.eot?v=1');src:url('/css/fonts/dinnext/DinNextBold.eot?v=1') format('embedded-opentype'), url('/css/fonts/dinnext/DinNextBold.woff?v=1') format('woff'), url('/css/fonts/dinnext/DinNextBold.ttf?v=1') format('truetype'), url('/css/fonts/dinnext/DinNextBold.svg?v=1#DinNextBold') format('svg');}
+    *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-family:DinNext;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;color:#bf3822;text-decoration:none;}a:active,a:hover{outline:0}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.container{margin-left:auto;margin-right:auto;padding-right:15px;padding-left:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-left:auto;margin-right:auto;padding-right:15px;padding-left:15px}.row{margin-right:-15px;margin-left:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:right}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:right}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:right}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:right}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}}.nav{margin-bottom:0;padding-right:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}@media (min-width:768px){.nav-tabs.nav-justified>li>a{border-bottom:1px solid #ddd;border-radius:4px 4px 0 0}.nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>.active>a:hover,.nav-tabs.nav-justified>.active>a:focus{border-bottom-color:#fff}}.nav-pills>li{float:right}.nav-pills>li>a{border-radius:4px}.nav-pills>li+li{margin-right:2px}.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus{color:#fff;background-color:#bf3822}.nav-stacked>li{float:none}.nav-stacked>li+li{margin-top:2px;margin-right:0}.nav-justified{width:100%}.nav-justified>li{float:none}.nav-justified>li>a{text-align:center;margin-bottom:5px}.nav-justified>.dropdown .dropdown-menu{top:auto;right:auto}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar-header{float:right}}.navbar-fixed-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse{max-height:340px}.navbar-static-top{z-index:1000;border-width:0 0 1px}.navbar-fixed-top,.navbar-fixed-bottom{position:fixed;left:0;right:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top,.navbar-fixed-bottom{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-fixed-bottom{bottom:0;margin-bottom:0;border-width:1px 0 0}.navbar-brand{float:right;padding:15px 15px;font-size:18px;line-height:20px;height:50px}.navbar-brand:hover,.navbar-brand:focus{text-decoration:none}.navbar-brand>img{display:block}@media (min-width:768px){.navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand{margin-right:-15px}}@media (min-width:768px){.navbar-nav{float:right;margin:0}.navbar-nav>li{float:right}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-left{float:left !important}.navbar-right{float:right !important;margin-right:-15px}.navbar-right~.navbar-right{margin-right:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after,.form-horizontal .form-group:before,.form-horizontal .form-group:after,.nav:before,.nav:after,.navbar:before,.navbar:after,.navbar-header:before,.navbar-header:after,.navbar-collapse:before,.navbar-collapse:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after,.form-horizontal .form-group:after,.nav:after,.navbar:after,.navbar-header:after,.navbar-collapse:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}
+    .sr-only {position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0;}
+    @media (min-width: 991px){.navbar-toggle {display: none;}}
+    .navbar-toggle {position: relative;float: left;margin: 10px 0;padding: 6px 8px;background: transparent;border: 0;border-radius: 0;}
+    ul,ol{padding:0;margin:0;list-style: none;}.dropdown-menu{display:none}
+    body{background:#f6f6f6 url(/imgs/bdy_bg.jpg) repeat-x left -280px;font:18px/1.4 'DinNext', Arial, Helvetica, sans-serif;color:#5d5d5f;direction:rtl;text-align:right;margin-top:100px;}
+    body.home{margin-top:0;background-position:center top;}
+    .owl-carousel .owl-stage-outer {position: relative;overflow: hidden;}
+    .site-header{padding-top:30px;padding-bottom:30px;border-bottom:solid 3px #dcccbf;background:#fff;display:none;}
+    .home .site-header{display:block;}
+    .logo img{height:90px;}
+    .top-ad{text-align:left;}
+    .top-ad img, .top-ad iframe, .top-ad embed{max-width:100%;}
+    .topnav{background:#f2ece4;font-size:16px;margin-top:30px;display:none;}
+    .topnav:after{content:'';display:block;clear:both;}
+    .ittihad-pdf{background:#bf3822;color:#fff;display:block;height:50px;padding:8px 12px;line-height:32px;font-size:14px;font-weight:bold;}
+    .ittihad-pdf i{float:left;font-size:32px;line-height:50px;overflow:hidden;margin-right:8px;margin:-8px 20px -8px 0;}
+    .ittihad-pdf i:after{margin:0;}
+    .ittihad-pdf:hover{background:#ba8d65;color:#fff;}
+    body:not(.home) .navbar {position:fixed;right:0;left:0;top:0;z-index:1030;}
+    nav.navbar{border-bottom:solid 2px #efefef;background:rgba(255, 255, 255, 0.9);border-radius:0;}
+    .navbar-fixed-top{box-shadow:0 1px 3px rgba(0, 0, 0, 0.05);}
+    nav.navbar:after{content:'';clear:both;display:block;}
+    .navbar-logo{padding:10px 0;margin-left:20px;height:60px;-webkit-transition:all .4s ease-in-out;-moz-transition:all .4s ease-in-out;-o-transition:all .4s ease-in-out;transition:all .4s ease-in-out;}
+    .navbar-logo img{max-height:100%;max-width:100%;width:auto;height:auto;}
+    .home .navbar-logo{height:1px;margin-left:0;overflow:hidden;}
+    .home .navbar-fixed-top .navbar-logo{height:60px;margin-left:20px;}
+    nav.navbar .navbar-collapse{padding:0;}
+    .navbar-nav > li{padding-left:10px;}
+    .navbar-nav > li > a{position:relative;display:block;padding:15px 10px;line-height:28px;font-size:16px;color:#000;}
+    .navbar-nav > li > a span{position:relative;z-index:20;}
+    .navbar-nav > li > a:after{content:'';width:100%;height:3px;background:#000;position:absolute;left:0;right:0;bottom:0;z-index:10;-webkit-transition:all .4s ease-in-out;-moz-transition:all .4s ease-in-out;-o-transition:all .4s ease-in-out;transition:all .4s ease-in-out;}
+    .navbar-nav > li > a i{font-size:11px;margin-right:5px;position:relative;z-index:20;line-height:1; display: inline-block}
+    .navbar-nav > li > a:hover, .navbar-nav > li.on > a, .navbar-nav > li.open > a{color:#fff;background:transparent;}
+    .navbar-nav > li > a:hover:after, .navbar-nav > li.on > a:after, .navbar-nav > li.open > a:after{height:100%;}
+    .navbar-nav .dropdown-menu{left:auto!important;background:#000;border:0;border-radius:0;margin:0;padding:0 10px;width:100%;box-shadow:0 1px 4px rgba(0, 0, 0, 0.1)}
+    .navbar-nav .dropdown-menu li a{display:block;color:#fff;line-height:42px;font-size:14px;border-bottom:solid 1px rgba(255, 255, 255, 0.2);width:100%;padding:0;}
+    .navbar-nav .dropdown-menu li a:hover, .navbar-nav .dropdown-menu li a:focus{background:rgba(255, 255, 255, 0.2);padding-right:5px;}
+    .navbar-nav > li.light-cyan > a:after{background:#4ee8fc;}
+    .navbar-nav > li.deep-cyan > a:after{background:#1f7089;}
+    .navbar-nav > li.vivid-orange > a:after{background:#f5800b;}
+    .navbar-nav > li.aquamarine > a:after{background:#1ee38e;}
+    .navbar-nav > li.strong-violet > a:after{background:#7a39c1;}
+    .navbar-nav > li.moderate-brown > a:after{background:#b38e6b;}
+    .navbar-nav > li.solid-black > a:after{background:#000000;}
+    .navbar-nav > li.strong-scarlet > a:after{background:#bf3822;}
+    .navbar-nav > li.bright-yellow > a:after{background:#ff9f1c;}
+    .navbar-nav > li.rose-madder > a:after{background:#e71d36;}
+    .navbar-nav > li.steel-blue > a:after{background:#348aa7;}
+    .navbar-nav > li.independence > a:after{background:#4f4f59;}
+    .navbar-nav > li.emerald > a:after{background:#32936f;}
+    .navbar-nav > li.fluorescent-orange > a:after{background:#ffbf00;}
+    .navbar-nav > li.paradise-pink > a:after{background:#e83f6f;}
+    .navbar-nav > li.lapis-lazuli > a:after{background:#2274a5;}
+    .navbar-nav > li.maximum-green > a:after{background:#679436;}
+    .navbar-nav > li.limerick > a:after{background:#a5be00;}
+    .navbar-nav > li.anti-flash > a:after{background:#ebf2fa;}
+    .navbar-nav > li.queen-blue > a:after{background:#427aa1;}
+    .navbar-nav > li.sea-blue > a:after{background:#05668d;}
+    .navbar-nav .light-cyan .dropdown-menu{background:#4ee8fc;}
+    .navbar-nav .deep-cyan .dropdown-menu{background:#1f7089;}
+    .navbar-nav .vivid-orange .dropdown-menu{background:#f5800b;}
+    .navbar-nav .aquamarine .dropdown-menu{background:#1ee38e;}
+    .navbar-nav .strong-violet .dropdown-menu{background:#7a39c1;}
+    .navbar-nav .moderate-brown .dropdown-menu{background:#b38e6b;}
+    .navbar-nav .solid-black .dropdown-menu{background:#000000;}
+    .navbar-nav .strong-scarlet .dropdown-menu{background:#bf3822;}
+    .navbar-nav .bright-yellow .dropdown-menu{background:#ff9f1c;}
+    .navbar-nav .rose-madder .dropdown-menu{background:#e71d36;}
+    .navbar-nav .steel-blue .dropdown-menu{background:#348aa7;}
+    .navbar-nav .independence .dropdown-menu{background:#4f4f59;}
+    .navbar-nav .emerald .dropdown-menu{background:#32936f;}
+    .navbar-nav .fluorescent-orange .dropdown-menu{background:#ffbf00;}
+    .navbar-nav .paradise-pink .dropdown-menu{background:#e83f6f;}
+    .navbar-nav .lapis-lazuli .dropdown-menu{background:#2274a5;}
+    .navbar-nav .maximum-green .dropdown-menu{background:#679436;}
+    .navbar-nav .limerick .dropdown-menu{background:#a5be00;}
+    .navbar-nav .anti-flash .dropdown-menu{background:#ebf2fa;}
+    .navbar-nav .queen-blue .dropdown-menu{background:#427aa1;}
+    .navbar-nav .sea-blue .dropdown-menu{background:#05668d;}
+    .site-search{margin-top:10px;background:#fff;border:solid 1px #f2ece4;height:40px;padding-left:40px;position:relative;}
+    .site-search input{height:34px;border:0;padding:0 15px;line-height:34px;font-size:20px;color:#000;width:200px;}
+    .site-search input::placeholder{color:#000;}
+    .site-search a{display:block;width:38px;height:38px;position:absolute;left:0;top:0;color:#000;font-size:22px;line-height:36px;text-align:center;}
+    .site-search a:hover{color:#bf3822;}
+    .mobile-search{display:none;width:40px;height:52px;color:#000;font-size:22px;line-height:46px;text-align:center;margin-top:8px;}
+    .mobile-search.open{background:#efefef;}
+    .navbar-toggle{margin:10px 0;padding:6px 8px;border-radius:0;background:#000;}
+    .navbar-toggle.collapsed{background:transparent;}
+    .navbar-toggle .icon-bar{height:4px;margin-bottom:3px;background:#fff;width:30px;transform:skewx(-54deg);-moz-transform:skewx(-54deg);-webkit-transform:skewx(-54deg);}
+    .navbar-toggle .icon-bar:last-child{margin-bottom:0;}
+    .navbar-toggle.collapsed .icon-bar{background:#000;}
+    .navbar-toggle{margin:10px 0;padding:6px 8px;border-radius:0;background:#000;}
+    .navbar-toggle.collapsed{background:transparent;}
+    .navbar-toggle .icon-bar{height:4px;margin-bottom:3px;background:#fff;width:30px;transform:skewx(-54deg);-moz-transform:skewx(-54deg);-webkit-transform:skewx(-54deg);}
+    .navbar-toggle .icon-bar:last-child{margin-bottom:0;}
+    .navbar-toggle.collapsed .icon-bar{background:#000;}
+    .mainpagewrap{opacity:0;-webkit-transition:all .6s ease-in-out;-moz-transition:all .6s ease-in-out;-o-transition:all .6s ease-in-out;transition:all .6s ease-in-out;}
+    .slim-list-itm h4, .slim-list-itm h3{font-size: 14px;margin:0;font-weight:600;}
+    .slim-list-itm h4 a, .slim-list-itm h3 a{color:#000;}
+    .slim-list-itm h4 a:hover, .slim-list-itm h3 a:hover{color:#bf3822;}
+    .overlay-color h2, .overlay-color h3{font-size:23px;line-height:27px;width:auto;max-width:90%;padding:8px 30px 16px 80px;right:auto;left:-55px;bottom:30px;}
+    .overlay a, a.overlay{color:#fff;-webkit-transition: color 0 ease-in-out;-moz-transition: color 0 ease-in-out;-o-transition: color 0 ease-in-out;transition: color 0 ease-in-out}
+    @media (max-width:1200px){.container{width:990px;}
+      .navbar-nav > li{padding-left:5px;}
+      .navbar-nav > li > a{padding:15px 5px;}
+    }
+    @media (max-width:992px){
+      .container{width:760px;}
+      .site-header{padding-top:15px;padding-bottom:15px;}
+      .site-header .logo{text-align:center;}
+      .top-ad{text-align:center;padding:15px 15px 0;}
+      .navbar-nav{margin:0;}
+      .navbar-collapse{clear:both;overflow-y:auto;}
+      .navbar-nav, .navbar-nav>li{float:none;padding:0;margin-bottom:1px;}
+      .navbar-nav > li > a{padding:5px 10px;position:relative;}
+      .navbar-nav > li > a:after{height:1px;}
+      .navbar-nav > li > a i{position:absolute;left:0;top:0;width:40px;height:100%;text-align:center;line-height:38px;}
+      .navbar-nav>li>.dropdown-menu{position:static;float:none;box-shadow:0 0 0;}
+      .site-search{display:none;}
+      .navbar-collapse {clear: both;overflow-y: auto;display:none;}
+    }
+    @media (max-width:767px){
+      .container{width:100%;}
+      /*.top-ad {display:none;}*/
+      .topnav{position:relative;margin-top:15px;}
+      .topnav > .container{padding:0;}
+      body{margin-top:80px;}
+      body.home{margin-top:0;}
+    }
+    @media (max-width:619px){
+      .logo img{height:49px;}
+    }
+  </style>
+  <title>
+   صحيفة الاتحاد -  عام الفضاء العالمي
+  </title>
+  <script async="" src="/js/jquery.min.js">
+  </script>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <!-- GPT Header Part Tag End-->
+  <script>
+   var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function() {
+   var gads = document.createElement('script');
+   gads.async = true;
+   var useSSL = 'https:' == document.location.protocol;
+   gads.src = (useSSL ? 'https:' : 'http:') +
+       '//www.googletagservices.com/tag/js/gpt.js';
+   var node = document.getElementsByTagName('script')[0];
+   node.parentNode.insertBefore(gads, node);
+ })();
+  </script>
+  <script>
+   var gptAdSlots = [];
+ googletag.cmd.push(function() {
+
+
+  var mapping1= googletag.sizeMapping().
+   addSize([100, 100], [88, 31]). 
+   addSize([320, 400], [[320, 50], [300, 50]]). 
+   addSize([320, 700], [[320, 50], [300, 50]]).
+   addSize([750, 200], [728, 90]). 
+   addSize([1050, 200], [[728, 90],[970, 90],[970,250]]).build();
+   
+    var mapping2= googletag.sizeMapping().
+   addSize([100, 100], [88, 31]). 
+   addSize([320, 400], [300, 250]). 
+   addSize([320, 700], [300, 250]).
+   addSize([750, 200], [300, 250]). 
+   addSize([1050, 200], [300, 600]).build();
+   
+   var mapping3= googletag.sizeMapping().
+   addSize([100, 100], [88, 31]). 
+   addSize([320, 400], [300, 250]). 
+   addSize([320, 700], [300, 250]).
+   addSize([750, 200], [300, 250]). 
+   addSize([1050, 200], [300, 250]).build();
+   
+  
+  
+   var mapping4= googletag.sizeMapping().
+   addSize([100, 100], [1, 1]). 
+   addSize([320, 400],[1, 1]). 
+   addSize([320, 700], [1, 1]).
+   addSize([750, 200], [1, 1]). 
+   addSize([1050, 200], [1, 1]).build();
+
+  gptAdSlots[1] = googletag.defineSlot('/5730/alittihad.ae_views', [320, 20], 'leaderboard').							
+  defineSizeMapping(mapping1).
+  setCollapseEmptyDiv(true).
+  addService(googletag.pubads());
+
+  gptAdSlots[2] = googletag.defineSlot('/5730/alittihad.ae_views', [300, 250], 'HPB').							
+  defineSizeMapping(mapping2).
+  setCollapseEmptyDiv(true).
+  addService(googletag.pubads());
+  
+  gptAdSlots[3] = googletag.defineSlot('/5730/alittihad.ae_views', [300, 250], 'mpu').							
+  defineSizeMapping(mapping3).
+  setCollapseEmptyDiv(true).
+  addService(googletag.pubads());
+  
+  gptAdSlots[4] = googletag.defineSlot('/5730/alittihad.ae_views', [1, 1], 'skin').							
+  defineSizeMapping(mapping4).
+  addService(googletag.pubads());
+  
+  googletag.defineOutOfPageSlot('/5730/alittihad.ae_views', 'overlay').addService(googletag.pubads());
+    
+    googletag.defineSlot('/5730/alittihad_native_videos', ['fluid'], 'div-gpt-ad-1543874238718-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+  </script>
+  <!-- GPT Header Part Tag End-->
+  <!-- Google Tag Manager -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-52067102-1">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-52067102-1');
+  </script>
+  <!-- End Google Tag Manager -->
+  <link href="https://www.alittihad.ae/wejhatarticle/101097/عام-الفضاء-العالمي" rel="canonical"/>
+  <meta content=" عام الفضاء العالمي " name="Title"/>
+  <meta content=" عام الفضاء العالمي " name="twitter:title"/>
+  <meta name="keywords"/>
+  <meta content=" عام الفضاء العالمي " name="Description"/>
+  <meta content=" عام الفضاء العالمي " property="og:description"/>
+  <meta content=" عام الفضاء العالمي " property="og:title"/>
+  <meta content="https://www.alittihad.ae/wejhatarticle/101097/عام-الفضاء-العالمي" property="og:url"/>
+  <meta content="https://www.alittihad.ae/assets/wajhat/authors/Mohammed_ArefNEW.jpg" property="og:image"/>
+  <meta content="https://www.alittihad.ae/assets/wajhat/authors/Mohammed_ArefNEW.jpg" name="twitter:image"/>
+ </head>
+ <body id="PgBody">
+  <form action="./عام-الفضاء-العالمي?ArticleId=101097" id="form1" method="post" onsubmit="javascript:return WebForm_OnSubmit();">
+   <div class="aspNetHidden">
+    <input id="__EVENTTARGET" name="__EVENTTARGET" type="hidden" value=""/>
+    <input id="__EVENTARGUMENT" name="__EVENTARGUMENT" type="hidden" value=""/>
+    <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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"/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+   </script>
+   <script src="/WebResource.axd?d=eSwvJ29ASq6IIbITfzi4JCEeqU6aBpF7oiOkdXUR0iSs49cSiJBOIGLkUl32r5MS6pR1A6tkKhDdv_KjR55YHOnTQs01&amp;t=636639625140334455" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=v_-IKDmePWh1bStP4mbAWGK3_1BI8xPY99DWEK1XNq0-V5HdryoS1XijYNEygmfXNK840-0C05KZPs-3KB1ldrJCviZs9ckH43NYoIly9fcG6yUMYFI9MXIZ8lnLWXfRuhYZd6MA-7NfBdxBouQxeRxMmTA1&amp;t=ffffffffcd955fc1" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=k0wZR7DILkQp4Hdq-WpaCGcKaYjXOLFn-fCc-PJfxlRTWlP88PSgUEhc5rQ7wOoNKXVxQBRCxCHO-FokXwZ_j4JgghI2F7FrYCYM_f6IhuvRbY1U-FCkgFsODrA7l0uILvD8vNQGu10CrnqlZb-h1aYlHaM1&amp;t=ffffffffcd368728" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=o5t_tgCtzrkE6D9rfE181m5cIuK3vFC2uWvEbe9RicKT7yqx0vO-1_noJFuriqr58V6BgJZ9nCm4LCRR3344seX4ZK_IhJ9SYLNlLnu2RpBCHoAZybW-70rlfNcWmZG-6yG9PshYE98i0J4iaoeuwrGASyGtYYHyyu7i-UTSxhwCYLM_0&amp;t=ffffffffcd368728" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+   </script>
+   <div class="aspNetHidden">
+    <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="B7B4A8FF"/>
+    <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="jtwRCDB1DbXkHQvuJpsFqn5Nhb5LwZWohhyiHiZJU8ayI3SKp3WV/gFXfAEJSWuguBcvYW+wsIwn25y/ok43KqkqofJNpmov4+5y1/ctBrqp7cubZl60BItD7ai61128xX/IAfTeGCcdtFVp1kV8Bz8tWia0paW5GyBpVhfM2k08eEZdS4i1+op2EIyKj8DvDCUklGritLSqFdRMNca88m53b8Qc/OpIbNwOki2D5Gz9MpQ8PiiADhLGOKbLWm5CoFrgpjeMkhANn1SswmfJWIFNcTB9vuALnnX75TJz5PENLO7+duo9gAB/uNCIWbYDS4oY97knuXNWPZBVVryJVDiPwZdrEDG/iRDesHO/TU7TbVVQncR+qdKS+q9ojAzvZWSwIGp178KidAmMDnOnvqEbdq8lCBw7RLExcRoEHrBgT5oiFCKr7EneCKBjgnkjCo1yVskdfs2jr4Qo/YA+NUgQEnYe8ivTKvFcyGugFA85pny5aLGGC64LvpBqcKwbU2MVbVn2xA16GFgkcotWnJmJu+/Va2DT5EgWxm19jy92QjYj"/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$sc1', 'form1', ['tctl00$ContentPlaceHolder1$Vote$upVote','ContentPlaceHolder1_Vote_upVote','tctl00$upmailList','upmailList'], [], [], 90, 'ctl00');
+//]]>
+   </script>
+   <nav class="navbar">
+    <div class="container">
+     <div class="navbar-wrap">
+      <div class="navbar-logo pull-right">
+       <a href="/" title="صحيفة الاتحاد">
+        <img alt="صحيفة الاتحاد" src="/imgs/logo.png"/>
+       </a>
+      </div>
+      <div class="navbar-header pull-right">
+       <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#mainnav-collapse" data-toggle="collapse" type="button">
+        <span class="sr-only">
+         القائمة الرئيسية
+        </span>
+        <span class="icon-bar">
+        </span>
+        <span class="icon-bar">
+        </span>
+        <span class="icon-bar">
+        </span>
+       </button>
+      </div>
+      <div class="pull-left mobile-search">
+       <i class="co-search">
+       </i>
+      </div>
+      <div class="navbar-left site-search" id="PnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'LinkSearch')">
+       <input class="search-txt" id="txtSearch" name="ctl00$txtSearch" placeholder="ابحث هنا" type="text"/>
+       <a class="search-btn" href="javascript:__doPostBack('ctl00$LinkSearch','')" id="LinkSearch">
+        <i class="co-search">
+        </i>
+       </a>
+      </div>
+      <div class="collapse navbar-collapse" id="mainnav-collapse">
+       <ul class="nav navbar-nav">
+        <li class="dropdown light-cyan">
+         <a href="/section/2/الإمارات">
+          <span>
+           الإمارات
+           <input id="RepHeaderMenu_HiddenSecID_0" name="ctl00$RepHeaderMenu$ctl00$HiddenSecID" type="hidden" value="2"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown sea-blue">
+         <a href="/section/3/عربي-ودولي">
+          <span>
+           عربي ودولي
+           <input id="RepHeaderMenu_HiddenSecID_1" name="ctl00$RepHeaderMenu$ctl01$HiddenSecID" type="hidden" value="3"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown bright-yellow">
+         <a href="/section/26/الاقتصادي">
+          <span>
+           الاقتصادي
+           <input id="RepHeaderMenu_HiddenSecID_2" name="ctl00$RepHeaderMenu$ctl02$HiddenSecID" type="hidden" value="26"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown emerald">
+         <a href="/section/51/الرياضي">
+          <span>
+           الرياضي
+           <input id="RepHeaderMenu_HiddenSecID_3" name="ctl00$RepHeaderMenu$ctl03$HiddenSecID" type="hidden" value="51"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown independence">
+         <a href="/wejhat.aspx">
+          <span>
+           وجهات نظر
+           <input id="RepHeaderMenu_HiddenSecID_4" name="ctl00$RepHeaderMenu$ctl04$HiddenSecID" type="hidden" value="55"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown strong-violet">
+         <a href="/section/33/منوعات">
+          <span>
+           منوعات
+           <input id="RepHeaderMenu_HiddenSecID_5" name="ctl00$RepHeaderMenu$ctl05$HiddenSecID" type="hidden" value="33"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown moderate-brown">
+         <a href="/section/78/ثقافة">
+          <span>
+           ثقافة
+           <input id="RepHeaderMenu_HiddenSecID_6" name="ctl00$RepHeaderMenu$ctl06$HiddenSecID" type="hidden" value="78"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown lapis-lazuli">
+         <a href="/section/133/ملفات">
+          <span>
+           ملفات
+           <input id="RepHeaderMenu_HiddenSecID_7" name="ctl00$RepHeaderMenu$ctl07$HiddenSecID" type="hidden" value="133"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+     </div>
+    </div>
+   </nav>
+   <div class="mainpagewrap">
+    <div class="container">
+     <div class="box-home box-ad">
+      <div id="leaderboard">
+       <script>
+        googletag.cmd.push(function() { googletag.display('leaderboard'); });
+       </script>
+      </div>
+     </div>
+     <article class="box-home article-page box-cat opinion" itemscope="" itemtype="http://schema.org/Article">
+      <meta content="ar" itemprop="inLanguage"/>
+      <meta content="True" itemprop="isFamilyFriendly"/>
+      <meta content="وجهات نظر" id="ContentPlaceHolder1_MetaItemEntity" itemprop="mainEntityOfPage"/>
+      <div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization" style="display: none;">
+       <span itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+        <img alt="صحيفة الاتحاد" itemprop="url" src="/imgs/logo.png"/>
+       </span>
+       <span itemprop="name">
+        صحيفة الاتحاد
+       </span>
+      </div>
+      <h2 class="box-home-title box-cat-title">
+       <span>
+        وجهات نظر
+       </span>
+      </h2>
+      <header>
+       <h1 itemprop="name headline">
+        عام الفضاء العالمي
+       </h1>
+       <div class="article-meta">
+        <span class="article-meta-date">
+         <time datetime="2019-01-16T00:00:00+04:00" id="ContentPlaceHolder1_TimePubDate" itemprop="datePublished dateModified">
+          16 يناير 2019
+         </time>
+        </span>
+       </div>
+      </header>
+      <div class="row">
+       <div class="col-md-8 article-content">
+        <div class="article-media" itemprop="associatedMedia">
+         <span>
+         </span>
+        </div>
+        <div class="article-content-editor" itemprop="articleBody">
+         <p>
+          هذا عام فريد في تاريخ الفضاء، أعقب أحداث فضائية عالمية تاريخية، ويهيئ لحدث فضائي عربي تاريخي. فالعام المنصرم شهد أول هبوط على الجانب المعتم للقمر حققه المسبار الصيني «تشانغ إي 4» الذي حمل معه أدوات تحليل جيولوجية وبيولوجية للمنطقة المجهولة من القمر، وبلغت بذلك الصينُ المرتبةَ الثالثة في قائمة الدول الفضائية الكبرى، بعد الولايات المتحدة وروسيا. والحدث الثاني إرسال مسبار وكالة الفضاء الأميركية «نيوهورايزنز» إشارات من أبعد نقطة في المنظومة الشمسية على مسافة 6.5 مليار كيلومتر من الأرض. وعلى امتداد العام الحالي ستضيء الأرض من المغرب حتى الفجر زخات نيازك قادمة من مدار حول الشمس، حسب «منظمة النيازك الدولية».
+          <br/>
+          وفي مستهل العام الجديد، التقطت تلسكوبات فضائية في كندا إشارات راديوية تأتي من الفضاء العميق، لا تُعرفُ طبيعتها، وبينها رشقات ضوئية غريبة جداً، تكرر إشارات قادمة من مصدر واحد، يبعد مسافة نحو مليار ونصف المليار سنة ضوئية.
+          <br/>
+          وتواصل مركبة «مسح الكواكب الفضائية العابرة» TESS، والتي أطلقتها قبل ثلاث سنوات «وكالةُ الفضاء الأميركية»، اكتشاف كواكب خارج المنظومة الشمسية بلغ عددها حتى الآن 203 كواكب، وأكدت التلسكوبات الأرضية أن ثلاثة منها قد تكون كواكب حقيقية، أي أنها قد تكون مأهولة.
+          <br/>
+          وأحدث القادمين إلى الفضاء أجرؤهم، «وكالة الفضاء الإماراتية» التي تأسست عام 2014، والتي ستطلق في العام المقبل «مسبار الأمل» إلى كوكب المريخ. و«المهمة أُنجزت»، كان عنوان مقالة «منى القامزي» مديرة تحرير مجلة «مجرات» Majarat التي يصدرها بالإنجليزية «مركز محمد بن راشد للفضاء»، حيث يتم تصنيع المسبار وإدارة إطلاقه. وتورد المجلة تقريراً عن فريق إماراتي من 150 مهندس وعالم يعملون في بناء «مسبار الأمل»، أعمار ثلاثة أرباعهم أقل من الثلاثين، بينهم إماراتيات يتولين مهام قيادية، مثل «سارة الأميري»، و«خلود الهرمودي»، و«نور الطنيجي».
+          <br/>
+          وسيهيئ إطلاق «مسبار الأمل» لانعقاد «المؤتمر السنوي الفضائي العالمي» في دبي، والذي يحضره خمسة آلاف عالم فضاء من مختلف دول العالم، سيتعرفون على «مدينة المريخ العلمية» في دولة الإمارات، وهي واحدة من تسع دول في العالم تعمل في مشاريع استكشاف المريخ. و«لماذا تفكر الإمارات في زراعة الخس والتمر في المريخ؟»، عنوان تقرير «بي بي سي» عن «مسبار الأمل» الذي سينطلق من اليابان، بالتعاون مع شركة «ميتسوبيشي» للصناعات الثقيلة. وذكر التقرير أن اختيار نخيل التمر للبحث كان بسبب رمزيته في المنطقة، واختيار الخس لتأكيد العلماء قدرته على النمو فوق سطح المريخ. ورغم أن كثيراً من هذه الأهداف قد تبدو «خيالية»، فثمة سبب اقتصادي جوهري لاختيارها من قبل الإمارات، التي تُعزّز اقتصادها استعداداً لعصر ما بعد النفط، وتستثمر بقوة في مجالي السياحة والطيران، وكل ما يتعلق بهما من خدمات، فيما تخطو بثقة نحو قطاعي العلوم والتكنولوجيا الفائقة.
+          <br/>
+          و«المريخ على المدى القريب والمريخ على المدى البعيد»، هكذا تستهل الكاتبة الأميركية «كيت غرين» مقالها عن البرنامج الفضائي لدولة الإمارات، والذي ذكرت فيه أن الدولة وظّفت أكثر من خمسة مليارات دولار من القطاعين العام والخاص لإرسال مركبة مأهولة إلى المريخ عام 2071 بمناسبة مئوية تأسيس دولة الإمارات العربية المتحدة.
+          <br/>
+          ويحمل «مسبار الأمل» ثلاث رسائل؛ «أولاً تبليغ العالم بعودة الحضارة العربية، التي لعبت دوراً مهماً في المعرفة البشرية، وثانياً تقول للإخوة العرب لا شيء مستحيلاً، ويمكننا المنافسة مع أعظم الأمم في سباق المعرفة، وثالثاً إلى الذين يسعون لاعتلاء أعلى القمم: لا تضعوا حدوداً لمطامحكم، وستبلغونها حتى في الفضاء».
+         </p>
+        </div>
+        <h2 class="box-home-title box-cat-title box-cat-small">
+         <span>
+          الكاتب
+         </span>
+        </h2>
+        <div class="writer-about" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+         <div class="writer-img" id="ContentPlaceHolder1_divWriterImage">
+          <a href="/wejhatwriter/17/محمد-عارف" id="ContentPlaceHolder1_a_Writer1">
+           <img alt="محمد عارف" id="ContentPlaceHolder1_ImgWriter" itemprop="image" src="/assets/wajhat/authors/Mohammed_ArefNEW.jpg"/>
+          </a>
+         </div>
+         <h2 class="writer-title" id="ContentPlaceHolder1_h2Writer" itemprop="name">
+          <a href="/wejhatwriter/17/محمد-عارف" id="ContentPlaceHolder1_a_Writer2">
+           محمد عارف
+          </a>
+         </h2>
+        </div>
+       </div>
+       <div class="col-md-4">
+        <div class="box-side box-s-ad">
+         <div id="mpu">
+          <script>
+           googletag.cmd.push(function() { googletag.display('mpu'); });
+          </script>
+         </div>
+        </div>
+        <div id="ContentPlaceHolder1_Vote_upVote">
+         <input id="ContentPlaceHolder1_Vote_hdnVoteId" name="ctl00$ContentPlaceHolder1$Vote$hdnVoteId" type="hidden" value="5"/>
+         <div class="box-side box-vote">
+          <h3 class="box-side-title">
+           <span>
+            شارك برأيك
+           </span>
+          </h3>
+          <div class="row">
+           <div class="col-md-12 col-xs-6">
+            <img alt='هل تعتقد أن المعركة المرتقبة في إدلب ستكون بالفعل "خاتمة" الحرب السورية؟' id="ContentPlaceHolder1_Vote_PollImage" src="/assets/images/Votes/bfd4ffaa-eb20-42f9-b8a5-e00a43ef12fb.jpg"/>
+            <h4>
+             هل تعتقد أن المعركة المرتقبة في إدلب ستكون بالفعل "خاتمة" الحرب السورية؟
+            </h4>
+           </div>
+           <div class="col-md-12 col-xs-6">
+            <ul class="vote-choices">
+             <li>
+              <label>
+               <span class="rdbasicdefault" commandargument="12">
+                <input id="ContentPlaceHolder1_Vote_RepQuestions_RadirQuestion_0" name="ctl00$ContentPlaceHolder1$Vote$RepQuestions$ctl00$RadirQuestion" type="radio" value="RadirQuestion"/>
+                <label for="ContentPlaceHolder1_Vote_RepQuestions_RadirQuestion_0">
+                 نعم
+                </label>
+               </span>
+              </label>
+             </li>
+             <li>
+              <label>
+               <span class="rdbasicdefault" commandargument="13">
+                <input id="ContentPlaceHolder1_Vote_RepQuestions_RadirQuestion_1" name="ctl00$ContentPlaceHolder1$Vote$RepQuestions$ctl01$RadirQuestion" type="radio" value="RadirQuestion"/>
+                <label for="ContentPlaceHolder1_Vote_RepQuestions_RadirQuestion_1">
+                 لا
+                </label>
+               </span>
+              </label>
+             </li>
+            </ul>
+            <div class="vote-btns">
+             <a class="vote-go" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$Vote$BtnVote','')" id="ContentPlaceHolder1_Vote_BtnVote">
+              تصويت
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="box-side box-s-ad">
+         <div id="HPB">
+          <script>
+           googletag.cmd.push(function() { googletag.display('HPB'); });
+          </script>
+         </div>
+        </div>
+       </div>
+      </div>
+     </article>
+    </div>
+    <div class="container footer-line">
+    </div>
+    <div class="box-home box-ad container" style="display:none">
+    </div>
+   </div>
+   <footer class="main-footer">
+    <div class="footer-logo">
+     <div class="container">
+      <a href="/" title="صحيفة الاتحاد">
+       <img alt="صحيفة الاتحاد" src="/imgs/logo.png"/>
+      </a>
+     </div>
+    </div>
+    <div class="social-footer">
+     <div class="container">
+      <h4>
+       تواصل معنا
+      </h4>
+      <ul>
+       <li>
+        <a href="https://www.facebook.com/aletihadae" id="a_Website_Facebook" target="_blank" title="Facebook">
+         <i class="co-facebook-official">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a href="https://twitter.com/aletihadae" id="a_Website_Twitter" target="_blank" title="Twitter">
+         <i class="co-twitter-1">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a href="https://instagram.com/aletihadae/" id="a_Website_Instagram" target="_blank" title="Instagram">
+         <i class="co-instagram">
+         </i>
+        </a>
+       </li>
+       <li style="display:none">
+        <a href="#" target="_blank">
+         <i class="co-whatsapp">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a href="/rss_feed.aspx" id="a_Website_RSS" title="RSS Feed">
+         <i class="co-rss">
+         </i>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer-blocks">
+     <div class="container">
+      <div class="row">
+       <div class="col-md-4 footer-links-list">
+        <a href="/section/2/الإمارات">
+         الإمارات
+        </a>
+        <a href="/section/3/عربي-ودولي">
+         عربي ودولي
+        </a>
+        <a href="/section/26/الاقتصادي">
+         الاقتصادي
+        </a>
+        <a href="/section/51/الرياضي">
+         الرياضي
+        </a>
+        <a href="/section/55/وجهات-نظر">
+         وجهات نظر
+        </a>
+        <a href="/section/33/منوعات">
+         منوعات
+        </a>
+        <a href="/section/78/ثقافة">
+         ثقافة
+        </a>
+        <a href="/section/133/ملفات">
+         ملفات
+        </a>
+       </div>
+       <div class="col-md-8 footer-maillist">
+        <h4>
+         الاشتراك للحصول على ملخص أسبوعي علي بريدك الإلكتروني
+        </h4>
+        <div id="upmailList">
+         <div class="maillist-form">
+          <input id="txtEmailList" name="ctl00$txtEmailList" placeholder="بريدك الإلكتروني" type="text"/>
+          <span class="alert alert-danger" id="RequiredFieldValidator2" style="display:none;">
+           من فضلك ادخل بريدك الالكتروني
+          </span>
+          <span class="alert alert-danger" id="RegEmail" style="display:none;">
+           من فضلك أدخل بريد الكتروني صحيح
+          </span>
+          <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$LinkMailList", "", true, "EmailListVGroup", "", false, true))' id="LinkMailList">
+           اشترك
+          </a>
+         </div>
+        </div>
+        <div class="mobile-download">
+         <p>
+          تحميل التطبيق
+         </p>
+         <a href="https://play.google.com/store/apps/details?id=com.aletihadnew.distribution" target="_blank">
+          <i class="co-android">
+          </i>
+         </a>
+         <a href="https://itunes.apple.com/ae/app/al-etihad-%D8%A7%D9%84%D8%A7%D8%AA%D8%AD%D8%A7%D8%AF/id987908202" target="_blank">
+          <i class="co-apple">
+          </i>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="row footer-rits">
+       <div class="col-md-4">
+        حقوق النشر محفوظة لصحيفة الاتحاد 2019
+       </div>
+       <div class="col-md-8 footer-rits-links">
+        <a href="/about-emirates">
+         عن الإمارات
+        </a>
+        <a href="/about-us">
+         عن الاتحاد
+        </a>
+        <a href="/privacy">
+         بيان الخصوصية
+        </a>
+        <a href="/Terms">
+         شروط الخدمة
+        </a>
+        <a href="https://www.tawzea.ae/ar/adm-publications" target="_blank">
+         الاشتراكات
+        </a>
+        <a href="/map.aspx">
+         خريطة الموقع
+        </a>
+        <a href="/contact.aspx">
+         اتصل بنا
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+   <div class="social-share" id="DivSocialShare">
+    <a class="share-desktop" href="#">
+     <i class="co-left-open-1">
+     </i>
+    </a>
+    <a class="share-mobile" href="#">
+     <i class="co-down-open-1">
+     </i>
+    </a>
+    <div class="social-share-links">
+     <a class="fb a_FaceBook" href="javascript:void(0)" id="a_FaceBook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.alittihad.ae/wejhatarticle/101097/&amp;t=', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600')" title="شارك المحتوي علي فيسبوك">
+      <i class="co-facebook">
+      </i>
+     </a>
+     <a class="tw a_Twitter" href="javascript:void(0)" id="a_Twitter" onclick="window.open('http://twitter.com/intent/tweet?url=https://www.alittihad.ae/wejhatarticle/101097/&amp;text=&amp;via=aletihadae', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600')" title="شارك المحتوي علي تويتر">
+      <i class="co-twitter-1">
+      </i>
+     </a>
+     <a class="gp a_GPlus" href="javascript:void(0)" id="a_GPlus" onclick="window.open('https://plus.google.com/share?url=https://www.alittihad.ae/wejhatarticle/101097/', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600')" title="شارك المحتوي علي جوجل بلس">
+      <i class="co-gplus-1">
+      </i>
+     </a>
+     <a class="wa a_whatsapp hidden-lg" data-text="" href="whatsapp://send?text= %0A https://www.alittihad.ae/wejhatarticle/101097/" id="a_whatsapp" title="شارك المحتوي علي واتساب">
+      <i class="co-whatsapp">
+      </i>
+     </a>
+    </div>
+   </div>
+   <link href="/css/components.min.css?ver=2.8" rel="stylesheet">
+    <link href="/css/style.css?ver=3.7" rel="stylesheet"/>
+    <script src="/js/components.min.js?ver=2.8">
+    </script>
+    <script src="/js/scripts.min.js?ver=1.5?ver=2.9">
+    </script>
+    <script type="text/javascript">
+     //<![CDATA[
+var Page_Validators =  new Array(document.getElementById("RequiredFieldValidator2"), document.getElementById("RegEmail"));
+//]]>
+    </script>
+    <script type="text/javascript">
+     //<![CDATA[
+var RequiredFieldValidator2 = document.all ? document.all["RequiredFieldValidator2"] : document.getElementById("RequiredFieldValidator2");
+RequiredFieldValidator2.controltovalidate = "txtEmailList";
+RequiredFieldValidator2.errormessage = "من فضلك ادخل بريدك الالكتروني";
+RequiredFieldValidator2.display = "Dynamic";
+RequiredFieldValidator2.validationGroup = "EmailListVGroup";
+RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator2.initialvalue = "";
+var RegEmail = document.all ? document.all["RegEmail"] : document.getElementById("RegEmail");
+RegEmail.controltovalidate = "txtEmailList";
+RegEmail.errormessage = "من فضلك أدخل بريد الكتروني صحيح";
+RegEmail.display = "Dynamic";
+RegEmail.validationGroup = "EmailListVGroup";
+RegEmail.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+RegEmail.validationexpression = "\\w+([-.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+//]]>
+    </script>
+    <script type="text/javascript">
+     //<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator2'));
+}
+
+document.getElementById('RegEmail').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegEmail'));
+}
+//]]>
+    </script>
+   </link>
+  </form>
+ </body>
+</html>

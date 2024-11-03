@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+ <head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);
+  </script>
+  <meta content="مركز الصحافة | UNICEF" name="title"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="مركز الصحافة" name="description"/>
+  <meta content="@UNICEFinArabic" name="twitter:site"/>
+  <meta content="https://www.unicef.org/ar/media/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9" property="og:url"/>
+  <meta content="@UNICEFinArabic" name="twitter:creator"/>
+  <meta content="مركز الصحافة" property="og:title"/>
+  <meta content="مركز الصحافة" property="og:description"/>
+  <meta content="https://www.unicef.org/sites/default/files/styles/hero_desktop/public/2018-04/07_UN074465_Bluewash_WEB_2_0.jpg?itok=cjBdIsPg" property="og:image"/>
+  <meta content="width" name="MobileOptimized"/>
+  <meta content="true" name="HandheldFriendly"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="/themes/custom/unicef/assets/dist/images/icons/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+  <link href="https://www.unicef.org/media/press-centre" hreflang="en" rel="alternate"/>
+  <link href="https://www.unicef.org/fr/media/centre-de-presse" hreflang="fr" rel="alternate"/>
+  <link href="https://www.unicef.org/es/centro-de-prensa" hreflang="es" rel="alternate"/>
+  <link href="https://www.unicef.org/ar/media/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9" hreflang="ar" rel="alternate"/>
+  <link href="https://www.unicef.org/zh/media/%E6%96%B0%E9%97%BB%E4%B8%AD%E5%BF%83" hreflang="zh-hans" rel="alternate"/>
+  <link href="/ar/media/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9" rel="canonical"/>
+  <link href="/ar/node/16726" rel="shortlink"/>
+  <link href="/ar/media/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9" rel="revision"/>
+  <script defer="defer" src="/sites/default/files/google_tag/google_tag.script.js?pqg8kk">
+  </script>
+  <title>
+   مركز الصحافة | UNICEF
+  </title>
+  <link href="https://fonts.googleapis.com/earlyaccess/droidarabickufi.css" rel="stylesheet"/>
+  <link href="/sites/default/files/css/css_Hv080j9EfTwV2AbwmFsDcAvwt5u1jqPd1eFSTmvtkCE.css?pqg8kk" media="all" rel="stylesheet">
+   <link href="/sites/default/files/css/css_wop16N0O7ykrZR__p4lS72KEEXR3J_6ZG38dE124XZE.css?pqg8kk" media="all" rel="stylesheet"/>
+   <!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+  </link>
+ </head>
+ <body class="path-node page-node-type-landing-page has-glyphicons" data-offset="0" data-spy="scroll" data-target="#anchor-scroll">
+  <a class="visually-hidden focusable skip-link" href="#main-content">
+   تجاوز إلى المحتوى الرئيسي
+  </a>
+  <noscript aria-hidden="true">
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WBDQQ5" title="Google Tag Manager" width="0">
+   </iframe>
+  </noscript>
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+   <div class="message-alert-header" role="heading">
+    <div class="region region-header">
+    </div>
+   </div>
+   <header class="navbar navbar-default" id="navbar" role="banner">
+    <div class="">
+     <div class="layout-container">
+      <div class="region region-masthead-prefix">
+       <div class="masthead-prefix-container" data-set="masthead-prefix-container-data">
+        <div class="header-prefix-blocks ">
+         <section class="language-switcher-language-url block block-language block-language-blocklanguage-interface clearfix" data-block-plugin-id="language_block:language_interface" id="block-languageswitcher" role="navigation">
+          <ul class="menu nav navbar-nav nav--menu-language">
+           <li class="menu-item expanded dropdown nav--menu-language-item">
+            <a class="language-link" data-drupal-link-system-path="node/16726" href="/media/press-centre" hreflang="en">
+             English
+            </a>
+           </li>
+           <li class="menu-item expanded dropdown nav--menu-language-item">
+            <a class="language-link" data-drupal-link-system-path="node/16726" href="/fr/media/centre-de-presse" hreflang="fr">
+             Français
+            </a>
+           </li>
+           <li class="menu-item expanded dropdown nav--menu-language-item">
+            <a class="language-link" data-drupal-link-system-path="node/16726" href="/es/centro-de-prensa" hreflang="es">
+             Español
+            </a>
+           </li>
+           <li class="menu-item expanded dropdown nav--menu-language-item">
+            <a class="language-link is-active" data-drupal-link-system-path="node/16726" href="/ar/media/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9" hreflang="ar">
+             العربية
+            </a>
+           </li>
+           <li class="menu-item expanded dropdown nav--menu-language-item">
+            <a class="language-link" data-drupal-link-system-path="node/16726" href="/zh/media/%E6%96%B0%E9%97%BB%E4%B8%AD%E5%BF%83" hreflang="zh-hans">
+             中文
+            </a>
+           </li>
+          </ul>
+         </section>
+         <div class="btn--contrast">
+          <a class="high-contrast__lnk" data-action="https://www.unicef.org/ar/media/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9" data-bound="click" data-label="تباين عالي" data-tracked-component="high-contrast">
+           تباين عالي
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="logo-phone">
+       <div class="region region-masthead-primary">
+        <div class="logo">
+         <a class="site-branding__logo " href="https://www.unicef.org/ar" rel="home" title="اليونيسف">
+          <span class="icon-logo-unicef ar">
+           <em class="visibility-hidden">
+            Unicef default logo
+           </em>
+          </span>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="navbar-header">
+       <button class="navbar-toggle collapsed" data-target="#navbar-collapse" data-toggle="collapse" type="button">
+        <span class="sr-only">
+         إظهار/إخفاء التصفح
+        </span>
+        <span class="icon-bar">
+        </span>
+        <span class="icon-bar">
+        </span>
+        <span class="icon-bar">
+        </span>
+       </button>
+      </div>
+      <div class="logo-other">
+       <div class="region region-masthead-primary">
+        <div class="logo">
+         <a class="site-branding__logo " href="https://www.unicef.org/ar" rel="home" title="اليونيسف">
+          <span class="icon-logo-unicef ar">
+           <em class="visibility-hidden">
+            Unicef default logo
+           </em>
+          </span>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="donate-n-search">
+       <div class="region region-masthead-secondary">
+        <div class="secondary-menu-container" data-set="secondary-menu-container-data">
+         <section class="block block-system block-system-menu-blocksecondary---ar clearfix" data-block-plugin-id="system_menu_block:secondary---ar" id="block-secondaryar">
+          <div class="menu-explore">
+           <ul class="menu nav navbar-nav">
+            <li>
+             <ul class="dropdown--list" data-tracked-component="dropdown">
+              <li class=" expanded dropdown dropdown--explore keep-open" data-tracked-component="pagination_page_size">
+               <a aria-expanded="false" class="dropdown-toggle dropdown--toggle-explore text-uppercase" data-bound="null" data-label="استكشف اليونيسف" data-toggle="dropdown" data-tracked-component="dropdown_option" href="#" title="استكشف اليونيسف">
+                استكشف اليونيسف
+                <div class="icon-arrow">
+                 <span class="icon-icon__arrow-down">
+                 </span>
+                 <span class="vertical-line">
+                 </span>
+                </div>
+               </a>
+               <ul class="menu dropdown-menu dropdown--menu-explore">
+                <li class="expanded dropdown dropdown--items-explore">
+                 <a class="" data-action="/ar/%D9%85%D9%86-%D9%86%D8%AD%D9%86" data-bound="click" data-label="عن اليونيسف" data-tracked-component="dropdown_option" href="/ar/%D9%85%D9%86-%D9%86%D8%AD%D9%86">
+                  عن اليونيسف
+                 </a>
+                </li>
+                <li class="expanded dropdown dropdown--items-explore">
+                 <a class="" data-action="/ar/%D8%A3%D9%8A%D9%86-%D9%86%D8%B9%D9%85%D9%84" data-bound="click" data-label="أين نعمل" data-tracked-component="dropdown_option" href="/ar/%D8%A3%D9%8A%D9%86-%D9%86%D8%B9%D9%85%D9%84">
+                  أين نعمل
+                 </a>
+                </li>
+                <li class="expanded dropdown dropdown--items-explore">
+                 <a class="" data-action="http://www.unicef.org/arabic/about/employ/25243.html" data-bound="click" data-label="التوظيف" data-tracked-component="dropdown_option" href="http://www.unicef.org/arabic/about/employ/25243.html">
+                  التوظيف
+                 </a>
+                </li>
+                <li class="expanded dropdown dropdown--items-explore">
+                 <a class="" data-action="https://blogs.unicef.org/ar/" data-bound="click" data-label="يونيسف Connect" data-tracked-component="dropdown_option" href="https://blogs.unicef.org/ar/">
+                  يونيسف Connect
+                 </a>
+                </li>
+                <li class="expanded dropdown dropdown--items-explore">
+                 <a class="" data-action="http://www.voicesofyouth.org/ar" data-bound="click" data-label="أصوات الشباب " data-tracked-component="dropdown_option" href="http://www.voicesofyouth.org/ar">
+                  أصوات الشباب
+                 </a>
+                </li>
+                <li class="expanded dropdown dropdown--items-explore">
+                 <a class="" data-action="https://data.unicef.org" data-bound="click" data-label="بيانات اليونيسف" data-tracked-component="dropdown_option" href="https://data.unicef.org">
+                  بيانات اليونيسف
+                 </a>
+                </li>
+                <li class="expanded dropdown dropdown--items-explore">
+                 <a class="" data-action="https://donate.unicef.org/donate/now/" data-bound="click" data-label="دعم اليونيسف" data-tracked-component="dropdown_option" href="https://donate.unicef.org/donate/now/">
+                  دعم اليونيسف
+                 </a>
+                </li>
+               </ul>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a class="btn btn--default" data-action="/ar/media/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9" data-bound="click" data-label="مركز الصحافة " data-tracked-component="cta" href="/ar/media/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9">
+              مركز الصحافة
+             </a>
+            </li>
+           </ul>
+          </div>
+         </section>
+        </div>
+        <div class="cta-block--button">
+         <a class="btn donate_white_orange" data-action="https://donate.unicef.org/donate/now" data-bound="click" data-label="تبرع" data-tracked-component="cta" href="https://donate.unicef.org/donate/now">
+          تبرع
+         </a>
+        </div>
+       </div>
+       <div class="searchbutton-block" data-set="searchbutton-container-data">
+       </div>
+      </div>
+     </div>
+     <div class="navbar-collapse collapse" id="navbar-collapse">
+      <div class="region region-navigation-collapsible">
+       <div class="layout-container">
+        <nav aria-labelledby="block-main-menu-menu" data-block-plugin-id="system_menu_block:main" id="block-main-menu" role="navigation">
+         <span class="sr-only" id="block-main-menu-menu">
+          Main navigation
+         </span>
+         <ul class="menu nav navbar-nav nav--menu" data-bound="null" data-tracked-component="navigation_first_level">
+          <li class="menu-item expanded dropdown nav--menu-item">
+           <a data-bound="click" data-label="مجالات التركيز" data-tracked-component="navigation_element" href="/ar/%D8%B9%D9%85%D9%84%D9%86%D8%A7" title="مجالات التركيز">
+            مجالات التركيز
+           </a>
+          </li>
+          <li class="menu-item expanded dropdown nav--menu-item">
+           <a data-bound="click" data-label="الأبحاث والتقارير" data-tracked-component="navigation_element" href="/ar/%D8%A3%D8%A8%D8%AD%D8%A7%D8%AB-%D9%88%D8%AA%D9%82%D8%A7%D8%B1%D9%8A%D8%B1" title="الأبحاث والتقارير">
+            الأبحاث والتقارير
+           </a>
+          </li>
+          <li class="menu-item expanded dropdown nav--menu-item">
+           <a data-bound="click" data-label="أين نعمل" data-tracked-component="navigation_element" href="/ar/%D8%A3%D9%8A%D9%86-%D9%86%D8%B9%D9%85%D9%84" title="أين نعمل">
+            أين نعمل
+           </a>
+          </li>
+          <li class="menu-item expanded dropdown nav--menu-item">
+           <a data-bound="click" data-label="اتخذ إجراء" data-tracked-component="navigation_element" href="/ar/%D8%A8%D8%A7%D8%AF%D8%B1-%D8%A5%D9%84%D9%89-%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9" title="اتخذ إجراء">
+            اتخذ إجراء
+           </a>
+          </li>
+         </ul>
+        </nav>
+        <div class="searchbutton-container" data-set="searchbutton-container-data">
+         <div class="block block-unicef-search block-search-popup-block clearfix" data-block-plugin-id="search_popup_block" id="block-searchbutton">
+          <div aria-live="polite" class="hidden" id="search-info" role="status">
+          </div>
+          <div class="hidden search-closed">
+           Search area has closed.
+          </div>
+          <div class="hidden search-open">
+           Search area has opened.
+          </div>
+          <div class="js-search-button-section">
+           <a aria-expanded="false" aria-label="إظهار/إخفاء استمارة البحث" class="btn--input-search" role="button" tabindex="0">
+            <span class="btn-txt-search" data-bound="click" data-tracked-component="search_panel_search">
+             <span class="search-label" tab-index="0">
+              بحث
+             </span>
+            </span>
+            <span class="btn-txt-close" data-bound="click" data-tracked-component="search_panel_close">
+             <span class="search-label">
+              إغلاق
+             </span>
+            </span>
+           </a>
+          </div>
+         </div>
+        </div>
+        <div class="secondary-menu-block" data-set="secondary-menu-container-data">
+        </div>
+        <div class="masthead-prefix-blocks" data-set="masthead-prefix-container-data">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </header>
+   <div class="container main-container js-quickedit-main-content" role="main">
+    <div class="row">
+     <section>
+      <div class="highlighted">
+       <div class="region region-highlighted">
+        <section class="block block-unicef-search block-search-popup-solr-form-block clearfix" data-block-plugin-id="search_popup_solr_form_block" id="block-solrsearchform">
+         <div class="search--region" id="search" role="search">
+          <div class="search-content">
+           <h3 class="title">
+            البحث في الموقع
+           </h3>
+           <div class="search--field" data-tracked-component="search_footer">
+            <form accept-charset="UTF-8" action="/ar/%D8%A8%D8%AD%D8%AB" class="views-exposed-form" data-drupal-selector="views-exposed-form-solrsearch-page-1" id="views-exposed-form-solrsearch-page-1" method="get">
+             <input data-drupal-selector="edit-force" name="force" type="hidden" value="0"/>
+             <div class="form--inline form-inline clearfix">
+              <div class="solrsearch-controls container">
+               <div class="solrsearch-input-box">
+                <div class="form-item js-form-item form-type-search-api-autocomplete js-form-type-search-api-autocomplete form-item-query js-form-item-query form-group form-autocomplete">
+                 <label class="control-label" for="edit-query">
+                  Fulltext search
+                 </label>
+                 <div class="input-group">
+                  <input class="form-autocomplete form-text form-control" data-autocomplete-path="/ar/search_api_autocomplete/solrsearch?display=page_1&amp;&amp;filter=query" data-drupal-selector="edit-query" data-search-api-autocomplete-search="solrsearch" id="edit-query" maxlength="128" name="query" placeholder="بحث" size="30" type="text"/>
+                  <span class="input-group-addon">
+                   <span aria-hidden="true" class="icon glyphicon glyphicon-refresh ajax-progress ajax-progress-throbber">
+                   </span>
+                  </span>
+                 </div>
+                </div>
+               </div>
+               <div class="solrsearch-sort-facet-date-container">
+                <div class="solrsearch-sort" title="التصنيف بحسب">
+                 <span class="icon icon-facet-close" style="display:none;">
+                 </span>
+                 <span class="icon icon-facet" title="تعديل البحث">
+                 </span>
+                </div>
+                <div class="solrsearch-facet-calendar-container">
+                 <div class="solrsearch-calendar-container">
+                  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-search-date-range-picker js-form-item-search-date-range-picker form-no-label form-group">
+                   <div class="input-group">
+                    <input class="search--date_range_picker form-text form-control" data-drupal-selector="edit-search-date-range-picker" id="edit-search-date-range-picker" maxlength="128" name="search_date_range_picker" placeholder="نطاق التاريخ" size="60" type="text" value=""/>
+                    <span class="input-group-addon">
+                     <i class="icon icon-Calendar">
+                     </i>
+                    </span>
+                   </div>
+                  </div>
+                  <span class="icon icon-Calendar" style="display:block;">
+                  </span>
+                  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-changed-min js-form-item-changed-min form-group">
+                   <input class="form-text form-control" data-drupal-selector="edit-changed-min" id="edit-changed-min" maxlength="128" name="changed[min]" placeholder="Date range" size="30" type="text" value=""/>
+                  </div>
+                  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-changed-max js-form-item-changed-max form-group">
+                   <label class="control-label" for="edit-changed-max">
+                    And
+                   </label>
+                   <input class="form-text form-control" data-drupal-selector="edit-changed-max" id="edit-changed-max" maxlength="128" name="changed[max]" size="30" type="text" value=""/>
+                  </div>
+                 </div>
+                 <div class="solrsearch-facet-container">
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="solrsearch-form-submit">
+               <div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions">
+                <button class="button js-form-submit form-submit btn-default btn" data-drupal-selector="edit-submit-solrsearch" id="edit-submit-solrsearch" name="" type="submit" value="Apply">
+                 Apply
+                </button>
+               </div>
+              </div>
+              <div class="facet-preserve">
+              </div>
+             </div>
+            </form>
+           </div>
+          </div>
+         </div>
+        </section>
+       </div>
+      </div>
+      <a id="main-content">
+      </a>
+      <div class="region region-content">
+       <div class="field field--name-field-landingpg-hero field--type-entity-reference-revisions field--label-hidden field--item">
+        <div class="hero hero--default hero--landing-page">
+         <div class="hero--sub-content">
+          <div class="hero--title">
+           <h1>
+            مركز الصحافة
+           </h1>
+          </div>
+          <div class="hero--paragraph">
+           <h3>
+            اطلّع على آخر المعلومات المتعلقة بالأعمال التي تضطلع بها اليونيسف بشأن الأطفال، بما في ذلك، البيانات الصحفية ومواد وسائط الإعلام المتعددة وموارد الصحفيين الأخرى
+           </h3>
+          </div>
+         </div>
+         <div class="field field--name-field-component-hero-ldgpg-img field--type-entity-reference field--label-hidden field--item">
+          <div class="hero--branded-image">
+           <figure>
+            <div class="content-img">
+             <div class="field field--name-image field--type-image field--label-hidden field--item">
+              <picture>
+               <!--[if IE 9]><video style="display: none;"><![endif]-->
+               <source media="all and (min-width: 992px)" srcset="/sites/default/files/styles/media_banner/public/2018-04/07_UN074465_Bluewash_WEB_2_0.jpg?itok=jDcqce6A 1x" type="image/jpeg"/>
+               <source media="all and (min-width: 768px)" srcset="/sites/default/files/styles/hero_tablet/public/2018-04/07_UN074465_Bluewash_WEB_2_0.jpg?itok=Bsg5ey8U 1x" type="image/jpeg"/>
+               <source srcset="/sites/default/files/styles/hero_mobile/public/2018-04/07_UN074465_Bluewash_WEB_2_0.jpg?itok=dHqs6jFc 1x" type="image/jpeg"/>
+               <!--[if IE 9]></video><![endif]-->
+               <img alt="صبي مبتسم يحمل لعبة طرية - قرغيزستان." class="img-responsive" src="/sites/default/files/styles/media_banner/public/2018-04/07_UN074465_Bluewash_WEB_2_0.jpg?itok=jDcqce6A" typeof="foaf:Image"/>
+              </picture>
+             </div>
+            </div>
+           </figure>
+          </div>
+         </div>
+        </div>
+       </div>
+       <article class="page-content landing-page">
+        <div class="field field--name-field-landingpg-content-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+         <div class="field--item">
+          <div class="section--block component-section">
+           <div class="container">
+            <div class="text--block-content">
+             <div class="field field--name-field-component-sec-title field--type-text field--label-hidden field--item">
+              <h2>
+               آخر البيانات الصحفية
+              </h2>
+             </div>
+            </div>
+            <div class="field field--name-field-component-sec-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+             <div class="field--item">
+              <div class="unicef-component-mosaic unicef-component-mosaic-display-tile unicef-component-mosaic-display--tile_display_2_4_cards unicef-component-mosaic-display--has-featured">
+               <div class="unicef-component-mosaic--rendered ar ">
+                <form accept-charset="UTF-8" action="/api/unicef-component-mosaic/getbyoption/a1e5baa0-14e2-46ae-9a20-9afc58ee622d" class="unicef-component-mosaic-automatic" data-drupal-selector="unicef-component-mosaic-automatic" id="unicef-component-mosaic-automatic-a1e5baa0-14e2-46ae-9a20-9afc58ee622d" method="post">
+                 <div class="unicef-component-mosaic-automatic" data-drupal-selector="unicef-component-mosaic-automatic">
+                  <div class="unicef-component-mosaic--rendered ar ">
+                   <div class="form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-rendered-view" id="unicef-component-mosaic-automatic-a1e5baa0-14e2-46ae-9a20-9afc58ee622d-container">
+                    <div class="form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-items" id="edit-items">
+                     <div class="mosaic--tile mosaic--tile--press-release col-md-3">
+                      <div class="tile--content tile--bg-- tile--label--">
+                       <a class="mosaic-tile-lk" data-action="/ar/%D8%AD%D9%8A%D8%A7%D8%A9-%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%88%D8%B1%D9%81%D8%A7%D9%87%D9%87%D9%85-%D9%81%D9%8A-%D8%AE%D8%B7%D8%B1-%D9%85%D8%B9-%D8%A7%D8%B4%D8%AA%D8%AF%D8%A7%D8%AF-%D8%A7%D9%84%D9%82%D8%AA%D8%A7%D9%84-%D9%81%D9%8A-%D8%B7%D8%B1%D8%A7%D8%A8%D9%84%D8%B3%D8%8C-%D9%84%D9%8A%D8%A8%D9%8A%D8%A7/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" data-bound="click" data-label="إقرأ الآن" data-tracked-component="cta" href="/ar/%D8%AD%D9%8A%D8%A7%D8%A9-%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%88%D8%B1%D9%81%D8%A7%D9%87%D9%87%D9%85-%D9%81%D9%8A-%D8%AE%D8%B7%D8%B1-%D9%85%D8%B9-%D8%A7%D8%B4%D8%AA%D8%AF%D8%A7%D8%AF-%D8%A7%D9%84%D9%82%D8%AA%D8%A7%D9%84-%D9%81%D9%8A-%D8%B7%D8%B1%D8%A7%D8%A8%D9%84%D8%B3%D8%8C-%D9%84%D9%8A%D8%A8%D9%8A%D8%A7/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" title="حياة الأطفال ورفاههم في خطر مع اشتداد القتال في طرابلس، ليبيا">
+                        <div class="tile--image tile-no-default">
+                         <div class="tile--logo">
+                          <span class="icon-logo-unicef">
+                           <em class="visibility-hidden">
+                            Unicef default logo
+                           </em>
+                          </span>
+                         </div>
+                        </div>
+                        <div class="tile--sub-content">
+                         <div class="tile--content-category">
+                          <div class="field field--name-field-shared-content-group field--type-entity-reference field--label-hidden field--item">
+                           <div about="/ar/taxonomy/term/2206">
+                            <div class="content-category-content">
+                             <h2>
+                              <div class="field field--name-name field--type-string field--label-hidden field--item">
+                               بيان
+                              </div>
+                             </h2>
+                             <div class="field field--name-field-cgroup-icon field--type-entity-reference field--label-hidden field--item">
+                              <div>
+                               <div class="field field--name-field-cgroupicon-image field--type-svg-image-field field--label-hidden field--item">
+                                <?xml version="1.0"?>
+                                <svg fill="#000000" height="100" viewbox="0 0 24 24" width="100" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M0 0h24v24H0z" fill="none">
+                                 </path>
+                                 <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z">
+                                 </path>
+                                </svg>
+                               </div>
+                              </div>
+                             </div>
+                            </div>
+                           </div>
+                          </div>
+                         </div>
+                         <div class="tile--created-date">
+                          <span class="icon-icon__calendar">
+                          </span>
+                          <span>
+                           22 نيسان / أبريل 2019
+                          </span>
+                         </div>
+                         <div class="tile--title" title="حياة الأطفال ورفاههم في خطر مع اشتداد القتال في طرابلس، ليبيا">
+                          <div class="field field--name-field-press-release-title field--type-text field--label-hidden field--item">
+                           حياة الأطفال ورفاههم في خطر مع اشتداد القتال في طرابلس، ليبيا
+                          </div>
+                         </div>
+                         <div class="tile--paragraph">
+                          <p>
+                          </p>
+                         </div>
+                         <div class="tile--button">
+                          <span class="btn cta--mosaic">
+                           <span class="cta-mosaic-caret">
+                           </span>
+                           إقرأ الآن
+                          </span>
+                         </div>
+                        </div>
+                       </a>
+                      </div>
+                     </div>
+                     <div class="mosaic--tile mosaic--tile--press-release col-md-3">
+                      <div class="tile--content tile--bg-- tile--label--">
+                       <a class="mosaic-tile-lk" data-action="/ar/%D8%AA%D8%B6%D8%B1%D9%91%D9%8E%D8%B1-%D9%85%D8%A7-%D9%8A%D9%82%D8%B1%D8%A8-%D9%85%D9%86-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%B7%D9%81%D9%84-%D9%85%D9%86-%D8%A7%D9%84%D9%81%D9%8A%D8%B6%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B4%D8%AF%D9%8A%D8%AF%D8%A9-%D9%81%D9%8A-%D8%A5%D9%8A%D8%B1%D8%A7%D9%86/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" data-bound="click" data-label="زر الصفحة" data-tracked-component="cta" href="/ar/%D8%AA%D8%B6%D8%B1%D9%91%D9%8E%D8%B1-%D9%85%D8%A7-%D9%8A%D9%82%D8%B1%D8%A8-%D9%85%D9%86-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%B7%D9%81%D9%84-%D9%85%D9%86-%D8%A7%D9%84%D9%81%D9%8A%D8%B6%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B4%D8%AF%D9%8A%D8%AF%D8%A9-%D9%81%D9%8A-%D8%A5%D9%8A%D8%B1%D8%A7%D9%86/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" title="تضرَّر ما يقرب من مليون طفل من الفيضانات الشديدة في إيران">
+                        <div class="tile--image tile-no-default">
+                         <div class="tile--logo">
+                          <span class="icon-logo-unicef">
+                           <em class="visibility-hidden">
+                            Unicef default logo
+                           </em>
+                          </span>
+                         </div>
+                        </div>
+                        <div class="tile--sub-content">
+                         <div class="tile--content-category">
+                          <div class="field field--name-field-shared-content-group field--type-entity-reference field--label-hidden field--item">
+                           <div about="/ar/taxonomy/term/2181">
+                            <div class="content-category-content">
+                             <h2>
+                              <div class="field field--name-name field--type-string field--label-hidden field--item">
+                               خبر صحفي
+                              </div>
+                             </h2>
+                             <div class="field field--name-field-cgroup-icon field--type-entity-reference field--label-hidden field--item">
+                              <div>
+                               <div class="field field--name-field-cgroupicon-image field--type-svg-image-field field--label-hidden field--item">
+                                <?xml version="1.0"?>
+                                <svg fill="#000000" height="100" viewbox="0 0 24 24" width="100" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M0 0h24v24H0z" fill="none">
+                                 </path>
+                                 <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z">
+                                 </path>
+                                </svg>
+                               </div>
+                              </div>
+                             </div>
+                            </div>
+                           </div>
+                          </div>
+                         </div>
+                         <div class="tile--created-date">
+                          <span class="icon-icon__calendar">
+                          </span>
+                          <span>
+                           22 نيسان / أبريل 2019
+                          </span>
+                         </div>
+                         <div class="tile--title" title="تضرَّر ما يقرب من مليون طفل من الفيضانات الشديدة في إيران">
+                          <div class="field field--name-field-press-release-title field--type-text field--label-hidden field--item">
+                           تضرَّر ما يقرب من مليون طفل من الفيضانات الشديدة في إيران
+                          </div>
+                         </div>
+                         <div class="tile--paragraph">
+                          <p>
+                          </p>
+                         </div>
+                         <div class="tile--button">
+                          <span class="btn cta--mosaic">
+                           <span class="cta-mosaic-caret">
+                           </span>
+                           زر الصفحة
+                          </span>
+                         </div>
+                        </div>
+                       </a>
+                      </div>
+                     </div>
+                     <div class="mosaic--tile mosaic--tile--press-release col-md-3">
+                      <div class="tile--content tile--bg-- tile--label--">
+                       <a class="mosaic-tile-lk" data-action="/ar/%D8%A7%D9%84%D9%8A%D9%88%D9%86%D9%8A%D8%B3%D9%81-%D8%AA%D8%B7%D9%84%D9%82-%D8%AD%D9%85%D9%84%D8%A9-%D8%A7%D9%84%D9%84%D9%82%D8%A7%D8%AD%D8%A7%D8%AA%D9%81%D8%B9%D8%A7%D9%84%D8%A9-%D9%84%D8%AA%D8%B4%D8%AC%D9%8A%D8%B9-%D8%AF%D8%B9%D9%85-%D8%A7%D9%84%D9%84%D9%82%D8%A7%D8%AD%D8%A7%D8%AA/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" data-bound="click" data-label="زر الصفحة" data-tracked-component="cta" href="/ar/%D8%A7%D9%84%D9%8A%D9%88%D9%86%D9%8A%D8%B3%D9%81-%D8%AA%D8%B7%D9%84%D9%82-%D8%AD%D9%85%D9%84%D8%A9-%D8%A7%D9%84%D9%84%D9%82%D8%A7%D8%AD%D8%A7%D8%AA%D9%81%D8%B9%D8%A7%D9%84%D8%A9-%D9%84%D8%AA%D8%B4%D8%AC%D9%8A%D8%B9-%D8%AF%D8%B9%D9%85-%D8%A7%D9%84%D9%84%D9%82%D8%A7%D8%AD%D8%A7%D8%AA/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" title="اليونيسف تطلق حملة #اللقاحات_فعالة لتشجيع دعم اللقاحات">
+                        <div class="tile--image">
+                         <div class="field field--name-field-press-release-media field--type-entity-reference field--label-hidden field--item">
+                          <div aria-label="A girl takes a pill, Chad" class="mosaic-image" role="img">
+                           <img alt="A girl takes a pill, Chad" src="/sites/default/files/styles/large/public/UN0295228.JPG?itok=pFDdl3id"/>
+                          </div>
+                         </div>
+                        </div>
+                        <div class="tile--sub-content">
+                         <div class="tile--content-category">
+                          <div class="field field--name-field-shared-content-group field--type-entity-reference field--label-hidden field--item">
+                           <div about="/ar/taxonomy/term/2181">
+                            <div class="content-category-content">
+                             <h2>
+                              <div class="field field--name-name field--type-string field--label-hidden field--item">
+                               خبر صحفي
+                              </div>
+                             </h2>
+                             <div class="field field--name-field-cgroup-icon field--type-entity-reference field--label-hidden field--item">
+                              <div>
+                               <div class="field field--name-field-cgroupicon-image field--type-svg-image-field field--label-hidden field--item">
+                                <?xml version="1.0"?>
+                                <svg fill="#000000" height="100" viewbox="0 0 24 24" width="100" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M0 0h24v24H0z" fill="none">
+                                 </path>
+                                 <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z">
+                                 </path>
+                                </svg>
+                               </div>
+                              </div>
+                             </div>
+                            </div>
+                           </div>
+                          </div>
+                         </div>
+                         <div class="tile--created-date">
+                          <span class="icon-icon__calendar">
+                          </span>
+                          <span>
+                           22 نيسان / أبريل 2019
+                          </span>
+                         </div>
+                         <div class="tile--title" title="اليونيسف تطلق حملة #اللقاحات_فعالة لتشجيع دعم اللقاحات">
+                          <div class="field field--name-field-press-release-title field--type-text field--label-hidden field--item">
+                           اليونيسف تطلق حملة #اللقاحات_فعالة لتشجيع دعم اللقاحات
+                          </div>
+                         </div>
+                         <div class="tile--paragraph">
+                          <p>
+                          </p>
+                         </div>
+                         <div class="tile--button">
+                          <span class="btn cta--mosaic">
+                           <span class="cta-mosaic-caret">
+                           </span>
+                           زر الصفحة
+                          </span>
+                         </div>
+                        </div>
+                       </a>
+                      </div>
+                     </div>
+                     <div class="mosaic--tile mosaic--tile--press-release col-md-3">
+                      <div class="tile--content tile--bg-- tile--label--">
+                       <a class="mosaic-tile-lk" data-action="/ar/%D8%AA%D9%82%D8%A7%D8%B1%D9%8A%D8%B1-%D8%AA%D9%8F%D9%81%D9%8A%D8%AF-%D8%A8%D9%85%D9%82%D8%AA%D9%84-%D8%B7%D9%81%D9%84%D9%8A%D9%86-%D9%81%D9%8A-%D8%B4%D9%85%D8%A7%D9%84-%D8%B3%D9%8A%D9%86%D8%A7%D8%A1/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" data-bound="click" data-label="إقرأ الآن" data-tracked-component="cta" href="/ar/%D8%AA%D9%82%D8%A7%D8%B1%D9%8A%D8%B1-%D8%AA%D9%8F%D9%81%D9%8A%D8%AF-%D8%A8%D9%85%D9%82%D8%AA%D9%84-%D8%B7%D9%81%D9%84%D9%8A%D9%86-%D9%81%D9%8A-%D8%B4%D9%85%D8%A7%D9%84-%D8%B3%D9%8A%D9%86%D8%A7%D8%A1/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" title="تقارير تُفيد بمقتل طفلين في شمال سيناء">
+                        <div class="tile--image tile-no-default">
+                         <div class="tile--logo">
+                          <span class="icon-logo-unicef">
+                           <em class="visibility-hidden">
+                            Unicef default logo
+                           </em>
+                          </span>
+                         </div>
+                        </div>
+                        <div class="tile--sub-content">
+                         <div class="tile--content-category">
+                          <div class="field field--name-field-shared-content-group field--type-entity-reference field--label-hidden field--item">
+                           <div about="/ar/taxonomy/term/2206">
+                            <div class="content-category-content">
+                             <h2>
+                              <div class="field field--name-name field--type-string field--label-hidden field--item">
+                               بيان
+                              </div>
+                             </h2>
+                             <div class="field field--name-field-cgroup-icon field--type-entity-reference field--label-hidden field--item">
+                              <div>
+                               <div class="field field--name-field-cgroupicon-image field--type-svg-image-field field--label-hidden field--item">
+                                <?xml version="1.0"?>
+                                <svg fill="#000000" height="100" viewbox="0 0 24 24" width="100" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M0 0h24v24H0z" fill="none">
+                                 </path>
+                                 <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z">
+                                 </path>
+                                </svg>
+                               </div>
+                              </div>
+                             </div>
+                            </div>
+                           </div>
+                          </div>
+                         </div>
+                         <div class="tile--created-date">
+                          <span class="icon-icon__calendar">
+                          </span>
+                          <span>
+                           10 نيسان / أبريل 2019
+                          </span>
+                         </div>
+                         <div class="tile--title" title="تقارير تُفيد بمقتل طفلين في شمال سيناء">
+                          <div class="field field--name-field-press-release-title field--type-text field--label-hidden field--item">
+                           تقارير تُفيد بمقتل طفلين في شمال سيناء
+                          </div>
+                         </div>
+                         <div class="tile--paragraph">
+                          <p>
+                          </p>
+                         </div>
+                         <div class="tile--button">
+                          <span class="btn cta--mosaic">
+                           <span class="cta-mosaic-caret">
+                           </span>
+                           إقرأ الآن
+                          </span>
+                         </div>
+                        </div>
+                       </a>
+                      </div>
+                     </div>
+                     <div class="mosaic--tile mosaic--tile--press-release col-md-3">
+                      <div class="tile--content tile--bg-- tile--label--">
+                       <a class="mosaic-tile-lk" data-action="/ar/%D8%AD%D9%88%D8%A7%D9%84%D9%8A-%D9%86%D8%B5%D9%81-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%B7%D9%81%D9%84-%D9%81%D9%8A-%D8%B7%D8%B1%D8%A7%D8%A8%D9%84%D8%B3-%D9%85%D8%B9%D8%B1%D8%B6%D9%88%D9%86-%D9%84%D9%84%D8%AE%D8%B7%D8%B1/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" data-bound="click" data-label="إقرأ الآن" data-tracked-component="cta" href="/ar/%D8%AD%D9%88%D8%A7%D9%84%D9%8A-%D9%86%D8%B5%D9%81-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%B7%D9%81%D9%84-%D9%81%D9%8A-%D8%B7%D8%B1%D8%A7%D8%A8%D9%84%D8%B3-%D9%85%D8%B9%D8%B1%D8%B6%D9%88%D9%86-%D9%84%D9%84%D8%AE%D8%B7%D8%B1/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" title="حوالي نصف مليون طفل في طرابلس معرضون للخطر ">
+                        <div class="tile--image tile-no-default">
+                         <div class="tile--logo">
+                          <span class="icon-logo-unicef">
+                           <em class="visibility-hidden">
+                            Unicef default logo
+                           </em>
+                          </span>
+                         </div>
+                        </div>
+                        <div class="tile--sub-content">
+                         <div class="tile--content-category">
+                          <div class="field field--name-field-shared-content-group field--type-entity-reference field--label-hidden field--item">
+                           <div about="/ar/taxonomy/term/2206">
+                            <div class="content-category-content">
+                             <h2>
+                              <div class="field field--name-name field--type-string field--label-hidden field--item">
+                               بيان
+                              </div>
+                             </h2>
+                             <div class="field field--name-field-cgroup-icon field--type-entity-reference field--label-hidden field--item">
+                              <div>
+                               <div class="field field--name-field-cgroupicon-image field--type-svg-image-field field--label-hidden field--item">
+                                <?xml version="1.0"?>
+                                <svg fill="#000000" height="100" viewbox="0 0 24 24" width="100" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M0 0h24v24H0z" fill="none">
+                                 </path>
+                                 <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z">
+                                 </path>
+                                </svg>
+                               </div>
+                              </div>
+                             </div>
+                            </div>
+                           </div>
+                          </div>
+                         </div>
+                         <div class="tile--created-date">
+                          <span class="icon-icon__calendar">
+                          </span>
+                          <span>
+                           09 نيسان / أبريل 2019
+                          </span>
+                         </div>
+                         <div class="tile--title" title="حوالي نصف مليون طفل في طرابلس معرضون للخطر ">
+                          <div class="field field--name-field-press-release-title field--type-text field--label-hidden field--item">
+                           حوالي نصف مليون طفل في طرابلس معرضون للخطر
+                          </div>
+                         </div>
+                         <div class="tile--paragraph">
+                          <p>
+                          </p>
+                         </div>
+                         <div class="tile--button">
+                          <span class="btn cta--mosaic">
+                           <span class="cta-mosaic-caret">
+                           </span>
+                           إقرأ الآن
+                          </span>
+                         </div>
+                        </div>
+                       </a>
+                      </div>
+                     </div>
+                     <div class="mosaic--tile mosaic--tile--press-release col-md-3">
+                      <div class="tile--content tile--bg-- tile--label--">
+                       <a class="mosaic-tile-lk" data-action="/ar/%D8%A7%D9%86%D9%81%D8%AC%D8%A7%D8%B1-%D9%81%D9%8A-%D8%B5%D9%86%D8%B9%D8%A7%D8%A1-%D9%8A%D9%82%D8%AA%D9%84-14-%D8%B7%D9%81%D9%84%D8%A7%D9%8B-%D9%81%D9%8A-%D9%85%D8%AF%D8%B1%D8%B3%D8%A9%D8%8C-%D9%88%D9%8A%D8%B5%D9%8A%D8%A8-16-%D8%B7%D9%81%D9%84%D9%8B%D8%A7-%D8%A8%D8%AC%D8%B1%D8%A7%D8%AD%D8%8C-%D9%85%D8%B9%D8%B8%D9%85%D9%87%D9%85-%D8%AF%D9%88%D9%86-%D8%B3%D9%86/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" data-bound="click" data-label="زر الصفحة" data-tracked-component="cta" href="/ar/%D8%A7%D9%86%D9%81%D8%AC%D8%A7%D8%B1-%D9%81%D9%8A-%D8%B5%D9%86%D8%B9%D8%A7%D8%A1-%D9%8A%D9%82%D8%AA%D9%84-14-%D8%B7%D9%81%D9%84%D8%A7%D9%8B-%D9%81%D9%8A-%D9%85%D8%AF%D8%B1%D8%B3%D8%A9%D8%8C-%D9%88%D9%8A%D8%B5%D9%8A%D8%A8-16-%D8%B7%D9%81%D9%84%D9%8B%D8%A7-%D8%A8%D8%AC%D8%B1%D8%A7%D8%AD%D8%8C-%D9%85%D8%B9%D8%B8%D9%85%D9%87%D9%85-%D8%AF%D9%88%D9%86-%D8%B3%D9%86/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" title="انفجار في صنعاء يقتل 14 طفلاً في مدرسة، ويصيب 16 طفلًا بجراح، معظمهم دون سن التاسعة">
+                        <div class="tile--image">
+                         <div class="field field--name-field-press-release-media field--type-entity-reference field--label-hidden field--item">
+                          <div aria-label="اليمن. صبي ينتظر أن يتم تلقيحه ضد الكوليرا في عدن، اليمن." class="mosaic-image" role="img">
+                           <img alt="اليمن. صبي ينتظر أن يتم تلقيحه ضد الكوليرا في عدن، اليمن." src="/sites/default/files/styles/large/public/UN0209172_0.jpg?itok=01iiVulw"/>
+                          </div>
+                         </div>
+                        </div>
+                        <div class="tile--sub-content">
+                         <div class="tile--content-category">
+                          <div class="field field--name-field-shared-content-group field--type-entity-reference field--label-hidden field--item">
+                           <div about="/ar/taxonomy/term/2181">
+                            <div class="content-category-content">
+                             <h2>
+                              <div class="field field--name-name field--type-string field--label-hidden field--item">
+                               خبر صحفي
+                              </div>
+                             </h2>
+                             <div class="field field--name-field-cgroup-icon field--type-entity-reference field--label-hidden field--item">
+                              <div>
+                               <div class="field field--name-field-cgroupicon-image field--type-svg-image-field field--label-hidden field--item">
+                                <?xml version="1.0"?>
+                                <svg fill="#000000" height="100" viewbox="0 0 24 24" width="100" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M0 0h24v24H0z" fill="none">
+                                 </path>
+                                 <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z">
+                                 </path>
+                                </svg>
+                               </div>
+                              </div>
+                             </div>
+                            </div>
+                           </div>
+                          </div>
+                         </div>
+                         <div class="tile--created-date">
+                          <span class="icon-icon__calendar">
+                          </span>
+                          <span>
+                           09 نيسان / أبريل 2019
+                          </span>
+                         </div>
+                         <div class="tile--title" title="انفجار في صنعاء يقتل 14 طفلاً في مدرسة، ويصيب 16 طفلًا بجراح، معظمهم دون سن التاسعة">
+                          <div class="field field--name-field-press-release-title field--type-text field--label-hidden field--item">
+                           انفجار في صنعاء يقتل 14 طفلاً في مدرسة، ويصيب 16 طفلًا بجراح، معظمهم دون سن التاسعة
+                          </div>
+                         </div>
+                         <div class="tile--paragraph">
+                          <p>
+                          </p>
+                         </div>
+                         <div class="tile--button">
+                          <span class="btn cta--mosaic">
+                           <span class="cta-mosaic-caret">
+                           </span>
+                           زر الصفحة
+                          </span>
+                         </div>
+                        </div>
+                       </a>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                   <input autocomplete="off" data-drupal-selector="form-rv8iuu3-570-pyxocirzwwicmumw1ii-cki6yrwgk-w" name="form_build_id" type="hidden" value="form-RV8iuU3-570-pyXOCirzwwicMUMW1Ii-cKi6yRwGK-w"/>
+                   <input data-drupal-selector="edit-unicef-component-mosaic-automatic" name="form_id" type="hidden" value="unicef_component_mosaic_automatic"/>
+                  </div>
+                 </div>
+                </form>
+               </div>
+              </div>
+             </div>
+             <div class="field--item">
+              <div class="column-block rectangle aligned-center">
+               <div class="field field--name-field-component-col-33-con-items field--type-entity-reference-revisions field--label-hidden field--items">
+                <div class="field--item">
+                 <div class="col-third column-block-row">
+                  <div class="field field--name-field-component-colcell-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+                   <div class="field--item">
+                    <div class="text--block-content section-block-content">
+                     <div class="field field--name-field-component-text-content field--type-text-long field--label-hidden field--item">
+                      <p>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="field--item">
+                 <div class="col-third column-block-row">
+                  <div class="field field--name-field-component-colcell-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+                   <div class="field--item">
+                    <div class="cta-block--button">
+                     <a class="btn primary_blue_white" data-action="/ar/media/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" data-bound="click" data-label="شاهد جميع البيانات الصحفية" data-tracked-component="cta" href="/ar/media/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9" title="شاهد جميع البيانات الصحفية">
+                      شاهد جميع البيانات الصحفية
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="field--item">
+                 <div class="col-third column-block-row">
+                  <div class="field field--name-field-component-colcell-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+                   <div class="field--item">
+                    <div class="text--block-content section-block-content">
+                     <div class="field field--name-field-component-text-content field--type-text-long field--label-hidden field--item">
+                      <p>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="field--item">
+          <div class="section--block component-section">
+           <div class="container">
+            <div class="text--block-content">
+             <div class="field field--name-field-component-sec-title field--type-text field--label-hidden field--item">
+              <h2>
+               موارد لوسائل الإعلام
+              </h2>
+             </div>
+            </div>
+            <div class="field field--name-field-component-sec-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+             <div class="field--item">
+              <div class="column-block rectangle aligned-left">
+               <div class="field field--name-field-component-col-25-con-items field--type-entity-reference-revisions field--label-hidden field--items">
+                <div class="field--item">
+                 <div class="col-25 column-block-row">
+                  <div class="field field--name-field-component-colcell-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+                   <div class="field--item">
+                    <div class="text--block-content section-block-content">
+                     <div class="field field--name-field-component-text-content field--type-text-long field--label-hidden field--item">
+                      <h4>
+                       مسؤولو التواصل الاعلامي
+                      </h4>
+                      <p dir="rtl">
+                       عرض قائمة مسؤولي التواصل الإعلامي في اليونيسف؛ يمكن للزملاء الصحفيين الاتصال بهم كموارد تواصل.
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="field--item">
+                    <div class="cta-block--button">
+                     <a class="btn tertiary_blue_white" data-action="https://wcmsprod.unicef.org/media/contact-us" data-bound="click" data-label="عرض جهات الاتصال" data-tracked-component="cta" href="https://wcmsprod.unicef.org/media/contact-us" title="عرض جهات الاتصال">
+                      عرض جهات الاتصال
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="field--item">
+                 <div class="col-25 column-block-row">
+                  <div class="field field--name-field-component-colcell-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+                   <div class="field--item">
+                    <div class="text--block-content section-block-content">
+                     <div class="field field--name-field-component-text-content field--type-text-long field--label-hidden field--item">
+                      <h4>
+                       القضايا الراهنة
+                      </h4>
+                      <p>
+                       اقرأ عن موقف اليونيسيف حول القضايا الراهنة التي تؤثر على الأطفال.
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="field--item">
+                    <div class="cta-block--button">
+                     <a class="btn tertiary_blue_white" data-action="https://wcmsprod.unicef.org/media/current-issues" data-bound="click" data-label="زر الصفحة" data-tracked-component="cta" href="https://wcmsprod.unicef.org/media/current-issues" title="زر الصفحة">
+                      زر الصفحة
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="field--item">
+                 <div class="col-25 column-block-row">
+                  <div class="field field--name-field-component-colcell-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+                   <div class="field--item">
+                    <div class="text--block-content section-block-content">
+                     <div class="field field--name-field-component-text-content field--type-text-long field--label-hidden field--item">
+                      <h4>
+                       الخبراء
+                      </h4>
+                      <p>
+                       تكلّم مع كبار الخبراء في اليونيسيف المستعدين لتقديم تعليقات حول صحة الأطفال وحمايتهم، والماء، والصرف الصحي والأزمات الإنسانية.
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="field--item">
+                    <div class="cta-block--button">
+                     <a class="btn tertiary_blue_white" data-action="/ar/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9/%D8%A7%D9%84%D8%AE%D8%A8%D8%B1%D8%A7%D8%A1" data-bound="click" data-label="التقي بخبرائنا" data-tracked-component="cta" href="/ar/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9/%D8%A7%D9%84%D8%AE%D8%A8%D8%B1%D8%A7%D8%A1" title="التقي بخبرائنا">
+                      التقي بخبرائنا
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="field--item">
+                 <div class="col-25 column-block-row">
+                  <div class="field field--name-field-component-colcell-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+                   <div class="field--item">
+                    <div class="text--block-content section-block-content">
+                     <div class="field field--name-field-component-text-content field--type-text-long field--label-hidden field--item">
+                      <h4>
+                       المدير التنفيذي
+                      </h4>
+                      <p>
+                       تعرف على هنرييتا هـ. فور، التي أصبحت المدير التنفيذي السابع لليونيسف في 1 كانون الثاني / يناير 2018.
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="field--item">
+                    <div class="cta-block--button">
+                     <a class="btn tertiary_blue_white" data-action="/ar/media/%D9%87%D9%86%D8%B1%D9%8A%D9%8A%D8%AA%D8%A7-%EF%BB%AB-%D9%81%D9%88%D8%B1" data-bound="click" data-label="تعرّف على المدير التنفيذي" data-tracked-component="cta" href="/ar/media/%D9%87%D9%86%D8%B1%D9%8A%D9%8A%D8%AA%D8%A7-%EF%BB%AB-%D9%81%D9%88%D8%B1" title="تعرّف على المدير التنفيذي">
+                      تعرّف على المدير التنفيذي
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="field--item">
+          <div class="section--block component-section">
+           <div class="container">
+            <div class="text--block-content">
+            </div>
+            <div class="field field--name-field-component-sec-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+             <div class="field--item">
+              <div class="column-block rectangle aligned-center">
+               <div class="col-75 column-block-left">
+                <div class="field field--name-field-component-collcon-item field--type-entity-reference-revisions field--label-hidden field--item">
+                 <div class="field field--name-field-component-colcell-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+                  <div class="field--item">
+                   <div class="paragraph paragraph--type--component-media-reference paragraph--view-mode--three-fourths">
+                    <div class="field field--name-field-component-mediaref-media field--type-entity-reference field--label-hidden field--item">
+                     <div class="field field--name-field-component-media field--type-entity-reference field--label-hidden field--item">
+                      <div class="field field--name-image field--type-image field--label-hidden field--item">
+                       <img alt="طفلان يسيران حيث تم تدمير العديد من المباني بالكامل - الموصل ، العراق." class="img-responsive" height="527" src="/sites/default/files/styles/three_fourths/public/UN0161148_crop_3.jpg?itok=Xfg9g79R" typeof="foaf:Image" width="1140"/>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="col-25 column-block-left">
+                <div class="field field--name-field-component-colrcon-item field--type-entity-reference-revisions field--label-hidden field--item">
+                 <div class="field field--name-field-component-colcell-blocks field--type-entity-reference-revisions field--label-hidden field--items">
+                  <div class="field--item">
+                   <div class="text--block-content section-block-content">
+                    <div class="field field--name-field-component-text-content field--type-text-long field--label-hidden field--item">
+                     <h3>
+                      محتوى مواد وسائط الإعلام المتعددة
+                     </h3>
+                     <p>
+                      حمّل آخر الصور وأفلام الفيديو.
+                     </p>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="field--item">
+                   <div class="cta-block--button">
+                    <a class="btn primary_blue_white" data-action="https://weshare.unicef.org/C.aspx?VP3=CMS3&amp;VF=Home" data-bound="click" data-label="حمّل المحتويات" data-tracked-component="cta" href="https://weshare.unicef.org/C.aspx?VP3=CMS3&amp;VF=Home" title="حمّل المحتويات">
+                     حمّل المحتويات
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="container container--mosaic">
+         <div class="field field--name-field-landingpg-tertiary-blocks field--type-entity-reference-revisions field--label-hidden field--item">
+          <div class="unicef-component-curated">
+           <h2>
+            استكشف المزيد عن اليونيسف
+           </h2>
+           <div class="form-group">
+            <div class="mosaic--tile mosaic--tile--bouncer col-md-3">
+             <div class="tile--content tile--bg--blue_primary tile--label--white">
+              <a class="mosaic-tile-lk" data-action="https://www.unicef.org/ar/%D9%85%D9%86-%D9%86%D8%AD%D9%86" data-bound="click" data-label="عن اليونيسف" data-tracked-component="cta" href="https://www.unicef.org/ar/%D9%85%D9%86-%D9%86%D8%AD%D9%86" title="عن اليونيسف">
+               <div class="tile--image tile-no-default">
+                <div class="tile--logo">
+                 <span class="icon-logo-unicef">
+                  <em class="visibility-hidden">
+                   Unicef default logo
+                  </em>
+                 </span>
+                </div>
+               </div>
+               <div class="tile--sub-content">
+                <div class="tile--content-category">
+                 <div class="field field--name-field-shared-content-group field--type-entity-reference field--label-hidden field--item">
+                  <div about="/ar/taxonomy/term/2176">
+                   <div class="content-category-content">
+                    <h2>
+                     <div class="field field--name-name field--type-string field--label-hidden field--item">
+                      صفحة
+                     </div>
+                    </h2>
+                    <div class="field field--name-field-cgroup-icon field--type-entity-reference field--label-hidden field--item">
+                     <div>
+                      <div class="field field--name-field-cgroupicon-image field--type-svg-image-field field--label-hidden field--item">
+                       <?xml version="1.0" encoding="utf-8"?>
+                       <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                       <svg height="100" id="Layer_1" style="enable-background:new 0 0 22 18;" version="1.1" viewbox="0 0 22 18" width="100" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+                        <path d="M20,0H2C0.9,0,0,0.9,0,2v12c0,1.1,0.9,2,2,2h5v2h8v-2h5c1.1,0,2-0.9,2-2V2C22,0.9,21.1,0,20,0z M20,14H2V2h18V14z M18,5H4v2  h14V5z M18,9H4v2h14V9z">
+                        </path>
+                       </svg>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="tile--title" title="عن اليونيسف">
+                 <div class="field field--name-field-bouncer-short-title field--type-text field--label-hidden field--item">
+                  عن اليونيسف
+                 </div>
+                </div>
+                <div class="tile--paragraph">
+                 <p>
+                  <div class="field field--name-field-bouncer-summary field--type-text field--label-hidden field--item">
+                   اعرف المزيد عن اليونيسف، وشركائنا والأشخاص الذين ينضمون إلينا في الدفاع عن حقوق كل طفل
+                  </div>
+                 </p>
+                </div>
+                <div class="tile--button" title="عن اليونيسف">
+                 <span class="btn cta--mosaic">
+                  <span class="cta-mosaic-caret">
+                  </span>
+                  زر الصفحة
+                 </span>
+                </div>
+               </div>
+              </a>
+             </div>
+            </div>
+            <div class="mosaic--tile mosaic--tile--bouncer col-md-3">
+             <div class="tile--content tile--bg--blue_secondary tile--label--white">
+              <a class="mosaic-tile-lk" data-action="https://www.unicef.org/ar/%D8%B9%D9%85%D9%84%D9%86%D8%A7" data-bound="click" data-label="عملنا" data-tracked-component="cta" href="https://www.unicef.org/ar/%D8%B9%D9%85%D9%84%D9%86%D8%A7" title="عملنا">
+               <div class="tile--image tile-no-default">
+                <div class="tile--logo">
+                 <span class="icon-logo-unicef">
+                  <em class="visibility-hidden">
+                   Unicef default logo
+                  </em>
+                 </span>
+                </div>
+               </div>
+               <div class="tile--sub-content">
+                <div class="tile--content-category">
+                 <div class="field field--name-field-shared-content-group field--type-entity-reference field--label-hidden field--item">
+                  <div about="/ar/taxonomy/term/2176">
+                   <div class="content-category-content">
+                    <h2>
+                     <div class="field field--name-name field--type-string field--label-hidden field--item">
+                      صفحة
+                     </div>
+                    </h2>
+                    <div class="field field--name-field-cgroup-icon field--type-entity-reference field--label-hidden field--item">
+                     <div>
+                      <div class="field field--name-field-cgroupicon-image field--type-svg-image-field field--label-hidden field--item">
+                       <?xml version="1.0" encoding="utf-8"?>
+                       <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                       <svg height="100" id="Layer_1" style="enable-background:new 0 0 22 18;" version="1.1" viewbox="0 0 22 18" width="100" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+                        <path d="M20,0H2C0.9,0,0,0.9,0,2v12c0,1.1,0.9,2,2,2h5v2h8v-2h5c1.1,0,2-0.9,2-2V2C22,0.9,21.1,0,20,0z M20,14H2V2h18V14z M18,5H4v2  h14V5z M18,9H4v2h14V9z">
+                        </path>
+                       </svg>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="tile--title" title="عملنا">
+                 <div class="field field--name-field-bouncer-short-title field--type-text field--label-hidden field--item">
+                  عملنا
+                 </div>
+                </div>
+                <div class="tile--paragraph">
+                 <p>
+                  <div class="field field--name-field-bouncer-summary field--type-text field--label-hidden field--item">
+                   استكشف عمل اليونيسف لأجل الأطفال
+                  </div>
+                 </p>
+                </div>
+                <div class="tile--button" title="عملنا">
+                 <span class="btn cta--mosaic">
+                  <span class="cta-mosaic-caret">
+                  </span>
+                  زر الصفحة
+                 </span>
+                </div>
+               </div>
+              </a>
+             </div>
+            </div>
+            <div class="mosaic--tile mosaic--tile--bouncer col-md-3">
+             <div class="tile--content tile--bg--blue_primary tile--label--white">
+              <a class="mosaic-tile-lk" data-action="https://www.unicef.org/ar/%D8%A3%D9%8A%D9%86-%D9%86%D8%B9%D9%85%D9%84" data-bound="click" data-label="أين نعمل" data-tracked-component="cta" href="https://www.unicef.org/ar/%D8%A3%D9%8A%D9%86-%D9%86%D8%B9%D9%85%D9%84" title="أين نعمل">
+               <div class="tile--image tile-no-default">
+                <div class="tile--logo">
+                 <span class="icon-logo-unicef">
+                  <em class="visibility-hidden">
+                   Unicef default logo
+                  </em>
+                 </span>
+                </div>
+               </div>
+               <div class="tile--sub-content">
+                <div class="tile--content-category">
+                 <div class="field field--name-field-shared-content-group field--type-entity-reference field--label-hidden field--item">
+                  <div about="/ar/taxonomy/term/2176">
+                   <div class="content-category-content">
+                    <h2>
+                     <div class="field field--name-name field--type-string field--label-hidden field--item">
+                      صفحة
+                     </div>
+                    </h2>
+                    <div class="field field--name-field-cgroup-icon field--type-entity-reference field--label-hidden field--item">
+                     <div>
+                      <div class="field field--name-field-cgroupicon-image field--type-svg-image-field field--label-hidden field--item">
+                       <?xml version="1.0" encoding="utf-8"?>
+                       <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                       <svg height="100" id="Layer_1" style="enable-background:new 0 0 22 18;" version="1.1" viewbox="0 0 22 18" width="100" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+                        <path d="M20,0H2C0.9,0,0,0.9,0,2v12c0,1.1,0.9,2,2,2h5v2h8v-2h5c1.1,0,2-0.9,2-2V2C22,0.9,21.1,0,20,0z M20,14H2V2h18V14z M18,5H4v2  h14V5z M18,9H4v2h14V9z">
+                        </path>
+                       </svg>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="tile--title" title="أين نعمل">
+                 <div class="field field--name-field-bouncer-short-title field--type-text field--label-hidden field--item">
+                  أين نعمل
+                 </div>
+                </div>
+                <div class="tile--paragraph">
+                 <p>
+                  <div class="field field--name-field-bouncer-summary field--type-text field--label-hidden field--item">
+                   استكشف عمل اليونيسف في أكثر من 190 دولة وإقليم.
+                  </div>
+                 </p>
+                </div>
+                <div class="tile--button" title="أين نعمل">
+                 <span class="btn cta--mosaic">
+                  <span class="cta-mosaic-caret">
+                  </span>
+                  زر الصفحة
+                 </span>
+                </div>
+               </div>
+              </a>
+             </div>
+            </div>
+            <div class="mosaic--tile mosaic--tile--bouncer col-md-3">
+             <div class="tile--content tile--bg--blue_secondary tile--label--white">
+              <a class="mosaic-tile-lk" data-action="http://www.unicef.org/arabic/about/employ/25243_25411.html" data-bound="click" data-label="التوظيف" data-tracked-component="cta" href="http://www.unicef.org/arabic/about/employ/25243_25411.html" title="التوظيف">
+               <div class="tile--image tile-no-default">
+                <div class="tile--logo">
+                 <span class="icon-logo-unicef">
+                  <em class="visibility-hidden">
+                   Unicef default logo
+                  </em>
+                 </span>
+                </div>
+               </div>
+               <div class="tile--sub-content">
+                <div class="tile--content-category">
+                 <div class="field field--name-field-shared-content-group field--type-entity-reference field--label-hidden field--item">
+                  <div about="/ar/taxonomy/term/2171">
+                   <div class="content-category-content">
+                    <h2>
+                     <div class="field field--name-name field--type-string field--label-hidden field--item">
+                      رابط
+                     </div>
+                    </h2>
+                    <div class="field field--name-field-cgroup-icon field--type-entity-reference field--label-hidden field--item">
+                     <div>
+                      <div class="field field--name-field-cgroupicon-image field--type-svg-image-field field--label-hidden field--item">
+                       <?xml version="1.0"?>
+                       <svg fill="#000000" height="100" viewbox="0 0 24 24" width="100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none">
+                        </path>
+                        <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z">
+                        </path>
+                       </svg>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="tile--title" title="التوظيف">
+                 <div class="field field--name-field-bouncer-short-title field--type-text field--label-hidden field--item">
+                  التوظيف
+                 </div>
+                </div>
+                <div class="tile--paragraph">
+                 <p>
+                  <div class="field field--name-field-bouncer-summary field--type-text field--label-hidden field--item">
+                   هل تريد تغيير العالم؟ انضم إلى اليونيسف
+                  </div>
+                 </p>
+                </div>
+                <div class="tile--button" title="التوظيف">
+                 <span class="btn cta--mosaic">
+                  <span class="cta-mosaic-caret">
+                  </span>
+                  زر الموقع
+                 </span>
+                </div>
+               </div>
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="sharethis-wrapper">
+         <span class="st_facebook_large" displaytext="facebook" st_title="مركز الصحافة" st_url="https://www.unicef.org/ar/media/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9">
+         </span>
+         <span class="st_twitter_large" displaytext="twitter" st_title="مركز الصحافة @UNICEFinArabic" st_url="https://www.unicef.org/ar/media/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9">
+         </span>
+         <span class="st_linkedin_large" displaytext="linkedin" st_title="مركز الصحافة" st_url="https://www.unicef.org/ar/media/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9">
+         </span>
+         <span class="st_whatsapp_large" displaytext="whatsapp" st_title="مركز الصحافة" st_url="https://www.unicef.org/ar/media/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9">
+         </span>
+        </div>
+       </article>
+      </div>
+     </section>
+    </div>
+   </div>
+   <div class="footer-wrapper">
+    <div class="footer container">
+     <div class="region region-footer-left footer--left col-md-9">
+      <nav aria-labelledby="block-footerar-menu" data-block-plugin-id="system_menu_block:footer---ar" id="block-footerar" role="navigation">
+       <span class="visually-hidden" id="block-footerar-menu">
+        Footer - ar
+       </span>
+       <div class="footer--links">
+        <div class="footer--items col-xs-12 col-sm-4 col-md-4">
+         <a href="/ar/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9-%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D8%A9" title="الرئيسية">
+          الرئيسية
+         </a>
+         <div id="collapseFooter1">
+          <ul class="l-footer__column">
+           <li>
+            <a data-bound="click" data-label="مجالات تركيزنا" data-tracked-component="footer_link" href="/ar/%D8%B9%D9%85%D9%84%D9%86%D8%A7" title="مجالات تركيزنا">
+             مجالات تركيزنا
+            </a>
+           </li>
+           <li>
+            <a data-bound="click" data-label="أبحاث وتقارير" data-tracked-component="footer_link" href="/ar/%D8%A3%D8%A8%D8%AD%D8%A7%D8%AB-%D9%88%D8%AA%D9%82%D8%A7%D8%B1%D9%8A%D8%B1" title="أبحاث وتقارير">
+             أبحاث وتقارير
+            </a>
+           </li>
+           <li>
+            <a data-bound="click" data-label="أين نعمل" data-tracked-component="footer_link" href="/ar/%D8%A3%D9%8A%D9%86-%D9%86%D8%B9%D9%85%D9%84" title="أين نعمل">
+             أين نعمل
+            </a>
+           </li>
+           <li>
+            <a data-bound="click" data-label="مركز الصحافة" data-tracked-component="footer_link" href="/ar/media/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9" title="مركز الصحافة">
+             مركز الصحافة
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="footer--items col-xs-12 col-sm-4 col-md-4">
+         <a href="/ar/%D9%85%D9%86-%D9%86%D8%AD%D9%86" title="من نحن">
+          من نحن
+         </a>
+         <div id="collapseFooter2">
+          <ul class="l-footer__column">
+           <li>
+            <a data-bound="click" data-label="المجلس التنفيذي لليونيسف" data-tracked-component="footer_link" href="https://www.unicef.org/about/execboard/" title="المجلس التنفيذي لليونيسف">
+             المجلس التنفيذي لليونيسف
+            </a>
+           </li>
+           <li>
+            <a data-bound="click" data-label="التوظيف" data-tracked-component="footer_link" href="https://www.unicef.org/arabic/about/employ/25243.html" title="التوظيف">
+             التوظيف
+            </a>
+           </li>
+           <li>
+            <a data-bound="click" data-label="كن من شركاء اليونيسف" data-tracked-component="footer_link" href="https://www.unicef.org/corporate_partners/index_33855.html" title="كن من شركاء اليونيسف">
+             كن من شركاء اليونيسف
+            </a>
+           </li>
+           <li>
+            <a data-bound="click" data-label="اتخذ إجراء" data-tracked-component="footer_link" href="/ar/%D8%A8%D8%A7%D8%AF%D8%B1-%D8%A5%D9%84%D9%89-%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9" title="اتخذ إجراء">
+             اتخذ إجراء
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="footer--items col-xs-12 col-sm-4 col-md-4">
+         <span class="no-link" data-drupal-link-system-path="&lt;front&gt;">
+          مواقع ذات صلة باليونيسف
+         </span>
+         <div id="collapseFooter3">
+          <ul class="l-footer__column">
+           <li>
+            <a data-bound="click" data-label="يونيسف" data-tracked-component="footer_link" href="https://blogs.unicef.org/ar/" title="يونيسف">
+             يونيسف
+            </a>
+           </li>
+           <li>
+            <a data-bound="click" data-label="أصوات الشباب" data-tracked-component="footer_link" href="http://www.voicesofyouth.org/ar/page-1" title="أصوات الشباب">
+             أصوات الشباب
+            </a>
+           </li>
+           <li>
+            <a data-bound="click" data-label="بيانات اليونيسف" data-tracked-component="footer_link" href="https://data.unicef.org/" title="بيانات اليونيسف">
+             بيانات اليونيسف
+            </a>
+           </li>
+           <li>
+            <a data-bound="click" data-label="دعم اليونيسف" data-tracked-component="footer_link" href="https://donate.unicef.org/donate/now/" title="دعم اليونيسف">
+             دعم اليونيسف
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+     <div class="region region-footer-right footer--right col-md-3">
+      <div class="footer--social">
+       <div class="cta-block--button">
+        <a class="btn donate_white_orange" data-action="https://donate.unicef.org/donate/now" data-bound="click" data-label="كن من المتبرعين" data-tracked-component="cta" href="https://donate.unicef.org/donate/now">
+         كن من المتبرعين
+        </a>
+       </div>
+       <nav aria-labelledby="block-socialar-menu" data-block-plugin-id="system_menu_block:social-ar" id="block-socialar" role="navigation">
+        <span class="visually-hidden" id="block-socialar-menu">
+         Social (ar)
+        </span>
+        <div class="footer--social-follow">
+         <ul class="social-media-links--platforms platforms inline horizontal" data-bound="null" data-tracked-component="navigation_first_level">
+          <li>
+           <a aria-label="Facebook" class="social-follow--item fa-facebook fa fa-lg" data-bound="click" data-label="Facebook" data-tracked-component="follow_option" href="https://www.facebook.com/unicef.in.arabic" icon="fa-facebook" target="_blank">
+           </a>
+          </li>
+          <li>
+           <a aria-label="Twitter" class="social-follow--item fa-twitter fa fa-lg" data-bound="click" data-label="Twitter" data-tracked-component="follow_option" href="https://twitter.com/UNICEFinArabic" icon="fa-twitter" target="_blank">
+           </a>
+          </li>
+          <li>
+           <a aria-label="Youtube" class="social-follow--item fa-youtube-play fa fa-lg" data-bound="click" data-label="Youtube" data-tracked-component="follow_option" href="https://www.youtube.com/user/UNICEFARABIC" icon="fa-youtube-play" target="_blank">
+           </a>
+          </li>
+          <li>
+           <a aria-label="LinkedIn" class="social-follow--item fa-linkedin fa fa-lg" data-bound="click" data-label="LinkedIn" data-tracked-component="follow_option" href="https://www.linkedin.com/company/unicef" icon="fa-linkedin" target="_blank">
+           </a>
+          </li>
+          <li>
+           <a aria-label="RSS" class="social-follow--item fa-rss fa fa-lg" data-bound="click" data-label="RSS" data-tracked-component="follow_option" href="http://www.unicef.org/arabic/rss/unicef_news.xml" icon="fa-rss" target="_blank">
+           </a>
+          </li>
+         </ul>
+        </div>
+       </nav>
+       <nav aria-labelledby="block-footersecondaryar-menu" data-block-plugin-id="system_menu_block:footer-secondary---ar" id="block-footersecondaryar" role="navigation">
+        <span class="visually-hidden" id="block-footersecondaryar-menu">
+         Footer Secondary - ar
+        </span>
+        <div class="social-follow">
+         <ul class="social-follow--links">
+          <li>
+           <a class="social-follow--copyright" href="https://www.unicef.org/arabic/about/25554.html">
+            الشؤون القانونية
+           </a>
+          </li>
+          <li>
+           <a class="social-follow--copyright" href="https://www.unicef.org/arabic/about/25550.html">
+            اتصل بنا
+           </a>
+          </li>
+         </ul>
+        </div>
+       </nav>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script data-drupal-selector="drupal-settings-json" type="application/json">
+   {"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"ar\/","currentPath":"node\/16726","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"ar"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"bootstrap\/popover,bootstrap\/tooltip,core\/html5shiv,core\/picturefill,paragraphs\/drupal.paragraphs.unpublished,search_api_autocomplete\/search_api_autocomplete,sharethis\/sharethis,sharethis\/sharethispickerexternalbuttons,sharethis\/sharethispickerexternalbuttonsws,system\/base,unicef_core\/fix_no_translation","theme":"unicef","theme_token":null},"ajaxTrustedUrl":{"\/api\/unicef-component-mosaic\/getbyoption\/a1e5baa0-14e2-46ae-9a20-9afc58ee622d":true,"\/ar\/%D8%A8%D8%AD%D8%AB":true},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"sharethis":{"publisher":"dr-e29be297-c1f3-223c-b491-4f16b168f94d","version":"5x","doNotCopy":true,"hashAddressBar":false,"doNotHash":true},"search_api_autocomplete":{"solrsearch":{"auto_submit":true,"min_length":2}},"msgTrans":{"currentPage":{"title":"\u063a\u064a\u0631 \u0645\u062a\u0648\u0627\u0641\u0631 \u0628\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0645\u062e\u062a\u0627\u0631\u0629 \u0022\u0645\u0631\u0643\u0632 \u0627\u0644\u0635\u062d\u0627\u0641\u0629\u0022","en":{"title":"\u0022\u0645\u0631\u0643\u0632 \u0627\u0644\u0635\u062d\u0627\u0641\u0629\u0022 is not available in the selected language."},"fr":{"title":"\u0022\u0645\u0631\u0643\u0632 \u0627\u0644\u0635\u062d\u0627\u0641\u0629\u0022 n\u2019est pas disponible dans la langue s\u00e9lectionn\u00e9e"},"es":{"title":"\u0022\u0645\u0631\u0643\u0632 \u0627\u0644\u0635\u062d\u0627\u0641\u0629\u0022 no est\u00e1 disponible en el idioma seleccionado."},"ar":{"title":"\u063a\u064a\u0631 \u0645\u062a\u0648\u0627\u0641\u0631 \u0628\u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0645\u062e\u062a\u0627\u0631\u0629 \u0022\u0645\u0631\u0643\u0632 \u0627\u0644\u0635\u062d\u0627\u0641\u0629\u0022"},"zh-hans":{"title":"\u0022\u0645\u0631\u0643\u0632 \u0627\u0644\u0635\u062d\u0627\u0641\u0629\u0022 \u5728\u60a8\u9009\u62e9\u7684\u8bed\u8a00\u4e2d\u4e0d\u5b58\u5728"}}},"ajax":[],"user":{"uid":0,"permissionsHash":"7393a6973abbfccf6dbdfde9cf179213724e0fdd913e4a13ad5aa27917686788"}}
+  </script>
+  <script src="/sites/default/files/js/js_taQrQX3eigJes_GET0nWMg6ZKoMbwcMw-FfQLk-JOi0.js">
+  </script>
+  <script src="https://ws.sharethis.com/button/buttons.js">
+  </script>
+  <script src="/sites/default/files/js/js_V_KZbLrCNH3U9KQNSvmI3igIDmj3tPtVXwMxA-4XX6I.js">
+  </script>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b54c1d4d8c","applicationID":"112382876","transactionName":"YV1bYUtYWEAEVExYDlgXeFZNUFldSkdZVgRpW1hWUVw=","queueTime":0,"applicationTime":41,"atts":"TRpYFwNCS04=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>

@@ -1,0 +1,914 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head id="ctl00_Head1">
+  <script src="/js/jquery-1.7.2.min.js">
+  </script>
+  <script language="javascript" src="/js/scripts-home-ar.js" type="text/javascript">
+  </script>
+  <link href="/css/common-ar.css" rel="stylesheet" type="text/css"/>
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="favicon.ico" rel="apple-touch-icon"/>
+  <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport"/>
+  <link href="css/eathealthy_misconceptions-ar.css" rel="stylesheet" type="text/css"/>
+  <script>
+   $(window).load(function () {
+            $(".productbox").eq(0).css({ "-webkit-transform": "rotate(-6deg)", "-moz-transform": "rotate(-6deg)", "-o-transform": "rotate(-6deg)", "-ms-transform": "rotate(-6deg)", "transform": "rotate(-6deg)" });
+            $('.productbox:eq(1), .productbox:eq(2), .productbox:eq(3)').css({ "-webkit-transform": "rotate(6deg)", "-moz-transform": "rotate(6deg)", "-o-transform": "rotate(6deg)", "-ms-transform": "rotate(6deg)", "transform": "rotate(6deg)" });
+
+
+
+
+
+
+
+            /*
+            /*resize background's height to fit paper's
+            function sliderheight() {
+            divHeight = $('#paper').height();
+            $('.middle').css({ 'height': divHeight });
+            }
+            sliderheight();
+            $(window).resize(sliderheight);
+
+            /*resize background's height to fit paper's
+            function sliderheight() {
+            divHeight0 = $('#box1').height();
+            $('#paper').css({ 'height': divHeight0 + $("#girl").height() });
+            divHeight = $('#paper').height();
+            $('.middle').css({ 'height': divHeight });
+            }
+            sliderheight();
+            $(window).resize(sliderheight);
+            */
+
+            $(window).on('resize', function () {
+                /*resize item's description's height to productbox's (for fixed height; for vertically fixing desc)*/
+                if (window.matchMedia('(min-width: 1025px)').matches) {
+                    $(".item").each(function (index) {
+                        imageheight = $(this).find('.productboxcontent').height();
+                        descriptionheight = $(this).find('.description').height();
+                        if (imageheight < descriptionheight)
+                            $(this).find('.productboxcontent').css({ 'height': descriptionheight });
+                        else
+                             $(this).find('.description').css({ 'height': imageheight });
+                   });
+                } else {
+                    $('.description').css('height', 'auto');
+                }
+                /*end*/
+                
+
+                /*resize background's height to fit paper's*/
+                divHeight0 = $('#box1').height();
+                $('#paper').css({ 'height': divHeight0 + 190 });
+                divHeight = $('#paper').height();
+                $('.middle').css({ 'height': divHeight });
+                /*end*/
+            });
+            $(window).trigger('resize');
+
+            $(document).ready(function () {
+                if (window.matchMedia('(max-width: 1024px)').matches) {/*Replace deformed paper*/
+                    //$("#paper").attr("src", "/images/eathealthy/eathealthy7tipsbg_740w.png");
+                    $("#paper").attr("src", "/images/eathealthy/stayinghydratedbg_nopins.png");
+                    $('#paper').css("height", "+=100px");//adding height;
+                }
+            });
+
+            $("#boxcontent").css("opacity", "1");
+            $(".title").css("opacity", "1");
+
+
+
+
+            $('.eathealthydesc').each(function (index, obj) {
+                if ($(this).height() <= ($(this).next(".text").height())) {
+
+                    //$(this).css({ "height": "368px", "margin-top": "8%", "width": "104%", "margin-left": "-4%" });
+                    $(this).css({ "height": "368px", "width": "104%", "margin-left": "-4%" });
+
+                }
+            });
+
+
+
+
+
+
+
+
+
+
+        });
+  </script>
+  <style>
+   /*to move to common-ar.css*/
+        #submenu
+        {
+            background: url(/images/submenubg.png);
+            width: 654px;
+            height: 386px;
+            position: absolute;
+            top: 80px; /*left: 212px;*/
+            right: 212px;
+            display: none;
+        }
+        .leftsub
+        {
+            display: inline-block;
+            margin-top: 50px;
+            width: 231px;
+            border-left: 1px dotted black;
+        }
+        #subul
+        {
+            /*
+        height: 287px;
+        margin: -9px 0 0 !important;
+        padding: 0;
+    */
+            padding: 0;
+            margin: 0;
+            margin-top: 8px !important;
+            height: 269px;
+        }
+        #subul2 li
+        {
+            line-height: 18px;
+            text-align: right;
+        }
+        .sublist
+        {
+            /*
+        text-transform: uppercase;
+        font-family: oswald-stencil;
+        color: #124f1f;
+        line-height: 18px;
+        font-size: 14px;
+        margin-top: 5px;
+    */
+            text-transform: uppercase;
+            color: #124f1f;
+            font-size: 14px;
+            font-family: 'open_sansbold';
+            margin-top: 5px;
+        }
+        .sublist a
+        {
+            color: #124f1f;
+            text-decoration: none;
+            font: 18px 'mjTaniaXBold';
+            line-height: 10px;
+        }
+        
+        
+        
+        
+        
+        .btnsubb
+        {
+            position: relative; /*right: 14px;*/
+            left: 62px;
+            top: 23px;
+        }
+        .rightsub
+        {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 56px;
+            margin-right: 26px;
+        }
+        .sublist a:hover
+        {
+            color: #ed1c24;
+        }
+        
+        
+        #menu
+        {
+            height: 382px;
+        }
+        #menu ul#subul > li > a
+        {
+            display: block;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: relative;
+        }
+        
+        #menu ul li.sublist a
+        {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+
+        
+        #footer
+        {
+            z-index: 0;
+        }
+        #ananas
+        {
+            z-index: -1;
+        }
+        
+        #topMenu #socialBtns
+        {
+            right:686px;
+        }
+        
+
+        @media screen and (max-width: 1265px)
+        {
+            #languagedivIpad
+            {
+                display:block !important;
+            }
+        }
+        #languagedivIpad a:hover
+        {
+            color:#21a339;
+        }
+  </style>
+  <script>
+   function gotoSust(id) {
+            window.location.href = "sustainability-ar.aspx#" + id;
+        }
+  </script>
+  <script>
+   (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-60672023-1', 'auto');
+        ga('send', 'pageview');
+  </script>
+  <!-- Facebook Pixel Code -->
+  <script>
+   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '140191546423948');
+	fbq('track', 'PageView');
+  </script>
+  <noscript>
+   <img height="1" src="https://www.facebook.com/tr?id=140191546423948&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/>
+  </noscript>
+  <!-- DO NOT MODIFY -->
+  <!-- End Facebook Pixel Code -->
+  <style type="text/css">
+   @font-face {
+	        font-family: 'alegre_sans';
+	        src: url('/fonts/Alegre-Sans.eot'); /* IE9 Compat Modes */
+	        src: url('/fonts/Alegre-Sans.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	             url('/fonts/Alegre-Sans.woff') format('woff'), /* Modern Browsers */
+	             url('/fonts/Alegre-Sans.ttf')  format('truetype'), /* Safari, Android, iOS */
+	             url('/fonts/Alegre-Sans.svg#svgFontName') format('svg'); /* Legacy iOS */
+        }
+        #menu,#subul{height:auto!important;}
+
+        .professional{-o-transition:.2s; -ms-transition:.2s; -moz-transition:.2s; -webkit-transition:.2s; transition:.2s;}
+        .professional:hover{background-color:#353535!important;}
+  </style>
+  <title>
+   نعم للأفضل | دل موتني أرابيا
+  </title>
+ </head>
+ <body>
+  <form action="eathealthy_misconceptions-ar.aspx" id="aspnetForm" method="post" name="aspnetForm">
+   <div>
+    <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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p9mE2LDZiiDYp9ix2YrYr9mHICD0DDxwPtmK2YHYqtix2LYg2KjYudi2INin2YTZhtin2LMg2KPZhtmHINio2YXYpyDYo9mGINin2YTYrtio2LIg2KfZhNij2LPZhdixINin2YTZhdi12YbZiNi5INmF2YYg2KfZhNmC2YXYrSDYp9mE2YPZhNmKINmH2Ygg2KPYtditINin2YTYo9i62LDZitipINmE2KPZhtmHINi62YbZiiDZhdmGINin2YTYo9mE2YrYp9mBINmB2YrYrNioINin2YYg2YrZg9mI2YYg2KPZgtmEINmB2Yog2KfZhNiz2LnYsdin2Kog2KfZhNit2LHYp9ix2YrYqdiMINmI2KjYp9mE2KrYp9mE2Yog2YHZh9mFINmK2YXZitmE2YjZhiDZhNiq2YbYp9mI2YTZhyDYqNmD2KvYsdipLiDZhNmD2YYg2KfZhNit2YLZitmC2Kkg2YfZiiDYo9mGINmD2YTYpyDYp9mE2YbZiNi52YrZhiDZhdmGINin2YTYrtio2LIg2KfZhNij2LPZhdixINin2YTZhdi12YbZiNi5INmF2YYg2KfZhNmC2YXYrSDYp9mE2YPYp9mF2YQg2YjYp9mE2K7YqNiyINin2YTYo9io2YrYtiDZhdiq2LPYp9mI2YrYp9mGINmB2Yog2LnYr9ivINin2YTYs9i52LHYp9iqINin2YTYrdix2KfYsdmK2Kkg2YTYsNmE2YMg2YrYrNioINi52YTZitmG2Kcg2KPZg9mEINin2YTYrtio2LIg2KfZhNmF2LXZhtmI2Lkg2YXZhiDYrdio2YjYqCDYp9mE2YLZhditINin2YTZg9in2YXZhNipINio2KfYudiq2K/Yp9mELiDYr9in2KbZhdinINmC2YUg2KjYp9iu2KrZitin2LEg2K7YqNiyINit2KjZiNioINin2YTZgtmF2K0g2KfZhNmD2KfZhdmE2Kkg2KfZhNmF2LXZhtmI2Lkg2YXZhiAmcXVvdDvYt9it2YrZhiDYp9mE2K3YqNmI2Kgg2KfZhNmD2KfZhdmE2KkgJnF1b3Q7ICDYo9mIICZxdW90OyDYt9it2YrZhiDYp9mE2YLZhditINin2YTZhdmD2KrZhdmEICZxdW90OyDYqNin2LnYqtio2KfYsdmHINmF2YLYp9mI2YUg2KfZiNmEINmIJnF1b3Q72KfZhNmG2K7Yp9mE2KkmcXVvdDsgINmD2KfZhNmF2YLYp9mI2YUg2KfZhNir2KfZhtmKINmE2LbZhdin2YYg2KPZhiDYp9mE2K7YqNiyINi62YbZiiDYqNin2YTYo9mE2YrYp9mBLjwvcD4NCjxwPtmE2YrYsyDZh9mG2KfZgyDYo9mKINin2K7YqtmE2KfZgSDYqNij2YYg2LLZitiqINin2YTYstmK2KrZiNmGINmH2Ygg2YjYp9it2K8g2YXZhiDYo9mD2KvYsSDYp9mE2LLZitmI2Kog2KfZhNi12K3ZitipINin2YTZhdiq2YjZgdix2Kkg2YTYr9mK2YbYpy4g2LLZitiqINin2YTYstmK2KrZiNmGINi62YbZiiDYqNin2YTYo9it2YXYp9i2INin2YTYr9mH2YbZitipINi62YrYsSDYp9mE2YXYtNio2LnYqSDYp9mE2KfYrdin2K/ZitipINin2YTZhdmH2YXYqSDYrNiv2Kcg2YTYtdit2Kkg2KfZhNmC2YTYqC4g2YHZg9ir2YrYsSDZhdmGINin2YTZhtin2LMg2YrYudiq2YLYr9mI2YYg2KPZhtmHINio2YXYpyDYo9mG2Ycg2LXYrdmKINmB2YfZiCDYo9mC2YQg2YHZiiDYp9mE2LPYudix2KfYqiDYp9mE2K3Ysdin2LHZitipINmF2YYg2KfZhNiy2YrZiNiqINin2YTYo9iu2LHZiS4g2YTZg9mGINis2YXZiti5INin2YTYstmK2YjYqiDYqtit2KrZiNmKINi52YTZiSDYs9i52LHYp9iqINit2LHYp9ix2YrYqSDZhdmF2KfYq9mE2Kkg2YjYp9mE2YXYqtmF2KvZhNipINmB2YogMTI2INiz2LnYsdipINit2LHYp9ix2YrYqSDZhNmD2YQg2YXZhNi52YLYqSDZg9io2YrYsdip2Iwg2KjZhdinINmB2Yog2LDZhNmDINiy2YrYqiDYp9mE2LLZitiq2YjZhi4mbmJzcDs8L3A+ZAICD2QWBAIBDxYCHwEFEHByb2R1Y3Rib3ggcmlnaHQWAmYPFQEuMzg5MF9lYXRoZWFsdGhtaXNjb25jZXB0aW9uc19sb3dmYXRfYXItbWluLnBuZ2QCAw8WAh8BBRBkZXNjcmlwdGlvbiBsZWZ0FgJmDxUDAtmjhwHYp9mE2YXZhtiq2KzYp9iqINmF2YbYrtmB2LbYqSDYp9mE2K/Zh9mI2YYg2KPZiCDYp9mE2K7Yp9mE2YrYqSDZhdmGINin2YTYr9mH2YjZhiDYr9in2KbZhdinINij2YLZhCDZgdmKINin2YTYs9i52LHYp9iqINin2YTYrdix2KfYsdmK2KmrCNmK2LnYqtmC2K8g2KfZhNmD2KvZitix2YjZhiDYp9mG2Ycg2YbYuNix2Kcg2YTZiNis2YjYryDYp9mE2KrYs9mF2YrYqSAt2K7Yp9mE2YrYqSDZhdmGINin2YTYr9mH2YjZhi0g2YHYpdmGINin2YTZhdmG2KrYrCDYo9mC2YQg2KjZg9ir2YrYsSDZgdmKINin2YTYs9i52LHYp9iqINin2YTYrdix2KfYsdmK2Kkg2YXZhiDYp9mE2YXZhtiq2Kwg2KfZhNij2LXZhNmKLiDZhNmD2YYg2YXZhiDYp9mE2YXYudix2YjZgSDYo9mG2Ycg2LnZhtiv2YXYpyDYqtiq2YUg2KXYstin2YTYqSDYp9mE2K/Zh9mI2YYg2YXZhiDYp9mE2YXZiNin2K8g2KfZhNi62LDYp9im2YrYqSDZgdin2YYg2KfZhNi32LnZhSDZiNin2YTZhdmE2YXYsyDZiti12KjYrdin2YYg2YXYrtiq2YTZgdin2YYg2YjZhNmE2KrYudmI2YrYtiDYudmGINiw2YTZgyDZiti22KfZgSDYp9mE2YrZh9inINin2YTYs9mD2LEg2KjYtNmD2YQg2KjYr9mK2YfZii4g2YjYqNin2YTYqtin2YTZitiMINmB2KXZhiDYp9mE2LPYudix2KfYqiDYp9mE2K3Ysdin2LHZitipINiq2LXYqNitINi62YrYsSDZhdiu2KrZhNmB2Kkg2YPYq9mK2LHYpyDYqNmK2YYg2KfZhNmF2YbYqtis2KfYqiDYp9mE2YXZhtiu2YHYttipINij2Ygg2KfZhNiu2KfZhNmK2Kkg2YXZhiDYp9mE2K/Zh9mI2YYg2YjYp9mE2YXZhtiq2KzYp9iqINin2YTZg9in2YXZhNipINin2YTYr9iz2YUg2K7Yp9i12Kkg2LnZhtiv2YXYpyDZhtiq2K3Yr9irINi52YYg2KfZhNij2LfYudmF2Kkg2KfZhNmF2LXZhti52Kkg2YXYq9mEINin2YTYqNiz2YPZiNmK2Kog2YjYsdmC2KfYptmCINin2YTYqNi32KfYt9izINmI2KfZhNit2YTZiNmK2KfYqiDZiNi62YrYsdmH2KcuINi52YbYryDZhdit2KfZiNmE2Kkg2KfZhNiq2K7ZhNi1INmF2YYg2KfZhNmD2YrZhNmI2KzYsdin2YXYp9iqINin2YTYstin2KbYr9ipINmB2YrYrNioINin2YTZhdmI2KfYuNio2Kkg2LnZhNmJINij2YPZhCDYp9mE2YXZhtiq2KzYp9iqINin2YTYt9in2LLYrNipINmI2KfZhNiq2K3Zg9mFINmB2Yog2YPZhdmK2KfYqiDYp9mE2LfYudin2YUg2YjZgdmC2Kcg2YTYp9it2KrZitin2KzYp9iqINmE2YTYrNiz2YUuZAIDD2QWBAIBDxYCHwEFD3Byb2R1Y3Rib3ggbGVmdBYCZg8VAS83MTdfZWF0aGVhbHRobWlzY29uY2VwdGlvbnNfbGVzc2Zvb2RfYXItbWluLnBuZ2QCAw8WAh8BBRFkZXNjcmlwdGlvbiByaWdodBYCZg8VAwLZpIEB2YPZhNmF2Kcg2KPZg9mE2Kog2YPZhdmK2Kkg2KPZgtmEINmF2YYg2KfZhNi32LnYp9mFINmD2YTZhdinINmB2YLYr9iqINin2YTZhdiy2YrYryDZhdmGINin2YTZiNiy2YYg2LnZhNmJINin2YTZhdiv2Ykg2KfZhNi32YjZitmElQc8cD7Zg9ir2YrYsSDZhdmGINin2YTZhtin2LMg2KfZhNiw2YrZhiDZiti52KfZhtmI2YYg2YXZhiDYp9mE2LPZhdmG2Kkg2KPZiCDYp9mE2LLZitin2K/YqSDZgdmKINin2YTZiNiy2YYg2YrYudiq2YLYr9mI2YYg2KPZhiDYp9mE2KjYsdmG2KfZhdisINin2YTYo9mD2KvYsSDYqtmC2YrZitiv2Kcg2YXZhiDYrdmK2Ksg2KfZhNiz2LnYsdin2Kog2KfZhNit2LHYp9ix2YrYqSDZiNmD2YTZhdinINmD2KfZhtiqINmD2YXZitipINin2YTYt9i52KfZhSDYp9mE2KrZiiDZitiq2YbYp9mI2YTZiNmG2YfYpyDYo9mC2YTYjCDZg9mE2YXYpyDZgdmC2K/ZiNinINin2YTZhdiy2YrYryDZhdmGINin2YTZiNiy2YYuINmE2YPZhiDZhdinINiq2YUg2YXZhNin2K3YuNiq2Ycg2YjYqtij2YPZitiv2Ycg2KPZhtmHINmB2Yog2KPYudmC2KfYqCDYp9iq2KjYp9i5INmH2LDZhyDYp9mE2KjYsdin2YXYrCDZhdmG2K7Zgdi22Kkg2KfZhNiz2LnYsdin2Kog2KfZhNit2LHYp9ix2YrYqSDZhNmB2KrYsdipINi32YjZitmE2Kkg2LPZitik2K/ZiiDYsNmE2YMg2KXZhNmJINin2YbYrtmB2KfYtiDYudmF2YTZitipINin2YTYo9mK2LYg2YTYr9mK2YfZhS4g2YjZh9iw2Kcg2YrYudmG2Yog2KPZhtmH2YUg2LnZhNmJINin2YTZhdiv2Ykg2KfZhNi32YjZitmEINmE2YUg2YrYudmI2K/ZiNinINmC2KfYr9ix2YrZhiDYudmE2Ykg2K3YsdmCINis2YXZiti5INin2YTYt9i52KfZhSDYp9mE2YXYo9mD2YjZhCDZhdir2YQg2KfZhNiz2KfYqNmCINio2LnYryDYp9iq2KjYp9i5INmH2LDZhyDYp9mE2K3ZhdmK2Kkg2KfZhNiq2Yog2YTYpyDYo9iz2KfYsyDZhNmH2Kcg2YXZhiDYp9mE2LXYrdipLiDZiNio2KfZhNmF2YLYp9io2YTYjCDZhdi5INmF2LHZiNixINin2YTZiNmC2Kog2KrYs9io2Kgg2LLZitin2K/YqSDZgdmKINin2YTZiNiy2YYuPC9wPmRkq6CYBTapUOfcdMeR3hQJPFFU6co="/>
+   </div>
+   <div>
+    <div id="master">
+     <!-- logo -->
+     <div id="logo">
+      <a href="/default-ar.aspx">
+       <img alt="Del Monte Logo" src="/images/arabic/logo.png" width="100%"/>
+      </a>
+     </div>
+     <!-- end logo -->
+     <!-- top menu -->
+     <div id="topMenu">
+      <div id="welcome">
+       <div class="table">
+        <div class="tableCell">
+         <img src="/images/arabic/welcome.png"/>
+        </div>
+       </div>
+      </div>
+      <div id="socialBtns">
+       <div>
+        <img src="/images/arabic/slash.png"/>
+       </div>
+       <div style="margin-right: 14px; margin-top: 8px">
+        <a href="/contact-ar.aspx" style="float: none;">
+         إتصل بنا
+        </a>
+        <span style="font: 14px Arial">
+         |
+        </span>
+        تابعونا على
+       </div>
+       <a class="socialBtn" href="https://www.facebook.com/DelMonteArabia" style="margin-right: 40px" target="_blank">
+        <img src="/images/arabic/fb_icon.png"/>
+       </a>
+       <a class="socialBtn" href="https://twitter.com/DelMonteArabia" target="_blank">
+        <img src="/images/arabic/tw_icon.png"/>
+       </a>
+       <a class="socialBtn" href="http://www.pinterest.com/delmontearabia" target="_blank">
+        <img src="/images/arabic/pi_icon.png"/>
+       </a>
+       <a class="socialBtn" href="http://instagram.com/delmontearabia" target="_blank">
+        <img src="/images/arabic/in_icon.png"/>
+       </a>
+       <a class="socialBtn" href="https://www.youtube.com/user/DelMonteArabia" target="_blank">
+        <img src="/images/arabic/yt_icon.png"/>
+       </a>
+       <div>
+        <img src="/images/arabic/slash.png"/>
+       </div>
+       <div style="margin-right: 14px; margin-top: 11px;">
+        <a href="http://delmontearabia.com/default-ar.aspx" style="float: none;font-size: 18px;">
+         عربي
+        </a>
+        <span style="font: 14px Arial;margin: 0 11px;">
+         |
+        </span>
+        <a href="http://www.delmontearabia.com" style="float: none;font-size: 12px;font-weight: bold;font-family: arial;">
+         EN
+        </a>
+       </div>
+       <div style="clear: right">
+       </div>
+      </div>
+      <div id="languagedivIpad" style="position: absolute;  top:11px; left: 20%;  height: 60px; display:none;">
+       <div>
+        <a href="http://delmontearabia.com/default-ar.aspx" style="float: none;font:18px 'mjTaniaXBold';color:#FFF;text-decoration:none;">
+         عربي
+        </a>
+        <span style="font: 14px Arial;margin: 0 11px;color:#FFF;">
+         |
+        </span>
+        <a href="http://www.delmontearabia.com" style="float: none;font-size: 12px;font-weight: bold;font-family: arial;color:#FFF;text-decoration:none;">
+         EN
+        </a>
+       </div>
+      </div>
+      <div id="menuIconIpad">
+       <div class="table">
+        <div class="tableCell">
+         <a href="javascript:void(0)">
+          <img src="/images/arabic/menu_icon_ipad.png"/>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div id="menuIconMobile">
+       <div class="table">
+        <div class="tableCell">
+         <a href="javascript:void(0)">
+          <img src="/images/arabic/menu_icon_mobile.png"/>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="professional" style="background-color:#EC1C24; width: 102px; height: 40px; border-radius: 10px; margin-left: 3%; display: table; cursor: pointer; cursor: hand; position: absolute; top: 17%; left:0;">
+       <div style="display: table-cell; vertical-align: middle; text-align: center; font-size: 120%;">
+        <a href="professional.aspx" style="font: 20px alegre_sans; letter-spacing: 0.5px;color:#fff;text-decoration:none;">
+         Professional
+        </a>
+       </div>
+      </div>
+     </div>
+     <!-- end top menu -->
+     <!-- menu -->
+     <div id="menu">
+      <ul id="subul">
+       <li>
+        <a href="/company-ar.aspx" id="company">
+         <img class="main" src="/images/arabic/mainMenu/company.png"/>
+         <img class="highlight" src="/images/arabic/mainMenu/highlight.png"/>
+        </a>
+       </li>
+       <li>
+        <a href="/sustainability-ar.aspx" id="sustainability">
+         <img class="main" src="/images/arabic/mainMenu/sustainability.png"/>
+         <img class="highlight" src="/images/arabic/mainMenu/highlight.png"/>
+        </a>
+       </li>
+       <li class="havesub2">
+        <a class="havesub" href="/products-ar.aspx" id="products">
+         <img border="0" class="main" src="/images/arabic/mainMenu/products.png">
+          <img border="0" class="highlight img3bg" src="/images/arabic/mainMenu/highlight.png">
+          </img>
+         </img>
+        </a>
+       </li>
+       <li>
+        <a href="/eathealthy-ar.aspx" id="nutrition">
+         <img class="main" src="/images/arabic/mainMenu/nutrition.png"/>
+         <img class="highlight" src="/images/arabic/mainMenu/highlight.png"/>
+        </a>
+       </li>
+       <li>
+        <a href="/professional-ar.aspx" id="professional">
+         <img class="main" src="/images/arabic/mainMenu/professional.png"/>
+         <img class="highlight" src="/images/arabic/mainMenu/highlight.png"/>
+        </a>
+       </li>
+       <li>
+        <a href="/recipes-ar.aspx" id="recipies">
+         <img class="main" src="/images/arabic/mainMenu/recipies.png"/>
+         <img class="highlight" src="/images/arabic/mainMenu/highlight.png"/>
+        </a>
+       </li>
+       <li>
+        <a href="/news-ar.aspx" id="news">
+         <img class="main" src="/images/arabic/mainMenu/news.png"/>
+         <img class="highlight" src="/images/arabic/mainMenu/highlight.png"/>
+        </a>
+       </li>
+       <li>
+        <a href="/careers-ar.aspx" id="careers">
+         <img class="main" src="/images/arabic/mainMenu/careers.png"/>
+         <img class="highlight" src="/images/arabic/mainMenu/highlight.png"/>
+        </a>
+       </li>
+       <li style="background: none">
+        <a href="/kids-corner-ar.aspx" id="kidscorner">
+         <img class="main" src="/images/arabic/mainMenu/kids_corner.png"/>
+         <img class="highlight" src="/images/arabic/mainMenu/highlight.png"/>
+        </a>
+       </li>
+      </ul>
+      <div style="background: url(/images/arabic/menu_bg-bottom.png) no-repeat; width: 243px;
+                    height: 45px; display: block; position: fixed; top: 642px; z-index: 90; right: 0;">
+      </div>
+      <script>
+       var myVar;
+                    $(document).ready(function () {
+
+                        if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) {
+                            $('a').on('click touchend', function (e) {
+                                var el = $(this);
+                                var link = el.attr('href');
+                                window.location = link;
+                            });
+                        }
+
+                        
+                    });
+      </script>
+      <script>
+       $(window).load(function () {
+                        $(".imghover").hover(function () {
+                            $(".showplus").show();
+                            $(".showplus").animate({ bottom: "150px" }, 300);
+                        }, function () {
+                            $(".showplus").fadeOut();
+                            $(".showplus").animate({ bottom: "20px" }, 300);
+                        });
+                    });
+      </script>
+     </div>
+     <!-- end menu -->
+     <!-- main slider -->
+     <div id="mainSlider">
+      <ul>
+       <li style="display:block">
+        <img alt="Del Monte" src="images/arabic/careers/delmonte_careers.jpg" width="100%"/>
+       </li>
+      </ul>
+     </div>
+     <!-- end main slider -->
+     <!-- content -->
+     <div id="content">
+      <div class="middle">
+       <img id="paper" src="/images/eathealthy/stayinghydratedbg-min.png"/>
+       <div style="padding: 12px 20px 20px 23px;">
+        <div id="box1" style="width: 100%;">
+         <div class="healthybar">
+          <div class="title">
+           الاعتقادات الخاطئة
+           <br/>
+           <span>
+            في التغذية
+           </span>
+          </div>
+          <div id="titledesc" style="width: 50%;display: inline-block;">
+          </div>
+          <img src="images/eathealthy/eathealthymisconceptions_ar-min.png">
+          </img>
+         </div>
+         <div id="boxcontent">
+          <div id="description">
+          </div>
+          <div id="foodlist">
+           <div class="item">
+            <div class="productbox right" id="ctl00_ContentPlaceHolder1_Repeater_posts_ctl00_codebehindimage">
+             <div class="productboxcontent">
+              <img class="productphoto" src="/images/eathealthy/2113_eathealthmisconceptions_eggs_ar-min.png"/>
+             </div>
+            </div>
+            <div class="description left" id="ctl00_ContentPlaceHolder1_Repeater_posts_ctl00_codebehindtext">
+             <div style="height: 100%;display: table;">
+              <div style="height: 100%;display: table-cell;vertical-align: middle;">
+               <div class="descnumber">
+                <span>
+                 ١
+                </span>
+               </div>
+               <div class="desc">
+                <div class="itemtitle">
+                 إعتقاد خاطئ:
+                 <span>
+                  يحتوي البيض على نسبة عالية من الكوليسترول وينبغي تفادي أكله
+                 </span>
+                </div>
+                <div class="text">
+                 <p>
+                  لسنوات عديدة كان الناس يأكلون بياض البيض فقط لأنه المصدر الرئيسي للبروتين وكانوا يعزفون عن تناول صفار البيض وهوغني باللوتين (المفيد للبصر) والذي يحتوي كذلك على مجموعة متنوعة من الفيتامينات والمعادن. غير أن البحوث قد أظهرت خلافا للاعتقاد السائد بان الكولسترول في الطعام لا يؤثر كثيرا على نسبة الكولسترول في الدم. ففي الواقع الدهون المشبعة في نظامنا الغذائي تلعب دورا هاما في رفع مستويات الكولسترول. الأشخاص الذين لا يعانون من أي مشاكل طبية وصحية بإمكانهم استهلاك بيضة كاملة في اليوم. لكن بالنسبة لأولئك الذين يعانون من أمراض القلب أو السكري فيجب عليهم الحد والتقليل من صفار البيض الى 3 مرات في الأسبوع على الأكثر. اختاروا البيض الغني بالأحماض الدهنية أوميجا 3 لمحاربة الالتهابات في الجسم والتخفيف من الاكتئاب الخفيف.
+                 </p>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div style="clear:both;">
+            </div>
+           </div>
+           <div class="item">
+            <div class="productbox left" id="ctl00_ContentPlaceHolder1_Repeater_posts_ctl01_codebehindimage">
+             <div class="productboxcontent">
+              <img class="productphoto" src="/images/eathealthy/1207_eathealthmisconceptions_wholegrain_oliveoil_ar-min.png"/>
+             </div>
+            </div>
+            <div class="description right" id="ctl00_ContentPlaceHolder1_Repeater_posts_ctl01_codebehindtext">
+             <div style="height: 100%;display: table;">
+              <div style="height: 100%;display: table-cell;vertical-align: middle;">
+               <div class="descnumber">
+                <span>
+                 ٢
+                </span>
+               </div>
+               <div class="desc">
+                <div class="itemtitle">
+                 إعتقاد خاطئ:
+                 <span>
+                  بإمكاني أكل الأطعمة المغذية بالقدر الذي اريده
+                 </span>
+                </div>
+                <div class="text">
+                 <p>
+                  يفترض بعض الناس أنه بما أن الخبز الأسمر المصنوع من القمح الكلي هو أصح الأغذية لأنه غني من الألياف فيجب ان يكون أقل في السعرات الحرارية، وبالتالي فهم يميلون لتناوله بكثرة. لكن الحقيقة هي أن كلا النوعين من الخبز الأسمر المصنوع من القمح الكامل والخبز الأبيض متساويان في عدد السعرات الحرارية لذلك يجب علينا أكل الخبز المصنوع من حبوب القمح الكاملة باعتدال. دائما قم باختيار خبز حبوب القمح الكاملة المصنوع من "طحين الحبوب الكاملة "  أو " طحين القمح المكتمل " باعتباره مقاوم اول و"النخالة"  كالمقاوم الثاني لضمان أن الخبز غني بالألياف.
+                 </p>
+                 <p>
+                  ليس هناك أي اختلاف بأن زيت الزيتون هو واحد من أكثر الزيوت الصحية المتوفرة لدينا. زيت الزيتون غني بالأحماض الدهنية غير المشبعة الاحادية المهمة جدا لصحة القلب. فكثير من الناس يعتقدون أنه بما أنه صحي فهو أقل في السعرات الحرارية من الزيوت الأخرى. لكن جميع الزيوت تحتوي على سعرات حرارية مماثلة والمتمثلة في 126 سعرة حرارية لكل ملعقة كبيرة، بما في ذلك زيت الزيتون.
+                 </p>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div style="clear:both;">
+            </div>
+           </div>
+           <div class="item">
+            <div class="productbox right" id="ctl00_ContentPlaceHolder1_Repeater_posts_ctl02_codebehindimage">
+             <div class="productboxcontent">
+              <img class="productphoto" src="/images/eathealthy/3890_eathealthmisconceptions_lowfat_ar-min.png"/>
+             </div>
+            </div>
+            <div class="description left" id="ctl00_ContentPlaceHolder1_Repeater_posts_ctl02_codebehindtext">
+             <div style="height: 100%;display: table;">
+              <div style="height: 100%;display: table-cell;vertical-align: middle;">
+               <div class="descnumber">
+                <span>
+                 ٣
+                </span>
+               </div>
+               <div class="desc">
+                <div class="itemtitle">
+                 إعتقاد خاطئ:
+                 <span>
+                  المنتجات منخفضة الدهون أو الخالية من الدهون دائما أقل في السعرات الحرارية
+                 </span>
+                </div>
+                <div class="text">
+                 يعتقد الكثيرون انه نظرا لوجود التسمية -خالية من الدهون- فإن المنتج أقل بكثير في السعرات الحرارية من المنتج الأصلي. لكن من المعروف أنه عندما تتم إزالة الدهون من المواد الغذائية فان الطعم والملمس يصبحان مختلفان وللتعويض عن ذلك يضاف اليها السكر بشكل بديهي. وبالتالي، فإن السعرات الحرارية تصبح غير مختلفة كثيرا بين المنتجات المنخفضة أو الخالية من الدهون والمنتجات الكاملة الدسم خاصة عندما نتحدث عن الأطعمة المصنعة مثل البسكويت ورقائق البطاطس والحلويات وغيرها. عند محاولة التخلص من الكيلوجرامات الزائدة فيجب المواظبة على أكل المنتجات الطازجة والتحكم في كميات الطعام وفقا لاحتياجات للجسم.
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div style="clear:both;">
+            </div>
+           </div>
+           <div class="item">
+            <div class="productbox left" id="ctl00_ContentPlaceHolder1_Repeater_posts_ctl03_codebehindimage">
+             <div class="productboxcontent">
+              <img class="productphoto" src="/images/eathealthy/717_eathealthmisconceptions_lessfood_ar-min.png"/>
+             </div>
+            </div>
+            <div class="description right" id="ctl00_ContentPlaceHolder1_Repeater_posts_ctl03_codebehindtext">
+             <div style="height: 100%;display: table;">
+              <div style="height: 100%;display: table-cell;vertical-align: middle;">
+               <div class="descnumber">
+                <span>
+                 ٤
+                </span>
+               </div>
+               <div class="desc">
+                <div class="itemtitle">
+                 إعتقاد خاطئ:
+                 <span>
+                  كلما أكلت كمية أقل من الطعام كلما فقدت المزيد من الوزن على المدى الطويل
+                 </span>
+                </div>
+                <div class="text">
+                 <p>
+                  كثير من الناس الذين يعانون من السمنة أو الزيادة في الوزن يعتقدون أن البرنامج الأكثر تقييدا من حيث السعرات الحرارية وكلما كانت كمية الطعام التي يتناولونها أقل، كلما فقدوا المزيد من الوزن. لكن ما تم ملاحظته وتأكيده أنه في أعقاب اتباع هذه البرامج منخفضة السعرات الحرارية لفترة طويلة سيؤدي ذلك إلى انخفاض عملية الأيض لديهم. وهذا يعني أنهم على المدى الطويل لم يعودوا قادرين على حرق جميع الطعام المأكول مثل السابق بعد اتباع هذه الحمية التي لا أساس لها من الصحة. وبالمقابل، مع مرور الوقت تسبب زيادة في الوزن.
+                 </p>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div style="clear:both;">
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="back" style="text-align: center;position: absolute;left:8%;bottom:6%;">
+          <a href="/eathealthy-ar.aspx">
+           <img src="/images/product-details-final/subcategories_back_ar.png" style="width:8%;"/>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div style="clear:right">
+     </div>
+     <!-- end content -->
+     <script>
+      $(document).ready(function () {
+            $("#menu ul li #nutrition").addClass("active");
+            $("#menu ul li #nutrition .highlight").css("display", "block");
+            //  $("#products_menu").css("display", "block");
+        });
+     </script>
+     <script>
+      (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=179264128894049";
+            fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));
+
+        $(document).ready(function () {
+            var prd_id = getUrlParameters("pid", "", true);
+
+            //            //find the link with rel prd_id
+            //            var item;
+            //            var product;
+            //            var sub_category;
+            //            var elements = $('.sub a');
+            //            var rel_attr = '';
+            //            var sub_cat_id = '';
+            //            for (var i = 0; i < elements.length; i++) {
+            //                rel_attr = $(elements[i]).attr('rel');
+            //                rel_attr = rel_attr.split("_");
+            //                sub_cat_id = rel_attr[0];
+            //                rel_attr = rel_attr[1];
+            //                sub_category = $('#' + sub_cat_id);
+            //                sub_category.removeClass('active');
+            //                if (rel_attr == prd_id) {
+            //                    break;
+            //                }
+            //            }
+
+            //            product = $('#' + prd_id);
+            //            product.css('display', 'block');
+            //            sub_category.addClass('active');
+
+            //            if ($(this).parent().find('.sub').is(':visible')) {
+            //                $(this).removeClass('active');
+            //                $(this).parent().find('.sub').slideUp(250);
+            //            } else {
+            //                $('#ingredients a.main').removeClass('active');
+            //                $('#ingredients .sub').slideUp(250);
+            //                $(this).addClass('active');
+            //                $(this).parent().find('.sub').slideDown(750);
+            //            }
+
+        });
+        function getUrlParameters(parameter, staticURL, decode) {
+            var myUrl = window.location.href;
+
+            if (myUrl.indexOf("?") > -1) {
+                var currLocation = (staticURL.length)
+                        ? staticURL : window.location.search,
+                        parArr = currLocation.split("?")[1].split("&"),
+                                            returnBool = true;
+
+                for (var i = 0; i < parArr.length; i++) {
+                    parr = parArr[i].split("=");
+                    if (parr[0] == parameter) {
+                        return (decode) ? decodeURIComponent(parr[1]) : parr[1];
+                        returnBool = true;
+                    } else {
+                        returnBool = false;
+                    }
+                }
+
+                if (!returnBool) return false;
+            }
+            else {
+                return parr = '';
+
+            }
+        }
+     </script>
+     <script>
+      $(document).ready(function () {
+            $("img.img3").next().addClass("active");
+            $("img.img3").next().css("display", "block");
+
+            $('#productselect').on('change', function () {
+                $.get('json/getProductslist.aspx?id=' + this.value, function (data) {
+
+                    data = data.replace("<pre>", "").replace("</pre>", "").replace("\n", "");
+                    identity = jQuery.parseJSON(data);
+                    var s = "<option value='0'>-- Select Product --</option>";
+                    for (i = 0; i < identity.Data.length; i++) {
+                        s += "<option value='" + identity.Data[i].prd_id + "'>" + identity.Data[i].prd_menu_title + "</option>";
+                    }
+                    $('#productselect2').html(s);
+
+                })
+
+                //$('#productselect2').trigger('change');
+
+            })
+            $('#productselect2').on('change', function () {
+                if (this.value !== 0) {
+                    location.href = 'product-details-ar.aspx?cid=&pid=' + this.value;
+                }
+            })
+        });
+        function Enlarge(id) {
+            var obj = $('#' + id).find('a');
+
+            $('#' + id).find('a').addClass("hover");
+            $('#' + id).addClass("overAll");
+        }
+        function Reduce(id) {
+            var obj = $('#' + id).find('a');
+
+            $('#' + id).find('a').removeClass("hover");
+            $('#' + id).removeClass("overAll");
+        }
+     </script>
+     <style>
+      #ctl00_ContentPlaceHolder1_Rating1 a
+        {
+            cursor: default;
+        }
+     </style>
+     <!--Beginning of Script: hide each nutrition panel having 0 or unavailable value-->
+     <script type="text/javascript">
+      //<![CDATA[
+        $(document).ready(function () {
+
+            var item = $('.nut_qnt');
+            var quantityFact = $('.quantityFact');
+            for (var i = 0; i <= item.length; i++) {
+
+                if (($(item[i]).text() == '0g') || ($(item[i]).text() == '0 g') || ($(item[i]).text() == '0.0g') || ($(item[i]).text() == '0.0 g') || ($(item[i]).text() == 'n/a')) {
+                    if (($(quantityFact[i]).text() == '0%') || ($(quantityFact[i]).text() == '0 %') || ($(quantityFact[i]).text() == '0.0%') || ($(quantityFact[i]).text() == '0.0 %') || ($(quantityFact[i]).text() == 'n/a')) {
+                        $(item[i]).addClass('hidden');
+                    }
+
+                }
+            }
+
+            $(".hidden").closest("li").css("display", "none");
+
+        });//]]>
+     </script>
+     <!--End of Script-->
+     <!-- footer -->
+     <div id="footer">
+      <div id="ananas">
+       <img src="/images/arabic/ananas.png"/>
+      </div>
+      <div id="footerBtns">
+       <div class="block firstChild">
+        <div style="margin-bottom: 20px">
+         <img src="/images/arabic/footer_logo.jpg"/>
+        </div>
+        <a href="http://www.freshdelmonte.com" target="_blank">
+         www.freshdelmonte.com
+        </a>
+        <a href="http://www.fruits.com" target="_blank">
+         www.fruits.com
+        </a>
+        <a href="http://www.delmonteeurope.com" target="_blank">
+         www.delmonteeurope.com
+        </a>
+       </div>
+       <div class="block">
+        <h1>
+         الشركة
+        </h1>
+        <a href="/company-ar.aspx">
+         نظرة عامة
+        </a>
+        <a href="/files/DelMonteTermsofUse.pdf" target="_blank">
+         الشروط والأحكام
+        </a>
+        <a href="/files/DMPrivacyPolicy.pdf" target="_blank">
+         خصوصية
+        </a>
+       </div>
+       <div class="block">
+        <h1>
+         الإستدامة
+        </h1>
+        <a href="javascript:void(0);" onclick="gotoSust(1);">
+         الإستدامة
+        </a>
+        <a href="javascript:void(0);" onclick="gotoSust(2);">
+         البيئة
+        </a>
+        <a href="javascript:void(0);" onclick="gotoSust(3);">
+         إجتماعي
+        </a>
+        <a href="javascript:void(0);" onclick="gotoSust(4);">
+         شهادة
+        </a>
+       </div>
+       <div class="block">
+        <h1>
+         وصفات
+        </h1>
+        <a href="/recipes-ar.aspx">
+         تذوق
+        </a>
+       </div>
+       <div class="block">
+        <h1>
+         أخبار
+        </h1>
+        <a href="/news-ar.aspx">
+         آخر الأخبار
+        </a>
+       </div>
+       <div class="block">
+        <h1>
+         فرص عمل
+        </h1>
+        <a href="/careers-ar.aspx">
+         أحدث الوظائف
+        </a>
+        <a href="/vacancies-ar.aspx">
+         قائمة الوظائف
+        </a>
+       </div>
+       <div class="block">
+        <h1>
+         أطفال
+        </h1>
+        <a href="/kids-ar.aspx">
+         قسم الأطفال
+        </a>
+       </div>
+       <div class="block">
+        <h1>
+         إتصل بنا
+        </h1>
+        <a href="/contact-ar.aspx">
+         تواصل معنا
+        </a>
+       </div>
+       <div style="clear: right">
+       </div>
+      </div>
+      <div style="clear: right">
+      </div>
+     </div>
+     <!-- end footer -->
+    </div>
+   </div>
+  </form>
+ </body>
+</html>

@@ -1,0 +1,1676 @@
+<!DOCTYPE doctype html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="wikiwand" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="wikiwand" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="wikiwand" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" ng-app="wikiwand" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
+ <!--<![endif]-->
+ <head>
+  <!--header generic -->
+  <!--this is the original url for google fonts-->
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Lora:400,700,400italic,700italic|Merriweather:400italic,400,300italic,300,700,700italic|Open+Sans:300italic,400italic,700italic,700,300,400&amp;subset=latin,cyrillic-ext,greek-ext,greek,devanagari,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://chrome.google.com/webstore/detail/emffkefkbkpkgpdeeooapgaicgmcbolj" rel="chrome-webstore-item"/>
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <!--<script type="text/javascript"  src="//assets.wikiwand.com/ads.js"></script>-->
+  <link href="//assets.wikiwand.com/img/wikiwand_icon_apple.png" rel="apple-touch-icon">
+   <script>
+    function detectWidth(){
+            var w = window;
+            var d = w.document;
+            var e = d.documentElement;
+            var clientWidth = screen.width || w.innerWidth || e.offsetWidth || e.clientWidth;
+            return clientWidth;
+        }
+
+        var EXCHANGE_RATE = 1;
+        var PREBID_TIMEOUT = 1800;
+
+        if(detectWidth() < 768) PREBID_TIMEOUT = 1800;
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+
+        function initAdserver() {
+            if (pbjs.initAdserverSet) return;
+            //load GPT library here
+            loadScript('//www.googletagservices.com/tag/js/gpt.js');
+            pbjs.initAdserverSet = true;
+        }
+        setTimeout(initAdserver, PREBID_TIMEOUT);
+        var pbjs = pbjs || {};
+        pbjs.que = pbjs.que || [];
+        loadScript('//assets.wikiwand.com/js/prebid.js'); //Add Your Script Here
+
+        pbjs.que.push(function() {
+            pbjs.setConfig({
+                enableSendAllBids: true
+            });
+        });
+
+        function loadScript(scriptSrc) {
+            var script = document.createElement('script');
+            script.async=true;
+            script.type = 'text/javascript';
+            script.src = scriptSrc;
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(script, node);
+        }
+
+        pbjs.que.push(function() {
+            var adUnits = [{
+                code: 'div-gpt-ad-1527601425745-0',
+                mediaTypes: {
+                    banner: {
+                        sizes: [320, 50]
+                    }
+                },
+                bids: [
+                    {bidder: 'appnexus' ,params: {placementId: '14178733'}},
+                    {bidder: 'audienceNetwork' ,params: {placementId: '2108823939380318_2108906992705346'}}
+                ]
+            },{
+                code: 'div-gpt-ad-1527601425745-2',
+                mediaTypes: {
+                    banner: {
+                        sizes: [300, 250]
+                    }
+                },
+                bids: [
+                    {bidder: 'appnexus' ,params: {placementId: '14178714'}},
+                    {bidder: 'audienceNetwork' ,params: {placementId: '2108823939380318_2108906782705367'}}
+                ]
+            },{
+                code: 'div-gpt-ad-1527601425745-3',
+                mediaTypes: {
+                    banner: {
+                        sizes: [300, 250]
+                    }
+                },
+                bids: [
+                    {bidder: 'appnexus' ,params: {placementId: '14178714'}},
+                    {bidder: 'audienceNetwork' ,params: {placementId: '2108823939380318_2114674888795223'}}
+                ]
+            }];
+
+
+            pbjs.addAdUnits(adUnits);
+            pbjs.requestBids({
+                bidsBackHandler: function(bidResponses) {
+                    initAdserver();
+                },
+                timeout : PREBID_TIMEOUT
+            });
+
+            pbjs.bidderSettings = {
+                //standard applies to all bidders
+                standard: {
+                    adserverTargeting: [{
+                        key: "hb_bidder",
+                        val: function(bidResponse) {
+                            return bidResponse.bidderCode;
+                        }
+                    }, {
+                        key: "hb_adid",
+                        val: function(bidResponse) {
+                            return bidResponse.adId;
+                        }
+                    }, {
+                        key: "hb_pb",
+                        val: function(bidResponse) {
+                            if(bidResponse.cpm >= 20) return '20.00';
+                            return (Math.floor(bidResponse.cpm * 20) / 20).toFixed(2);
+                        }
+                    }]
+                },
+                appnexus: {
+                    bidCpmAdjustment: function (bidCpm) {
+                        return bidCpm * EXCHANGE_RATE * .90;
+                    },
+                    alwaysUseBid: true
+                },
+                audienceNetwork: {
+                    bidCpmAdjustment: function(bidCpm) {
+                        return bidCpm * EXCHANGE_RATE * .80;
+                    },
+                    alwaysUseBid: true
+                }
+            };
+        });  //end push command
+
+        // Wrapper for Adnimation, generated on 2018-10-18T03:08:23-04:00, version 2018.04.02
+        pbjs.que.push(function() {
+
+            var confiantWrap = function confiantWrap(a,b,c,d,e){function f(a){return(m(a)||"")[s]("/","_")[s]("+","-")}function g(b,c,d){var e=w+n(b)+"&d="+c,f="err__"+1*new Date;k[f]=d;var g="<"+q+" on"+t+'="void('+f+'())" '+r+'="'+e+'" type="text/java'+q+'" ></'+q+">";a[v](g)}function h(){var c=f(d+"/"+x.k.hb_bidder[0]+":"+x.k.hb_size[0]),h={wh:c,wd:l.parse(l[u](x)),wr:0};g(c,f(l[u](h)),function(){a[v](b.ad)});var i={prebid:{adId:b.adId,cpm:b.cpm}},j={d:h,t:b.ad,cb:e,id:i};k[d]={},k[d][c]=j}var i=b.bidder,j=b.size,k=a.parentWindow||a.defaultView,l=k.JSON,m=k.btoa,n=k.encodeURIComponent;if(!l||!m)return!1;var o="t",p="i",q="script",r="src",s="replace",t="error",u="stringify",v="wr"+p+o+"e",w="https://"+c+"/?wrapper="+n(d)+"&tpid=",x={k:{hb_bidder:[i],hb_size:[j]}};return h(),a.close(),!0};
+
+            // keep a reference to original renderAd function
+            var w = window;
+            w._clrm = w._clrm || {};
+            w._clrm.renderAd = w._clrm.renderAd || pbjs.renderAd;
+            var config = w._clrm.prebid || {
+                /* Enables sandboxing on a device group
+                     All:1 , Desktop:2, Mobile: 3, iOS: 4, Android: 5, Off: 0
+                 */
+                sandbox: 0
+            };
+
+            var isGoogleFrame = function (c) {
+                return c.tagName === 'IFRAME' && c.id && c.id.indexOf('google_ads_iframe_') > -1;
+            };
+
+            var shouldSandbox = function () {
+                var uaToRegexMap = {
+                        "mobile": /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/i,
+                        "ios": /(.+)(iPhone|iPad|iPod)(.+)OS[\s|\_](\d)\_?(\d)?[\_]?(\d)?.+/i,
+                        "android": /Android/i
+                    },
+                    sbStr = "" +config.sandbox;
+                if (sbStr === "1") {
+                    // all environments
+                    return true;
+                } else if (sbStr === "2") {
+                    // desktop
+                    return !navigator.userAgent.match(uaToRegexMap["mobile"]);
+                } else if (sbStr === "3") {
+                    // mobile
+                    return navigator.userAgent.match(uaToRegexMap["mobile"]);
+                } else if (sbStr === "4") {
+                    // ios only
+                    return navigator.userAgent.match(uaToRegexMap["ios"]);
+                } else if (sbStr === "5") {
+                    // android
+                    return navigator.userAgent.match(uaToRegexMap["android"]);
+                } else {
+                    return false;
+                }
+            };
+
+            Node.prototype.appendChild = (function (original) {
+                return function (child) {
+                    if (isGoogleFrame(child) && shouldSandbox() && !child.getAttribute('sandbox')) {
+                        child.setAttribute('sandbox', 'allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation');
+                        child.setAttribute('data-forced-sandbox', true);
+                    }
+                    return original.call(this, child);
+                };
+            }(Node.prototype.appendChild));
+
+
+            // override renderAd
+            pbjs.renderAd = function(doc, id) {
+                if (doc && id) {
+                    try {
+
+                        // get pbjs bids
+                        var bids = [],
+                            bidResponses = pbjs.getBidResponses(),
+                            highestBids = pbjs.getHighestCpmBids();
+                        for (var slot in bidResponses) {
+                            bids = bids.concat(bidResponses[slot].bids);
+                        }
+                        bids = bids.concat(highestBids);
+
+                        // lookup ad by ad Id (avoid ES6 array functions)
+                        var bid, i;
+                        for (i=0; i<bids.length; i++) {
+                            if (bids[i].adId === id) {
+                                bid = bids[i];
+                                break;
+                            }
+                        }
+
+                        // Optional: list of bidders that don't need wrapping, array of strings, e.g.: ["bidder1", "bidder2"]
+                        var confiantExcludeBidders = [];
+
+                        // check bidder exclusion (avoid ES6 array functions)
+                        var excludeBidder = false;
+                        for (i=0; i<confiantExcludeBidders.length; i++) {
+                            if (bid.bidder === confiantExcludeBidders[i]) {
+                                excludeBidder = true;
+                                break;
+                            }
+                        }
+
+                        if (bid && bid.ad && !excludeBidder) {
+                            // Neutralize document
+                            var docwrite = doc.write;
+                            var docclose = doc.close;
+                            doc.write = doc.close = function() {};
+                            // call renderAd with our neutralized doc.write
+                            window._clrm.renderAd(doc, id);
+                            // Restore document
+                            delete doc.write;
+                            delete doc.close;
+
+                            var callback = function(blockingType, blockingId, isBlocked, wrapperId, tagId, impressionData) {
+                                console.log("w00t one more bad ad nixed.", arguments);
+                            };
+
+                            // do the actual ad serving and fall back on document.write if failure
+                            if (!confiantWrap(doc, bid, 'clarium.global.ssl.fastly.net', 'd2ehZtyVAa1kXxOtMxFp7XciXcU', callback)) {
+                                doc.write(bid.ad);
+                                doc.close();
+                            }
+
+                            return;
+                        }
+                    } catch (e) {
+                        console.log(e);
+                    }
+                }
+
+                // if bid.ad is not defined or if any error occurs, call renderAd to serve the creative
+                window._clrm.renderAd(doc, id);
+            };
+
+        });
+
+
+        pbjs.que.push(function() {
+            pbjs.enableAnalytics({
+                provider: 'ga',
+                options: {
+                    global: 'ga',
+                    enableDistribution: false,
+                    sampling: 0.10
+                }
+            });
+        });
+   </script>
+   <script>
+    var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+   </script>
+   <script>
+    googletag.cmd.push(function() {
+
+        var TopBannerMapping = googletag.sizeMapping().
+            addSize([0, 0], [320, 50]).
+            addSize([730, 200], [728, 90]).
+            build();
+
+        var SideBarBannerMapping = googletag.sizeMapping().
+            addSize([0, 0], []).
+            addSize([730, 200], [160, 600]).
+            build();
+
+
+        var MiddleBannerMapping = googletag.sizeMapping().
+            addSize([0, 0], [300, 250]).
+            addSize([730, 200], [728, 90]).
+            build();
+
+        var BottomBannerMapping = googletag.sizeMapping().
+            addSize([0, 0], [300, 250]).
+            addSize([730, 200], [728, 90]).
+            build();
+
+        googletag.
+            defineSlot('/339474670/Wikiwand/ATF', [[728, 90], [320, 50]], 'div-gpt-ad-1527601425745-0').
+            defineSizeMapping(TopBannerMapping).
+            addService(googletag.pubads());
+
+        googletag.
+            defineSlot('/339474670/Wikiwand/SideBar', [[160, 600], [120, 600]], 'div-gpt-ad-1527601425745-1').
+            defineSizeMapping(SideBarBannerMapping).
+            addService(googletag.pubads());
+
+        googletag.
+            defineSlot('/339474670/Wikiwand/BTF', [[728, 90], [300, 250]], 'div-gpt-ad-1527601425745-2').
+            defineSizeMapping(MiddleBannerMapping).
+            addService(googletag.pubads());
+
+        googletag.
+            defineSlot('/339474670/Wikiwand/Bottom', [[728, 90], [300, 250]], 'div-gpt-ad-1527601425745-3').
+            defineSizeMapping(BottomBannerMapping).
+            addService(googletag.pubads());
+
+        pbjs.que.push(function() {
+            pbjs.setTargetingForGPTAsync();
+        });
+
+        googletag.enableServices();
+    });
+   </script>
+   <script>
+    (function () {
+            var node = document.getElementsByTagName('script')[0],
+            rvbP = document.createElement('script');
+            window.CMT = { appId: '97173451-3aaa-4889-b6d0-38984809ec49' };
+            rvbP.defer = true;
+            rvbP.type = 'text/javascript';
+            rvbP.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                '//revboostprocdnadsprod.azureedge.net/scripts/latest/min.js';
+            node.parentNode.insertBefore(rvbP, node);
+        })();
+   </script>
+   <style>
+    @media screen and (max-width: 1680px) {
+        .sideplacement {
+            right: -160px !important;
+        }
+    }
+    @media screen and (max-width: 1400px) {
+        .sideplacement {
+            display: none
+        }
+    }
+   </style>
+   <!--BEGIN FIRSTIMPRESSION TAG - wikiwand.com -->
+   <script data-cfasync="false" type="text/javascript">
+    window.disableAdLayout = false;
+        window.apd_options = { 'websiteId': 7350, 'runFromFrame': false };
+        (function() {
+            var w = window.apd_options.runFromFrame ? window.top : window;
+            if(window.apd_options.runFromFrame && w!==window.parent) w=window.parent;
+            if (w.location.hash.indexOf('apdAdmin') !== -1){if(typeof(Storage) !== 'undefined') {w.localStorage.apdAdmin = 1;}}
+            var adminMode = ((typeof(Storage) == 'undefined') || (w.localStorage.apdAdmin == 1));
+            w.apd_options=window.apd_options;
+            var apd = w.document.createElement('script'); apd.type = 'text/javascript'; apd.async = true;
+            apd.src = '//' + (adminMode ? 'cdn' : 'ecdn') + '.firstimpression.io/' + (adminMode ? 'fi.js?id=' + window.apd_options.websiteId : 'fi_client.js') ;
+            var s = w.document.getElementsByTagName('head')[0]; s.appendChild(apd);
+        })();
+   </script>
+   <!-- END FIRSTIMPRESSION TAG -->
+   <img height="0" id="imagePlaceHolder" src="" style="opacity:0;position:fixed" width="0"/>
+   <script>
+    console.time('time up to showArticleContents');
+        var precache_from_extension = false;
+        if (window.location.hash.indexOf('precache_from_extension=true') > -1) {
+            precache_from_extension = true;
+        }
+        var pageLoadStart = new Date().getTime();
+        var pageHTMLReceived = (new Date()).getTime();
+        var genericData = {
+            debug: {
+                pageLoadedTimestamp: (new Date()).getTime()
+            }
+        };
+        var localContentHtml;
+        var localContentHtmlPartial;
+        var attempts = 0;
+        function tempConditioning(mystring) {
+            //this is to migrate old article contents until we do a database recaching (advance version)
+            //replace old pic-placeholder with one which supports both protocols
+            if (location.protocol == 'https:') {
+                var newstring = mystring.split('http://assets.cdn.wikiwand.com/img/pic-placeholder.gif').join('//assets.wikiwand.com/img/pic-placeholder.gif');
+            } else {
+                newstring = mystring;
+            }
+            return newstring;
+        }
+
+        function httpGet(theUrl, type) {
+            var xmlHttp = null;
+            xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState == 4) // Finished
+                {
+                    if (xmlHttp.status == 200) {
+                        if (theUrl.indexOf('_PARTIAL_DOWNLOAD') == -1) {
+                            //console.log('got full text');
+                            localContentHtml = xmlHttp.responseText;
+                        } else {
+                            //console.log('got partial text');
+                            localContentHtmlPartial = xmlHttp.responseText;
+                        }
+                    }
+                    else {
+                        console.log('failed with status ',xmlHttp.status);
+                        attempts++;
+                        if (attempts < 10 && (theUrl.indexOf('_PARTIAL_DOWNLOAD') == -1)) {
+                            console.log("DOWNLOAD FAILED, TRYING AGAIN ", theUrl);
+                            if (xmlHttp.status == 0) {
+                                if (theUrl.indexOf('s3.amazonaws.com') != -1) {
+                                    if (attempts==9) {
+
+                                        setTimeout(function() {
+                                            var element;
+                                            if (typeof(noAdblock) == 'undefined') {
+                                                element = '#adblockNotice';
+                                            } else {
+                                                element = '#httpsEverywhereNotice';
+                                            }
+                                            if ($(element).length > 0) {
+                                                console.log(' element exists');
+                                                $(element).show();
+                                                $(element).css('opacity', 1);
+                                                $(element).detach().prependTo('#content');
+                                            }
+                                        }, 6000);
+                                    }
+                                }
+                                var urlOnS3 = 'https://s3.amazonaws.com/ww-article-cache-1/ar/%25D8%25B7%25D8%25B4%25D9%2582%25D9%2586%25D8%25AF';
+                                urlOnS3 = urlOnS3.replace('http://', '//').replace('https://', '//');
+                                urlOnS3 = urlOnS3.replace(/\+/g, '%2B');
+                                httpGet(urlOnS3, 'html');
+                                httpGet(urlOnS3, 'html');
+                            } else {
+                                //console.log('status ', xmlHttp);
+                                setTimeout(function() {
+                                    httpGet(theUrl, 'html');
+                                }, 500);
+                            }
+                        }
+                    }
+                }
+            };
+            xmlHttp.open("GET", theUrl, true);
+            xmlHttp.send(null);
+        }
+   </script>
+   <script>
+    //console.log('have cdn file in generic header, this is cached');
+        var loadedFromCache = true;
+        var urlOnCdn = 'https://db0nus869y26v.cloudfront.net/ar/%25D8%25B7%25D8%25B4%25D9%2582%25D9%2586%25D8%25AF?rev=1551991223330';
+        urlOnCdn = urlOnCdn.replace('http://', '//').replace('https://', '//');
+        urlOnCdn = urlOnCdn.replace(/\+/g, '%2B');
+        httpGet(urlOnCdn, 'html');
+        //var partialDownloadUrl=urlOnCdn.replace('?rev','_PARTIAL_DOWNLOAD?rev');
+        //httpGet(partialDownloadUrl,'html');
+        try {
+            var mainImageUrl = '//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Tashkent_the_building_of_town_council_02.jpg/1280px-Tashkent_the_building_of_town_council_02.jpg';
+            mainImageUrl = mainImageUrl.replace('https://', '//').replace('http://', '//');
+            var image = document.getElementById("imagePlaceHolder");
+            image.src = mainImageUrl;
+        }
+        catch (e) {console.log('error predownloading image', e);}
+   </script>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+   </script>
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js">
+   </script>
+   <!--
+    
+    <link rel="stylesheet" href="//assets.wikiwand.com/css/fonts.92ff4698.css" type="text/css" media="screen"/>
+    
+    -->
+   <script>
+    var CURRENT_USER_ID=null;
+   </script>
+   <link href="//assets.wikiwand.com/css/wikiwand.early.min.fd1a9197.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="//assets.wikiwand.com/js/wikiwand.early.min.d470c7d7.js" type="text/javascript">
+    </script>
+    <!-- BEGIN TRACKJS -->
+    <script type="text/javascript">
+     var LOAD_TRACKJS = false;
+        if (LOAD_TRACKJS && !precache_from_extension) {
+            window._trackJs = {
+                token: '9bcd9b3d130a4b8eb9f58ff06e6781b5',
+                callback: {enabled: false},
+                console: {enabled: true, display: true, error: false},
+                network: {enabled: false},
+                visitor: {enabled: false},
+                window: {enabled: false},
+                onError: function(payload, error) {
+
+                    // List borrowed from the awesome @pamelafox
+                    // https://gist.github.com/pamelafox/1878283
+                    var i, commonCrypticExtensionErrors = [
+                        "top.GLOBALS",
+                        "originalCreateNotification",
+                        "canvas.contentDocument",
+                        "MyApp_RemoveAllHighlights",
+                        "http://tt.epicplay.com",
+                        "Can't find variable: ZiteReader",
+                        "jigsaw is not defined",
+                        "ComboSearch is not defined",
+                        "http://loading.retry.widdit.com/",
+                        "atomicFindClose",
+                        "fb_xd_fragment",
+                        "Script error",
+                        "__adg_gm_commands_api",
+                        "A Chrome Web Store installation is already pending.",
+                        "‘-×´]/: Range out of order in character class"
+                    ];
+                    for (i = 0; i < commonCrypticExtensionErrors.length; i++) {
+                        if (payload.message.indexOf(commonCrypticExtensionErrors[i]) > -1) {
+                            // returning any kind of falsy value will reject error
+                            return false;
+                        }
+                    }
+                    return true; // Return any kind of truthy value here to allow transmission of error
+                }
+            };
+            var fileref = document.createElement('script');
+            fileref.setAttribute("type", "text/javascript");
+            fileref.setAttribute("src", "//d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js");
+            if (typeof fileref != "undefined")    document.getElementsByTagName("head")[0].appendChild(fileref);
+        }
+    </script>
+    <link href="//fonts.googleapis.com/earlyaccess/droidarabickufi.css" rel="stylesheet" type="text/css"/>
+    <script>
+     // disable all logs
+		if (document.location.search.indexOf('debug_logs=1') == -1) {
+			console.log = function() {};
+			console.time = function() {};
+			console.timeEnd = function() {};
+		}
+    </script>
+    <script>
+     var serverData={"fromSearchEngine":false,"layout":"wikiwand","publisherMonetization":"false","showTOC":"true","agent":{"string":"Mozilla/5.0","ua":{"family":"Other","major":null,"minor":null,"patch":null},"userAgent":{"family":"Other","major":null,"minor":null,"patch":null},"os":{"family":"Other","major":null,"minor":null,"patch":null,"patchMinor":null},"device":{"family":"Other"},"family":"Other","isMobileRes":false,"extensionInstalled":false,"fromSearchWidget":false,"isBot":false,"isHuman":false},"config":{"environment":"production","features":{"news":false,"map":true,"toc":true,"gallery":true,"partials":true,"apiCache":true,"invites":false,"articlePromo":true,"classification":false,"moduleYouTubeVideo":false,"webSocket":false,"snippet":true,"userManagement":false,"comments":false,"reportBoardActions":true,"paywall":false,"boards":false,"comparisons":false},"agent":{"string":"Mozilla/5.0","ua":{"family":"Other","major":null,"minor":null,"patch":null},"userAgent":{"family":"Other","major":null,"minor":null,"patch":null},"os":{"family":"Other","major":null,"minor":null,"patch":null,"patchMinor":null},"device":{"family":"Other"},"family":"Other","isMobileRes":false,"extensionInstalled":false,"fromSearchWidget":false,"isBot":false,"isHuman":false},"facebook":{"appId":"823404911083396"}},"cpu":null,"callToInstallExtension":false,"settings":{"tests":{},"monPlus":false}};
+		
+		
+		
+
+		
+			var articleData={"cache":{"cacheDBVer":54,"cacheDate":1551991223330,"hash":"8a55e5902cd3796cae91ac5a23b4f070","key":"/ar/%D8%B7%D8%B4%D9%82%D9%86%D8%AF","wikiRevision":"31070838","canonical":"/ar/%D8%B7%D8%B4%D9%82%D9%86%D8%AF","isCanonical":true,"S3FileUrl":"https://s3.amazonaws.com/ww-article-cache-1/ar/%25D8%25B7%25D8%25B4%25D9%2582%25D9%2586%25D8%25AF","CDNFileUrl":"https://db0nus869y26v.cloudfront.net/ar/%25D8%25B7%25D8%25B4%25D9%2582%25D9%2586%25D8%25AF?rev=1551991223330"},"langCodeUrl":"ar","rawArticlePath":"%D8%B7%D8%B4%D9%82%D9%86%D8%AF","fonts":{"arabic":true},"bodyClasses":["rtl","lg_arabic"],"hasInfobox":true,"facts":[{"key":"البلد","keyLink":null,"val":"<span class=\"flagicon\"><img alt=\"\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/23px-Flag_of_Uzbekistan.svg.png\" decoding=\"async\" width=\"23\" height=\"12\" class=\"thumbborder immediate\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/35px-Flag_of_Uzbekistan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/46px-Flag_of_Uzbekistan.svg.png 2x\" data-file-width=\"500\" data-file-height=\"250\" data-original=\"//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/23px-Flag_of_Uzbekistan.svg.png\" data-srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/35px-Flag_of_Uzbekistan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/46px-Flag_of_Uzbekistan.svg.png 2x\"> </span><a href=\"/ar/%D8%A3%D9%88%D8%B2%D8%A8%D9%83%D8%B3%D8%AA%D8%A7%D9%86\" title=\"&#x623;&#x648;&#x632;&#x628;&#x643;&#x633;&#x62A;&#x627;&#x646;\" class=\"int-link\">أوزبكستان</a>","section":"تقسيم إداري"},{"key":"المحافظة","keyLink":null,"val":"طشقند","section":"تقسيم إداري"},{"key":"المحافظ","keyLink":null,"val":"رحمون بك أوسمونوف","section":"المسؤولون"},{"key":"الأرض","keyLink":null,"val":"334,8 <a href=\"/ar/%D9%83%D9%8A%D9%84%D9%88%D9%85%D8%AA%D8%B1_%D9%85%D8%B1%D8%A8%D8%B9\" title=\"&#x643;&#x64A;&#x644;&#x648;&#x645;&#x62A;&#x631; &#x645;&#x631;&#x628;&#x639;\" class=\"int-link\">كم²</a>","section":"خصائص جغرافية"},{"key":"التعداد السكاني","keyLink":null,"val":"2.340.900 نسمة <small>(إحصاء 2013)</small>","section":"السكان"},{"key":"الكثافة السكانية","keyLink":"/ar/%D9%83%D8%AB%D8%A7%D9%81%D8%A9_%D8%B3%D9%83%D8%A7%D9%86%D9%8A%D8%A9","val":"6992 س/كم²","section":"السكان"},{"key":"التوقيت","keyLink":null,"val":"+5 ( <a href=\"/ar/%D8%AA%D9%88%D9%82%D9%8A%D8%AA_%D8%BA%D8%B1%D9%8A%D9%86%D9%8A%D8%AA%D8%B4\" title=\"&#x62A;&#x648;&#x642;&#x64A;&#x62A; &#x63A;&#x631;&#x64A;&#x646;&#x64A;&#x62A;&#x634;\" class=\"int-link\">غرينيتش</a>)","section":"معلومات أخرى"}],"photos":[{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/2/26/Vue_de_l%27Aqua-Park_-_Tachkent.jpg/220px-Vue_de_l%27Aqua-Park_-_Tachkent.jpg","w":220,"h":165},{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Independence_square_in_Tashkent%2C_Monument.jpg/220px-Independence_square_in_Tashkent%2C_Monument.jpg","w":220,"h":147},{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Uthman_Koran_Taschkent_a.jpg/250px-Uthman_Koran_Taschkent_a.jpg","w":250,"h":133},{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D0%B5%D0%BB%D0%B5%D0%B1%D0%B0%D1%88%D0%BD%D1%8F_-_%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%90%D0%BB%D0%B8%D1%88%D0%B5%D1%80%D0%B0_%D0%9D%D0%B0%D0%B2%D0%BE%D0%B8_-_%D0%9C%D1%83%D0%B7%D0%B5%D0%B9_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8_%D0%B6%D0%B5%D1%80%D1%82%D0%B2_%D1%80%D0%B5%D0%BF%D1%80%D0%B5%D1%81%D1%81%D0%B8%D0%B9.jpg/220px-thumbnail.jpg","w":220,"h":124},{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/1/16/Bazar_u_Tashkentu.JPG/220px-Bazar_u_Tashkentu.JPG","w":220,"h":165}],"title":"طشقند","geo":{"lat":41.30833333333333,"lon":69.25972222222222},"TOC":{"type":"ul","id":"toc_btn_article-root-section","href":"article-root-section","text":"","children":[{"type":"od","classesHtml":"","special":false,"id":"toc_btn_overview","href":"overview","text":"مقدمة","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_الاسم","href":"الاسم","text":"الاسم","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_التاريخ","href":"التاريخ","text":"التاريخ","children":[{"type":"li","classesHtml":"","special":false,"id":"toc_btn_التاريخ_القديم","href":"التاريخ_القديم","text":"التاريخ القديم","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_عصر_شاش","href":"عصر_شاش","text":"عصر شاش","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_فترة_الإسلام","href":"فترة_الإسلام","text":"فترة الإسلام","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_عصر_خانية_الخوقند","href":"عصر_خانية_الخوقند","text":"عصر خانية الخوقند","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_عصر_القياصرة_الروس","href":"عصر_القياصرة_الروس","text":"عصر القياصرة الروس","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_تأثيرات_الثورة_الروسية","href":"تأثيرات_الثورة_الروسية","text":"تأثيرات الثورة الروسية","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_فترة_السوفييت","href":"فترة_السوفييت","text":"فترة السوفييت","children":[]},{"type":"li","classesHtml":"","special":false,"id":"toc_btn_عهد_الاستقلال","href":"عهد_الاستقلال","text":"عهد الاستقلال","children":[]}],"hasChildren":true},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_تطور_المدينة_منذ_القرن_التاسع_عشر","href":"تطور_المدينة_منذ_القرن_التاسع_عشر","text":"تطور المدينة منذ القرن التاسع عشر","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_الجغرافيا","href":"الجغرافيا","text":"الجغرافيا","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_التوزيع_السكاني","href":"التوزيع_السكاني","text":"التوزيع السكاني","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_احيائها","href":"احيائها","text":"احيائها","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_المناخ","href":"المناخ","text":"المناخ","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_الاقتصاد","href":"الاقتصاد","text":"الاقتصاد","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_التعليم_والثقافة","href":"التعليم_والثقافة","text":"التعليم والثقافة","children":[{"type":"li","classesHtml":"","special":false,"id":"toc_btn_الجامعات","href":"الجامعات","text":"الجامعات","children":[]}],"hasChildren":true},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_الإعلام","href":"الإعلام","text":"الإعلام","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_المواصلات","href":"المواصلات","text":"المواصلات","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_معالم_المدينة","href":"معالم_المدينة","text":"معالم المدينة","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_الترفيه_والتسوق","href":"الترفيه_والتسوق","text":"الترفيه والتسوق","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_الرياضة","href":"الرياضة","text":"الرياضة","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_توأمة_مدن","href":"توأمة_مدن","text":"توأمة مدن","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_أيام_العطل","href":"أيام_العطل","text":"أيام العطل","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_انظر_أيضاً","href":"انظر_أيضاً","text":"انظر أيضاً","children":[]},{"type":"od","classesHtml":" class='special'","special":true,"id":"toc_btn_وصلات_خارجية","href":"وصلات_خارجية","text":"وصلات خارجية","children":[]},{"type":"od","classesHtml":" class='special'","special":true,"id":"toc_btn_معرض_صور","href":"معرض_صور","text":"معرض صور","children":[]},{"type":"od","classesHtml":" class='special'","special":true,"id":"toc_btn_المراجع","href":"المراجع","text":"المراجع","children":[]}],"hasChildren":true},"mainImage":{"mode":"new_cover","info":{"license":{"artist":"<span lang=\"en\">Unknown</span>","name":"Public domain","usageTerms":"Public domain"}},"wikipediaPageFullUrl":"https://commons.wikimedia.org/wiki/File:Tashkent_the_building_of_town_council_02.jpg","wikipediaPageRelativeUrl":"/wiki/File:Tashkent_the_building_of_town_council_02.jpg","thumb":{"url":"//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Tashkent_the_building_of_town_council_02.jpg/440px-Tashkent_the_building_of_town_council_02.jpg","width":440,"height":276},"full":{"originalUrl":"https://upload.wikimedia.org/wikipedia/commons/9/94/Tashkent_the_building_of_town_council_02.jpg","urlDesktop":"//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Tashkent_the_building_of_town_council_02.jpg/1280px-Tashkent_the_building_of_town_council_02.jpg","urlMobile":"//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Tashkent_the_building_of_town_council_02.jpg/640px-Tashkent_the_building_of_town_council_02.jpg","width":1600,"height":1000},"fromEnglishWikipedia":true},"pageIsArticle":true,"links":{"selfRead":"http://wikiwand.com/ar/%D8%B7%D8%B4%D9%82%D9%86%D8%AF","wikipediaRead":"https://ar.wikipedia.org/wiki/%D8%B7%D8%B4%D9%82%D9%86%D8%AF?oldformat=true","wikipediaEdit":"https://ar.wikipedia.org/w/index.php?title=%D8%B7%D8%B4%D9%82%D9%86%D8%AF&action=edit","wikipediaHistory":"https://ar.wikipedia.org/w/index.php?title=%D8%B7%D8%B4%D9%82%D9%86%D8%AF&action=history","wikipediaPrint":"https://ar.wikipedia.org/w/index.php?title=%D8%B7%D8%B4%D9%82%D9%86%D8%AF&printable=yes","wikipediaTalk":"https://ar.wikipedia.org/wiki/Talk:%D8%B7%D8%B4%D9%82%D9%86%D8%AF?oldformat=true","wikipediaDownload":"https://ar.wikipedia.org/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=%D8%B7%D8%B4%D9%82%D9%86%D8%AF&writer=rl"},"meta":{"title":"طشقند | Wikiwand","keywords":"qw, طشقند, العربية","description":"طشقند ، ،[tɐʂˈkʲɛnt]، \"المدينة الصخرية\"، تلفظ \"توشكنت\") هي عاصمة أوزبكستان وأكبر مدنها. عدد سكانها المسجلين عام 2012 كان 2٬309٬300 نسمة. كانت محطة على طريق الحرير. ومن المدن المهمة في آسيا الوسطى وتبعد عشرات الكيلومترات عن الحدود الكازاخية.","robots":"index,follow","url":"http://www.wikiwand.com/ar/%D8%B7%D8%B4%D9%82%D9%86%D8%AF","image":"//assets.wikiwand.com/img/wikiwand_icon.png"},"fromWikipedia":"من ويكيبيديا، الموسوعة الحرة","disambiguations":[],"searchTranslation":"ابحث في ويكيبيديا","availableLanguages":[{"langEnglishName":"Achinese","langNativeName":"Acèh","langAbberviation":"ac","langCodeHTML":0,"langCodeURL":"ace","articleTitle":"Tashkent","articleLink":"/ace/Tashkent","score":0},{"langEnglishName":"Afrikaans","langNativeName":"Afrikaans","langAbberviation":"af","langCodeHTML":0,"langCodeURL":"af","articleTitle":"Tasjkent","articleLink":"/af/Tasjkent","score":0},{"langEnglishName":"Albanian","langNativeName":"shqip","langAbberviation":"sq","langCodeHTML":0,"langCodeURL":"sq","articleTitle":"Tashkenti","articleLink":"/sq/Tashkenti","score":0},{"langEnglishName":"Amharic","langNativeName":"አማርኛ","langAbberviation":"am","langCodeHTML":0,"langCodeURL":"am","articleTitle":"ታሽኬንት","articleLink":"/am/%E1%89%B3%E1%88%BD%E1%8A%AC%E1%8A%95%E1%89%B5","score":0},{"langEnglishName":"Arabic","langNativeName":"العربية","langAbberviation":"ar","langCodeHTML":0,"langCodeURL":"ar","articleTitle":"طشقند","articleLink":"/ar/%D8%B7%D8%B4%D9%82%D9%86%D8%AF","score":0},{"langEnglishName":"Armenian","langNativeName":"Հայերեն","langAbberviation":"hy","langCodeHTML":0,"langCodeURL":"hy","articleTitle":"Տաշքենդ","articleLink":"/hy/%D5%8F%D5%A1%D5%B7%D6%84%D5%A5%D5%B6%D5%A4","score":0},{"langEnglishName":"Asturian","langNativeName":"asturianu","langAbberviation":"as","langCodeHTML":0,"langCodeURL":"ast","articleTitle":"Taxkent","articleLink":"/ast/Taxkent","score":0},{"langEnglishName":"Azerbaijani","langNativeName":"azərbaycanca","langAbberviation":"az","langCodeHTML":0,"langCodeURL":"az","articleTitle":"Daşkənd","articleLink":"/az/Da%C5%9Fk%C9%99nd","score":0},{"langEnglishName":"Bashkir","langNativeName":"башҡортса","langAbberviation":"ba","langCodeHTML":0,"langCodeURL":"ba","articleTitle":"Ташкент","articleLink":"/ba/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Basque","langNativeName":"euskara","langAbberviation":"eu","langCodeHTML":0,"langCodeURL":"eu","articleTitle":"Taxkent","articleLink":"/eu/Taxkent","score":0},{"langEnglishName":"Belarussian","langNativeName":"беларуская","langAbberviation":"be","langCodeHTML":0,"langCodeURL":"be","articleTitle":"Ташкент","articleLink":"/be/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Bengali","langNativeName":"বাংলা","langAbberviation":"bn","langCodeHTML":0,"langCodeURL":"bn","articleTitle":"তাশখন্দ","articleLink":"/bn/%E0%A6%A4%E0%A6%BE%E0%A6%B6%E0%A6%96%E0%A6%A8%E0%A7%8D%E0%A6%A6","score":0},{"langEnglishName":"Bosnian","langNativeName":"bosanski","langAbberviation":"bs","langCodeHTML":0,"langCodeURL":"bs","articleTitle":"Taškent","articleLink":"/bs/Ta%C5%A1kent","score":0},{"langEnglishName":"Breton","langNativeName":"brezhoneg","langAbberviation":"br","langCodeHTML":0,"langCodeURL":"br","articleTitle":"Tochkent","articleLink":"/br/Tochkent","score":0},{"langEnglishName":"Bulgarian","langNativeName":"български","langAbberviation":"bg","langCodeHTML":0,"langCodeURL":"bg","articleTitle":"Ташкент","articleLink":"/bg/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Catalan; Valencian","langNativeName":"català","langAbberviation":"ca","langCodeHTML":0,"langCodeURL":"ca","articleTitle":"Taixkent","articleLink":"/ca/Taixkent","score":0},{"langEnglishName":"Cebuano","langNativeName":"Cebuano","langAbberviation":"ce","langCodeHTML":0,"langCodeURL":"ceb","articleTitle":"Tashkent (ulohang dakbayan sa Uzbekistan)","articleLink":"/ceb/Tashkent_(ulohang_dakbayan_sa_Uzbekistan)","score":0},{"langEnglishName":"Central Bikol","langNativeName":"Bikol Central","langAbberviation":"bc","langCodeHTML":0,"langCodeURL":"bcl","articleTitle":"Tashkent","articleLink":"/bcl/Tashkent","score":0},{"langEnglishName":"Central Kurdish/Kurdish Sorani","langNativeName":"کوردی","langAbberviation":"ck","langCodeHTML":0,"langCodeURL":"ckb","articleTitle":"تاشکەند","articleLink":"/ckb/%D8%AA%D8%A7%D8%B4%DA%A9%DB%95%D9%86%D8%AF","score":0},{"langEnglishName":"Chechen","langNativeName":"нохчийн","langAbberviation":"ce","langCodeHTML":0,"langCodeURL":"ce","articleTitle":"Ташкент","articleLink":"/ce/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Chichewa/Nyanja","langNativeName":"Chi-Chewa","langAbberviation":"ny","langCodeHTML":0,"langCodeURL":"ny","articleTitle":"Tashkent","articleLink":"/ny/Tashkent","score":0},{"langEnglishName":"Chinese","langNativeName":"中文","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh","articleTitle":"塔什干","articleLink":"/zh/%E5%A1%94%E4%BB%80%E5%B9%B2","score":0},{"langEnglishName":"Chuvash","langNativeName":"Чӑвашла","langAbberviation":"cv","langCodeHTML":0,"langCodeURL":"cv","articleTitle":"Ташкент","articleLink":"/cv/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Crimean Tatar","langNativeName":"qırımtatarca","langAbberviation":"cr","langCodeHTML":0,"langCodeURL":"crh","articleTitle":"Taşkent","articleLink":"/crh/Ta%C5%9Fkent","score":0},{"langEnglishName":"Croatian","langNativeName":"hrvatski","langAbberviation":"hr","langCodeHTML":0,"langCodeURL":"hr","articleTitle":"Taškent","articleLink":"/hr/Ta%C5%A1kent","score":0},{"langEnglishName":"Czech","langNativeName":"česky","langAbberviation":"cs","langCodeHTML":0,"langCodeURL":"cs","articleTitle":"Taškent","articleLink":"/cs/Ta%C5%A1kent","score":0},{"langEnglishName":"Danish","langNativeName":"dansk","langAbberviation":"da","langCodeHTML":0,"langCodeURL":"da","articleTitle":"Tasjkent","articleLink":"/da/Tasjkent","score":0},{"langEnglishName":"Dutch","langNativeName":"Nederlands","langAbberviation":"nl","langCodeHTML":0,"langCodeURL":"nl","articleTitle":"Tasjkent","articleLink":"/nl/Tasjkent","score":0},{"langEnglishName":"Eastern Mari","langNativeName":"олык марий","langAbberviation":"mh","langCodeHTML":0,"langCodeURL":"mhr","articleTitle":"Ташкент","articleLink":"/mhr/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Egyptian Arabic","langNativeName":"مصرى","langAbberviation":"ar","langCodeHTML":0,"langCodeURL":"arz","articleTitle":"طشقند","articleLink":"/arz/%D8%B7%D8%B4%D9%82%D9%86%D8%AF","score":0},{"langEnglishName":"English","langNativeName":"English","langAbberviation":"en","langCodeHTML":0,"langCodeURL":"en","articleTitle":"Tashkent","articleLink":"/en/Tashkent","score":1},{"langEnglishName":"Erzya","langNativeName":"эрзянь","langAbberviation":"my","langCodeHTML":0,"langCodeURL":"myv","articleTitle":"Ташкент ош","articleLink":"/myv/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82_%D0%BE%D1%88","score":0},{"langEnglishName":"Esperanto","langNativeName":"Esperanto","langAbberviation":"eo","langCodeHTML":0,"langCodeURL":"eo","articleTitle":"Taŝkento","articleLink":"/eo/Ta%C5%9Dkento","score":0},{"langEnglishName":"Estonian","langNativeName":"eesti","langAbberviation":"et","langCodeHTML":0,"langCodeURL":"et","articleTitle":"Taškent","articleLink":"/et/Ta%C5%A1kent","score":0},{"langEnglishName":"Fiji Hindi","langNativeName":"Fiji Hindi","langAbberviation":"hi","langCodeHTML":0,"langCodeURL":"hif","articleTitle":"Tashkent","articleLink":"/hif/Tashkent","score":0},{"langEnglishName":"Finnish","langNativeName":"suomi","langAbberviation":"fi","langCodeHTML":0,"langCodeURL":"fi","articleTitle":"Taškent","articleLink":"/fi/Ta%C5%A1kent","score":0},{"langEnglishName":"French","langNativeName":"français","langAbberviation":"fr","langCodeHTML":0,"langCodeURL":"fr","articleTitle":"Tachkent","articleLink":"/fr/Tachkent","score":1},{"langEnglishName":"Gaelic; Scottish Gaelic","langNativeName":"Gàidhlig","langAbberviation":"gd","langCodeHTML":0,"langCodeURL":"gd","articleTitle":"Tashkent","articleLink":"/gd/Tashkent","score":0},{"langEnglishName":"Galician","langNativeName":"galego","langAbberviation":"gl","langCodeHTML":0,"langCodeURL":"gl","articleTitle":"Tashkent","articleLink":"/gl/Tashkent","score":0},{"langEnglishName":"Georgian","langNativeName":"ქართული","langAbberviation":"ka","langCodeHTML":0,"langCodeURL":"ka","articleTitle":"ტაშკენტი","articleLink":"/ka/%E1%83%A2%E1%83%90%E1%83%A8%E1%83%99%E1%83%94%E1%83%9C%E1%83%A2%E1%83%98","score":0},{"langEnglishName":"German","langNativeName":"Deutsch","langAbberviation":"de","langCodeHTML":0,"langCodeURL":"de","articleTitle":"Taschkent","articleLink":"/de/Taschkent","score":1},{"langEnglishName":"Greek","langNativeName":"Ελληνικά","langAbberviation":"el","langCodeHTML":0,"langCodeURL":"el","articleTitle":"Τασκένδη","articleLink":"/el/%CE%A4%CE%B1%CF%83%CE%BA%CE%AD%CE%BD%CE%B4%CE%B7","score":0},{"langEnglishName":"Haitian; Haitian Creole","langNativeName":"Kreyòl ayisyen","langAbberviation":"ht","langCodeHTML":0,"langCodeURL":"ht","articleTitle":"Tachkènt","articleLink":"/ht/Tachk%C3%A8nt","score":0},{"langEnglishName":"Hakka Chinese","langNativeName":"Hak-kâ-fa","langAbberviation":"ha","langCodeHTML":0,"langCodeURL":"hak","articleTitle":"Tashkent","articleLink":"/hak/Tashkent","score":0},{"langEnglishName":"Hebrew","langNativeName":"עברית","langAbberviation":"he","langCodeHTML":0,"langCodeURL":"he","articleTitle":"טשקנט","articleLink":"/he/%D7%98%D7%A9%D7%A7%D7%A0%D7%98","score":0},{"langEnglishName":"Hindi","langNativeName":"हिन्दी","langAbberviation":"hi","langCodeHTML":0,"langCodeURL":"hi","articleTitle":"ताशकन्द","articleLink":"/hi/%E0%A4%A4%E0%A4%BE%E0%A4%B6%E0%A4%95%E0%A4%A8%E0%A5%8D%E0%A4%A6","score":0},{"langEnglishName":"Hungarian","langNativeName":"magyar","langAbberviation":"hu","langCodeHTML":0,"langCodeURL":"hu","articleTitle":"Taskent","articleLink":"/hu/Taskent","score":0},{"langEnglishName":"Icelandic","langNativeName":"íslenska","langAbberviation":"is","langCodeHTML":0,"langCodeURL":"is","articleTitle":"Taskent","articleLink":"/is/Taskent","score":0},{"langEnglishName":"Ido","langNativeName":"Ido","langAbberviation":"io","langCodeHTML":0,"langCodeURL":"io","articleTitle":"Tashkent","articleLink":"/io/Tashkent","score":0},{"langEnglishName":"Iloko","langNativeName":"Ilokano","langAbberviation":"il","langCodeHTML":0,"langCodeURL":"ilo","articleTitle":"Tashkent","articleLink":"/ilo/Tashkent","score":0},{"langEnglishName":"Indonesian","langNativeName":"Bahasa Indonesia","langAbberviation":"id","langCodeHTML":0,"langCodeURL":"id","articleTitle":"Tashkent","articleLink":"/id/Tashkent","score":0},{"langEnglishName":"Interlingua","langNativeName":"interlingua","langAbberviation":"ia","langCodeHTML":0,"langCodeURL":"ia","articleTitle":"Tashkent","articleLink":"/ia/Tashkent","score":0},{"langEnglishName":"Interlingue; Occidental","langNativeName":"Interlingue","langAbberviation":"ie","langCodeHTML":0,"langCodeURL":"ie","articleTitle":"Tashkent","articleLink":"/ie/Tashkent","score":0},{"langEnglishName":"Irish","langNativeName":"Gaeilge","langAbberviation":"ga","langCodeHTML":0,"langCodeURL":"ga","articleTitle":"Tashkent","articleLink":"/ga/Tashkent","score":0},{"langEnglishName":"Italian","langNativeName":"italiano","langAbberviation":"it","langCodeHTML":0,"langCodeURL":"it","articleTitle":"Tashkent","articleLink":"/it/Tashkent","score":0},{"langEnglishName":"Japanese","langNativeName":"日本語","langAbberviation":"ja","langCodeHTML":0,"langCodeURL":"ja","articleTitle":"タシュケント","articleLink":"/ja/%E3%82%BF%E3%82%B7%E3%83%A5%E3%82%B1%E3%83%B3%E3%83%88","score":0},{"langEnglishName":"Kannada","langNativeName":"ಕನ್ನಡ","langAbberviation":"kn","langCodeHTML":0,"langCodeURL":"kn","articleTitle":"ತಾಷ್ಕೆಂಟ್","articleLink":"/kn/%E0%B2%A4%E0%B2%BE%E0%B2%B7%E0%B3%8D%E0%B2%95%E0%B3%86%E0%B2%82%E0%B2%9F%E0%B3%8D","score":0},{"langEnglishName":"Kara-Kalpak","langNativeName":"Qaraqalpaqsha","langAbberviation":"ka","langCodeHTML":0,"langCodeURL":"kaa","articleTitle":"Tashkent","articleLink":"/kaa/Tashkent","score":0},{"langEnglishName":"Kazakh","langNativeName":"қазақша","langAbberviation":"kk","langCodeHTML":0,"langCodeURL":"kk","articleTitle":"Ташкент","articleLink":"/kk/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Kikuyu; Gikuyu","langNativeName":"Gĩkũyũ","langAbberviation":"ki","langCodeHTML":0,"langCodeURL":"ki","articleTitle":"Tashkent","articleLink":"/ki/Tashkent","score":0},{"langEnglishName":"Komi","langNativeName":"коми","langAbberviation":"kv","langCodeHTML":0,"langCodeURL":"kv","articleTitle":"Ташкент","articleLink":"/kv/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Korean","langNativeName":"한국어","langAbberviation":"ko","langCodeHTML":0,"langCodeURL":"ko","articleTitle":"타슈켄트","articleLink":"/ko/%ED%83%80%EC%8A%88%EC%BC%84%ED%8A%B8","score":0},{"langEnglishName":"Kurdish","langNativeName":"Kurdî","langAbberviation":"ku","langCodeHTML":0,"langCodeURL":"ku","articleTitle":"Taşkent, Ûzbêkistan","articleLink":"/ku/Ta%C5%9Fkent,_%C3%9Bzb%C3%AAkistan","score":0},{"langEnglishName":"Kyrgyz","langNativeName":"Кыргызча","langAbberviation":"ky","langCodeHTML":0,"langCodeURL":"ky","articleTitle":"Ташкен","articleLink":"/ky/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD","score":0},{"langEnglishName":"Latin","langNativeName":"Latina","langAbberviation":"la","langCodeHTML":0,"langCodeURL":"la","articleTitle":"Tashkent","articleLink":"/la/Tashkent","score":0},{"langEnglishName":"Latvian","langNativeName":"latviešu","langAbberviation":"lv","langCodeHTML":0,"langCodeURL":"lv","articleTitle":"Taškenta","articleLink":"/lv/Ta%C5%A1kenta","score":0},{"langEnglishName":"Lithuanian","langNativeName":"lietuvių","langAbberviation":"lt","langCodeHTML":0,"langCodeURL":"lt","articleTitle":"Taškentas","articleLink":"/lt/Ta%C5%A1kentas","score":0},{"langEnglishName":"Lombard","langNativeName":"lumbaart","langAbberviation":"lm","langCodeHTML":0,"langCodeURL":"lmo","articleTitle":"Taškent","articleLink":"/lmo/Ta%C5%A1kent","score":0},{"langEnglishName":"Low Saxon","langNativeName":"Plattdüütsch","langAbberviation":"nd","langCodeHTML":0,"langCodeURL":"nds","articleTitle":"Taschkent","articleLink":"/nds/Taschkent","score":0},{"langEnglishName":"Luxembourgish","langNativeName":"Lëtzebuergesch","langAbberviation":"lb","langCodeHTML":0,"langCodeURL":"lb","articleTitle":"Taschkent","articleLink":"/lb/Taschkent","score":0},{"langEnglishName":"Macedonian","langNativeName":"македонски","langAbberviation":"mk","langCodeHTML":0,"langCodeURL":"mk","articleTitle":"Ташкент","articleLink":"/mk/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Malay","langNativeName":"Bahasa Melayu","langAbberviation":"ms","langCodeHTML":0,"langCodeURL":"ms","articleTitle":"Tashkent","articleLink":"/ms/Tashkent","score":0},{"langEnglishName":"Malayalam","langNativeName":"മലയാളം","langAbberviation":"ml","langCodeHTML":0,"langCodeURL":"ml","articleTitle":"താഷ്കന്റ്","articleLink":"/ml/%E0%B4%A4%E0%B4%BE%E0%B4%B7%E0%B5%8D%E0%B4%95%E0%B4%A8%E0%B5%8D%E0%B4%B1%E0%B5%8D","score":0},{"langEnglishName":"Marathi","langNativeName":"मराठी","langAbberviation":"mr","langCodeHTML":0,"langCodeURL":"mr","articleTitle":"ताश्कंद","articleLink":"/mr/%E0%A4%A4%E0%A4%BE%E0%A4%B6%E0%A5%8D%E0%A4%95%E0%A4%82%E0%A4%A6","score":0},{"langEnglishName":"Mazanderani","langNativeName":"مازِرونی","langAbberviation":"mz","langCodeHTML":0,"langCodeURL":"mzn","articleTitle":"تاشکند","articleLink":"/mzn/%D8%AA%D8%A7%D8%B4%DA%A9%D9%86%D8%AF","score":0},{"langEnglishName":"Min Dong Chinese","langNativeName":"Mìng-dĕ̤ng-ngṳ̄","langAbberviation":"cd","langCodeHTML":0,"langCodeURL":"cdo","articleTitle":"Tashkent","articleLink":"/cdo/Tashkent","score":0},{"langEnglishName":"Mongolian","langNativeName":"монгол","langAbberviation":"mn","langCodeHTML":0,"langCodeURL":"mn","articleTitle":"Ташкент","articleLink":"/mn/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Nepali","langNativeName":"नेपाली","langAbberviation":"ne","langCodeHTML":0,"langCodeURL":"ne","articleTitle":"ताशकेन्ट","articleLink":"/ne/%E0%A4%A4%E0%A4%BE%E0%A4%B6%E0%A4%95%E0%A5%87%E0%A4%A8%E0%A5%8D%E0%A4%9F","score":0},{"langEnglishName":"NONE","langNativeName":"Bân-lâm-gú","langCodeHTML":0,"langCodeURL":"nan","articleTitle":"Tashkent","articleLink":"/zh-min-nan/Tashkent","score":0},{"langEnglishName":"NONE","langNativeName":"Беларуская (тарашкевіца)‎","langCodeHTML":0,"langCodeURL":"be-tarask","articleTitle":"Ташкент","articleLink":"/be-x-old/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"NONE","langNativeName":"تۆرکجه","langCodeHTML":0,"langCodeURL":"azb","articleTitle":"تاشکند","articleLink":"/azb/%D8%AA%D8%A7%D8%B4%DA%A9%D9%86%D8%AF","score":0},{"langEnglishName":"NONE","langNativeName":"Simple English","langCodeHTML":0,"langCodeURL":"en-simple","articleTitle":"Tashkent","articleLink":"/simple/Tashkent","score":0},{"langEnglishName":"NONE","langNativeName":"Žemaitėška","langCodeHTML":0,"langCodeURL":"sgs","articleTitle":"Taškents","articleLink":"/bat-smg/Ta%C5%A1kents","score":0},{"langEnglishName":"NONE","langNativeName":"मैथिली","langCodeHTML":0,"langCodeURL":"mai","articleTitle":"तास्केन्ट","articleLink":"/mai/%E0%A4%A4%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A5%87%E0%A4%A8%E0%A5%8D%E0%A4%9F","score":0},{"langEnglishName":"NONE","langNativeName":"गोंयची कोंकणी / Gõychi Konknni","langCodeHTML":0,"langCodeURL":"gom","articleTitle":"ताश्कंद","articleLink":"/gom/%E0%A4%A4%E0%A4%BE%E0%A4%B6%E0%A5%8D%E0%A4%95%E0%A4%82%E0%A4%A6","score":0},{"langEnglishName":"NONE","langNativeName":"粵語","langCodeHTML":0,"langCodeURL":"yue","articleTitle":"塔什干","articleLink":"/zh-yue/%E5%A1%94%E4%BB%80%E5%B9%B2","score":0},{"langEnglishName":"NONE","langNativeName":"Võro","langCodeHTML":0,"langCodeURL":"vro","articleTitle":"Taškent","articleLink":"/fiu-vro/Ta%C5%A1kent","score":0},{"langEnglishName":"NONE","langNativeName":"文言","langCodeHTML":0,"langCodeURL":"lzh","articleTitle":"塔什干","articleLink":"/zh-classical/%E5%A1%94%E4%BB%80%E5%B9%B2","score":0},{"langEnglishName":"Norwegian (Bokmål)","langNativeName":"norsk (bokmål)","langAbberviation":"no","langCodeHTML":0,"langCodeURL":"no","articleTitle":"Tasjkent","articleLink":"/no/Tasjkent","score":0},{"langEnglishName":"Norwegian (Nynorsk)","langNativeName":"norsk (nynorsk)‎","langAbberviation":"nn","langCodeHTML":0,"langCodeURL":"nn","articleTitle":"Tasjkent","articleLink":"/nn/Tasjkent","score":0},{"langEnglishName":"Occitan","langNativeName":"occitan","langAbberviation":"oc","langCodeHTML":0,"langCodeURL":"oc","articleTitle":"Tashkent","articleLink":"/oc/Tashkent","score":0},{"langEnglishName":"Ossetian","langNativeName":"Ирон","langAbberviation":"os","langCodeHTML":0,"langCodeURL":"os","articleTitle":"Ташкент","articleLink":"/os/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Papiamento","langNativeName":"Papiamentu","langAbberviation":"pa","langCodeHTML":0,"langCodeURL":"pap","articleTitle":"Tashkent","articleLink":"/pap/Tashkent","score":0},{"langEnglishName":"Pashto","langNativeName":"پښتو","langAbberviation":"ps","langCodeHTML":0,"langCodeURL":"ps","articleTitle":"تاشکند","articleLink":"/ps/%D8%AA%D8%A7%D8%B4%DA%A9%D9%86%D8%AF","score":0},{"langEnglishName":"Persian","langNativeName":"فارسی","langAbberviation":"fa","langCodeHTML":0,"langCodeURL":"fa","articleTitle":"تاشکند","articleLink":"/fa/%D8%AA%D8%A7%D8%B4%DA%A9%D9%86%D8%AF","score":0},{"langEnglishName":"Piedmontese","langNativeName":"Piemontèis","langAbberviation":"pm","langCodeHTML":0,"langCodeURL":"pms","articleTitle":"Tashkent","articleLink":"/pms/Tashkent","score":0},{"langEnglishName":"Polish","langNativeName":"polski","langAbberviation":"pl","langCodeHTML":0,"langCodeURL":"pl","articleTitle":"Taszkent","articleLink":"/pl/Taszkent","score":0},{"langEnglishName":"Portuguese","langNativeName":"português","langAbberviation":"pt","langCodeHTML":0,"langCodeURL":"pt","articleTitle":"Tashkent","articleLink":"/pt/Tashkent","score":1},{"langEnglishName":"Punjabi","langNativeName":"ਪੰਜਾਬੀ","langAbberviation":"pa","langCodeHTML":0,"langCodeURL":"pa","articleTitle":"ਤਾਸ਼ਕੰਤ","articleLink":"/pa/%E0%A8%A4%E0%A8%BE%E0%A8%B8%E0%A8%BC%E0%A8%95%E0%A9%B0%E0%A8%A4","score":0},{"langEnglishName":"Romanian","langNativeName":"română","langAbberviation":"ro","langCodeHTML":0,"langCodeURL":"ro","articleTitle":"Tașkent","articleLink":"/ro/Ta%C8%99kent","score":0},{"langEnglishName":"Russia Buriat","langNativeName":"буряад","langAbberviation":"bx","langCodeHTML":0,"langCodeURL":"bxr","articleTitle":"Ташкент","articleLink":"/bxr/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Russian","langNativeName":"русский","langAbberviation":"ru","langCodeHTML":0,"langCodeURL":"ru","articleTitle":"Ташкент","articleLink":"/ru/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Scots","langNativeName":"Scots","langAbberviation":"sc","langCodeHTML":0,"langCodeURL":"sco","articleTitle":"Tashkent","articleLink":"/sco/Tashkent","score":0},{"langEnglishName":"Serbian","langNativeName":"српски / srpski","langAbberviation":"sr","langCodeHTML":0,"langCodeURL":"sr","articleTitle":"Ташкент","articleLink":"/sr/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Serbo-Croatian","langNativeName":"srpskohrvatski / српскохрватски","langAbberviation":"sh","langCodeHTML":0,"langCodeURL":"sh","articleTitle":"Taškent","articleLink":"/sh/Ta%C5%A1kent","score":0},{"langEnglishName":"Shona","langNativeName":"chiShona","langAbberviation":"sn","langCodeHTML":0,"langCodeURL":"sn","articleTitle":"Tashkent","articleLink":"/sn/Tashkent","score":0},{"langEnglishName":"Silesian","langNativeName":"ślůnski","langAbberviation":"sz","langCodeHTML":0,"langCodeURL":"szl","articleTitle":"Taszkent","articleLink":"/szl/Taszkent","score":0},{"langEnglishName":"Simplified Chinese","langNativeName":"中文（简体)","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-hans","articleTitle":"塔什干","articleLink":"/zh-hans/%E5%A1%94%E4%BB%80%E5%B9%B2","score":0},{"langEnglishName":"Simplified Chinese (China)","langNativeName":"中文（中国大陆)","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-cn","articleTitle":"塔什干","articleLink":"/zh-cn/%E5%A1%94%E4%BB%80%E5%B9%B2","score":0},{"langEnglishName":"Simplified Chinese (Singapore)","langNativeName":"中文（新加坡）","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-sg","articleTitle":"塔什干","articleLink":"/zh-sg/%E5%A1%94%E4%BB%80%E5%B9%B2","score":0},{"langEnglishName":"Slovak","langNativeName":"slovenčina","langAbberviation":"sk","langCodeHTML":0,"langCodeURL":"sk","articleTitle":"Taškent","articleLink":"/sk/Ta%C5%A1kent","score":0},{"langEnglishName":"Slovenian","langNativeName":"slovenščina","langAbberviation":"sl","langCodeHTML":0,"langCodeURL":"sl","articleTitle":"Taškent","articleLink":"/sl/Ta%C5%A1kent","score":0},{"langEnglishName":"Spanish","langNativeName":"español","langAbberviation":"es","langCodeHTML":0,"langCodeURL":"es","articleTitle":"Taskent","articleLink":"/es/Taskent","score":1},{"langEnglishName":"Swahili","langNativeName":"Kiswahili","langAbberviation":"sw","langCodeHTML":0,"langCodeURL":"sw","articleTitle":"Tashkent","articleLink":"/sw/Tashkent","score":0},{"langEnglishName":"Swedish","langNativeName":"svenska","langAbberviation":"sv","langCodeHTML":0,"langCodeURL":"sv","articleTitle":"Tasjkent","articleLink":"/sv/Tasjkent","score":0},{"langEnglishName":"Tagalog","langNativeName":"Tagalog","langAbberviation":"tl","langCodeHTML":0,"langCodeURL":"tl","articleTitle":"Taskent","articleLink":"/tl/Taskent","score":0},{"langEnglishName":"Tajik","langNativeName":"тоҷикӣ","langAbberviation":"tg","langCodeHTML":0,"langCodeURL":"tg","articleTitle":"Тошканд","articleLink":"/tg/%D0%A2%D0%BE%D1%88%D0%BA%D0%B0%D0%BD%D0%B4","score":0},{"langEnglishName":"Tamil","langNativeName":"தமிழ்","langAbberviation":"ta","langCodeHTML":0,"langCodeURL":"ta","articleTitle":"தாஷ்கந்து","articleLink":"/ta/%E0%AE%A4%E0%AE%BE%E0%AE%B7%E0%AF%8D%E0%AE%95%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AF%81","score":0},{"langEnglishName":"Tatar","langNativeName":"татарча/tatarça","langAbberviation":"tt","langCodeHTML":0,"langCodeURL":"tt","articleTitle":"Ташкәнт","articleLink":"/tt/%D0%A2%D0%B0%D1%88%D0%BA%D3%99%D0%BD%D1%82","score":0},{"langEnglishName":"Telugu","langNativeName":"తెలుగు","langAbberviation":"te","langCodeHTML":0,"langCodeURL":"te","articleTitle":"తాష్కెంట్","articleLink":"/te/%E0%B0%A4%E0%B0%BE%E0%B0%B7%E0%B1%8D%E0%B0%95%E0%B1%86%E0%B0%82%E0%B0%9F%E0%B1%8D","score":0},{"langEnglishName":"Thai","langNativeName":"ไทย","langAbberviation":"th","langCodeHTML":0,"langCodeURL":"th","articleTitle":"ทาชเคนต์","articleLink":"/th/%E0%B8%97%E0%B8%B2%E0%B8%8A%E0%B9%80%E0%B8%84%E0%B8%99%E0%B8%95%E0%B9%8C","score":0},{"langEnglishName":"Tibetan","langNativeName":"བོད་ཡིག","langAbberviation":"bo","langCodeHTML":0,"langCodeURL":"bo","articleTitle":"ཐ་ཧྲི་ཀན།","articleLink":"/bo/%E0%BD%90%E0%BC%8B%E0%BD%A7%E0%BE%B2%E0%BD%B2%E0%BC%8B%E0%BD%80%E0%BD%93%E0%BC%8D","score":0},{"langEnglishName":"Traditional Chinese","langNativeName":"中文（繁體）","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-hant","articleTitle":"塔什干","articleLink":"/zh-hant/%E5%A1%94%E4%BB%80%E5%B9%B2","score":0},{"langEnglishName":"Traditional Chinese (Hong Kong)","langNativeName":"中文（香港）","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-hk","articleTitle":"塔什干","articleLink":"/zh-hk/%E5%A1%94%E4%BB%80%E5%B9%B2","score":0},{"langEnglishName":"Traditional Chinese (Macau)","langNativeName":"中文（澳門）","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-mo","articleTitle":"塔什干","articleLink":"/zh-mo/%E5%A1%94%E4%BB%80%E5%B9%B2","score":0},{"langEnglishName":"Traditional Chinese (Taiwan)","langNativeName":"中文（台灣）","langAbberviation":"zh","langCodeHTML":0,"langCodeURL":"zh-tw","articleTitle":"塔什干","articleLink":"/zh-tw/%E5%A1%94%E4%BB%80%E5%B9%B2","score":0},{"langEnglishName":"Turkish","langNativeName":"Türkçe","langAbberviation":"tr","langCodeHTML":0,"langCodeURL":"tr","articleTitle":"Taşkent","articleLink":"/tr/Ta%C5%9Fkent","score":0},{"langEnglishName":"Turkmen","langNativeName":"Türkmençe","langAbberviation":"tk","langCodeHTML":0,"langCodeURL":"tk","articleTitle":"Daşkent","articleLink":"/tk/Da%C5%9Fkent","score":0},{"langEnglishName":"Tuvinian","langNativeName":"тыва дыл","langAbberviation":"ty","langCodeHTML":0,"langCodeURL":"tyv","articleTitle":"Ташкент","articleLink":"/tyv/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Udmurt","langNativeName":"удмурт","langAbberviation":"ud","langCodeHTML":0,"langCodeURL":"udm","articleTitle":"Ташкент","articleLink":"/udm/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Ughyur","langNativeName":"ئۇيغۇرچە","langAbberviation":"ug","langCodeHTML":0,"langCodeURL":"ug","articleTitle":"تاشكەنت","articleLink":"/ug/%D8%AA%D8%A7%D8%B4%D9%83%DB%95%D9%86%D8%AA","score":0},{"langEnglishName":"Ukranian","langNativeName":"українська","langAbberviation":"uk","langCodeHTML":0,"langCodeURL":"uk","articleTitle":"Ташкент","articleLink":"/uk/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Upper Sorbian","langNativeName":"hornjoserbsce","langAbberviation":"hs","langCodeHTML":0,"langCodeURL":"hsb","articleTitle":"Taškent","articleLink":"/hsb/Ta%C5%A1kent","score":0},{"langEnglishName":"Urdu","langNativeName":"اردو","langAbberviation":"ur","langCodeHTML":0,"langCodeURL":"ur","articleTitle":"تاشقند","articleLink":"/ur/%D8%AA%D8%A7%D8%B4%D9%82%D9%86%D8%AF","score":0},{"langEnglishName":"Uzbek","langNativeName":"oʻzbekcha","langAbberviation":"uz","langCodeHTML":0,"langCodeURL":"uz","articleTitle":"Toshkent","articleLink":"/uz/Toshkent","score":0},{"langEnglishName":"Venetian","langNativeName":"vèneto","langAbberviation":"ve","langCodeHTML":0,"langCodeURL":"vec","articleTitle":"Taškent","articleLink":"/vec/Ta%C5%A1kent","score":0},{"langEnglishName":"Veps","langNativeName":"vepsän kel’","langAbberviation":"ve","langCodeHTML":0,"langCodeURL":"vep","articleTitle":"Taškent","articleLink":"/vep/Ta%C5%A1kent","score":0},{"langEnglishName":"Vietnamese","langNativeName":"Tiếng Việt","langAbberviation":"vi","langCodeHTML":0,"langCodeURL":"vi","articleTitle":"Tashkent","articleLink":"/vi/Tashkent","score":0},{"langEnglishName":"Volapük","langNativeName":"Volapük","langAbberviation":"vo","langCodeHTML":0,"langCodeURL":"vo","articleTitle":"Toshkent","articleLink":"/vo/Toshkent","score":0},{"langEnglishName":"Waray","langNativeName":"Winaray","langAbberviation":"wa","langCodeHTML":0,"langCodeURL":"war","articleTitle":"Tashkent","articleLink":"/war/Tashkent","score":0},{"langEnglishName":"Welsh","langNativeName":"Cymraeg","langAbberviation":"cy","langCodeHTML":0,"langCodeURL":"cy","articleTitle":"Tashkent","articleLink":"/cy/Tashkent","score":0},{"langEnglishName":"Western Frisian","langNativeName":"Frysk","langAbberviation":"fy","langCodeHTML":0,"langCodeURL":"fy","articleTitle":"Tasjkent","articleLink":"/fy/Tasjkent","score":0},{"langEnglishName":"Western Punjabi","langNativeName":"پنجابی","langAbberviation":"pn","langCodeHTML":0,"langCodeURL":"pnb","articleTitle":"تاشکند","articleLink":"/pnb/%D8%AA%D8%A7%D8%B4%DA%A9%D9%86%D8%AF","score":0},{"langEnglishName":"Wuu Chinese","langNativeName":"吴语","langAbberviation":"wu","langCodeHTML":0,"langCodeURL":"wuu","articleTitle":"塔什干","articleLink":"/wuu/%E5%A1%94%E4%BB%80%E5%B9%B2","score":0},{"langEnglishName":"Yakut","langNativeName":"саха тыла","langAbberviation":"sa","langCodeHTML":0,"langCodeURL":"sah","articleTitle":"Ташкент","articleLink":"/sah/%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82","score":0},{"langEnglishName":"Yiddish","langNativeName":"ייִדיש","langAbberviation":"yi","langCodeHTML":0,"langCodeURL":"yi","articleTitle":"טאשקענט","articleLink":"/yi/%D7%98%D7%90%D7%A9%D7%A7%D7%A2%D7%A0%D7%98","score":0},{"langEnglishName":"Yoruba","langNativeName":"Yorùbá","langAbberviation":"yo","langCodeHTML":0,"langCodeURL":"yo","articleTitle":"Tashkent","articleLink":"/yo/Tashkent","score":0}],"englishLink":{"langEnglishName":"English","langNativeName":"English","langAbberviation":"en","langCodeHTML":0,"langCodeURL":"en","articleTitle":"Tashkent","articleLink":"/en/Tashkent","score":1}};
+    </script>
+    <script>
+     if (location.host=='translate.googleusercontent.com' && location.search){
+
+			var requestedLang=location.search.split('tl=')[1];
+			if (requestedLang) {
+				requestedLang = requestedLang.split('&')[0];
+				var desiredLink = articleData.links.selfRead.replace('http://', 'https://');
+				for (idx in articleData.availableLanguages) {
+					var lang = articleData.availableLanguages[idx];
+					if (lang.langCodeURL == requestedLang) {
+						desiredLink = 'https://www.wikiwand.com' + lang.articleLink;
+						break;
+					}
+				}
+				window.location = desiredLink;
+				var dontReport=true;
+			}
+		}
+    </script>
+    <title>
+     طشقند - Wikiwand
+    </title>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="@wikiwand" name="twitter:site"/>
+    <meta content="wikiwand-article://ar/%D8%B7%D8%B4%D9%82%D9%86%D8%AF" name="twitter:app:url:iphone">
+     <meta content="wikiwand-article://ar/%D8%B7%D8%B4%D9%82%D9%86%D8%AF" name="twitter:app:url:ipad">
+      <meta content="823404911083396" property="fb:app_id">
+       <meta content="index,follow" name="robots"/>
+       <meta content="article" property="og:type"/>
+       <meta content="Wikiwand" property="og:site_name"/>
+       <meta content="http://www.wikiwand.com/ar/%D8%B7%D8%B4%D9%82%D9%86%D8%AF" property="og:url"/>
+       <meta content="طشقند | Wikiwand" property="og:title"/>
+       <meta content="طشقند | Wikiwand" property="twitter:title"/>
+       <meta content='طشقند ، ،[tɐʂˈkʲɛnt]، "المدينة الصخرية"، تلفظ "توشكنت") هي عاصمة أوزبكستان وأكبر مدنها. عدد سكانها المسجلين عام 2012 كان 2٬309٬300 نسمة. كانت محطة على طريق الحرير. ومن المدن المهمة في آسيا الوسطى وتبعد عشرات الكيلومترات عن الحدود الكازاخية.' property="og:description"/>
+       <meta content='طشقند ، ،[tɐʂˈkʲɛnt]، "المدينة الصخرية"، تلفظ "توشكنت") هي عاصمة أوزبكستان وأكبر مدنها. عدد سكانها المسجلين عام 2012 كان 2٬309٬300 نسمة. كانت محطة على طريق الحرير. ومن المدن المهمة في آسيا الوسطى وتبعد عشرات الكيلومترات عن الحدود الكازاخية.' name="description"/>
+       <meta content='طشقند ، ،[tɐʂˈkʲɛnt]، "المدينة الصخرية"، تلفظ "توشكنت") هي عاصمة أوزبكستان وأكبر مدنها. عدد سكانها المسجلين عام 2012 كان 2٬309٬300 نسمة. كانت محطة على طريق الحرير. ومن المدن المهمة في آسيا الوسطى وتبعد عشرات الكيلومترات عن الحدود الكازاخية.' name="twitter:description"/>
+       <link href="//assets.wikiwand.com/img/wikiwand_icon.png" rel="image_src">
+        <meta content="//assets.wikiwand.com/img/wikiwand_icon.png" property="og:image"/>
+        <meta content="//assets.wikiwand.com/img/wikiwand_icon.png" property="twitter:image:src"/>
+        <meta content="qw, طشقند, العربية" name="keywords"/>
+       </link>
+      </meta>
+     </meta>
+    </meta>
+   </link>
+  </link>
+ </head>
+ <body class="rtl lg_arabic bsp1 bsp2 lang_ar bsp3" ng-class="$root.userBodyStyle" ng-controller="ShellController" ng-init="initializeShellController()">
+  <div id="body_wrapp" ng-click="clickedOutside()" ng-mousedown="clickedAnywhere($event)">
+   <div ng-cloak="" ng-if="precache_from_extension">
+    For faster navigation, this Iframe is preloading the Wikiwand page for
+    <b>
+     طشقند
+    </b>
+    .
+   </div>
+   <nav class=" unselectable" id="header" ng-class="{active:!$root.tocShow}" ng-cloak="" ng-controller="ToolbarController" ng-hide="$root.serverData.agent.iOSWebView" ng-if="!hideToolbar">
+    <ul class="menu " id="main_menu" ng-class="{ios_focus: $root.iosFocus}">
+     <li class="toc_folded" ng-class="{activated:!$root.tocShow, gone: searchFocus}" ng-click="$root.tocFold(); $root.userClick(true, 'toolbar-toc-show');">
+      <i>
+      </i>
+     </li>
+     <li class="article_btn article" ng-class="{active:showWikiwandMenu, gone: searchFocus}" ng-click="toggleWikiwandMenu($event); $root.userClick(showWikiwandMenu, 'toolbar-mainmenu');">
+      <img alt="wikiwand logo" class="logo_img unselectable" src="/img/logo_new.svg">
+       <img alt="wikiwand w" class="hide logo_w unselectable" src="/img/w.svg"/>
+       <i>
+       </i>
+       <div class="drop_down" ng-click="clickedInside($event)" ng-show="showWikiwandMenu">
+        <ul id="feadback_list" ng-show="!showUserVoice &amp;&amp; !showCoverReport">
+         <li>
+          <a href="/">
+           <i class="home_icon">
+           </i>
+           Home
+          </a>
+         </li>
+         <li>
+          <a href="/news">
+           <i class="news_icon">
+           </i>
+           News
+          </a>
+         </li>
+         <li>
+          <a href="/random/ar">
+           <i class="random_icon">
+           </i>
+           Random Article
+          </a>
+         </li>
+         <li ng-if="!activation.extensionInstalled">
+          <a href="#" ng-click="$root.showInstall = true" onclick="event.preventDefault();">
+           <i class="install_icon">
+           </i>
+           Install Wikiwand
+          </a>
+         </li>
+         <li>
+          <a href="#" ng-click="$root.showFollow = true; loadGplusScript()" onclick="event.preventDefault();">
+           <i class="follow_icon">
+           </i>
+           Follow Us
+          </a>
+         </li>
+         <!--<li><a href="http://wikiwand.uservoice.com" target="_blank"><i class="support_icon"></i>Support</a></li>-->
+         <!--
+						<li ng-hide="$root.minimalStyle"><a href="javascript:void(0);" ng-click="showCoverReport=true" onclick="event.preventDefault()"><i class="cover_icon"></i>Report cover photo</a></li>
+						-->
+         <!--<!<li><a href="javascript:void(0);" ng-click="showUserVoice=true; openUserVoiceDialog()" onclick="event.preventDefault()"><i class="report_icon"></i>Report a problem</a></li>-->
+         <li>
+          <a href="http://wikiwand.uservoice.com/forums/247843-wikiwand-website-extensions" ng-click="closeAllMenus()" target="_blank">
+           <i class="idea_icon">
+           </i>
+           Send a suggestion
+          </a>
+         </li>
+         <li ng-if="activation.extensionInstalled">
+          <a href="/extension/uninstall/menu" target="_blank">
+           <i class="uninstall_icon">
+           </i>
+           Uninstall Wikiwand
+          </a>
+         </li>
+         <!--<li ng-if="$root.activation.showSwitchToWikipedia"><a href="javascript:void(0);" ng-click="closeAllMenus(); $root.walkthroughs['switch_to_wp'].showWalkthrough=true;" onclick="event.preventDefault()"><i class="wiki_icon"></i>Switch to Wikipedia</a></li>-->
+         <!--<li ng-if="!$root.activation.showSwitchToWikipedia"><a href="javascript:void(0);" ng-click="closeAllMenus()" ng-href="{{::articleData.links.wikipediaRead }}" target="_blank"><i class="wiki_icon"></i>Switch to Wikipedia</a></li>-->
+        </ul>
+        <div id="user_voice_wrapper" ng-show="showUserVoice">
+        </div>
+        <div id="cover_report" ng-show="showCoverReport">
+         <article ng-cloak="" ng-show="$root.showReportCoverImageText1">
+          <h3>
+           Our magic isn't perfect
+          </h3>
+          <p>
+           You can help our automatic cover photo selection by reporting an unsuitable photo.
+          </p>
+          <div ng-click="$root.reportImage($event,'disturbing',articleData.mainImage.full.originalUrl)">
+           The cover is visually disturbing
+          </div>
+          <div ng-click="$root.reportImage($event,'irrelevant',articleData.mainImage.full.originalUrl)">
+           The cover is not a good choice
+          </div>
+         </article>
+         <article ng-cloak="" ng-show="$root.showReportCoverImageText2">
+          <h4>
+           Thank you for helping!
+          </h4>
+          <br/>
+          <p>
+           Your input will affect cover photo selection, along with input from other users.
+           <br/>
+          </p>
+         </article>
+        </div>
+        <div id="feadback_back" ng-click="showUserVoice=false;showCoverReport=false;$root.showReportCoverImageText1=true;$root.showReportCoverImageText2=false;" ng-show="showUserVoice || showCoverReport">
+         &lt; back
+        </div>
+       </div>
+      </img>
+     </li>
+     <li class="search_btn menu-tooltip" ng-click="$root.openSearch('open'); $root.userClick(true, 'toolbar-search');" title="Search">
+      <i>
+      </i>
+     </li>
+     <li class="per_btn menu-tooltip" ng-class="{active:showPerMenu, gone: searchFocus}" ng-click="togglePerMenu($event); $root.userClick(showPerMenu, 'toolbar-pers');" title="Personalize">
+      <i>
+      </i>
+      <div class="drop_down menu_per" id="pref_drop_down" ng-click="prefClick(); clickedInside($event)" ng-controller="UserPrefsController" ng-if="showPerMenu" ng-init="initPrefsController()" ng-show="preMenuReady">
+       <ul class="main_theme">
+        <li ng-class="{active: $root.minimalStyle == false}" ng-click="$root.layoutHandler('rich')">
+         Rich
+        </li>
+        <li ng-class="{active: $root.minimalStyle == true}" ng-click="$root.layoutHandler('minimal')">
+         Minimal
+        </li>
+       </ul>
+       <div class="per_slider two style per_serif">
+        <span class="hover" ng-click="$root.fontStyleHandler(0, true)">
+         Serif
+        </span>
+        <div class="toggle_slider" id="font_style_slider">
+        </div>
+        <span class="hover" ng-click="$root.fontStyleHandler(1, true)">
+         Sans
+        </span>
+       </div>
+       <div class="per_slider two theme">
+        <span class="hover" ng-click="$root.themesHandler(0, true)">
+        </span>
+        <div class="toggle_slider" id="theme_slider">
+        </div>
+        <span class="hover" ng-click="$root.themesHandler(1, true)">
+        </span>
+       </div>
+       <div class="per_slider three size">
+        <span class="hover" ng-click="fontSizeSlider =  Math.max(fontSizeSlider - 1, 0); $root.txtSizeHandler(fontSizeSlider, true);">
+        </span>
+        <div class="step_slider" id="font_size_slider">
+        </div>
+        <span class="hover" ng-click="fontSizeSlider =  Math.min(fontSizeSlider + 1, 2); $root.txtSizeHandler(fontSizeSlider, true);">
+        </span>
+       </div>
+       <div class="per_slider three column">
+        <span class="hover" ng-click="columnWidthSlider =  Math.max(columnWidthSlider - 1, 0); $root.columnWidthHandler(columnWidthSlider, true)">
+        </span>
+        <div class="step_slider" id="column_slider">
+        </div>
+        <span class="hover" ng-click="columnWidthSlider =  Math.min(columnWidthSlider + 1, 2); $root.columnWidthHandler(columnWidthSlider, true)">
+        </span>
+       </div>
+       <div class="per_justify" ng-click="$root.justifyHandler(!$root.justifyTxt)">
+        <i ng-class="{active: $root.justifyTxt}">
+        </i>
+        Justify Text
+       </div>
+       <a class="upgrade_button small activation_install preferences_install" href="javascript:void(0);" ng-class="{active: btnHover}" ng-click="hidePerMenu($event); $root.reportClick('fromPrefs');$root.activationButtonClicked('');$root.extensionPopup('click');" ng-cloak="" ng-if="$root.callToPersonalize &amp;&amp; $root.prefsTouched" ng-mouseenter="$root.activationHover('enter')" ng-mouseleave="$root.activationHover('leave')">
+        Get Wikiwand
+        <i>
+        </i>
+       </a>
+       <!--<div class="per_reset" ng-click="$root.resetPreferences();">Reset</div>-->
+       <div class="per_httpsnotice" ng-if="::isHttps">
+        Note: preferences and languages are saved separately in https mode
+       </div>
+      </div>
+     </li>
+     <!--
+			<li class="find_btn menu-tooltip" title="Find in article" ng-class="{active: showFindMenu}">
+				<i></i>
+			</li>
+			-->
+     <li class="lang_btn menu-tooltip" ng-class="{active:showLanguageMenu, gone: searchFocus}" ng-click="toggleLanguageMenu($event); $root.userClick(showLanguageMenu, 'toolbar-lang');" title="Other Languages">
+      <i ng-cloak="">
+       {{::langAbbreviation}}
+      </i>
+      <ul class="drop_down" ng-cloak="" ng-controller="PreferredLanguagesController" ng-show="showLanguageMenu">
+       <li class="favourite_lang" ng-class="{current_lang: lang.lang == articleData, no_lang: !lang.hasArticle}" ng-cloak="" ng-repeat="lang in list">
+        <a href="{{::lang.articleLink}}" hreflang="{{::lang.CodeHTML}}" ng-if="::lang.fav" rel="alternate" title="{{::lang.tooltip}}">
+         <i>
+          {{::lang.langAbberviation}}
+         </i>
+         {{::lang.NameEnglish}}
+         <span>
+          {{::lang.articleTitle}}
+         </span>
+        </a>
+       </li>
+       <li class="favourite_lang lang_open" ng-if="articleData.availableLanguages.length &gt; numOfAvailablePreferredLanguages">
+        <a href="javascript:void(0);" ng-click="$root.$broadcast('showAllArticleLanguagesFunc')">
+         <i>
+          ∙∙∙
+         </i>
+         147 other languages
+        </a>
+       </li>
+       <li class="lang_pref">
+        <a href="javascript:void(0);" ng-click="$root.$broadcast('showAllWikipediaLanguagesFunc')">
+         <i>
+         </i>
+         Language preferences
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="share_btn article menu-tooltip" ng-class="{active:showShareMenu, gone: searchFocus}" ng-click="toggleShareMenu($event); $root.userClick(showShareMenu, 'toolbar-share');" title="Share Article ">
+      <i>
+      </i>
+      <div class="drop_down menu_share" id="share_drop_down" ng-click="clickedInside($event)" ng-show="showShareMenu">
+       <ul class="share_links">
+        <li class="share-facebook">
+         <a class="hover" href="#" ng-click="$root.userClick(showShareMenu, 'toolbar-share-facebook');" target="_blank">
+         </a>
+        </li>
+        <li class="share-gplus">
+         <a class="hover" href="#" ng-click="$root.userClick(showShareMenu, 'toolbar-share-gplus');" target="_blank">
+         </a>
+        </li>
+        <!--<li class="share-reddit"><a class="hover" href="#" target="_blank" ng-click="$root.userClick(showShareMenu, 'toolbar-share-reddit');"></a></li>-->
+        <li class="share-twitter">
+         <a class="hover" href="#" ng-click="$root.userClick(showShareMenu, 'toolbar-share-twitter');" target="_blank">
+         </a>
+        </li>
+        <li class="share-gmail">
+         <a class="hover" href="#" ng-click="$root.userClick(showShareMenu, 'toolbar-share-gmail');" target="_blank">
+         </a>
+        </li>
+       </ul>
+      </div>
+     </li>
+     <li class="feedback_btn article menu-tooltip" ng-class="{active:showFeedbackMenu, gone: searchFocus}" ng-click="toggleFeedbackMenu($event); $root.userClick(showFeedbackMenu, 'toolbar-report');" title="Wikipedia Tools">
+      <i>
+      </i>
+      <ul class="drop_down menu_feedback" id="feedback_drop_down" ng-show="showFeedbackMenu">
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaRead }}" target="_blank">
+         <i class="read_w_icon">
+         </i>
+         Read On Wikipedia
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaEdit }}" target="_blank">
+         <i class="edit_w_icon">
+         </i>
+         Edit
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaHistory }}" target="_blank">
+         <i class="history_w_icon">
+         </i>
+         History
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaTalk }}" target="_blank">
+         <i class="talk_w_icon">
+         </i>
+         Talk Page
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaPrint }}" target="_blank">
+         <i class="print_w_icon">
+         </i>
+         Print
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaDownload }}" target="_blank">
+         <i class="download_w_icon">
+         </i>
+         Download PDF
+        </a>
+       </li>
+       <!--<li class="wikipedia_list"><a ng-href="https://en.wikipedia.org/wiki/Special:Watchlist" target="_blank"><i class="watch_icon"></i>Your Watchlist</a></li>-->
+       <!--<li class="wikipedia_list"><a ng-href="https://{{::articleData.langCodeUrl }}.wikipedia.org" target="_blank"><i class="home_icon"></i>Wikipedia Home Page</a></li>-->
+      </ul>
+     </li>
+     <span class="menu_line">
+     </span>
+     <li class="upgrade_btn menu-tooltip {{::$root.activation.nextAction}}" ng-class="{active: hover}" ng-click="$root.reportClick('toolbar');$root.activationButtonClicked();  $root.extensionPopup('click');" ng-cloak="" ng-if="$root.activation.nextAction != ''" ng-mouseenter="hover = true; $root.extensionPopup('enter');" ng-mouseleave="hover = false; $root.extensionPopup('leave');" title="{{::$root.activation.tooltip}}">
+      <span class="upgrade_txt" ng-if="$root.activation.nextAction != 'activation_share'">
+       {{::$root.activation.text}}
+      </span>
+      <span class="upgrade_txt" ng-if="$root.activation.nextAction == 'activation_share'">
+       {{::$root.activation.toolbarText}}
+      </span>
+      <i>
+      </i>
+     </li>
+     <!--
+<a href="javascript:void(0);" ng-cloak ng-class="{active: hover}"
+	ng-mouseenter="hover = true"  ng-mouseleave="hover = false"
+	ng-click="activationButtonClicked();" class="upgrade_button activation_button_toolbar small {{::activation.action}}" >
+	<span>{{activation.text}}</span><i></i>
+</a>
+-->
+    </ul>
+   </nav>
+   <!--*************************** content  *************************-->
+   <div class=" new_image" id="content" ng-class="{limit: $root.limitPage, active:!$root.tocShow}">
+    <!--************ news Article section ************-->
+    <!--************ main_image ************-->
+    <div id="cover_image_wrapper" ng-hide="$root.minimalStyle">
+     <div id="cover_image" ng-class="{active:!$root.tocShow}" ng-cloak="" ng-controller="CoverImageController" ng-if="!hideCoverImageLandscape" ng-mouseenter="hoveredImg = true" ng-mouseleave="hoveredImg = false" ng-style="{'background-image' : 'url({{articleData.mainImage.full.urlDesktop}})'}">
+      <div class="report tooltip_top" ng-class="{active: hoveredImg}" ng-click="$root.showCoverImageReportPopup=true;$root.showReportCoverImageText1=true;$root.showReportCoverImageText2=false;" title="Unsuitable photo">
+      </div>
+      <a class="pin_btn tooltip_top" href="http://www.pinterest.com/pin/create/button/?url={{::articleData.links.selfRead}}&amp;media={{::finalImageURL}}&amp;description=From Wikiwand:%20{{articleData.title}}" ng-class="{active: hoveredImg}" target="_blank" title="Pin it">
+      </a>
+     </div>
+    </div>
+    <!--************ main_image ENDS ************-->
+    <article class=" padded " id="article_content_wrapper" ng-class="{withGist: $root.gistOn, minimal_margin: $root.minimalStyle, loaded: showArticleContents, narrow_column: $root.columnWidth=='narrow', wide_column: $root.columnWidth=='wide',
+	full_column: $root.columnWidth=='full', no_cover: articleMarginTop=='noCover', margin_initial: articleMarginTop=='initial', margin_low: articleMarginTop=='low', margin_middle: articleMarginTop=='middle', margin_high: articleMarginTop=='high'}" ng-cloak="" ng-controller="ArticleContentController">
+     <section class="title_wrapper">
+      <h1 class="firstHeading">
+       <span class="">
+        طشقند
+       </span>
+       <a class="title_icon edit_article edit_section tooltip_top" href="{{::articleData.links.wikipediaEdit }}" target="_blank" title="Edit Article">
+       </a>
+       <!--<span class="title_icon geo-location tooltip_top" title="Browse map" ng-if="$root.map.exists" ng-class="{loading: $root.mapLoading}" onClick="loadGoogleMaps();"></span>
+
+			<span class="title_icon like_buttons unselectable" onclick="event.stopPropagation()"></span>-->
+      </h1>
+      <!-- READ MORE SECTION-->
+      <nav id="read_more" ng-style="{opacity:showReadMore}">
+       <svg height="25px" version="1.1" width="25px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+        <path d="M9.512,8.692L8.073,7.331C8.24,7.026,8.344,6.682,8.344,6.31c0-1.179-0.956-2.135-2.135-2.135	c-1.18,0-2.137,0.955-2.137,2.135s0.957,2.136,2.137,2.136c0.416,0,0.801-0.124,1.129-0.33l1.438,1.359	C8.993,9.188,9.238,8.924,9.512,8.692z">
+        </path>
+        <path d="M15.603,8.522l1.912-3.22c0.188,0.054,0.384,0.093,0.589,0.093c1.182,0,2.138-0.956,2.138-2.136 c0-1.179-0.956-2.134-2.138-2.134c-1.18,0-2.135,0.955-2.135,2.134c0,0.586,0.236,1.115,0.618,1.501l-1.907,3.21	C15.008,8.119,15.316,8.305,15.603,8.522z">
+        </path>
+        <path d="M22.199,11.217c-0.918,0-1.696,0.583-1.998,1.397l-2.657-0.262c0,0.02,0.003,0.039,0.003,0.059 c0,0.346-0.039,0.685-0.107,1.012l2.657,0.263c0.16,1.019,1.038,1.801,2.103,1.801c1.18,0,2.135-0.955,2.135-2.135	C24.334,12.173,23.379,11.217,22.199,11.217z">
+        </path>
+        <path d="M14.865,19.612l-0.594-2.597c-0.336,0.117-0.685,0.201-1.049,0.243l0.596,2.596c-0.683,0.357-1.153,1.063-1.153,1.887 c0,1.18,0.954,2.134,2.137,2.134c1.179,0,2.134-0.954,2.134-2.134C16.937,20.584,16.015,19.646,14.865,19.612z">
+        </path>
+        <path d="M7.896,13.441L4.587,14.55c-0.382-0.583-1.039-0.97-1.787-0.97c-1.18,0-2.135,0.955-2.135,2.135 c0,1.181,0.955,2.136,2.135,2.136c1.179,0,2.136-0.955,2.136-2.136c0-0.049-0.011-0.095-0.015-0.144l3.319-1.111	C8.092,14.138,7.973,13.798,7.896,13.441z">
+        </path>
+        <circle cx="12.666" cy="12.411" r="3.662">
+        </circle>
+       </svg>
+       <h4 ng-if="showTextEnglish">
+        Connected to:
+       </h4>
+       <a class="read_more_link int-link" href="{{::readMoreArticle.link}}" ng-class="{no_thumb: readMoreArticle.thumb == 'none'}" ng-mousedown="reportReadMore('click')" ng-mouseenter="reportReadMore('hover')" ng-repeat="readMoreArticle in readMoreArticles | limitTo:3">
+        <span class="title">
+         {{::readMoreArticle.title}}
+        </span>
+       </a>
+      </nav>
+      <!-- /339474670/Wikiwand/ATF -->
+      <div id="div-gpt-ad-1527601425745-0" style="margin-bottom:10px">
+       <script>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527601425745-0'); });
+       </script>
+      </div>
+      <h2>
+       من ويكيبيديا، الموسوعة الحرة
+      </h2>
+     </section>
+     <!-- the styling below is used for the smooth transition between the partial content and the final content -->
+     <style>
+      .content-absolute {
+			position: absolute;
+			z-index: 200;
+		}
+		#partialContent {
+			min-height: 1000px;
+		}
+     </style>
+     <!--<div id='partialContent'></div>-->
+     <!-- /339474670/Wikiwand/SideBar -->
+     <div class="sideplacement" id="div-gpt-ad-1527601425745-1" style="position:absolute;right:-170px">
+      <script>
+       googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527601425745-1'); });
+      </script>
+     </div>
+     <div id="fullContent">
+     </div>
+     <a ng-click="onBottomLinkClick()" ng-href="{{bottomLinkUrl}}" target="_blank">
+      <span id="bottom_link" ng-cloak="" ng-if="showBottomLink" style="display: block; text-align:center; font-family: 'Lora', serif; line-height: 1.5em; font-size: 24px; padding: 20px 15px; border-radius: 5px; box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); background: linear-gradient(to bottom, #40bbe1 -100%, #1559b5 100%); direction: ltr;">
+       <span style="display:block; font-size: 0.8em; color: rgba(255,255,255,0.85)">
+        {{bottomLinkPreText}}
+       </span>
+       <span style="display:block; font-size: 1em; color: white">
+        {{bottomLinkText}}
+       </span>
+      </span>
+     </a>
+     <section class="page_copyright" ng-cloak="" ng-init="mainImage = articleData.mainImage" ng-show="$root.showArticleContents">
+      This page is based on a
+      <a ng-href="http://www.wikipedia.org" rel="nofollow" target="_blank">
+       Wikipedia
+      </a>
+      article written by
+      <a href="{{::articleData.links.wikipediaHistory }}" rel="nofollow" target="_blank">
+       contributors
+      </a>
+      (
+      <a ng-href="{{::articleData.links.wikipediaRead }}" rel="nofollow" target="_blank">
+       read
+      </a>
+      /
+      <a href="{{::articleData.links.wikipediaEdit }}" rel="nofollow" target="_blank">
+       edit
+      </a>
+      ).
+      <br/>
+      Text is available under the
+      <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license,nofollow" target="_blank">
+       CC BY-SA 4.0
+      </a>
+      license; additional terms may apply.
+      <br/>
+      Images, videos and audio are available under their respective licenses.
+      <br/>
+      <div ng-if="mainImage.wikipediaPageFullUrl">
+       <span ng-show="mainImage.info.license.url">
+        Cover photo is available under
+        <a href="{{::mainImage.info.license.url}}" target="_blank">
+         {{::mainImage.info.license.name || 'Unknown'}}
+        </a>
+        license.
+       </span>
+       <span ng-show="!mainImage.info.license.url">
+        Cover photo is available under {{::mainImage.info.license.name || 'Unknown'}} license.
+       </span>
+       Credit:
+       <span ng-bind-html="mainImage.info.license.artist">
+       </span>
+       (
+       <a href="{{::mainImage.wikipediaPageFullUrl}}" target="_blank">
+        see original file
+       </a>
+       ).
+      </div>
+      <div class="line">
+      </div>
+     </section>
+     <!-- /339474670/Wikiwand/Bottom -->
+     <div class="OUTBRAIN" data-ob-template="Admination" data-widget-id="AR_12">
+     </div>
+     <script src="//widgets.outbrain.com/outbrain.js" type="text/javascript">
+     </script>
+    </article>
+    <!--************ wikiwand_footer ************-->
+    <footer class="wikiwand_footer" ng-cloak="" ng-show="$root.showArticleContents || !articleData.pageIsArticle">
+     <div ng-if="$root.activation.nextAction != ''">
+      <!-- touch devices footer share -->
+      <div class="mobile_share" ng-if="$root.touchDevice">
+       <div class="footer_icon">
+       </div>
+       <div class="h2">
+        Enjoying Wikiwand?
+       </div>
+       <div class="h3" ng-cloak="" ng-if="!activation.extensionInstalled">
+        Give good old Wikipedia a great new look:
+       </div>
+       <a class="upgrade_button {{::$root.activation.nextAction}}" href="javascript:void(0);" ng-class="{active: btnHover}" ng-click="$root.reportClick('footer');$root.activationButtonClicked(''); $root.extensionPopup('click');" ng-cloak="" ng-mouseenter="$root.activationHover('enter')" ng-mouseleave="$root.activationHover('leave')">
+        <span>
+         {{::$root.activation.text}}
+        </span>
+        <i>
+        </i>
+       </a>
+      </div>
+      <!-- desktop upsale -->
+      <div class="desktop_upsale" ng-if="!$root.touchDevice">
+       <!-- desktop: rate -->
+       <div ng-if="$root.activation.extensionInstalled &amp;&amp; $root.activation.nextAction == 'activation_rate'">
+        <div class="footer_icon">
+        </div>
+        <div class="h2">
+         Enjoying Wikiwand?
+        </div>
+        <a class="upgrade_button {{::$root.activation.nextAction}}" href="javascript:void(0);" ng-class="{active: btnHover}" ng-click="$root.reportClick('footer');$root.activationButtonClicked(''); $root.extensionPopup('click');" ng-cloak="" ng-mouseenter="$root.activationHover('enter')" ng-mouseleave="$root.activationHover('leave')">
+         <span>
+          {{::$root.activation.text}}
+         </span>
+         <i>
+         </i>
+        </a>
+        <div class="stars" ng-bind-html="activation.ratedText">
+        </div>
+       </div>
+       <!-- desktop: share -->
+       <div ng-if="$root.activation.extensionInstalled &amp;&amp; $root.activation.nextAction == 'activation_share'">
+        <div class="hide_before_angular">
+         <div class="invite_box footer_invite_box active anim">
+          <h4>
+           Tell your friends about Wikiwand!
+          </h4>
+          <a href="http://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=&amp;su=Have you seen Wikiwand%3F&amp;body=Check out Wikiwand - it's an awesome new interface for Wikipedia:%0Ahttp://www.wikiwand.com/{{::$root.refString}}%0AGive it a try, you'll thank me later :)" ng-click="$root.pressedTellAFriendLink('gmail','footer')" style="background-color:#bb0000" target="_blank">
+           <i style="background-position: 0 -96px">
+           </i>
+           Gmail
+          </a>
+          <a href="http://www.facebook.com/sharer.php?u=http://www.wikiwand.com/{{::$root.refString}}" ng-click="$root.pressedTellAFriendLink('facebook','footer')" style="background-color:#3B5999" target="_blank">
+           <i style="background-position: -120px -96px">
+           </i>
+           Facebook
+          </a>
+          <a href="http://twitter.com/share?text=Wikiwand gives good old Wikipedia a great new look - check it out:&amp;hashtags=wikipedia,ux,design&amp;url=http://www.wikiwand.com/{{::$root.refString}}&amp;related=wikiwand" ng-click="$root.pressedTellAFriendLink('twitter','footer')" style="background-color:#0084b4" target="_blank">
+           <i style="background-position: -150px -96px">
+           </i>
+           Twitter
+          </a>
+          <a class="link" href="javascript:void(0);" ng-class="{wide: wideLink}" ng-click="$root.pressedTellAFriendLink('link','footer')" style="background-color:#615a5f">
+           <i style="background-position: -90px -97px">
+           </i>
+           <input ng-blur="wideLink = false" ng-focus="wideLink = true" onclick="this.setSelectionRange(0, this.value.length)" type="text" value="http://www.wikiwand.com/"/>
+           Link
+          </a>
+          <br/>
+          <br/>
+         </div>
+        </div>
+       </div>
+       <!-- desktop: install -->
+       <div ng-if="!$root.activation.extensionInstalled &amp;&amp; $root.activation.nextAction == 'activation_install'">
+        <div class="footer_icon">
+        </div>
+        <div class="h2">
+         Enjoying Wikiwand?
+        </div>
+        <div class="h3">
+         Give good old Wikipedia a great new look:
+        </div>
+        <a class="upgrade_button {{::$root.activation.nextAction}}" href="javascript:void(0);" ng-class="{active: btnHover}" ng-click="$root.reportClick('footer');$root.activationButtonClicked(''); $root.extensionPopup('click');" ng-cloak="" ng-mouseenter="$root.activationHover('enter')" ng-mouseleave="$root.activationHover('leave')">
+         <span>
+          {{::$root.activation.text}}
+         </span>
+         <i>
+         </i>
+        </a>
+       </div>
+      </div>
+     </div>
+     <ul class="social_links" ng-show="(!activation.extensionInstalled || activation.nextAction != 'activation_share') &amp;&amp; !$root.showContentRecommendations">
+      <li class="facebook">
+       <a class="hover" href="https://www.facebook.com/wikiwandapp" target="_blank">
+       </a>
+      </li>
+      <li class="twitter">
+       <a class="hover" href="https://twitter.com/wikiwand" target="_blank">
+       </a>
+      </li>
+      <li class="gplus">
+       <a class="hover" href="https://plus.google.com/+Wikiwand" target="_blank">
+       </a>
+      </li>
+      <li class="linkedin">
+       <a class="hover" href="http://www.linkedin.com/company/wikiwand" target="_blank">
+       </a>
+      </li>
+     </ul>
+     <ul class="footer_links">
+      <li>
+       <a href="/">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="/about">
+        About Us
+       </a>
+      </li>
+      <li>
+       <a href="/press">
+        Press
+       </a>
+      </li>
+      <li>
+       <a href="/sitemap">
+        Site Map
+       </a>
+      </li>
+      <li>
+       <a href="/terms">
+        Terms Of Service
+       </a>
+      </li>
+      <li>
+       <a href="/privacy">
+        Privacy Policy
+       </a>
+      </li>
+      <!--<li style="font-weight: 400"><a href="javascript:void(0);" ng-mouseenter="loadUserVoice()"  data-uv-trigger="contact">Send Feedback</a></li>-->
+     </ul>
+    </footer>
+    <!--************ wikiwand_footer ENDS ************-->
+   </div>
+   <!--**************************** content ENDS *****************************-->
+   <!--************ gallery & lang  ************-->
+   <!--************ TOC  ************-->
+   <div id="toc_wrapper" ng-class="{active: $root.tocShow}" ng-cloak="" ng-controller="TableOfContentsController" ng-show="$root.tocShow" ng-swipe-left="$root.tocFold('swipeLeft')" ng-swipe-right="$root.tocFold('swipeRight')">
+    <div id="toc_swipe" ng-click="$root.tocFold()" ng-cloak="" ng-show="$root.tocShow" ng-swipe-left="$root.tocFold('swipeLeft')" ng-swipe-right="$root.tocFold('swipeRight')">
+    </div>
+    <div id="toc_btn">
+     <span ng-cloak="">
+      طشقند
+     </span>
+     <i id="content_icon" ng-click="tocFold(); $root.userClick(true, 'toolbar-toc-hide');">
+     </i>
+    </div>
+    <aside class="unselectable lang_ar" id="wikiwand_toc" ng-cloak="">
+     <ul class="toc_list">
+      <li class="{special:line.special}" id="toc_btn_overview" ng-click="tocMobileFold()">
+       <a href="#overview" ng-click="button.doClick($event)">
+        مقدمة
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_الاسم" ng-click="tocMobileFold()">
+       <a href="#الاسم" ng-click="button.doClick($event)">
+        الاسم
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_التاريخ" ng-click="tocMobileFold()">
+       <a href="#التاريخ" ng-click="button.doClick($event)">
+        التاريخ
+       </a>
+       <ol class="sub_toc_list">
+        <li class="" id="toc_btn_التاريخ_القديم">
+         <a href="#التاريخ_القديم" ng-click="button.doClick($event)">
+          التاريخ القديم
+         </a>
+        </li>
+        <li class="" id="toc_btn_عصر_شاش">
+         <a href="#عصر_شاش" ng-click="button.doClick($event)">
+          عصر شاش
+         </a>
+        </li>
+        <li class="" id="toc_btn_فترة_الإسلام">
+         <a href="#فترة_الإسلام" ng-click="button.doClick($event)">
+          فترة الإسلام
+         </a>
+        </li>
+        <li class="" id="toc_btn_عصر_خانية_الخوقند">
+         <a href="#عصر_خانية_الخوقند" ng-click="button.doClick($event)">
+          عصر خانية الخوقند
+         </a>
+        </li>
+        <li class="" id="toc_btn_عصر_القياصرة_الروس">
+         <a href="#عصر_القياصرة_الروس" ng-click="button.doClick($event)">
+          عصر القياصرة الروس
+         </a>
+        </li>
+        <li class="" id="toc_btn_تأثيرات_الثورة_الروسية">
+         <a href="#تأثيرات_الثورة_الروسية" ng-click="button.doClick($event)">
+          تأثيرات الثورة الروسية
+         </a>
+        </li>
+        <li class="" id="toc_btn_فترة_السوفييت">
+         <a href="#فترة_السوفييت" ng-click="button.doClick($event)">
+          فترة السوفييت
+         </a>
+        </li>
+        <li class="" id="toc_btn_عهد_الاستقلال">
+         <a href="#عهد_الاستقلال" ng-click="button.doClick($event)">
+          عهد الاستقلال
+         </a>
+        </li>
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_تطور_المدينة_منذ_القرن_التاسع_عشر" ng-click="tocMobileFold()">
+       <a href="#تطور_المدينة_منذ_القرن_التاسع_عشر" ng-click="button.doClick($event)">
+        تطور المدينة منذ القرن التاسع عشر
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_الجغرافيا" ng-click="tocMobileFold()">
+       <a href="#الجغرافيا" ng-click="button.doClick($event)">
+        الجغرافيا
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_التوزيع_السكاني" ng-click="tocMobileFold()">
+       <a href="#التوزيع_السكاني" ng-click="button.doClick($event)">
+        التوزيع السكاني
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_احيائها" ng-click="tocMobileFold()">
+       <a href="#احيائها" ng-click="button.doClick($event)">
+        احيائها
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_المناخ" ng-click="tocMobileFold()">
+       <a href="#المناخ" ng-click="button.doClick($event)">
+        المناخ
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_الاقتصاد" ng-click="tocMobileFold()">
+       <a href="#الاقتصاد" ng-click="button.doClick($event)">
+        الاقتصاد
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_التعليم_والثقافة" ng-click="tocMobileFold()">
+       <a href="#التعليم_والثقافة" ng-click="button.doClick($event)">
+        التعليم والثقافة
+       </a>
+       <ol class="sub_toc_list">
+        <li class="" id="toc_btn_الجامعات">
+         <a href="#الجامعات" ng-click="button.doClick($event)">
+          الجامعات
+         </a>
+        </li>
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_الإعلام" ng-click="tocMobileFold()">
+       <a href="#الإعلام" ng-click="button.doClick($event)">
+        الإعلام
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_المواصلات" ng-click="tocMobileFold()">
+       <a href="#المواصلات" ng-click="button.doClick($event)">
+        المواصلات
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_معالم_المدينة" ng-click="tocMobileFold()">
+       <a href="#معالم_المدينة" ng-click="button.doClick($event)">
+        معالم المدينة
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_الترفيه_والتسوق" ng-click="tocMobileFold()">
+       <a href="#الترفيه_والتسوق" ng-click="button.doClick($event)">
+        الترفيه والتسوق
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_الرياضة" ng-click="tocMobileFold()">
+       <a href="#الرياضة" ng-click="button.doClick($event)">
+        الرياضة
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_توأمة_مدن" ng-click="tocMobileFold()">
+       <a href="#توأمة_مدن" ng-click="button.doClick($event)">
+        توأمة مدن
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_أيام_العطل" ng-click="tocMobileFold()">
+       <a href="#أيام_العطل" ng-click="button.doClick($event)">
+        أيام العطل
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_انظر_أيضاً" ng-click="tocMobileFold()">
+       <a href="#انظر_أيضاً" ng-click="button.doClick($event)">
+        انظر أيضاً
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_وصلات_خارجية" ng-click="tocMobileFold()">
+       <a href="#وصلات_خارجية" ng-click="button.doClick($event)">
+        وصلات خارجية
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_معرض_صور" ng-click="tocMobileFold()">
+       <a href="#معرض_صور" ng-click="button.doClick($event)">
+        معرض صور
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_المراجع" ng-click="tocMobileFold()">
+       <a href="#المراجع" ng-click="button.doClick($event)">
+        المراجع
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+     </ul>
+    </aside>
+   </div>
+   <div ng-controller="BookmarkController">
+    <!-- gist -->
+    <!-- bookmark -->
+   </div>
+   <!--************ gallery ************-->
+   <div class="hide_before_angular" id="gallery" ng-class="{full: galleryFull}" ng-cloak="" ng-controller="GalleryController" ng-show="galleryActive">
+    <div class="bg" ng-click="closeGallery()">
+    </div>
+    <div id="gallery_bg">
+     <!--************ gallery image ************-->
+     <div class="unselectable" id="gallery_img" ng-class="{active: infoOpen}" ng-cloak="">
+      <div class="loadThumb unselectable" id="gallery_img_placeholder" ng-mouseenter="hoveredImg = true" ng-mouseleave="hoveredImg = false" ng-swipe-left="onNextClick()" ng-swipe-right="onPrevClick()">
+       <div class="loaderAnim unselectable" id="img_loading" ng-if="!current.bucket.loaded">
+       </div>
+       <img alt="" class="gallery_main bucket unselectable" ng-class="{active:current.bucket.loaded}" ng-show="current.info.type == 'image'" ng-src="{{::current.bucket.src}}"/>
+       <div class="gallery_main bucket video unselectable" ng-class="{active:current.bucket.loaded}" ng-show="current.info.type == 'video'">
+        <div class="payload_container">
+        </div>
+       </div>
+      </div>
+      <div class="gallery_arrow next unselectable" ng-click="onNextClick()" ng-show="current.index != items.length-1">
+       <i>
+       </i>
+      </div>
+      <div class="gallery_arrow prev unselectable" ng-click="onPrevClick()" ng-show="current.index != 0">
+       <i>
+       </i>
+      </div>
+      <div id="img_counter" ng-cloak="" ng-mouseenter="hoveredImg = true" ng-mouseleave="hoveredImg = false">
+       {{current.index+1}} of {{items.length}}
+       <a class="pin_btn tooltip_top" href="http://www.pinterest.com/pin/create/button/?url={{articleData.links.selfRead}}&amp;media={{current.bucket.src}}&amp;description=From Wikiwand:%20{{current.titleTxt}}" ng-class="{active: hoveredImg}" ng-show="current.info.type == 'image'" target="_blank" title="Pin it">
+       </a>
+       <div class="report tooltip_top" ng-class="{active: hoveredImg}" ng-click="$root.showCoverImageSuggestPopup=true;$root.showSuggestImageText1=true;$root.showSuggestImageText2=false;" ng-show="current.info.type == 'image'" title="Suggest as cover photo">
+       </div>
+      </div>
+      <div id="img_title" ng-bind-html="current.title">
+      </div>
+      <!--************ gallery thumbs ************-->
+      <div class="unselectable" id="gallery_thumbs_con">
+       <!--<div id="gallery_thumbs_pull" class="unselectable"></div>-->
+       <div class="unselectable" id="gallery_thumbs_scroll">
+        <ul class="unselectable" id="gallery_thumbs">
+         <li class="unselectable" ng-class="{active:item.active, video:item.info.type == 'video'}" ng-click="onThumbClick($event, item)" ng-repeat="item in items" ng-style="{'background-image': item.urlString}">
+         </li>
+        </ul>
+       </div>
+      </div>
+      <!--************ gallery btns ************-->
+      <ul id="gallery_btn">
+       <li id="gallery_info_pull" ng-class="{active: infoOpen}" ng-click="infoOpen = !infoOpen">
+       </li>
+       <li id="gallery_close" ng-click="closeGallery()">
+       </li>
+       <li id="full_screen" ng-class="{active:fullScreenActive, unactive:!fullScreenActive}" ng-click="toggleFullScreen()">
+       </li>
+      </ul>
+     </div>
+     <!--************ gallery info  ************-->
+     <div id="gallery_info" ng-show="infoOpen" ng-swipe-right="infoOpen = false">
+      <div id="gallery_info_wrap">
+       <div class="image_caption" ng-bind-html="current.title" ng-if="current.title">
+       </div>
+       <ul>
+        <li class="unselectable img_desc" ng-show="current.info.description">
+         <i>
+         </i>
+         <div class="description_text" ng-bind-html="current.info.descriptionSafe">
+         </div>
+        </li>
+        <li class="img_date" ng-show="current.info.dateOriginal">
+         <i>
+         </i>
+         Date: {{current.info.dateOriginal || 'Unknown'}}
+        </li>
+        <li class="img_date" ng-show="!current.info.dateOriginal">
+         <i>
+         </i>
+         Date: {{(current.info.date | date:'mediumDate') || 'Unknown'}}
+        </li>
+        <li class="with-child unselectable img_credit" ng-click="subInfoOpen1 = !subInfoOpen1" ng-show="current.info.license.artist">
+         <i>
+         </i>
+         Credit:
+         <span ng-bind-html="current.info.license.artist">
+         </span>
+         <ul ng-show="subInfoOpen1">
+          <li>
+           Uploaded by: {{current.info.uploadUser}} on {{current.info.uploadDate | date:'mediumDate'}}
+          </li>
+          <li>
+           <span ng-bind-html="current.info.license.credit">
+           </span>
+          </li>
+         </ul>
+        </li>
+        <li class="img_license" ng-show="current.info.license.url">
+         <i>
+         </i>
+         License:
+         <a href="{{current.info.license.url}}" target="_blank">
+          {{current.info.license.usageTerms || current.info.license.name || current.info.license.detected || 'Unknown'}}
+         </a>
+        </li>
+        <li class="img_license" ng-show="!current.info.license.url">
+         <i>
+         </i>
+         License: {{current.info.license.usageTerms || current.info.license.name || current.info.license.detected || 'Unknown'}}
+        </li>
+        <li class="img_original">
+         <i>
+         </i>
+         <a href="{{current.wikipediaPageFullUrl}}" target="_blank">
+          View file on Wikipedia
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div class="report_popup_wrapp suggest" ng-show="$root.showCoverImageSuggestPopup">
+     <div class="bg" ng-click="$root.showCoverImageSuggestPopup = false">
+     </div>
+     <div class="report_popup">
+      <div ng-show="$root.showSuggestImageText1">
+       <h3>
+        Suggest as cover photo
+       </h3>
+       <p>
+        Would you like to suggest this photo as the cover photo for this article?
+       </p>
+       <a href="" ng-click="$root.suggestImage($event,'recommended',current.original.url);" target="_blank">
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+Yes, this would make a good choice
+<a href="" ng-click="$root.showCoverImageSuggestPopup=false" target="_blank">
+</a>
+No, never mind
+<div ng-show="$root.showSuggestImageText2">
+ <h3>
+  Thank you for helping!
+ </h3>
+ <br/>
+ <p>
+  Your input will affect cover photo selection, along with input from other users.
+  <br/>
+ </p>
+</div>
+<div class="ex" ng-click="$root.showCoverImageSuggestPopup = false">
+</div>
+<!--************ gallery ENDS ************-->
+<!-- fixed_btns at the bottom -->
+<div id="fixed_btns">
+ <!-- audio_player  -->
+ <div class="unselectable" id="audio_player">
+  <i class="unselectable">
+  </i>
+  <div class="unselectable">
+  </div>
+  <span class="listen hide">
+   Listen to this article
+  </span>
+ </div>
+ <div class="dialog_wrapper follow_dialog hide_before_angular" ng-cloak="" ng-if="$root.showVidReport">
+  <div class="bg" ng-click="$root.showVidReport = false">
+  </div>
+  <div class="dialog_box round active" ng-class="{active: $root.showVidReport}" style="height: auto;padding: 20px">
+   <p>
+    Thanks for reporting this video!
+   </p>
+  </div>
+ </div>
+</div>
+<script>
+ if (!precache_from_extension) {
+		if (typeof (analytics) != 'undefined') {
+			analytics.gaVirtualPageView('virtualpageview/impression-article-page');
+		}
+	} else {
+		if (typeof (analytics) != 'undefined') {
+			analytics.gaVirtualPageView('virtualpageview/iframe-precache-article');
+		}
+	}
+</script>
+<!--*************************** search  *************************-->
+<!--*************************** search  *************************-->
+<div id="wikiwand_search" ng-cloak="" ng-controller="ArticleSearchControllerRev2" ng-init="initSearch()" ng-show="$root.showSearch">
+ <div class="bg darkBlack" ng-click="$root.openSearch('close')">
+ </div>
+ <div id="search_list" ng-class="{on: search.query.length}">
+  <input autocomplete="off" class="toolbar-search" id="queryinput" ng-class="{selectedResult: noSelection, loading:waiting}" ng-keyup="testKeyboard($event)" ng-model="search.query" placeholder="بحث" type="text"/>
+  <div id="articleSearch" ng-show="search.query.length">
+   <ul class="results-container" ng-show="search.results.length">
+    <li class="searchResult" desc-attr="{{result.desc}}" id="result_{{$index}}" ng-class="{selectedResult:result.selected, rtl: result.rtl}" ng-click='resultClicked($event,"{{result.linkEncoded}}");' ng-repeat="result in search.results">
+     <span class="thumbicon" ng-style="{'background-image' :result.backgroundImageSring}">
+     </span>
+     <span class="langtag" ng-if="result.firstInlang">
+      <i>
+       {{result.lang}}
+      </i>
+     </span>
+     <span class="value">
+      {{result.T}}
+     </span>
+     <div class="suggestion-type-icon {{result.c}}">
+     </div>
+    </li>
+   </ul>
+   <div id="no_results" ng-if="noResults &amp;&amp; search.query &amp;&amp; !waiting">
+    No matching articles found
+   </div>
+   <a class="searchResult containing" href="/en/{{search.query}}?fullSearch=true" ng-class="{selectedResult:fullSearch}" ng-show="search.query &amp;&amp; !waiting">
+    <span class="value">
+     Search for articles containing:
+     <i>
+      {{search.query}}
+     </i>
+    </span>
+   </a>
+  </div>
+  <img id="search-hint" ng-if="!$root.touchDevices" src="/img/search_ctrl.svg" style="display: block; margin: 20px auto"/>
+ </div>
+ <div id="search_description">
+ </div>
+</div>
+<!--*************************** search ENDS *************************-->
+<!--*************************** search ENDS *************************-->
+<popups ng-if="$root.loadVariousPopups" ng-include="'/api/various_popups'">
+</popups>
+<!--************ follow dialog ************-->
+<div id="error_message" style="display:none;width:500px;padding: 20px;margin: 30vh auto;font-size:16px;text-align:center;">
+ <h1>
+  Oh no, there's been an error
+ </h1>
+ Please help us solve this error by emailing us at
+ <a href="http://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=support@wikiwand.com&amp;su=Encountered an error on Wikiwand" target="_blank">
+  support@wikiwand.com
+ </a>
+ <br/>
+ Let us know what you've done that caused this error, what browser you're using, and whether you have any special extensions/add-ons installed.
+ <br/>
+ Thank you!
+</div>
+<script>
+ var totalServingTime=0;
+</script>

@@ -1,0 +1,4105 @@
+<html>
+ <head>
+  <title>
+   مجلة الجزيرة
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="ar-sa" http-equiv="Content-Language"/>
+  <script language="javascript">
+   function validate(){
+if (search.keyword.value.length<2){
+alert('ادخل كلمة البحث')
+search.keyword.focus()
+return false
+}
+else{
+return true
+}}
+function check_email(){
+if (mailform.email.value.length<1){
+alert("ادخل عنوانك البريدي");
+mailform.email.focus();
+return false;
+}
+var emailexpr = /^[A-Za-z_0-9\.\-\+]+@[A-Za-z_0-9\.\-]+\.[A-Za-z]{2,4}$/;
+var emailStr = document.mailform.email.value;
+if  (!(emailexpr.test(emailStr)) )
+{
+alert("يرجى ادخال البريد الالكتروني بشكل صحيح");
+document.mailform.email.focus();
+return false;
+}
+url="http://maillist.al-jazirah.com.sa/confirm.asp?mailid=" + mailform.email.value + "&regcode=dir&catcode=C009&B1=Submit"
+open(url,'emailWindow','left=10,top=10,height=500,width=700,scrollbars=yes,menubar=no,toolbar=no,resizable=no,status=no,location=no')
+return false;
+}
+  </script>
+  <script language="javascript" src="/scripts/webtraffic.js">
+  </script>
+ </head>
+ <body bgcolor="#F9DBA4" leftmargin="0" topmargin="0">
+  <center>
+   <table bgcolor="#F0AF34" border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" height="0" style="border-collapse: collapse" width="100%">
+    <tr>
+     <td align="center" dir="ltr" valign="top" width="100%">
+      <div id="subcription_adv">
+      </div>
+     </td>
+     <td align="center" valign="top" width="10%">
+      <img border="0" height="69" src="/magazine/images/edulogo.jpg" width="329"/>
+     </td>
+    </tr>
+   </table>
+  </center>
+  <center>
+   <table bgcolor="#B3B3FF" border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" height="1" style="border-collapse: collapse" width="100%">
+    <tr>
+     <td height="1" width="95%">
+      <table bgcolor="#F0AF34" border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%">
+       <tr>
+        <td align="center" width="12%">
+         <b>
+          <font color="#FFFFFF" face="MS Sans Serif" size="2">
+           <a href="/ec.htm" style="text-decoration: none" target="_blank">
+            <font color="#FFFFFF">
+             الاقتصادية
+            </font>
+           </a>
+          </font>
+         </b>
+        </td>
+        <td align="center" nowrap="" width="13%">
+         <b>
+          <a href="/services" style="text-decoration: none" target="_blank">
+           <font color="#FFFFFF" face="MS Sans Serif" size="2">
+            المعقب الالكتروني
+           </font>
+          </a>
+         </b>
+        </td>
+        <td align="center" width="13%">
+         <b>
+          <a href="/cars" style="text-decoration: none" target="_blank">
+           <font color="#FFFFFF" face="MS Sans Serif" size="2">
+            نادي السيارات
+           </font>
+          </a>
+         </b>
+        </td>
+        <td align="center" width="12%">
+         <b>
+          <font color="#FFFFFF" face="MS Sans Serif" size="2">
+           <a href="/sp.htm" style="text-decoration: none" target="_blank">
+            <font color="#FFFFFF">
+             الرياضية
+            </font>
+           </a>
+          </font>
+         </b>
+        </td>
+        <td align="center" width="13%">
+         <b>
+          <a href="/writers" style="text-decoration: none" target="_blank">
+           <font color="#FFFFFF" face="MS Sans Serif" size="2">
+            كتاب واقلام
+           </font>
+          </a>
+         </b>
+        </td>
+        <td align="center" width="12%">
+         <b>
+          <a href="/" style="text-decoration: none" target="_blank">
+           <font color="#FFFFFF" face="MS Sans Serif" size="2">
+            الجزيرة
+           </font>
+          </a>
+         </b>
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+    <tr>
+     <td height="1" width="95%">
+      <center>
+       <table bgcolor="#C28006" width="100%">
+        <tr>
+         <td height="9" nowrap="" width="195">
+          <font color="#FFFFFF" face="MS Sans Serif" size="1">
+           <b>
+            Tuesday 11th January,2005
+           </b>
+          </font>
+         </td>
+         <td align="left" height="12" nowrap="" width="75">
+         </td>
+         <td align="right" nowrap="" width="185">
+          <font color="#FFFFFF" face="MS Sans Serif" size="1">
+           <b>
+            العدد : 113
+           </b>
+          </font>
+         </td>
+         <td align="right" height="12" nowrap="" width="300">
+          <p align="right">
+           <a name="top">
+            <font color="#FFFFFF" face="MS Sans Serif" size="1">
+             <b>
+              الثلاثاء 30 ,ذو القعدة 1425
+             </b>
+            </font>
+           </a>
+          </p>
+         </td>
+        </tr>
+       </table>
+      </center>
+     </td>
+    </tr>
+   </table>
+  </center>
+  <table cellpadding="0" cellspacing="0">
+   <tr>
+    <td valign="top" width="18%">
+     <table bgcolor="#F0AF34" border="0" cellpadding="2" cellspacing="0" style="border-collapse: collapse; border: 3px double #FF0000" width="100%">
+      <tr>
+       <td align="center" bgcolor="#800000">
+        <img src="/magazine/images/aft.jpg"/>
+       </td>
+      </tr>
+      <tr>
+       <td align="center" dir="rtl" height="18" width="100%">
+        <font color="#800000" face="MS Sans Serif" size="2">
+         <font size="2">
+          التنظيم المفقود!!
+         </font>
+        </font>
+       </td>
+      </tr>
+      <tr>
+       <td align="Right" dir="rtl" width="100%">
+        <font color="#800000" face="Tahoma" size="2">
+         مشهد غريب..
+         <br/>
+         يتدافع فيه الإنسان مع أخيه الإنسان..
+         <br/>
+         في سباق محموم..
+         <br/>
+         يفتقد إلى النظام..
+         <br/>
+         بل وإلى الاحترام..
+         <br/>
+         وتضيع معه هيبة المكان والزمان والمناسبة التي جاء هؤلاء من أجلها..
+         <br/>
+         وتختفي بذلك تلك الصورة التي تمثل انعكاساً لمناسبة هذا التجمع العاطفي والإنساني بين المحبين.
+         <br/>
+         ***
+         <br/>
+         يتساءل الجميع باندهاش واستغراب، حيث يتواصل الحديث فيما بينهم ولا يتوقف..
+         <br/>
+         وحيث يمسهم شعور بالأسى والحيرة مع تكرار السؤال..
+         <br/>
+         فيما لا جواب عن السؤال..
+         <br/>
+         السؤال إذاً هو السؤال..
+         <br/>
+         والصمت هو الصمت عن إعطاء الجواب..
+         <br/>
+         سيّان إن كان هو الجواب أو اللاَّ جواب!.
+         <br/>
+         فيما الناس يلقون بأسباب متاعبهم وذلك العرق الذي ينزف من مسامات أجسامهم على غياب هذا الجواب.
+         <br/>
+         ***
+         <br/>
+         ففي (مقبرة النسيم) حيث زوارها بالآلاف من المعزين..
+         <br/>
+         هنا يختلط ويتزاحم الجميع باتجاه من سيواسونهم..
+         <br/>
+         في مشهد فوضوي لا مبرر له ومثير للانتباه..
+         <br/>
+         وكأننا بفعلنا هذا لا نملك القدرة على تنظيم حركة هذه الأعداد من الناس دون أن نسيء لحرمة المكان..
+         <br/>
+         ما أعنيه باختصار، أن بين هؤلاء من هو كبير أو طاعن في السن..
+         <br/>
+         ومن هو في حالة صحية لا تساعده على أخذ مكانه وطريقه بين الأقوياء في هذه الجموع الغفيرة..
+         <br/>
+         فلماذا لا يبحث أصحاب الفضيلة العلماء عن مخرج يعالج هذه المشكلة بما يتوافق ويتفق وينسجم مع تعاليم ديننا الحنيف؟.
+         <br/>
+         ***
+         <br/>
+         اقتراح قد يكون مقبولاً أو جديراً بالمناقشة ضمن آراء أخرى قد يراها آخرون..
+         <br/>
+         هذا الاقتراح ألخصه بأن يتم وضع مسارات مؤقتة (متحركة) لتنظيم حركة المعزين في المقبرة..
+         <br/>
+         أي أن الخوف من المحاذير الشرعية التي تشير إلى ما هي عليه المقابر في بعض الدول من مظاهر بدع وضلال لن يكون وارداً بإزالة هذه الحواجز الحديدية بانتهاء دفن الميت وانصراف المشاركين في دفنه بعد تعزية ذويه.
+         <br/>
+         ***
+         <br/>
+         لعل هيئة كبار العلماء تتكرم فتعيد دراسة هذه الحالة من الوجهة الشرعية..
+         <br/>
+         وهي بلا شك موضع ثقة الجميع بأعضائها وفتواها وما ترى أن فيه مصلحة للمسلمين..
+         <br/>
+         المهم أن تعيد هيئة كبار العلماء النظر في هذا الموضوع على ضوء ما سبق لها من فتوى حوله  إن كانت مثل هذه الفتوى قد صدرت  في ظل تزايد أعداد المشاركين في دفن الأموات تحت وهج الشمس ومع نزول المطر وأثناء مواسم البرد القارس.
+         <br/>
+         <p align="left" dir="rtl">
+          <b>
+           <br/>
+           خالد المالك
+           <br/>
+          </b>
+         </p>
+        </font>
+       </td>
+      </tr>
+      <tr>
+       <td align="justify" dir="rtl" height="1" width="100%">
+       </td>
+      </tr>
+     </table>
+    </td>
+    <td align="center" dir="rtl" valign="top" width="68%">
+     <table cellpadding="6" cellspacing="0" width="100%">
+      <tr>
+       <td align="center" colspan="2" height="46" valign="top" width="100%">
+        <table border="0" cellpadding="2" cellspacing="0" height="1" width="100%">
+         <tr>
+          <td align="center" bgcolor="#C28006" width="100%">
+           <a href="/magazine/11012005/sss2.htm" style="text-decoration:none;cursor:hand">
+            <font color="#FFFFFF" face="MS Sans Serif" size="2">
+             <font size="2">
+              انفراج
+             </font>
+            </font>
+           </a>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" width="100%">
+           <font color="#800000" face="Tahoma" size="2">
+            * قالت الوكالة الدولية للطاقة الذرية الأسبوع الماضي: إن إيران وافقت بعد عدة أشهر على السماح بتفتيش دولي لمواقع عسكرية تعتقد واشنطن أنها تقوم فيها بأنشطة ذات صلة بتصنيع قنبلة نووية. وسيكون التفتيش جزءاً من تحقيق الأمم المتحدة في مزاعم بأن إيران تقوم بعمل له صلة بالتسلح النووي؛ مثل اختبار أو تجميع رؤوس حربية نووية وربطها بنظام للنقل.
+            <br/>
+            وقال محمد البرادعي المدير العام للوكالة: (لم نعثر على أي أنشطة ........
+            <a href="/magazine/11012005/sss2.htm" style="text-decoration:none;cursor:hand">
+             <b>
+              <font color="#800000" face="Tahoma" size="1">
+               التفاصيل
+              </font>
+             </b>
+            </a>
+           </font>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <td height="46" valign="top" width="50%">
+        <table border="0" cellpadding="2" cellspacing="0" width="100%">
+         <tr>
+          <td align="center" bgcolor="#C28006" width="100%">
+           <a href="/magazine/11012005/sss3.htm" style="text-decoration:none;cursor:hand">
+            <font color="#FFFFFF" face="MS Sans Serif" size="2">
+             <font size="2">
+              تسونامي يختتم العام ويصر على استمرار كوارث العالم
+             </font>
+            </font>
+           </a>
+          </td>
+         </tr>
+         <tr>
+          <td align="right" height="2" width="100%">
+           <font color="#800000" face="Tahoma" size="2">
+            لم يستطع داميش كومار (عشر سنوات) أن يبلغ أحداً بما حدث له أو كيف فقد والديه.
+            <br/>
+            أبلغ الجيران مسؤولي الرعاية الاجتماعية أن والديه قتلا عندما اجتاحت أمواج المد في 26 ديسمبر قريتهم في جنوب الهند.
+            <br/>
+            لا يفعل راميش شيئاً سوى الجلوس على مقعد صغير في دار الأيتام المؤقتة ممسكاً بيده الجريحة وعيناه مفتوحتان على نظرة تنم عن الخوف وعند أي محاولة للحديث معه يبكي ويشيح بوجهه بعيداً.
+            <br/>
+            والأطفال هم أكبر ضحايا هذه ........
+           </font>
+           <a href="/magazine/11012005/sss3.htm" style="text-decoration:none;cursor:hand">
+            <b>
+             <font color="#800000" face="Tahoma" size="1">
+              التفاصيل
+             </font>
+            </b>
+           </a>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+     </table>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/sss4.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        رسالة مفتوحة
+       </font>
+       <br/>
+       <font size="2">
+        عربي 2004
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      منذ أن وجد الإنسان على معمورة الرحمن، والكبد يلازم سحنتك أيها العربي، يلازم ثنايا تاريخك أيها العربي، تتنفسه وتتخبط، تزفره وتتبدد بك الطرق إلى المنافي الجغرافية والمكانية والزمانية والنفسية والمصيرية.
+      <br/>
+      تستفحل ازماتك والمتغيرات حولك تلقى بأسود الظلال عليك اجتماعياً واقتصادياً وثقافياً وسياسياً.
+      <br/>
+      ومضى عام، زاره الخوف فرحل بعيداً بمسافات من خيبات ترك اجنتها على خلفه لتتوالد ويتناسل منتجها ومنجزها، ........
+     </font>
+     <a href="/magazine/11012005/sss4.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/sss5.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        انفجار
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      * استقالت المرأة الوحيدة العضو في مجلس مسلمي فرنسا الرسمي من منصبها قائلة إن الهيئة التي تمثل الديانة الثانية في البلاد تهدر وقتها في صراع على السلطة والمسائل الاجرامية.
+      <br/>
+      وقالت عالمة الاجتماع دينا بوزر وهي خبيرة في شؤون المسلمين المولودين في فرنسا في مقابلة نشرت يوم الأربعاء ان مجلس مسلمي فرنسا لم يفعل شيئا لوقف التمييز الذي يتعرض له هؤلاء الشبان.
+      <br/>
+      وولدت بوزر من أسرة مختلطة من أصول فرنسية وشمال ........
+     </font>
+     <a href="/magazine/11012005/sss5.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/sss6.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        قصة خبرية
+       </font>
+       <br/>
+       <font size="2">
+        المكسيكيون يضيفون الماء للملح لدخول أمريكا
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      * دافعت المكسيك عن كتيب ارشادي كوميدي أصدرته الحكومة يوضح كيف يمكن للمهاجرين غير الشرعيين عبور الحدود والعيش بأمان في أمريكا في ظل اتهامات بأن الحكومة المكسيكية تشجع الهجرة غير الشرعية.
+      <br/>
+      ويقع الكتيب الذي أصدرته وزارة الخارجية المكسيكية في 32 صفحة بالألوان ويعطي نصائح لمن يريد الهجرة من ضمنها كيفية عبور نهر ريوجراند سباحة وتفادي الجفاف في الصحراء، كما يشرح حقوق المهاجرين في حالة القبض ........
+     </font>
+     <a href="/magazine/11012005/sss6.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/sss7.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        من ألسنتهم
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      * أيتام أمواج المد يواجهون مستقبلاً مظلماً.
+      <br/>
+      عنوان صحفي
+      <br/>
+      * إسرائيل توجِّه اللوم إلى ضابط بسبب وفاة ناشط فلسطيني.
+      <br/>
+      رئيس أركان الجيش الإسرائيلي موشي يعلون
+      <br/>
+      * شعر الخروف مؤشِّر لصحته.
+      <br/>
+      بحث علمي حديث
+      <br/>
+      * مقتل 56 صحفياً في عام 2003م.
+      <br/>
+      لجنة حماية الصحفيين الدولية
+      <br/>
+      * طوفان آسيا.. أولى كوارث عصر العولمة.
+      <br/>
+      صحيفة الأخبار المصرية........
+     </font>
+     <a href="/magazine/11012005/sss7.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/almlfsais8.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        أكدوا أنها لإضفاء شرعية على الاحتلال.. محللون عراقيون:
+       </font>
+       <br/>
+       <font size="2">
+        الانتخابات العراقية عملية قيصرية لجنين مشوه!
+       </font>
+       <br/>
+       <font size="2">
+        * إعداد  هيفاء دربك
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/almlfsais8.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/1.jpg" style="float: left"/>
+      </a>
+      <br/>
+      منذ اليوم الأول لسقوط بغداد في براثن الاحتلال الأمريكي كان الرهان على صمود الشارع العراقي وبسالته في التصدي للاحتلال.
+      <br/>
+      الشعب العراقي لم يتخاذل بل هبّ في وجه الأمريكان معلناً رفضه وقدرته على المقاومة، الأمر الذي فاجأ المحتل ورجاله الذين أتوا على دباباته.
+      <br/>
+      ومع ازدياد حدة المقاومة واشتداد وطأتها عليهم ادعى الأمريكيون أنهم جاؤوا لنشر الديمقراطية في العراق فقاموا بنقل السلطة للعراقيين في حيلة ........
+     </font>
+     <a href="/magazine/11012005/almlfsais8.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/almlfsais9.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        مائتا طفل يموتون يومياً
+       </font>
+       <br/>
+       <font size="2">
+        الرعاية الصحية في العراق تعاني!
+       </font>
+       <br/>
+       <font size="2">
+        * إعداد  محمد الزواوي
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/almlfsais9.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/2.jpg" style="float: left"/>
+      </a>
+      <br/>
+      في تقرير يظهر مدى تدهور الحالة الصحية العامة في العراق، والحالة الصحية للأطفال بصفة خاصة، رصدت صحيفة (الجارديان) البريطانية أهم الأسباب التي أدت إلى تلك الحالة الصحية الكارثية، وأبعاد تلك الأزمة التي بدأت منذ أكثر من عشر سنوات أثناء حرب الخليج الأولى وما تلاها من عقوبات اقتصادية خانقة على العراق، وبخاصة على المعدات الطبية التي منعتها الأمم المتحدة بضغط من الولايات المتحدة بحجة أنها يمكن أن ........
+     </font>
+     <a href="/magazine/11012005/almlfsais9.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/almlfsais10.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        العراق والدائرة الجهنمية
+       </font>
+       <br/>
+       <font size="2">
+        * إعداد: أشرف البربري
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/almlfsais10.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/3.jpg" style="float: left"/>
+      </a>
+      <br/>
+      ربما لم يزر أي صحفي أو كاتب محايد أو حتى منحاز من أي دولة من دول العالم العراق وعاد منه إلا وكتب عن تلك الدائرة الجهنمية التي يعيش فيها العراقيون منذ بدء الاحتلال الأمريكي لبلادهم في التاسع من إبريل عام 2003م.
+      <br/>
+      ومن الشهادات الجديرة بالقراءة تلك الشهادة التي نشرتها صحيفة الجارديان البريطانية لشخصية عربية هي غيث عبد الأحد الذي أمضى شهرين في جحيم بغداد عاد بعدهما ليكتب قائلاً: ها قد عدت إلى ........
+     </font>
+     <a href="/magazine/11012005/almlfsais10.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/almlfsais11.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        فقدوا الثقة في الملا عمر وأسامة بن لادن
+       </font>
+       <br/>
+       <font size="2">
+        العفو عن مقاتلي طالبان..هل يجلب السلام لأفغانستان؟!
+       </font>
+       <br/>
+       <font size="2">
+        * إعداد  أشرف البربري
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/almlfsais11.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/4.jpg" style="float: left"/>
+      </a>
+      <br/>
+      في الوقت الذي يخطف فيه مأزق القوات الأمريكية في العراق الأضواء بعيدا عن نقطة ملتهبة أخرى من العالم هي أفغانستان، فإن هذه الدولة التي تعاني من الحروب منذ أكثر من عشرين عاما تواجه الآن مرحلة مهمة وخطيرة من تاريخها.
+      <br/>
+      فالرئيس الأفغاني حميد قرضاي الذي فاز في انتخابات الرئاسة قبل نحو شهرين يعتزم المغامرة بإعلان عفو عام عن أعضاء حركة طالبان، وهي الخطوة التي انقسم حولها المحللون والمسؤولون.
+      <br/>
+      وفي ........
+     </font>
+     <a href="/magazine/11012005/almlfsais11.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/almlfsais12.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        بتحريض أمريكي  إسرائيلي
+       </font>
+       <br/>
+       <font size="2">
+        إيقاف قناة ((المنار)) يؤكد قوة اللوبي اليهودي الفرنسي!
+       </font>
+       <br/>
+       <font size="2">
+        * إعداد: ياسمينة صالح
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/almlfsais12.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/5.jpg" style="float: left"/>
+      </a>
+      <br/>
+      منذ سنة تحولت قناة المنار اللبنانية إلى قناة غير مرغوب فيها في فرنسا.
+      <br/>
+      فجأة اكتشف المشاهد الفرنسي أن القناة التي تبث على القمر يوتلسات وفق اتفاقية تم إبرامها على أسس عقلانية مع القمر الصناعي قد مرت على المحك الذي قطع الحبل.
+      <br/>
+      ما الذي جرى؟ يقول جون ستيفان برونو، مدير القسم السياسي في جريدة (لومانيتي) الفرنسية في تقرير عن هذا الحدث : في البداية كانت المسألة مسألة خطاب سياسي بدأ بعبارة (معاداة ........
+     </font>
+     <a href="/magazine/11012005/almlfsais12.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/huar13.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        المحلل الاستراتيجي لي فاينشتاين متحدثاً عن إصلاح الأمم المتحدة:
+       </font>
+       <br/>
+       <font size="2">
+        العلاقة بين واشنطن وعنان وصلت لطريق مسدود!
+       </font>
+       <br/>
+       <font size="2">
+        * إعداد  أشرف البربري
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/huar13.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/6.jpg" style="float: left"/>
+      </a>
+      <br/>
+      منذ انتهاء الحرب الباردة بانهيار الاتحاد السوفيتي عام 1991 والحديث يدور عن أهمية إصلاح الأمم المتحدة وإعادة صياغة ميثاقها بما يسمح بزيادة عدد الأعضاء الدائمين في مجلس الأمن الدولي وزيادة فاعلية الجهاز الإداري لهذه المنظمة الدولية، وعندما نتحدث عن إصلاح الأمم المتحدة يأتي اسم لي فاينشتاين صاحب الباع الطويل في دراسة آليات العمل داخل هذه المنظمة الدولية، فهو أحد أهم الخبراء في شؤون المنظمة ........
+     </font>
+     <a href="/magazine/11012005/huar13.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/tagrair14.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        قصص إنسانية مؤثرة لكارثة المد البحري في آسيا
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/tagrair14.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/7.jpg" style="float: left"/>
+      </a>
+      <br/>
+      موجات هائلة تسحق شواطئ هادئة محدثة دماراً هائلاً.. قتلى بعشرات الآلاف ومشردون بالملايين.. مشاهد تعيد نشرات الأخبار المسائية بثها مرارا وتكرارا، في عصر الفضائيات والقرية الالكترونية اصبح العالم شاهدا على مأساة كانت في القرون السابقة لا تروع إلا سكان المناطق المنكوبة.
+      <br/>
+      ويقول الخبراء إن مآسي مثل كارثة أمواج المد التي ضربت شواطئ المحيط الهندي بصورها المروعة أصبحت تؤثر على مشاعر الذين يعيشون في ........
+     </font>
+     <a href="/magazine/11012005/tagrair14.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/tagrair15.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        يعانون من صدمة ويأس تام واكتئاب
+       </font>
+       <br/>
+       <font size="2">
+        الناجون من الطوفان يحتاجون إلى سنوات لعلاج الصدمات
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      * قال خبراء في مجال الطب انه ربما يكون الملايين نجوا من أعنف موجات مد في التاريخ الحديث غير ان كثيرين يحتاجون إلى سنوات لتجاوز الصدمة الشديدة التي أصابتهم، وذكر لو وينج لوك وهو طبيب من هونج كونج بمؤسسة اوكسفام يساعد الناجين في الهند ان الناجين في تاميل نادو وهي اكثر مناطق البلاد تضررا يعانون من صدمة ويأس تام.
+      <br/>
+      وقال لو هاتفيا الصدمة النفسية قوية جدا، الناس يجلسون خارج منازلهم المدمرة يبكون بعد ان ........
+     </font>
+     <a href="/magazine/11012005/tagrair15.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/tagrair16.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        افتتاحيات الصحف
+       </font>
+       <br/>
+       <font size="2">
+        أكبر عملية إغاثة في التاريخ!
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      * رغم أن الحصر الكلي للخسائر التي خلفها الزلزال المدمر الذي ضرب المحيط الهندي قبالة سواحل جزيرة سومطرة الإندونيسية وأمواج المد العاتية التي أطلقها لتجتاح العديد من دول جنوب شرق آسيا صعب للغاية فإنه مما لا شك فيه أنه أسوأ كارثة طبيعية خلال السنوات الأخيرة. وقد بدأت عمليات الإغاثة التي تقوم بها اليابان وغيرها من دول العالم. والأمم المتحدة تقدر حجم المساعدات المطلوبة بعدة مليارات من الدولارات. وهذه ........
+     </font>
+     <a href="/magazine/11012005/tagrair16.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/tagrair17.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        معجزة في آتشيه بإندونيسيا
+       </font>
+       <br/>
+       <font size="2">
+        حامل تنجو من الطوفان وتعثر على جميع أفراد أسرتها
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      * في آتشيه هذه المدينة الإندونيسية التي يكتنفها الشقاء واليأس تسرد حياواتي التي يقترب حملها من أيامه الأخيرة قصة نجاة تظهر أن المعجزات يمكن أن تحدث.
+      <br/>
+      كانت حياواتي (38 عاماً) التي تنتظر أن تضع مولودها في الأيام القادمة بالمنزل مع اثنين من أولادها الأربعة عندما تسبب زلزال قوي في حدوث موجة مد أودت بحياة الكثيرين في مدينة باندا آتشيه في 26 ديسمبر كانون الأول الماضي. وفي لحظة من اللحظات تأهبت حياواتي ........
+     </font>
+     <a href="/magazine/11012005/tagrair17.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/tagrair18.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        ذئاب بشرية تفتك بالناجيات من كارثة المد البحري!
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      * اللصوص والمغتصبون والمختطفون والمخادعون لم يرحموا الناجين من كارثة آسيا ولا عائلات الضحايا في مخيمات اللاجئين والمستشفيات وفي بلدان بعض السياح الأوروبيين الذين ابتلعتهم الأمواج العاتية.
+      <br/>
+      فقد جاءت تقارير وتحذيرات من بريطانيا والسويد وسريلانكا وتايلاند وهونج كونج من أن مجرمين يستغلون حالة الفوضى في سريلانكا لاغتصاب النساء أو سرقة منازل السياح الأوروبيين المفقودين.
+      <br/>
+      وفي تناقض صارخ مع موجة ........
+     </font>
+     <a href="/magazine/11012005/tagrair18.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/tagrair19.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        كارثة آسيا تبتلع جيلاً من الأطفال
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      * ثوان معدودة كانت كافية تماماً ليضيع مستقبل شيفا شانكاري وقريتها، وينحو زوجها باللائمة عليها لأنها لم تمسك بقوة كافية طفليهما عندما اجتاحت موجات المد العاتية المندفعة من المحيط الهادي قريتهم في جنوب الهند.
+      <br/>
+      قالت الشابة البالغة من العمر 22 عاماً وهي تكاد تختنق من البكاء في مخيم للاجئين في معبد نيلا داياتشي امان الهندي: كان طفلاي هما مستقبلي، معهما كنت استطيع ان ابني هذه الأسرة.
+      <br/>
+      وتابعت: ماذا ........
+     </font>
+     <a href="/magazine/11012005/tagrair19.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/tagrair20.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        طفلة هندية عاشت وحيدة أياماً داخل غابة
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      * عاشت طفلة هندية عمرها عشرة اعوام وحدها لمدة اربعة ايام داخل غابة تتغذى على حبات التوت وثمار جوز الهند، بعد ان جرفت موجات المد العاتية التي دمرت جزر نيكوبار في بحر اندامان افراد اسرتها. وقال النائب البرلماني مانورانجان بختا الذي وصف حالة الطفلة بعد ان جمع شملها مع جدها (انها في حالة صدمة شديدة. تنبس كلمات قليلة ثم تلوذ بالصمت).
+      <br/>
+      وهربت الطفلة واسمها الميش جافيد والتي تنتمي الى قبيلة نيكوباري الى ........
+     </font>
+     <a href="/magazine/11012005/tagrair20.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/ektsad21.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        أسباب تراجع الدولار أمام الجنيه المصري
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      أرجع خبير اقتصادي مصري تراجع الدولار الامريكي امام الجنيه المصري بشكل ملحوظ في الآونة الاخيرة إلى عدة عوامل منها وفرة المعروض من العملة الامريكية وارتفاع حصيلة النقد الاجنبي وانخفاض العجز في الميزان التجاري.
+      <br/>
+      واوضح رئيس اكاديمية السادات للعلوم الادارية الدكتور حمدي عبدالعظيم وفقا لتقرير وكالة الأنباء الكويتية (كونا) ان الانخفاض الذي حدث لسعر الدولار الذي وصل إلى 6.05جنيهات  يرجع إلى وفرة المعروض ........
+     </font>
+     <a href="/magazine/11012005/ektsad21.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/ektsad22.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        انتعاش اقتصادي عربي بعد التحرير الكامل للتجارة
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      اتفق الامين العام لجامعة الدول العربية عمرو موسى والامين العام لمجلس الوحدة الاقتصادية العربية الدكتور أحمد جويلي أن تطبيق البرنامج التنفيذي لمنطقة التجارة الحرة العربية الكبرى والتحرير الكامل للسلع ذات المنشأ العربي من الرسوم الجمركية يُعتبر أهم إنجاز اقتصادي عربي خلال الخمسين عاما الماضية.
+      <br/>
+      وأكد موسى وجويلي أن هذه الخطوة مهمة نحو قيام التكتل الاقتصادي العربي وقيام الاتحاد الجمركي العربي في غضون ........
+     </font>
+     <a href="/magazine/11012005/ektsad22.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/ektsad23.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        تزايد اعتمادها على استيراد النفط من الخارج
+       </font>
+       <br/>
+       <font size="2">
+        الهند تستضيف اجتماعاً لمنتجي أوبك ومستهلكي آسيا
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      قررت الهند التي تتزايد احتياجاتها من الطاقة تصعيد جهودها لتأمين استقرار الامدادات باستضافة مؤتمر لدول أوبك بمنطقة الخليج والدول الرئيسية المستوردة للنفط في آسيا وذلك في حملة دبلوماسية جديدة من أجل التضامن الاقليمي.
+      <br/>
+      ومع تزايد اعتمادها على استيراد النفط من الخارج في ضوء انتعاش الطلب المحلي الراكد تحرص الهند على تعزيز العلاقات مع الدول الخليجية والدول المستوردة على أمل أن تعمل من خلال جبهة موحدة ........
+     </font>
+     <a href="/magazine/11012005/ektsad23.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/ektsad24.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        نظام جديد للسير في ألمانيا يحقق أرباحاً
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      قال مسؤولون إن النظام الجديد الخاص بتحصيل رسوم من الشاحنات للسير على الطرق السريعة في ألمانيا اعتباراً من الأول من يناير الجاري جلب أكثر من مليون دولار كدخل حكومي دون حدوث مشكلات فنية أو تكدس حركة السير على الطرق.
+      <br/>
+      وقال هيرالد ليندلار المتحدث باسم شركة (تول كوليكت) التي تتولى مسؤولية الإشراف على نظام جميع الرسوم على الطرق السريعة (كل شيء يسير بشكل منظم ولم تواجهنا مشكلات فنية أو تأخيرات ........
+     </font>
+     <a href="/magazine/11012005/ektsad24.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/mgtma25.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        أطفال العالم
+       </font>
+       <br/>
+       <font size="2">
+        تنكزار سفوك
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      تعج مجتمعات العالم بظواهر سلبية تخبو أحياناً، وتطفو على السطح أحياناً أخرى لتصبح مستديمة، فظاهرة عمل الأطفال في سنٍ مبكرة منذ نشأتها انتشرت بوتيرة متسارعة من مجتمعٍ إلى آخر، واستمرت واستفحلت، في ظاهرة أشبه ما تكون بالعبودية التي عانت منها أغلب الشعوب أحقاباً من الزمن، أطفالٌ يجبرون على العمل ليحصلوا على ما يسد رمقهم أو ليعولوا أسرة مشردة أو يتيمة أو لإرضاء سيدهم الذي اشتراهم من عائلة عجزت عن ........
+     </font>
+     <a href="/magazine/11012005/mgtma25.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/mgtma26.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        تردي الأوضاع الصحية في الريف الصيني بصورة تدعو للقلق
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      بعد التوسع الكبير في المدن الصينية، وزيادة الفجوة بين المدن والأرياف، وبروز حالة عدم المساواة في المجال الصحي بين من يعيش في المدينة ومن يعيش في الريف، أصبحت الأوضاع الصحية لطبقة واسعة من الفلاحين مقلقة وتدعو إلى الشفقة.
+      <br/>
+      فبحسب دراسة قدمها الباحث راوكيبن، مدير مركز المعلومات الإحصائية في وزارة الصحة، تبين أن الفرق بين متوسط دخل المواطن الصيني في الريف وبين الذي يعيش في المدينة هو1.94 في عام 1985 ........
+     </font>
+     <a href="/magazine/11012005/mgtma26.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/mgtma27.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        ارتفاع المناخ العام للاستهلاك في ألمانيا
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      * نورمبرج (ألمانيا)  (د ب أ):
+      <br/>
+      أظهر مسح أجرته مجموعة جي. إف. كيه لأبحاث السوق أن ثقة المستهلكين الألمان بأنفسهم ارتفعت للشهر الثاني على التوالي في كانون الأول/ ديسمبر الماضي. وتقول جي. إف. كيه: إنه توجد مع ذلك إشارات متضاربة حول المزاج العام للمستهلكين في ظل استمرار التشاؤم حول التوقعات الاقتصادية.
+      <br/>
+      وأوضحت المجموعة البحثية أنه في أعقاب الارتفاع الملحوظ في المؤشر في تشرين الثاني/ نوفمبر استمر ........
+     </font>
+     <a href="/magazine/11012005/mgtma27.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/mntda28.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        طاش ماطاش ..
+       </font>
+       <br/>
+       <font size="2">
+        نجاح في الأفكار أم فشل وتكرار؟!
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/mntda28.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/8.jpg" style="float: left"/>
+      </a>
+      <br/>
+      البرنامج التلفزيوني الشهير طاش ما طاش أثير حوله جدل واسع، وانقسمت آراء المتابعين له بين مؤيد ومنتقد، وهو من البرامج النادرة التي استمرت لسنوات طويلة، والآن بعد هذه الفترة نضع محصلة هذا البرنامج في الميزان، إنصافاً له، وذلك بطرحه أمام أصدقاء المنتدى، لأخذ آرائهم حوله، دون أن نتدخل لإبداء رأينا، وكانت الأسطر التالية خلاصة المشاركات الهاتفية، التي تعبر عن آراء القراء حول البرنامج.
+      <br/>
+      * فايز ........
+     </font>
+     <a href="/magazine/11012005/mntda28.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/alsagmaf29.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        حافظة سوائل تضخ محتوياتها بالكبس
+       </font>
+       <br/>
+       <font size="2">
+        PumpAction Flask
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/alsagmaf29.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/9.jpg" style="float: left"/>
+      </a>
+      <br/>
+      السعر : 14.99جنيهاً استرلينياً
+      <br/>
+      موقع الشراء: www.innovations.co.uk
+      <br/>
+      ***
+      <br/>
+      * هذه الحافظة الكبيرة السعة (1.9 لتر) تجمع الكثير من المزايا الجيدة، فهي ذات مظهر جميل وعمر طويل ومواصفات جيدة فضلاً عن سعرها المنخفض، وقد تم تلميع الحديد المضاد للصدأ من الداخل والخارج لدرجة يبدو كأنه مرآة مما يجعله غير قابل للكسر من الناحية الفعلية (على عكس الحافظات المفرغة المغلفة من الداخل بالزجاج التي تتكسر ........
+     </font>
+     <a href="/magazine/11012005/alsagmaf29.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/alsagmaf30.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        منظومة حلاق من (شيرنا)
+       </font>
+       <br/>
+       <font size="2">
+        Scherna System
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/alsagmaf30.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/10.jpg" style="float: left"/>
+      </a>
+      <br/>
+      السعر : 29.99جنيهاً استرلينياً
+      <br/>
+      موقع الشراء: www.innovations.co.uk
+      <br/>
+      ***
+      <br/>
+      * هذه العدة التي أمامك هي أفضل أنواع العدد التي تحتاجها لتصبح حلاقاً منزلياً بارعاً، وهذه العدة التي تعمل بدون أسلاك اعتماداً على بطارية قابلة للشحن تحتوي على العديد من الكماليات، فهي تضم ثلاثة رؤوس قطع قابلة للتبادل (واحدة قياسية للقص الطبيعي وواحدة للقص بمستوى واطئ جداً وأخرى للقص العريض في المناطق الواسعة)، ........
+     </font>
+     <a href="/magazine/11012005/alsagmaf30.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/alsagmaf31.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        فرن كهربائي صغير من الكروم
+       </font>
+       <br/>
+       <font size="2">
+        Chrome Mini Oven
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/alsagmaf31.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/11.jpg" style="float: left"/>
+      </a>
+      <br/>
+      السعر : 50 جنيهاً استرلينياً
+      <br/>
+      موقع الشراء: www.innovations.co.uk
+      <br/>
+      ***
+      <br/>
+      * هذا الفرن ذو الانحناءات والتعرجات ينفع لأصحاب السفرات والبيوت المتنقلة (الكرفانات)، حيث يمكن وضعه فوق سطح خزانة المطبخ ليؤدي عمل أي فرن كبير الحجم، وسواء كنت تريد تسخين فطيرتين للعشاء أو شي شريحة أو اثنتين من اللحم أو الدجاج فإنك ستحصل على غايتك في الوقت المناسب، علماً أن عملية التحكم تتم بواسطة قرص لتنظيم الحرارة ........
+     </font>
+     <a href="/magazine/11012005/alsagmaf31.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/alsagmaf32.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        ماكينة خياطة خفيفة وعملية
+       </font>
+       <br/>
+       <font size="2">
+        Lockstitch Compact Sewing Machine
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/alsagmaf32.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/12.jpg" style="float: left"/>
+      </a>
+      <br/>
+      السعر : 19.99دولاراً
+      <br/>
+      موقع الشراء : http://www، wdrake، com
+      <br/>
+      ***
+      <br/>
+      * قد تبدو هذه الماكنة صغيرة الحجم في نظرك لكنها كبيرة في أدائها، فهي تغنيك عن الإجهاد الناتج عن سحب ماكنة الخياطة الكبيرة الحجم والثقيلة الوزن، كذلك فإنها تؤدي معظم وظائف ماكنات الخياطة الثقيلة كإصلاح الحواشي أو خياطة ثوب جديد أو عمل الثنيات بمختلف أنواع الغرز، وبإمكان مستخدمها أيضاً تعديل شد الخيط وسرعة الخياطة، ويحصل ........
+     </font>
+     <a href="/magazine/11012005/alsagmaf32.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/alsagmaf33.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        صانعة ذرة مشوية
+       </font>
+       <br/>
+       <font size="2">
+        Popcorn Maker
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/alsagmaf33.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/13.jpg" style="float: left"/>
+      </a>
+      <br/>
+      السعر : 29.99جنيهاً استرلينياً
+      <br/>
+      موقع الشراء: www.innovations.co.uk
+      <br/>
+      ***
+      <br/>
+      * الجميع يحبون الذرة المشوية خاصة أنها ذات مستوى منخفض من الدهون مما يجعلها خياراً صحياً للكثيرين، غير أننا لا نتناولها عادة إلا عند ذهابنا لدور السينما، لكن تخيل أن يكون لديك ما يوفر الذرة المشوية الساخنة في منزلك ساعة تشاء، لا بل بكبسة زر، هذا ما تحصل عليه حقاً عند اقتنائك لواحدة من هذه الآلات الرائعة، والتي ........
+     </font>
+     <a href="/magazine/11012005/alsagmaf33.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/alsagmaf34.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        عصا متوهجة للحدائق
+       </font>
+       <br/>
+       <font size="2">
+        Glowing Accents
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/alsagmaf34.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/14.jpg" style="float: left"/>
+      </a>
+      <br/>
+      السعر : 25 جنيهاً استرلينياً
+      <br/>
+      موقع الشراء : www.innovations.co.uk
+      <br/>
+      ***
+      <br/>
+      * لا داعي للارتباك إذا ما فاجأتك عصا النيون المتوهجة هذه، فهي عبارة عن مصباح بلازما عادي في عصا نقالة تعمل بالبطارية يمكن تعليقها أو تثبيتها في أرضية أي مكان مناسب في الحديقة، وعند تشغيل الأنبوب الشفاف يبدأ بصنع ضياء مشرق ومتغير اللون باستمرار يتموج وينساب كالسائل، وكل عصا متوهجة (مقاومة للظروف المناخية) كهذه تأتي ........
+     </font>
+     <a href="/magazine/11012005/alsagmaf34.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/alsagmaf35.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        معالج لأقراص الليزر علامة (سكيب دكتر)
+       </font>
+       <br/>
+       <font size="2">
+        SkipDoctor
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/alsagmaf35.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/15.jpg" style="float: left"/>
+      </a>
+      <br/>
+      السعر : من 34.99 جنيهاً استرلينياً الى 54.99 جنيهاً استرلينياً
+      <br/>
+      موقع الشراء : www. innovations. co. uk
+      <br/>
+      ***
+      <br/>
+      * عندما يتعرض قرص سي دي أو دي في دي ثمين من أقراصك الى الخدوش التي تمنع عمله بشكل طبيعي فلا داعي للتذمر، إذ يمكن لهذه الآلة ذات مراحل المعالجة الست أن تصحح معظم الخدوش الثانوية التي تتسبب في تشوه قرص السي دي أو أي واسطة بصرية تعتمد على الأقراص، ويستعمل كلا النوعين المتوفرين (آلة ........
+     </font>
+     <a href="/magazine/11012005/alsagmaf35.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/alsagmaf36.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        مدلك شريطي مع منشط للدورة الدموية
+       </font>
+       <br/>
+       <font size="2">
+        Belt Massager (with Blood Circulator)
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/alsagmaf36.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/16.jpg" style="float: left"/>
+      </a>
+      <br/>
+      السعر : 289 دولاراً
+      <br/>
+      موقع الشراء : http://www. brilliantstore. com
+      <br/>
+      ***
+      <br/>
+      * يحتوي هذا المدلك على شريطين للتدليك مما يسمح لشخصين بالتدليك في آن واحد، وقد زود هذا الجهاز بمنظومة من خمس سرع يمكن أن تلبي رغبات
+      <br/>
+      جميع الأعمار سواء للتدليك أو تخفيف الوزن، وبإمكان أي شخص أن يعدل السرعة حسب رغبته دون أن يخضع مجبراً للسرعة التي تفرضها الأجهزة التقليدية، أما وسادة التدليك فهي بسرعتين، وينصح ........
+     </font>
+     <a href="/magazine/11012005/alsagmaf36.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/alsagmaf37.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        مكنسة يدوية (بلا أسلاك) من «شارك»
+       </font>
+       <br/>
+       <font size="2">
+        Shark Cordless Hand Vac
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/alsagmaf37.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/17.jpg" style="float: left"/>
+      </a>
+      <br/>
+      السعر: 59.95 دولاراً
+      <br/>
+      موقع الشراء: http://www.firststreetonline.com
+      <br/>
+      ***
+      <br/>
+      * تجعل هذه المكنسة القوية الامتصاص والخفيفة الوزن من عملية تنظيف منزلك أسهل من ذي قبل، فهي تزن أقل من ثلاثة أرطال (1.3 كغم) وتعمل ببطارية قوتها 15.6فولت، ولأن هذه المكنسة لا تحتاج الى أسلاك كهربائية فإنها تمكنك من القيام بأعمال التنظيف بكل سهولة ويسر دون أن يعيقك طول السلك كما في المكانس الأخرى، ويزود المشتري بعدة ........
+     </font>
+     <a href="/magazine/11012005/alsagmaf37.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/alsagmaf38.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        مصباح للطوارئ
+       </font>
+       <br/>
+       <font size="2">
+        Power Failure Light
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/alsagmaf38.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/18.jpg" style="float: left"/>
+      </a>
+      <br/>
+      السعر 19.99دولاراً
+      <br/>
+      موقع الشراء:www. shop. store. yahoo. com
+      <br/>
+      ***
+      <br/>
+      * يمكن استعمال هذا المصباح في حالة انقطاع التيار الكهربائي فجأة أو استعماله لإنارة الأماكن المعتمة عند التنقل، فهو مصباح نقال وقابل للشحن ويتوهج أوتوماتيكياً عند انقطاع التيار الكهربائي عنه لينير مكان تواجدك عدة ساعات قبل إعادة شحنه، علماً أنه يستعمل مصباح فلورسنت باردا أثناء المس وهو لا يستغل سوى مأخذ واحد من مآخذ ........
+     </font>
+     <a href="/magazine/11012005/alsagmaf38.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/aw39.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        مراحل التجديد في المنزل ومقتضياته
+       </font>
+       <br/>
+       <font size="2">
+        إعداد: تنكزار سفوك
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/aw39.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/19.jpg" style="float: left"/>
+      </a>
+      <br/>
+      يحتاج المنزل بين الحين والآخر إلى عمليات تجديد نجريها على أكثر من جزء من أجزائه، ونحتاج إلى اتباع مراحل محددة للوصول إلى النجاح المأمول. قد نحتاج إلى تغيير في الديكور، وتكون الغاية إما الحصول على مساحات أوسع في المنزل أو لمقتضيات ضرورية تتعلق بالتحضير وتجهيز المكان.
+      <br/>
+      ومهما تكن دواعي التجديد والتغيير في المنزل فإن الهدف هو الحصول على مميزات عدة في المنزل، كحرية الحركة والراحة وتجميل ........
+     </font>
+     <a href="/magazine/11012005/aw39.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/aw40.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        عالم متجدد لمقتنيات الأطفال
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/aw40.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/21.jpg" style="float: left"/>
+      </a>
+      <br/>
+      مقتنيات غرفة الطفل تزداد بهاءً يوماً بعد آخر مع ظهور منتجات جديدة وحديثة تلغي سابقاتها وتحل محلها، كراسي وأسرة وإكسسوارات من كل النماذج والموديلات تعبر عن غزارة إنتاج هذه المواد وأناقتها وإبداع مصمميها.
+      <br/>
+      ولا تخلو هذه المقتنيات من عمليات المزج والتطعيم بالقديم الذي بات سر تألق هذا المنتج دون آخر. وعليه تعتمد الفكرة في التصميم ويبدع الخيال الخصب في إبرازه وتقديمه بالشكل الجذاب، ليشهد سوق ........
+     </font>
+     <a href="/magazine/11012005/aw40.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/aw41.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        تقليدٌ قديمٌ يتجدد
+       </font>
+       <br/>
+       <font size="2">
+        أجواء من الذهب والكريستال
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/aw41.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/20.jpg" style="float: left"/>
+      </a>
+      <br/>
+      ربما تأخذ هذه الموديلات المصنوعة من الطلاء الذهبي والكريستال الطابع الشتوي، فهي شفافة كالهواء، أنيقة، مؤثرة كالعطر تنساب إلى المكان، توضع على زوايا المنزل وفي فراغاته أو تتوسط مكوناته لتتمحور عليها المكونات الأخرى.
+      <br/>
+      إنه الانطباع الذي تنشئه هذه المواد المصنوعة من الكريستال والمطبوعة في المكان بطابع اللون الذهبي الذي يلف محيط بعضها ويغطي سطح بعضها الآخر.
+      <br/>
+      انطباع قوامه اللون الأبيض والمظهر ........
+     </font>
+     <a href="/magazine/11012005/aw41.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/coun42.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        * وجهة نظر
+       </font>
+       <br/>
+       <font size="2">
+        غرفة نوم بألوان تهدئ المزاج وترطب النفس
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      تقدم نظريات الألوان والتصميم الداخلي الكثير من المعلومات عن الألوان المناسبة في غرفة النوم غير ان كل المعلومات على اختلافها وتضاربها تتفق على ان افضل الألوان هي التي يحبها الزوجان خلال حياتهما العادية ابتداء مما قبل الزواج، ولا بد من توافق الزوجين على تركيبة لونية تراعي أي اختلاف في الذوق والمزاج بينهما، بحيث تتضمن الغرفة عناصر مما يفضله الزوج وأخرى مما تحبه المرأة من الوان وظلال. وقد أجريت ........
+     </font>
+     <a href="/magazine/11012005/coun42.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/coun43.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        سن الثلاثين..
+       </font>
+       <br/>
+       <font size="2">
+        هل هو عمر القلق بالنسبة للفتاة؟
+       </font>
+       <br/>
+       <font size="2">
+        إعداد: وفاء الناصر
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      أكدت دراسات اجتماعية أن سن الثلاثين للفتيات الشرقيات تعد سن الرعب فعندما تصل الفتاة إلى الثلاثين تتعرض للكثير من الضغوطات الاجتماعية والنفسية حيث يؤثر الضغط الاجتماعي والنفسي في أغلب الأحوال في اختيار سيئ لشخص غير مناسب.
+      <br/>
+      وخلال حديثنا مع الفتيات اللواتي بلغن سن الثلاثين ولم يتزوجن بعد لوحظ أن بعضهن يفضلن الزواج بأي رجل يطرق الباب لذا تردد لدينا تساؤل عما ينبغي للمرأة أن تفعل إذا لم تحظَ برجل تكن ........
+     </font>
+     <a href="/magazine/11012005/coun43.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/coun44.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        * تجارب
+       </font>
+       <br/>
+       <font size="2">
+        حينما تكونين امرأة مضغوطة
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      تواجه النساء العاملات كتلة من التحديات التي لا يستهان بها، بعضهن ينجحن في تجاوز تلك التحديات فيحققن آمالهن ويخرجن من تحت وطأة التيار الجارف من كل ناحية.
+      <br/>
+      ومن أبرز التحديات التي نتحدث عنها التنافس مع الرجل صاحب التاريخ الطويل في القيادة والعمل الخارجي والتفوق وتحدي إدارة الوقت في زمن أصبح فيه المرء بحاجة إلى خمسين ساعة لكي تستقيم أجندة عمله، رجلاً كان أو امرأة، أما التحدي الأقرب إلى التأثير على ........
+     </font>
+     <a href="/magazine/11012005/coun44.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/coun45.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        حلول الثرثرة
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      عندما تصابين بنوبات ثرثرة ولا تتوقفين عن الكلام وتشعرين بأنك تزعجين الأخريات بكثرة حديثك ولا تعرفين متى تتوقفين عن الحديث أو الثرثرة فالأفضل أن تبحثي عن حلول للتخلص من هذه الحالة.
+      <br/>
+      لا تكتفي بالتفكير أنك ستتوقفين أو تقولين إن (علي التوقف عن الثرثرة) والحقيقة أنك لست متفردة في ذلك، بل إن الكثيرين مثلك يحبون التحدث عن أنفسهم أو حياتهم، فبعد المشاركة في عمل مسرحي أو رياضي تتمنى الفتاة أن تتحدث عن ........
+     </font>
+     <a href="/magazine/11012005/coun45.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/coun46.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        أطلقي العنان لدموعكِ وآلامكِ... وتحرّري من كل آثار معاناتكِ !
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      سواء أكنتِ تريدين الطلاق أو تنقذين حياتكِ الزوجية فإن الخطوة التي تتجهين لاتخاذها لها أهمية كبيرة ويمكنكِ أن تتفاعلي بطريقة لاستعادة حبك وأن تدفعي باتجاه التعاون، أو يمكنكِ التفاعل بطريقة تبني المزيد من الألم والمعاناة، وعادة ما نتفاعل بطريقة تؤدي إلى المزيد من المعاناة.
+      <br/>
+      ولدينا الكثير من الألم والاضطرابات ونفقد قابليتنا للرؤية بوضوح. وكل ما علينا القيام به هو النضال والمقاومة أثناء تراجع الرغبة ........
+     </font>
+     <a href="/magazine/11012005/coun46.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/memory47.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        محمود عبدالعزيز يفتح قلبه لـ((مجلة الجزيرة)) :
+       </font>
+       <br/>
+       <font size="2">
+        عانيت من الإفلاس بسبب الفن !!
+       </font>
+       <br/>
+       <font size="2">
+        * القاهرة لقاء خالد فؤاد
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/memory47.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/22.jpg" style="float: left"/>
+      </a>
+      <br/>
+      يعيش الفنان الكبير محمود عبد العزيز هذه الأيام حالة من السعادة البالغة بعد النجاح الكبير الذي حققه مسلسل (محمود المصري) داخل مصر وخارجها خلال شهر رمضان المعظم وتضاعفت سعادته بعد ردود الأفعال واسعة النطاق التي آثارها المسلسل بين كافة الأوساط. وكان الفنان محمود عبد العزيز العائد لجمهوره بعد غياب طويل يضع يده على قلبه خوفاً من ردود الأفعال حول المسلسل وكأنه يشارك في بطولة عمل لأول مرة في ........
+     </font>
+     <a href="/magazine/11012005/memory47.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/ar48.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        المصداقية طريق النجاح
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      لا قيمة لأي حديث نقدي لأداء الفضائيات العربية خلال العام المنصرم، ما لم يتضمن الاشارة إلى النقلة النوعية التي أحدثتها القناة الإخبارية السعودية في السنة الأولى من عمرها، وذلك باختيارها نهجاً احترافياً مميزاً، يعتمد على المهنية العالية، والمصداقية، والموضوعية في الطرح، مستخدمة أحدث الوسائل التقنية المتاحة، وأفضل الكوادر الوطنية المؤهلة.
+      <br/>
+      فها هي تطفئ شمعتها الأولى، وسط ذهول المراقبين والمتابعين ........
+     </font>
+     <a href="/magazine/11012005/ar48.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/ar49.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        مع دخولها العام الثاني لانطلاقها
+       </font>
+       <br/>
+       <font size="2">
+        قناة الإخبارية.. المصداقية والموضوعية أهم مرتكزات التفوق
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/ar49.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/23.jpg" style="float: left"/>
+      </a>
+      <br/>
+      فيما يظل الإعلام العربي في غالبه، رمادي المشهد، وتستمر نظرة المشاهد السلبية تجاهه، تبدو تجربة القناة الإخبارية رائدة في مضمونها، وملفتة للأنظار بشكل يعيد الآمال والثقة للمشاهد العربي نحو مصداقية الإعلام العربي، فهي قبل أن تطفئ شمعتها الأولى كانت قد حسمت موقفها، وحددت ملامحها المميزة، وكسرت القاعدة الشهيرة (زامر الحي لا يطرب) فهي قد نالت إعجاب المشاهدين داخل المملكة وعوضتهم عما عجزت عنه ........
+     </font>
+     <a href="/magazine/11012005/ar49.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/ar50.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        هدى حسين:
+       </font>
+       <br/>
+       <font size="2">
+        لا أقبل كل ما يعرض
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/ar50.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/24.jpg" style="float: left"/>
+      </a>
+      <br/>
+      ابنة الكويت هدى حسين التي أجبرتها الظروف على الابتعاد القسري عن الكويت والإقامة في قطر سنوات عدة، ولكنها عادت إلى الكويت للاستقرار فيها وقدمت مسرحيات للطفل حققت أرقاماً قياسية في عدد الحضور.. كشفت في هذا اللقاء عن أدوار تلفزيونية جديدة تقدمها وشخصيات مختلفة عن ما تعوده المشاهد.
+      <br/>
+      * ما الفرق بين الأجواء الفنية في الكويت وقطر؟
+      <br/>
+      مما لا شك فيه أن الكويت تعتبر المنارة الأبرز للفن الخليجي بفضل ........
+     </font>
+     <a href="/magazine/11012005/ar50.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/ar51.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        مشاهدات
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      * التصنيف الجديد الذي صدر مؤخراً حول نسبة مشاهدة المصريين الفضائيات خيب ظن الكثير من الذين اعتقدوا أنهم استطاعوا الوصول الى الجمهور المصري حيث بينت هذه الاحصائية ان نسبة 75% من المشاهدين المصريين لا يتابعون إلا (القناة الفضائية المصرية) بينما حصلت قناة اقرأ على 13% وهي نسبة عالية في ظل تنافس القنوات.
+      <br/>
+      * هناك قنوات تبث على مدار 24 ساعة ولا نعلم من أين طلعت ولا كيف خرجت.. الجديد في الموضوع مشروع ........
+     </font>
+     <a href="/magazine/11012005/ar51.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/ar52.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        جديد حياة الفهد
+       </font>
+       <br/>
+       <font size="2">
+        (موضي والزمن الجميل) و(الرهينة)
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      الفنانة الكويتية حياة الفهد تستعد لتصوير مسلسلها الجديد (موضي والزمن الطويل) وهو مسلسل اجتماعي تدور أحداثه في 30 حلقة منفصلة، وفي كل حلقة تقوم بإحدى الوظائف، لكنها تواجه الكثير من المشاكل، مما يدفعها الى ترك المكان.
+      <br/>
+      العمل من إخراج محمد السيد عيسى، ويشاركها في البطولة أحمد الصالح، ورجاء عبد الله وباسم النبهان.
+      <br/>
+      ومن جانب آخر يستعد المخرج محمد دحام لتصوير أحدث أعماله الدرامية (الرهينة) وهو من تأليف ........
+     </font>
+     <a href="/magazine/11012005/ar52.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/ar53.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        الجنس اللطيف
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      بعد النجاح الكبير الذي حققه فيلم (سهر الليالي) يجتمع أبطاله من جديد: شريف منير، ومنى زكي، وحنان ترك، وجيهان فاضل، وفتحي عبدالوهاب، في الفيلم السينمائي (الجنس اللطيف) الذي يشارك في بطولته أيضا منة شلبي والممثل الكوميدي وحيد سيف.
+      <br/>
+      تدور أحداث الفيلم حول ظاهرة تمرد بنات الجيل الجديد ورغبتهن في الحصول على الحرية الكاملة والانطلاق حتى ولو تشبهن بالرجال في الملابس والكلام وخشونة الطبع.........
+     </font>
+     <a href="/magazine/11012005/ar53.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/ar54.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        كليب غرام
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      تستعد نيكول سابا لتصوير ثاني أفلامها السينمائية الذي يحمل اسم (كليب غرام) أمام أحمد عز وهند صبري وعزت أبو عوف وصلاح عبد الله. وتقوم نيكول بدور مطربة لبنانية ترتبط بقصة حب عنيفة مع شاب مصري عاشق للموسيقى والغناء، فتكون فرقة استعراضية معه بالرغم من اعتراض الكثيرين في الوسط الفني من أصدقائها لكون الشاب مجهولاً.
+      <br/>
+      يذكر ان نيكول اعتذرت للنجمة يسرا عن عدم الاشتراك في بطولة فيلم (كلام في الحب) بسبب ........
+     </font>
+     <a href="/magazine/11012005/ar54.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/ar55.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        ابنة مهرِّب
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      تبدأ غادة عادل قريباً تصوير دورها بالفيلم الجديد (غاوي حُب) من تأليف أحمد البيه وإخراج زوجها مجدي الهواري، ويشاركها البطولة محمد فؤاد ورامز جلال. ويدور الفيلم في إطار بوليسي رومانسي غنائي حول ضابط شرطة يفشل في القبض على أحد مهرِّبي المخدرات فيستعين بشقيقه الذي يجيد إقامة العلاقات العاطفية مع البنات ليقترب من ابنة هذا المهرِّب ويعرف منها معلومات تمكِّنه من القبض على والدها، لكن الشقيق يقع في حب ........
+     </font>
+     <a href="/magazine/11012005/ar55.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/ar56.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        حكيم يبدأ تصوير أول أفلامه
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      بدأ المغني الشعبي (حكيم) تصوير اللقطات الأولى من فيلم (علي سبايسي) في عدد من الأماكن العامة في القاهرة وضواحيها، قبل ان ينتقل مع فريق العمل إلى الإسكندرية لتصوير المشاهد الخارجية للفيلم الذي تأجل تصويره أكثر من مرة بسبب ارتباطات حكيم بإحياء حفلات وتصوير أغاني الفيديو كليب. ويعلق حكيم آمالاً كبيرة على نجاح فيلمه السينمائي الأول.........
+     </font>
+     <a href="/magazine/11012005/ar56.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/ar57.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        على الهواء
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      * لا أجامل في أدواري.
+      <br/>
+      هيفاء حسين
+      <br/>
+      ودور الهندية.. في (غصات حنين) ايش نسميه.
+      <br/>
+      * عباس إبراهيم موهبة غير عادية.
+      <br/>
+      الملحن سامي إحسان
+      <br/>
+      ما راح يذبحه إلا مدحكم الزايد له.
+      <br/>
+      * لا أفكر إلا بنفسي.
+      <br/>
+      المطربة اللبنانية (يارا)
+      <br/>
+      لا أحد محتاج تفكرين عنه.
+      <br/>
+      * أملك غرفة كاملة للفساتين.
+      <br/>
+      إليا
+      <br/>
+      ما بين نص متر إلى 2 سم.
+      <br/>
+      * (افتح قلبك) أهم من برنامج (من سيربح المليون).
+      <br/>
+      جورج قرداحي
+      <br/>
+      صدقناك.
+      <br/>
+      * الفن عندي.. رسالة يجب ........
+     </font>
+     <a href="/magazine/11012005/ar57.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/ar58.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        زووووم
+       </font>
+       <br/>
+       <font size="2">
+        أمومة الفنانين
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      الأمومة والأبوة إحساس سامٍ وشعور نبيل لا يضاهيه شعور آخر، فكيف إذا كان أحد الطرفين فناناً؟ هنا تتضاعف الأحاسيس ويكبر الشأن، وعلى الرغم من ذلك نجد أن هناك بعض الفنانين يهربون من حياة الأسرة إلى جحيم العزوبية معتقدين أن الحياة الأسرية تأخذ من وقتهم الكثير، والوقت الفني عندهم مهم لإنجاز العديد من الأعمال التي ينتظرها الجمهور، فعلى الرغم من نجاحهم في الحياة الفنية إلا أنهم فشلوا في تأسيس فكرة جيدة عن ........
+     </font>
+     <a href="/magazine/11012005/ar58.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/shasha59.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        يفتتح في 10 فبراير القادم
+       </font>
+       <br/>
+       <font size="2">
+        دونوف ودي بارديو نجما مهرجان برلين السينمائي
+       </font>
+       <br/>
+       <font size="2">
+        إعداد: محمد شاهين
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/shasha59.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/25.jpg" style="float: left"/>
+      </a>
+      <br/>
+      كشف مهرجان برلين السينمائي الذي ينافس مهرجان كان الفرنسي عن قائمة الافلام المشاركة في المسابقة الرسمية التي تشهد حضورا قويا للسينما الفرنسية بما في ذلك أحدث فيلم للنجمين كاترين دونوف وجيرار دي بارديو. وتلعب دونوف ودي بارديو في فيلم (لي تومب كي شانج) (الزمن الذي يتغير) للمخرج اندريه شينيه دوري العاشقين اللذين يلتقيان مرة أخرى بعد 30 عاما. كما سيعرض الفيلم الدرامي التاريخي الفرنسي (مان تو ........
+     </font>
+     <a href="/magazine/11012005/shasha59.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/shasha60.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        احتفالية دانمركية مصرية في المئوية الثانية لمولد هانز كريستيان أندرسون
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      نظمت مكتبة الإسكندرية بالتعاون مع السفارة الدانمركية احتفالية يوم الخميس الماضي بمكتبة الإسكندرية بمناسبة مرور مائتي عام على مولد الكاتب الدانمركي هانز كريستيان أندرسون (18051875) بحضور الأمير يواكيم أصغر أبناء ملكة الدانمرك. كما قام الأمير خلال الاحتفال بإهداء المكتبة مجموعة كبيرة من مؤلفات الكاتب المترجمة إلى اللغة العربية ومجموعة من المواد السمعية والبصرية المتطورة إلى جانب 26 فيلماً قصيراً ........
+     </font>
+     <a href="/magazine/11012005/shasha60.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/shasha61.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        مسرح
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      * شهد مسرح حصن الفليج بمسقط مساء الأحد من الأسبوع الماضي عرضا شعريا غنائيا حمل عنوان (أنشودة المطر) للشاعر العراقي بدر شاكر السياب وهو من إعداد وإخراج وأداء الفنان المخرج السوري جواد الأسدي وغناء المطربة العراقية جاهدة وهبة وتمثيل كل من الممثلتين العراقيتين مريم علي ونادين جمعة، وجاء العرض بمناسبة الذكرى الاربعين لرحيل الشاعر بدر شاكر السياب.
+      <br/>
+      وقال مسؤول بوزارة السياحة العمانية المنظمة للعرض انه ........
+     </font>
+     <a href="/magazine/11012005/shasha61.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/shasha62.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        أفضل عشرة أفلام
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      1.Meet TheFockers
+      <br/>
+      لقاء عائلة الفوكرز
+      <br/>
+      **
+      <br/>
+      2.Lemony Snickets A Series of Unfortunate Events
+      <br/>
+      ليموني سنيكيت: سلسلة الأحداث التعسة
+      <br/>
+      **
+      <br/>
+      3.The Aviator
+      <br/>
+      الكابتن المليونير
+      <br/>
+      **
+      <br/>
+      4.Fat Albert
+      <br/>
+      البرت السمين
+      <br/>
+      **
+      <br/>
+      5.Oceans Twelve
+      <br/>
+      رجال المحيط الاثنا عشر
+      <br/>
+      ***
+      <br/>
+      6.National Treasure
+      <br/>
+      الكنز الوطني
+      <br/>
+      **
+      <br/>
+      7.Spanglish
+      <br/>
+      أنجلو إسباني
+      <br/>
+      **
+      <br/>
+      8.The Polar Express
+      <br/>
+      قطار الأمنيات
+      <br/>
+      **
+      <br/>
+      9.The Phantom of The Opera
+      <br/>
+      شبح ........
+     </font>
+     <a href="/magazine/11012005/shasha62.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/am63.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        (الملاح) (THE AVIATOR)
+       </font>
+       <br/>
+       <font size="2">
+        الطيار المغامر ورحلة الجنون
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/am63.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/26.jpg" style="float: left"/>
+      </a>
+      <br/>
+      * بطولة: ليوناردو دي كابريو  آلان آلدا  أليك بالدوين  كيت باكنسيل  كيت بلانكيت
+      <br/>
+      * إخراج: مارتن سكورسيزي
+      <br/>
+      ***
+      <br/>
+      يتناول الفيلم قصة واقعية عن حياة أشهر رجال الصناعة والفن والثراء الأمريكيين في القرن العشرين، وهو الصناعي والمنتج السينمائي هوارد هوج، الذي يقوم بدوره في الفيلم النجم الشاب (ليوناردو ديكابريو).
+      <br/>
+      ويجسد الفيلم كيف أن حياة هوارد لم يكن يشغلها سوى هوايتين فقط حب السينما وتصنيع ........
+     </font>
+     <a href="/magazine/11012005/am63.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/athar64.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        (سانت كروا)
+       </font>
+       <br/>
+       <font size="2">
+        جزيرة أثرية دولية تحكي قصة السنين
+       </font>
+       <br/>
+       <font size="2">
+        * إعداد : تنكزار سفوك
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/athar64.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/27.jpg" style="float: left"/>
+      </a>
+      <br/>
+      من أجل حسم الخلافات الدولية، ولمعرفة التاريخ الحقيقي لجزيرة سانت كروا، زار باحثون وعلماء أثار تلك الجزيرة، وبحثوا ونقبوا بعناية لأجل العثور على تفاصيل الماضي.
+      <br/>
+      هذا الاكتشاف سمح بترقية جانب مهم من الإرث التاريخي في كندا والولايات المتحدة الأمريكية أتاح المحافظة عليه.
+      <br/>
+      جزيرة سانت كروا تم الاعتراف بها من قبل الدولتين كمكان تاريخي قومي، وفي عام 1984م، أعلنتها الحكومة الأمريكية موقعا تاريخيا ........
+     </font>
+     <a href="/magazine/11012005/athar64.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/athar65.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        اكتشافات أثرية جديدة في مدينة ليون الفرنسية
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      قاربان قديمان تم اكتشافهما على شاطئ (ساوون) في ليون القديمة علماء الآثار الذين نقبوا منذ أكتوبر2002م في موقع بناء موقف سيارات أرضي في سواحل ساوون في ليون، جاءت خطواتهم لتضيف إلى الرصيد الأثري اكتشافين جديدين: جذعية من القرن الخامس عشر ومركب أسماك من القرن السادس عشر.
+      <br/>
+      القاربان في حالة مدهشة منذ أكتوبر 2002م، حملة التنقيب الوقائية في حقول موقف السيارات القادم، والواقع في سانت جورج في الآثار من ........
+     </font>
+     <a href="/magazine/11012005/athar65.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/karg66.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        بلد كل شيء فيه ممنوع
+       </font>
+       <br/>
+       <font size="2">
+        اتبع التعليمات.. أنت في كوريا الشمالية!
+       </font>
+       <br/>
+       <font size="2">
+        * إعداد: محمد الزواوي
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      قام الصحفي ستيف نيب من جريدة (كريستيان ساينس مونيتور) الأمريكية برحلة فريدة إلى كوريا الشمالية، وهي الزيارة الأولى له بعد انتظار سنوات عديدة، ووصف كيف كانت تلك الرحلة إلى ذلك البلد المصنف من دول (محور الشر)، والذي فيه كل شيء ممنوع.
+      <br/>
+      ويقول في تقريره أنه كثيرًا ما تقدم بطلب تأشيرة دخول إلى البلاد، ولكن كانت السلطات ترفض طلبه بعد أن تأخذ منه 80 دولارًا في كل مرة، وفي النهاية تمكن من دخول البلاد عن ........
+     </font>
+     <a href="/magazine/11012005/karg66.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/jas67.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        الطلاب والركن العظيم
+       </font>
+       <br/>
+       <font size="2">
+        الصحبة الطيبة مهمة في أداء مناسك الحج
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      * استطلاع يحيى الحربي
+      <br/>
+      الحج ركن عظيم من أركان الإسلام، والطلاب مثل غيرهم من الفئات التي يتكون منها مجتمعنا المسلم ينبغي أن يؤدوا هذه الفريضة متى ما توفرت فيهم الشروط.
+      <br/>
+      من خلال السطور التالية نستجلي بعض آراء الطلاب حول الركن العظيم، كما نختم برأيين تربويين حول هذا الموضوع.
+      <br/>
+      المعلومات مهمة
+      <br/>
+      يجيب الطالب عبدالمجيد محمد صلاح العبيلان عما ينبغي على الطالب الذي يرغب الحج بالقول: إن عليه التزود ........
+     </font>
+     <a href="/magazine/11012005/jas67.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/jas68.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        ثلاثة من الطلاب يبتكرون جهازاً لاستخلاص العطور
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/jas68.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/29.jpg" style="float: left"/>
+      </a>
+      <br/>
+      * كتب  عبد الله الشهري
+      <br/>
+      محمد خضيري ورعد الحارثي وفهد الغامدي، طلاب يدرسون في مدارس المنهل في القسم الثانوي في مدينة الرياض التقينا بهم عقب المهرجان العلمي المقام في جامعة الملك سعود بالرياض، وسألناهم عن طبيعة المشاركة:
+      <br/>
+      قال فهد الغامدي: لقد شاركنا عبر مهرجان جامعة الملك سعود بهذا الجهاز الذي تراه أمامك وهو عبارة عن جهاز يستخلص العطور.
+      <br/>
+      * ما الذي دعاكم للمشاركة؟
+      <br/>
+      الحقيقة أننا جميعاً نحب ........
+     </font>
+     <a href="/magazine/11012005/jas68.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/jas69.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        العقيل يشكر كشافة الوادي
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      * مبارك الدوسري:
+      <br/>
+      ثمّن مدير عام النشاط الطلابي في وزارة التربية والتعليم الأستاذ سعد بن عبد العزيز العقيل جهود النشاط الكشفي في تربية وتعليم محافظة وادي الدواسر في تنفيذ برنامج (وطني الحبيب)، الذي نفذته الإدارة. جاء ذلك في خطاب تلقاه مدير التربية والتعليم الأستاذ سعود بن خلف بن سعود، مقدراً ما قام به القادة الكشفيون والكشافة والأشبال في إنجاح هذا البرنامج، الذي يحقق أهداف النشاط في تنمية الروح ........
+     </font>
+     <a href="/magazine/11012005/jas69.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/jas70.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        المشاركات ترسل باسم
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      «جزيرة النشاط»  «مجلة الجزيرة» على العنوان:
+      <br/>
+      فاكس: 014871063
+      <br/>
+      ص ب : 345  الرمز البريدي: 11411
+      <br/>
+      البريد الالكتروني:
+      <br/>
+      mag@aljazirah.com.sa........
+     </font>
+     <a href="/magazine/11012005/jas70.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/jas71.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        شجون تربوية
+       </font>
+       <br/>
+       <font size="2">
+        التعداد ولعبة السوني
+       </font>
+       <br/>
+       <font size="2">
+        شاكر بن صالح السليم(*)
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      سبق أن نشرنا في جزيرة النشاط تحقيقاً عن امتلاك الطلاب لألعاب البلايستيشن وقارنا ذلك مع امتلاكهم الحاسب الشخصي.. تذكرت ذلك التحقيق في ثانوية  غرب الرياض  حينما اطلعت على أسئلة (التعداد الوطني) .. لا أخفي سعادتي بوجود بعض الأسئلة التي كنا نبحث عنها ولو في بعض المدارس، لعلمي أن السؤال عن كل شيء في مسيرة التعداد يعطل مسيرته ويصعب الأمور على إنهاء الإجراءات..
+      <br/>
+      والحقيقة التي لا مجال لإنكارها أن نسبة ........
+     </font>
+     <a href="/magazine/11012005/jas71.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/jas72.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        طلاب ثانوية القادسية يتحمسون مع برنامج ريادة الفصول
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      * خاص  جزيرة النشاط:
+      <br/>
+      ريادة الفصول أحد البرامج التي تنطلق مع الطلاب في رحاب مدارسهم، لتشجعيهم على أن يكون الفصل مميزاً من ناحية النظافة والتنظيم والحفاظ على مكوناته.
+      <br/>
+      فصل ثالث شرعي في ثانوية القادسية من الفصول المميزة على مستوى المملكة.
+      <br/>
+      جزيرة النشاط قابلت الطلاب هناك في رحاب الفصل والتقت عضو الشورى الطلابي في المدرسة الطالب صالح بن زيد السنيدي، وفتح لنا قلبه حول تجربتهم في مجال النشاط .
+      <br/>
+      يقول ........
+     </font>
+     <a href="/magazine/11012005/jas72.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/jas73.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        صورة وتعليق
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/jas73.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/30.jpg" style="float: left"/>
+      </a>
+      <br/>
+      نعم.. لا ؟ ........
+     </font>
+     <a href="/magazine/11012005/jas73.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/rde74.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        عام 2004
+       </font>
+       <br/>
+       <font size="2">
+        نجوم اعتزلوا ..وآخرون رحلوا
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      شهد العام 2004 اعتزال عدد من النجوم في مختلف الألعاب ووفاة عدد آخر ممن تألقوا وسطروا صفحات مجيدة في التاريخ الرياضي وكتبوا أسماءهم بأحرف من ذهب، وهنا أبرز المعتزلين والغائبين:
+      <br/>
+      ***
+      <br/>
+      رياضيون معتزلون
+      <br/>
+      أغسطس
+      <br/>
+      صانع ألعاب المنتخب الفرنسي لكرة القدم زين الدين زيدان (32 عاماً) يعلن اعتزاله دولياً بعد 93 مباراة سجل خلالها 26 هدفاً، اثنان منها في مرمى البرازيل في نهائي مونديال 1998 (3  صفر)، وأحرز مع ........
+     </font>
+     <a href="/magazine/11012005/rde74.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/astaraha75.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        حكم وأشياء أخرى
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      * فكرتي عن الشخص المتفتح العقل هو أنه الشخص الذي يقتنع برأيي فقط!
+      <br/>
+      * هناك ثلاثة أنواع للكذب: الكذب  الإشاعات  الإحصاءات.
+      <br/>
+      * المختل عقلياً هو الشخص الذي يعرف سعر كل الأشياء ولكنه لا يعرف قيمة أي من تلك الأشياء
+      <br/>
+      * لا أعرف ماذا تعني كلمة (رجل أمريكي ذواق).. أرجو المعذرة لوضعي هذه الكلمات بجوار بعضهم البعض.
+      <br/>
+      * الاتفاق الشفهي هو اتفاق لا يستحق أن يكتب على ورق.
+      <br/>
+      * ليس كل من يحزن لفشل صديقه صادقاً في ........
+     </font>
+     <a href="/magazine/11012005/astaraha75.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/astaraha76.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        أشياء تصيبك بالتوتر
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      * عندما تقف في السوبرماركت للحساب دائماً ما تجد شخصاً يقف وراءك ويصيبك بعربته في مؤخرة قدمك.
+      <br/>
+      * عندما تدخل أحد المصاعد في مبنى كثير الطوابق تجد المصعد يتوقف في كل طابق دون أن يصعد أحد.
+      <br/>
+      * عندما تكون تائهاً في الطريق وأنت تقود سيارتك فإنك تسير في أقصى يمين الشارع ولكن أحداً لا بد أن يمشي خلفك ويضرب لك منبه السيارة لكي تنطلق بسرعة.
+      <br/>
+      * لا يمكنك أن تعيد شيئاً اشتريته إلى الصندوق الذي أتى فيه مرة ........
+     </font>
+     <a href="/magazine/11012005/astaraha76.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/astaraha77.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        تصرفات رجالية
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      عندما تتعطل السيارة في الطريق تقف على جانب الطريق وتفتح غطاء المحرك في السيارة وتلقي نظرة عميقة وكأنك تعرف ما الذي تبحث عنه!.
+      <br/>
+      عندما تصاب بالبرد فإنك تحتاج إلى من يصنع لك الحساء الساخن ويذكرك بالدواء ويجلس بجانبك يلبي طلباتك، بينما زوجتك إذا التقطت العدوى منك فستندهش عندما تراها تأخذ علاجاً ليخفف ألمها.
+      <br/>
+      عندما تتعطل أي من أجهزة المنزل فإنني أقرر أن أفككها قطعة قطعة، بالرغم من تأكدي من أنني لن ........
+     </font>
+     <a href="/magazine/11012005/astaraha77.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/astaraha78.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        قصص... ولكن
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      محامٍ رقيق القلب
+      <br/>
+      ذات يوم كان المحامي يجلس في المقعد الخلفي لسيارته الليموزين ماراً بجانب إحدى الحدائق عندما شاهد اثنين من المساكين يأكلون العشب الموجود في الحديقة فطلب من سائقه التوقف ونزل بنفسه من السيارة ليستعلم عن الامر: (لماذا تأكلون عشب الحديقة؟), فقال أحدهما: (لأننا لا نملك النقود لشراء أي طعام).
+      <br/>
+      وهنا قال له المحامي: إذاً اصطحبك معي إلى منزلي، فقال له الرجل: (ولكن لي زوجة وطفلين)، فرد ........
+     </font>
+     <a href="/magazine/11012005/astaraha78.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/alh79.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        حيلة ذكية للهروب من السجن!
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      ذكرت تقارير أن صبياً سويدياً يبلغ من العمر 18 عاماً نجح في الهروب من السجن الذي يقضي فيه عقوبة تهمة الاغتصاب والسرقة بعدما بدل ملابسه مع أخيه التوأم.
+      <br/>
+      وقالت صحيفة (أفتونبلاديت) السويدية إن الأخوين نفذا خطتهما داخل سجن كرونوبرج في ستوكهولم. وكانت سلطات السجن قد سمحت للأخ التوأم للسجين بالانفراد به.
+      <br/>
+      وبعد حوالي 45 دقيقة ترك الزائر السجن وأغلق الحراس الباب معتقدين أن شيئاً لم يحدث.
+      <br/>
+      وخلال الزيارة ........
+     </font>
+     <a href="/magazine/11012005/alh79.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/alh80.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="1">
+        وهكذا دواليك
+       </font>
+       <br/>
+       <font size="2">
+        احتراف
+       </font>
+       <br/>
+       <font size="2">
+        عبدالباسط شاطرابي
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      الضحية الأولى لكل حرب هي (الحقيقة)!!
+      <br/>
+      الجملة ليست من إبداعات صويحبكم، لكنها من بنات أفكار أحد المتحدثين في الفضائيات!.
+      <br/>
+      الكل يكذب، ولحسن الحظ لم تكن الأكاذيب غبية جداً، فالجميع حرصوا على الأصول، أقصد أصول الكذب، والجميع كانوا حاذقين بما يكفي لوأد الحقيقة ونشر الضباب أمام العيون! مثل هذا الأمر لا يستغرب في عالم يسعى للاحترافية في كل شيء.
+      <br/>
+      أفلم تصبح موضوعات مثل (الشائعة) و(التشويش) و(التضليل)، ........
+     </font>
+     <a href="/magazine/11012005/alh80.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/alh81.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        جدل في استراليا بسبب (الفك المفترس)!
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/alh81.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/32.jpg" style="float: left"/>
+      </a>
+      <br/>
+      كشفت حادثة وفاة بشعة وقعت في شاطئ أديليد الشهير في أستراليا العلاقة التي تمزج بين الحب والكراهية بين الأستراليين والقروش التي تدور حول القارة وتتغذى على بعض السباحين بين الحين والآخر.
+      <br/>
+      ففي الوقت الذي يطالب فيه البعض بدم القرش الأبيض الضخم الذي يبلغ طوله خمسة أمتار والذي قتل نيك بيترسون في وقت سابق هذا الأسبوع فإن أهل نيك وأصدقاءه يحذرون من ارتكاب أفعال لن تكون إلا مجرد التنفيس عن رغبات ........
+     </font>
+     <a href="/magazine/11012005/alh81.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/alh82.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        اللص (المؤدب)!
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      اعتقلت الشرطة الكرواتية شابا وصفته بأنه أكثر اللصوص المسلحين أدبا في البلاد. ولهذا اللص المهذب طريقة فريدة في السرقة والاقتحام، فهو يدخل إلى المكان المراد سرقته ويخاطب صاحبه قائلا: أنا معجب بك للغاية.. ولا أحمل ضدك أي ضغينة.. وأنا حقا آسف ولكن هذه عملية سرقة. بل ويطلب اللص من العاملين في المكان الذي يسرقه أن يأخذوا مالا لانفسهم أيضا. وتمكن اللص من سرقة 77 ألف كونا (13 ألف دولار) على مدار الاشهر ........
+     </font>
+     <a href="/magazine/11012005/alh82.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/alh83.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        لبنانية (محجبة) في الشرطة الأسترالية
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      ما زالت مسؤولة الشرطة السابقة آمي تيلور تحظى بشهرة واسعة في استراليا نظراً لأنها أصبحت أول امرأة تدير حركة المرور في سيدني منذ عام 1945م.
+      <br/>
+      وثمة امرأة أخرى تدعى مها سكر من غير المرجح أن يجري تذكرها كثيراً في المستقبل على الرغم من أنها أصبحت أول امرأة ترتدي الحجاب يجري تجنيدها في قوة الشرطة الأسترالية.
+      <br/>
+      غير أن قبول سكر المولودة في بيروت ضمن قوة شرطة ملبورن حدث تاريخي نظراً لأن ذلك يتطلب نوعاً من ........
+     </font>
+     <a href="/magazine/11012005/alh83.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td valign="top" width="50%">
+ <table border="0" cellpadding="2" cellspacing="0" height="1" style="DISPLAY: inline" width="100%">
+  <tr>
+   <td bgcolor="#C28006" height="1" width="100%">
+    <p align="center" dir="rtl">
+     <a href="/magazine/11012005/alh84.htm" style="text-decoration:none;cursor:hand">
+      <font face="Tahoma" size="2">
+      </font>
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        حيوانات نادرة في شقق سنغافورة!
+       </font>
+      </font>
+     </a>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="right" height="2" width="100%">
+    <p align="justify" dir="rtl">
+     <font color="#800000" face="Tahoma" size="2">
+      قالت هيئة الأغذية الزراعية والشؤون البيطرية إنه جرى العثور على 37 حيواناً برياً نادراً بينها سبعة من الأنواع المهددة بخطر الانقراض في شقق سكنية في سنغافورة. وقالت الهيئة إن ثعباناً كبيراً وأفعى كبيرة وثعبان الشجر الأخضر وعنكبوته كانت ضمن 11 حيواناً عثر عليها في شقة تنتمي لمساعد متجر للفاكهة. وحذرت منظمة البحوث والتعليم الخاصة بالحيوانات وهي جماعة مدافعة عن حقوق الحيوانات من أن الحيوانات البرية ........
+     </font>
+     <a href="/magazine/11012005/alh84.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </p>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td height="46" valign="top" width="50%">
+  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+   <tr>
+    <td align="center" bgcolor="#C28006" width="100%">
+     <a href="/magazine/11012005/alh85.htm" style="text-decoration:none;cursor:hand">
+      <font color="#FFFFFF" face="MS Sans Serif" size="2">
+       <font size="2">
+        بيضة عملاقة
+       </font>
+      </font>
+     </a>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" height="2" width="100%">
+     <font color="#800000" face="Tahoma" size="2">
+      <a href="/magazine/11012005/alh85.htm" target="_self">
+       <img border="0" height="90" src="/magazine/11012005/33.jpg" style="float: left"/>
+      </a>
+      <br/>
+      الطفل الألماني تريستان يمسك بيده اليسرى بيضة دجاجة عملاقة وباليد الأخرى بيضة عادية الحجم وذلك في بلدة لانجوبج بشمال ألمانيا ويبلغ وزن البيضة العملاقة 169 جراماً وستدخل موسوعة غينس للأرقام القياسية كأكبر بيضة دجاجة في العالم. (أ.ف.ب)........
+     </font>
+     <a href="/magazine/11012005/alh85.htm" style="text-decoration:none;cursor:hand">
+      <b>
+       <font color="#800000" face="Tahoma" size="1">
+        التفاصيل
+       </font>
+      </b>
+     </a>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+<td bordercolor="#008000" height="353" valign="top" width="18%">
+ <table bgcolor="#C28006" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%">
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/am.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       الفن السابع
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/ar.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       الفن العربي
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/aw.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       المنزل الانيق
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/karg.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       خارج الحدود
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/almlfsais.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       الملف السياسي
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/huar.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       حوار
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/alsagmaf.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       السوق المفتوح
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/astaraha.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       استراحة
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/tagrair.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       تقرير
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/ektsad.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       إقتصاد
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/mntda.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       منتدى الهاتف
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/mgtma.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       مجتمعات
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/athar.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       اثار
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/memory.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       من الذاكرة
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/jas.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       جزيرة النشاط
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/coun.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       روابط اجتماعية
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/sss.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       x7سياسة
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/alh.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       الحديقة الخلفية
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/shasha.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       شاشات عالمية
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/11012005/rde.htm" style="text-decoration: none" title="">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       رياضة
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#C28006" dir="rtl" height="30" width="100%">
+    <a href="/magazine/index.html" style="text-decoration: none" title="Click here to open home page">
+     <b>
+      <font color="#FFFFFF" face="MS Sans Serif" size="1">
+       الصفحة الرئيسة
+      </font>
+     </b>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" width="100%">
+    <a href="/magazine/11012005/image1.htm" style="text-decoration: none">
+     <img border="1" src="/magazine/11012005/C.jpg" style="Float: Left" width="135"/>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" width="100%">
+    <a href="/magazine/11012005/image2.htm" style="text-decoration: none">
+     <img border="1" src="/magazine/11012005/C01.jpg" style="Float: Left" width="135"/>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" width="100%">
+    <a href="/magazine/11012005/image3.htm" style="text-decoration: none">
+     <img border="1" src="/magazine/11012005/C02.jpg" style="Float: Left" width="135"/>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" width="100%">
+    <a href="/magazine/11012005/image4.htm" style="text-decoration: none">
+     <img border="1" src="/magazine/11012005/C03.jpg" style="Float: Left" width="135"/>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" width="100%">
+    <a href="/magazine/11012005/image5.htm" style="text-decoration: none">
+     <img border="1" src="/magazine/11012005/C04.jpg" style="Float: Left" width="135"/>
+    </a>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p align="center">
+     <font color="#FFFFFF" size="2">
+      <tr>
+       <td height="30" width="100%">
+        <a href="/magazine/11012005/archive.html" style="text-decoration: none">
+         <p align="center">
+          <b>
+           <font color="#FFFFFF" face="MS Sans Serif" size="2">
+            ارشيف الاعداد الاسبوعية
+           </font>
+          </b>
+         </p>
+        </a>
+       </td>
+      </tr>
+     </font>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td align="center" dir="rtl" width="100%">
+    <form action="/cgi-bin/magazine/search.cgi" method="POST" name="search" onsubmit="return validate()">
+     <b>
+      <font color="#FFFFFF" face="Ms Sans Serif" size="2">
+       <b>
+        ابحث في هذا العدد
+       </b>
+      </font>
+      <font color="#0000DD">
+       <br/>
+       <input name="keyword" size="15" type="text"/>
+       <br/>
+       <input name="submit" type="submit" value="ابحث"/>
+       <input name="dir" type="hidden" value="/magazine/11012005/"/>
+      </font>
+     </b>
+    </form>
+   </td>
+  </tr>
+  <tr>
+   <td align="center">
+    <form name="mailform" onsubmit="return check_email()">
+     <font color="#FFFFFF" face="Ms Sans Serif" size="2">
+      <b>
+       للاشتراك في القائمة البريدية
+      </b>
+     </font>
+     <input name="email" size="18" type="text"/>
+     <br/>
+     <input name="sub_email" onclick="check_email()" type="button" value="نفذ طلب الاشتراك"/>
+    </form>
+   </td>
+  </tr>
+ </table>
+</td>
+<tr>
+ <td width="100%">
+  <p align="center">
+   <a onclick="open('/cgi-bin/mailto/mail?email=magazine@al-jazirah.com.sa','displayWindow','left=80,top=10,height=440,width=550,scrollbars=no,menubar=no,toolbar=no,resizable=no,status=no,location=no')" style="text-decoration:underline;cursor:hand">
+    <font color="#FFFFFF" face="MS Sans Serif" size="2">
+     <b>
+      للمراسلة
+     </b>
+    </font>
+   </a>
+  </p>
+ </td>
+</tr>
+<center>
+ <hr color="#800000" width="70%"/>
+ <p dir="rtl">
+  <font color="#800000" face="Ms Sans Serif" size="2">
+   توجه جميع  المراسلات التحريرية  والصحفية الى
+   <a onclick="open('/cgi-bin/mailto/mail?email=chief@al-jazirah.com','displayWindow','left=80,top=10,height=440,width=550,scrollbars=no,menubar=no,status=no,toolbar=no,resizable=no,location=no')" style="text-decoration:underline;cursor:hand">
+    chief@al-jazirah.com
+   </a>
+   عناية  رئيس التحرير
+  </font>
+  <br/>
+  <font color="#800000" face="Ms Sans Serif" size="1">
+   توجه جميع المراسلات الفنية  الى
+   <a onclick="open('/cgi-bin/mailto/mail?email=admin@al-jazirah.com','displayWindow','left=80,top=10,height=440,width=550,scrollbars=no,menubar=no,status=no,toolbar=no,resizable=no,location=no')" style="text-decoration:underline;cursor:hand">
+    admin@al-jazirah.com
+   </a>
+   عناية مدير وحدة الانترنت
+   <br/>
+   <br/>
+   Copyright 2002, Al-Jazirah Corporation, All rights Reserved
+  </font>
+ </p>
+ <script type="text/javascript">
+  //<![CDATA[
+(function() {
+var _analytics_scr = document.createElement('script');
+_analytics_scr.type = 'text/javascript'; _analytics_scr.async = true; _analytics_scr.src = '/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=117245484';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+})();
+// ]]>
+ </script>
+</center>

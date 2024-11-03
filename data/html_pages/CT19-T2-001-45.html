@@ -1,0 +1,3857 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="162071923836064" property="fb:pages">
+   <script async="" src="//js-sec.indexww.com/ht/htw-idg.js">
+   </script>
+   <link href="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/" rel="canonical"/>
+   <title>
+    iPhone &amp; iPad security: Why the iOS app XcodeGhost exploit shouldn't concern you - Macworld UK
+   </title>
+   <link href="//cdn2.macworld.co.uk/assets/manifest.json" rel="manifest"/>
+   <meta content="The iPad and iPhone are said to be more secure than Android, but exploits including XcodeGhost, and the WireLurker and Masque Attack malware, along with leaked celebrity photos and the Find My Phone hijacking scam have raised concerns. We look at whether these cases mean that Apple's iOS isn't secure and show you how to make sure the data on your iPhone or iPad is safe." name="description"/>
+   <meta content="Passcode Lock,Software,Symantec Mobile Encryption,store,Apple Apple,App Store and Find My,Passcode On,Phishing,iphone,ipad,iosapps" name="keywords"/>
+   <meta content="Copyright 2019 IDG Communications Ltd" name="dcterms.rights"/>
+   <meta content="Various" name="generator"/>
+   <meta content="General" name="Rating"/>
+   <meta content="Global" name="dcterms.audience"/>
+   <meta content="20FE82FDCC802E9D7F0BF011F6939733" name="msvalidate.01">
+    <link href="https://www.macworld.co.uk/search/" rel="search"/>
+    <link href="/assets/search.osdx" rel="search" title="Macworld UK Search" type="application/opensearchdescription+xml"/>
+    <link href="//cdn1.macworld.co.uk/graphics/appleicon57.png" rel="apple-touch-icon" sizes="57x57"/>
+    <link href="//cdn1.macworld.co.uk/graphics/appleicon60.png" rel="apple-touch-icon" sizes="60x60"/>
+    <link href="//cdn2.macworld.co.uk/graphics/appleicon72.png" rel="apple-touch-icon" sizes="72x72"/>
+    <link href="//cdn1.macworld.co.uk/graphics/appleicon76.png" rel="apple-touch-icon" sizes="76x76"/>
+    <link href="//cdn1.macworld.co.uk/graphics/appleicon114.png" rel="apple-touch-icon" sizes="114x114"/>
+    <link href="//cdn3.macworld.co.uk/graphics/appleicon120.png" rel="apple-touch-icon" sizes="120x120"/>
+    <link href="//cdn3.macworld.co.uk/graphics/appleicon144.png" rel="apple-touch-icon" sizes="144x144"/>
+    <link href="//cdn1.macworld.co.uk/graphics/appleicon152.png" rel="apple-touch-icon" sizes="152x152"/>
+    <link href="//cdn3.macworld.co.uk/graphics/appleicon180.png" rel="apple-touch-icon" sizes="180x180"/>
+    <link href="//cdn2.macworld.co.uk/graphics/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+    <link href="//cdn.macworld.co.uk/graphics/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+    <link href="//cdn3.macworld.co.uk/graphics/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+    <link href="//cdn1.macworld.co.uk/graphics/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+    <link color="#5bbad5" href="//cdn2.macworld.co.uk/graphics/safari-pinned-tab.svg" rel="mask-icon"/>
+    <link href="//cdn3.macworld.co.uk/graphics/favicon.ico?a" rel="Shortcut Icon" type="image/vnd.microsoft.icon"/>
+    <meta content="#da532c" name="msapplication-TileColor"/>
+    <meta content="//cdn1.macworld.co.uk/graphics/mstile-144x144.png" name="msapplication-TileImage"/>
+    <meta content="//cdn2.macworld.co.uk/browserconfig.xml" name="msapplication-config"/>
+    <meta content="#ffffff" name="theme-color"/>
+    <link href="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/?amp" rel="amphtml"/>
+    <link href="//cdn2.macworld.co.uk/assets/manifest.json" rel="manifest"/>
+    <meta content="Karen Haslam" name="author"/>
+    <meta content="follow,index" name="robots"/>
+    <meta content="en_GB" property="og:locale"/>
+    <meta content="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/" property="og:url"/>
+    <meta content="https://cdn3.macworld.co.uk/cmsdata/features/3453938/iphone-ios-security-image_thumb800.jpg" property="og:image"/>
+    <meta content="article" property="og:type"/>
+    <meta content="Why the iOS app XcodeGhost exploit shouldn't concern you" property="og:title"/>
+    <meta content="The iPad and iPhone are said to be more secure than Android, but exploits including XcodeGhost, and the WireLurker and Masque Attack malware, along with leaked celebrity photos and the Find My Phone hijacking scam have raised concerns. We look at whether these cases mean that Apple's iOS isn't secure and show you how to make sure the data on your iPhone or iPad is safe." property="og:description"/>
+    <meta content="Macworld UK" property="og:site_name"/>
+    <meta content="2015-09-22T11:00:00Z" property="bt:pubdate"/>
+    <meta content="3453938" property="bt:id"/>
+    <meta content="2015-11-02T12:25:01Z" property="bt:moddate"/>
+    <meta content="summary_large_image" property="twitter:card"/>
+    <meta content="https://cdn3.macworld.co.uk/cmsdata/features/3453938/iphone-ios-security-image_thumb800.jpg" property="twitter:image"/>
+    <meta content="Why the iOS app XcodeGhost exploit shouldn't concern you" property="twitter:title"/>
+    <meta content="@macworlduk" property="twitter:site"/>
+    <meta content="The iPad and iPhone are said to be more secure than Android, but exploits including XcodeGhost, and the WireLurker and Masque Attack malware, along with leaked celebrity photos and the Find My Phone hijacking scam have raised concerns. We look at whether these cases mean that Apple's iOS isn't secure and show you how to make sure the data on your iPhone or iPad is safe." property="twitter:description"/>
+    <script>
+     //admiral cmp2
+!function(t,e,o){o=t.createElement(e),t=t.getElementsByTagName(e)[0],o.async=1,o.src="https://spiffymachine.com/v2/0/mfvjeb8jW6um2yh8fvzkuMHhNFA_fi2ppVAk3RppO3Q1hWHj53OeOL2pQEQ8fd9MAWl",t.parentNode.insertBefore(o,t)}(document,"script");!function(t,e,a,n){function o(t){try{return t=localStorage.getItem("v4ac1eiZr0"),t&&t.split(",")[4]>0}catch(e){}return!1}function r(){var n=o();if(n){var r=t[e].pubads();typeof r.setTargeting===a&&r.setTargeting("admiral-engaged","true")}}n=t[e]=t[e]||{},n.cmd=n.cmd||[],typeof n.pubads===a?r():typeof n.cmd.unshift===a?n.cmd.unshift(r):n.cmd.push(r)}(window,"googletag","function");;;!function(e,t,a,n){function o(){if(!window.frames[n]){var t=e.body;if(t){var a=e.createElement("iframe");a.style="display:none",a.name=n,t.appendChild(a)}else setTimeout(o,5)}}function r(){for(var e=[],a=0;a<arguments.length;a++)e.push(arguments[a]);p.q=p.q||[],"ping"===e[0]?e[2]({gdprAppliesGlobally:t.__cmpGdprAppliesGlobally||!1,cmpLoaded:!1},!0):e.length&&p.q.push(e)}function s(e){try{return JSON.parse(e)}catch(t){}}function c(e){if(e){var t,a="__cmpCall";t="string"==typeof e.data&&e.data.indexOf(a)>=0?(s(e.data)||{})[a]:(e.data||{})[a],t&&p(t.command,t.parameter,function(a,n){var o={__cmpReturn:{returnValue:a,success:n,callId:t.callId}};e.source.postMessage(msgIsString?JSON.stringify(o):o,"*")})}}var p=t[a];o(),"function"!=typeof p&&(p=t[a]=r,t.addEventListener?t.addEventListener("message",c,!1):t.attachEvent&&t.attachEvent("onmessage",c))}(document,window,"__cmp","__cmpLocator");
+    </script>
+    <script>
+     if(typeof Promise === 'undefined'){
+//yuk but IE 11 etc only
+document.write('<script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></scr'+'ipt>');
+}
+    </script>
+    <script>
+     try{
+(function(){
+var idguk = window.idguk || {}; //if it's already set use that instead
+/*
+the cmp is code is usually first on the page so run this here to
+never let anything redefine window.idguk
+*/
+Object.defineProperty(window, 'idguk', {
+enumerable: false,
+configurable: false,
+get: function(){
+return idguk;
+},
+set:function(){
+//do nothing
+}
+});
+})();
+}catch(ex){}
+window.admiral = window.admiral || function() {(admiral.q = admiral.q || []).push(arguments)};
+window.idguk = window.idguk || {};
+window.idguk.cmp = (function(){
+var debug = !!false;
+var LANG = {
+"en":{reshowText:'Privacy Settings',reshowTitle:'Edit your GDPR settings'}
+,"fr":{reshowText:'Param&egrave;tres de confidentialit&eacute;',reshowTitle:'Modifier vos parametres RGPD'}
+,"es":{reshowText:'Ajustes de privacidad',reshowTitle:' Edita tus ajustes de RGPD'}
+};
+var siteLang = 'en';
+var OUTBRAIN_VENDOR_ID = 164,
+GUMGUM_VENDOR_ID = 61;
+var INFO_PURPOSE_ID = 1,
+PERSONALIZATION_PURPOSE_ID = 2,
+AD_SELECTION_PURPOSE_ID = 3,
+CONTENT_SELECTION_PURPOSE_ID = 4,
+MEASUREMENT = 5,
+SOCIAL_PURPOSE_ID = 25;
+var lang = (siteLang in LANG) ? LANG[siteLang] : LANG['en'];
+var checkIfInEU = new Promise(function(resolve, reject){
+var promiseResolved = false;
+setTimeout(function(){
+if(debug)console.log('GDPR checkIfInEU timeout reached promiseResolved',promiseResolved);
+if (!promiseResolved){
+promiseResolved=true;
+resolve();//in eu
+}
+},20000);
+window.admiral('after', 'cmp.loaded', function(e){
+if(promiseResolved)return;//timeout reached
+promiseResolved = true;
+if(debug)console.log('GDPR checkIfInEU - cmp.loaded',e);
+var isEuVisitor = e.euVisitor || false;
+if (isEuVisitor){
+//update any cmp setting links and show them.
+var els = document.querySelectorAll('.cmpSettings');
+for(var i = 0 ; i < els.length ; ++i){
+els[i].style='';
+}
+var els = document.querySelectorAll('.cmpReshowLink');//add child link to this
+for(var i = 0 ; i < els.length ; ++i){
+var el = els[i];
+var a = document.createElement('a');
+a.innerHTML = a.innerHTML+lang.reshowText;
+a.title=lang.reshowTitle;
+a.style='cursor:pointer';
+a.onclick = function() {window.admiral('show','cmp.settings'); return false};
+el.appendChild(a);
+}
+resolve();
+}
+else reject();
+});
+});
+//util to check for 1 purpose or 1 vendor in consent data structure
+var checkConsentData = function(ConsentData,purposeId,vendorId){
+_ConsentData = {standardPurposes:{}};//normalise due to different naming conventions
+if('standardPurposes' in ConsentData)//prefer standardPurposes as defined on PublisherConsents which is not global and does not return early
+_ConsentData.standardPurposes = ConsentData.standardPurposes
+else if('purposeConsents' in ConsentData)//comes from Vendor Consents
+_ConsentData.standardPurposes = ConsentData.purposeConsents
+_ConsentData.vendorConsents = ConsentData.vendorConsents || {};//comes from VendorConsents
+_ConsentData.customPurposes = ConsentData.customPurposes || {};//comes from PublisherConsents
+if(debug)console.log('GDPR','checkConsentData','purposeId',purposeId,'vendorId',vendorId,_ConsentData);
+if ( typeof vendorId !== 'undefined'){
+if( vendorId in _ConsentData.vendorConsents && _ConsentData.vendorConsents[''+vendorId]){
+return true;
+}
+//vendor id match is wanted but is false or not defined
+return false;
+}
+if ( typeof purposeId !== 'undefined' && purposeId !== null){
+if( (purposeId in _ConsentData.standardPurposes && _ConsentData.standardPurposes[''+purposeId]) ||
+(purposeId in _ConsentData.customPurposes && _ConsentData.customPurposes[''+purposeId])
+){
+return true;
+}
+/*
+if(! (purposeId in _ConsentData.customPurposeConsents) )rr{//this site doesnt support this purpose so return true
+return true;
+}
+*/
+}
+if(debug)console.log('GDPR','checkConsentData',false);
+return false;
+};
+//util create promise for cmp for a purposeid
+var checkCMPForPurposeConsentOld = function(purposeId){
+return new Promise(function(resolve, reject){
+checkIfInEU.then(function(){
+__cmp('getVendorConsents',[],function(VendorConsents,success){
+if(debug)console.log('GDPR','checkCMPForPurposeConsent - getVendorConsents','purposeId',purposeId,'VendorConsents=',VendorConsents,'success=',success);
+resolve(checkConsentData(VendorConsents,purposeId));
+});
+}).catch(function(){//not in eu so give consent
+resolve(true);
+});
+});
+};
+var checkCMPForPurposeConsent = function(purposeId){
+return new Promise(function(resolve, reject){
+checkIfInEU.then(function(){
+__cmp('getPublisherConsents',[],function(PublisherConsents ,success){
+if(debug)console.log('GDPR','checkCMPForPurposeConsent - PublisherConsents ','purposeId',purposeId,'PublisherConsents=',PublisherConsents,'success=',success);
+resolve(checkConsentData(PublisherConsents,purposeId));
+});
+}).catch(function(){//not in eu so give consent
+resolve(true);
+});
+});
+};
+return {
+isDebug : function(){ return debug; }
+,adsense : checkCMPForPurposeConsent(PERSONALIZATION_PURPOSE_ID)
+,gumgum : new Promise(function(resolve, reject){
+checkIfInEU.then(function(){
+__cmp('getPublisherConsents',[],function(Consents,success){
+//getVendorConsents can resolve first if global storage is active for vendor consents so thats why it needs to be nested
+__cmp('getVendorConsents',[],function(VendorConsents,success){
+Consents.vendorConsents = VendorConsents.vendorConsents;
+Consents.purposeConsents = VendorConsents.purposeConsents;
+if(debug)console.log('GDPR','gumgum FullConsentsData',Consents);
+var ok = (checkConsentData(Consents,AD_SELECTION_PURPOSE_ID) && checkConsentData(Consents,null,GUMGUM_VENDOR_ID));
+resolve(ok);
+});//__cmp
+//var ok = (checkConsentData(Consents,AD_SELECTION_PURPOSE_ID) && checkConsentData(VendorConsents,null,GUMGUM_VENDOR_ID));
+//resolve(ok);
+});//__cmp
+}).catch(function(){
+resolve(true);
+});
+})
+,pixelTracker : new Promise(function(resolve, reject){
+checkIfInEU.then(function(){
+__cmp('getPublisherConsents',[],function(Consents,success){
+if(debug)console.log('GDPR','pixelTracker','args','Consents=',Consents,'success=',success);
+var ok = (checkConsentData(Consents,PERSONALIZATION_PURPOSE_ID)
+&& checkConsentData(Consents,AD_SELECTION_PURPOSE_ID)
+&& checkConsentData(Consents,SOCIAL_PURPOSE_ID));
+resolve(ok);
+});//__cmp
+}).catch(function(){
+resolve(true);
+});
+})
+,gpt : checkCMPForPurposeConsent(PERSONALIZATION_PURPOSE_ID)
+,gaTrack : new Promise(function(resolve, reject){
+checkIfInEU.then(function(){
+__cmp('getPublisherConsents',[],function(Consents,success){
+if(debug)console.log('GDPR','gaTrack');
+resolve(true);
+});//__cmp
+}).catch(function(){//not in eu, do nothing
+//resolve(true);
+});
+})
+};
+})();
+    </script>
+    <script type="application/ld+json">
+     {
+"@context" : "http://schema.org",
+"@type" : "Organization",
+"name" : "Macworld UK",
+"url" : "https://www.macworld.co.uk/",
+"potentialAction": {
+"@type": "SearchAction",
+"target": "https://www.macworld.co.uk/search/?q={search}",
+"query-input": "required name=search"
+},
+"sameAs" : [
+"https://www.facebook.com/MacworldUK",
+"https://twitter.com/MacworldUK",
+"https://plus.google.com/102391000274002633151",
+"http://www.youtube.com/channel/UCT7WejN8j_nGiSfwK8TnBcw"
+]
+}
+    </script>
+    <meta content="-MOmFHZ34AN-k_KzRvJQxtdxVre-sVYBB7c88NrXA6U" name="google-site-verification">
+     <meta content="width=device-width, initial-scale=1, minimum-scale = 1, maximum-scale=1" name="viewport"/>
+     <script src="https://use.typekit.net/zez7sex.js">
+     </script>
+     <script>
+      try{Typekit.load();}catch(e){}
+     </script>
+     <link href="//cdn.macworld.co.uk/styles/screen.css?CSS_20190320101321" media="screen" rel="stylesheet"/>
+     <link href="//cdn2.macworld.co.uk/styles/print.css?CSS_20190320101321" media="print" rel="stylesheet"/>
+     <!--[if lt IE 9]>
+<link rel="stylesheet" href="//cdn.macworld.co.uk/styles/ie-lt9.css?1549367843" />
+<![endif]-->
+     <!--[if lt IE 8]>
+<link rel="stylesheet" href="//cdn2.macworld.co.uk/styles/ie-lt8.css?1549367843" />
+<![endif]-->
+     <script language="javascript" type="text/javascript">
+      (function() {
+var method;
+var noop = function () {};
+var methods = [
+'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
+];
+var length = methods.length;
+var console = (window.console = window.console || {});
+while (length--) {
+method = methods[length];
+// Only stub undefined methods.
+if (!console[method]) {
+console[method] = noop;
+}
+}
+}());
+     </script>
+     <script type="text/javascript">
+      var setting = function(key){
+var settings = {
+//GEO_LOC_KEY: 'GEO_LOC_DATA'
+};
+return settings[key];
+};
+var requestSettings = function(key){
+var settings = {
+blockAds: false
+}
+return settings[key];
+};
+if (typeof dataLayer === 'undefined') {
+dataLayer = [];
+}
+if(typeof _paq === 'undefined'){
+_paq = [];
+}
+     </script>
+     <script type="text/javascript">
+      var setting = (function(oldSettingFunc){
+return function(key){
+var COMMON_SETTINGS = {
+'SITE_LANGUAGE' : 'en',
+'WEBMASTEREMAIL' : 'adrian_black@macworld.co.uk',
+'GOOGLE_RECAPTCHA_SITE_KEY' : '6LeIax0TAAAAAJcoplrEK2U1_8iUshMSHvjo04Kp',
+'ISLIVESITE' : true,
+'GEO_LOC_KEY': 'GEO_LOC_DATA'
+};
+return typeof COMMON_SETTINGS[key] !== 'undefined' ? COMMON_SETTINGS[key] : oldSettingFunc(key);
+};
+})(setting);
+     </script>
+     <script type="text/javascript">
+      var setting = (function(oldSettingFunc){
+return function(key){
+var AD_SETTINGS = {
+PLEASEWAIT_IMG: '//cdn3.macworld.co.uk/graphics/loading_1.gif',
+LIVEFYRE: true,
+LIVEFYRE_DEBUG: true,
+LIVEFYRE_TOKEN_COOKIE: 'lft',
+USER_DEBUG: true,
+BOOMTRAIN_DEBUG: false,
+REGISTER_USER_EVENT: 'open-register-ui',
+LOGIN_USER_EVENT: 'open-login-ui',
+USER_OVERLAY_EVENT: 'open-user-ui',
+SOCIALAUTH_ERROR_EVENT: 'open-social-auth-error-ui',
+COMMENT_REG_PROMPT_KEY: 'comment_reg_prompt',
+SITE_LOGIN_EVENT: 'site-login-complete',
+BLITZEN_NEWSLETTER_REGISTRATION_FORM_URL: 'https://idg.blitzen.com/form/6b00405bdd3955119bd675c1f1b5cc',
+BLITZEN_NEWSLETTER_REGISTRATION_FORM_ID: '6b00405bdd3955119bd675c1f1b5cc'
+};
+return typeof AD_SETTINGS[key] !== 'undefined' ? AD_SETTINGS[key] : oldSettingFunc(key);
+};
+})(setting);
+     </script>
+     <script src="//cdn2.macworld.co.uk/scripts-dist/thirdparty-pack.js?JS_20190320101321" type="text/javascript">
+     </script>
+     <script src="//cdn2.macworld.co.uk/scripts-dist/require.js?1553077177" type="text/javascript">
+     </script>
+     <script>
+      window.idguk = window.idguk || {};
+(function(require){
+require.config({
+baseUrl: "//cdn1.macworld.co.uk/scripts-dist/",
+waitSeconds: 15,
+urlArgs : "bust="+"1553077177&JS_20170510120322"
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+     </script>
+     <script src="//cdn1.macworld.co.uk/scripts-dist/main.js?JS_20190320101321" type="text/javascript">
+     </script>
+     <meta content="chrome=1" http-equiv="X-UA-Compatible"/>
+     <script>
+      window.idguk = window.idguk || {};
+window.$geoLocationDef = $.Deferred();
+(function(require){
+'use strict';
+require(['jstorage'], function() {
+var GEO_LOC_KEY = setting('GEO_LOC_KEY'),
+GEO_LOC_TTL = 3600000,
+geolocData = $.jStorage.get(GEO_LOC_KEY);
+var setGeoClasses = function(countryCode){
+$('html').addClass('geo-' + countryCode);
+$('html').toggleClass('geo-non-gb', (countryCode !== 'gb'));
+$('html').toggleClass('geo-non-us', (countryCode !== 'us'));
+$('html').toggleClass('geo-non-es', (countryCode !== 'es'));
+$('html').toggleClass('geo-non-fr', (countryCode !== 'fr'));
+}
+if((typeof geolocData === 'undefined') || (geolocData === null)){
+$.ajax({
+url: '/coldboxproxy.cfc',
+data: {
+'method': 'getGeoLocation'
+},
+dataType: 'json'
+}).done(function(data, textStatus, jqXHR){
+//console.log('GeoLoc from web service',data);
+if('statusCode' in data && data.statusCode == 'OK'){
+$.jStorage.set(GEO_LOC_KEY, data, {TTL: GEO_LOC_TTL});
+setGeoClasses(data.countryCode.toLowerCase().trim());
+window.$geoLocationDef.resolve();
+}
+});
+}else{
+setGeoClasses(geolocData.countryCode.toLowerCase().trim());
+window.$geoLocationDef.resolve();
+}
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+     </script>
+     <script>
+      (function(d, s, host, ipid) {
+if(ipid == -1)return;
+var e = d.createElement(s);
+e.type = 'application/javascript';
+e.async = !0;
+e.src = '//' + host + '/intellitxt/front.asp?ipid=' + ipid;
+d.getElementsByTagName(s)[0].parentNode.appendChild(e);
+})(document, 'script', 'macworld-uk.intellitxt.com', (Device.isMobile ? 88372 : 89820 ) );
+     </script>
+     <script>
+      !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+apstag.init({
+pubID: '3051',
+adServer: 'googletag'
+});
+     </script>
+     <!-- @@DFP_AD_UNITS_START@@ -->
+     <script type="text/javascript">
+      var AD_CONFIG_UNITS = {},
+configureAdUnits = function(){throw('not defined yet');};
+(function(){
+configureAdUnits = function() {
+if(adConfig.debug)console.log('configureAdUnits called');
+var mappings = {
+welcomead: googletag.sizeMapping().
+addSize([650, 0], [1, 1]).
+addSize([280, 0], [1, 1]).
+addSize([0, 0], []).
+build(),
+leaderboard: googletag.sizeMapping().
+addSize([980, 0], [[970, 250], [728, 90], [970, 66]]).
+addSize([570, 0], [[728, 90]]).
+addSize([478, 0], [[468, 60], [300, 250]]).
+addSize([280, 0], [[320, 50], [300, 50], [300, 250]]).
+addSize([0, 0], []).
+build(),
+leaderboardDesktopOnly: googletag.sizeMapping().
+addSize([980, 0], [[970, 250], [728, 90], [997, 123], [970, 66]]).
+addSize([570, 0], [[728, 90]]).
+addSize([0,0], [] ).
+build(),
+mpu: googletag.sizeMapping().
+addSize([830, 0], [[300, 250], [300, 600]]).
+addSize([320, 0], [[300, 250],[320, 50]]).
+addSize([0,0], []).
+build(),
+mpuSmall: googletag.sizeMapping().
+addSize([830, 0], [[300, 250]]).
+addSize([320, 0], [[300, 250],[320, 50]]).
+addSize([0,0], []).
+build(),
+mpuSky: googletag.sizeMapping().
+addSize([0, 0], [[300, 250], [300, 600], [120,600], [160,600]]).
+build(),
+mpuSmallSky: googletag.sizeMapping().
+addSize([0,0], [[300, 250], [120,600], [160,600]]).
+build(),
+mpuMobile: googletag.sizeMapping().
+addSize([0,0], [[300, 250],[320, 50],[300, 50]]).
+build(),
+oneXthree: googletag.sizeMapping().
+addSize([0,0], [[1,3]]).
+build(),
+sky: googletag.sizeMapping().
+addSize([0,0], [[120,600],[160,600]]).
+addSize([0,0], []).
+build(),
+inskin: googletag.sizeMapping().
+addSize([980,0], [[2,2]]).
+addSize([0,0], []).
+build(),
+avid: googletag.sizeMapping().
+addSize([0,0], [[2,1]]).
+build(),
+oneXone: googletag.sizeMapping().
+addSize([830, 0], [[1,1]]).
+addSize([0,0], []).
+build(),
+twoXthree: googletag.sizeMapping().
+addSize([0,0], [[2,3]]).
+build(),
+fourXone: googletag.sizeMapping().
+addSize([0,0], [[4,1]]).
+build()
+};
+var slotSize = {
+leaderboard: [728, 90],
+leaderboardDesktopOnly: [728, 90],
+mpu: [300, 250],
+mpuSmall: [300, 250],
+mpuSky: [300, 250],
+mpuSmallSky: [300, 250],
+mpuMobile: [300, 250],
+sky: [120, 600],
+inskin: [2, 2],
+avid: [2, 1],
+oneXone: [1, 1],
+oneXthree: [1, 3],
+twoXthree: [2, 3],
+fourXone: [4, 1]
+};
+if(adConfig.debug)console.log('adding twoXthree to unit config');
+AD_CONFIG_UNITS["twoXthree"] = {count: 1, mappings: mappings['twoXthree'], slotSize: slotSize['twoXthree']};
+if(adConfig.debug)console.log('adding welcomead to unit config');
+AD_CONFIG_UNITS["welcomead"] = {count: 0, mappings: mappings['welcomead'], slotSize: slotSize['welcomead']};
+if(adConfig.debug)console.log('adding mpuSky to unit config');
+AD_CONFIG_UNITS["mpuSky"] = {count: 0, mappings: mappings['mpuSky'], slotSize: slotSize['mpuSky']};
+if(adConfig.debug)console.log('adding mpu to unit config');
+AD_CONFIG_UNITS["mpu"] = {count: 0, mappings: mappings['mpu'], slotSize: slotSize['mpu']};
+if(adConfig.debug)console.log('adding mpuSmall to unit config');
+AD_CONFIG_UNITS["mpuSmall"] = {count: 0, mappings: mappings['mpuSmall'], slotSize: slotSize['mpuSmall']};
+if(adConfig.debug)console.log('adding mpuSmallSky to unit config');
+AD_CONFIG_UNITS["mpuSmallSky"] = {count: 0, mappings: mappings['mpuSmallSky'], slotSize: slotSize['mpuSmallSky']};
+if(adConfig.debug)console.log('adding fourXone to unit config');
+AD_CONFIG_UNITS["fourXone"] = {count: 1, mappings: mappings['fourXone'], slotSize: slotSize['fourXone']};
+if(adConfig.debug)console.log('adding inskin to unit config');
+AD_CONFIG_UNITS["inskin"] = {count: 0, mappings: mappings['inskin'], slotSize: slotSize['inskin']};
+if(adConfig.debug)console.log('adding avid to unit config');
+AD_CONFIG_UNITS["avid"] = {count: 0, mappings: mappings['avid'], slotSize: slotSize['avid']};
+if(adConfig.debug)console.log('adding mpuMobile to unit config');
+AD_CONFIG_UNITS["mpuMobile"] = {count: 0, mappings: mappings['mpuMobile'], slotSize: slotSize['mpuMobile']};
+if(adConfig.debug)console.log('adding leaderboardDesktopOnly to unit config');
+AD_CONFIG_UNITS["leaderboardDesktopOnly"] = {count: 1, mappings: mappings['leaderboardDesktopOnly'], slotSize: slotSize['leaderboardDesktopOnly']};
+if(adConfig.debug)console.log('adding leaderboard to unit config');
+AD_CONFIG_UNITS["leaderboard"] = {count: 0, mappings: mappings['leaderboard'], slotSize: slotSize['leaderboard']};
+if(adConfig.debug)console.log('adding oneXone to unit config');
+AD_CONFIG_UNITS["oneXone"] = {count: 1, mappings: mappings['oneXone'], slotSize: slotSize['oneXone']};
+if(adConfig.debug)console.log('adding sky to unit config');
+AD_CONFIG_UNITS["sky"] = {count: 0, mappings: mappings['sky'], slotSize: slotSize['sky']};
+if(adConfig.debug)console.log('adding oneXthree to unit config');
+AD_CONFIG_UNITS["oneXthree"] = {count: 1, mappings: mappings['oneXthree'], slotSize: slotSize['oneXthree']};
+if(adConfig.debug)console.log('configureAdUnits returning');
+return AD_CONFIG_UNITS;
+};
+})();
+     </script>
+     <!-- @@DFP_AD_UNITS_END@@ -->
+     <script>
+      var setting = (function(oldSettingFunc){
+return function(key){
+var AD_SETTINGS = {
+"INDEX_MEDIA_ADS": true,
+"CMP_GPT_CONSENT": false
+};
+return typeof AD_SETTINGS[key] !== 'undefined' ? AD_SETTINGS[key] : oldSettingFunc(key);
+};
+})(setting);
+     </script>
+     <!--
+0
+false
+-->
+     <script>
+      window.idguk = window.idguk || {};
+(function(require){
+'use strict';
+var debug = false,
+gpt_script = ['https://www.googletagservices.com/tag/js/gpt.js'];
+if(setting('CMP_GPT_CONSENT') && typeof window.idguk.cmp !== 'undefined'){
+if(debug)console.log('GDPR','gpt.js delayed loading');
+window.idguk.cmp.gpt.then(function(hasConsent){
+if(debug)console.log('GDPR','gpt.js delayed loading returned', arguments);
+if(hasConsent){
+require(gpt_script);
+}else{
+googletag.cmd.unshift(function(){
+if(debug)console.log('GDPR','gsetRequestNonPersonalizedAds set');
+googletag.pubads().setRequestNonPersonalizedAds(1);
+});
+require(gpt_script);
+}
+});
+}else{
+if(debug)console.log('GDPR','gpt.js delayed loading skipped');
+require(gpt_script);
+}
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+     </script>
+     <script type="text/javascript">
+      googletag = window.googletag || {cmd:[]};
+var refreshAds = function(adIds) {
+var adArr = [],
+adIdsInArr = [];
+if(typeof adIds !== 'undefined'){
+if(typeof adIds === 'string'){
+adIds = [adIds];
+}
+adArr = $.map(adIds, function (value, key) {
+if(value in adConfig.adsToRefresh){
+if(typeof pSUPERFLY !== 'undefined' && typeof pSUPERFLY.refreshAd !== 'undefined'){
+pSUPERFLY.refreshAd(value);
+}
+adIdsInArr.push(value);
+return adConfig.adsToRefresh[value];
+}
+});
+}else{
+adArr = $.map(adConfig.adsToRefresh, function (value, key) {
+if(!new RegExp('^welcomead|inskin(.*)', 'i').test(key)){
+adIdsInArr.push(key);
+return value;
+}
+});
+}
+if(adConfig.debug)console.log('refreshAds() called for', arguments, adIdsInArr, adArr);
+var cygnus_callback_refresh = function(){
+if ('pubads' in googletag){
+googletag.pubads().refresh(adArr);
+}
+}
+if(typeof cygnus_index_refresh_hook === 'function') {
+cygnus_index_refresh_hook(cygnus_callback_refresh);
+} else {
+cygnus_callback_refresh();
+}
+}
+     </script>
+     <script type="text/javascript">
+      window.idguk = window.idguk || {};
+googletag = window.googletag || {cmd:[]};
+// Warn if overriding existing method
+if(Array.prototype.equals)
+console.warn("Overriding existing Array.prototype.equals. Possible causes: New API defines the method, there's a framework conflict or you've got double inclusions in your code.");
+// attach the .equals method to Array's prototype to call it on any array
+Array.prototype.equals = function (array) {
+// if the other array is a falsy value, return
+if (!array)
+return false;
+// compare lengths - can save a lot of time
+if (this.length != array.length)
+return false;
+for (var i = 0, l=this.length; i < l; i++) {
+// Check if we have nested arrays
+if (this[i] instanceof Array && array[i] instanceof Array) {
+// recurse into the nested arrays
+if (!this[i].equals(array[i]))
+return false;
+}
+else if (this[i] != array[i]) {
+// Warning - two different object instances will never be equal: {x:20} != {x:20}
+return false;
+}
+}
+return true;
+}
+// Hide method from for-in loops
+Object.defineProperty(Array.prototype, "equals", {enumerable: false});
+/*
+* polyfill for Object.keys
+* From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+*/
+if (!Object.keys) {
+Object.keys = (function () {
+'use strict';
+var hasOwnProperty = Object.prototype.hasOwnProperty,
+hasDontEnumBug = !({toString: null}).propertyIsEnumerable('toString'),
+dontEnums = [
+'toString',
+'toLocaleString',
+'valueOf',
+'hasOwnProperty',
+'isPrototypeOf',
+'propertyIsEnumerable',
+'constructor'
+],
+dontEnumsLength = dontEnums.length;
+return function (obj) {
+if (typeof obj !== 'object' && (typeof obj !== 'function' || obj === null)) {
+throw new TypeError('Object.keys called on non-object');
+}
+var result = [], prop, i;
+for (prop in obj) {
+if (hasOwnProperty.call(obj, prop)) {
+result.push(prop);
+}
+}
+if (hasDontEnumBug) {
+for (i = 0; i < dontEnumsLength; i++) {
+if (hasOwnProperty.call(obj, dontEnums[i])) {
+result.push(dontEnums[i]);
+}
+}
+}
+return result;
+};
+}());
+};
+var gptEscape = function(s){
+s = s.replace(/[^a-zA-Z0-9,_\- ]/gim,'');
+//s = s.replace(/[ ]+/gi,'+');//replace multi space with +
+return s;
+};
+var adConfig = {
+debug : false,
+zone : 'feature_section'.toLowerCase(),
+units : AD_CONFIG_UNITS,
+adsToRefresh : {},
+mpuCount : 0,
+currentUrl : encodeURIComponent(window.location.href),
+atf: 0,
+btf: 0,
+globalRefreshComplete: false
+};
+if(adConfig.debug)console.log(adConfig);
+var setupTargetingKeyPairs = function(){
+if(typeof setting !== 'undefined'){
+var takeoverTargeting = setting('ADS_TAKEOVER_TARGETING');
+if(typeof takeoverTargeting !== 'undefined' && takeoverTargeting){
+googletag.pubads().setTargeting("takeover", (Math.random() * 100 <= 50).toString());
+}
+}
+googletag.pubads().setTargeting("URL", adConfig.currentUrl);
+//if boolean and true or if not and has content show --->
+googletag.pubads().setTargeting('chan', gptEscape('iosapps'));
+if(adConfig.debug)console.log('chan='+gptEscape('iosapps'));
+//if boolean and true or if not and has content show --->
+googletag.pubads().setTargeting('kw', gptEscape('Passcode Lock,Software,Symantec Mobile Encryption,store,Apple Apple,App Store and Find My,Passcode On,Phishing,iphone,ipad,iosapps'));
+if(adConfig.debug)console.log('kw='+gptEscape('Passcode Lock,Software,Symantec Mobile Encryption,store,Apple Apple,App Store and Find My,Passcode On,Phishing,iphone,ipad,iosapps'));
+//if boolean and true or if not and has content show --->
+//if boolean and true or if not and has content show --->
+googletag.pubads().setTargeting('stg', gptEscape('false'));
+if(adConfig.debug)console.log('stg='+gptEscape('false'));
+//if boolean and true or if not and has content show --->
+googletag.pubads().setTargeting('hline', gptEscape('iOS security risks After the XcodeGhost exploit is Apples iOS really safer than Android Plus What security apps do you need for iPad iPhone'));
+if(adConfig.debug)console.log('hline='+gptEscape('iOS security risks After the XcodeGhost exploit is Apples iOS really safer than Android Plus What security apps do you need for iPad iPhone'));
+//if boolean and true or if not and has content show --->
+googletag.pubads().setTargeting('artTypeId', gptEscape('4'));
+if(adConfig.debug)console.log('artTypeId='+gptEscape('4'));
+};
+var setupPermutive = function(){
+if (window.googletag.pubads().getTargeting('permutive').length === 0) {
+var kvs = window.localStorage.getItem('_pdfps');
+window.googletag.pubads().setTargeting('permutive', kvs ? JSON.parse(kvs) : []);
+if(adConfig.debug)console.log('Ads - permutive, kvs',kvs);
+}
+};
+var setupKeywordTargeting = function(metatags){
+metatags = metatags || jQuery('meta[name=keywords]').attr("content");
+//meta tags
+var rs_tax = [];
+if (metatags != undefined && metatags != '') {
+strmetatags = metatags.toLowerCase().replace(/&amp;/g, "").replace(/&/g, "").split(",");
+for(var i=0,len=strmetatags.length; value=strmetatags[i], i<len; i++) {
+rs_tax.push(gptEscape(jQuery.trim(value)));
+}
+}
+if (rs_tax.length > 0) {
+if(adConfig.debug)console.log('kw=' + rs_tax.join(','));
+googletag.pubads().setTargeting("kw", rs_tax);
+}
+};
+var setupResizeAction = function(){
+var resizeTimeOut = false;
+var windowWidthVal = jQuery( window ).width();
+if(windowWidthVal<570){
+$(window).on("orientationchange",function(){
+refreshAds();
+});
+}else{
+window.onresize = function(){
+var newWindowWidthVal = jQuery( window ).width();
+var maxW = Math.max(newWindowWidthVal, windowWidthVal);
+var minW = Math.min(newWindowWidthVal, windowWidthVal);
+var wDif = parseInt(maxW)-parseInt(minW);
+if(wDif>100){
+if(resizeTimeOut !== false){
+clearTimeout(resizeTimeOut);
+}
+resizeTimeOut = setTimeout(refreshAds, 500);
+};
+};
+}
+}
+     </script>
+     <script type="text/javascript">
+      var setupAmazonAdTargeting = function(){
+if(typeof amznads !== 'undefined') {
+try {
+amznads.setTargetingForGPTAsync('amznslots');
+}catch(ex){
+console.error(ex);
+}
+}else if(adConfig.debug){
+if(adConfig.debug)console.log('amznads is undefined');
+}
+};
+     </script>
+     <script type="text/javascript">
+      var setupSearchTargeting = function(){
+if(adConfig.debug)console.log('no search term');
+};
+     </script>
+     <script type="text/javascript">
+      var setupArticleTargeting = function(){
+googletag.pubads().setTargeting("artid", '3453938');
+if(adConfig.debug)console.log('artid=3453938');
+};
+     </script>
+     <script>
+      if(adConfig.debug)console.log(adConfig);
+googletag.cmd.push(function() {
+if(adConfig.debug)console.log('Starting ad configuration');
+configureAdUnits();
+googletag.pubads().collapseEmptyDivs();
+googletag.pubads().enableAsyncRendering();
+googletag.pubads().enableVideoAds();
+googletag.pubads().setCentering(true);
+window.addAdSlot = function(adId, adUnitName, adSlotSize, adMappings, targetPrefix){
+if(adConfig.debug)console.log('addAdSlot call with', arguments);
+var ad = googletag.defineSlot(adUnitName, adSlotSize, adId)
+.defineSizeMapping(adMappings)
+.addService(googletag.pubads());
+if(typeof targetPrefix !== 'undefined'){
+ad.setTargeting("pos", [targetPrefix]);
+}
+var amzA9AllowedSizeArr = [[728,90], [970,250], [300,250], [300,600], [120,600], [160,600], [320,50], [300,50]];
+var screenWidth = $(window).width();
+var amzA9BidSizesArr = [];
+for (var adMapping in adMappings){
+if(screenWidth>adMappings[adMapping][0][0]){
+var slotMappingsForScreenSizeArr = adMappings[adMapping][1];
+for (var i = 0; i < slotMappingsForScreenSizeArr.length; i++) {
+for (var x = 0; x < amzA9AllowedSizeArr.length; x++) {
+if(amzA9AllowedSizeArr[x].equals(slotMappingsForScreenSizeArr[i])){
+amzA9BidSizesArr.push(amzA9AllowedSizeArr[x]);
+break;
+};
+};
+};
+break;
+};
+};
+if(amzA9BidSizesArr.length){
+apstag.fetchBids({
+slots: [{
+slotID: adId,
+slotName: adUnitName,
+sizes: amzA9BidSizesArr
+}]
+}, function(bids) {
+// set apstag bids, then trigger the first request to DFP
+apstag.setDisplayBids();
+});
+};
+//if(adConfig.debug)console.log('dataLayer push call for ' + adId);
+//$(document).ready(function() {
+//	dataLayer.push({'event':'GAevent', 'eventCategory':'Ad Units', 'eventAction': 'Displayed', 'eventLabel': adId, 'eventValue': '1.00'});
+//});
+if(adConfig.debug)console.log('_paq push call for ' + adId);
+$(document).ready(function() {
+//dataLayer.push({'event':'GAevent', 'eventCategory':'Ad Units', 'eventAction': 'Displayed', 'eventLabel': adId, 'eventValue': '1.00'});
+_paq.push(['trackEvent', 'Ad Units', 'Displayed', adId, 1.00]);
+});
+adConfig.adsToRefresh[adId] = ad
+return ad;
+}
+var fn_pageskin = "false";
+if (screen.width >= 1360) {
+fn_pageskin = "true";
+}
+googletag.pubads().setTargeting("inskin_yes",fn_pageskin);
+var pubAds = [],
+slotPrefix = '/8456/IDG.UK_B2C_MacWorld.co.uk/';
+adConfig.slotPrefix = slotPrefix; //used in sidebar modules
+var adUnits = Object.keys(adConfig.units).sort(function(a, b){
+return 1 + Math.max(a.indexOf('avid'), a.indexOf('inskin')) + ((a.indexOf('leaderboard') == 0 ? -5 : 0) + (b.indexOf('leaderboard') == 0 ? 5 : 0));
+});
+if(adConfig.debug)console.log('Defining ad slots>>');
+for(var adName in adUnits){
+var adName = adUnits[adName];
+if(adName.indexOf('welcomead') >= 0 && false && true && adConfig.units[adName].count > 0){
+if(adConfig.debug)console.log('enabling welcomead');
+var ad = googletag.defineOutOfPageSlot(slotPrefix + adConfig.zone, 'welcomead-pos1')
+.defineSizeMapping(AD_CONFIG_UNITS["welcomead"].mappings)
+.addService(googletag.pubads());
+ad.setTargeting('pos', ['atf1']);
+pubAds.push(ad);
+continue;
+}
+var adIdPrefix = adName + '-pos',
+adUnitName = slotPrefix + adConfig.zone,
+adCount = adConfig.units[adName].count,
+adMappings = adConfig.units[adName].mappings,
+j=0,
+adSlotSize = adConfig.units[adName].slotSize;
+var targetPrefix = '';
+for(var i=1; i <=adCount; i++){
+if(adConfig.debug)console.log('attempting to enable '+adName + ' @ pos='+i+' with ', adConfig.units[adName]);
+++j;
+var addPosTargetingValue = [
+'leaderboard','leaderboardDesktopOnly', 'sky', 'mpu', 'mpuSmall', 'mpuSky', 'mpuSmallSky', 'oneXone'
+].indexOf(adName) > -1;
+if(addPosTargetingValue){
+if(i==1 && (['mpuSmall', 'mpuSky', 'mpuSmallSky'].indexOf(adName) == -1)){
+targetPrefix = 'atf1';
+//adConfig.atf++;
+j=0;
+}else {
+targetPrefix = 'btf'+j;
+if(adName.indexOf('mpu')){ 
+adConfig.btf++;
+}
+}
+}
+var adId = adIdPrefix+i,
+setupArgs = [adId, adUnitName, adSlotSize, adMappings];
+if(addPosTargetingValue){
+setupArgs.push(targetPrefix);
+}
+var ad = addAdSlot.apply(this, setupArgs);
+pubAds.push(ad);
+if(adConfig.debug)console.log('enabled '+adName+' with ', adUnitName, adSlotSize, adMappings, adId, 'pos='+i);
+}
+}
+if(adConfig.debug)console.log('Finished defining ad slots');
+setupPermutive();
+setupResizeAction();
+setupKeywordTargeting();
+setupSearchTargeting();
+setupArticleTargeting();
+setupTargetingKeyPairs();
+googletag.pubads().disableInitialLoad();
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+if(adConfig.debug)console.log('Finished ad configuration');
+});
+$(document).ready(function(){
+googletag.cmd.push(function(){
+if(adConfig.debug)console.log('calling ad refresh');
+adConfig.globalRefreshComplete = true;
+googletag.pubads().refresh();
+});
+});
+     </script>
+     <script>
+      window.ntvConfig = window.ntvConfig || {} ;
+window.ntvConfig.keyValues = window.ntvConfig.keyValues || {};
+var segs = localStorage.getItem('_pnativo');
+if (segs) {
+window.ntvConfig.keyValues.permutive = JSON.parse(segs).join(",");
+}
+     </script>
+     <script async="" src="//s.ntv.io/serve/load.js" type="text/javascript">
+     </script>
+     <!-- Facebook Pixel Code -->
+     <script>
+      //if no cmp then execute as normal.
+window.idguk = window.idguk || {};
+(function(){
+var hasCmp = typeof window.idguk.cmp !== 'undefined' && typeof window.idguk.cmp.pixelTracker !== 'undefined';
+(function(promise){
+promise.then(function(consentOk){
+var isDebug = !!window.idguk.cmp.isDebug ? window.idguk.cmp.isDebug() : false;
+if(isDebug)console.log('GDPR','facebook pixel tracker - consentOk', consentOk);
+if(!consentOk)return;
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '783301121827721'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+if(isDebug)console.log('GDPR','facebook pixel tracker fired');
+});
+})(
+hasCmp ? window.idguk.cmp.pixelTracker : {then:function(f){f(true);}}
+);
+})();
+     </script>
+     <!-- DO NOT MODIFY -->
+     <!-- End Facebook Pixel Code -->
+     <script async="" src="//static.apester.com/js/sdk/v2.0/apester-javascript-sdk.min.js" type="text/javascript">
+     </script>
+     <meta content="articles" property="outbrain:page_type"/>
+     <script src="https://widgets.outbrain.com/outbrain.js" type="text/javascript">
+     </script>
+     <script>
+      dataLayer.push({"propertyCountry":"UK","environment":"production","datePublished":"2015-09-22","metaTitle":"iPhone & iPad security: Why the iOS app XcodeGhost exploit shouldn't concern you","property":"macworld","dateUpdated":"","headline":"iPhone & iPad security: Why the iOS app XcodeGhost exploit shouldn't concern you","displayType":"article","contentType":"features","productManufacturers":"","audience":"consumer","platform":"Web","secondaryChannels":"iPhone,iPad","primaryChannel":"iOS Apps","isBlog":"false","productNames":"","userId":"","source":"macworld uk","blogName":"","daysSincePublished":1297,"isInsiderContent":"","pageNumber":1,"productCategories":"","articleId":3453938,"author":"Karen Haslam","articleHasVideo":"false"});
+     </script>
+     <script>
+      var debugPerm = false;
+	
+	//Start Permutative Tag
+	
+	var getDataLayerForPermutative = function(){
+		//console.log('permutative',window.dynamicDataLayer,window.dataLayer);
+
+		if(typeof window.dynamicDataLayer !== 'undefined')return window.dynamicDataLayer;
+		else if(typeof window.dataLayer !== 'undefined' && dataLayer[0]) return dataLayer[0];
+
+		return null;
+	};
+
+	var numberFromDataLayer = function(property) {
+		var dataLayer = getDataLayerForPermutative();
+		if (dataLayer && typeof dataLayer[property] == "number") {
+			return dataLayer[property];
+		}
+		return null;
+	};
+
+	var stringFromDataLayer = function(property) {
+		var dataLayer = getDataLayerForPermutative();
+		if (dataLayer && typeof dataLayer[property] == "string") {
+			return dataLayer[property];
+		}
+		return "";
+	};
+	
+	
+	//get page keywords, title and meta desc
+	var tags = document.getElementsByTagName("meta");
+	var keywords = '', description = '', title='';
+	for(var i = 0 ; i < tags.length ; ++i){
+		var tag = tags[i];
+		if(tag.hasAttribute("name") && tag.getAttribute("name")=="keywords")keywords = tag.getAttribute("content");		
+		if(tag.hasAttribute("name") && tag.getAttribute("name")=="description")description = tag.getAttribute("content");	
+	}
+	//get page title
+	tags = document.getElementsByTagName("title");
+	if(tags.length>0)
+		title = tags[0].text.replace('- Macworld UK','');
+	
+	
+	var isArticle = !!true;
+	
+	
+	//page type
+	var pageType = isArticle ? 'article' : 'misc';
+	var dlDislayType = stringFromDataLayer('displayType');
+	var dlContentType = stringFromDataLayer('contentType');
+	if(dlDislayType.indexOf('listing')>-1)pageType = 'listing';
+	if(dlContentType.indexOf('home page')>-1)pageType = 'home page';
+	
+	
+	
+	!function(n,e,o,r,i){if(!e){e=e||{},window.permutive=e,e.q=[],e.config=i||{},e.config.projectId=o,e.config.apiKey=r,e.config.environment=e.config.environment||"production";for(var t=["addon","identify","track","trigger","query","segment","segments","ready","on","once","user","consent"],c=0;c<t.length;c++){var f=t[c];e[f]=function(n){return function(){var o=Array.prototype.slice.call(arguments,0);e.q.push({functionName:n,arguments:o})}}(f)}}}(document,window.permutive,"f5b3be27-f789-4ef1-8867-37c67da5b361","84c7e805-5ce9-41f4-b988-3529488bab1c",{});
+	
+	//page level
+	var data = {
+		page: {
+			 type:pageType
+			,language:'en' 
+			,keywords:keywords.split(",")
+			,description: description		
+			,audience: stringFromDataLayer('audience')
+			//,tags:''
+			,tax:{
+				 primaryCategories: [stringFromDataLayer('primaryChannel')]
+				,secondaryCategories: stringFromDataLayer('secondaryChannels').split(",")
+			}
+		}
+	};
+	
+	if(isArticle)data.page.article = {
+		 type:dlContentType
+		,title:stringFromDataLayer('headline')
+		,description: description
+		,source: stringFromDataLayer('source')
+		,isInsiderContent:false//no restricted content on UK
+		//,purchaseIntent:''//US only
+	
+	}//article 
+
+	if(debugPerm)console.log('permutive.addon data',data);
+	window.permutive.addon('web', data);
+	
+	var data = {
+		names: stringFromDataLayer('productNames').split(","),
+		categories: stringFromDataLayer('productCategories').split(","),
+		manufacturers: stringFromDataLayer('productManufacturers').split(","),
+		vendors: []
+	};
+	//convert to empty array if [""]
+	for(var prop in data)
+		if(data.hasOwnProperty(prop) && data[prop].toString() === '')data[prop]=[];
+	
+	if(data.names.length == 0 && data.categories.length == 0 && data.manufacturers.length == 0) ;
+	else{
+		if(debugPerm)console.log('permutive.track product data',data);	
+		window.permutive.track('Product', data);
+	}
+// End Permutive Tag
+     </script>
+     <script async="" src="https://cdn.permutive.com/f5b3be27-f789-4ef1-8867-37c67da5b361-web.js">
+     </script>
+    </meta>
+   </meta>
+  </meta>
+ </head>
+ <body class="article feature isLoggedOut" itemscope="" itemtype="http://schema.org/WebPage">
+  <script type="text/javascript">
+   var _sf_startpt=(new Date()).getTime()
+  </script>
+  <div class="adUnitContainer " id="oneXthree-pos1">
+   <script type="text/javascript">
+    googletag.cmd.push(function(){
+var id = 'oneXthree-pos1';
+if (id in adConfig.adsToRefresh) {
+if(adConfig.debug)console.log('rendering ad id = ' + id);
+googletag.display(id);
+}
+});
+   </script>
+  </div>
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-NR2XGV" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NR2XGV');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="/scripts/ads.js">
+  </script>
+  <script>
+   (function(){
+var dataLayer = window.dataLayer = window.dataLayer || [];
+var adBlockStatus = 'false';
+function AdBlockEnabled() {
+var ad = document.createElement('ins');
+ad.className = 'AdSense';
+ad.style.display = 'block';
+ad.style.position = 'absolute';
+ad.style.top = '-1px';
+ad.style.height = '1px';
+if (document.body != null) {
+document.body.appendChild(ad);
+var isAdBlockEnabled = !ad.clientHeight;
+document.body.removeChild(ad);
+}
+return isAdBlockEnabled;
+}
+// AdBlockEnabled() was successful document.body not null
+if (AdBlockEnabled() != undefined) {
+adBlockStatus = AdBlockEnabled().toString();
+}
+// not successful - look for ads.js
+if (document.body == null) {
+if (window.canRunAds === undefined) {
+adBlockStatus = 'true';
+} else {
+adBlockStatus = 'false';
+}
+}
+dataLayer.push({
+'adBlockStatus': adBlockStatus
+});
+})();
+  </script>
+  <img alt="macworld print logo" id="printLogo" src="/graphics/icons/mw-print-logo.png"/>
+  <div class="m-scene" id="wrapper">
+   <section class="topNav" data-ga="top nav" id="topNav">
+    <nav class="navigationHolder" id="navigationHolder">
+     <div class="socialFocusContainer" id="socialFocusContainer">
+      <div class="socialFocusShareBtnsWrapper">
+       <style>
+        .socialIcon div a {
+overflow: hidden;
+cursor:hand;
+}
+       </style>
+       <div class="bottom intentShareArticleBtns socialContainer" data-ga="bottom intentShareArticleBtns socialContainer social tools" id="socialFocusShareBtns">
+        <div class="socialIcon facebook">
+         <div data-gd-fb-url="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/" data-gd-plugin="facebook-share" data-gd-use-network-button="false">
+          <a class="ihq-share-facebook" data-type="facebook" data-url="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/" href="#" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/','sharer','toolbar=0,status=0,width=626,height=356,top='+sTop+',left='+sLeft);return false;">
+           <div class="socialIconText">
+            Share
+           </div>
+          </a>
+         </div>
+        </div>
+        <div class="socialIcon twitter">
+         <div data-gd-plugin="twitter-share" data-gd-tw-text="Why the iOS app XcodeGhost exploit shouldn't concern you " data-gd-tw-url="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/" data-gd-use-network-button="false">
+          <a class="ihq-share-twitter" data-type="twitter" data-url="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/" href="#" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://twitter.com/share?text=Why%20the%20iOS%20app%20XcodeGhost%20exploit%20shouldn%27t%20concern%20you%20&amp;url=https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+           <div class="socialIconText">
+            Tweet
+           </div>
+          </a>
+         </div>
+        </div>
+       </div>
+       <span class="socialFocusTitle" id="socialFocusTitle">
+        Why the iOS app XcodeGhost exploit shouldn't concern you
+       </span>
+      </div>
+     </div>
+     <a class="siteLogo" href="https://www.macworld.co.uk/">
+      <img src="//cdn1.macworld.co.uk/graphics/icons/svg/mwLogo.svg"/>
+     </a>
+     <ul class="siteNavigation" id="siteNavigation">
+      <li id="searchFormContainer">
+       <a href="/search/" id="hiddenSearchLink">
+        Search Macworld
+       </a>
+       <script>
+        window.idguk = window.idguk || {};
+(function(require){
+require(['search'], function() {});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+       </script>
+       <span id="searchBarSectionSelector">
+        <span id="searchBarSectionSelectorValue">
+         All
+        </span>
+        <span>
+         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjEyMDU3REQ1RkE1RTExRTE4RTEzREQ4N0ZDQUUzRUU3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjEyMDU3REQ2RkE1RTExRTE4RTEzREQ4N0ZDQUUzRUU3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTIwNTdERDNGQTVFMTFFMThFMTNERDg3RkNBRTNFRTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTIwNTdERDRGQTVFMTFFMThFMTNERDg3RkNBRTNFRTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6O6psAAAAAaUlEQVR42mJMS02tZGBgqADiPwyogAWIJzABielA/B6IhdDwZyCezDRz1qwPQEY+AyYoAsq9AZnAAGRsBFKrkSQ3AcVWgRhMSIJlQPwNiH8CcQlMkPH///9wFelpadVAig2oux4mBhBgAKH5HY+tSxzjAAAAAElFTkSuQmCC">
+         </img>
+        </span>
+       </span>
+       <ul id="searchBarSelectionOptions">
+        <li>
+         All
+        </li>
+        <li>
+         News
+        </li>
+        <li>
+         Reviews
+        </li>
+        <li>
+         Features
+        </li>
+        <li>
+         How-Tos
+        </li>
+        <li>
+         Downloads
+        </li>
+       </ul>
+       <form action="/search/" id="cse-search-header">
+        <input name="q" placeholder="Search Macworld..." type="text"/>
+       </form>
+       <script src="//www.google.com/jsapi" type="text/javascript">
+       </script>
+      </li>
+      <li class="siteNavigation-Menu">
+       <a href="https://www.macworld.co.uk/apple/">
+        Apple
+       </a>
+       <ul class="subMenu appleSubmenu">
+        <li>
+         <a href="https://www.macworld.co.uk/news/apple/" title="Latest Apple news">
+          Apple News
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/apple/" title="Apple related reviews">
+          Apple Reviews
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="siteNavigation-Menu">
+       <a href="https://www.macworld.co.uk/mac/">
+        Mac
+       </a>
+       <ul class=" subMenu macSubmenu">
+        <li>
+         <a href="/review/mac/" title="All Mac reviews">
+          Mac Reviews
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/mac-laptops/" title="MacBook reviews">
+          MacBook Reviews
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/news/mac/" title="Latest Mac news">
+          Mac News
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/how-to/mac/" title="Latest Mac how to">
+          How To
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/mac-software/" title="Mac software reviews">
+          Mac Software Reviews
+         </a>
+        </li>
+        <li class="downloads">
+         <a href="https://www.macworld.co.uk/download/" title="Downloads">
+          Mac Software Downloads
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="siteNavigation-Menu">
+       <a href="https://www.macworld.co.uk/ipad/">
+        iPad
+       </a>
+       <ul class="subMenu iPadSubmenu">
+        <li>
+         <a href="https://www.macworld.co.uk/review/ipad/" title="iPad reviews">
+          iPad Reviews
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/ios-apps/" title="iPad app reviews">
+          iPad App Reviews
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/news/ipad/" title="Latest iPad news">
+          iPad News
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/how-to/ipad/" title="Latest iPad how to">
+          iPad How To
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="siteNavigation-Menu">
+       <a href="https://www.macworld.co.uk/iphone/">
+        iPhone
+       </a>
+       <ul class="subMenu iPhoneSubmenu">
+        <li>
+         <a href="https://www.macworld.co.uk/review/iphone/" title="iPhone reviews">
+          iPhone Reviews
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/ios-apps/" title="iPhone app reviews">
+          iPhone App Reviews
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/news/iphone/" title="Latest iPone news">
+          iPhone News
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/how-to/iphone/" title="Latest iPhone how to">
+          iPhone How To
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="siteNavigation-Menu">
+       <a href="https://www.macworld.co.uk/news/">
+        News
+       </a>
+       <ul class="subMenu newsSubmenu">
+        <li>
+         <a href="https://www.macworld.co.uk/news/apple/" title="Latest Apple news">
+          Apple
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/news/mac/" title="Latest Mac news">
+          Mac
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/news/mac-software/" title="Latest Mac sofware news">
+          Mac Software
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/news/ipad/" title="Latest iPad news">
+          iPad
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/news/iphone/" title="latest iPhone news">
+          iPhone
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/news/iosapps/" title="Latest iPad and iPhone apps news">
+          iOS Apps
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="siteNavigation-Menu">
+       <a href="https://www.macworld.co.uk/review/">
+        Reviews
+       </a>
+       <ul class="subMenu reviewsSubmenu">
+        <li>
+         <a href="https://www.macworld.co.uk/review/mac-laptops/" title="Macbook reviews">
+          MacBook
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/imac/" title="iMac reviews">
+          iMac
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/mac-pro/" title="Mac Pro reviews">
+          Mac Pro
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/mac-mini/" title="Mac Mini reviews">
+          Mac mini
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/mac-software" title="Mac software reviews">
+          Mac Software
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/iphone/" title="iPhone reviews">
+          iPhone
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/ipad/" title="iPad reviews">
+          iPad
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/ipod/" title="iPod reviews">
+          iPod
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/ios-apps/" title="iOS Apps reviews">
+          iOS Apps
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/apple-tv/" title="Apple TV reviews">
+          Apple TV
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/apple-watch/" title="Apple Watch reviews">
+          Apple Watch
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/review/ios-mac-accessories/" title="iOS and Mac Accessory reviews">
+          iOS and Mac Accessories
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="siteNavigation-Menu">
+       <a href="https://www.macworld.co.uk/how-to/">
+        How To
+       </a>
+       <ul class="subMenu howtoSubmenu">
+        <li>
+         <a href="https://www.macworld.co.uk/how-to/mac/" title="Latest Mac how to">
+          Mac
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/how-to/mac-software/" title="Latest Mac software how to">
+          Mac Software
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/how-to/ipad/" title="Latest iPad how to">
+          iPad
+         </a>
+        </li>
+        <li>
+         <a href="https://www.macworld.co.uk/how-to/iphone/" title="Latest iPhone how to">
+          iPhone
+         </a>
+        </li>
+        <li class="leftSpacingHelper">
+         <a href="https://www.macworld.co.uk/how-to/iosapps/" title="Latest iOS app how to">
+          iOS Apps
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="siteNavigation-Menu">
+       <a href="https://www.macworld.co.uk/apple-deals/" title="Latest tech Deals">
+        Deals
+       </a>
+      </li>
+      <li class="siteNavigation-Menu" id="userSection">
+       <div class="userHeaderContainer user-links__block">
+        <ul class="userLinks">
+         <li>
+          <a class="login__link" href="https://www.macworld.co.uk/newsletter/" rel="nofollow">
+           Newsletter
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+     </ul>
+     <button class="mobileMenuIcon" id="mobileMenuIcon">
+      Open Menu
+     </button>
+     <button class="mobileSocialIcon" id="mobileSocialIcon">
+      Share This
+     </button>
+    </nav>
+    <script>
+     window.idguk = window.idguk || {};
+(function(require){
+require(['topNav'], function( TopNav) {
+new TopNav();
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+    </script>
+   </section>
+   <section class="idgBrands" id="idgBrands">
+    <script>
+     window.idguk = window.idguk || {};
+(function(require){
+require(['jquery','jstorage'], function($) {
+window.$geoLocationDef.done(function(){
+countryCode = $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase();
+if (countryCode == "gb") {
+var amazonlink = "https://www.amazon.co.uk/b?ie=UTF8&node=12602173031&tag=mwshop-21";
+} else {
+var amazonlink = "http://geni.us/mzLKgq";
+}
+$("#amazonLink").attr("href", amazonlink);
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+    </script>
+    <div class="idgBrandsHolder">
+     <ul class="socialMediaFollowLinks" data-ga="hd social tools">
+      <li id="fb">
+       <a href="https://www.facebook.com/MacworldUK" rel="nofollow" target="_blank" title="Macworld on facebook">
+        fb
+       </a>
+      </li>
+      <li id="tw">
+       <a href="https://twitter.com/MacworldUK" rel="nofollow" target="_blank" title="Macworld on twitter">
+        tw
+       </a>
+      </li>
+      <li id="am">
+       <a id="amazonLink" rel="nofollow" target="_blank" title="Macworld on amazon">
+        am
+       </a>
+      </li>
+      <li id="yt">
+       <a href="http://www.youtube.com/channel/UCT7WejN8j_nGiSfwK8TnBcw" rel="nofollow" target="_blank" title="Macworld on youtube">
+        yt
+       </a>
+      </li>
+      <li id="rss">
+       <a href="https://www.macworld.co.uk/rss/" title="Our rss feeds">
+        rss
+       </a>
+      </li>
+     </ul>
+     <ul class="hotTopicsBar" data-ga="hot topics bar">
+      <li class="cap">
+       Hot Topics
+      </li>
+      <li title="iPhone SE 2 release date, price &amp; tech specs">
+       <a href="https://www.macworld.co.uk/news/iphone/iphone-se2-3500611/">
+        iPhone SE 2 rumours
+       </a>
+      </li>
+      <li title="iPad Pro 2018 problems, price &amp; specs">
+       <a href="https://www.macworld.co.uk/news/ipad/ipad-pro-2018-3492180/">
+        iPad Pro 2018 bendgate
+       </a>
+      </li>
+      <li title="MacBook buying guide 2019">
+       <a href="https://www.macworld.co.uk/feature/mac/macbook-buying-guide-3408399/">
+        Which MacBook to buy
+       </a>
+      </li>
+      <li title="iPhone buying guide 2019">
+       <a href="https://www.macworld.co.uk/feature/iphone/iphone-buying-guide-3448467/">
+        iPhone buying guide
+       </a>
+      </li>
+      <li title="iPhone XS Max review">
+       <a href="https://www.macworld.co.uk/review/iphone/iphone-xs-max-3684563/">
+        iPhone XS Max review
+       </a>
+      </li>
+      <li title="iPhone XS review">
+       <a href="https://www.macworld.co.uk/review/iphone/iphone-xs-3684437/">
+        iPhone XS review
+       </a>
+      </li>
+     </ul>
+     <a class="bf-head-link" href="https://www.macworld.co.uk/apple-deals/">
+      Latest Apple Deals »
+     </a>
+    </div>
+   </section>
+   <div class="leaderBoardHolder" id="topLeaderBoardHolder">
+    <div class="adUnitContainer " id="twoXthree-pos1">
+     <script type="text/javascript">
+      googletag.cmd.push(function(){
+var id = 'twoXthree-pos1';
+if (id in adConfig.adsToRefresh) {
+if(adConfig.debug)console.log('rendering ad id = ' + id);
+googletag.display(id);
+}
+});
+     </script>
+    </div>
+    <div id="stickyAdWrapper">
+     <div class="topLB" id="topLB">
+      <div class="adUnitContainer " id="leaderboardDesktopOnly-pos1">
+       <script type="text/javascript">
+        googletag.cmd.push(function(){
+var id = 'leaderboardDesktopOnly-pos1';
+if (id in adConfig.adsToRefresh) {
+if(adConfig.debug)console.log('rendering ad id = ' + id);
+googletag.display(id);
+}
+});
+       </script>
+      </div>
+     </div>
+    </div>
+   </div>
+   <header id="articleWideHeader">
+   </header>
+   <div class="content-area">
+    <div class="featureHeading">
+     <!-- MW Horizontal Resp, created 05/01/17 -->
+     <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+     </script>
+     <ins class="adsbygoogle" data-ad-client="ca-pub-6768877878518502" data-ad-format="link" data-ad-slot="6768914847" style="margin-bottom:10px;height:15px;display:block;">
+     </ins>
+     <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+     </script>
+     <nav class="traceNav">
+      <ul class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
+       <li id="bread0" property="itemListElement" typeof="ListItem">
+        <a href="https://www.macworld.co.uk/" property="item" title="Homepage" typeof="WebPage">
+         <span property="name">
+          Home
+         </span>
+        </a>
+        <meta content="1" property="position"/>
+       </li>
+       <li id="bread1" property="itemListElement" typeof="ListItem">
+        <a href="https://www.macworld.co.uk/feature/" property="item" title="Go to Features" typeof="WebPage">
+         <span property="name">
+          Features
+         </span>
+        </a>
+        <meta content="2" property="position"/>
+       </li>
+       <li class="hideOnPhablet" id="bread2" property="itemListElement" typeof="ListItem">
+        <a href="/feature/iosapps/" property="item" title="Go to iOS Apps Features" typeof="WebPage">
+         <span property="name">
+          iOS Apps Features
+         </span>
+        </a>
+        <meta content="3" property="position"/>
+       </li>
+      </ul>
+     </nav>
+     <h1 itemprop="headline">
+      iPhone &amp; iPad security: Why the iOS app XcodeGhost exploit shouldn't concern you
+     </h1>
+    </div>
+    <section class="mainContent" id="mainContent">
+     <article itemscope="" itemtype="http://schema.org/Article">
+      <meta content="iOS security risks: After the XcodeGhost exploit is Apple's iOS really safer than Android? Plus: What security apps do you need for iPad &amp; iPhone" itemprop="headline"/>
+      <meta content="2015-11-02T12:25:01Z" itemprop="dateModified">
+       <div itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+        <meta content="Macworld UK" itemprop="name">
+         <div itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">
+          <meta content="https://cdn2.macworld.co.uk/graphics/logos/pub-logo.png" itemprop="url">
+          </meta>
+         </div>
+        </meta>
+       </div>
+       <meta content="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/" itemprop="mainEntityOfPage">
+        <meta content="Why the iOS app XcodeGhost exploit shouldn't concern you" itemprop="alternativeHeadline"/>
+        <h3 class="description">
+         The iPad and iPhone are said to be more secure than Android, but the latest XcodeGhost exploit joins November 2014's WireLurker and Masque Attack malware threats, September's leaking of celebrity photos stored in iCloud, February's security flaw and the Find My Phone hijacking scam have concerned many. Can Apple maintain its stance that iOS is secure? We examine the various cases that have begged the question of security on the iOS platform, we look at how to make sure your iPhone or iPad is secure and ask whether this all this means Apple's iOS isn't secure?
+        </h3>
+        <div class="metaArticleContainer">
+         <p class="metaArticleData">
+          By
+          <span class="author" itemprop="author">
+           <a href="https://www.macworld.co.uk/author/karen-haslam/" rel="author" title="See more by Karen Haslam">
+            Karen Haslam
+           </a>
+          </span>
+          <span class="source" itemprop="creator" itemscope="" itemtype="http://schema.org/Organization">
+           <meta content="Macworld UK" itemprop="name">
+           </meta>
+          </span>
+          <span class="publicationDate">
+           <time class="dateCreated" datetime="2015-09-22T11:00:00Z" itemprop="datePublished">
+            <span class="divBar">
+             |
+            </span>
+            22 Sep 15
+           </time>
+          </span>
+         </p>
+        </div>
+        <header class="articleHeader">
+         <figure>
+          <strong>
+           <img alt="" height="405" src="//cdn2.macworld.co.uk/cmsdata/features/3453938/iPhone-ios-security-image.jpg" width="720"/>
+          </strong>
+         </figure>
+        </header>
+        <div itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+         <meta content="https://cdn3.macworld.co.uk/cmsdata/features/3453938/iPhone-ios-security-image_thumb900_1-1.jpg" itemprop="url">
+         </meta>
+        </div>
+        <div itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+         <meta content="https://cdn3.macworld.co.uk/cmsdata/features/3453938/iPhone-ios-security-image_thumb1200_4-3.jpg" itemprop="url">
+         </meta>
+        </div>
+        <div itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+         <meta content="https://cdn3.macworld.co.uk/cmsdata/features/3453938/iPhone-ios-security-image_thumb1200_16-9.jpg" itemprop="url">
+         </meta>
+        </div>
+        <main class="articleBody" id="articleBody" itemprop="articleBody">
+         <p>
+          In this article we look at some of the security threats that have hit Apple's iOS devices, including
+          <a href="#xcode" title="The XcodeGhost exploit and what it means to you">
+           XcodeGhost
+          </a>
+          ,
+          <a href="#wirelurker" title="WireLurker">
+           WireLurker
+          </a>
+          ,
+          <a href="#masqueattack" title="Masque Attack">
+           Masque Attack
+          </a>
+          , the
+          <a href="#pliss" title="The Oleg Pliss ransom case">
+           Oleg Pliss ransom case
+          </a>
+          and the
+          <a href="#sslflaw" title="The SSL flaw">
+           SSL flaw
+          </a>
+          . We also discuss what measures you should implement to ensure your device is safe, and we evaluate whether the iPhone and iPad are safe from malware.
+         </p>
+         <p>
+          According to Apple the iOS platform is completely secure. The company even states that it "designed the iOS platform with security at its core. Keeping information secure on mobile devices is critical for any user, whether they’re accessing corporate and customer information or storing personal photos, banking information, and addresses. Because every user’s information is important, iOS devices are built to maintain a high level of security without compromising the user experience."
+         </p>
+         <p>
+          As a result, Apple's iPad and iPhone are generally considered to be safe and secure devices to use, and many confidently claim that iOS is safer than Android. However, Apple's iOS platform for the iPad and iPhone hasn't been without its security breaches and vulnerabilitiies, and nor has iCloud, the cloud storage service which makes it possible to access documents, photos and more on all of your Apple devices.
+         </p>
+         <p>
+          Read on to find out about:
+         </p>
+         <ul>
+          <li>
+           <a href="#xcode" title="The XcodeGhost exploit and what it means to you">
+            The XcodeGhost exploit and what it means to you
+           </a>
+          </li>
+          <li>
+           <a href="#masqueattack" title="Masque Attack">
+            Masque Attack
+           </a>
+          </li>
+          <li>
+           <a href="#wirelurker" title="WireLurker">
+            WireLurker
+           </a>
+          </li>
+          <li>
+           <a href="#fappening" title="Jennifer Lawrence and the iCloud photo exposure">
+            Jennifer Lawrence and the iCloud photo exposure
+           </a>
+          </li>
+          <li>
+           <a href="#pliss" title="The Oleg Pliss ransom case">
+            The Oleg Pliss ransom case
+           </a>
+          </li>
+          <li>
+           <a href="#sslflaw" title="The SSL flaw">
+            The SSL flaw
+           </a>
+          </li>
+          <li>
+           <a href="#secureyouriphone" title="How to make sure your iPhone or iPad is secure">
+            How to make sure your iPhone or iPad is secure
+           </a>
+          </li>
+          <li>
+           <a href="#update" title="How to update your iPhone to the latest iOS">
+            How to update your iPhone to the latest iOS
+           </a>
+          </li>
+          <li>
+           <a href="#antivirus" title="Which antivirus program do you need on your iPhone?">
+            Which antivirus program do you need on your iPhone?
+           </a>
+          </li>
+          <li>
+           <a href="#risks" title="Passwords">
+            Passwords
+           </a>
+          </li>
+          <li>
+           <a href="#icloudkeychain" title="iCloud Keychain">
+            iCloud Keychain
+           </a>
+          </li>
+          <li>
+           and more...
+          </li>
+         </ul>
+         <h2 id="xcode">
+          The latest security exploits to affect iOS on the iPhone and iPad: What you need to know about XcodeGhost
+         </h2>
+         <p>
+          In the lastest security exploit, which was identified around 20 September, some developers - located in China - have used the incorrect program to create apps for the iOS app store. It is thought that the developers downloaded a fake version of Xcode because it was taking too long to download Xcode from Apple’s own servers, which are hosted in the US. Xcode weighs in at around 3.9GB in total. The Chinese developers were using XcodeGhost rather than Apple’s Xcode.
+         </p>
+         <p>
+          While the affected apps are Chinese, there are a few popular apps among them such as Angry Birds 2, although Rovio has confirmed that only the Chinese App store version of Angry Birds 2 is vulnerable, and that a fix is coming soon, according to 9to5Mac.
+         </p>
+         <p>
+          Apparently 39 apps have been affected by the malicious code, according to security firm Palo Alto Networks, there is a full list on 9to5Mac. However, there may in fact be more than 300 apps infected, according to a Chinese security firm who said it found 344 infected apps, writes V3. It seems that only apps purchased from the Chinese App Store are affected though.
+         </p>
+         <p>
+          Apple began addressing the issue on Sunday after being alerted to the fact that XcodeGhost had been embedded in some apps. "To protect our customers, we've removed the apps from the App Store that we know have been created with this counterfeit software and we are working with the developers to make sure they're using the proper version of Xcode to rebuild their apps," said Apple.
+         </p>
+         <p>
+          An affected app could automatically open websites designed to infect the device with a virus, or show pop ups designed to gain personal information from the user in a phishing attempt.
+         </p>
+         <p>
+          Apple’s walled garden approach to the App Store means it is typically safe. This is the first major breach of the App Store, before this exploit their had only been five instances of affected apps. Android’s open ecosystem, on the other hand, leaves the door open to security issues. Each app goes through a careful review process before Apple allows it into the store. Unfortunately, this time the Xcode malware made its way past Apple’s reviews.
+         </p>
+         <h2>
+          What other security exploits have affected iOS on the iPhone and iPad
+         </h2>
+         <p>
+          2014 was a year of security vulnerabilities and targetting of iOS. First off, a security flaw was discovered in late February 2014 that made it possible that an attacker could intercept your data if you are using an unprotected hotspot, perhaps in Starbucks or an internet café.
+         </p>
+         <p>
+          Then in late May, some users from the UK, Australia and other countries reported that their iPhones were locked with a message claiming the device was hacked by a person or group named Oleg Pliss who demanded $100 or €100 to unlock it.
+         </p>
+         <p>
+          Next came news that nude photos of Jennifer Lawrence and around 100 big-name stars including British model Cara Delevigne, Cat Deeley, Kelly Brook, and Rihanna had made their way onto image bulletin board 4chan, at the end of August. Apple claims that the privacy breach was not the result of a compromise of any of the systems used for its iCloud storage service. However, through some means hackers were able to access celebrity photos that were stored in iCloud.
+         </p>
+         <p>
+          Then in November the first malware with the potential to infect all iPhones and iPads was
+          <a href="https://go.redirectingat.com/?id=803X112722&amp;xcust=41-3453938-11-0000000&amp;sref=https%3A%2F%2Fwww.macworld.co.uk%2Ffeature%2Fiosapps%2Fis-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938%2F&amp;xs=1&amp;url=https%3A%2F%2Fwww.paloaltonetworks.com%2Fcontent%2Fdam%2Fpaloaltonetworks-com%2Fen_US%2Fassets%2Fpdf%2Freports%2FUnit_42%2Funit42-wirelurker.pdf" rel="nofollow" target="_blank">
+           discovered by security firm Palo Alto Networks
+          </a>
+          . Malware affecting jailbroken devices is nothing new but WireLurker - as the researchers christened it - used a two-stage attack involving USB connections via a Mac or PC, and a glitch in an iOS feature that allows organisations to install their own apps on non-jailbroken iOS devices. While WireLurker installed malicious apps on jailbroken phones and plundered them of personal information - including the device’s phone number and iCloud address book - non-jailbroken phones got off more lightly, with just a benign pirated comic book app invisibly installed on the phone. Basic diagnostic data was also passed to a central command server. Apple has since blocked WireLurker on both iOS devices and Macs but experts suggest that the technique used will give rise to further attacks.
+         </p>
+         <p>
+          Sure enough, just a week after WireLurker stole the headlines, another iOS 8 malware threat emerged. This threat, known as Masque Attack creates decoy apps that are like those on your iPhone, and these decoy apps attempt to steal your personal information. According to FireEye, who spotted the threat, Masque Attacks can pose much bigger threats than WireLurker.
+         </p>
+         <p>
+          So, following these recent situations, can Apple maintain its stance that iOS is secure. We examine the various cases that have begged the question of security on the iOS platform, we look at how to make sure your iPhone or iPad is secure (and the problems some people have experienced when updating their device), and we asking whether this mean that Apple's iOS isn't secure? Read on to find out...
+         </p>
+         <h2>
+          PART 1: Security threats to iOS devices
+         </h2>
+         <p>
+          We examine the XcodeGhost, WireLurker and Masque Atteck malware, the Olag Pliss ransom case and the SSL flaw. Plus: What really happened in the Jennifer Lawrence nude images leak?
+         </p>
+         <h2>
+          Is XcodeGhost a threat?
+         </h2>
+         <p>
+          39 apps have been affected by the malicious code, according to security firm Palo Alto Networks, however the affected apps are developed in and hosted in China, so it is unlikely that you will be running any of them on your iPhone or iPad, unless you had downloaded them from the Chinese App Store.
+         </p>
+         <p>
+          For example, while Angry Birds 2 is affected by the exploit, apparently it is only the Chinese App Store version that is affected.
+         </p>
+         <p>
+          If you are in China, Apple has already removed the affected apps from the App Store.
+         </p>
+         <h2 id="masqueattack">
+          Was Masque Attack a threat?
+         </h2>
+         <p>
+          <img alt="" class="lz" data-src="//cdn2.macworld.co.uk/cmsdata/features/3453938/Masque-Attack.jpg" height="450" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="800"/>
+          <noscript>
+           <img alt="" height="450" src="//cdn2.macworld.co.uk/cmsdata/features/3453938/Masque-Attack.jpg" width="800"/>
+          </noscript>
+         </p>
+         <p>
+          Masque Attack, a threat spotted by FireEye, creates decoy apps that mimic those on your iPhone and steal your personal information.
+         </p>
+         <p>
+          Apple was able to block WireLurker by blocking enterprise certificate that it was using to install malicious apps, but Masque Attack uses the same bundle identifiers as existing apps instead. According to FireEye: “This vulnerability exists because iOS doesn't enforce matching certificates for apps with the same bundle identifier.”
+         </p>
+         <p>
+          To avoid being compromised by Masque Attack, only install apps that come directly from the App Store, don’t click on Install if you see a pop-up on a website or if you see a prompt to install an update to an app like Flappy Bird. Also, if iOS displays an alert that an app is from an Untrusted App Developer tap Don’t Trust and uninstall it.
+         </p>
+         <p>
+          At its worse the malware could replace Gmail or banking apps with a fake apps that would steal your data you give it.
+         </p>
+         <p>
+          FireEye said: “We verified this vulnerability on iOS 7.1.1, 7.1.2, 8.0, 8.1 and 8.1.1 beta, for both jailbroken and non-jailbroken devices. An attacker can leverage this vulnerability both through wireless networks and USB.”
+         </p>
+         <p>
+          Apple has released a
+          <a href="https://go.redirectingat.com/?id=803X112722&amp;xcust=41-3453938-11-0000000&amp;sref=https%3A%2F%2Fwww.macworld.co.uk%2Ffeature%2Fiosapps%2Fis-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938%2F&amp;xs=1&amp;url=http%3A%2F%2Fwww.imore.com%2Fapple-comments-masque-attack" rel="nofollow" target="_blank">
+           statement
+          </a>
+          to iMore, claiming that Masque Attack isn’t really a flaw and that it is unaware of anybody who has been affected.
+         </p>
+         <p>
+          Because the attack relies on someone actually responding to a dodgy link and downloading an app from somewhere other than the App Store, having ignored a warning about downloading malicious apps, Apple is confident that it has adequate barriers in place to stop people being affected by this particular malware.
+         </p>
+         <p>
+          However, the best barrier would be to make it impossible to install an app from somewhere other than the App Store, or a company’s own servers or secure-website if it is an in-house app.
+         </p>
+         <h2 id="wirelurker">
+          Was WireLurker a threat?
+         </h2>
+         <p>
+          <img alt="" class="lz" data-src="//cdn2.macworld.co.uk/cmsdata/features/3453938/wirelurker.jpg" height="478" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="800"/>
+          <noscript>
+           <img alt="" height="478" src="//cdn2.macworld.co.uk/cmsdata/features/3453938/wirelurker.jpg" width="800"/>
+          </noscript>
+         </p>
+         <p>
+          WireLurker was a Trojan that was inserted into pirated Mac OS X software, such as popular game titles, as well as within simple Windows executables that promised to install pirated apps on a user’s iOS device.
+         </p>
+         <p>
+          Notably, although WireLurker infected iOS devices, it wasn’t malware in the traditional sense in that one iOS device did not spread the infection to another. WireLurker could only delivered via a USB connection to a Mac or Windows computer following the download of dodgy software offered on various Chinese websites. The infected software was downloaded over 415,000 times making WireLurker possibly the biggest outbreak of iOS malware yet detected.
+         </p>
+         <p>
+          Windows users got off lightly because the version of WireLurker used was older and so buggy that it was essentially useless. It also targeted only jailbroken devices.
+         </p>
+         <p>
+          The version of WireLurker infecting Macs was significantly more sophisticated. It infected other apps on the user’s computer to ensure it was kept running, and installed startup scripts. After grabbing some diagnostic details about the Mac, which it sent to a command server (since closed down), it added an invisible background process that waited for USB connections to iOS devices.
+         </p>
+         <p>
+          If a user attached a jailbroken device then WireLurker used components of the Cydia jailbreak system to grab personal details, such as the user’s iCloud address book and the device’s phone number, and upload them to the command server. It then infected apps on the device and inserted a handful of other malicious apps.
+         </p>
+         <p>
+          If a non-jailbroken device was attached, which accounts for the majority of iOS devices in use today, WireLurker silently installed a comic book app on the user’s device. Adding third-party apps via USB should be impossible because of the requirement that they’re digitally signed, which usually happens upon purchase via the official App Store (and which is why iTunes can restore apps to your device). However, WireLurker subverted the enterprise provisioning system that allows organisations to install their own apps on the iOS devices of their employees. This requires a security profile to be installed within the Settings app but the hackers behind WireLurker were able to hide this within the app itself so that it was installed when the app was first run. Users had to click Continue on a dialog box but there was no warning a malicious app might be being installed. Users were sure to run the app when they first spotted it in order to discover what it was.
+         </p>
+         <p>
+          Aside from the nasty Mac infection, which can be
+          <a href="https://go.redirectingat.com/?id=803X112722&amp;xcust=41-3453938-11-0000000&amp;sref=https%3A%2F%2Fwww.macworld.co.uk%2Ffeature%2Fiosapps%2Fis-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938%2F&amp;xs=1&amp;url=https%3A%2F%2Fgithub.com%2FPaloAltoNetworks-BD%2FWireLurkerDetector" rel="nofollow" target="_blank">
+           cleared-up using a tool created by the security researchers
+          </a>
+          , the good news is that the app installed on non-jailbroken devices was benign. It was probably more of a test to see if the procedure was possible.
+         </p>
+         <p>
+          Had an infection taken place the existing security measures within iOS – such as the
+          <a href="https://www.macworld.co.uk/news/mac/apple-file-system-skating-where-puck-might-go-3447607/">
+           sandboxing of apps
+          </a>
+          – would have blocked nearly all malicious activity. However, WireLurker has exposed significant flaws within iOS with regard to USB connections and enterprise provisioning that Apple will no-doubt address soon.
+         </p>
+         <h2 id="fappening">
+          What happened in the Jennifer Lawrence nude photos case?
+         </h2>
+         <p>
+          <img alt="" class="lz" data-src="//cdn2.macworld.co.uk/cmsdata/features/3453938/keep-iphone-photos-safe.jpg" height="451" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="800"/>
+          <noscript>
+           <img alt="" height="451" src="//cdn2.macworld.co.uk/cmsdata/features/3453938/keep-iphone-photos-safe.jpg" width="800"/>
+          </noscript>
+         </p>
+         <p>
+          Jennifer Lawrence and around 100 big-name stars including British model Cara Delevigne, Cat Deeley, Kelly Brook, and Rihanna that made their way onto image bulletin board 4chan, at the end of August. The news has lead to some uncertainty about just how secure iCloud is, and what you should do to make sure that the same thing doesn’t happen to you.
+         </p>
+         <p>
+          First things first, if you aren’t a celebrity chances are nobody is interested in any photos of you. According to Apple these photos were stolen from iCloud in a "very targeted attack”, targetted at celebrities. The hackers then asked for payment in bitcoin to view the photos, some of which were claimed to be fake by the celebrities involved.
+         </p>
+         <p>
+          Apple said in
+          <a href="http://www.apple.com/pr/library/2014/09/02Apple-Media-Advisory.html" rel="nofollow" target="_blank">
+           a statement
+          </a>
+          that: "After more than 40 hours of investigation, we have discovered that certain celebrity accounts were compromised by a very targeted attack on user names, passwords and security questions, a practice that has become all too common on the Internet.”
+         </p>
+         <p>
+          The company insists that the privacy breach did not stem from a compromise of any of the systems used for the cloud storage service. Apple said: “None of the cases we have investigated has resulted from any breach in any of Apple's systems including iCloud or Find my iPhone.”
+         </p>
+         <p>
+          Earlier reports had suggested that a flaw in iCloud was responsible for the hack, but Apple says that none of the cases it has looked into were tied to any vulnerability in the company's systems.
+         </p>
+         <p>
+          Apple is working with law enforcement on the matter. The FBI is also investigating.
+         </p>
+         <p>
+          Read:
+          <a href="https://www.macworld.co.uk/how-to/iosapps/how-keep-your-photos-safe-on-iphone-3543259/" title="How to stop photos leaking online">
+           How to prevent naughty pictures appearing on the web
+          </a>
+         </p>
+         <h2 id="pliss">
+          What happened in the Oleg Pliss ransom case?
+         </h2>
+         <p>
+          Back in May 2014 some people in Australia, the UK, and elsewhere had their Apple ID accounts compromised and their iOS devices held to ransom via Apple's Find My iPhone service.
+         </p>
+         <p>
+          Apple's Find My Phone feature allows iPhone, iPad and Mac owners to remotely lock and track their devices if they're lost or stolen. A custom message can be displayed on the lockscreen when the feature is activated. In late May, users reported that their iPhones were locked with a message claiming the device was hacked by a person or group named Oleg Pliss who demanded $100 or €100 to unlock it.
+         </p>
+         <p>
+          Apple said at the time that the incidents were not the result of iCloud being compromised and hinted that password reuse across multiple online accounts might be the cause of the hijackings.
+         </p>
+         <p>
+          BY mid June, Russian authorities revealed that they had arrested a man and a teenaged boy from Moscow under suspicion that they compromised Apple ID accounts and used Apple's Find My iPhone service to hold iOS devices for ransom.
+         </p>
+         <p>
+          It's not clear if the two Moscow residents, aged 16 and 23, were behind the Oleg Pliss attacks, but the crime referred to in the press release the Russian Ministry of Interior issued to announce the arrests was of a similar nature to the iPhone ransom attacks.
+         </p>
+         <p>
+          The two allegedly compromised email accounts and used phishing pages and social engineering techniques to gain access to Apple ID accounts. They are then accused of using the Find My Phone feature to lock the associated devices and send messages to the owners threatening to delete data unless the ransom was paid.
+         </p>
+         <p>
+          Another technique involved placing advertisements online that offered to rent an Apple ID account with access to a lot of media content. Once users accepted the offer and linked their devices with that account, the attackers then used the Find My Phone feature to hijack them, Russian authorities said.
+         </p>
+         <h2 id="sslflaw">
+          What was the SSL flaw in Apple's iOS
+         </h2>
+         <p>
+          In February 2014, Apple issued updates to iOS 7 to protect against the security flaw. We recommend that users install the updates.
+         </p>
+         <p>
+          The SSL problem was with Apple's implementation of a basic encryption feature that shields data from snooping. Most websites handling sensitive personal data use SSL (Secure Sockets Layer) or TLS (Transport Layer Security), which establishes an encrypted connection between a server and a person's computer. If an attacker intercepts the data, it is unreadable.
+         </p>
+         <p>
+          However, iOS's validation of SSL encryption had a coding error that bypassed a key validation step in the web protocol for secure communications. As a result, communications sent over unsecured Wi-Fi hot spots could be intercepted and read while unencrypted, potentially exposing user password, bank data, and other sensitive data to hackers via man-in-the-middle attacks. They could also supply fake data that makes it appear an authentic web service has been cryptographically verified.
+         </p>
+         <p>
+          There are also security risks in Mac OS X. Read more about them here:
+          <a href="https://www.macworld.co.uk/how-to/mac-software/are-macs-safe-viruses-hackers-3454926/" title="Protect Mac Virus ">
+           Do Macs get viruses?
+          </a>
+         </p>
+         <p>
+          In the case of the SSL flaw, the danger is mitigated somewhat since an attacker must be on the same network as the victim. However, you could be open to attacks if you are using a shared network and someone is snooping on that network. This could be someone in your local Starbucks.
+         </p>
+         <p>
+          Secured Wi-Fi networks, such as home and business networks with encryption enabled, are not affected.
+         </p>
+         <p>
+          Read about how to
+          <a href="https://www.macworld.co.uk/how-to/iosapps/protect-your-social-media-privacy-on-ios-3513394/" title="social networking privacy">
+           keep your social networking private here
+          </a>
+          .
+         </p>
+         <p>
+          Apple sent a notification of the iOS 7.0.6 update but if you haven't updated be sure to go to Settings &gt; General &gt; Software Update. You can
+          <a href="https://go.redirectingat.com/?id=803X112722&amp;xcust=41-3453938-11-0000000&amp;sref=https%3A%2F%2Fwww.macworld.co.uk%2Ffeature%2Fiosapps%2Fis-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938%2F&amp;xs=1&amp;url=http%3A%2F%2Fsupport.apple.com%2Fkb%2FHT6147%3Fviewlocale%3Den_US%26locale%3Den_US" rel="nofollow" target="_blank">
+           find the information here
+          </a>
+          .
+         </p>
+         <p>
+          If you are running iOS 6 you also need to update. Apple has provided iOS 6.1.6 - but this is only available for the iPhone 3GS, much to the annoyance of those who have refused to update to iOS 7. More on that below...
+         </p>
+         <p>
+          <img alt="" class="lz" data-src="//cdn2.macworld.co.uk/cmsdata/features/3453938/Security-Apple.jpg" height="450" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="800"/>
+          <noscript>
+           <img alt="" height="450" src="//cdn2.macworld.co.uk/cmsdata/features/3453938/Security-Apple.jpg" width="800"/>
+          </noscript>
+         </p>
+         <h2 id="secureyouriphone">
+          PART 2: Does this mean my iPad and iPhone aren't safe? How can I make them secure?
+         </h2>
+         <p>
+          Given these examples, should we be concerned about the safety of our iOS devices? How can we ensure that our iPhone and iPad are safe from malicious threats?
+         </p>
+         <h2>
+          How to make sure your iPhone or iPad is secure and safe from WireLurker and other malware
+         </h2>
+         <p>
+          <img alt="" class="lz" data-src="//cdn2.macworld.co.uk/cmsdata/features/3453938/infection.jpg" height="518" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="583"/>
+          <noscript>
+           <img alt="" height="518" src="//cdn2.macworld.co.uk/cmsdata/features/3453938/infection.jpg" width="583"/>
+          </noscript>
+         </p>
+         <p>
+          Make sure you keep your iPhone up to date with the latest updates. It may be necessary to install an iOS update to ensure that there was no chance of someone snooping on your activity.
+         </p>
+         <p>
+          To avoid malware infections such as WireLurker, never attach your device to a computer or
+          <a href="https://go.redirectingat.com/?id=803X112722&amp;xcust=41-3453938-11-0000000&amp;sref=https%3A%2F%2Fwww.macworld.co.uk%2Ffeature%2Fiosapps%2Fis-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938%2F&amp;xs=1&amp;url=https%3A%2F%2Fmedia.blackhat.com%2Fus-13%2FUS-13-Lau-Mactans-Injecting-Malware-into-iOS-Devices-via-Malicious-Chargers-Slides.pdf">
+           even a USB charger
+          </a>
+          unless you’re 100% sure it’s safe. Remember that infections on a Mac or PC are likely to be invisible to the user.
+         </p>
+         <p>
+          Additionally, never jailbreak your phone because – quite simply – it undoes all the good work Apple has done in securing iOS.
+         </p>
+         <p>
+          Never use pirated software (or software that promises to install pirated iOS apps), and keep iOS updated too, so that you keep ahead of the jailbreaking exploits that are used by hackers to infect devices. Read: Should you jailbreak an iPhone:
+          <a href="https://www.macworld.co.uk/feature/iphone/ios-jailbreaking-pros-cons-jailbreak-iphone-good-bad-security-3491721/" title="Should you jailbreak your iPhone">
+           Is jailbreaking good for an iPhone or iPad? Is jailbreaking safe? The pros and cons of iOS jailbreaking
+          </a>
+         </p>
+         <p>
+          If you suspect you’ve been infected by WireLurker or a similar malware, open the Settings app and then tap General &gt; Profiles. If you’re infected you’ll see an entry here that you didn’t install. Tapping it will offer the chance to remove it (although Apple has already revoked the profile used in WireLurker).
+         </p>
+         <p>
+          Bear in mind that some apps such as the Cloak VPN app install their own profiles here, as do some Wi-Fi providers. However, you should already know about these, having okayed their installation.
+         </p>
+         <h2>
+          How did the celeb photos hack happen?
+         </h2>
+         <p>
+          Reports initially suggested the iCloud photo leak might have been the result of hackers taking advantage of a flaw in the Find My iPhone service that was said to allow an attacker to try an unlimited number of passwords until the right one was found.
+         </p>
+         <p>
+          TheNextWeb
+          <a href="https://go.redirectingat.com/?id=803X112722&amp;xcust=41-3453938-11-0000000&amp;sref=https%3A%2F%2Fwww.macworld.co.uk%2Ffeature%2Fiosapps%2Fis-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938%2F&amp;xs=1&amp;url=http%3A%2F%2Fthenextweb.com%2Fapple%2F2014%2F09%2F01%2Fthis-could-be-the-apple-icloud-flaw-that-led-to-celebrity-photos-being-leaked%2F" rel="nofollow" target="_blank">
+           reported
+          </a>
+          that it had discovered the script that was used to hack into the celebrity accounts on the software site GitHub. That report claimed the script used a flaw in Find My iPhone to crack the passwords for the accounts using "brute force" – in other words the software was able to repeatedly enter the most popular passwords approved by Apple until it hit on the right one. Users would have been unaware that their accounts were compromised.
+         </p>
+         <p>
+          However, Apple says the hack wasn't the result of an iCloud vulnerability or a breach in Find My iPhone, but rather a targeted attack where hackers sniff out user names, passwords, and answers to security questions. As Apple says, targeted attacks on specific users are commonplace. For example, Wired editor Mat Honan had his iCloud account hacked back in 2012.
+         </p>
+         <p>
+          Another suggestion as to how these compromising celebrity photos were acquired was that it could have been through an email phishing attack. The theory is that celebrities could have been tricked into entering their usernames and passwords on a fake login page. We wonder if celebrities are really that silly, although if the email was claiming to be about their nomination at the Baftas or Oscars then anything is possible.
+         </p>
+         <h2>
+          Why were hackers able to get nude celebrity photos?
+         </h2>
+         <p>
+          If you ever lose your iPhone, you may be surprised to find that when you sync up a new iPhone with your iCloud account your old photos appear on the device. As long as you, sensibly, use iCloud to back up the data on your phone when you get your new phone and sync it with the backup you will recover your photos.
+         </p>
+         <p>
+          Apple also offers a service where the last 1000 photos you take are sucked up into the cloud in an PhotoStream that can be viewed on all your Apple devices including iPad, iPhone, and Mac. This is a handy way to view and save images to a different device.
+         </p>
+         <p>
+          However, the side effect of these handy services is that your photos are in the cloud and anyone who gains access to your iCloud account could gain access to them. Even if you delete a photo on your iPhone it will remain in your iCloud photo stream until you delete it from that service.
+          <b>
+           Read more about Photo Stream here.
+          </b>
+         </p>
+         <p>
+          There are various ways a hacker could accessed those photos. They could sync a device using the Apple ID, or they could use software that will access and recover an iPhone iCloud back up, for example.
+         </p>
+         <p>
+          The iPhone isn’t the only phone to saves photos to the cloud. Android phones saves photos to Google+ and Microsoft's Windows Phone saves to OneDrive.
+         </p>
+         <h2>
+          How can I stop people getting hold of my photos?
+         </h2>
+         <p>
+          Your phone may only hold photos of your dog or children but it is wise to exercise some caution regardless. In the wrong hands any of your information could be used to nefarious means.
+         </p>
+         <p>
+          There are a few ways you can make sure that nobody can access the photos on your iPhone and in iCloud. We show you
+          <b>
+           how to completely disable photo sharing to iCloud here
+          </b>
+          , but there is no need to be quite so drastic, as we said above, it’s actually a useful feature.
+         </p>
+         <p>
+          The three steps for better security are as follows:
+         </p>
+         <p>
+          1)   Choose a secure password. As we explain in this feature about how to chose a strong password, a good password will contain upper and lowercase letters, punctuation, a number and be 8-14 characters long.
+         </p>
+         <p>
+          2)   Use a unique password for every service you access. Most people use the same password for every online service they use which is a danger because once that one password is discovered then all your accounts are vulnerable.
+         </p>
+         <p>
+          3)   Luckily if you have trouble remembering too many password there are services that will generate passwords for you and enter them on your behalf when you need them. You only need to remember one password with a password generator such as 1Password.
+         </p>
+         <p>
+          4)   You can also use Apple’s iCloud Keychain to suggest secure passwords - but make sure you use a password to access your Mac and a passcode for your iPad and iPhone. Read more about
+          <a href="https://www.macworld.co.uk/how-to/mac-software/os-x-mavericks-tips-how-to-mac-os-x-mavericks-3472876/?p=2">
+           setting up Apple’s iCloud Keychain here
+          </a>
+          .
+         </p>
+         <p>
+          5)   Avoid opening and don’t respond to phishing emails (even if you think it’s funny). And definitely don’t click on any links or download any documents that are attached. Note that many phishing emails will appear to have come from friends whose email accounts have been hacked. Follow this
+          <a href="https://go.redirectingat.com/?id=803X112722&amp;xcust=41-3453938-11-0000000&amp;sref=https%3A%2F%2Fwww.macworld.co.uk%2Ffeature%2Fiosapps%2Fis-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938%2F&amp;xs=1&amp;url=https%3A%2F%2Fwww.techadvisor.co.uk%2Fhow-to%2Fsecurity%2F10-ways-avoid-being-scammed-online%2F" title="how not to fall for an email scam">
+           advice about phishing emails
+          </a>
+          .
+         </p>
+         <p>
+          6)   If you take a photo and don’t want it to stay in iCloud delete it from your Photo Stream. In the Photos app, go to My Photo Stream select the image and delete. This will remove the photo from any devices connected to your photo stream.
+         </p>
+         <p>
+          7)   Make sure that you use two-factor authentication whenever it is offered. Two-factor authentication adds an extra layer of security besides your username and password. This second layer of authentication involves receiving a security code on your iPhone or other device, which you have to enter in order to access your account. This means that even if someone managed to get hold of your password, if they don’t have access to your phone to get that second security code, they can't log in to your account. Read:
+          <a href="https://www.macworld.co.uk/how-to/mac-software/how-set-up-two-factor-authentication-for-your-apple-id-3543274/" title="Set up two-factor authentication ">
+           How to set up two factor authentication on iPhone
+          </a>
+          <strong>
+           .
+          </strong>
+         </p>
+         <p>
+          8)   Make sure that you have good answers to your security questions - not answers anyone could easily guess. And make sure you remember what those answers are!
+         </p>
+         <h2 id="update">
+          Update your devices
+         </h2>
+         <p>
+          Make sure you always update your devices to the latest version of the operating system, Apple endeavours to fix flaws as soon as possible.
+         </p>
+         <p>
+          Updating the software isn't always as simple as it should be. In the past some people have found that they were unable to install the update that would protect their iPhone. For example, the iOS 7.0.6 update caused some iPhones or iPads to be bricked. Actually calling these devices bricked isn't necessarily correct, it appears that the firmware update has been interrupted.
+         </p>
+         <p>
+          Some of these users had attempted to update their iOS device on the move via 3G or 4G rather than over a WiFi network. After the update the iPad or iPhone has required a connection to iTunes before it can restart. Users are asked to "Connect to iTunes". Should you encounter the same issue with an update there is an
+          <a href="https://go.redirectingat.com/?id=803X112722&amp;xcust=41-3453938-11-0000000&amp;sref=https%3A%2F%2Fwww.macworld.co.uk%2Ffeature%2Fiosapps%2Fis-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938%2F&amp;xs=1&amp;url=https%3A%2F%2Fdiscussions.apple.com%2Fmessage%2F23803263%2323803263" rel="nofollow" target="_blank">
+           Apple Support Community
+          </a>
+          that addresses this iPhone bricking issue, but we outline the steps below:
+         </p>
+         <p>
+          1. First connect your iPad or iPhone to a power outlet – either to your Mac or plug it into the wall. It is possible that your device ran out of battery when you were updating. You may want to leave it for a few minutes to charge so that you can establish whether that was the problem.
+         </p>
+         <p>
+          2. Reset your device: hold down the power button and the home button simultaneously. Eventually you should see the Apple logo and the device will boot up (it can take time so be patient, but if its ten minutes there's probably something wrong!)
+         </p>
+         <p>
+          3. Restore your device. Beware – this will wipe all the data from your device, so make sure you have a back up first. To restore your iPad or iPhone, first plug it into your Mac and open iTunes. Now click on the name of your iPad or iPhone in the left hand menu and click Restore. This will restore your iPhone or iPad with the latest version of the iOS operating system.
+         </p>
+         <p>
+          4. Restore from back up: presuming you have a recent backup you will be able to restore your device either via iTunes or over iCloud. It may take an hour or more to restore so be patient (again).
+         </p>
+         <h2>
+          Why you should update your iPad/iPhone OS, and what to do if you can't
+         </h2>
+         <p>
+          When the SSL flaw happened some people were angry that while Apple has released iOS 6.1.6 for iPhone 3GS and iPod touch (4th generation) users, it was not possible to update a newer iPad or iPhone running iOS 6 device.
+         </p>
+         <p>
+          We imagine that exactly the same thing could happen now that iOS 9 has been launched. If you still haven't updated to iOS 9 because you don't have enough space, you can update using iTunes - read
+          <a href="https://www.macworld.co.uk/how-to/iosapps/how-update-iphone-ipad-ios-8-without-deleting-3451992/" title="Update to iOS 8 without deleting ">
+           how to upgrade your iOS without deleting anything here
+          </a>
+          .
+         </p>
+         <p>
+          When the SSL flaw happened, there were people who had refused to update to iOS 7, perhaps because it would have caused their device to slow down. Users complained: "My iPhone 5 gives me no option to upgrade to any iOS other than 7.0.6."
+         </p>
+         <p>
+          <img alt="" class="lz" data-src="//cdn2.macworld.co.uk/cmsdata/features/3453938/iphone-ios-6-update.jpg" height="450" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="300"/>
+          <noscript>
+           <img alt="" height="450" src="//cdn2.macworld.co.uk/cmsdata/features/3453938/iphone-ios-6-update.jpg" width="300"/>
+          </noscript>
+         </p>
+         <p>
+          Unfortunately it was not possible to update a newer device that is running iOS 6 to iOS 6.1.6 if it was eligible for the iOS 7 update.
+         </p>
+         <p>
+          At the time we even tried doing so in iTunes, but, as you can see, from this screen shot the iOS 6.1.6 update is not available for these devices.
+         </p>
+         <p>
+          <img alt="" class="lz" data-src="//cdn2.macworld.co.uk/cmsdata/features/3453938/Wont-update-ios-616.jpg" height="400" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="520"/>
+          <noscript>
+           <img alt="" height="400" src="//cdn2.macworld.co.uk/cmsdata/features/3453938/Wont-update-ios-616.jpg" width="520"/>
+          </noscript>
+         </p>
+         <p>
+          If you don't want to update to iOS 7.0.6 but don't want to leave your device open to snooping, how can you avoid the SSL bug without updating to iOS 7?
+         </p>
+         <p>
+          1. Don't connect to public Wi-Fi networks.
+         </p>
+         <p>
+          2. On the Mac it is possible to avoid it by using an alternative browses like Chrome and Firefox, but unfortunately on an iPad or iPhone alternative browsers still use the same underlying web kit and therefore are not safe.
+         </p>
+         <h2>
+          Does this mean that Apple's iOS isn't secure?
+         </h2>
+         <p>
+          It's certainly not going to help the company convince people that they don't need to be protecting their devices. Many users coming from a desktop environment are already confused about security services for the iPad and iPhone, asking whether they need to install security software on their iPad or iPhone.
+         </p>
+         <p>
+          Generally these devices are safe because many security features are enabled by default and key features, like device encryption, are not configurable, so users cannot disable them by mistake. Other security measures include low-level hardware and firmware features that protect against malware and viruses.
+         </p>
+         <p>
+          Apple also approves every third-party application that appears on the iPhone and iPad. As Apple explains: "Unlike other mobile platforms, iOS does not allow users to install potentially malicious unsigned apps from websites, or run untrusted code. At runtime, code signature checks of all executable memory pages are made as they are loaded to ensure that an app has not been modified since it was installed or last updated."
+         </p>
+         <p>
+          Another level of protection comes from the device passcode - which means that an attacker with access to your device cannot get access to your data.
+         </p>
+         <p>
+          Read more:
+          <a href="https://go.redirectingat.com/?id=803X112722&amp;xcust=41-3453938-11-0000000&amp;sref=https%3A%2F%2Fwww.macworld.co.uk%2Ffeature%2Fiosapps%2Fis-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938%2F&amp;xs=1&amp;url=http%3A%2F%2Fimages.apple.com%2Fiphone%2Fbusiness%2Fdocs%2FiOS_Security_Oct12.pdf" rel="nofollow" target="_blank">
+           iOS Security (PDF download)
+          </a>
+         </p>
+         <p>
+          <img alt="What iOS Security Software do I need?" class="lz" data-src="//cdn2.macworld.co.uk/cmsdata/features/3453938/iPad-Security-Enter-Passcode.jpg" height="390" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" title="What iOS Security Software do I need?" width="520"/>
+          <noscript>
+           <img alt="What iOS Security Software do I need?" height="390" src="//cdn2.macworld.co.uk/cmsdata/features/3453938/iPad-Security-Enter-Passcode.jpg" title="What iOS Security Software do I need?" width="520"/>
+          </noscript>
+         </p>
+         <h2 id="antivirus">
+          Which antivirus program do I need for an iPad or iPhone?
+         </h2>
+         <p>
+          Despite the security threats mentioned above, you don't need anti-virus software for the iPad and iPhone - not that there is any anti-virus software available for the device. iOS is designed and built to only accept and install software that has been approved by Apple and run through the App Store. As such Apple has pretty much guaranteed that you won't encounter any malicious software on your iOS device. Similarly security companies complain that Apple will not approve any security focused software for the iPad or iPhone, presumably Apple doesn't want to give the impression that such software is necessary.
+         </p>
+         <p>
+          Having said that there are a variety of security-themed apps on the App Store. Security specialist Symantec has a number of apps such as Symantec Mobile Encryption and Symantec Secure Email. These are typically designed to integrate the iPad with an enterprise environment, allowing iOS devices to communicate securely with enterprise servers.
+         </p>
+         <p>
+          But for the home user, the iPad (and iPhone) is one of the safest computing experiences you can imagine. It's combination of locked down hardware and software make it more secure out of the box than a Mac or PC with security software installed.
+         </p>
+         <p>
+          See:
+          <a href="https://www.macworld.co.uk/ipad-iphone/reviews/?reviewid=3306515">
+           VirusBarrier iOS review
+          </a>
+          and
+          <a href="https://www.macworld.co.uk/mac/news/?newsid=3365582">
+           Symantec announces new Norton Antivirus tools
+          </a>
+         </p>
+         <h2>
+          What security do I need for iPad and iPhone Safari web browsing?
+         </h2>
+         <p>
+          The Safari web browser in iOS 7 is also protected against malicious software, although you can encounter malicious websites and you are vulnerable to so-called "Phishing" scams (where nefarious people send you emails requesting you to enter account and password details.
+         </p>
+         <p>
+          Safari iOS 7 has a "Fraud Warning" service built into it. This is activated by default, but it doesn't hurt to go to Settings &gt; Safari and double-check that Fraudulant Website Warning is set to On.
+         </p>
+         <p>
+          Obvioulsy we now know that it is important to update your device to ensure that your safe from man-in-the-middle attacks made possible by the SSL encryption coding error, as discussed at the top of this article. As long as you are running iOS 7.0.6 or iOS 6.1.6 you should be ok.
+         </p>
+         <p>
+          See:
+          <a href="https://www.macworld.co.uk/news/iosapps/major-ssl-flaw-found-in-ios-os-x-3503282/">
+           Major SSL flaw found in iOS, OS X
+          </a>
+         </p>
+         <p>
+          See:
+          <a href="https://www.macworld.co.uk/macsoftware/news/?newsid=3322288">
+           Apple ID phishing scam warning
+          </a>
+         </p>
+         <p>
+          <img alt="iOS Safari Security Settings" class="lz" data-src="//cdn2.macworld.co.uk/cmsdata/features/3453938/iPad-Security-Safari-Settings.jpg" height="375" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" title="iOS Safari Security Settings" width="500"/>
+          <noscript>
+           <img alt="iOS Safari Security Settings" height="375" src="//cdn2.macworld.co.uk/cmsdata/features/3453938/iPad-Security-Safari-Settings.jpg" title="iOS Safari Security Settings" width="500"/>
+          </noscript>
+         </p>
+         <h2>
+          Is Javascript safe on the iPad and iPhone?
+         </h2>
+         <p>
+          JavaScript is another area where you might want to be extra cautious. While JavaScript offers a number of additional features to websites, there are some concerns that it can be used to launch malicious attacks. It depends on the kind of website you typically browse on an iPad or iPhone. If you look at some of the less salubrious sites you might want to go to Settings &gt; Safari and turn JavaScript to Off.
+         </p>
+         <p>
+          See:
+          <a href="https://www.macworld.co.uk/ipad-iphone/news/?newsid=3423116">
+           iOS 6.1 update fixes JavaScript bug
+          </a>
+         </p>
+         <h2 id="risks">
+          Are there any iPad/iPhone security risks at all?
+         </h2>
+         <p>
+          The biggest risks with an iPad and iPhone aren't remote attacks, but up close and personal theft. Somebody either stealing your device or using it when your back is turned.
+         </p>
+         <p>
+          To protect somebody from accessing your iPad or iPhone without your knowledge be sure to set either a passcode or password.
+         </p>
+         <ol>
+          <li>
+           Open Settings &gt; General and tap Passcode Lock
+          </li>
+          <li>
+           Click Turn Passcode On
+          </li>
+          <li>
+           Enter a four digit PIN
+          </li>
+          <li>
+           Re-enter the four digit PIN
+          </li>
+          <li>
+           Tap "Require Passcode" and ensure it is set to "Immediately"
+          </li>
+          <li>
+           Tap Passcode Lock to get back to the Passcode Lock settings
+          </li>
+         </ol>
+         <p>
+          You can use a password instead of a passcode. This will ensure a higher level of security, but you will need to enter the combination of letters and numbers to unlock your iPad or iPhone, so most people stick with the passcode.
+         </p>
+         <ol>
+          <li>
+           Tap Simple Passcode to Off
+          </li>
+          <li>
+           Enter a password (a combination of numbers and letters)
+          </li>
+         </ol>
+         <p>
+          Read more:
+          <a href="https://www.macworld.co.uk/ipad-iphone/news/?newsid=3434117">
+           Understanding iOS passcode security
+          </a>
+         </p>
+         <h2>
+          Enable Find My iPad/iPhone
+         </h2>
+         <p>
+          Find My iPhone is an app and service that you can install to locate an iOS if it has gone missing. It also enables you to remotely wipe an iPhone or iPad, or send a message to it in the hope of retrieving a lost iPhone or iPad.
+         </p>
+         <ol>
+          <li>
+           Click on Settings &gt; Privacy &gt; Location service
+          </li>
+          <li>
+           Tap Find My iPad and click it to On
+          </li>
+          <li>
+           Open the App Store and Find My iPhone. Install the app.
+          </li>
+         </ol>
+         <p>
+          Open the Find My iPhone app on an iPad or iPhone and log in to see where all your devices are. Note that this service can also be accessed from Apple's iCloud website. (See:
+          <a href="https://www.macworld.co.uk/digitallifestyle/news/?newsid=3435556">
+           How to get started with iCloud
+          </a>
+          ).
+         </p>
+         <p>
+          Read more:
+          <a href="https://www.macworld.co.uk/ipad-iphone/news/?newsid=3382388">
+           Find My iPhone
+          </a>
+         </p>
+         <p>
+          <img alt="Find my iPhone" class="lz" data-src="//cdn2.macworld.co.uk/cmsdata/features/3453938/FindMyiPhone.jpg" height="375" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" title="Find my iPhone" width="500"/>
+          <noscript>
+           <img alt="Find my iPhone" height="375" src="//cdn2.macworld.co.uk/cmsdata/features/3453938/FindMyiPhone.jpg" title="Find my iPhone" width="500"/>
+          </noscript>
+         </p>
+         <h2>
+          Saving passwords and credit card details in Safari
+         </h2>
+         <p dir="ltr">
+          The iPad can be used to save your passwords and credit card details. Before doing this it is considered advisable to set up a passcode first, as an additional security measure.
+         </p>
+         <p dir="ltr">
+          To set up Safari to save passwords follow these steps:
+         </p>
+         <ol>
+          <li>
+           <span>
+            Tap on Settings and Safari
+           </span>
+          </li>
+          <li>
+           <span>
+            Tap Passwords &amp; Autofill
+           </span>
+          </li>
+          <li>
+           <span>
+            Tap the Names and Passwords button to turn it on (green)
+           </span>
+          </li>
+         </ol>
+         <p dir="ltr">
+          When you next visit a website in Safari, and enter your name and password, a popup will appear asking if you want to save the password. Tap on Save Password and the password will be stored locally in the iPad.
+         </p>
+         <ol>
+          <li>
+           Tap Simple Passcode to Off
+          </li>
+          <li>
+           Enter a password (a combination of numbers and letters)
+          </li>
+         </ol>
+         <p dir="ltr">
+          <img alt="iOS Safari Save Password" class="lz" data-src="//cdn2.macworld.co.uk/cmsdata/features/3453938/iPad-Security-Save-Passwords.jpg" height="132" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" title="iOS Safari Save Password" width="500"/>
+          <noscript>
+           <img alt="iOS Safari Save Password" height="132" src="//cdn2.macworld.co.uk/cmsdata/features/3453938/iPad-Security-Save-Passwords.jpg" title="iOS Safari Save Password" width="500"/>
+          </noscript>
+         </p>
+         <h3 dir="ltr">
+          To access password details in Safari
+         </h3>
+         <ol>
+          <li>
+           <span>
+            Tap on Settings and Safari
+           </span>
+          </li>
+          <li>
+           <span>
+            Tap Passwords and Autofill
+           </span>
+          </li>
+          <li>
+           <span>
+            Tap on Saved Passwords
+           </span>
+          </li>
+          <li>
+           <span>
+            Tap on a password entry and enter your Passcode
+           </span>
+          </li>
+         </ol>
+         <p dir="ltr">
+          You can now view the Website, Username and Password details on the iPad.
+         </p>
+         <h3 dir="ltr">
+          To delete a password from Safari
+         </h3>
+         <ol>
+          <li>
+           <span>
+            Tap on Settings and Safari
+           </span>
+          </li>
+          <li>
+           <span>
+            Tap on Passwords and Autofill
+           </span>
+          </li>
+          <li>
+           <span>
+            Tap Edit
+           </span>
+          </li>
+          <li>
+           <span>
+            Tap the selection circle next to the password you want to delete
+           </span>
+          </li>
+          <li>
+           <span>
+            Tap Delete and Delete again in the pop-up window
+           </span>
+          </li>
+          <li>
+           <span>
+            Enter your passcode
+           </span>
+          </li>
+         </ol>
+         <p dir="ltr">
+          See also:
+         </p>
+         <ul>
+          <li>
+           <a href="https://www.macworld.co.uk/how-to/mac-software/how-set-up-two-factor-authentication-for-your-apple-id-3543274/" title="Set up two-factor authentication ">
+            How to set up two factor authentication on iPhone
+           </a>
+          </li>
+         </ul>
+         <h2>
+          Save your credit card details into Safari
+         </h2>
+         <p>
+          If you do a lot of shopping online you might want to enter your credit card details into Safari. They can then be used on a website to make a payment. Follow these steps to add a credit card to Safari
+         </p>
+         <ol>
+          <li>
+           <span>
+            Tap on Settings and Safari
+           </span>
+          </li>
+          <li>
+           <span>
+            Tap on Passwords and AutoFill
+           </span>
+          </li>
+          <li>
+           <span>
+            Tap on the button next to Credit Cards
+           </span>
+          </li>
+          <li>
+           <span>
+            Tap on Saved Credit Cards
+           </span>
+          </li>
+          <li>
+           <span>
+            Tap on Add Credit Card
+           </span>
+          </li>
+          <li>
+           <span>
+            Fill out the Cardholder, Numbers, Expires and Description and tap Done
+           </span>
+          </li>
+         </ol>
+         <p>
+          When you are using a website and it requests your credit card information you can use the Autofill option in a pop-up window to fill in the information automatically. Note that you will still need your CVV (Card Verification Value) number to make a purchase. This is the three-digit number on the reverse of most credit cards.
+         </p>
+         <p>
+          See also:
+         </p>
+         <ul>
+          <li>
+           <a href="https://www.macworld.co.uk/news/ipad/alternatives-safari-best-web-browser-apps-ipad-iphone-3492593/">
+            Alternatives to Safari: The best web browser apps for iPad and iPhone
+           </a>
+          </li>
+          <li>
+           <a href="https://www.macworld.co.uk/how-to/apple/how-set-touch-id-fingerprint-scanner-iphone-5s-3471071/">
+            How to set up Touch ID fingerprint scanner on iPhone 5s
+           </a>
+          </li>
+          <li>
+           <a href="https://www.macworld.co.uk/how-to/mac-software/how-clear-safari-history-cookies-3496193/">
+            How to clear website history and cookies in Safari on a Mac
+           </a>
+          </li>
+         </ul>
+         <h2 id="icloudkeychain">
+          What is iCloud Keychain?
+         </h2>
+         <p>
+          If you have multiple Apple devices and want to use Safari to save your passwords, then you can use iCloud Keychain to synchronise your passwords from one device to another. So if you enter a password into a website on your iPhone, it will automatically be added to your iPad.
+         </p>
+         <p>
+          You must have your passcode activated to use iCloud Keychain. Follow these steps to turn on iCloud Keychain
+         </p>
+         <ol>
+          <li>
+           Tap on Settings and iCloud
+          </li>
+          <li>
+           Tap on Keychain and turn on the button next to iCloud Keychain
+          </li>
+          <li>
+           Enter your iCloud password and tap on OK
+          </li>
+          <li>
+           Move to another computer or device using the same iCloud. On the Mac open System Preferences and iCloud and details next to iCloud
+          </li>
+          <li>
+           Enter your Apple ID and Password and click on Allow
+          </li>
+         </ol>
+         <p>
+          Your iPad or iPhone will now have all the usernames and passwords that have been stored on your Mac (and vice versa). You can also do the same thing with your iPhone to sync between all your devices. If you don’t have a Mac you can use an iPhone to authorise the iPad or vice versa, just follow the Notification pop-up and enter your Apple ID and Password on the device.
+         </p>
+         <p>
+          Your passwords are generally secure on your iPad or iPhone, although you shouldn’t share them with other people. And, of course, anybody who has access to your Passcode as well as your device will then be able to view all your other passwords. So be careful about sharing your iPad and passcode with other people.
+         </p>
+         <p>
+          We have a lot of faith in Apple to keep our details secure on its server. Apple generally takes security of its back-end systems very seriously. But you will need to enter your passcode to use iCloud Keychain, so it often feels like you’re simply swapping one password for another.
+         </p>
+         <p>
+          Read about
+          <a href="https://www.macworld.co.uk/how-to/iosapps/protect-your-social-media-privacy-on-ios-3513394/" title="How to protect privacy on social media sites">
+           how to protect your privacy on social media sites here.
+          </a>
+         </p>
+        </main>
+       </meta>
+      </meta>
+     </article>
+     <script>
+      window.idguk = window.idguk || {};
+(function(require){
+require(['inArticleAds'], function(inArticleAds) {
+inArticleAds({
+'abc' : 123
+, outbrain : '\r\n\r\n\t<div id=\"outbrain-93308794-577F-46CC-8D68B253C76475C4\" class=\"outbrain-widget\">\r\n\t\t<div class=\"OUTBRAIN\" data-is-aysnc=\"true\" data-src=\"https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/\" data-widget-id=\"AR_2\" data-ob-template=\"B2CIDGUK\"></div>\r\n\t\t\r\n\t\t\t<sc' + 'ript>\r\n\t\t\t\twindow.idguk = window.idguk || {};\r\n\t\t\t\t(function(require){\r\n\t\t\t\t\tif(false){\r\n\t\t\t\t\t\tvar obSrc = window.top.location.href;\r\n\r\n\t\t\t\t\t\t\r\n\r\n\t\t\t\t\t\t$(\'#outbrain-93308794-577F-46CC-8D68B253C76475C4 .OUTBRAIN\').attr(\'data-src\', obSrc);\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t\tif(typeof OBR !== \'undefined\'){\r\n\t\t\t\t\t\t//OBR.extern.reloadWidget();\r\n\t\t\t\t\t\tOBR.extern.researchWidget();\r\n\t\t\t\t\t}else{\r\n\t\t\t\t\t\trequire([\'https://widgets.outbrain.com/outbrain.js\'], function(){\r\n\t\t\t\t\t\t\t//OBR.extern.reloadWidget();\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\r\n\t\t\t\t})(typeof idguk.require !== \'undefined\' ? idguk.require : require);\r\n\t\t\t</sc' + 'ript>\r\n\t\t\r\n\t</div>\r\n'
+,showAvidAd : true
+, showConnatix: true
+,isComtent : !!false
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+     </script>
+     <aside class="articleAsideContainer" id="articleAsideContainer">
+      <span>
+       Tags:
+      </span>
+      <ul class="relList">
+       <li>
+        <a href="https://www.macworld.co.uk/iphone/">
+         iPhone
+        </a>
+        ,
+       </li>
+       <li>
+        <a href="https://www.macworld.co.uk/ipad/">
+         iPad
+        </a>
+        ,
+       </li>
+       <li>
+        <a href="https://www.macworld.co.uk/iosapps/">
+         iOS Apps
+        </a>
+       </li>
+      </ul>
+     </aside>
+     <aside class="shareContainer articleAsideContainer">
+      <header>
+       <span>
+        Share this article
+       </span>
+      </header>
+      <style>
+       .socialIcon div a {
+overflow: hidden;
+cursor:hand;
+}
+      </style>
+      <div class="bottom intentShareArticleBtns socialContainer" data-ga="bottom intentShareArticleBtns socialContainer social tools">
+       <div class="socialIcon facebook">
+        <div data-gd-fb-url="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/" data-gd-plugin="facebook-share" data-gd-use-network-button="false">
+         <a class="ihq-share-facebook" data-type="facebook" data-url="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/" href="#" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/','sharer','toolbar=0,status=0,width=626,height=356,top='+sTop+',left='+sLeft);return false;">
+          <div class="socialIconText">
+           Share
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="socialIcon twitter">
+        <div data-gd-plugin="twitter-share" data-gd-tw-text="Why the iOS app XcodeGhost exploit shouldn't concern you" data-gd-tw-url="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/" data-gd-use-network-button="false">
+         <a class="ihq-share-twitter" data-type="twitter" data-url="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/" href="#" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://twitter.com/share?text=Why%20the%20iOS%20app%20XcodeGhost%20exploit%20shouldn%27t%20concern%20you&amp;url=https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+          <div class="socialIconText">
+           Tweet
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="socialIcon emailButton">
+        <a class="email-btn" href="#zzz">
+         <div class="socialIconText">
+          Send
+         </div>
+        </a>
+       </div>
+       <div class="sendToFriendContainer">
+        ﻿
+        <div id="sendToFriend-588CA828-A68F-4FB8-937BC9D42B7F1097">
+         <style>
+          .emailButton {margin-top: -8px;}
+         </style>
+         <a class="topOfFormPlacer" href="#topoffbSendToAFriendFormForm" id="topoffbSendToAFriendFormForm" name="topoffbSendToAFriendFormForm">
+          <!-- x -->
+         </a>
+         <form action="#" class="fbSendToAFriendForm" enctype="multipart/form-data" id="fbSendToAFriendForm1FormID" method="POST" name="fbSendToAFriendFormForm">
+          <div class="emailformFieldContainer formFieldContainer mandatory" id="recipientEmailFormFieldContainer">
+           <input class="formemail " data-msg-email="Email address is not valid" data-msg-required="This field is required" id="recipientEmailFieldID" name="recipientEmail" placeholder="Friend's email/s (comma separated)*" required="" title="Friend's email/s (comma separated)" type="email" value=""/>
+           <span class="formFieldErrorMessage" id="recipientEmailFormFieldErrorMessage">
+           </span>
+          </div>
+          <div class="textformFieldContainer formFieldContainer mandatory" id="senderNameFormFieldContainer">
+           <input class="formtext " data-msg-maxlength="This field needs to be at most 99 characters" data-msg-minlength="This field needs to be at least 4 characters" data-msg-required="This field is required" id="senderNameFieldID" maxlength="99" minlength="4" name="senderName" placeholder="Your Name*" required="" title="Your Name" type="text" value=""/>
+           <span class="formFieldErrorMessage" id="senderNameFormFieldErrorMessage">
+           </span>
+          </div>
+          <div class="emailformFieldContainer formFieldContainer mandatory" id="senderEmailFormFieldContainer">
+           <input class="formemail " data-msg-email="Email address is not valid" data-msg-required="This field is required" id="senderEmailFieldID" name="senderEmail" placeholder="Your email*" required="" title="Your email" type="email" value=""/>
+           <span class="formFieldErrorMessage" id="senderEmailFormFieldErrorMessage">
+           </span>
+          </div>
+          <div class="textareaformFieldContainer formFieldContainer mandatory" id="sendToFriendCommentFormFieldContainer">
+           <textarea class="formtextarea " data-msg-maxlength="This field needs to be at most 400 characters" data-msg-required="This field is required" id="sendToFriendCommentFieldID" maxlength="400" name="sendToFriendComment" placeholder="Comment" required="" title="Comment">Hi. I saw this on Macworld UK and thought you should see it too.</textarea>
+           <span class="formFieldErrorMessage" id="sendToFriendCommentFormFieldErrorMessage">
+           </span>
+          </div>
+          <div class="hiddenformFieldContainer formFieldContainer" id="imageFormFieldContainer">
+           <input id="imageFieldID" name="image" type="hidden" value="https://cdn2.macworld.co.uk/cmsdata/features/3453938/iPhone-ios-security-image_thumb450.jpg"/>
+           <span class="formFieldErrorMessage" id="imageFormFieldErrorMessage">
+           </span>
+          </div>
+          <div class="hiddenformFieldContainer formFieldContainer" id="summaryFormFieldContainer">
+           <input id="summaryFieldID" name="summary" type="hidden" value="The iPad and iPhone are said to be more secure than Android, but the latest XcodeGhost exploit joins November 2014's WireLurker and Masque Attack malware threats, September's leaking of celebrity photos stored in iCloud, February's security flaw and the Find My Phone hijacking scam have concerned many. Can Apple maintain its stance that iOS is secure? We examine the various cases that have begged the question of security on the iOS platform, we look at how to make sure your iPhone or iPad is secure and ask whether this all this means Apple's iOS isn't secure?"/>
+           <span class="formFieldErrorMessage" id="summaryFormFieldErrorMessage">
+           </span>
+          </div>
+          <div class="hiddenformFieldContainer formFieldContainer" id="headlineFormFieldContainer">
+           <input id="headlineFieldID" name="headline" type="hidden" value="Why the iOS app XcodeGhost exploit shouldn't concern you"/>
+           <span class="formFieldErrorMessage" id="headlineFormFieldErrorMessage">
+           </span>
+          </div>
+          <div class="hiddenformFieldContainer formFieldContainer" id="linkFormFieldContainer">
+           <input id="linkFieldID" name="link" type="hidden" value="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/"/>
+           <span class="formFieldErrorMessage" id="linkFormFieldErrorMessage">
+           </span>
+          </div>
+          <div class="submitformFieldContainer formFieldContainer" id="FormFieldContainer">
+           <input autocomplete="off" class="formsubmit " id="FieldID" name="" type="submit" value="Send"/>
+           <span class="formFieldErrorMessage" id="FormFieldErrorMessage">
+           </span>
+          </div>
+          <input name="FHJS_222_000_III" type="hidden" value="44CCACFE89BFAA0D2E5392FAB5EF899C4EA2A3B7087A8D8A5D3837AE2CB4ED19151BC58ABD7D5B8D69F63498B2607CCEC50D78821A4016F7AF82893C826C68D3B20CCBA49662DD4A8692859DD5DF177D76C589709F93F09FB3BC04C0FCDFF135697E5E73CEC316CDBBBDD8AA8B8AB0379A0AD1D13ECB3DAEB7FCD3ED28A21FA4A2C4E0D0889DF1AFA0DC1B50BDA7C514F99B92A08AAFAEA485B7CAA445C8DB2F82A64106D35250ADA4A7D1D3ED2DA38967A983AAC5A4A3480A19C51CD1B2713B8457A182801880AE1FDBD50985C4AD7BAEFA18BABC15AC2E7221EDCCEDF94B3B6C3CA5D06EDAEAADB796DCDCCDE1BDAD858E4E194AA05393F71902ACB22B8FD752B0DD5912C697BBEF9FBE0C64ADEECD5EA8975FC15396A8924DE8EFDE89B58EC9C4EFD7D6D30F7FB39C6E958E95D366927C1FC8BD0FFB517CDDB9B699E118AFD877797CBB5DDC5F9E1EDBD4AEA234BBFEE90D4F5EA7AB48E3DB9F77A0FBB95FABAEAB91D9091EB6859D8B9F90F9BD465B225291519E46A59BB0C385BE8889FA8906C4A7DED5E5FD76BBB56E28771F83AE6333A85123459E84374BC4C6DDDFD088A97880A38A2BA58689E5F715F11CD1F88AAD6169A8A0899C9CBE0BDCEFE1F1CCC3DDFB30E04735662685BC61F810D7C95D30C5B727B27CC5C944C9DB0CA292838AF9E4EEAA4C98A3B782CED13D0DAE7F07BD529F3093A8E9C0F9B295EF40CD938BAC3D888CB65547C0BDDF3BAB578992AFB99BEBC26C11ACFF3C80CB158C8084AB4BA407DA49A3A21FA38AA68A0788AC8750705AEFD1D6EFEED2FBA3AB74A38C8472A47AFA3A23F5C1CEFCE13CB7BFA8A337D8A5D592D3A0CD16FB05E39575269389D4C6C484AC7E78A18653819EBEDD6916368FED071D56809DA8BA92F197F4B124B5B63A9273305428D189D7B1DA4B5AD859188B8796AFDCC711033CDA9FACB66A7B894AA673A2760D4944D0CBE0DCB88808AB4D9059898E7A9503BFB0BEA0839118B105B41FE36A2EBA51E173809D90B0ADC5F5CBD6C1D57EA19E929CA18A7988B3DC3E90E0988F91B685BB99DA9E954DD38E8C19BB998899920DAFAB51BBE93352AAA4809A60836BD9BC51C4C4F4C0DDB09FB8B9DDDDDB182C89B7ABA3B99590398998AC96728250418746D395B0B6A3A2C5F0BDA90AA3ED88819247D1DB196F8F9317B2FDE0FDD9D711009B4A2E919A8C18898F42D3925E99037DA3909487848AEBB7BAF5B2AAAACBA89230CAB99145DD1D63C3DD4ED29C26BD7A5690BB3E920616F3C5616CDCA8EEAD5ADAB72AD1BFB5A2EEFEA1E9D9528EB3A744B3B4B27C9CA5B2387E075546939BAF9475DFD69D8F46D98F8C4CF6985A93C853EFB9AEA2B05314D51EDB7E7584D2DDEE755D945ADCF50D14CAFB6B6FB250150DDD8CAC9C56A94C9A919ABBB27EA693C7CAD96AC637BAC516C4ACF19CA69291F56D9F0C857ABDACA8B5B059C5C6ECA3867D935F9B986B32168A47A09D9A1393A94A629BC9AEA6F3BD72857B9834B86BBF4AA4BE2999A8CD1CC6BEB1CBCD5A48380899FD0946515FBAA7B8A0BEB7E8BCBBB79A45035CBBD39F8AA0FCB4BDB7A3A5AC7FAC9CC6C1D8EDC5C59F509C7F5772949D33803250E4D090DEF9698A1478FB05C98CF19E11D8D1F2C48F2686BCCECCE93B90989F4380DCE33D9FBBA95462AE236E81A8BCF5DF837D937B8BB28E8680A0811FD3C6BFDBB7B6B5B6AE933A8ADFF6ABFC3EC8C4D50A11D510AF6E1044AF72959A7381009A9083B893A1F2B98BEB93C52309BDB23A6C9C26A2A2B3ABB07DE797B69DDD49ECD5F8EE9060BB69C6943FC58D558E9ADF1B7EBFFD8DDD7ADD6C7CF7B9AAA68D99AED0B65D9ABADABD99AD8F70ADA4D662DCD8DCBCBA26B29F219EAA856192415720FDAE6F4090B79C988995D596DD119D1A1FD7D089266A902B6683B2A87AF9C4D13CA3F1399297BD5DF91489D1BF7A8FBA98AB7C35FDD6BA9CC6A11B09CADDBE2EAB7AA1FFA2AEEA7E39BE11C3DD0E9F993972B449B2BFBC55FC6B9BC5F6DCDF06ED616C6A2BC5D5DE9AB6A08DBEC0FD98806BB805F17B76979B77589DCDD17CB1A6A092377E9B92923D0F06EC90B3B949BFF138FDB9942D8A18D149C6B292799EC616A76508A16A72BDF6CF3506DB9E878B941398608CC49C94F8B7A99F0A29B0FCA88EB0B6485CC14CDCE0D789EECBA2C8B7A3AA203239BE85E3D0C55514AA938FBDA36822788C6ABE1690C51DF5DDA19EB2E3DCCDDD44AC9294AE5B66D1B2CDAABE09BEDB1F14B787FB58DA51D9CAECA4B27296BA9ECB00525CFFE5D550B2895277889BADBFF3E1B6131DC3ED8972A12C6B929B317E377A88FCD4D4C56F8A"/>
+          <input name="FHJS_333_000_III" type="hidden" value="/nQoFuXLpuJdhCYYZeUL3BnDBfnk8sKlwz6P8DgEmkM="/>
+         </form>
+        </div>
+        <script type="text/javascript">
+         window.idguk = window.idguk || {};
+(function(require){
+require(['sendToFriendForm'], function(sendToFriendForm){
+new sendToFriendForm({
+el: $('#sendToFriend-588CA828-A68F-4FB8-937BC9D42B7F1097').find('#fbSendToAFriendForm1FormID').get(0),
+triggerEl: $('.sendToFriendContainer:has(#sendToFriend-588CA828-A68F-4FB8-937BC9D42B7F1097)').parent().find('.emailButton a').get(0)
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+        </script>
+       </div>
+      </div>
+     </aside>
+     <script>
+      window.idguk = window.idguk || {};
+(function(require){
+require(['jquery', 'magnificPopup'], function($){
+$(document).ready(function(){
+bodyImages = [];
+var count = 0;
+$('#mainContent article:first img').each( function(index, value) {
+//console.log('imageAsSlides src='+$(this).attr('src'));
+var imgSrc = $(this).attr('src') || '';
+var dataSrc = $(this).attr('data-src') || '';
+var src = (dataSrc.length !== 0) ? dataSrc : imgSrc;
+if ((src.indexOf('cmsdata')>0) && (src.indexOf('cmsdata/deal/') == - 1) && (src.indexOf('cmsdata/author/') == - 1)) {
+count++;
+$(this).css('cursor','pointer');
+$(this).css('cursor','hand');
+src = src.search(/\_thumb\.[a-z]+$/i) > 0 ? src.replace(/\_thumb\.([a-z]+)$/i,'.$1') : src;//if its a thumb assume larger image (remove _thumb)
+bodyImages.push({
+src: src
+});
+$(this).attr('title', 'Click for slideshow');
+}
+}).on('click',function(evt){
+var src = evt.currentTarget.src;
+src = src.search(/\_thumb\.[a-z]+$/i) > 0 ? src.replace(/\_thumb\.([a-z]+)$/i,'.$1') : src;
+var idx = 1;
+$.each(bodyImages, function(index, value) {
+//console.log('imageAsSlides testing '+src+' for '+value.src);
+if(src.indexOf(value.src) != -1){
+//console.log('imageAsSlides found index='+index);
+idx = index;
+}
+});
+$.magnificPopup.open({
+type: 'image',
+items: bodyImages,
+gallery: {
+enabled: true
+}
+// other options
+},idx);
+});
+})
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+     </script>
+     <script type="text/javascript">
+      //<!-- (stops google bot processing the strings as urls)
+window.idguk = window.idguk || {};
+(function(require){
+'use strict';
+require(['jquery'], function($) {
+var selector = '.carouselEmbeddableDeal',
+pubref = '41-3453938-19-0000000';
+require(['appleLinks'], function(appleLinks){
+appleLinks(selector, pubref);
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+//-->
+     </script>
+     <script type="text/javascript">
+      //<!-- (stops google bot processing the strings as urls)
+window.idguk = window.idguk || {};
+(function(require){
+'use strict';
+require(['jquery'], function($) {
+var selector = '.chartEmbeddableDeal',
+pubref = '41-3453938-19-0000000';
+require(['appleLinks'], function(appleLinks){
+appleLinks(selector, pubref);
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+//-->
+     </script>
+     <script type="text/javascript">
+      //<!-- (stops google bot processing the strings as urls)
+window.idguk = window.idguk || {};
+(function(require){
+'use strict';
+require(['jquery'], function($) {
+var selector = '#articleBody',
+pubref = '41-3453938-11-0000000';
+require(['appleLinks'], function(appleLinks){
+appleLinks(selector, pubref);
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+//-->
+     </script>
+     <script type="text/javascript">
+      window.idguk = window.idguk || {};
+(function(require){
+require(['jquery','jstorage'], function($) {
+window.$geoLocationDef.done(function(){
+var countryCode = $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase() === '-' ? 'gb' : $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase();
+var msDomainFilter = '[href^="https://www.microsoft.com"]'
++',[href^="http://www.microsoft.com"]'
++',[href^="https://microsoft.com"]'
++',[href^="http://microsoft.com"]';
+var msSearchmask = 'en-gb';
+var msUrlRegEx = new RegExp(msSearchmask, "ig");
+var msStoreDomainFilter = '[href^="https://www.microsoftstore.com"]'
++',[href^="http://www.microsoftstore.com"]'
++',[href^="https://microsoftstore.com"]'
++',[href^="http://microsoftstore.com"]';
+var msStoreSearchmask = 'msuk/en_gb';
+var msStoreUrlRegEx = new RegExp(msStoreSearchmask, "ig");
+var msOfficeDomainRegEx = new RegExp("^https?:\/\/([^/]*\.)?office\.com(\/.*|$)", "ig");
+switch(countryCode) {
+case 'us':
+msUrlCountryCode = 'en-us';
+msOfficeUrlCountryCode = 'en-us';
+msStoreUrlCountryCode = 'msusa/en_US';
+//affiliateTrackerPrefix = 'https://afflnk.microsoft.com/c/312327/433017/7593?subId1=41-3453938-19-0000000&u=';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/433017/7593?subId1=41-3453938-19-0000000&u=';
+break;
+case 'ca':
+msUrlCountryCode = 'en-ca';
+msOfficeUrlCountryCode = 'en-ca';
+msStoreUrlCountryCode = 'msca/en_CA';
+//affiliateTrackerPrefix = 'https://afflnk.microsoft.com/c/312327/439092/7814?subId1=41-3453938-19-0000000&u=';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/439092/7814?subId1=41-3453938-19-0000000&u=';
+break;
+case 'fr':
+msUrlCountryCode = 'en-fr';
+msOfficeUrlCountryCode = 'en-fr';
+msStoreUrlCountryCode = 'msca/en_FR';
+//affiliateTrackerPrefix = 'https://afflnk.microsoft.com/c/312327/439033/7809?subId1=41-3453938-19-0000000&u=';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/439033/7809?subId1=41-3453938-19-0000000&u=';
+break;
+case 'es':
+msUrlCountryCode = 'en-es';
+msOfficeUrlCountryCode = 'en-es';
+msStoreUrlCountryCode = 'msca/en_ES';
+//affiliateTrackerPrefix = 'https://afflnk.microsoft.com/c/312327/438819/7791?subId1=41-3453938-19-0000000&u=';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/438819/7791?subId1=41-3453938-19-0000000&u=';
+break;
+/*
+case 'au':
+msUrlCountryCode = 'en-au';
+msOfficeUrlCountryCode = 'en-au';
+msStoreUrlCountryCode = 'msaus/en_AU';
+affiliateTrackerPrefix = 'http://clkuk.tradedoubler.com/click?p(227118)a(2897986)g(22467084)41-3453938-19-0000000url(';
+break;
+case 'in':
+msUrlCountryCode = 'en-in';
+msOfficeUrlCountryCode = 'en-in';
+msStoreUrlCountryCode = 'msin/en_GB';
+affiliateTrackerPrefix = 'http://clkuk.tradedoubler.com/click?p(235158)a(2897991)g(22471924)41-3453938-19-0000000url(';
+break;
+*/
+default:
+msUrlCountryCode = 'en-gb';
+msOfficeUrlCountryCode = 'en-gb';
+msStoreUrlCountryCode = 'msuk/en_GB';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/438863/7794?subId1=41-3453938-19-0000000&u=';
+//affiliateTrackerPrefix = 'http://clkuk.tradedoubler.com/click?p(266696)a(1544997)g(22905486)epi(41-3453938-19-0000000)url(';
+break;
+}
+/*	only search the container specified and limit the search for <a's with hrefs that contain 'microsoft.com' */
+$('.carouselEmbeddableDeal').find(msDomainFilter).each(function(idx, val){
+var href = $(this).attr('href');
+var replacedHref = href.replace(msUrlRegEx, msUrlCountryCode);
+var affiliateTrackerLink = affiliateTrackerPrefix + replacedHref;
+//if(countryCode=='gb'){
+//	affiliateTrackerLink = affiliateTrackerLink + ')';
+//}
+$(this).attr('href',affiliateTrackerLink);
+$(this).attr('data-microsoft-affiliate','true');
+});
+/*	only search the container specified and limit the search for <a's with hrefs that contain 'microsoftstore.com' */
+$('.carouselEmbeddableDeal').find(msStoreDomainFilter).each(function(idx, val){
+var href = $(this).attr('href');
+var replacedHref = href.replace(msStoreUrlRegEx, msStoreUrlCountryCode);
+var affiliateTrackerLink = affiliateTrackerPrefix + replacedHref;
+//if(countryCode=='gb'){
+//	affiliateTrackerLink = affiliateTrackerLink + ')';
+//}
+$(this).attr('href',affiliateTrackerLink);
+$(this).attr('data-microsoftstore-affiliate','true');
+});
+/*	only search the container specified and limit the search for <a's with hrefs that contain 'office.com' */
+$('.carouselEmbeddableDeal a').filter(function(){
+var attr = $(this).attr('href');
+if (typeof attr !== 'undefined') {
+return attr.match(msOfficeDomainRegEx);
+}
+return false;
+}).each(function(idx, val){
+var href = $(this).attr('href');
+var replacedHref = href.replace(msUrlRegEx, msUrlCountryCode);
+var affiliateTrackerLink = affiliateTrackerPrefix + replacedHref;
+//if(countryCode=='gb'){
+//	affiliateTrackerLink = affiliateTrackerLink + ')';
+//}
+$(this).attr('href',affiliateTrackerLink);
+$(this).attr('data-microsoft-office-affiliate','true');
+});
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+     </script>
+     <script type="text/javascript">
+      window.idguk = window.idguk || {};
+(function(require){
+require(['jquery','jstorage'], function($) {
+window.$geoLocationDef.done(function(){
+var countryCode = $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase() === '-' ? 'gb' : $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase();
+var msDomainFilter = '[href^="https://www.microsoft.com"]'
++',[href^="http://www.microsoft.com"]'
++',[href^="https://microsoft.com"]'
++',[href^="http://microsoft.com"]';
+var msSearchmask = 'en-gb';
+var msUrlRegEx = new RegExp(msSearchmask, "ig");
+var msStoreDomainFilter = '[href^="https://www.microsoftstore.com"]'
++',[href^="http://www.microsoftstore.com"]'
++',[href^="https://microsoftstore.com"]'
++',[href^="http://microsoftstore.com"]';
+var msStoreSearchmask = 'msuk/en_gb';
+var msStoreUrlRegEx = new RegExp(msStoreSearchmask, "ig");
+var msOfficeDomainRegEx = new RegExp("^https?:\/\/([^/]*\.)?office\.com(\/.*|$)", "ig");
+switch(countryCode) {
+case 'us':
+msUrlCountryCode = 'en-us';
+msOfficeUrlCountryCode = 'en-us';
+msStoreUrlCountryCode = 'msusa/en_US';
+//affiliateTrackerPrefix = 'https://afflnk.microsoft.com/c/312327/433017/7593?subId1=41-3453938-19-0000000&u=';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/433017/7593?subId1=41-3453938-19-0000000&u=';
+break;
+case 'ca':
+msUrlCountryCode = 'en-ca';
+msOfficeUrlCountryCode = 'en-ca';
+msStoreUrlCountryCode = 'msca/en_CA';
+//affiliateTrackerPrefix = 'https://afflnk.microsoft.com/c/312327/439092/7814?subId1=41-3453938-19-0000000&u=';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/439092/7814?subId1=41-3453938-19-0000000&u=';
+break;
+case 'fr':
+msUrlCountryCode = 'en-fr';
+msOfficeUrlCountryCode = 'en-fr';
+msStoreUrlCountryCode = 'msca/en_FR';
+//affiliateTrackerPrefix = 'https://afflnk.microsoft.com/c/312327/439033/7809?subId1=41-3453938-19-0000000&u=';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/439033/7809?subId1=41-3453938-19-0000000&u=';
+break;
+case 'es':
+msUrlCountryCode = 'en-es';
+msOfficeUrlCountryCode = 'en-es';
+msStoreUrlCountryCode = 'msca/en_ES';
+//affiliateTrackerPrefix = 'https://afflnk.microsoft.com/c/312327/438819/7791?subId1=41-3453938-19-0000000&u=';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/438819/7791?subId1=41-3453938-19-0000000&u=';
+break;
+/*
+case 'au':
+msUrlCountryCode = 'en-au';
+msOfficeUrlCountryCode = 'en-au';
+msStoreUrlCountryCode = 'msaus/en_AU';
+affiliateTrackerPrefix = 'http://clkuk.tradedoubler.com/click?p(227118)a(2897986)g(22467084)41-3453938-19-0000000url(';
+break;
+case 'in':
+msUrlCountryCode = 'en-in';
+msOfficeUrlCountryCode = 'en-in';
+msStoreUrlCountryCode = 'msin/en_GB';
+affiliateTrackerPrefix = 'http://clkuk.tradedoubler.com/click?p(235158)a(2897991)g(22471924)41-3453938-19-0000000url(';
+break;
+*/
+default:
+msUrlCountryCode = 'en-gb';
+msOfficeUrlCountryCode = 'en-gb';
+msStoreUrlCountryCode = 'msuk/en_GB';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/438863/7794?subId1=41-3453938-19-0000000&u=';
+//affiliateTrackerPrefix = 'http://clkuk.tradedoubler.com/click?p(266696)a(1544997)g(22905486)epi(41-3453938-19-0000000)url(';
+break;
+}
+/*	only search the container specified and limit the search for <a's with hrefs that contain 'microsoft.com' */
+$('.chartEmbeddableDeal').find(msDomainFilter).each(function(idx, val){
+var href = $(this).attr('href');
+var replacedHref = href.replace(msUrlRegEx, msUrlCountryCode);
+var affiliateTrackerLink = affiliateTrackerPrefix + replacedHref;
+//if(countryCode=='gb'){
+//	affiliateTrackerLink = affiliateTrackerLink + ')';
+//}
+$(this).attr('href',affiliateTrackerLink);
+$(this).attr('data-microsoft-affiliate','true');
+});
+/*	only search the container specified and limit the search for <a's with hrefs that contain 'microsoftstore.com' */
+$('.chartEmbeddableDeal').find(msStoreDomainFilter).each(function(idx, val){
+var href = $(this).attr('href');
+var replacedHref = href.replace(msStoreUrlRegEx, msStoreUrlCountryCode);
+var affiliateTrackerLink = affiliateTrackerPrefix + replacedHref;
+//if(countryCode=='gb'){
+//	affiliateTrackerLink = affiliateTrackerLink + ')';
+//}
+$(this).attr('href',affiliateTrackerLink);
+$(this).attr('data-microsoftstore-affiliate','true');
+});
+/*	only search the container specified and limit the search for <a's with hrefs that contain 'office.com' */
+$('.chartEmbeddableDeal a').filter(function(){
+var attr = $(this).attr('href');
+if (typeof attr !== 'undefined') {
+return attr.match(msOfficeDomainRegEx);
+}
+return false;
+}).each(function(idx, val){
+var href = $(this).attr('href');
+var replacedHref = href.replace(msUrlRegEx, msUrlCountryCode);
+var affiliateTrackerLink = affiliateTrackerPrefix + replacedHref;
+//if(countryCode=='gb'){
+//	affiliateTrackerLink = affiliateTrackerLink + ')';
+//}
+$(this).attr('href',affiliateTrackerLink);
+$(this).attr('data-microsoft-office-affiliate','true');
+});
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+     </script>
+     <script type="text/javascript">
+      window.idguk = window.idguk || {};
+(function(require){
+require(['jquery','jstorage'], function($) {
+window.$geoLocationDef.done(function(){
+var countryCode = $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase() === '-' ? 'gb' : $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase();
+var msDomainFilter = '[href^="https://www.microsoft.com"]'
++',[href^="http://www.microsoft.com"]'
++',[href^="https://microsoft.com"]'
++',[href^="http://microsoft.com"]';
+var msSearchmask = 'en-gb';
+var msUrlRegEx = new RegExp(msSearchmask, "ig");
+var msStoreDomainFilter = '[href^="https://www.microsoftstore.com"]'
++',[href^="http://www.microsoftstore.com"]'
++',[href^="https://microsoftstore.com"]'
++',[href^="http://microsoftstore.com"]';
+var msStoreSearchmask = 'msuk/en_gb';
+var msStoreUrlRegEx = new RegExp(msStoreSearchmask, "ig");
+var msOfficeDomainRegEx = new RegExp("^https?:\/\/([^/]*\.)?office\.com(\/.*|$)", "ig");
+switch(countryCode) {
+case 'us':
+msUrlCountryCode = 'en-us';
+msOfficeUrlCountryCode = 'en-us';
+msStoreUrlCountryCode = 'msusa/en_US';
+//affiliateTrackerPrefix = 'https://afflnk.microsoft.com/c/312327/433017/7593?subId1=41-3453938-11-0000000&u=';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/433017/7593?subId1=41-3453938-11-0000000&u=';
+break;
+case 'ca':
+msUrlCountryCode = 'en-ca';
+msOfficeUrlCountryCode = 'en-ca';
+msStoreUrlCountryCode = 'msca/en_CA';
+//affiliateTrackerPrefix = 'https://afflnk.microsoft.com/c/312327/439092/7814?subId1=41-3453938-11-0000000&u=';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/439092/7814?subId1=41-3453938-11-0000000&u=';
+break;
+case 'fr':
+msUrlCountryCode = 'en-fr';
+msOfficeUrlCountryCode = 'en-fr';
+msStoreUrlCountryCode = 'msca/en_FR';
+//affiliateTrackerPrefix = 'https://afflnk.microsoft.com/c/312327/439033/7809?subId1=41-3453938-11-0000000&u=';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/439033/7809?subId1=41-3453938-11-0000000&u=';
+break;
+case 'es':
+msUrlCountryCode = 'en-es';
+msOfficeUrlCountryCode = 'en-es';
+msStoreUrlCountryCode = 'msca/en_ES';
+//affiliateTrackerPrefix = 'https://afflnk.microsoft.com/c/312327/438819/7791?subId1=41-3453938-11-0000000&u=';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/438819/7791?subId1=41-3453938-11-0000000&u=';
+break;
+/*
+case 'au':
+msUrlCountryCode = 'en-au';
+msOfficeUrlCountryCode = 'en-au';
+msStoreUrlCountryCode = 'msaus/en_AU';
+affiliateTrackerPrefix = 'http://clkuk.tradedoubler.com/click?p(227118)a(2897986)g(22467084)41-3453938-11-0000000url(';
+break;
+case 'in':
+msUrlCountryCode = 'en-in';
+msOfficeUrlCountryCode = 'en-in';
+msStoreUrlCountryCode = 'msin/en_GB';
+affiliateTrackerPrefix = 'http://clkuk.tradedoubler.com/click?p(235158)a(2897991)g(22471924)41-3453938-11-0000000url(';
+break;
+*/
+default:
+msUrlCountryCode = 'en-gb';
+msOfficeUrlCountryCode = 'en-gb';
+msStoreUrlCountryCode = 'msuk/en_GB';
+affiliateTrackerPrefix = 'https://microsoft.msafflnk.net/c/312327/438863/7794?subId1=41-3453938-11-0000000&u=';
+//affiliateTrackerPrefix = 'http://clkuk.tradedoubler.com/click?p(266696)a(1544997)g(22905486)epi(41-3453938-11-0000000)url(';
+break;
+}
+/*	only search the container specified and limit the search for <a's with hrefs that contain 'microsoft.com' */
+$('#articleBody').find(msDomainFilter).each(function(idx, val){
+var href = $(this).attr('href');
+var replacedHref = href.replace(msUrlRegEx, msUrlCountryCode);
+var affiliateTrackerLink = affiliateTrackerPrefix + replacedHref;
+//if(countryCode=='gb'){
+//	affiliateTrackerLink = affiliateTrackerLink + ')';
+//}
+$(this).attr('href',affiliateTrackerLink);
+$(this).attr('data-microsoft-affiliate','true');
+});
+/*	only search the container specified and limit the search for <a's with hrefs that contain 'microsoftstore.com' */
+$('#articleBody').find(msStoreDomainFilter).each(function(idx, val){
+var href = $(this).attr('href');
+var replacedHref = href.replace(msStoreUrlRegEx, msStoreUrlCountryCode);
+var affiliateTrackerLink = affiliateTrackerPrefix + replacedHref;
+//if(countryCode=='gb'){
+//	affiliateTrackerLink = affiliateTrackerLink + ')';
+//}
+$(this).attr('href',affiliateTrackerLink);
+$(this).attr('data-microsoftstore-affiliate','true');
+});
+/*	only search the container specified and limit the search for <a's with hrefs that contain 'office.com' */
+$('#articleBody a').filter(function(){
+var attr = $(this).attr('href');
+if (typeof attr !== 'undefined') {
+return attr.match(msOfficeDomainRegEx);
+}
+return false;
+}).each(function(idx, val){
+var href = $(this).attr('href');
+var replacedHref = href.replace(msUrlRegEx, msUrlCountryCode);
+var affiliateTrackerLink = affiliateTrackerPrefix + replacedHref;
+//if(countryCode=='gb'){
+//	affiliateTrackerLink = affiliateTrackerLink + ')';
+//}
+$(this).attr('href',affiliateTrackerLink);
+$(this).attr('data-microsoft-office-affiliate','true');
+});
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+     </script>
+     <script type="text/javascript">
+      window.idguk = window.idguk || {};
+(function(require){
+'use strict';
+require(['jquery','jstorage'], function($) {
+window.$geoLocationDef.done(function(){
+var countryCode = $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase() === '-' ? 'gb' : $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase();
+var domainFilter = '[href^="http://www.bitdefender."],[href^="https://www.bitdefender."],[href^="http://download.bitdefender."],[href^="https://download.bitdefender."]';
+var searchmask = '(co\.uk|com)';
+var urlRegEx = new RegExp(searchmask, "ig");
+var affiliateTrackerPrefix = 'http://bitdefender.evyy.net/c/312327/501854/4466?subId1=41-3453938-19-0000000&u=';
+var domainExtention;
+switch(countryCode) {
+case 'us':
+domainExtention = 'com';
+break;
+case 'au':
+domainExtention = 'com.au';
+break;
+default:
+domainExtention = 'co.uk';
+break;
+}
+/*	only search the container specified and limit the search for <a's with hrefs that contain 'www.bitdefender' */
+$('.carouselEmbeddableDeal').find(domainFilter).each(function(idx, val){
+var href = $(this).attr('href');
+var replacedHref = href.replace(urlRegEx, domainExtention);
+var affiliateTrackerLink = affiliateTrackerPrefix + encodeURIComponent(replacedHref);
+$(this).attr('href',affiliateTrackerLink);
+});
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+     </script>
+     <script type="text/javascript">
+      window.idguk = window.idguk || {};
+(function(require){
+'use strict';
+require(['jquery','jstorage'], function($) {
+window.$geoLocationDef.done(function(){
+var countryCode = $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase() === '-' ? 'gb' : $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase();
+var domainFilter = '[href^="http://www.bitdefender."],[href^="https://www.bitdefender."],[href^="http://download.bitdefender."],[href^="https://download.bitdefender."]';
+var searchmask = '(co\.uk|com)';
+var urlRegEx = new RegExp(searchmask, "ig");
+var affiliateTrackerPrefix = 'http://bitdefender.evyy.net/c/312327/501854/4466?subId1=41-3453938-19-0000000&u=';
+var domainExtention;
+switch(countryCode) {
+case 'us':
+domainExtention = 'com';
+break;
+case 'au':
+domainExtention = 'com.au';
+break;
+default:
+domainExtention = 'co.uk';
+break;
+}
+/*	only search the container specified and limit the search for <a's with hrefs that contain 'www.bitdefender' */
+$('.chartEmbeddableDeal').find(domainFilter).each(function(idx, val){
+var href = $(this).attr('href');
+var replacedHref = href.replace(urlRegEx, domainExtention);
+var affiliateTrackerLink = affiliateTrackerPrefix + encodeURIComponent(replacedHref);
+$(this).attr('href',affiliateTrackerLink);
+});
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+     </script>
+     <script type="text/javascript">
+      window.idguk = window.idguk || {};
+(function(require){
+'use strict';
+require(['jquery','jstorage'], function($) {
+window.$geoLocationDef.done(function(){
+var countryCode = $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase() === '-' ? 'gb' : $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase();
+var domainFilter = '[href^="http://www.bitdefender."],[href^="https://www.bitdefender."],[href^="http://download.bitdefender."],[href^="https://download.bitdefender."]';
+var searchmask = '(co\.uk|com)';
+var urlRegEx = new RegExp(searchmask, "ig");
+var affiliateTrackerPrefix = 'http://bitdefender.evyy.net/c/312327/501854/4466?subId1=41-3453938-11-0000000&u=';
+var domainExtention;
+switch(countryCode) {
+case 'us':
+domainExtention = 'com';
+break;
+case 'au':
+domainExtention = 'com.au';
+break;
+default:
+domainExtention = 'co.uk';
+break;
+}
+/*	only search the container specified and limit the search for <a's with hrefs that contain 'www.bitdefender' */
+$('#articleBody').find(domainFilter).each(function(idx, val){
+var href = $(this).attr('href');
+var replacedHref = href.replace(urlRegEx, domainExtention);
+var affiliateTrackerLink = affiliateTrackerPrefix + encodeURIComponent(replacedHref);
+$(this).attr('href',affiliateTrackerLink);
+});
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+     </script>
+    </section>
+    <!--yuk-->
+    <aside class="content-area__side" data-ga="sidebar" id="sidebar">
+     <div class="side-mod side-mod--sticky" id="pin1">
+     </div>
+    </aside>
+   </div>
+   <script>
+    var imgrPlaceholder = new Imager('.delayed-image-load', {
+availableWidths: [100,230,336,450,800],
+lazyload: true,
+onResize: true 
+});
+   </script>
+  </div>
+  <script>
+   window.idguk = window.idguk || {};
+(function(require){
+require(['jquery', 'frenchArticlePopup','jstorage'], function($,frenchArticlePopup) {
+window.$geoLocationDef.done(function(){
+var countryCode = $.jStorage.get('GEO_LOC_DATA').countryCode.toLowerCase();
+var showtafrPopUp = $.jStorage.get('showtafrPopUp') ? $.jStorage.get('showtafrPopUp') : 'true';
+if (countryCode ===	'fr' && showtafrPopUp != 'false') {
+var url= '';
+frenchArticlePopup(url);
+}
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+  </script>
+  <div class="ad-container">
+   <section class="wa-container" id="waWrapper">
+    <div class="adUnitContainer wa-container" id="fourXone-pos1">
+     <script type="text/javascript">
+      googletag.cmd.push(function(){
+var id = 'fourXone-pos1';
+if (id in adConfig.adsToRefresh) {
+if(adConfig.debug)console.log('rendering ad id = ' + id);
+googletag.display(id);
+}
+});
+     </script>
+    </div>
+   </section>
+  </div>
+  <div class="leaderBoardHolder" id="bottomLeaderBoardHolder">
+   <div id="dynamicBottomLeader">
+   </div>
+   <script>
+    window.idguk = window.idguk || {};
+(function(require){
+require(['ads/dynamicAds'], function( dynamicAds) {
+var adPrefixPos = ($(window).width() > window.breakpoints.phone) ? '1' : '';
+new dynamicAds('dynamicBottomLeader','btf',adPrefixPos);
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+   </script>
+  </div>
+  <section class="marketPlace" id="marketPlace">
+   <div class="outbrain-widget" id="outbrain-A299C62E-5595-431C-8D7127D9964A279D">
+    <div class="OUTBRAIN" data-is-aysnc="false" data-ob-template="B2CIDGUK" data-src="https://www.macworld.co.uk/feature/iosapps/is-ipad-iphone-ios-safe-xcodeghost-what-security-software-need-3453938/" data-widget-id="AR_1">
+    </div>
+   </div>
+   <div class="adContainer mpu">
+    <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    </script>
+    <!-- MW Responsive Bottom Article -->
+    <ins class="adsbygoogle" data-ad-client="ca-pub-6768877878518502" data-ad-format="auto" data-ad-slot="1740929456" style="display:block">
+    </ins>
+    <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+   </div>
+  </section>
+  <section class="idgArticlesContainer hideOnMobile">
+   <div class="elsewhereIDGHeader">
+    Elsewhere on IDG sites
+   </div>
+   <article class="idgArticle">
+    <img alt="IDG UK Sites" class="idgSiteLogo" src="//cdn2.macworld.co.uk/graphics/logos/techadvisorLogo.svg"/>
+    <a href="https://www.techadvisor.co.uk/review/android-smartphones/huawei-p30-pro-3694106/" target="_blank" title="Huawei P30 Pro review">
+     <figure class="articleThumb">
+      <img alt="Huawei P30 Pro review" src="https://cdn2.techadvisor.co.uk/cmsdata/reviews/3694106/huawei_p30_pro_review_7_thumb336.jpg" width="336"/>
+     </figure>
+     <p>
+      Huawei P30 Pro review
+     </p>
+    </a>
+   </article>
+   <article class="idgArticle">
+    <img alt="IDG UK Sites" class="idgSiteLogo" src="//cdn1.macworld.co.uk/graphics/logos/digitalartsonlineLogo.svg"/>
+    <a href="https://www.digitalartsonline.co.uk/features/creative-business/16-best-portfolio-websites-for-designers-artists/" target="_blank" title="16 best portfolio websites for designers and artists">
+     <figure class="articleThumb">
+      <img alt="16 best portfolio websites for designers and artists" src="https://cdn3.digitalartsonline.co.uk/cmsdata/features/3641812/main-istock_63418347_large_thumb336.png" width="336"/>
+     </figure>
+     <p>
+      16 best portfolio websites for designers and artists
+     </p>
+    </a>
+   </article>
+   <article class="idgArticle">
+    <img alt="IDG UK Sites" class="idgSiteLogo" src="//cdn3.macworld.co.uk/graphics/logos/macworldLogo.svg"/>
+    <a href="https://www.macworld.co.uk/review/ipad/ipad-air-2019-3694865/" target="_blank" title="iPad Air (2019) review">
+     <figure class="articleThumb">
+      <img alt="iPad Air (2019) review" src="https://cdn2.macworld.co.uk/cmsdata/reviews/3694865/ipad_air_2019_review_thumb336.jpg" width="336"/>
+     </figure>
+     <p>
+      iPad Air (2019) review
+     </p>
+    </a>
+   </article>
+   <article class="idgArticle">
+    <img alt="IDG UK Sites" class="idgSiteLogo" src="//cdn1.macworld.co.uk/graphics/logos/techadvisorfrLogo.svg"/>
+    <a href="https://www.techadvisor.fr/banc-essai/ordinateurs/meilleur-logiciel-retouche-photos-mac-3688593/" target="_blank" title="Les meilleurs logiciels de retouche photos pour Mac (2019)">
+     <figure class="articleThumb">
+      <img alt="Les meilleurs logiciels de retouche photos pour Mac (2019)" src="https://cdn2.techadvisor.fr/cmsdata/slideshow/3688593/istock-meilleur_logiciel_retouche_photo_mac__thumb336.jpg" width="336"/>
+     </figure>
+     <p>
+      Les meilleurs logiciels de retouche photos pour Mac (2019)
+     </p>
+    </a>
+   </article>
+  </section>
+  <section class="siteFooter" id="siteFooter">
+   <div class="siteFooterWrapper" data-ga="footer" id="siteFooterWrapper">
+    <img alt="Macworld logo" class="footerLogo" id="footerLogo" src="//cdn1.macworld.co.uk/graphics/icons/svg/mwLogo.svg"/>
+    <nav class="footerNav ">
+     <section class="footerNavGroup siteNavSection">
+      <a href="https://www.macworld.co.uk/news/apple/" title="latest news">
+       Apple News
+      </a>
+      <a href="https://www.macworld.co.uk/review/apple/" title="latest apple reviews">
+       Apple Reviews
+      </a>
+      <a href="https://www.macworld.co.uk/how-to/apple/" title="latest how tos">
+       Apple How To
+      </a>
+      <a href="https://www.macworld.co.uk/magazine/" title="Digital Magazines">
+       Macworld Magazine
+      </a>
+      <a href="https://www.macworld.co.uk/apple-deals/" title="Latest Apple tech deals">
+       Apple Deals
+      </a>
+      <a href="https://www.techadvisor.co.uk/forum/apple-help-34/" title="Forums">
+       Mac Forums
+      </a>
+      <a href="https://www.macworld.es/" target="_blank" title="Macworld España">
+       Macworld España - Reviews, consejos
+      </a>
+     </section>
+     <section class="footerNavGroup siteNavSection">
+      <a href="https://www.macworld.co.uk/apple/" title="latest apple articles">
+       Apple
+      </a>
+      <a href="https://www.macworld.co.uk/mac/" title="latest mac articles">
+       Mac
+      </a>
+      <a href="https://www.macworld.co.uk/review/iphone/" title="latest iphone reviews">
+       iPhone Reviews
+      </a>
+      <a href="https://www.macworld.co.uk/review/ipad/" title="latest ipad reviews">
+       iPad Reviews
+      </a>
+      <a href="https://www.macworld.co.uk/download/" title="Mac Downloads">
+       Mac Downloads
+      </a>
+     </section>
+    </nav>
+    <footer class="footerNav siteInfoLinksSection">
+     <section class="footerNavGroup siteInfoLinks">
+      <a href="https://www.macworld.co.uk/about/" title="who we are and what we are about">
+       About Macworld
+      </a>
+      <a href="https://www.macworld.co.uk/contact/" title="contact us">
+       Contact
+      </a>
+      <a href="https://www.macworld.co.uk/site-map/" title="see all the sections of our site">
+       Site Map
+      </a>
+      <a href="https://www.macworld.co.uk/advertise/" title="see information for advertisers">
+       Information for advertisers
+      </a>
+     </section>
+     <section class="footerNavGroup siteInfoLinks">
+      <a href="https://www.idg.co.uk/terms-and-conditions/privacy-policy/" rel="nofollow" target="_blank" title="privacy policy">
+       Privacy Policy
+      </a>
+      <a href="https://www.idg.co.uk/terms-and-conditions/" rel="nofollow" target="_blank" title="terms &amp; conditions">
+       Terms &amp; Conditions
+      </a>
+      <a href="https://www.idg.co.uk/terms-and-conditions/cookies/" rel="nofollow" target="_blank" title="cookies on idg uk sites">
+       Cookies
+      </a>
+      <span class="cmpSettings cmpReshowLink" style="display:none;">
+       <!--injected-->
+      </span>
+      <div>
+       UK Tech Weekly Podcast:
+       <a href="https://soundcloud.com/techweeklypodcastuk" target="_blank" title="Get this feed via Soundcloud">
+        Soundcloud
+       </a>
+       /
+       <a href="https://itunes.apple.com/gb/podcast/tech-weekly-podcast-uk/id1093424200" target="_blank" title="Get this feed via iTunes">
+        iTunes
+       </a>
+      </div>
+     </section>
+    </footer>
+    <section class="idgConnectSection">
+     <a class="idgLogo" href="http://www.idg.co.uk" rel="nofollow" target="_blank" title="see more about the publishers of macworld">
+      <img alt="IDG UK" height="28" src="//cdn1.macworld.co.uk/graphics/icons/IDG-logo.png" width="111"/>
+     </a>
+     <a class="mwTwitter" href="https://twitter.com/MacworldUK" rel="nofollow" target="_blank" title="follow macworld on twitter">
+      Follow Macworld on Twitter
+     </a>
+     <a class="mwFB" href="https://www.facebook.com/MacworldUK" rel="nofollow" target="_blank" title="follow macworld on facebook">
+      Follow Macworld on Facebook
+     </a>
+    </section>
+    <p style="text-align:center;margin-top:20px;">
+     <a>
+      © Copyright 2019 IDG UK. All Rights Reserved.
+     </a>
+    </p>
+   </div>
+  </section>
+  <!-- Begin comScore Tag -->
+  <script>
+   var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "6035308" });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+  </script>
+  <noscript>
+   <img src="https://b.scorecardresearch.com/p?c1=2&amp;c2=6035308&amp;cv=2.0&amp;cj=1">
+   </img>
+  </noscript>
+  <!-- End comScore Tag -->
+  <script>
+   //script to log clicks to ga automatically, requires positioning of data-ga=""attributes on selected areas
+$('[data-ga] a').on('click',function(){
+var el = $(this).closest('[data-ga]');
+var linkText = $(this).attr('title') ? $(this).attr('title') : $(this).text();
+var debug = false;
+function f(s){
+return s.replace(/[^a-zA-Z0-9_\- ]/gim,'');
+}
+var path = [];//the google analytics "path", look for only 2 levels to avoid clutter
+if(el.size()===1){
+path.push(el.data('ga'));
+el = el.parent().closest('[data-ga]');
+if(el.size()===1)path.push(el.data('ga'));
+}
+if(path.length > 0){
+if(debug)console.log('GAevent',{'event':'GAevent', 'eventCategory':'Click', 'eventAction': path.reverse().join('/'), 'eventLabel': f(linkText)});
+dataLayer.push({'event':'GAevent', 'eventCategory':'Click', 'eventAction': path.reverse().join('/'), 'eventLabel': f(linkText)});
+}
+if(debug)return false;
+});
+  </script>
+  <!--BOX 1-->
+  <!--Server Time {ts '2019-04-11 19:39:37'}-->
+  <!-- Country Code GB-->
+  <!-- SERVER OK -->
+  <script data-obct="" type="text/javascript">
+   /** DO NOT MODIFY THIS CODE**/
+!function(_window, _document) {
+var OB_ADV_ID=['00311567606f148d52a139cf023b172c72','00741c9ed7c735c41f9bda47873d4c73ca'];
+if (_window.obApi) {var toArray = function(object) {return Object.prototype.toString.call(object) === '[object Array]' ? object : [object];};_window.obApi.marketerId = toArray(_window.obApi.marketerId).concat(toArray(OB_ADV_ID));return;}
+var api = _window.obApi = function() {api.dispatch ? api.dispatch.apply(api, arguments) : api.queue.push(arguments);};api.version = '1.1';api.loaded = true;api.marketerId = OB_ADV_ID;api.queue = [];var tag = _document.createElement('script');tag.async = true;tag.src = '//amplify.outbrain.com/cp/obtp.js';tag.type = 'text/javascript';var script = _document.getElementsByTagName('script')[0];script.parentNode.insertBefore(tag, script);}(window, document);
+obApi('track', 'PAGE_VIEW');
+  </script>
+  <script>
+   window.idguk = window.idguk || {};
+(function(require){
+'use strict';
+require(['https://cdn.boomtrain.com/analyticstrain/macworld-uk/analyticstrain.min.js'], function() {});
+})(typeof require !== 'undefined' ? require : idguk.require);
+  </script>
+  <script type="text/javascript">
+   window.idguk = window.idguk || {};
+(function(require){
+'use strict';
+var Queue = function(){
+this.push = function(e){
+if(typeof _bt === 'undefined' || this.length > 0){
+Array.prototype.push.call(this, e);
+}else{
+e();
+}
+};
+};
+Queue.prototype = [];
+window._btQueue = new Queue();
+var btCheckInterval = setInterval(function(){
+if(typeof _bt === 'undefined'){
+return;
+}
+var func;
+while(typeof (func = _btQueue.shift()) !== 'undefined'){
+func();
+}
+clearInterval(btCheckInterval);
+}, 1000);
+/*
+_btQueue.push(function(){
+});
+*/
+var toExec = function($){
+_btQueue.push(function(){
+$('body').on('click', '.logout-link', null, function(){
+_bt.clear();
+});
+});
+};
+if(typeof require !== 'undefined'){
+require(['jquery'], toExec);
+}else{
+toExec($);
+}
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+  </script>
+  <script>
+   (function(require){
+'use strict';
+window.idguk = window.idguk || {};
+window.idguk.blitzen = {
+openNewsletterSignUpForm: function(qs){
+qs = qs || '';
+if(setting('BOOMTRAIN_DEBUG'))console.log('openNewsletterSignUpForm called', arguments);
+if(qs.length > 0 && (!new RegExp('^\\?').test(qs))){
+qs = '?' + qs;
+}
+var $existingForm = $('iframe#' + setting('BLITZEN_NEWSLETTER_REGISTRATION_FORM_ID'));
+if($existingForm.length > 0){
+$existingForm.remove();
+}
+var $existingWrapper = $('div#' + setting('BLITZEN_NEWSLETTER_REGISTRATION_FORM_ID') + '_wrapper');
+if($existingWrapper.length > 0){
+$existingWrapper.remove();
+}
+var onLoad = function(){
+if(setting('BOOMTRAIN_DEBUG'))console.log('onload called for blitzen iframe', arguments, this);
+var resizeIt = function(){
+resizeCrossDomainIframe(setting('BLITZEN_NEWSLETTER_REGISTRATION_FORM_ID'), setting('BLITZEN_NEWSLETTER_REGISTRATION_FORM_URL') + qs);
+};
+if(typeof require !== 'undefined'){
+require(['blitzenForm'], function(){
+resizeIt();
+});
+}else{
+resizeIt();
+}
+/*
+delay as iframe may not be on the page yet (even though onload is called!!??)
+and loaded doesnt mean it is visible yet anyway
+*/
+setTimeout(function(){
+$('iframe#' + setting('BLITZEN_NEWSLETTER_REGISTRATION_FORM_ID')).attr('data-loaded', '1');
+}, 5000)
+if(setting('BOOMTRAIN_DEBUG'))console.log('onload finished for blitzen iframe', arguments, this);
+};
+var $iframe = $('<iframe/>', {
+'id': setting('BLITZEN_NEWSLETTER_REGISTRATION_FORM_ID'),
+'src': setting('BLITZEN_NEWSLETTER_REGISTRATION_FORM_URL') + qs,
+'class': 'blitzen-form-wrapper__form',
+'onload': onLoad,
+'data-loaded': '0'
+});
+var $wrapper = $('<div/>', {
+'id': setting('BLITZEN_NEWSLETTER_REGISTRATION_FORM_ID') + '_wrapper',
+'class': 'blitzen-form-wrapper'
+})
+$wrapper.appendTo('body');
+$iframe.attr('resize', 'true');
+$iframe.attr('width', '0px');
+$iframe.attr('height', '0px');
+$iframe.appendTo($wrapper);
+}
+};
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+  </script>
+  <div class="adUnitContainer " id="oneXone-pos1">
+   <script type="text/javascript">
+    googletag.cmd.push(function(){
+var id = 'oneXone-pos1';
+if (id in adConfig.adsToRefresh) {
+if(adConfig.debug)console.log('rendering ad id = ' + id);
+googletag.display(id);
+}
+});
+   </script>
+  </div>
+  <script>
+   window.connatixInfeed = typeof window.connatixInfeed !== 'undefined' ? window.connatixInfeed : false;
+window.idguk = window.idguk || {};
+(function(require){
+'use strict';
+require(['jquery', 'jstorage'], function($){
+if(window.connatixInfeed){
+return;
+}
+window.connatixInfeed = true;
+if(Device.isMobile || Device.isTablet){
+$(document).ready(function(){
+var script = $('<script>', { type: 'text/javascript', src: 'https://cdn.connatix.com/min/connatix.renderer.infeed.min.js' });
+script[0].setAttribute("async", "");
+script[0].setAttribute("data-connatix-token", 'fe15d912-e709-46cd-b5ab-00597acaf7d3');
+$('script:first').before(script);
+});
+return;
+}
+//desktop
+var script = $('<script>', { type: 'text/javascript', src: 'https://cdn.connatix.com/min/connatix.renderer.infeed.min.js' });
+script[0].setAttribute("async", "");
+script[0].setAttribute("data-connatix-token", 'a0ede2bb-2df0-415b-a2cf-84900e6bca08');
+$('script:first').before(script);
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+  </script>
+  <script type="text/javascript">
+   window.idguk = window.idguk || {};
+(function(require){
+require(['jquery', 'jstorage'], function($){
+var store = 'SKIP_DEALS_FORM',
+skip = $.jStorage.get(store, false) || new RegExp('^(/forum/)|(/deals/newsletter/)', 'i').test(window.location.pathname);
+if(skip){
+return;
+}
+$.jStorage.set(store, true, {TTL: 86400000});
+window.$geoLocationDef.done(function(){
+var configCopy = {};
+var countryCode = $.jStorage.get(setting('GEO_LOC_KEY'), {countryCode: 'GB'}).countryCode;
+if(new RegExp('^-$').test(countryCode)){
+countryCode = 'GB';
+}
+if(countryCode !== 'GB'){
+return;
+}
+require(['jquery', 'blitzenForm'], function($, ouibounce){
+if(typeof window.ouibounce === 'undefined' && typeof arguments[1] !== 'undefined'){
+window.ouibounce = ouibounce;
+}
+if(!window.Device.isDesktop){
+return;
+}
+$(document).ready(function(){
+var iframeId = '97a9ebe725f945fb6ebd2102a703f9',
+iframeSrc = 'https://idg.blitzen.com/form/mw-deals';
+var $iframe = $('<iframe/>', {
+'id': iframeId,
+'src': iframeSrc,
+'onload': "resizeCrossDomainIframe('" + iframeId + "', 'https://idg.blitzen.com');",
+'style': 'border: none;'
+});
+$iframe.attr('resize', 'true');
+$iframe.attr('width', '0px');
+$iframe.attr('height', '0px');
+$iframe.appendTo('body');
+});
+});
+});
+});
+})(typeof idguk.require !== 'undefined' ? idguk.require : require);
+  </script>
+  <!--START Lightbox Javascript-->
+  <script type="text/javascript">
+   /*<![CDATA[*/ window.lightboxjs || function (c) { function g(b, d) { d && (d += (/\?/.test(d) ? "&" : "?") + "lv=1"); c[b] || function () { var i = window, h = document, j = b, g = h.location.protocol, l = "load", k = 0; (function () { function b() { a.P(l); a.w = 1; c[j]("_load") } c[j] = function () { function m() { m.id = e; return c[j].apply(m, arguments) } var b, e = ++k; b = this && this != i ? this.id || 0 : 0; (a.s = a.s || []).push([e, b, arguments]); m.then = function (b, c, h) { var d = a.fh[e] = a.fh[e] || [], j = a.eh[e] = a.eh[e] || [], f = a.ph[e] = a.ph[e] || []; b && d.push(b); c && j.push(c); h && f.push(h); return m }; return m }; var a = c[j]._ = {}; a.fh = {}; a.eh = {}; a.ph = {}; a.l = d ? d.replace(/^\/\//, (g == "https:" ? g : "http:") + "//") : d; a.p = { 0: +new Date }; a.P = function (b) { a.p[b] = new Date - a.p[0] }; a.w && b(); i.addEventListener ? i.addEventListener(l, b, !1) : i.attachEvent("on" + l, b); var q = function () { function b() { return ["<head></head><", c, ' onload="var d=', n, ";d.getElementsByTagName('head')[0].", d, "(d.", g, "('script')).", i, "='", a.l, "'\"></", c, ">"].join("") } var c = "body", e = h[c]; if (!e) return setTimeout(q, 100); a.P(1); var d = "appendChild", g = "createElement",
+i = "src", k = h[g]("div"), l = k[d](h[g]("div")), f = h[g]("iframe"), n = "document", p; k.style.display = "none"; e.insertBefore(k, e.firstChild).id = o + "-" + j; f.frameBorder = "0"; f.id = o + "-frame-" + j; /MSIE[ ]+6/.test(navigator.userAgent) && (f[i] = "javascript:false"); f.allowTransparency = "true"; l[d](f); try { f.contentWindow[n].open() } catch (s) { a.domain = h.domain, p = "javascript:var d=" + n + ".open();d.domain='" + h.domain + "';", f[i] = p + "void(0);" } try { var r = f.contentWindow[n]; r.write(b()); r.close() } catch (t) { f[i] = p + 'd.write("' + b().replace(/"/g, String.fromCharCode(92) + '"') + '");d.close();' } a.P(2) }; a.l && q() })() }(); c[b].lv = "1"; return c[b] } var o = "lightboxjs", k = window[o] = g(o); k.require = g; k.modules = c }({}); /*]]>*/
+  </script>
+  <script type="text/javascript">
+   window.lightboxlib = lightboxjs.require("lightboxlib", "//www.lightboxcdn.com/vendor/f9139d80-9ef7-4b18-8321-29966b521f6f/lightbox.js?mb=" + (new Date().getTime()));
+  </script>
+  <!--END Lightbox Javascript-->
+ </body>
+</html>

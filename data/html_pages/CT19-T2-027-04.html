@@ -1,0 +1,2383 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" prefix="og: http://ogp.me/ns#">
+ <head>
+  <script src="/cdn-cgi/apps/head/UB93bGI0DlPa0ptzUL0sNU9AAlY.js">
+  </script>
+  <script type="81acd133b717b8317baab0d6-text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={xpid:"VwcEUldRGwEIU1BXBwc="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(u){try{i("ierr",[u,c.now(),!0])}catch(d){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),u=t("gos"),f=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(5),t(4),"addEventListener"in window&&t(3),c.xhrWrappable&&t(6),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(u(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(f);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[f,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),u=XMLHttpRequest,f="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(u.prototype)):u.prototype.hasOwnProperty(f)&&(o(window),o(u.prototype)),a.on(f+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],4:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],5:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",u="clearTimeout",f="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[u,"clearImmediate"],u+d),i.on(c+f,r),i.on(s+f,o)},{}],6:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=f.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,f.emit("xhr-resolved",[],t)),d.inPlace(t,x,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):v?v(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(3);var u=t("ee"),f=u.get("xhr"),d=t(18)(f),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",x=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=f;var y=window.XMLHttpRequest=function(t){var n=new p(t);try{f.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}return n};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),f.on("send-xhr-start",function(t,n){r(t,n),i(n)}),f.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else u.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],7:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(13);n.exports={generateTraceHeader:r}},{}],8:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return v(r)}function i(t,n){var e=u(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),u=t(9),f=t(7).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(12),v=t(11),w=window.XMLHttpRequest;s.features.xhr=!0,t(6),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=f();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=v(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof w&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof w&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof w&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],9:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],10:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[u.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),u=t("loader"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){f[n]=o(l+n,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,f.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[u.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[u.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[u.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,u.now(),!1,n])}},{}],11:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],12:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],13:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],14:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(u){l([u,"",[r,a,o],s])}f(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw f(n+"err",[r,a,d],s),d}finally{f(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function u(t,n,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,u?s+o:o,i,s))}function f(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=u,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,u=0;u<c;u++)s[u].apply(a,r);var d=f[g[e]];return d&&d.push([y,e,r,a]),a}}function p(t,n){x[t]=m(t).concat(n)}function h(t,n){var e=x[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return x[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){u(t,function(t,e){n=n||"feature",g[e]=n,n in f||(f[n]=[])})}var x={},g={},y={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return y}function i(){return new r}function a(){(f.api||f.feature)&&(l.aborted=!0,f=l.backlog={})}var s="nr@context",c=t("gos"),u=t(15),f={},d={},l=n.exports=o();l.backlog=f},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return f.abort();u(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),u=t(15),f=t("ee"),d=t(14),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var x=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},y=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:x,features:{},xhrWrappable:y,userAgent:d};t(10),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(17)},{}]},{},["loader",2,8]);
+  </script>
+  <meta charset="utf-8"/>
+  <link href="https://gmpg.org/xfn/11" rel="profile"/>
+  <link href="https://iphoneislam.com/wp-content/themes/remal/style.css?x83298" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://iphoneislam.com/xmlrpc.php" rel="pingback"/>
+  <link href="/superpwa-manifest.json?x83298" rel="manifest"/>
+  <meta content="#D5E0EB" name="theme-color"/>
+  <meta content="https://iphoneislam.com/wp-content/uploads/2014/01/Prefect-Photo.jpg" property="og:image">
+   <!--[if lt IE 9]>
+<script src="https://iphoneislam.com/wp-content/themes/remal/js/html5.js?x83298"></script>
+<script src="https://iphoneislam.com/wp-content/themes/remal/js/selectivizr-min.js?x83298"></script>
+<![endif]-->
+   <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" media="all" href="https://iphoneislam.com/wp-content/themes/remal/css/ie8.css?x83298" />
+<![endif]-->
+   <!--[if IE 7]>
+<link rel="stylesheet" type="text/css" media="all" href="https://iphoneislam.com/wp-content/themes/remal/css/ie7.css?x83298" />
+<![endif]-->
+   <title>
+    Do Not Fool With Camera's Specs | حتى لا نخدع بمواصفات الكاميرات
+   </title>
+   <meta content="أصبحت الكاميرات المزودة في أجهزتنا الذكية هى رفيقنا اليومي، وتسعى الشركات إلى زيادة عدد الميجا بيكسل لخداع المستخدم بها. تعرف على أسس الصورة الجيدة" name="description"/>
+   <link href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418" rel="canonical">
+    <meta content="ar_AR" property="og:locale"/>
+    <meta content="article" property="og:type"/>
+    <meta content="Do Not Fool With Camera's Specs | حتى لا نخدع بمواصفات الكاميرات" property="og:title"/>
+    <meta content="أصبحت الكاميرات المزودة في أجهزتنا الذكية هى رفيقنا اليومي، وتسعى الشركات إلى زيادة عدد الميجا بيكسل لخداع المستخدم بها. تعرف على أسس الصورة الجيدة" property="og:description"/>
+    <meta content="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418" property="og:url"/>
+    <meta content="آي-فون إسلام" property="og:site_name"/>
+    <meta content="https://www.facebook.com/iPhoneIslam" property="article:publisher"/>
+    <meta content="فيديو" property="article:tag"/>
+    <meta content="تحليل و نقاش" property="article:section"/>
+    <meta content="2014-04-12T11:32:12+00:00" property="article:published_time"/>
+    <meta content="2014-04-12T11:51:08+00:00" property="article:modified_time"/>
+    <meta content="2014-04-12T11:51:08+00:00" property="og:updated_time"/>
+    <meta content="https://iphoneislam.com/wp-content/uploads/2014/01/Prefect-Photo.jpg" property="og:image"/>
+    <meta content="https://iphoneislam.com/wp-content/uploads/2014/01/Prefect-Photo.jpg" property="og:image:secure_url"/>
+    <meta content="590" property="og:image:width"/>
+    <meta content="380" property="og:image:height"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="أصبحت الكاميرات المزودة في أجهزتنا الذكية هى رفيقنا اليومي، وتسعى الشركات إلى زيادة عدد الميجا بيكسل لخداع المستخدم بها. تعرف على أسس الصورة الجيدة" name="twitter:description"/>
+    <meta content="Do Not Fool With Camera's Specs | حتى لا نخدع بمواصفات الكاميرات" name="twitter:title"/>
+    <meta content="@iPhoneIslam" name="twitter:site"/>
+    <meta content="http://iphoneislam.com/wp-content/uploads/2014/01/Prefect-Photo.jpg" name="twitter:image"/>
+    <meta content="@iMohammadYamani" name="twitter:creator"/>
+    <script class="yoast-schema-graph yoast-schema-graph--main" type="application/ld+json">
+     {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://iphoneislam.com/#website","url":"https://iphoneislam.com/","name":"\u0622\u064a-\u0641\u0648\u0646 \u0625\u0633\u0644\u0627\u0645","publisher":{"@id":"https://iphoneislam.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://iphoneislam.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#webpage","url":"https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418","inLanguage":"ar","name":"Do Not Fool With Camera&#039;s Specs | \u062d\u062a\u0649 \u0644\u0627 \u0646\u062e\u062f\u0639 \u0628\u0645\u0648\u0627\u0635\u0641\u0627\u062a \u0627\u0644\u0643\u0627\u0645\u064a\u0631\u0627\u062a","isPartOf":{"@id":"https://iphoneislam.com/#website"},"image":{"@type":"ImageObject","@id":"https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#primaryimage","url":"https://iphoneislam.com/wp-content/uploads/2014/01/Prefect-Photo.jpg","caption":""},"primaryImageOfPage":{"@id":"https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#primaryimage"},"datePublished":"2014-04-12T11:32:12+00:00","dateModified":"2014-04-12T11:51:08+00:00","description":"\u0623\u0635\u0628\u062d\u062a \u0627\u0644\u0643\u0627\u0645\u064a\u0631\u0627\u062a \u0627\u0644\u0645\u0632\u0648\u062f\u0629 \u0641\u064a \u0623\u062c\u0647\u0632\u062a\u0646\u0627 \u0627\u0644\u0630\u0643\u064a\u0629 \u0647\u0649 \u0631\u0641\u064a\u0642\u0646\u0627 \u0627\u0644\u064a\u0648\u0645\u064a\u060c \u0648\u062a\u0633\u0639\u0649 \u0627\u0644\u0634\u0631\u0643\u0627\u062a \u0625\u0644\u0649 \u0632\u064a\u0627\u062f\u0629 \u0639\u062f\u062f \u0627\u0644\u0645\u064a\u062c\u0627 \u0628\u064a\u0643\u0633\u0644 \u0644\u062e\u062f\u0627\u0639 \u0627\u0644\u0645\u0633\u062a\u062e\u062f\u0645 \u0628\u0647\u0627. \u062a\u0639\u0631\u0641 \u0639\u0644\u0649 \u0623\u0633\u0633 \u0627\u0644\u0635\u0648\u0631\u0629 \u0627\u0644\u062c\u064a\u062f\u0629"},{"@type":"Article","@id":"https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#article","isPartOf":{"@id":"https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#webpage"},"author":{"@id":"https://iphoneislam.com/author/mohammad_hd#author","name":"\u0645\u062d\u0645\u062f \u064a\u0645\u0627\u0646\u064a"},"publisher":{"@id":"https://iphoneislam.com/#organization"},"headline":"\u062d\u062a\u0649 \u0644\u0627 \u062a\u0646\u062e\u062f\u0639 \u0628\u0645\u0648\u0627\u0635\u0641\u0627\u062a \u0627\u0644\u0643\u0627\u0645\u064a\u0631\u0627\u062a","datePublished":"2014-04-12T11:32:12+00:00","dateModified":"2014-04-12T11:51:08+00:00","commentCount":"55","mainEntityOfPage":"https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#webpage","image":{"@id":"https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#primaryimage"},"keywords":"\u0641\u064a\u062f\u064a\u0648","articleSection":"\u062a\u062d\u0644\u064a\u0644 \u0648 \u0646\u0642\u0627\u0634"},{"@type":"Person","@id":"https://iphoneislam.com/author/mohammad_hd#author","name":"\u0645\u062d\u0645\u062f \u064a\u0645\u0627\u0646\u064a","image":{"@type":"ImageObject","@id":"https://iphoneislam.com/#personlogo","url":"https://secure.gravatar.com/avatar/ecfb8744121705d68d4c58117feb02ae?s=96&d=mm&r=g","caption":"\u0645\u062d\u0645\u062f \u064a\u0645\u0627\u0646\u064a"},"description":"\u0645\u062f\u0648\u0646 \u062a\u0642\u0646\u064a \u0627\u0647\u062a\u0645 \u0628\u0625\u062b\u0631\u0627\u0621 \u0645\u0639\u0631\u0641\u062a\u064a \u0641\u064a \u0639\u0627\u0644\u0645 \u0627\u0644\u062a\u0642\u0646\u064a\u0629 \u0628\u0627\u0633\u062a\u0645\u0631\u0627\u0631 \u0648\u0623\u0646 \u0623\u0634\u0627\u0631\u0643 \u0645\u0627\u062a\u0639\u0644\u0645\u062a\u0647 \u060c \u0627\u0647\u062a\u0645 \u0628\u062c\u0645\u064a\u0639 \u0623\u0646\u0638\u0645\u0629 \u0627\u0644\u062a\u0634\u063a\u064a\u0644 \u0648 \u062a\u0632\u064a\u062f \u0627\u0646\u062a\u0627\u062c\u064a\u062a\u064a \u0628\u0627\u0633\u062a\u062e\u062f\u0627\u0645 \u0623\u062c\u0647\u0632\u0629 \u0623\u0628\u0644","sameAs":["https://twitter.com/@iMohammadYamani"]}]}
+    </script>
+    <link href="//s0.wp.com" rel="dns-prefetch"/>
+    <link href="//s.w.org" rel="dns-prefetch"/>
+    <link href="https://iphoneislam.com/feed" rel="alternate" title="آي-فون إسلام « الخلاصة" type="application/rss+xml"/>
+    <link href="https://iphoneislam.com/comments/feed" rel="alternate" title="آي-فون إسلام « خلاصة التعليقات" type="application/rss+xml"/>
+    <link href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418/feed" rel="alternate" title="آي-فون إسلام « حتى لا تنخدع بمواصفات الكاميرات خلاصة التعليقات" type="application/rss+xml"/>
+    <script type="81acd133b717b8317baab0d6-text/javascript">
+     window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/iphoneislam.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+     img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+    </style>
+    <link href="https://iphoneislam.com/wp-content/plugins/arqam/assets/style.css?x83298" id="arqam-style-css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="https://iphoneislam.com/wp-includes/css/dist/block-library/style-rtl.min.css?x83298" id="wp-block-library-rtl-css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="https://iphoneislam.com/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?x83298" id="social-logos-css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="https://iphoneislam.com/wp-content/plugins/jetpack/css/jetpack-rtl.css?x83298" id="jetpack_css-rtl-css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="https://iphoneislam.com/wp-includes/js/jquery/jquery.js?x83298" type="81acd133b717b8317baab0d6-text/javascript">
+    </script>
+    <script src="https://iphoneislam.com/wp-includes/js/jquery/jquery-migrate.min.js?x83298" type="81acd133b717b8317baab0d6-text/javascript">
+    </script>
+    <script type="81acd133b717b8317baab0d6-text/javascript">
+     /* <![CDATA[ */
+var Settings  = {"ajaxurl":"https:\/\/iphoneislam.com\/wp-admin\/admin-ajax.php","pluginImgUrl":"https:\/\/iphoneislam.com\/wp-content\/plugins\/myAjaxComments\/img","post_id":"34418","default_comments_page":"oldest","moreLinkTitle":"\u0639\u0631\u0636 \u0627\u0644\u0645\u0632\u064a\u062f \u0645\u0646 \u0627\u0644\u062a\u0639\u0644\u064a\u0642\u0627\u062a"};
+/* ]]> */
+    </script>
+    <script src="https://iphoneislam.com/wp-content/plugins/myAjaxComments/js/app.js?x83298" type="81acd133b717b8317baab0d6-text/javascript">
+    </script>
+    <script src="https://iphoneislam.com/wp-content/themes/remal/js/tie-scripts.js?x83298" type="81acd133b717b8317baab0d6-text/javascript">
+    </script>
+    <link href="https://iphoneislam.com/wp-json/" rel="https://api.w.org/"/>
+    <link href="https://iphoneislam.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+    <link href="https://iphoneislam.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+    <link href="https://iphoneislam.com/wp-content/themes/remal/rtl.css?x83298" media="screen" rel="stylesheet" type="text/css"/>
+    <meta content="WordPress 5.1.1" name="generator"/>
+    <link href="https://iphoneislam.com/?p=34418" rel="shortlink"/>
+    <link href="https://iphoneislam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fiphoneislam.com%2F2014%2F04%2Fdo-not-fool-with-cameras-specs%2F34418" rel="alternate" type="application/json+oembed"/>
+    <link href="https://iphoneislam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fiphoneislam.com%2F2014%2F04%2Fdo-not-fool-with-cameras-specs%2F34418&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+    <link href="https://iphoneislam.com/wp-content/plugins/app3ad/css/style.css?x83298" media="all" rel="stylesheet" type="text/css"/>
+    <style media="screen" type="text/css">
+     .arqam-widget-counter.arq-colored li.arq-facebook a i,
+					.arqam-widget-counter.arq-flat li.arq-facebook a,
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-facebook:hover a i{
+						background-color:#355ebf !important;
+					}
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-facebook a i{
+						border-color:#355ebf;
+						color: #355ebf;
+					}
+
+					
+					.arqam-widget-counter.arq-colored li.arq-twitter a i,
+					.arqam-widget-counter.arq-flat li.arq-twitter a,
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-twitter:hover a i{
+						background-color:#58c2e2 !important;
+					}
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-twitter a i{
+						border-color:#58c2e2;
+						color: #58c2e2;
+					}
+
+					
+					.arqam-widget-counter.arq-colored li.arq-google a i,
+					.arqam-widget-counter.arq-flat li.arq-google a,
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-google:hover a i{
+						background-color:#7f1c19 !important;
+					}
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-google a i{
+						border-color:#7f1c19;
+						color: #7f1c19;
+					}
+
+					
+					.arqam-widget-counter.arq-colored li.arq-youtube a i,
+					.arqam-widget-counter.arq-flat li.arq-youtube a,
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-youtube:hover a i{
+						background-color:#f70000 !important;
+					}
+					.arqam-widget-counter.arq-outer-frame.arq-border-colored li.arq-youtube a i{
+						border-color:#f70000;
+						color: #f70000;
+					}
+    </style>
+    <meta content="142481719428" property="fb:pages"/>
+    <meta content="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418?ia_markup=1" property="ia:markup_url"/>
+    <meta content="app-id=362375140, affiliate-data=11l7wK, app-argument=zamen://?open_news_internal=34418&amp;source_name=iphoneislam" name="apple-itunes-app"/>
+    <meta content="zamen://?open_news_internal=34418&amp;source_name=iphoneislam" property="al:ios:url"/>
+    <meta content="362375140" property="al:ios:app_store_id"/>
+    <meta content="Zamen | زامن" property="al:ios:app_name"/>
+    <meta content="zamen://?open_news_internal=34418&amp;source_name=iphoneislam" property="al:iphone:url"/>
+    <meta content="362375140" property="al:iphone:app_store_id"/>
+    <meta content="Zamen | زامن" property="al:iphone:app_name"/>
+    <meta content="zamen://?open_news_internal=34418&amp;source_name=iphoneislam" property="al:ipad:url"/>
+    <meta content="362375140" property="al:ipad:app_store_id"/>
+    <meta content="Zamen | زامن" property="al:ipad:app_name"/>
+    <meta content="https://iphoneislam.com/?p=34418" property="al:web:url"/>
+    <link href="//widgets.wp.com" rel="dns-prefetch"/>
+    <link href="//s0.wp.com" rel="dns-prefetch"/>
+    <link href="//0.gravatar.com" rel="dns-prefetch"/>
+    <link href="//1.gravatar.com" rel="dns-prefetch"/>
+    <link href="//2.gravatar.com" rel="dns-prefetch"/>
+    <style type="text/css">
+     img#wpstats{display:none}
+    </style>
+    <link href="https://iphoneislam.com/favicon.ico?x83298" rel="shortcut icon" title="Favicon"/>
+    <script type="81acd133b717b8317baab0d6-text/javascript">
+     /* <![CDATA[ */
+var tie = {"ajaxurl":"https://iphoneislam.com/wp-admin/admin-ajax.php","paged" : "1" ,"maxPages" : "0","loading":"جاري التحميل ..." , "width" : "340" , "prettyPhoto" : "light_rounded" , "query" : "p=34418&year=2014&monthnum=04&name=do-not-fool-with-cameras-specs"  };
+/* ]]> */
+jQuery.Isotope.prototype._positionAbs = function( x, y ) {
+  return { right: x, top: y };
+};
+var transforms = false;
+    </script>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+     <style media="screen" type="text/css">
+      body {background: #f6eee3 url(https://iphoneislam.com/wp-content/themes/remal/images/patterns/body-bg1.png) center;}
+	a {
+	color: #3176bf;	}
+a:hover {
+	color: #2c4194;	}
+header {background:#e6e6e6 url('')    ;}
+.header-bar {border-top-color: #6997c9;}
+#main-nav , #main-nav ul ul {background:#eee9e3 url('')    ;}
+#main-nav ul li a , #main-nav ul ul a {
+	color: #8f8f8f !important;}
+#main-nav ul li a:hover, #main-nav ul li:hover > a, #main-nav ul :hover > a  {
+	color: #c9af8e !important;}
+.scrollToTop {
+	background-color: #6997c9 ;
+}
+.pagination span.current {
+	background-color: #6997c9 ;
+}
+.post .entry a {
+	color: #fc4857;	}
+.post .entry a:hover {
+	color: #6997c9;	}
+/*Fix/*
+.iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  max-width: 100% !important;
+}
+
+/* Drop Cap */
+p.dropcap {overflow: hidden; font-size: 120% !important; line-height: inherit !important;}
+span.dropcap {font-size: 200%; margin: -4px 5px 0 15px; line-height: 100%; float: left;display: block; color: #666;}
+
+/* Notice Styles */
+.alert {color: #D0583F;background-image: url(/wp-content/typography/alert.png);background-color: #FFFBFB;border-bottom: 1px solid #F8C9BB;border-right: 1px solid #F8C9BB;}
+.approved {color: #6CB656;background-image: url(/wp-content/typography/approved.png);background-color: #FAFDF9;border-bottom: 1px solid #C1CEC1;border-right: 1px solid #C1CEC1;}
+.attention {color: #E1B42F;background-image: url(/wp-content/typography/attention.png);background-color: #FFFDF6;border-bottom: 1px solid #E4E4D5;border-right: 1px solid #E4E4D5;}
+.camera {color: #55A0B4;background-image: url(/wp-content/typography/camera.png);background-color: #F6FBFB;border-bottom: 1px solid #C9D5D8;border-right: 1px solid #C9D5D8;}
+.cart {color: #559726;background-image: url(/wp-content/typography/cart.png);background-color: #FCFCFC;border-bottom: 1px solid #D3D3D3;border-right: 1px solid #D3D3D3;}
+.doc {color: #666666;background-image: url(/wp-content/typography/doc.png);background-color: #FFFFFF;border-bottom: 1px solid #E5E5E5;border-right: 1px solid #E5E5E5;}
+.download {color: #666666;background-image: url(/wp-content/typography/download.png);background-color: #FCFCFC;border-bottom: 1px solid #D3D3D3;border-right: 1px solid #D3D3D3;}
+.media {color: #8D79A9;background-image: url(/wp-content/typography/media.png);background-color: #FBF9FD;border-bottom: 1px solid #DBE1E6;border-right: 1px solid #DBE1E6;}
+.note {color: #B76F38;background-image: url(/wp-content/typography/note.png);background-color: #FFFAF6;border-bottom: 1px solid #E6DAD2;border-right: 1px solid #E6DAD2;}
+.notice {color: #6187B3;background-image: url(/wp-content/typography/notice.png);background-color: #FAFCFD;border-bottom: 1px solid #C7CDDA;border-right: 1px solid #C7CDDA;}
+.quote {color: #727272;background-image: url(/wp-content/typography/quote.png);background-color: #F3F3F3;border-bottom: 1px solid #D4D4D4;border-right: 1px solid #D4D4D4;}
+
+/* RTL Stuff */
+span.dropcap {margin: -4px 5px 0 15px;float: right;}
+.typo-icon {padding: 8px 0px 0px 10px;margin: 15px 0;background-position: 99% 12px;}
+
+/* Comments */
+.byuser .comment-avatar{ background:#3176bf}
+.bypostauthor .comment-avatar{ background:#ffffad;}
+.bypostauthor {background:#ffffad;}
+
+
+/* SubMenu Codes */
+.cat_4 .post-footer{border-top: 3px solid #9fbcaa;}
+.cat_4 a.more-link, .acat_4{background:#9fbcaa;}
+
+.cat_6 .post-footer{border-top: 3px solid #eab69d;}
+.cat_6 a.more-link, .acat_6{background:#eab69d;}
+
+.cat_3 .post-footer{border-top: 3px solid #d5c5af;}
+.cat_3 a.more-link, .acat_3{background:#d5c5af;}
+
+.cat_9 .post-footer{border-top: 3px solid #97aebf;}
+.cat_9 a.more-link, .acat_9{background:#97aebf;}
+
+.cat_88 .post-footer{border-top: 3px solid #b4a992;}
+.cat_88 a.more-link, .acat_88{background:#b4a992;}
+
+.cat_54 .post-footer{border-top: 3px solid #cca0a0;}
+.cat_54 a.more-link, .acat_54{background:#cca0a0;}
+
+.cat_22 .post-footer{border-top: 3px solid #bba0cc;}
+.cat_22 a.more-link, .acat_22{background:#bba0cc;}
+
+.cat_1 .post-footer{border-top: 3px solid #cca0c5;}
+.cat_1 a.more-link, .acat_1{background:#cca0c5;}
+
+.cat_14 .post-footer{border-top: 3px solid #a0b4cc;}
+.cat_14 a.more-link, .acat_14{background:#a0b4cc;}
+
+.cat_86 .post-footer{border-top: 3px solid #a0ccc0;}
+.cat_86 a.more-link, .acat_86{background:#a0ccc0;}
+
+.cat_7 .post-footer{border-top: 3px solid #a8cca0;}
+.cat_7 a.more-link, .acat_7{background:#a8cca0;}
+
+.cat_31 .post-footer{border-top: 3px solid #99aaaa;}
+.cat_31 a.more-link, .acat_31{background:#99aaaa;}
+
+.cat_124 .post-footer{border-top: 3px solid #d9b96d;}
+.cat_124 a.more-link, .acat_124{background:#d9b96d;}
+
+.cat_15 .post-footer{border-top: 3px solid #7788bb;}
+.cat_15 a.more-link, .acat_15{background:#7788bb;}
+
+.cat_10 .post-footer{border-top: 3px solid #444444;}
+.cat_10 a.more-link, .acat_10{background:#444444;}
+     </style>
+     <script type="81acd133b717b8317baab0d6-text/javascript">
+      var _prum = [['id', '54a9ed26abe53df1181855a7'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+     </script>
+     <meta content="2f3a85cdb92a2cd978a096e3e35dab49" name="inmobi-site-verification"/>
+     <meta content="آي-فون إسلام" name="apple-mobile-web-app-title"/>
+     <link href="/apple-touch-icon.png?x83298" rel="apple-touch-icon"/>
+     <link href="/apple-touch-icon-57x57.png?x83298" rel="apple-touch-icon" sizes="57x57"/>
+     <link href="/apple-touch-icon-72x72.png?x83298" rel="apple-touch-icon" sizes="72x72"/>
+     <link href="/apple-touch-icon-76x76.png?x83298" rel="apple-touch-icon" sizes="76x76"/>
+     <link href="/apple-touch-icon-114x114.png?x83298" rel="apple-touch-icon" sizes="114x114"/>
+     <link href="/apple-touch-icon-120x120.png?x83298" rel="apple-touch-icon" sizes="120x120"/>
+     <link href="/apple-touch-icon-144x144.png?x83298" rel="apple-touch-icon" sizes="144x144"/>
+     <link href="/apple-touch-icon-152x152.png?x83298" rel="apple-touch-icon" sizes="152x152"/>
+     <meta content="wordpress-plugin" name="onesignal">
+      <link href="https://iphoneislam.com/superpwa-manifest.json?x83298" rel="manifest"/>
+      <script async="" src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" type="81acd133b717b8317baab0d6-text/javascript">
+      </script>
+      <script type="81acd133b717b8317baab0d6-text/javascript">
+       window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("https://iphoneislam.com");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '839edb97-27ba-43a0-8356-85c9ffdad792';
+oneSignal_options['autoRegister'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "آي-فون إسلام";
+oneSignal_options['welcomeNotification']['message'] = "شكراً لك، سوف يتم أشعارك عند وجود مقالات جديدة";
+oneSignal_options['welcomeNotification']['url'] = "iphoneislam.com";
+oneSignal_options['path'] = "https://iphoneislam.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.3cd6b41f-0715-4da8-9007-02ca4af2dc44";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['promptOptions']['actionMessage'] = 'يرغب في عرض الإشعارات';
+oneSignal_options['promptOptions']['exampleNotificationTitleDesktop'] = 'هذا مثال للإشعارات';
+oneSignal_options['promptOptions']['exampleNotificationMessageDesktop'] = 'آي-فون إسلام: مقال جديد رائع';
+oneSignal_options['promptOptions']['exampleNotificationTitleMobile'] = 'آي-فون إسلام: مقال جديد رائع';
+oneSignal_options['promptOptions']['exampleNotificationMessageMobile'] = 'آي-فون إسلام: مقال جديد رائع';
+oneSignal_options['promptOptions']['exampleNotificationCaption'] = 'آي-فون إسلام';
+oneSignal_options['promptOptions']['acceptButtonText'] = 'تابع';
+oneSignal_options['promptOptions']['cancelButtonText'] = 'لا شكراً';
+oneSignal_options['promptOptions']['siteName'] = 'آي-فون إسلام';
+oneSignal_options['promptOptions']['autoAcceptTitle'] = 'اضغط للسماح';
+oneSignal_options['notifyButton'] = { };
+oneSignal_options['notifyButton']['enable'] = true;
+oneSignal_options['notifyButton']['position'] = 'bottom-left';
+oneSignal_options['notifyButton']['theme'] = 'default';
+oneSignal_options['notifyButton']['size'] = 'medium';
+oneSignal_options['notifyButton']['prenotify'] = true;
+oneSignal_options['notifyButton']['showCredit'] = false;
+oneSignal_options['notifyButton']['text'] = {};
+oneSignal_options['notifyButton']['text']['message.prenotify'] = 'اضغط هنا لتشترك في الإشعارات';
+oneSignal_options['notifyButton']['text']['tip.state.unsubscribed'] = 'انت غير مشترك في الإشعارات';
+oneSignal_options['notifyButton']['text']['tip.state.subscribed'] = 'انت مشترك في الإشعارات';
+oneSignal_options['notifyButton']['text']['tip.state.blocked'] = 'لقد قمت بحجب الإشعارات من المتصفح';
+oneSignal_options['notifyButton']['text']['message.action.subscribed'] = 'شكراً لك، سوف يتم أشعارك عند وجود مقالات جديدة';
+oneSignal_options['notifyButton']['text']['message.action.resubscribed'] = 'شكراً لك، سوف يتم أشعارك عند وجود مقالات جديدة';
+oneSignal_options['notifyButton']['text']['message.action.unsubscribed'] = 'لن يصلك إشعارات منا مرة اخرى';
+oneSignal_options['notifyButton']['text']['dialog.main.title'] = 'إدارة الإشعارات';
+oneSignal_options['notifyButton']['text']['dialog.main.button.subscribe'] = 'اشترك';
+oneSignal_options['notifyButton']['text']['dialog.main.button.unsubscribe'] = 'الغي الإشتراك';
+oneSignal_options['notifyButton']['text']['dialog.blocked.title'] = 'قم بإلغاء حجب الإشعارات';
+oneSignal_options['notifyButton']['text']['dialog.blocked.message'] = 'اتبع هذه التعليمات لإلغاء حجب الإشعارات';
+              OneSignal.init(window._oneSignalInitOptions);
+                    });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+      </script>
+      <link href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418/amp" rel="amphtml"/>
+     </meta>
+    </meta>
+   </link>
+  </meta>
+ </head>
+ <body class="rtl post-template-default single single-post postid-34418 single-format-standard" id="top">
+  <div class="background-cover">
+  </div>
+  <div class="wrapper">
+   <header class="header layout2">
+    <div class="header-content">
+     <div class="logo">
+      <a href="https://iphoneislam.com/" title="آي-فون إسلام">
+       <img alt="آي-فون إسلام" src="https://iphoneislam.com/images/iphoneislam-logo.png?x83298"/>
+       <strong>
+        آي-فون إسلام برامج عربية و أخبار الأيفون, الأيبود تاتش و الأيباد – Arabic iPhone, iPod Touch, iPad News &amp; Apps
+       </strong>
+      </a>
+     </div>
+     <div class="social-icons">
+      <a class="tooldown" href="https://iphoneislam.com/feed" target="_blank" title="Rss">
+       <img alt="RSS" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/rss_24.png?x83298"/>
+      </a>
+      <a class="tooldown" href="https://plus.google.com/+iphoneislam/" target="_blank" title="Google+">
+       <img alt="Google+" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/google_plus_24.png?x83298"/>
+      </a>
+      <a class="tooldown" href="https://www.facebook.com/iphoneislam" target="_blank" title="Facebook">
+       <img alt="Facebook" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/facebook_24.png?x83298"/>
+      </a>
+      <a class="tooldown" href="https://www.twitter.com/iphoneislam" target="_blank" title="Twitter">
+       <img alt="Twitter" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/twitter_24.png?x83298"/>
+      </a>
+      <a class="tooldown" href="https://www.linkedin.com/company/iphoneislam" target="_blank" title="LinkedIn">
+       <img alt="LinkedIn" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/linkedin_24.png?x83298"/>
+      </a>
+      <a class="tooldown" href="https://www.youtube.com/iphoneislamtube" target="_blank" title="Youtube">
+       <img alt="YouTube" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/youtube_24.png?x83298"/>
+      </a>
+      <a class="tooldown" href="https://www.instagram.com/iphoneislam/" target="_blank" title="instagram">
+       <img alt="instagram" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/instagram_24.png?x83298"/>
+      </a>
+     </div>
+     <div class="search-block">
+      <form action="https://iphoneislam.com/" id="searchform" method="get">
+       <input class="search-button" type="submit" value=""/>
+       <input data-cf-modified-81acd133b717b8317baab0d6-="" id="s" name="s" onblur="if (!window.__cfRLUnblockHandlers) return false; if (this.value == '') {this.value = 'أدخل كلمة البحث ...';}" onfocus="if (!window.__cfRLUnblockHandlers) return false; if (this.value == 'أدخل كلمة البحث ...') {this.value = '';}" type="text" value="أدخل كلمة البحث ..."/>
+      </form>
+     </div>
+     <div class="clear">
+     </div>
+    </div>
+    <nav id="main-nav">
+     <div class="main-menu">
+      <ul class="menu" id="menu-main-menu">
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7838" id="menu-item-7838">
+        <a href="http://www.iphoneislam.com/">
+         الرئيسية
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7840" id="menu-item-7840">
+        <a href="https://iphoneislam.com/roadmap">
+         إنجازاتنا
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9085" id="menu-item-9085">
+        <a href="https://iphoneislam.com/ourapps">
+         تطبيقاتنا
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10523" id="menu-item-10523">
+        <a href="https://iphoneislam.com/faq">
+         اسئلة متكررة
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7844" id="menu-item-7844">
+        <a href="https://iphoneislam.com/firmware">
+         ملفات النظام
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70640" id="menu-item-70640">
+        <a href="/shortcuts">
+         اختصارات
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7843" id="menu-item-7843">
+        <a href="https://iphoneislam.com/contactus">
+         اتصل بنا
+        </a>
+       </li>
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70641" id="menu-item-70641">
+        <a href="#">
+         تصنيفات
+        </a>
+        <ul class="sub-menu">
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70642" id="menu-item-70642">
+          <a href="https://iphoneislam.com/category/news">
+           أخبار
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70643" id="menu-item-70643">
+          <a href="https://iphoneislam.com/category/apps">
+           برامج
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70651" id="menu-item-70651">
+          <a href="https://iphoneislam.com/category/ios_updates">
+           تحديثات النظام
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70649" id="menu-item-70649">
+          <a href="https://iphoneislam.com/category/problems">
+           مشاكل و حلول
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-70644" id="menu-item-70644">
+          <a href="https://iphoneislam.com/category/analysis">
+           تحليل و نقاش
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70645" id="menu-item-70645">
+          <a href="https://iphoneislam.com/category/tipsandtricks">
+           نصائح وألاعيب
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70646" id="menu-item-70646">
+          <a href="https://iphoneislam.com/category/iphoneislam">
+           آي-فون إسلام
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70647" id="menu-item-70647">
+          <a href="https://iphoneislam.com/category/howto">
+           كيف
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70648" id="menu-item-70648">
+          <a href="https://iphoneislam.com/category/general">
+           عام
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70650" id="menu-item-70650">
+          <a href="https://iphoneislam.com/category/featured">
+           مميز
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </div>
+     <div class="menu-mob">
+      <select id="main-menu-mob">
+       <option selected="selected" value="">
+        إذهب إلى ...
+       </option>
+       <option value="http://www.iphoneislam.com/">
+        الرئيسية
+       </option>
+       <option value="https://iphoneislam.com/roadmap">
+        إنجازاتنا
+       </option>
+       <option value="https://iphoneislam.com/ourapps">
+        تطبيقاتنا
+       </option>
+       <option value="https://iphoneislam.com/faq">
+        اسئلة متكررة
+       </option>
+       <option value="https://iphoneislam.com/firmware">
+        ملفات النظام
+       </option>
+       <option value="/shortcuts">
+        اختصارات
+       </option>
+       <option value="https://iphoneislam.com/contactus">
+        اتصل بنا
+       </option>
+       <option value="#">
+        تصنيفات
+       </option>
+       <option value="https://iphoneislam.com/category/news">
+        - أخبار
+       </option>
+       <option value="https://iphoneislam.com/category/apps">
+        - برامج
+       </option>
+       <option value="https://iphoneislam.com/category/ios_updates">
+        - تحديثات النظام
+       </option>
+       <option value="https://iphoneislam.com/category/problems">
+        - مشاكل و حلول
+       </option>
+       <option value="https://iphoneislam.com/category/analysis">
+        - تحليل و نقاش
+       </option>
+       <option value="https://iphoneislam.com/category/tipsandtricks">
+        - نصائح وألاعيب
+       </option>
+       <option value="https://iphoneislam.com/category/iphoneislam">
+        - آي-فون إسلام
+       </option>
+       <option value="https://iphoneislam.com/category/howto">
+        - كيف
+       </option>
+       <option value="https://iphoneislam.com/category/general">
+        - عام
+       </option>
+       <option value="https://iphoneislam.com/category/featured">
+        - مميز
+       </option>
+      </select>
+     </div>
+    </nav>
+   </header>
+   <div class="container sidebar-left" id="content-container">
+    <div id="content">
+     <div id="crumbs">
+      <a href="https://iphoneislam.com">
+       الرئيسية
+      </a>
+      /
+      <a href="https://iphoneislam.com/category/analysis">
+       تحليل و نقاش
+      </a>
+      /
+      <span class="current">
+       حتى لا تنخدع بمواصفات الكاميرات
+      </span>
+     </div>
+     <div class="ads-post">
+      <a href="https://ar.imobie.com/afftracking.php?src=https://iphoneislam.com/&amp;des=https://ar.imobie.com/phonerescue/index.htm&amp;ecommerce=avangate&amp;aid=107270" target="_blank">
+       <img alt="" class="size-full wp-image-67306 aligncenter" height="72" src="https://iphoneislam.com/wp-content/uploads/2018/06/PhoneRescue_AD.jpg?x83298" width='400"'/>
+      </a>
+     </div>
+     <article class="item-list post-34418 post type-post status-publish format-standard has-post-thumbnail hentry category-analysis tag-video cat_88">
+      <div class="post-inner">
+       <h1 class="entry-title">
+        حتى لا تنخدع بمواصفات الكاميرات
+       </h1>
+       <p class="post-meta">
+        <span>
+         نشرت بواسطة:
+         <a href="https://iphoneislam.com/author/mohammad_hd" title="">
+          محمد يماني
+         </a>
+        </span>
+        <span>
+         بتاريخ 12 أبريل 2014
+        </span>
+        <span>
+         في
+         <a href="https://iphoneislam.com/category/analysis" rel="category tag">
+          تحليل و نقاش
+         </a>
+        </span>
+        <span>
+         <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#comments">
+          55 تعليق
+         </a>
+        </span>
+        <span class="entry-likes alignleft">
+         <a class="tie-likes" href="#" rel="34418" title="">
+          59
+         </a>
+        </span>
+       </p>
+       <div class="clear">
+       </div>
+       <div class="entry">
+        <p dir="rtl" style="text-align: justify;">
+         الكاميرات في الهواتف الذكية أصبحت من أهم الاجزاء والتي تتنافس الشركات في إنتاج أفضل التقنيات لها لتوفير تجربة تصوير إبداعية للمستخدم، وأصبح المستخدمون يتسابقون لاقتناء الهواتف التي تحمل كاميرات ذات دقة وتقنيات عالية لالتقاط ذكرياتهم ولحظاتهم، لكن أحياناً تلاحظ أن الصور الملتقطة بهاتف من HTC مثلاً أفضل من هاتف آخر في LG بالرغم من أن الإثنين يمتلكان نفس الميجا بيكسل. وتجد هواتف ذات كاميرا 8 ميجا صورها أكثر جمالاً من أخرى 13 ميجا. لذا قررنا في هذا المقال أن نستعرض ما يجب علينا كمستخدمين معرفته عن كاميرات الهواتف الذكية لتفهم ما هى معايير الصورة الجيدة ولا تخدع بدعايا أي شركة.
+        </p>
+        <p dir="rtl" style="text-align: center;">
+         <img alt="حتى لا تنخدع بمواصفات الكاميرات" height="380" src="https://iphoneislam.com/wp-content/uploads/2014/01/Prefect-Photo.jpg?x83298" width="590"/>
+         <br/>
+         <span id="more-34418">
+         </span>
+        </p>
+        <hr/>
+        <h3 dir="rtl" style="text-align: justify;">
+         البيكسل و الصورة النقية
+        </h3>
+        <p dir="rtl" style="text-align: justify;">
+         تتفاخر بعض الشركات والمستخدمين بعدد البيكسلات في الكاميرا ويعتقد الكثيرون أنه كلما زاد عدد البيكسلات أصبحت الصورة أفضل وهذا الاعتقاد يجب تصحيحه، فعدد البيكسلات حقيقة هو ناتج ضرب (عدد البيكسلات العرضية X عدد البيكسلات الطولية) في الصورة الناتجة من هذه الكاميرا، فمثلاً كاميرا الآي فون 5s قادرة على إلتقاط صورة بعدد بيكسلات طولية 3264 بيكسل وعدد بيكسلات عرضية 2448 بيكسل فيكون عدد البيكسلات (3264*2448 = تقريباً 8,000,000 بيكسل = 8 ميجا بيكسل) وتعلمون من مواصفات الآي فون 5s أنه يحمل كاميرا 8 ميجابيكسل .. وصلت؟؟
+         <img alt="نوكيا 41 ميجا" class="aligncenter" height="509" src="https://iphoneislam.com/wp-content/uploads/2014/04/nokia-808-pureview2-updatec.jpg?x83298" width="590"/>
+        </p>
+        <p dir="rtl" style="text-align: justify;">
+         عدد البيكسلات غالباً ما يُفيد في حجم الصورة المُلتقطة فلو أردت مثلاً أن تطبع صورك بأحجام كبيرة هنا عليك بالكاميرات ذات البيكسلات العالية مثل كاميرا جهاز Nokia 808 PureView ذات 41 ميجا بيكسل، وفي المقابل لايعني عدد البيكسلات العالي أنك ستحصل على صور ذات إضاءة عالية ودقة حادة فهذه تعتمد على حجم البيكسلات.
+        </p>
+        <p dir="rtl" style="text-align: justify;">
+         خبراء التصوير يعلمون أنه كلما زاد حجم البيكسل الواحد كلما نتج عنه صور أفضل، لأن البيكسل الأكبر يعني إضاءه أكثر وحيز أوسع لاستعاب أكبر عدد من الألوان، وأيضاً تقليل في النغمشة في الصور. فمثلاً أبل قامت بزيادة حجم البيكسل الواحدة لتصبح 1.5 مايكرون في الآي فون 5S في حين أن S5 حجم البيكسل 1.12µ أما الحجم الأكبر فهو HTC One الذي يقدم 2µ. الخلاصة أن كلما زاد حجم البيكسل زادت جودة الصورة وبدون الحاجة لزيادة الميجا بكسل. والذي يتحكم بكمية الضوء هو الـ “Aperture”
+        </p>
+        <div class="approved">
+         <div class="typo-icon">
+          <h4 dir="rtl" style="text-align: center;">
+           قبل أن تفكر في أن تنخدع بعدد الميجا بيكسل فقم بالبحث على الإنترنت لتعلم حجم البيكسل الواحدة.
+          </h4>
+         </div>
+        </div>
+        <hr/>
+        <h3 style="text-align: justify;">
+         <strong>
+          فتحة
+         </strong>
+         العدسة
+         <strong>
+          (Aperture)
+         </strong>
+        </h3>
+        <p style="text-align: justify;">
+         <img alt="aperture.jpg" height="295" src="https://iphoneislam.com/wp-content/uploads/2014/04/aperture.jpg?x83298" width="590"/>
+        </p>
+        <p dir="rtl" style="text-align: justify;">
+         فتحة العدسة أكثر أهمية من عدد البيكسلات  فهي التي تتحكم بكمية الضوء الداخلة حيث يمر الضوء من خلالها وصولاً للمُستشعر، كلما كانت العدسة أكبر كلما حصل المُستشعر على كمية ضوء أكبر سمحت له بإنتاج صورة أروع كما ستقرأون في الفقرة في الفقرة القادمة، وحجم فتحة العدسة يشار له في المواصفات دائما بـ (رقم/F) وهنا يجب الانتباه أنه كلما كان الرقم أصغر كلما كانت فتحة العدسة أكبر (رقم أصغر = فتحة عدسة أكبر = ضوء أكثر = صورة أفضل) فمثلاً كاميرة جهاز HTC One بفتحة عدسة (2.0/F) بينما الآي فون 5s وجالاكسي S5 فيأتيان بفتحة عدسة (2.2/F) مما يعني أن جهاز HTC ذو فتحة عدسة أكبر.
+        </p>
+        <p dir="rtl" style="text-align: justify;">
+         وهنا يجب مراعاة أن فتحة العدسة وكمية الضوء الداخلة منه هي عامل مساعد لإنتاج صورة ممتازة ولكن الجزء الاكبر من المهمة يقع على عاتق المُستشعر.
+        </p>
+        <div class="approved">
+         <div class="typo-icon">
+          <h4 dir="rtl" style="text-align: center;">
+           المواقع المتخصصة مثل
+           <a href="http://www.phonearena.com/" target="_blank">
+            Phonearene
+           </a>
+           ترشد المستخدم إلى حجم الـ “Aperture” لكل جهاز لذا قبل شراءك تأكد من معرفتك لحجمها لتتوقع مستقبل صورك
+          </h4>
+         </div>
+        </div>
+        <hr/>
+        <h3 dir="rtl" style="text-align: justify;">
+         المستشعر (السينسور)
+        </h3>
+        <p>
+         <img alt="حساس الكاميرا" class="aligncenter" height="320" src="https://iphoneislam.com/wp-content/uploads/2014/04/camera-sensor.jpg?x83298" width="590"/>
+        </p>
+        <p dir="rtl" style="text-align: justify;">
+         المستشعر يلعب دوراً كبيراً في جودة الصورة فهو المسؤول عن استقبال الضوء الداخل من فتحة العدسة ومعالجته ليُنتج لنا الصورة ، فكلما كان سطح المستشعر أكبر كلما حصلنا على بيكسلات ذات حجم أكبر وهذا يعني ان كل واحد من البيكسلات يُمكنه استيعاب كمية أكبر من الضوء مما يجعل الصورة ذات وضوح عالي وألوان زاهية ، وأيضاً كلما كبر المُستشعر كلما حصلنا على أداء أفضل للكاميرا في الإضاءة الخافتة وتشويش أقل ومدى أبعد للصورة ، أما بالنسبة لأداء- السينسور في معالجة الصورة هذا يعود للشركة المُصنعة.
+        </p>
+        <p dir="rtl" style="text-align: justify;">
+         شاهد هذا الفيديو لفيل شيلر يشرح كاميرا 5s وبه الكثير من الأمور المفيدة للتعرف على جودة الكاميرا
+        </p>
+        <p dir="rtl" style="text-align: center;">
+         <iframe allowfullscreen="" frameborder="0" height="332" src="//www.youtube.com/embed/VduV08pAqYk?rel=0" width="590">
+         </iframe>
+        </p>
+        <hr/>
+        <h3 dir="rtl" style="text-align: justify;">
+         <strong>
+          الفلاش
+         </strong>
+        </h3>
+        <p dir="rtl" style="text-align: justify;">
+         الفلاش هو الوميض الفوري الذي يظهر لحظة التقاط الصورة لإضاءة المنظر في الأماكن المظلمة وقد بدأ الفلاش في عالم الكاميرات ككرة زجاجية يوجد بها فتيل صغير محاط بكمية من مادة سريعة الأشتعال، وعند وصول الكهرباء إلى الفتيل يتوهج فيشعل المادة سريعة الاشتعال ويحدث وميض مرة واحدة فقط :)
+        </p>
+        <p dir="rtl" style="text-align: justify;">
+         <img alt="flash.JPG" height="267" src="https://iphoneislam.com/wp-content/uploads/2013/09/iPhone-5S-Camera1.jpg?x83298" width="590"/>
+        </p>
+        <p dir="rtl" style="text-align: justify;">
+         والآن تطور الفلاش ليصبح مكوناً من إضاءة LED تعطي للصورة وضوحاً في الأماكن المُعتمة ويُمكن معايرته آلياً ليعمل عندما تحتاجه الصورة دون تدخل من المستخدم، ولازالت الشركات تُبدع في فلاش الكاميرات فقد رأينا الفلاش في الآي فون 5s والذي هو عبارة عن 2 فلاش أحدهما أبيض والثاني أصفر لتتحكم في الإضاءة، وعند فتح تطبيق الكاميرا فإن الآي فون 5S وبواسطة لوغاريتمات خاصة فإنه يحدد درجة وحرارة الإضاءة المناسبة طبقاً للمكان وبعدها يطلق الضوء الذي يمكن الكاميرا من التقاط صوراً بألوان طبيعية.
+        </p>
+        <p dir="rtl" style="text-align: justify;">
+         نعم الفلاش مجرد إضاءة تظهر لثواني معدودة لكن تظهر قيمته حقاً في الأماكن المظلمة وعندها ستتمنى أن يكون لدينا أفضل إضاءة فلاش حتى لا تضيع لقطاتنا هباءً.
+        </p>
+        <hr/>
+        <h3 style="text-align: justify;">
+         المميزات الإضافية
+        </h3>
+        <p dir="rtl" style="text-align: justify;">
+         هذه المميزات ليست أساسية لإنتاج صورة جميلة ولكنها مميزات مُكملة لتساعدنا على الإبداع في الصور الملتقطة سواء فيديو أو صورة ثابتة ، والأمثلة كثيرة على هذه المميزات مثل خاصية الالتقاط السريع والتي تسمح للمستخدم بالتقاط صور متعددة بشكل سريع ليختار بعدها أجمل صورة منها، وكذلك خاصية التركيز بعد الالتقاط والتي قدمتها سامسونج في الجالاكسي S5 وأيضاً HTC One M8 والتي تسمح لك بتغيير مكان التركيز في الصورة بعد التقاطها. وتستطيع التعرف على تقنية إعادة التركيز بعد التقاط الصور في مقالنا السابق عن فكر ستيف جوبز للتصوير عبر
+         <a href="https://iphoneislam.com/?p=17208" target="_blank">
+          هذا الرابط
+         </a>
+         . وتستطيع التجربة بنفسك في الصور التالية:
+        </p>
+        <p style="text-align: center;">
+         <iframe frameborder="0" height="312" src="https://www.lytro.com/living-pictures/1698/embed" width="300">
+         </iframe>
+        </p>
+        <p style="text-align: justify;">
+         هذه المميزات هي ما تتفاخر به الشركات جنباً إلى جنب مع المميزات الأساسية للكاميرا و لتُدلل المستخدم لأنها تعلم أن كاميرات الهواتف الذكية أصبحت المرافق الدائم لنا.
+        </p>
+        <div class="notice">
+         <div class="typo-icon">
+          <h4 style="text-align: center;">
+           الآن أخبرنا هل تغيرت فكرتك بأن عدد “الميجا بيكسل” ليست هو معيار الصورة الرائعة في الكاميرات؟ وماهي المواصفات التي تهمك في هاتفك؟
+          </h4>
+         </div>
+        </div>
+        <p style="font-size: xx-small; text-align: left;">
+         مصادر |
+         <a href="https://www.google.com.sa/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CC0QFjAA&amp;url=http%3A%2F%2Fwww.cnet.com%2F&amp;ei=bcRDU8yTOvDG7AaNkoDACQ&amp;usg=AFQjCNG2_FyJDU495cpMkgenvXOAZZzRlQ&amp;sig2=8uT40wnvYIgHWW9YrtvnYg">
+          Cnet
+         </a>
+         ،
+         <a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9">
+          Wikipedia
+         </a>
+        </p>
+        <div class="sharedaddy sd-sharing-enabled">
+         <div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
+          <h3 class="sd-title">
+           شارك هذا الموضوع:
+          </h3>
+          <div class="sd-content">
+           <ul>
+            <li class="share-facebook">
+             <a class="share-facebook sd-button share-icon" data-shared="sharing-facebook-34418" href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418?share=facebook" rel="nofollow noopener noreferrer" target="_blank" title="انقر للمشاركة على فيسبوك">
+              <span>
+               فيس بوك
+              </span>
+             </a>
+            </li>
+            <li class="share-twitter">
+             <a class="share-twitter sd-button share-icon" data-shared="sharing-twitter-34418" href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418?share=twitter" rel="nofollow noopener noreferrer" target="_blank" title="اضغط للمشاركة على تويتر">
+              <span>
+               تويتر
+              </span>
+             </a>
+            </li>
+            <li class="share-telegram">
+             <a class="share-telegram sd-button share-icon" data-shared="" href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418?share=telegram" rel="nofollow noopener noreferrer" target="_blank" title="انقر للمشاركة على Telegram">
+              <span>
+               Telegram
+              </span>
+             </a>
+            </li>
+            <li class="share-jetpack-whatsapp">
+             <a class="share-jetpack-whatsapp sd-button share-icon" data-shared="" href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418?share=jetpack-whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="انقر للمشاركة على WhatsApp">
+              <span>
+               WhatsApp
+              </span>
+             </a>
+            </li>
+            <li class="share-email">
+             <a class="share-email sd-button share-icon" data-shared="" href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418?share=email" rel="nofollow noopener noreferrer" target="_blank" title="اضغط لإرسال هذا الموضوع لصديق بواسطة البريد الإلكتروني">
+              <span>
+               البريد الإلكتروني
+              </span>
+             </a>
+            </li>
+            <li>
+             <a class="sharing-anchor sd-button share-more" href="#">
+              <span>
+               المزيد
+              </span>
+             </a>
+            </li>
+            <li class="share-end">
+            </li>
+           </ul>
+           <div class="sharing-hidden">
+            <div class="inner" style="display: none;">
+             <ul>
+              <li class="share-pocket">
+               <a class="share-pocket sd-button share-icon" data-shared="" href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418?share=pocket" rel="nofollow noopener noreferrer" target="_blank" title="اضغط للمشاركة على Pocket">
+                <span>
+                 Pocket
+                </span>
+               </a>
+              </li>
+              <li class="share-skype">
+               <a class="share-skype sd-button share-icon" data-shared="sharing-skype-34418" href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418?share=skype" rel="nofollow noopener noreferrer" target="_blank" title="انقر للمشاركة على Skype">
+                <span>
+                 Skype
+                </span>
+               </a>
+              </li>
+              <li class="share-end">
+              </li>
+              <li class="share-linkedin">
+               <a class="share-linkedin sd-button share-icon" data-shared="sharing-linkedin-34418" href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418?share=linkedin" rel="nofollow noopener noreferrer" target="_blank" title="اضغط لتشارك على LinkedIn">
+                <span>
+                 LinkedIn
+                </span>
+               </a>
+              </li>
+              <li class="share-pinterest">
+               <a class="share-pinterest sd-button share-icon" data-shared="sharing-pinterest-34418" href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418?share=pinterest" rel="nofollow noopener noreferrer" target="_blank" title="اضغط للمشاركة على Pinterest">
+                <span>
+                 Pinterest
+                </span>
+               </a>
+              </li>
+              <li class="share-end">
+              </li>
+              <li class="share-tumblr">
+               <a class="share-tumblr sd-button share-icon" data-shared="" href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418?share=tumblr" rel="nofollow noopener noreferrer" target="_blank" title="اضغط للمشاركة على Tumblr">
+                <span>
+                 Tumblr
+                </span>
+               </a>
+              </li>
+              <li class="share-reddit">
+               <a class="share-reddit sd-button share-icon" data-shared="" href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418?share=reddit" rel="nofollow noopener noreferrer" target="_blank" title="اضغط لمشاركة الموضوع على Reddit">
+                <span>
+                 Reddit
+                </span>
+               </a>
+              </li>
+              <li class="share-end">
+              </li>
+              <li class="share-print">
+               <a class="share-print sd-button share-icon" data-shared="" href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#print" rel="nofollow noopener noreferrer" target="_blank" title="اضغط للطباعة">
+                <span>
+                 طباعة
+                </span>
+               </a>
+              </li>
+              <li class="share-end">
+              </li>
+             </ul>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" data-name="like-post-frame-64050452-34418-5cc0c29c544fb" data-src="https://widgets.wp.com/likes/#blog_id=64050452&amp;post_id=34418&amp;origin=iphoneislam.com&amp;obj_id=64050452-34418-5cc0c29c544fb" id="like-post-wrapper-64050452-34418-5cc0c29c544fb">
+         <h3 class="sd-title">
+          معجب بهذه:
+         </h3>
+         <div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;">
+          <span class="button">
+           <span>
+            إعجاب
+           </span>
+          </span>
+          <span class="loading">
+           تحميل...
+          </span>
+         </div>
+         <span class="sd-text-color">
+         </span>
+         <a class="sd-link-color">
+         </a>
+        </div>
+       </div>
+       <div class="share-post">
+        <ul>
+         <li>
+          <a class="twitter-share-button" data-lang="en" data-text="حتى لا تنخدع بمواصفات الكاميرات" data-url="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418" data-via="iPhoneIslam" href="https://twitter.com/share">
+           tweet
+          </a>
+          <script type="81acd133b717b8317baab0d6-text/javascript">
+           !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+          </script>
+         </li>
+         <li>
+          <iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://www.facebook.com/plugins/like.php?href=https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418&amp;layout=button_count&amp;show_faces=false&amp;width=110&amp;action=like&amp;colorscheme=light&amp;height=21" style="border:none; overflow:hidden; width:110px; height:21px;">
+          </iframe>
+         </li>
+        </ul>
+        <div class="clear">
+        </div>
+       </div>
+      </div>
+     </article>
+     <p class="post-tag">
+      الوسوم :
+      <a href="https://iphoneislam.com/tag/video" rel="tag">
+       فيديو
+      </a>
+     </p>
+     <div class="ads-post">
+      <center>
+       <div id="amzn-assoc-ad-0b57d92a-3cd7-4074-a1e0-146dc5fd65ed">
+       </div>
+       <script async="" src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=0b57d92a-3cd7-4074-a1e0-146dc5fd65ed" type="81acd133b717b8317baab0d6-text/javascript">
+       </script>
+      </center>
+     </div>
+     <div class="post-navigation">
+      <div class="post-previous">
+       <a href="https://iphoneislam.com/2014/04/from-appstore-vol-179/34665" rel="prev">
+        <span>
+         السابق:
+        </span>
+        [179] اختيارات آي-فون إسلام لسبع تطبيقات مفيدة
+       </a>
+      </div>
+      <div class="post-next">
+       <a href="https://iphoneislam.com/2014/04/why-apple-suing-samsung-again/34502" rel="next">
+        <span>
+         التالي:
+        </span>
+        لماذا تقاضي أبل سامسونج مجدداً؟
+       </a>
+      </div>
+     </div>
+     <section id="related_posts">
+      <div class="block-head">
+       <h3>
+        مقالات مشابهة
+       </h3>
+       <div class="stripe-line">
+       </div>
+      </div>
+      <div class="item-list">
+       <div class="related-item">
+        <div class="post-thumbnail">
+         <a href="https://iphoneislam.com/2019/04/why-apple-wait-alot-before-release-new-tech/72401" rel="bookmark" title="رابط ثابت لـ هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟">
+          <img alt="هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟" class="attachment-thumbnail size-thumbnail" data-attachment-id="72412" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Foldable iPhone" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone-590x332.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone-320x180.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone.jpg" data-orig-size="1280,720" data-permalink="https://iphoneislam.com/2019/04/why-apple-wait-alot-before-release-new-tech/72401/foldable-iphone" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone-120x120.jpg?x83298" title="" width="120"/>
+         </a>
+        </div>
+        <h3>
+         <a href="https://iphoneislam.com/2019/04/why-apple-wait-alot-before-release-new-tech/72401" rel="bookmark" title="رابط ثابت لـ هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟">
+          هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟
+         </a>
+        </h3>
+        <p class="post-meta">
+         21 أبريل 2019
+        </p>
+       </div>
+       <div class="related-item">
+        <div class="post-thumbnail">
+         <a href="https://iphoneislam.com/2019/04/will-apple-kill-itunes-soon-and-why/72345" rel="bookmark" title="رابط ثابت لـ هل اقتربت نهاية الآي-تيونز؟">
+          <img alt="هل اقتربت نهاية الآي-تيونز؟" class="attachment-thumbnail size-thumbnail" data-attachment-id="72346" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="itunes" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/itunes-590x332.jpeg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/itunes-320x180.jpeg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/itunes.jpeg" data-orig-size="989,556" data-permalink="https://iphoneislam.com/2019/04/will-apple-kill-itunes-soon-and-why/72345/itunes-10" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/itunes-120x120.jpeg?x83298" title="" width="120"/>
+         </a>
+        </div>
+        <h3>
+         <a href="https://iphoneislam.com/2019/04/will-apple-kill-itunes-soon-and-why/72345" rel="bookmark" title="رابط ثابت لـ هل اقتربت نهاية الآي-تيونز؟">
+          هل اقتربت نهاية الآي-تيونز؟
+         </a>
+        </h3>
+        <p class="post-meta">
+         17 أبريل 2019
+        </p>
+       </div>
+       <div class="related-item">
+        <div class="post-thumbnail">
+         <a href="https://iphoneislam.com/2019/04/why-eu-did-not-find-apple-for-antitrust-like-google/72122" rel="bookmark" title="رابط ثابت لـ لماذا لا تحاكم أبل بقضايا الاحتكار مثل جوجل؟">
+          <img alt="لماذا لا تحاكم أبل بقضايا الاحتكار مثل جوجل؟" class="attachment-thumbnail size-thumbnail" data-attachment-id="72168" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"1"}' data-image-title="google-fined-2" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/google-fined-2-590x331.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/google-fined-2-320x180.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/google-fined-2.jpg" data-orig-size="590,331" data-permalink="https://iphoneislam.com/2019/04/why-eu-did-not-find-apple-for-antitrust-like-google/72122/google-fined-2" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/google-fined-2-120x120.jpg?x83298" title="" width="120"/>
+         </a>
+        </div>
+        <h3>
+         <a href="https://iphoneislam.com/2019/04/why-eu-did-not-find-apple-for-antitrust-like-google/72122" rel="bookmark" title="رابط ثابت لـ لماذا لا تحاكم أبل بقضايا الاحتكار مثل جوجل؟">
+          لماذا لا تحاكم أبل بقضايا الاحتكار مثل جوجل؟
+         </a>
+        </h3>
+        <p class="post-meta">
+         3 أبريل 2019
+        </p>
+       </div>
+       <div class="clear">
+       </div>
+      </div>
+     </section>
+     <div id="comments">
+      <h3 id="comments-title">
+       55 تعليق
+      </h3>
+      <div class="navigation">
+       <div class="nav-previous">
+       </div>
+       <div class="nav-next">
+        <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418/comment-page-2#comments">
+         تعليقات أحدث
+         <span class="meta-nav">
+          →
+         </span>
+        </a>
+       </div>
+      </div>
+      <ol class="commentlist">
+       <li id="comment-454425">
+        <div class="comment even thread-even depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/9e8bf98f57a80ced3630f805823cb1f2?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/9e8bf98f57a80ced3630f805823cb1f2?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           Dr. Ahmed
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#comment-454425">
+            12 أبريل 2014 في 3:17 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           والله ده سؤال كنت بحاول افهمه بقالى فترة لأن فعلا تلاقى موبايل بيكسل عالى و الصور ع الكومبيوتر وحشة و بالمثل بعض الكاميرات الديجيتال .. شكرا ايفون اسلام
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على Dr. Ahmed" class="comment-reply-link" data-belowelement="comment-454425" data-commentid="454425" data-postid="34418" data-respondelement="respond" href="#comment-454425" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+       </li>
+       <li id="comment-454424">
+        <div class="comment odd alt thread-odd thread-alt depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/6905cfe2080ccd496dfb80ed78b20786?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/6905cfe2080ccd496dfb80ed78b20786?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           <a class="url" href="http://Egypt" rel="external nofollow">
+            Mahmoudm
+           </a>
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#comment-454424">
+            12 أبريل 2014 في 3:08 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           شكرا على هذه المعلومات التى تفيدنا فى اختيار افضل كاميرا تناسبنا
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على Mahmoudm" class="comment-reply-link" data-belowelement="comment-454424" data-commentid="454424" data-postid="34418" data-respondelement="respond" href="#comment-454424" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+       </li>
+       <li id="comment-454423">
+        <div class="comment even thread-even depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/6922fd62008577a8517615b70dacbf06?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/6922fd62008577a8517615b70dacbf06?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           <a class="url" href="http://Fujairah" rel="external nofollow">
+            غيمه وفا
+           </a>
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#comment-454423">
+            12 أبريل 2014 في 2:58 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           تقنياتهم كل ماتطور تدمر والله يستر من الجاي
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على غيمه وفا" class="comment-reply-link" data-belowelement="comment-454423" data-commentid="454423" data-postid="34418" data-respondelement="respond" href="#comment-454423" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+       </li>
+       <li id="comment-454422">
+        <div class="comment odd alt thread-odd thread-alt depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/e528990bf0c19e47a78c8d7b4f989a2b?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/e528990bf0c19e47a78c8d7b4f989a2b?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           ALSHAQSI
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#comment-454422">
+            12 أبريل 2014 في 2:56 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           ههههههههههههه حلوه هذي اهم شي انه الايفون احسن ف كل شي يعني غيرانين من جودة تصوير الاس 5 راح نزلك مقال انه الكاميره فاشله ف جميع الهواتف ما عادا الايفون…
+           <br/>
+           يا حبايبي المستخدم يشوف كل شي كان تقدر ما اعمى البصر مثلكم تشوفوا ايفون هو كل شي…
+          </p>
+          <p>
+           ويقولك المثل القدر في عين امه غزاله…
+          </p>
+          <p>
+           استمتع يا حبيب بتصوير الاس 5 صاحب 16 ميجابيكسل التي تعتبر ما الها اهميه بالمقارنة مع 8 ميجابيكسل في الايفون الخارق. هههههه… Samsung Galaxy S5 4K Video Test / Recording Sample:
+           <a href="https://youtu.be/MO0gUEON8Kc" rel="nofollow">
+            http://youtu.be/MO0gUEON8Kc
+           </a>
+          </p>
+          <p>
+           مع نفسك…
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على ALSHAQSI" class="comment-reply-link" data-belowelement="comment-454422" data-commentid="454422" data-postid="34418" data-respondelement="respond" href="#comment-454422" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+        <ul class="children">
+         <li id="comment-454557">
+          <div class="comment even depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/c43bd62011efbfa75c904626d34bf124?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/c43bd62011efbfa75c904626d34bf124?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             عبدالله الخالدي
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#comment-454557">
+              14 أبريل 2014 في 12:07 ص
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             احلى شي في الموضوع انك داخل على ايفون اسلام وتعلق على الأيفون
+             <br/>
+             هههههههههههههههههههه
+             <br/>
+             وردك يدل عليك
+            </p>
+            <p>
+             كاتب الموضوع فهمك شلون تختار الكاميرا وضح ان htc احسن
+             <br/>
+             لا تسير مريض يا عريض الوساد
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+         <li id="comment-454589">
+          <div class="comment byuser comment-author-mohammad_hd bypostauthor odd alt depth-2 comment-wrap">
+           <div class="comment-avatar">
+            <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/ecfb8744121705d68d4c58117feb02ae?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/ecfb8744121705d68d4c58117feb02ae?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+           </div>
+           <div class="author-comment">
+            <cite class="fn">
+             محمد يماني
+            </cite>
+            <div class="comment-meta commentmetadata">
+             <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#comment-454589">
+              14 أبريل 2014 في 1:27 م
+             </a>
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="comment-content">
+            <p>
+             لم أذكر أبداً أن الآيفون أو غيره أفضل ، أنا ضربت أمثلة من كل شيء من الآيون والجالاكسي وغيرهم ولا يعني ضربي بمثال أنه الأفضل
+            </p>
+           </div>
+           <div class="reply">
+           </div>
+          </div>
+         </li>
+        </ul>
+       </li>
+       <li id="comment-454421">
+        <div class="comment even thread-even depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/629e4d751a250d4f7746ee4f1d3a8d02?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/629e4d751a250d4f7746ee4f1d3a8d02?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           <a class="url" href="http://السعودية" rel="external nofollow">
+            تركي محمد
+           </a>
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#comment-454421">
+            12 أبريل 2014 في 2:51 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           لا لم تتغير فكرتي يا آيفون اسلام وكفاية ترقيع لأبل لاني جربت الايفون وجربت النوت ٣ واعرف الفرق بين جودة الكميرة اذا وضعتهم مع بعض او صورت فيهم فأرجوا ان لايكون حبكم لأجهزة ابل او اختصاصكم في برامجها ينسيكم الحياد وشكرا
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على تركي محمد" class="comment-reply-link" data-belowelement="comment-454421" data-commentid="454421" data-postid="34418" data-respondelement="respond" href="#comment-454421" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+       </li>
+       <li id="comment-454418">
+        <div class="comment odd alt thread-odd thread-alt depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/33eee013898bca0040b12ca5ff16e47a?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/33eee013898bca0040b12ca5ff16e47a?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           عبدالله الوصالي
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#comment-454418">
+            12 أبريل 2014 في 2:43 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           الله عليكم وعلى مواضيعكم المبدعه
+          </p>
+          <p>
+           👏👏👏👏👏👏👏👏
+          </p>
+          <p>
+           الصراحه بالنسبه لي شيء جديد
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على عبدالله الوصالي" class="comment-reply-link" data-belowelement="comment-454418" data-commentid="454418" data-postid="34418" data-respondelement="respond" href="#comment-454418" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+       </li>
+       <li id="comment-454416">
+        <div class="comment even thread-even depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/56ad2ec8f59ebc3ef0087b6cabc1f35b?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/56ad2ec8f59ebc3ef0087b6cabc1f35b?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           <a class="url" href="http://جده" rel="external nofollow">
+            فواز
+           </a>
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#comment-454416">
+            12 أبريل 2014 في 2:14 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           كلام صحيح ١٠٠٪
+           <br/>
+           يعطيكم العافيه
+           <br/>
+           وزياده على هذا الكلام اتوقع الشاشة له دور كبير بظهور الصورة الملتقطة بالمظهر الرائع ..
+           <br/>
+           شكرًا ايفون اسلام ..
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على فواز" class="comment-reply-link" data-belowelement="comment-454416" data-commentid="454416" data-postid="34418" data-respondelement="respond" href="#comment-454416" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+       </li>
+       <li id="comment-454415">
+        <div class="comment odd alt thread-odd thread-alt depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/1f169dc9d884726d8199c8b2e629b184?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/1f169dc9d884726d8199c8b2e629b184?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           <a class="url" href="http://Ksa/taif" rel="external nofollow">
+            خالد ابراهيم
+           </a>
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#comment-454415">
+            12 أبريل 2014 في 2:04 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           عندي استفسار ليه كاميرا الايفون ٥أس جودة صورها ضعيفه مقارنةً بالايفون ٥ ليش كذا ؟
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على خالد ابراهيم" class="comment-reply-link" data-belowelement="comment-454415" data-commentid="454415" data-postid="34418" data-respondelement="respond" href="#comment-454415" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+       </li>
+       <li id="comment-454414">
+        <div class="comment even thread-even depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/86c82c24ee097c24cd5529ebb00580f9?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/86c82c24ee097c24cd5529ebb00580f9?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           Colt
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#comment-454414">
+            12 أبريل 2014 في 1:48 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           مقال اكثر من رائع ❤️ شكرًا لكم
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على Colt" class="comment-reply-link" data-belowelement="comment-454414" data-commentid="454414" data-postid="34418" data-respondelement="respond" href="#comment-454414" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+       </li>
+       <li id="comment-454413">
+        <div class="comment odd alt thread-odd thread-alt depth-1 comment-wrap">
+         <div class="comment-avatar">
+          <img alt="" class="avatar avatar-45 photo" height="45" src="https://secure.gravatar.com/avatar/b25c9495fc83c2b9c5cfd7b54092fbdb?s=45&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/b25c9495fc83c2b9c5cfd7b54092fbdb?s=90&amp;d=mm&amp;r=g 2x" width="45"/>
+         </div>
+         <div class="author-comment">
+          <cite class="fn">
+           Hussain
+          </cite>
+          <div class="comment-meta commentmetadata">
+           <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418#comment-454413">
+            12 أبريل 2014 في 1:47 م
+           </a>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="comment-content">
+          <p>
+           مقال جداً رائع
+           <br/>
+           لكن اتمنى ان تقوموا بمقارنة بين احدث الهواتف الذكية كالايفون 5s والجالاكسي S5 وسوني Z2 وغيرهم في الخصائص التي ذكرتموها في الأعلى
+          </p>
+          <p>
+           وشكراً لكم
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="رد على Hussain" class="comment-reply-link" data-belowelement="comment-454413" data-commentid="454413" data-postid="34418" data-respondelement="respond" href="#comment-454413" rel="nofollow">
+           رد
+          </a>
+         </div>
+        </div>
+       </li>
+      </ol>
+      <div class="navigation">
+       <div class="nav-previous">
+       </div>
+       <div class="nav-next">
+        <a href="https://iphoneislam.com/2014/04/do-not-fool-with-cameras-specs/34418/comment-page-2#comments">
+         تعليقات أحدث
+         <span class="meta-nav">
+          →
+         </span>
+        </a>
+       </div>
+      </div>
+      <div class="comment-respond" id="respond">
+       <h3 class="comment-reply-title" id="reply-title">
+        أضف تعليقاً
+        <small>
+         <a href="/2014/04/do-not-fool-with-cameras-specs/34418#respond" id="cancel-comment-reply-link" rel="nofollow" style="display:none;">
+          إلغاء الرد
+         </a>
+        </small>
+       </h3>
+       <form action="https://iphoneislam.com/wp-comments-post.php" class="comment-form" id="commentform" method="post">
+        <p class="comment-notes">
+         لن يتم نشر البريد الإلكتروني . الحقول المطلوبة مشار لها بـ
+         <span class="required">
+          *
+         </span>
+        </p>
+        <p class="comment-form-comment">
+         <label for="comment">
+          التعليق
+         </label>
+         <textarea cols="45" id="comment" maxlength="65525" name="comment" required="required" rows="8"></textarea>
+        </p>
+        <p class="comment-form-author">
+         <label for="author">
+          الإسم
+         </label>
+         <span class="required">
+          *
+         </span>
+         <input aria-required="true" id="author" name="author" size="30" type="text" value=""/>
+        </p>
+        <p class="comment-form-email">
+         <label for="email">
+          البريد
+         </label>
+         <span class="required">
+          *
+         </span>
+         <input aria-required="true" id="email" name="email" size="30" type="text" value=""/>
+        </p>
+        <p class="comment-form-url">
+         <label for="url">
+          الموقع
+         </label>
+         <input id="url" name="url" size="30" type="text" value=""/>
+        </p>
+        <p class="form-submit">
+         <p class="comment-subscription-form">
+          <input id="subscribe_comments" name="subscribe_comments" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" type="checkbox" value="subscribe"/>
+          <label class="subscribe-label" for="subscribe_comments" id="subscribe-label">
+           أعلمني بمتابعة التعليقات بواسطة البريد الإلكتروني.
+          </label>
+         </p>
+         <p class="comment-subscription-form">
+          <input id="subscribe_blog" name="subscribe_blog" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" type="checkbox" value="subscribe"/>
+          <label class="subscribe-label" for="subscribe_blog" id="subscribe-blog-label">
+           أعلمني بالمواضيع الجديدة بواسطة البريد الإلكتروني.
+          </label>
+         </p>
+         <input class="submit" id="submit" name="submit" type="submit" value="أضف التعليق"/>
+         <input id="comment_post_ID" name="comment_post_ID" type="hidden" value="34418"/>
+         <input id="comment_parent" name="comment_parent" type="hidden" value="0"/>
+        </p>
+        <p style="display: none;">
+         <input id="akismet_comment_nonce" name="akismet_comment_nonce" type="hidden" value="fab052d971"/>
+        </p>
+        <p style="display: none;">
+         <input id="ak_js" name="ak_js" type="hidden" value="200"/>
+        </p>
+       </form>
+      </div>
+     </div>
+    </div>
+    <aside id="sidebar">
+     <div class="arqam-widget-counter arq-outer-frame arq-col3">
+      <ul>
+       <li class="arq-facebook">
+        <a href="https://www.facebook.com/iPhoneIslam" target="_blank">
+         <i class="counter-icon arqicon-facebook">
+         </i>
+         <span>
+          218k
+         </span>
+         <small>
+          متابعين
+         </small>
+        </a>
+       </li>
+       <li class="arq-twitter">
+        <a href="https://twitter.com/iPhoneIslam" target="_blank">
+         <i class="counter-icon arqicon-twitter">
+         </i>
+         <span>
+          303k
+         </span>
+         <small>
+          متابعين
+         </small>
+        </a>
+       </li>
+       <li class="arq-google">
+        <a href="https://plus.google.com/115060091433152517350" target="_blank">
+         <i class="counter-icon arqicon-google-plus">
+         </i>
+         <span>
+          1٬595
+         </span>
+         <small>
+          متابعين
+         </small>
+        </a>
+       </li>
+       <li class="arq-youtube">
+        <a href="https://youtube.com/user/iPhoneIslamTube" target="_blank">
+         <i class="counter-icon arqicon-youtube">
+         </i>
+         <span>
+          15٬747
+         </span>
+         <small>
+          مشتركين
+         </small>
+        </a>
+       </li>
+       <li class="arq-posts">
+        <a href="" target="_blank">
+         <i class="counter-icon arqicon-file-text">
+         </i>
+         <span>
+          4٬276
+         </span>
+         <small>
+          إجمالي المقالات
+         </small>
+        </a>
+       </li>
+       <li class="arq-comments">
+        <a href="" target="_blank">
+         <i class="counter-icon arqicon-comments">
+         </i>
+         <span>
+          447k
+         </span>
+         <small>
+          إجمالي التعليقات
+         </small>
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="widget" id="tabbed-widget">
+      <div class="widget-container">
+       <div class="widget-top">
+        <ul class="tabs posts-taps">
+         <li class="tabs">
+          <a href="#tab1">
+           الأخيرة
+          </a>
+         </li>
+         <li class="tabs">
+          <a href="#tab2">
+           مميز
+          </a>
+         </li>
+         <li class="tabs">
+          <a href="#tab3">
+           تعليقات
+          </a>
+         </li>
+         <li class="tabs" style="margin-left:0">
+          <a href="#tab4">
+           الوسوم
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="tabs-wrap" id="tab1">
+        <ul>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2019/04/how-to-hide-iphone-notch-in-second/72444" rel="bookmark" title="رابط ثابت لـ إخفاء النوتش بطريقة ذكية وفي ثوان معدودة">
+            <img alt="إخفاء النوتش بطريقة ذكية وفي ثوان معدودة" class="attachment-thumbnail size-thumbnail" data-attachment-id="72447" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="denotchify-iphone-x-wallpaper-notch" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/denotchify-iphone-x-wallpaper-notch-590x310.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/denotchify-iphone-x-wallpaper-notch-320x168.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/denotchify-iphone-x-wallpaper-notch.jpg" data-orig-size="1200,630" data-permalink="https://iphoneislam.com/2019/04/how-to-hide-iphone-notch-in-second/72444/denotchify-iphone-x-wallpaper-notch" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/denotchify-iphone-x-wallpaper-notch-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2019/04/how-to-hide-iphone-notch-in-second/72444">
+            إخفاء النوتش بطريقة ذكية وفي ثوان معدودة
+           </a>
+          </h3>
+          <span class="date">
+           24 أبريل 2019
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2019/04/apple-watch-save-80-years-old-women-life/72422" rel="bookmark" title="رابط ثابت لـ ساعة أبل تنقذ سيدة تبلغ من العمر 80 عاما!">
+            <img alt="ساعة أبل تنقذ سيدة تبلغ من العمر 80 عاما!" class="attachment-thumbnail size-thumbnail" data-attachment-id="72439" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Elderly-woman-falling-down-0" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/Elderly-woman-falling-down-0-590x434.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/Elderly-woman-falling-down-0-320x236.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/Elderly-woman-falling-down-0.jpg" data-orig-size="1280,942" data-permalink="https://iphoneislam.com/2019/04/apple-watch-save-80-years-old-women-life/72422/elderly-woman-falling-down-0" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/Elderly-woman-falling-down-0-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2019/04/apple-watch-save-80-years-old-women-life/72422">
+            ساعة أبل تنقذ سيدة تبلغ من العمر 80 عاما!
+           </a>
+          </h3>
+          <span class="date">
+           23 أبريل 2019
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2019/04/leaks-for-next-iphone-design/72415" rel="bookmark" title="رابط ثابت لـ تسريب قوالب أجهزة آي-فون 2019 XI و XI Max">
+            <img alt="تسريب قوالب أجهزة آي-فون 2019 XI و XI Max" class="attachment-thumbnail size-thumbnail" data-attachment-id="72416" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="iphonexi" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/iphonexi-590x457.png" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/iphonexi-320x248.png" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/iphonexi.png" data-orig-size="960,743" data-permalink="https://iphoneislam.com/2019/04/leaks-for-next-iphone-design/72415/iphonexi" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/iphonexi-120x120.png?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2019/04/leaks-for-next-iphone-design/72415">
+            تسريب قوالب أجهزة آي-فون 2019 XI و XI Max
+           </a>
+          </h3>
+          <span class="date">
+           22 أبريل 2019
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2019/04/why-apple-wait-alot-before-release-new-tech/72401" rel="bookmark" title="رابط ثابت لـ هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟">
+            <img alt="هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟" class="attachment-thumbnail size-thumbnail" data-attachment-id="72412" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Foldable iPhone" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone-590x332.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone-320x180.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone.jpg" data-orig-size="1280,720" data-permalink="https://iphoneislam.com/2019/04/why-apple-wait-alot-before-release-new-tech/72401/foldable-iphone" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/Foldable-iPhone-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2019/04/why-apple-wait-alot-before-release-new-tech/72401">
+            هل تقوم أبل بتأخير التقنيات الجديدة عن عمد؟
+           </a>
+          </h3>
+          <span class="date">
+           21 أبريل 2019
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2019/04/shortcuts-with-long-touch-in-iphone/72397" rel="bookmark" title="رابط ثابت لـ للمبتدئين: اختصارات اللمس المطول في مركز التحكم">
+            <img alt="للمبتدئين: اختصارات اللمس المطول في مركز التحكم" class="attachment-thumbnail size-thumbnail" data-attachment-id="72399" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Apple CC" data-large-file="https://iphoneislam.com/wp-content/uploads/2019/04/Apple-CC-590x372.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2019/04/Apple-CC-320x202.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2019/04/Apple-CC.jpg" data-orig-size="1400,882" data-permalink="https://iphoneislam.com/2019/04/shortcuts-with-long-touch-in-iphone/72397/apple-cc" height="120" src="https://iphoneislam.com/wp-content/uploads/2019/04/Apple-CC-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2019/04/shortcuts-with-long-touch-in-iphone/72397">
+            للمبتدئين: اختصارات اللمس المطول في مركز التحكم
+           </a>
+          </h3>
+          <span class="date">
+           20 أبريل 2019
+          </span>
+         </li>
+        </ul>
+       </div>
+       <div class="tabs-wrap" id="tab2">
+        <ul>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2018/08/what-is-802-11n-update-that-make-iphone-update-free/67839" rel="bookmark" title="رابط ثابت لـ قصة تحديث 802.11n التي جعلت تحديثات الآي فون مجانية">
+            <img alt="قصة تحديث 802.11n التي جعلت تحديثات الآي فون مجانية" class="attachment-thumbnail size-thumbnail" data-attachment-id="67843" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="iOS Update" data-large-file="https://iphoneislam.com/wp-content/uploads/2018/08/iOS-Update-590x310.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2018/08/iOS-Update-320x168.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2018/08/iOS-Update.jpg" data-orig-size="590,310" data-permalink="https://iphoneislam.com/2018/08/what-is-802-11n-update-that-make-iphone-update-free/67839/ios-update" height="120" src="https://iphoneislam.com/wp-content/uploads/2018/08/iOS-Update-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2018/08/what-is-802-11n-update-that-make-iphone-update-free/67839">
+            قصة تحديث 802.11n التي جعلت تحديثات الآي فون مجانية
+           </a>
+          </h3>
+          <span class="date">
+           6 أغسطس 2018
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2018/06/every-company-steal-each-other/67122" rel="bookmark" title="رابط ثابت لـ آبل، جوجل، سامسونج: من أكثر سرقة للأفكار؟">
+            <img alt="آبل، جوجل، سامسونج: من أكثر سرقة للأفكار؟" class="attachment-thumbnail size-thumbnail" data-attachment-id="67159" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Apple-and-google-and-samsung-oh-my" data-large-file="https://iphoneislam.com/wp-content/uploads/2018/06/Apple-and-google-and-samsung-oh-my-443x590.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2018/06/Apple-and-google-and-samsung-oh-my-320x427.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2018/06/Apple-and-google-and-samsung-oh-my.jpg" data-orig-size="720,960" data-permalink="https://iphoneislam.com/2018/06/every-company-steal-each-other/67122/apple-and-google-and-samsung-oh-my" height="120" src="https://iphoneislam.com/wp-content/uploads/2018/06/Apple-and-google-and-samsung-oh-my-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2018/06/every-company-steal-each-other/67122">
+            آبل، جوجل، سامسونج: من أكثر سرقة للأفكار؟
+           </a>
+          </h3>
+          <span class="date">
+           20 يونيو 2018
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2018/05/what-fines-did-not-stop-companies-from-copying-patents/66636" rel="bookmark" title="رابط ثابت لـ لماذا لا تردع قضايا التعويضات الشركات حقاً؟">
+            <img alt="لماذا لا تردع قضايا التعويضات الشركات حقاً؟" class="attachment-thumbnail size-thumbnail" data-attachment-id="66640" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"intheskies - Fotolia","camera":"","caption":"Abstract word cloud for Patent war with related tags and terms","created_timestamp":"0","copyright":"intheskies - Fotolia","focal_length":"0","iso":"0","shutter_speed":"0","title":"Word cloud for Patent war","orientation":"1"}' data-image-title="Word cloud for Patent war" data-large-file="https://iphoneislam.com/wp-content/uploads/2018/05/Patent-war-590x393.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2018/05/Patent-war-320x213.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2018/05/Patent-war.jpg" data-orig-size="590,393" data-permalink="https://iphoneislam.com/2018/05/what-fines-did-not-stop-companies-from-copying-patents/66636/word-cloud-for-patent-war" height="120" src="https://iphoneislam.com/wp-content/uploads/2018/05/Patent-war-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2018/05/what-fines-did-not-stop-companies-from-copying-patents/66636">
+            لماذا لا تردع قضايا التعويضات الشركات حقاً؟
+           </a>
+          </h3>
+          <span class="date">
+           29 مايو 2018
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2018/01/big-data-between-prediction-and-ethical-problems/64172" rel="bookmark" title="رابط ثابت لـ البيانات الضخمة، بين التنبؤ والمشاكل الأخلاقية">
+            <img alt="البيانات الضخمة، بين التنبؤ والمشاكل الأخلاقية" class="attachment-thumbnail size-thumbnail" data-attachment-id="64173" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Data-Science-vs.-Big-Data-vs" data-large-file="https://iphoneislam.com/wp-content/uploads/2018/01/Data-Science-vs.-Big-Data-vs-590x332.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2018/01/Data-Science-vs.-Big-Data-vs-320x180.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2018/01/Data-Science-vs.-Big-Data-vs.jpg" data-orig-size="848,477" data-permalink="https://iphoneislam.com/2018/01/big-data-between-prediction-and-ethical-problems/64172/data-science-vs-big-data-vs" height="120" src="https://iphoneislam.com/wp-content/uploads/2018/01/Data-Science-vs.-Big-Data-vs-120x120.jpg?x83298" title="" width="120"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2018/01/big-data-between-prediction-and-ethical-problems/64172">
+            البيانات الضخمة، بين التنبؤ والمشاكل الأخلاقية
+           </a>
+          </h3>
+          <span class="date">
+           8 يناير 2018
+          </span>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <a href="https://iphoneislam.com/2017/03/who-will-win-in-tech-company-country-war/58714" rel="bookmark" title="رابط ثابت لـ من ينتصر في صراع الشركات والحكومات">
+            <img alt="من ينتصر في صراع الشركات والحكومات" class="attachment-thumbnail size-thumbnail" data-attachment-id="58717" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"1"}' data-image-title="World" data-large-file="https://iphoneislam.com/wp-content/uploads/2017/03/World-590x393.jpg" data-medium-file="https://iphoneislam.com/wp-content/uploads/2017/03/World-280x187.jpg" data-orig-file="https://iphoneislam.com/wp-content/uploads/2017/03/World.jpg" data-orig-size="590,393" data-permalink="https://iphoneislam.com/2017/03/who-will-win-in-tech-company-country-war/58714/world" height="70" src="https://iphoneislam.com/wp-content/uploads/2017/03/World-70x70.jpg?x83298" title="" width="70"/>
+           </a>
+          </div>
+          <h3>
+           <a href="https://iphoneislam.com/2017/03/who-will-win-in-tech-company-country-war/58714">
+            من ينتصر في صراع الشركات والحكومات
+           </a>
+          </h3>
+          <span class="date">
+           20 مارس 2017
+          </span>
+         </li>
+        </ul>
+       </div>
+       <div class="tabs-wrap" id="tab3">
+        <ul>
+         <li>
+          <div class="post-thumbnail">
+           <img alt="" class="avatar avatar-50 photo" height="50" src="https://secure.gravatar.com/avatar/6292c462c6ae8a7f31da7b66694bd91c?s=50&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/6292c462c6ae8a7f31da7b66694bd91c?s=100&amp;d=mm&amp;r=g 2x" width="50"/>
+          </div>
+          <a href="https://iphoneislam.com/2019/04/how-to-hide-iphone-notch-in-second/72444#comment-690314">
+           Armani: إلى الأخ ناصر الزيادي هذا الاختصار يغنيك عن البحث.....يحمل ا...
+          </a>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <img alt="" class="avatar avatar-50 photo" height="50" src="https://secure.gravatar.com/avatar/4cbba28ff5952387df8e5cf8f182bca3?s=50&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/4cbba28ff5952387df8e5cf8f182bca3?s=100&amp;d=mm&amp;r=g 2x" width="50"/>
+          </div>
+          <a href="https://iphoneislam.com/2019/04/apple-watch-save-80-years-old-women-life/72422#comment-690313">
+           mustapha phone: الضسارة الخاوية ومن طلب من الطريقة أصلا.. أنا أعرف الطريقة ا...
+          </a>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <img alt="" class="avatar avatar-50 photo" height="50" src="https://secure.gravatar.com/avatar/d0d4b7ecc2a2442427984b7dcd757bcb?s=50&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/d0d4b7ecc2a2442427984b7dcd757bcb?s=100&amp;d=mm&amp;r=g 2x" width="50"/>
+          </div>
+          <a href="https://iphoneislam.com/2019/04/how-to-hide-iphone-notch-in-second/72444#comment-690310">
+           ناصر الزيادي: ان شاء الله 🌹🌹...
+          </a>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <img alt="" class="avatar avatar-50 photo" height="50" src="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=50&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/128b80fb702fc96d44deb2c2306bcf6c?s=100&amp;d=mm&amp;r=g 2x" width="50"/>
+          </div>
+          <a href="https://iphoneislam.com/2019/04/how-to-hide-iphone-notch-in-second/72444#comment-690309">
+           نور وسام: مشكورين جدا...
+          </a>
+         </li>
+         <li>
+          <div class="post-thumbnail">
+           <img alt="" class="avatar avatar-50 photo" height="50" src="https://secure.gravatar.com/avatar/f38c18fe2e821edc945a330336404761?s=50&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/f38c18fe2e821edc945a330336404761?s=100&amp;d=mm&amp;r=g 2x" width="50"/>
+          </div>
+          <a href="https://iphoneislam.com/2019/04/apple-watch-save-80-years-old-women-life/72422#comment-690308">
+           adil: شكرا لكم على هذا الموضوع الجميل...
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="tabs-wrap tagcloud" id="tab4">
+        <a class="tag-cloud-link tag-link-42 tag-link-position-1" href="https://iphoneislam.com/tag/appstore" style="font-size: 8pt;">
+         متجر البرامج
+        </a>
+        <a class="tag-cloud-link tag-link-207 tag-link-position-2" href="https://iphoneislam.com/tag/%d8%a3%d8%a8%d9%84" style="font-size: 8pt;">
+         أبل
+        </a>
+        <a class="tag-cloud-link tag-link-95 tag-link-position-3" href="https://iphoneislam.com/tag/ios" style="font-size: 8pt;">
+         iOS
+        </a>
+        <a class="tag-cloud-link tag-link-24 tag-link-position-4" href="https://iphoneislam.com/tag/apple" style="font-size: 8pt;">
+         آبل
+        </a>
+        <a class="tag-cloud-link tag-link-85 tag-link-position-5" href="https://iphoneislam.com/tag/video" style="font-size: 8pt;">
+         فيديو
+        </a>
+        <a class="tag-cloud-link tag-link-203 tag-link-position-6" href="https://iphoneislam.com/tag/side-news" style="font-size: 8pt;">
+         على الهامش
+        </a>
+        <a class="tag-cloud-link tag-link-49 tag-link-position-7" href="https://iphoneislam.com/tag/accessories" style="font-size: 8pt;">
+         ملحقات
+        </a>
+        <a class="tag-cloud-link tag-link-40 tag-link-position-8" href="https://iphoneislam.com/tag/info" style="font-size: 8pt;">
+         معلومات
+        </a>
+        <a class="tag-cloud-link tag-link-67 tag-link-position-9" href="https://iphoneislam.com/tag/google" style="font-size: 8pt;">
+         جوجل
+        </a>
+        <a class="tag-cloud-link tag-link-76 tag-link-position-10" href="https://iphoneislam.com/tag/gamesstore" style="font-size: 8pt;">
+         متجر الألعاب
+        </a>
+        <a class="tag-cloud-link tag-link-23 tag-link-position-11" href="https://iphoneislam.com/tag/our_exclusive" style="font-size: 8pt;">
+         حصري
+        </a>
+        <a class="tag-cloud-link tag-link-21 tag-link-position-12" href="https://iphoneislam.com/tag/hackers" style="font-size: 8pt;">
+         هاكرز
+        </a>
+        <a class="tag-cloud-link tag-link-197 tag-link-position-13" href="https://iphoneislam.com/tag/samsung" style="font-size: 8pt;">
+         سامسونج
+        </a>
+        <a class="tag-cloud-link tag-link-52 tag-link-position-14" href="https://iphoneislam.com/tag/creativity" style="font-size: 8pt;">
+         الإبداع
+        </a>
+        <a class="tag-cloud-link tag-link-199 tag-link-position-15" href="https://iphoneislam.com/tag/conferences" style="font-size: 8pt;">
+         مؤتمرات
+        </a>
+        <a class="tag-cloud-link tag-link-37 tag-link-position-16" href="https://iphoneislam.com/tag/tricks" style="font-size: 8pt;">
+         حيل
+        </a>
+        <a class="tag-cloud-link tag-link-29 tag-link-position-17" href="https://iphoneislam.com/tag/arabic_apps" style="font-size: 8pt;">
+         برامج عربية
+        </a>
+        <a class="tag-cloud-link tag-link-45 tag-link-position-18" href="https://iphoneislam.com/tag/cydia" style="font-size: 8pt;">
+         سيديا
+        </a>
+        <a class="tag-cloud-link tag-link-43 tag-link-position-19" href="https://iphoneislam.com/tag/android" style="font-size: 8pt;">
+         أندرويد
+        </a>
+        <a class="tag-cloud-link tag-link-90 tag-link-position-20" href="https://iphoneislam.com/tag/beginer" style="font-size: 8pt;">
+         مبتدئين
+        </a>
+        <a class="tag-cloud-link tag-link-93 tag-link-position-21" href="https://iphoneislam.com/tag/ipad" style="font-size: 8pt;">
+         آي-باد
+        </a>
+        <a class="tag-cloud-link tag-link-382 tag-link-position-22" href="https://iphoneislam.com/tag/%d8%a8%d8%b1%d8%a7%d9%85%d8%ac-%d9%85%d8%ac%d8%a7%d9%86%d9%8a%d8%a9" style="font-size: 8pt;">
+         برامج مجانية
+        </a>
+        <a class="tag-cloud-link tag-link-25 tag-link-position-23" href="https://iphoneislam.com/tag/islamic_apps" style="font-size: 8pt;">
+         برامج إسلامية
+        </a>
+        <a class="tag-cloud-link tag-link-89 tag-link-position-24" href="https://iphoneislam.com/tag/itunes" style="font-size: 8pt;">
+         أيتيونز
+        </a>
+        <a class="tag-cloud-link tag-link-134 tag-link-position-25" href="https://iphoneislam.com/tag/photo_apps" style="font-size: 8pt;">
+         برامج الصور
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="transparent-widget widget">
+      <div class="social-icons">
+       <a class="ttip" href="https://iphoneislam.com/feed" target="_blank" title="Rss">
+        <img alt="RSS" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/rss_32.png?x83298"/>
+       </a>
+       <a class="ttip" href="https://plus.google.com/+iphoneislam/" target="_blank" title="Google+">
+        <img alt="Google+" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/google_plus_32.png?x83298"/>
+       </a>
+       <a class="ttip" href="https://www.facebook.com/iphoneislam" target="_blank" title="Facebook">
+        <img alt="Facebook" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/facebook_32.png?x83298"/>
+       </a>
+       <a class="ttip" href="https://www.twitter.com/iphoneislam" target="_blank" title="Twitter">
+        <img alt="Twitter" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/twitter_32.png?x83298"/>
+       </a>
+       <a class="ttip" href="https://www.linkedin.com/company/iphoneislam" target="_blank" title="LinkedIn">
+        <img alt="LinkedIn" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/linkedin_32.png?x83298"/>
+       </a>
+       <a class="ttip" href="https://www.youtube.com/iphoneislamtube" target="_blank" title="Youtube">
+        <img alt="YouTube" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/youtube_32.png?x83298"/>
+       </a>
+       <a class="ttip" href="https://www.instagram.com/iphoneislam/" target="_blank" title="instagram">
+        <img alt="instagram" src="https://iphoneislam.com/wp-content/themes/remal/images/socialicons/instagram_32.png?x83298"/>
+       </a>
+      </div>
+     </div>
+     <div class="widget facebook-widget" id="facebook-widget-2">
+      <h4 class="widget-top">
+       تابعنا على فيسبوك
+      </h4>
+      <div class="facebook-box">
+       <iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/iphoneislam&amp;width=260&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false&amp;height=210" style="background:#FFF; border:none; overflow:hidden; width:260px; height:210px;">
+       </iframe>
+      </div>
+     </div>
+     <div class="widget widget_text" id="text-2">
+      <h4 class="widget-top">
+       تابعنا على تويتر
+      </h4>
+      <div class="textwidget">
+       <center>
+        <a class="twitter-follow-button" data-lang="ar" data-show-count="false" href="https://twitter.com/iPhoneIslam">
+         تابِع @iPhoneIslam
+        </a>
+        <script type="81acd133b717b8317baab0d6-text/javascript">
+         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        </script>
+        <br/>
+        <a class="twitter-follow-button" data-lang="ar" data-show-count="false" href="https://twitter.com/App3ad">
+         تابِع @App3ad
+        </a>
+        <script type="81acd133b717b8317baab0d6-text/javascript">
+         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        </script>
+        <br/>
+        <a class="twitter-follow-button" data-lang="ar" data-show-count="false" href="https://twitter.com/iTarek">
+         تابِع @iTarek
+        </a>
+        <script type="81acd133b717b8317baab0d6-text/javascript">
+         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        </script>
+        <center>
+        </center>
+       </center>
+      </div>
+     </div>
+     <div class="widget widget_text" id="text-5">
+      <h4 class="widget-top">
+       اشترك في القائمة البريدية
+      </h4>
+      <div class="textwidget">
+       <div align="center">
+        <form action="https://feedburner.google.com/fb/a/mailverify" data-cf-modified-81acd133b717b8317baab0d6-="" method="post" onsubmit="if (!window.__cfRLUnblockHandlers) return false; window.open('https://feedburner.google.com/fb/a/mailverify?uri=iphoneislam/rss', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="border:1px solid #ccc;padding:3px;text-align:center;" target="popupwindow">
+         <p>
+          ادخل بريدك الاكتروني:
+         </p>
+         <p>
+          <input name="email" style="width:140px" type="text"/>
+         </p>
+         <input name="uri" type="hidden" value="iphoneislam/rss"/>
+         <input name="loc" type="hidden" value="en_US"/>
+         <input type="submit" value="“اشترك”"/>
+         <p>
+          Delivered by
+          <a href="https://feedburner.google.com" target="_blank">
+           FeedBurner
+          </a>
+         </p>
+        </form>
+       </div>
+      </div>
+     </div>
+     <div class="widget widget_text" id="text-4">
+      <h4 class="widget-top">
+       نزل تطبيق آي-فون إسلام الان
+      </h4>
+      <div class="textwidget">
+       <div align="center">
+        <iframe frameborder="1" src="https://banners.itunes.apple.com/banner.html?partnerId=&amp;aId=11l7wK&amp;id=362375140&amp;c=eg&amp;l=en-GB&amp;bt=catalog&amp;t=catalog_white&amp;w=180&amp;h=150" style="overflow-x:hidden;overflow-y:hidden;width:100%;height:150px;border:1px">
+        </iframe>
+       </div>
+      </div>
+     </div>
+     <div class="widget widget_text" id="text-3">
+      <h4 class="widget-top">
+       نزل تطبيق آب-عاد الان
+      </h4>
+      <div class="textwidget">
+       <div align="center">
+        <iframe frameborder="1" src="https://banners.itunes.apple.com/banner.html?partnerId=&amp;aId=11l7wK&amp;id=546419082&amp;c=eg&amp;l=en-GB&amp;bt=catalog&amp;t=catalog_white&amp;w=180&amp;h=150" style="overflow-x:hidden;overflow-y:hidden;width:100%;height:150px;border:1px">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </aside>
+    <div class="clear">
+    </div>
+   </div>
+   <footer id="footer2">
+    <div class="footer-1c" id="footer-widget-area">
+     <div class="footer-widgets-box" id="footer-first">
+      <div class="text-html-box" style="text-align:center;">
+       <div class="i4s-apps">
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=586106611" original-title="إلى صلاتي" target="_blank">
+         <img src="//iphoneislam.com/wp-content/uploads/2013/06/Ela-Salaty_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=588904998" original-title="محرر الصور" target="_blank">
+         <img src="//iphoneislam.com/wp-content/uploads/2013/05/Arabic-PhotoEdiotr-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=553297278" original-title="إرسم ولون" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/11/Ersm-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=578102003" original-title="أصحاب تيمو" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/11/Timo-iPad-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=508695339" original-title="لعبة حروف مبعثرة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/09/Scattered-Letters-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=546419082" original-title="آب-عاد" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/01/App3ad-Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=562891153" original-title="الرسائل الملونة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/10/ColorMessages-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=543646326" original-title="الفانوس - محرك بحث قرآني متقدم" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/04/Alfanous_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=518698206" original-title="أصحاب تيمو - الاحترام" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/05/Timo-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=509064341" original-title="القبلة في الواقع الإفتراضي" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/02/Qibla-AR_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=485534181" original-title="قاموس آي-فون إسلام" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/12/Dic-Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=474299392" original-title="كلمات متقاطعة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/11/CrossWord_AR_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=466715015" original-title="الساعة الناطقة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/10/ArabicClock00-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=437140234" original-title="اقتباس" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/09/Quote00-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=453617439" original-title="أبو يوسف" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/08/AbuYoussef-Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=455069146" original-title="الفتوى" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/08/ALFatwa_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=439416454" original-title="مفكرتي الشخصية" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/05/mofakerty-icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=420375781" original-title="لعبة شباب الثورة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/05/Thawra_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=434105489" original-title="الشيخ محمد حسين يعقوب" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/04/Droos_Yaqoob-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=406975865" original-title="الرجل المشنوق" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/03/HangMan_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=419746550" original-title="الأحاديث غير الصحيحة المنتشرة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/02/Weak-Hadiths-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=413856661" original-title="آي4إسلام راديو" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2011/01/i4islam_radio-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=405843449" original-title="الأسماء" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/12/Names_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=388188730" original-title="تكلم" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/11/EtkalemAppIcon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=386599485" original-title="بطاقات إسلامية" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/08/IslamicCards_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=362375140" original-title="زامن" target="_blank">
+         <img src="//iphoneislam.com/wp-content/uploads/2016/03/ZamenIcon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=564948137" original-title="معلوماتك الشاملة" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/03/M3lomatk-AlShamla-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=328962407" original-title="المصحف" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/06/AlMushaf-114-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=355812042" original-title="This is Mohammad" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/02/ThisIsMohammad_Icon.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=335067636" original-title="التقويم الإسلامي المطور" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/11/IslamicCalendar_Icon-70x70.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=318480521" original-title="هل تعلم ؟" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2010/01/DoYouKnowIcon.png?x83298"/>
+        </a>
+        <a class="ttip" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=301048982" original-title="آي أذكار" target="_blank">
+         <img src="//www.iphoneislam.com/wp-content/uploads/2012/04/iazkar-70x70.png?x83298"/>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="clear">
+    </div>
+   </footer>
+   <div class="clear">
+   </div>
+   <div class="footer-bottom">
+    <div class="container">
+     <p class="footer-hint">
+      <img alt="" src="//iphoneislam.com/images/mimv.png?x83298"/>
+      <br>
+       نحن لا نتحمل أي مسؤولية لأية اساءة في استعمال المعلومات المذكورة اعلاه. آي-فون إسلام لا ينتمي ولا يمثل شركة آبل. اي-فون و آبل واسم اي منتج آخر، واسماء الخدمات أو الشعارات المشار اليها هنا هي علامات تجارية او علامات تجارية مسجلة للابل كمبيوتر.
+      </br>
+     </p>
+     <div class="alignright">
+      <div style="font-family: Tahoma;">
+       كافة الحقوق محفوظة لموقع آي-فون إسلام © 2007-2017
+      </div>
+     </div>
+     <div class="alignleft">
+      <div style="font-family: Tahoma;">
+       تصميم:
+       <a href="http://www.mo3aser.com/?p=2650" target="_blank">
+        المُعاصر
+       </a>
+       | إدارة الخوادم:
+       <a href="http://www.arabhosters.com/" target="_blank">
+        المستضيفون العرب
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="scrollToTop">
+    إلى الأعلى
+   </div>
+  </div>
+  <script type="81acd133b717b8317baab0d6-text/javascript">
+   !function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = '//platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+  </script>
+  <script type="81acd133b717b8317baab0d6-text/javascript">
+   var skimlinks_domain = "go.iphoneislam.com";
+  </script>
+  <script src="//s.skimresources.com/js/101755X1557917.skimlinks.js" type="81acd133b717b8317baab0d6-text/javascript">
+  </script>
+  <style type="text/css">
+   #airpress_debugger {
+				width:100%;
+				font-family: monospace;
+				padding:50px;
+				font-size: 12px;
+				padding-top:100px;
+				display:none;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				color:#000000;
+				background-color: #f7f7f7;
+				z-index:99998;
+			}
+
+			#airpress_debugger .expander {
+				color: blue !important;
+			}
+			#airpress_debugger .expandable {
+				padding: 20px;
+				border: 1px dashed #cccccc;
+				display: none;
+				white-space: pre-wrap;
+			}
+  </style>
+  <script type="81acd133b717b8317baab0d6-text/javascript">
+   jQuery(document).ready(function(){
+			jQuery("#wp-admin-bar-airpress_debugger_toggle").click(function(e){
+				e.preventDefault();
+				jQuery("#airpress_debugger").toggle();
+				jQuery('html, body').animate({ scrollTop: 0 }, 'fast');
+			});
+
+			jQuery(".expander").click(function(e){
+				e.preventDefault();
+				jQuery(this).next().fadeToggle();
+			});
+		});
+  </script>
+  <div id="airpress_debugger">
+  </div>
+  <script data-dojo-config="usePlainJson: true, isDebug: false" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" type="81acd133b717b8317baab0d6-text/javascript">
+  </script>
+  <script type="81acd133b717b8317baab0d6-text/javascript">
+   window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us5.list-manage.com","uuid":"90b555c783e78894291585a39","lid":"869f7bc943","uniqueMethods":true}) })
+  </script>
+  <script type="81acd133b717b8317baab0d6-text/javascript">
+   window.WPCOM_sharing_counts = {"https:\/\/iphoneislam.com\/2014\/04\/do-not-fool-with-cameras-specs\/34418":34418};
+  </script>
+  <div id="sharing_email" style="display: none;">
+   <form action="/2014/04/do-not-fool-with-cameras-specs/34418" method="post">
+    <label for="target_email">
+     إرسال إلى بريد إلكتروني
+    </label>
+    <input id="target_email" name="target_email" type="email" value=""/>
+    <label for="source_name">
+     إسمك
+    </label>
+    <input id="source_name" name="source_name" type="text" value=""/>
+    <label for="source_email">
+     بريدك الإلكتروني
+    </label>
+    <input id="source_email" name="source_email" type="email" value=""/>
+    <input autocomplete="off" class="input" id="jetpack-source_f_name" name="source_f_name" size="25" title="هذا الحقل مخصص للتحقق من الصحة ولا ينبغي تغييره" type="text" value=""/>
+    <img alt="loading" class="loading" height="16" src="https://iphoneislam.com/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif?x83298" style="float: right; display: none" width="16">
+     <input class="sharing_send" type="submit" value="إرسال بريد إلكتروني"/>
+     <a class="sharing_cancel" href="#cancel" rel="nofollow" role="button">
+      إلغاء
+     </a>
+     <div class="errors errors-1" style="display: none;">
+      لم يتم إرسال الموضوع - تحقق من عناوين بريدك الإلكترونية!
+     </div>
+     <div class="errors errors-2" style="display: none;">
+      فشل التأكد من البريد الإلكتروني، من فضلك أعد المحاولة
+     </div>
+     <div class="errors errors-3" style="display: none;">
+      عفواً، لا يستطيع موقعك مشاركة المواضيع من خلال البريد الإلكتروني.
+     </div>
+    </img>
+   </form>
+  </div>
+  <script src="https://iphoneislam.com/wp-content/plugins/arqam/assets/js/scripts.js?x83298" type="81acd133b717b8317baab0d6-text/javascript">
+  </script>
+  <script src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201917" type="81acd133b717b8317baab0d6-text/javascript">
+  </script>
+  <script type="81acd133b717b8317baab0d6-text/javascript">
+   /* <![CDATA[ */
+var superpwa_sw = {"url":"\/OneSignalSDKWorker.js.php"};
+/* ]]> */
+  </script>
+  <script src="https://iphoneislam.com/wp-content/plugins/super-progressive-web-apps/public/js/register-sw.js?x83298" type="81acd133b717b8317baab0d6-text/javascript">
+  </script>
+  <script src="https://iphoneislam.com/wp-includes/js/comment-reply.min.js?x83298" type="81acd133b717b8317baab0d6-text/javascript">
+  </script>
+  <script src="https://iphoneislam.com/wp-includes/js/wp-embed.min.js?x83298" type="81acd133b717b8317baab0d6-text/javascript">
+  </script>
+  <script src="https://iphoneislam.com/wp-content/plugins/jetpack/_inc/build/postmessage.min.js?x83298" type="81acd133b717b8317baab0d6-text/javascript">
+  </script>
+  <script src="https://iphoneislam.com/wp-content/plugins/jetpack/_inc/build/jquery.jetpack-resize.min.js?x83298" type="81acd133b717b8317baab0d6-text/javascript">
+  </script>
+  <script src="https://iphoneislam.com/wp-content/plugins/jetpack/_inc/build/likes/queuehandler.min.js?x83298" type="81acd133b717b8317baab0d6-text/javascript">
+  </script>
+  <script async="async" src="https://iphoneislam.com/wp-content/plugins/akismet/_inc/form.js?x83298" type="81acd133b717b8317baab0d6-text/javascript">
+  </script>
+  <script type="81acd133b717b8317baab0d6-text/javascript">
+   /* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+  </script>
+  <script src="https://iphoneislam.com/wp-content/plugins/jetpack/_inc/build/sharedaddy/sharing.min.js?x83298" type="81acd133b717b8317baab0d6-text/javascript">
+  </script>
+  <script type="81acd133b717b8317baab0d6-text/javascript">
+   var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-telegram', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtelegram', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-pocket', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcompocket', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-skype', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomskype', 'menubar=1,resizable=1,width=305,height=665' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-linkedin', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-tumblr', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtumblr', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+  </script>
+  <iframe id="likes-master" name="likes-master" scrolling="no" src="https://widgets.wp.com/likes/master.html?ver=201917#ver=201917&amp;lang=ar" style="display:none;">
+  </iframe>
+  <div id="likes-other-gravatars">
+   <div class="likes-text">
+    <span>
+     %d
+    </span>
+    مدونون معجبون بهذه:
+   </div>
+   <ul class="wpl-avatars sd-like-gravatars">
+   </ul>
+  </div>
+  <script async="async" defer="defer" src="https://stats.wp.com/e-201917.js" type="81acd133b717b8317baab0d6-text/javascript">
+  </script>
+  <script type="81acd133b717b8317baab0d6-text/javascript">
+   _stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.2.1',blog:'64050452',post:'34418',tz:'2',srv:'iphoneislam.com'} ]);
+	_stq.push([ 'clickTrackerInit', '64050452', '34418' ]);
+  </script>
+  <script type="81acd133b717b8317baab0d6-text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7c784b082f","applicationID":"2871506","transactionName":"Y1MHYkZXVxICVkNaDFoZJFVAX1YPTEZeXQRYUw==","queueTime":0,"applicationTime":1768,"atts":"TxQEFA5NRBw=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+  <script data-cf-settings="81acd133b717b8317baab0d6-|49" defer="" src="https://ajax.cloudflare.com/cdn-cgi/scripts/a2bd7673/cloudflare-static/rocket-loader.min.js">
+  </script>
+ </body>
+</html>

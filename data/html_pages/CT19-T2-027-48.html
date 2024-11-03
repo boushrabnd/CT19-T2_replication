@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="ar">
+ <head>
+  <script src="/cdn-cgi/apps/head/7H8kb-LdwBfeG8IOOuTKFlFTJtM.js">
+  </script>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="/css/app.css?id=1b08fdd7b20c7d2974e0" rel="stylesheet"/>
+  <link href="https://royanews.tv/news/173666" rel="canonical">
+   <link href="/images/logo.png" rel="apple-touch-icon">
+    <meta content="Index, Follow" name="robots"/>
+    <meta content="index, follow" name="googlebot"/>
+    <meta content="index, follow" name="Googlebot-News"/>
+    <meta charset="utf-8" content="text/html" http-equiv="Content-Type"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+     <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+     <script type="text/javascript">
+      window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);
+     </script>
+     <meta content="odMKhCegXXsrGbz9L9ChbsUMR5GcuS9pAXd6ZU04" name="csrf-token"/>
+     <meta content="public" http-equiv="Cache-control"/>
+     <meta content="max-age=1000" http-equiv="cache-control">
+      <meta content="telephone=no" name="format-detection">
+       <meta content="132254670180426" property="fb:pages">
+        <meta content="رؤيا , أخبار, الاردن, العالم" name="keyword">
+         <meta content='"هونر" تطلق هاتفها الجديد HONOR 10 Lite بتكنولوجيا معاصرة' name="description">
+          <title>
+           رؤيا الإخباري | "هونر" تطلق هاتفها الجديد HONOR 10 Lite بتكنولوجيا معاصرة
+          </title>
+          <style>
+           {
+            background-color: #F0F0F0;
+            border-top: 1px solid #000757;
+            border-bottom: 1px solid #000757;
+            line-height: 46px;
+            height: 50px;
+            margin-top: -1px;
+        }
+          </style>
+          <script>
+           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+
+            {'gtm.start': new Date().getTime(),event:'gtm.js'}
+        );var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WKJDFQ4');
+          </script>
+          <script>
+           (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-48832447-1', 'auto');
+            ga('send', 'pageview');
+          </script>
+          <script type="text/javascript">
+           _atrk_opts = {atrk_acct: "r/STj1a0Sn00Em", domain: "royanews.tv", dynamic: true};
+            (function () {
+                var as = document.createElement('script');
+                as.type = 'text/javascript';
+                as.async = true;
+                as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js";
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(as, s);
+            })();
+          </script>
+          <noscript>
+           <img alt="" height="1" src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=r/STj1a0Sn00Em" style="display:none" width="1"/>
+          </noscript>
+          <script type="text/javascript">
+           var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function () {
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+          </script>
+          <script type="text/javascript">
+           var gptAdSlots = [];
+        googletag.cmd.push(function () {
+
+            var mapping = googletag.sizeMapping().addSize([736, 306], [728, 90]).addSize([560, 267], [550, 90]).addSize([370, 212], [350, 90]).addSize([320, 372], [300, 75]).addSize([0, 0], [300, 75]).build();
+
+            gptAdSlots[0] = googletag.defineSlot('/44100265/royanews_leaderboard_728X90', [[728, 90], [550, 90], [350, 90], [300, 75]], 'div-gpt-ad-1470226760769-0').defineSizeMapping(mapping).setTargeting('section_name', 'technology').addService(googletag.pubads());
+            gptAdSlots[1] = googletag.defineSlot('/44100265/royanews_LatestMostRead', [300, 250], 'div-gpt-ad-1470227758270-0').setTargeting('section_name', 'technology').addService(googletag.pubads());
+            gptAdSlots[2] = googletag.defineSlot('/44100265/royanews_economy', [[300, 75], [350, 90], [728, 90], [550, 90]], 'div-gpt-ad-1470235230646-0').defineSizeMapping(mapping).addService(googletag.pubads());
+            gptAdSlots[3] = googletag.defineSlot('/44100265/royanews_health', [[550, 90], [728, 90], [350, 90], [300, 75]], 'div-gpt-ad-1470235701485-0').defineSizeMapping(mapping).addService(googletag.pubads());
+            gptAdSlots[4] = googletag.defineSlot('/44100265/royanews_international', [[300, 75], [550, 90], [728, 90], [350, 90]], 'div-gpt-ad-1471269896108-0').defineSizeMapping(mapping).addService(googletag.pubads());
+            gptAdSlots[5] = googletag.defineSlot('/44100265/royanews_deaths', [300, 250], 'div-gpt-ad-1471267755992-0').setTargeting('section_name', 'technology').addService(googletag.pubads());
+            gptAdSlots[6] = googletag.defineSlot('/44100265/royanews_technology', [[728, 90], [550, 90], [350, 90], [300, 75]], 'div-gpt-ad-1471268456315-0').defineSizeMapping(mapping).addService(googletag.pubads());
+            gptAdSlots[7] = googletag.defineSlot('/44100265/royanews_caricature', [300, 250], 'div-gpt-ad-1471269114372-0').setTargeting('section_name', 'technology').addService(googletag.pubads());
+            gptAdSlots[8] = googletag.defineSlot('/44100265/royanews_palestine', [[728, 90], [350, 90], [300, 75], [550, 90]], 'div-gpt-ad-1471269681273-0').defineSizeMapping(mapping).addService(googletag.pubads());
+            gptAdSlots[9] = googletag.defineSlot('/44100265/royanews_sports', [[728, 90], [350, 90], [300, 75], [550, 90]], 'div-gpt-ad-1471269736320-0').defineSizeMapping(mapping).addService(googletag.pubads());
+            gptAdSlots[10] = googletag.defineSlot('/44100265/royanews_misc', [[550, 90], [728, 90], [300, 75], [350, 90]], 'div-gpt-ad-1476254191029-0').defineSizeMapping(mapping).addService(googletag.pubads());
+            gptAdSlots[12] = googletag.defineSlot('/44100265/royanews_accidents', [300, 250], 'div-gpt-ad-1473000994902-0').addService(googletag.pubads());
+            gptAdSlots[13] = googletag.defineSlot('/44100265/royanews_opinion', [300, 250], 'div-gpt-ad-1473001086828-0').addService(googletag.pubads());
+            gptAdSlots[14] = googletag.defineSlot('/44100265/royanews_weather', [300, 250], 'div-gpt-ad-1473001122662-0').setTargeting('section_name', 'technology').addService(googletag.pubads());
+            gptAdSlots[15] = googletag.defineSlot('/44100265/royanews_billboard_mobile', [350, 90], 'div-gpt-ad-1473002811845-0').addService(googletag.pubads());
+            gptAdSlots[16] = googletag.defineSlot('/44100265/royanews_videos', [[728, 90], [550, 90], [300, 75], [350, 90]], 'div-gpt-ad-1473166905934-0').defineSizeMapping(mapping).addService(googletag.pubads());
+            gptAdSlots[17] = googletag.defineSlot('/44100265/royanews_billboard', [1140, 240], 'div-gpt-ad-1474807356033-0').setTargeting('section_name', 'technology').addService(googletag.pubads());
+
+            gptAdSlots[18] = googletag.defineSlot('/44100265/royanews_billboard_970x250', [970, 250], 'div-gpt-ad-1491746015224-0').setTargeting('section_name', 'technology').addService(googletag.pubads());
+
+            gptAdSlots[19] = googletag.defineSlot('/44100265/royanews_billboard_inner_pages_970x250', [970, 250], 'div-gpt-ad-1499330322906-0').addService(googletag.pubads());
+
+            gptAdSlots[20] = googletag.defineSlot('/44100265/royanews_billboard_desktop_homepage_1140_240', [1140, 240], 'div-gpt-ad-1499330510952-0').addService(googletag.pubads());
+
+            gptAdSlots[21] = googletag.defineSlot('/44100265/royanews_homepage_leaderboard', [[728, 90],  [550, 90], [350, 90], [300, 75]], 'div-gpt-ad-1499330684238-0').defineSizeMapping(mapping).addService(googletag.pubads());
+
+            gptAdSlots[22] = googletag.defineSlot('/44100265/royanews_homepage_latestMostRead', [300, 250], 'div-gpt-ad-1499331062513-0').setTargeting('section_name', 'technology').addService(googletag.pubads());
+
+            gptAdSlots[23] = googletag.defineOutOfPageSlot('/44100265/royanews_out_of_page_test', 'div-gpt-ad-1500383200430-0').addService(googletag.pubads());
+
+            gptAdSlots[24] = googletag.defineSlot('/44100265/royanews_economy_mpu', [300, 250], 'div-gpt-ad-1506951456438-0').addService(googletag.pubads());
+
+            gptAdSlots[25] = googletag.defineSlot('/44100265/royanews_misc_mpu', [300, 250], 'div-gpt-ad-1506951538475-0').addService(googletag.pubads());
+
+            gptAdSlots[26] = googletag.defineSlot('/44100265/royanews_people_aslo_read', [[728, 90], [550, 90], [350, 90], [300, 75]], 'div-gpt-ad-1527167511851-0').defineSizeMapping(mapping).addService(googletag.pubads());
+
+            gptAdSlots[27] = googletag.defineSlot('/44100265/royanews_related_article', [[728, 90], [550, 90], [350, 90], [300, 75]], 'div-gpt-ad-1527167666469-0').defineSizeMapping(mapping).addService(googletag.pubads());
+
+            gptAdSlots[28] = googletag.defineSlot('/44100265/royanews_article', [300, 250], 'div-gpt-ad-1527167843836-0').addService(googletag.pubads());
+
+            gptAdSlots[29] =  googletag.defineSlot('/44100265/royanews_insideArticle_MPU', [300, 250], 'div-gpt-ad-1541576922072-0').addService(googletag.pubads());
+
+            googletag.pubads().collapseEmptyDivs();
+            googletag.enableServices();
+
+        });
+          </script>
+          <meta content="https://royanews.tv/news/173666?title=1548741199" property="og:url">
+           <meta content="article" property="og:type"/>
+           <meta content='"هونر" تطلق هاتفها الجديد HONOR 10 Lite بتكنولوجيا معاصرة' property="og:title"/>
+           <meta content='"هونر" تطلق هاتفها الجديد HONOR 10 Lite ....' property="og:description"/>
+           <meta content="https://cdnimg.royanews.tv/imageserv/Size728Q40/news/20190129/Nf1rLZmXbO2Yv5AtqCrankWFMefNiC8z84YDPvXp.png" property="og:image"/>
+           <script type="application/ld+json">
+            {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "url": "://royanews.tv/news"
+  },
+  "publisher": {
+            "@type": "Organization",
+            "name": "Roya News",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "://royanews.tv/images/site/logo.png",
+                "width": 77,
+                "height": 60
+            }
+        },
+  "headline": "&quot;هونر&quot; تطلق هاتفها الجديد HONOR 10 Lite بتكنولوجيا معاصرة",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://cdnimg.royanews.tv/imageserv/Size728Q40/news/20190129/Nf1rLZmXbO2Yv5AtqCrankWFMefNiC8z84YDPvXp.png",
+        "height": 400,
+        "width": 728
+      },
+      "articleSection": "تكنولوجيا",
+  "datePublished": "2019-01-29 07:53",
+  "dateModified": "2019-01-29 07:53",
+  "author": {
+    "@type": "Person",
+    "name": "فريق رؤيا اﻷخباري"
+  },
+  "articleBody": " أطلقت شركة هونر من خلال وكيلها الحصري ملتي سل هاتفها الجديد HONOR 10 Lite في المملكة الاردنية الهاشمية، الذي يقدم مزايا تكنولوجية معاصرة ويضع معايير جديدة في تصميم الهواتف الذكية بشاشة 6.21 بوصة (FHD) وهيكل يمتاز بألوان حيوية متدرجة مع كاميرا أمامية لصور السيلفي بدقة 24 ميغابيكسل تعمل بتقنيات الذكاء الاصطناعي، وكاميرا خلفية ثنائية بدقة 13 + 2 ميغابيكسل.
+وفي التفاصيل، يتمتع الهاتف بسعة تخزين داخلي قدرها 64 ميغابايت، ويقدم الهاتف أحدث المعالجات (معالج Kirin 710 جديد مع واجهة EMUI 9.0)، وبطارية بقوة 3400 ملي أمبير تدوم طويلاً، ومعالج جرافيكس فائق الدقة 'توربو جي بي يو 2.0'.
+وصمم الجهاز من 8 طبقات من المعدن اللامع ويأتي بألوان متدرجة، تشمل 'الأزرق السماوي، ، والأزرق الياقوتي، والأسود'، كما يمتاز هاتف HONOR 10 Lite بتصميم منحني ثلاثي الأبعاد من الجوانب الأربعة.
+وبفضل الكاميرا المدعومة بقوة الذكاء الاصطناعي، يتيح هاتف HONOR 10 Lite للمستخدمين التقاط الصور الاحترافية، أما تقنية الذكاء الاصطناعي فيمكنها التعرف على ما يصل إلى 8 سيناريوهات مختلفة لإضفاء الإعدادات المناسبة للصورة المثالية. وتحتوي الكاميرا كذلك على تأثيرات تحاكي التصوير الاحترافي في الاستوديوهات.
+أما من الجانب الخلفي، فترافق جهاز HONOR 10 Lite كاميرا خلفية بعدسة ثنائية بدقة 13 و 2 ميغابيكسل وفتحات f/1.8 و f/2.4. وعند استخدامها مع تقنيات الذكاء الاصطناعي ونمط التصوير الليلي، يمكن التقاط الصور الاحترافية بكل سهولة حتى في ظروف الإضاءة المحدودة والخافتة، وتعزز تقنية الاتصال المدعومة بالذكاء الاصطناعي من جودة المكالمات الهاتفية حتى في أكثر البيئات ضوضاء، وتحرص على عدم انقطاع الاتصال بفضل النمط الجديد للاستخدام في المصعد.
+سيتوفر هاتف HONOR 10 Lite في المملكة اعتباراً من 20 يناير 2019. يبلغ سعر الهاتف 159 دينار اردني ويتوفر في كافة نقاط البيع المعتمدة من الوكيل الحصري ملتي سل.
+        "
+      }
+           </script>
+           <style>
+            .billboard {
+            display: none;
+        }
+        .content_container{
+            margin-top:10px;
+            position:relative;
+        }
+        .ad-modal.modal {
+            text-align: center;
+            padding: 0!important;
+        }
+        .ad-modal.modal:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        .ad-modal .modal-dialog {
+            display: inline-block;
+        }
+        @media (min-width: 992px){
+            .ad-modal .modal-lg {
+                width: 1170px !important;
+            }
+        }
+        @media (max-width: 420px) {
+            .breaking_news_ticker, .now_showing_ticker {
+                bottom: 44px;
+            }
+        }
+           </style>
+           <script type="application/ld+json">
+            {
+      "@context": "https://www.schema.org",
+      "@type": "Organization",
+      "name": "Roya News",
+      "url": "://royanews.tv",
+      "sameAs": [
+        "https://plus.google.com/+RoyaNews",
+        "https://www.royanews.tv/rss",
+        "https://www.youtube.com/user/RoyaNews",
+        "https://instagram.com/RoyaNews",
+        "https://www.twitter.com/RoyaNews",
+        "https://www.facebook.com/RoyaNews"
+      ],
+      "logo": "://royanews.tv/images/site/logo.png",
+      "description": "موقع أخباري أردني تابع لقناة رؤيا الفضائية ينقل لكم الأخبار المحلية الأردنية وأخبار فلسطين وأبرز الأخبار العربية والدولية.\n",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "أم الحيران، مبنى المدينة الاعلامية، شارع الصخرة المشرفة بجانب مبنى الاذاعة والتلفزيون",
+        "addressLocality": "Amman",
+        "postalCode": "00962",
+        "addressCountry": "Jordan"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+96264206419 "
+      }
+    }
+           </script>
+           <script src="//www.googletagservices.com/tag/js/gpt.js">
+            googletag.pubads().definePassback('/44100265/royanews_1x1', [1, 1]).display();
+           </script>
+           <script type="text/javascript">
+            (function(t,r,a,c,k,n,o,w){t['em_ns']=k;w=1*new Date();t[k]=t[k]||function(){
+                (t[k].q=t[k].q||[]).push(arguments)},t[k].t=w;n=r.createElement(a);n.async=1;
+            n.src=c+'/tag'+(t.addEventListener&&'.'||'_.')+'js?'+parseInt(w/1e9, 10);
+            o=r.getElementsByTagName(a)[0];o.parentNode.insertBefore(n,o)
+        })(window,document,'script','https://t.effectivemeasure.net','_em');
+           </script>
+           <noscript>
+            <img alt="" src="https://collector.effectivemeasure.net/noscript" style="position:absolute; left:-5px;"/>
+           </noscript>
+          </meta>
+         </meta>
+        </meta>
+       </meta>
+      </meta>
+     </meta>
+    </meta>
+   </link>
+  </link>
+ </head>
+ <body>
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WKJDFQ4" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script async="" src="//www.googletagservices.com/tag/js/gpt.js">
+   googletag.pubads().definePassback('/44100265/royanews_SE_pushdown', [1, 1]).display();
+  </script>
+  <header class="Header">
+   <div class="top_header_wrapper">
+    <div class="top_header">
+     <div class="container">
+      <div class="row">
+       <div class="col-xs-12">
+        <form action="https://royanews.tv/search" class="navbar-form pull-right" method="GET" role="search">
+         <div class="form-group top_header_search">
+          <button class="pull-right search_btn">
+           <i aria-label="بحث" class="fa fa-search top_header_icons top_header_search_icon">
+           </i>
+          </button>
+          <input class="form-control pull-right" name="keyword" placeholder="أدخل كلمة البحث" type="text"/>
+         </div>
+        </form>
+        <div class="top_header_icons englishLink">
+         <a href="http://en.royanews.tv/" target="_blank" title="English">
+          <span class="hidden-xs">
+           English
+          </span>
+          <span class="visible-xs">
+           EN
+          </span>
+         </a>
+        </div>
+        <div class="nav_separator top_header_icons">
+        </div>
+        <div class="top_header_icons contact_us_icon">
+         <a href="https://royanews.tv/contact-us" title="أرسل لنا">
+          <img alt="أرسل لنا" src="/images/site/contact-us.png" title="أرسل لنا"/>
+         </a>
+        </div>
+        <div class="nav_separator top_header_icons">
+        </div>
+        <div class="top_header_icons survey_icon hidden-xs">
+         <a href="https://royanews.tv/survey-list" title="استطلاع رأي">
+          <img alt="استطلاع رأي" src="/images/site/survey.png" title="استطلاع رأي"/>
+         </a>
+        </div>
+        <div class="hidden-xs">
+         <div class="nav_separator top_header_icons">
+         </div>
+         <div class="top_header_icons survey_icon pt_10">
+          <a href="https://royanews.tv/videos" title="فيديو">
+           <i aria-label="فيديو" class="fa fa-video-camera">
+           </i>
+          </a>
+         </div>
+         <div class="nav_separator top_header_icons">
+         </div>
+         <div class="top_header_icons survey_icon pt_10">
+          <a href="https://royanews.tv/death" title="وفيّات">
+           <i aria-label="وفيّات" class="fa fa-heartbeat">
+           </i>
+          </a>
+         </div>
+        </div>
+        <div class="nav_separator top_header_icons hidden-xs">
+        </div>
+        <div class="top_header_icons live_stream">
+         <a href="https://royanews.tv/breaking-list" title="عواجل آخر 48 ساعة">
+          <img alt="عواجل آخر 48 ساعة" src="/images/site/breakingLight.png" title="عواجل آخر 48 ساعة"/>
+         </a>
+        </div>
+        <div class="nav_separator top_header_icons">
+        </div>
+        <div class="top_header_icons live_stream">
+         <a href="https://royanews.tv/watch-live" title="البث المباشر">
+          <img alt="البث المباشر" src="/images/site/live_light.png" title="البث المباشر"/>
+         </a>
+        </div>
+        <div class="nav_separator top_header_icons">
+        </div>
+        <div class="top_header_icons register_icon">
+         <a href="https://royanews.tv/users/login" title="تسجيل دخول">
+          <i aria-label="تسجيل دخول" class="fa fa-user">
+          </i>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="container">
+    <div class="row mt_10">
+     <a href="/" title="رؤيا الإخباري">
+      <div class="col-sm-4 hidden-xs hidden-sm">
+       <div class="Logo">
+        <img alt="رؤيا الإخباري" src="/images/site/logo.png" title="رؤيا الإخباري">
+         <h1>
+          رؤيا الإخباري
+         </h1>
+        </img>
+       </div>
+      </div>
+     </a>
+     <div class="col-sm-8 leader_board">
+      <div id="div-gpt-ad-1470226760769-0">
+       <script>
+        googletag.cmd.push(function () {
+                                googletag.display('div-gpt-ad-1470226760769-0');
+                            });
+       </script>
+      </div>
+     </div>
+    </div>
+   </div>
+   <nav class="navbar navbar-default main_menu" id="Menu" role="navigation">
+    <div class="container">
+     <div class="navbar-header page-scroll">
+      <button class="mobile-menu-open navbar-toggle hidden-md hidden-lg" data-toggle="collapse" type="button">
+       <span class="sr-only">
+        Toggle navigation
+       </span>
+       <span class="icon-bar">
+       </span>
+       <span class="icon-bar">
+       </span>
+       <span class="icon-bar">
+       </span>
+      </button>
+      <a class="navbar-brand hidden-md hidden-lg" href="/">
+       <img alt="رؤيا الإخباري" src="/images/site/logo.png" title="رؤيا الإخباري">
+        <div class="titleLogo">
+         رؤيا الإخباري
+        </div>
+       </img>
+      </a>
+     </div>
+     <div class="overlay hidden-lg hidden-md" id="myNav">
+      <div class="overlay-content">
+       <div class="closebtn_top closebtn">
+        <i aria-label="إغلاق" class="fa fa-close">
+        </i>
+       </div>
+       <div class="active">
+        <a href="/" title="الرئيسية">
+         الرئيسية
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/section/1" title="محليات">
+         محليات
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/section/8" title="فلسطين">
+         فلسطين
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/section/9" title="عربي دولي">
+         عربي دولي
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/section/12" title="اقتصاد">
+         إقتصاد
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/section/14" title="رياضة">
+         رياضة
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/section/17" title="صحة">
+         صحة
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/section/15" title="هنا وهناك">
+         هنا وهناك
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/section/19" title="تكنولوجيا">
+         تكنولوجيا
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/writers-articles" title="مقالات">
+         مقالات
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/writers" title="كتّاب">
+         كتّاب
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/section/4" title="الطقس">
+         الطقس
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/videos" title="فيديو">
+         فيديو
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/caricatures" title="كاريكاتير">
+         كاريكاتير
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/death" title="وفيّات">
+         وفيّات
+        </a>
+       </div>
+       <div>
+        <a href="https://royanews.tv/previous-events" title="الأحداث السابقة">
+         الأحداث السابقة
+        </a>
+       </div>
+       <div>
+        <ul class="social_icons clearfix">
+         <li>
+          <a href="https://www.facebook.com/RoyaNews" target="_blank" title="رؤيا الإخباري فايسبوك">
+           <i aria-label="رؤيا الإخباري فايسبوك" class="fa fa-facebook-official fa-lg">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="https://twitter.com/royanews" target="_blank" title="رؤيا الإخباري تويتر">
+           <i aria-label="رؤيا الإخباري تويتر" class="fa fa-twitter fa-lg">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="https://www.instagram.com/royanews/" target="_blank" title="رؤيا الإخباري إنستغرام">
+           <i aria-label="رؤيا الإخباري إنستغرام" class="fa fa-instagram fa-lg">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="https://www.youtube.com/user/RoyaNews" target="_blank" title="رؤيا الإخباؤي يوتيوب">
+           <i aria-label="رؤيا الإخباؤي يوتيوب" class="fa fa-youtube-play fa-lg">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="https://www.royanews.tv/rss" target="_blank" title="رؤيا الإخباري RSS">
+           <i aria-label="رؤيا الإخباري RSS" class="fa fa-rss fa-lg">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="https://plus.google.com/115890660500355891053" target="_blank" title="رؤيا الإخباري جوجل">
+           <i aria-label="رؤيا الإخباري جوجل" class="fa fa-google-plus fa-lg">
+           </i>
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="navbar-collapse collapse" id="main_menu">
+      <div class="menu-Logo">
+       <a href="/">
+        <img alt="رؤيا الإخباري" src="/images/site/logo.png" title="رؤيا الإخباري"/>
+       </a>
+      </div>
+      <ul class="nav navbar-nav">
+       <li>
+        <a href="/" id="home_page" title="الرئيسية">
+         <span>
+          الرئيسية
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://royanews.tv/section/1" id="menu_local" title="محليات">
+         <span>
+          محليات
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://royanews.tv/section/8" id="menu_palestine" title="فلسطين">
+         <span>
+          فلسطين
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://royanews.tv/section/9" id="menu_international" title=" عربي ودولي ">
+         <span>
+          عربي دولي
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://royanews.tv/section/12" id="menu_economy" title="اقتصاد">
+         <span>
+          اقتصاد
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://royanews.tv/section/14" id="menu_sport" title="رياضة">
+         <span>
+          رياضة
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://royanews.tv/section/17" id="menu_health" title="صحة">
+         <span>
+          صحة
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://royanews.tv/section/15" id="menu_misc" title="هنا وهناك">
+         <span>
+          هنا وهناك
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://royanews.tv/section/19" id="menu_technology" title="تكنولوجيا">
+         <span>
+          تكنولوجيا
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://royanews.tv/writers-articles" id="menu_writers_articles" title="مقالات">
+         <span>
+          مقالات
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://royanews.tv/writers" id="menu_writers" title="كتّاب">
+         <span>
+          كتّاب
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://royanews.tv/section/4" id="menu_weather" title="الطقس">
+         <span>
+          الطقس
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://royanews.tv/caricatures" id="menu_caricature" title="كاريكاتير">
+         <span>
+          كاريكاتير
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://royanews.tv/previous-events" id="menu_events" title="الأحداث السابقة">
+         <span>
+          الأحداث السابقة
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <div class="container" id="app">
+   <div class="row">
+    <div class="hidden-md hidden-sm hidden-xs billboard" style="text-align: center; margin-top:10px">
+     <div id="div-gpt-ad-1474807356033-0" style="text-align: center; margin-bottom:10px">
+      <script>
+       googletag.cmd.push(function () { googletag.display('div-gpt-ad-1474807356033-0'); });
+      </script>
+     </div>
+     <div id="div-gpt-ad-1491746015224-0" style="text-align: center; margin-bottom:10px">
+      <script>
+       googletag.cmd.push(function() { googletag.display('div-gpt-ad-1491746015224-0'); });
+      </script>
+     </div>
+    </div>
+   </div>
+   <div class="row content_container">
+    <div class="col-xs-12 col-sm-8">
+     <section>
+      <h1 class="inner_title">
+       "هونر" تطلق هاتفها الجديد HONOR 10 Lite بتكنولوجيا معاصرة
+      </h1>
+     </section>
+     <section>
+      <div class="row">
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 dates">
+        <span>
+         <a href="https://royanews.tv/section/19" title="تكنولوجيا">
+          <i aria-label="Category" class="fa fa-sliders">
+          </i>
+          تكنولوجيا
+         </a>
+        </span>
+        <span>
+         نشر: 2019-01-29 07:53
+        </span>
+        <span>
+         آخر تحديث: 2019-01-29 07:53
+        </span>
+        <br/>
+       </div>
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 share_icons">
+        <ul class="share_list">
+         <li>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://royanews.tv/news/173666?title=1548741199" target="_blank" title="Share via Facebook">
+           <i aria-label="Facebook" class="fa fa-facebook facebook">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="https://twitter.com/home?status=https://royanews.tv/news/173666?title=1548741199" target="_blank" title="Share via Twitter">
+           <i aria-label="Twitter" class="fa fa-twitter twitter">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="/cdn-cgi/l/email-protection#c7f8b4b2a5ada2a4b3fa1f6d1f601f6f1f7ee71f651f691f76e71f601e431f641f691f6f1f601f76e71f7e1e431e4ee71e421e4f1e451f7ee71f761f631e4d1f60e71f601e431f621f691f6f1f601f761e4de1a5a8a3befa1f601e451f761f64e71f601e431f691f6f1f76e71e461e4de71f601e431f761f601f6f1f70e71f601e431f6d1f601e431e4de71f7e1e431e4ee71e421e4f1e451f7ee71f761f631e4d1f60e71f601e431f621f691f6f1f601f761e4de7afb3b3b7b4fde8e8b5a8bea6a9a2b0b4e9b3b1e8a9a2b0b4e8f6f0f4f1f1f1f8b3aeb3aba2faf5f7f6fef7f6f5fe" target="_blank" title="Share via Email">
+           <i aria-label="Email" class="fa fa-envelope email">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://royanews.tv/news/173666?title=1548741199&amp;title=&amp;summary=&amp;source=%D8%B1%D8%A4%D9%8A%D8%A7%20%D8%A7%D9%84%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1%D9%8A" target="_blank" title="Share via LinkedIn">
+           <i aria-label="LinkedIn" class="fa fa-linkedin linkedin">
+           </i>
+          </a>
+         </li>
+         <li>
+          <a href="https://plus.google.com/share?url=https://royanews.tv/news/173666?title=1548741199" target="_blank" title="Share via Google Plus">
+           <i aria-label="Google Plus" class="fa fa-google-plus google">
+           </i>
+          </a>
+         </li>
+         <li class="hidden-md hidden-lg">
+          <a href="whatsapp://send?text=https://royanews.tv/news/173666?title=1548741199" target="_blank" title="Share via WhatsApp">
+           <i aria-label="WhatsApp" class="fa fa-whatsapp whatsapp">
+           </i>
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </section>
+     <section>
+      <div class="row">
+       <div class="col-xs-12">
+        <div class="Lead">
+         <div class="Lead_font">
+          <div class="image_title">
+           "هونر" تطلق هاتفها الجديد HONOR 10 Lite بتكنولوجيا معاصرة
+          </div>
+         </div>
+         <img alt='"هونر" تطلق هاتفها الجديد HONOR 10 Lite بتكنولوجيا معاصرة' class="b-lazy" data-src="https://cdnimg.royanews.tv/imageserv/Size728Q100/news/20190129/Nf1rLZmXbO2Yv5AtqCrankWFMefNiC8z84YDPvXp.png" onerror="imgError(this)" src="https://cdnimg.royanews.tv/imageserv/Size728Q100/site/placeholder.JPG" title='"هونر" تطلق هاتفها الجديد HONOR 10 Lite بتكنولوجيا معاصرة'>
+         </img>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section>
+      <div class="row">
+       <div class="col-xs-12">
+        <div class="source">
+         <a href="#" target="_blank">
+          <img alt="المصدر" src="https://royanews.tv/storage/images/source/roya.png"/>
+         </a>
+         <span>
+          المصدر
+         </span>
+        </div>
+        <div class="article_details" id="readMore_text">
+         <div class="shadow" style="display:none;">
+         </div>
+         <p style="text-align: justify;">
+          أطلقت شركة هونر من خلال وكيلها الحصري ملتي سل هاتفها الجديد HONOR 10 Lite في المملكة الاردنية الهاشمية، الذي يقدم مزايا تكنولوجية معاصرة ويضع معايير جديدة في تصميم الهواتف الذكية بشاشة 6.21 بوصة (FHD) وهيكل يمتاز بألوان حيوية متدرجة مع كاميرا أمامية لصور السيلفي بدقة 24 ميغابيكسل تعمل بتقنيات الذكاء الاصطناعي، وكاميرا خلفية ثنائية بدقة 13 + 2 ميغابيكسل.
+         </p>
+         <p style="text-align: justify;">
+          وفي التفاصيل، يتمتع الهاتف بسعة تخزين داخلي قدرها 64 ميغابايت، ويقدم الهاتف أحدث المعالجات (معالج Kirin 710 جديد مع واجهة EMUI 9.0)، وبطارية بقوة 3400 ملي أمبير تدوم طويلاً، ومعالج جرافيكس فائق الدقة "توربو جي بي يو 2.0".
+         </p>
+         <p style="text-align: justify;">
+          وصمم الجهاز من 8 طبقات من المعدن اللامع ويأتي بألوان متدرجة، تشمل "الأزرق السماوي، ، والأزرق الياقوتي، والأسود"، كما يمتاز هاتف HONOR 10 Lite بتصميم منحني ثلاثي الأبعاد من الجوانب الأربعة.
+         </p>
+         <p style="text-align: justify;">
+          وبفضل الكاميرا المدعومة بقوة الذكاء الاصطناعي، يتيح هاتف HONOR 10 Lite للمستخدمين التقاط الصور الاحترافية، أما تقنية الذكاء الاصطناعي فيمكنها التعرف على ما يصل إلى 8 سيناريوهات مختلفة لإضفاء الإعدادات المناسبة للصورة المثالية. وتحتوي الكاميرا كذلك على تأثيرات تحاكي التصوير الاحترافي في الاستوديوهات.
+         </p>
+         <p style="text-align: justify;">
+          أما من الجانب الخلفي، فترافق جهاز HONOR 10 Lite كاميرا خلفية بعدسة ثنائية بدقة 13 و 2 ميغابيكسل وفتحات f/1.8 و f/2.4. وعند استخدامها مع تقنيات الذكاء الاصطناعي ونمط التصوير الليلي، يمكن التقاط الصور الاحترافية بكل سهولة حتى في ظروف الإضاءة المحدودة والخافتة، وتعزز تقنية الاتصال المدعومة بالذكاء الاصطناعي من جودة المكالمات الهاتفية حتى في أكثر البيئات ضوضاء، وتحرص على عدم انقطاع الاتصال بفضل النمط الجديد للاستخدام في المصعد.
+         </p>
+         <p style="text-align: justify;">
+          سيتوفر هاتف HONOR 10 Lite في المملكة اعتباراً من 20 يناير 2019. يبلغ سعر الهاتف 159 دينار اردني ويتوفر في كافة نقاط البيع المعتمدة من الوكيل الحصري ملتي سل.
+         </p>
+         <p style="text-align: center;">
+          <img alt="" height="659" src="https://images.royanews.tv/inner/20190129/Capture.PNG" width="802"/>
+         </p>
+        </div>
+        <a class="moreLink" href="javascript:void(0)" id="readMore_button" style="display:none;">
+         اقرأ
+المزيد
+        </a>
+        <ul class="tags">
+         <li>
+          <a href="https://royanews.tv/tag/5724">
+           تكنولوجيا
+          </a>
+         </li>
+         <li>
+          <a href="https://royanews.tv/tag/18279">
+           هونر
+          </a>
+         </li>
+         <li>
+          <a href="https://royanews.tv/tag/17880">
+           أخبار الاردن
+          </a>
+         </li>
+        </ul>
+        <div class="insideArticle_MPU">
+         <div id="div-gpt-ad-1541576922072-0">
+          <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+          </script>
+          <script>
+           googletag.cmd.push(function()
+
+                                    { googletag.display('div-gpt-ad-1541576922072-0'); }
+                                );
+          </script>
+         </div>
+        </div>
+        <section class="leftNewsWrap mb_10 visible-xs" id="most_watched_wrap">
+         <ul class="nav nav-pills nav-justified">
+          <li>
+           <a class="latest_tab latestNewsTab" data-toggle="pill" href="#latest" onclick="latestCorrespondingTab()">
+            أحدث الأخبار
+           </a>
+          </li>
+          <li class="active">
+           <a class="mostCommonTab" data-toggle="pill" href="#common" onclick="mostCorrespondingTab()">
+            الأكثر شيوعاً
+           </a>
+          </li>
+         </ul>
+        </section>
+       </div>
+      </div>
+     </section>
+     <section class="mb_10">
+      <div class="row">
+       <div class="col-xs-12">
+        <h3>
+         أخبار ذات صلة
+        </h3>
+        <div class="related_articles">
+         <div id="div-gpt-ad-1527167666469-0" style="margin-bottom: 10px">
+          <script>
+           googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527167666469-0'); });
+          </script>
+         </div>
+         <a href="https://royanews.tv/news/180473">
+          <div class="col-sm-6 col-xs-6 related_articles_item related_item_1">
+           <div class="related_article_image col-sm-12 col-md-6 col-xs-5">
+            <img alt='تحذير "للبنات فقط" من الألعاب الإلكترونية' class="b-lazy" data-src="https://cdnimg.royanews.tv/imageserv/Size228Q40/news/20190424/oabvfS6bI0VmQVxWIHeJWve5lytdZ7U7tzxJevhT.png" onerror="imgError(this)" src="https://cdnimg.royanews.tv/imageserv/Size228Q40/site/placeholder.JPG" title='تحذير "للبنات فقط" من الألعاب الإلكترونية'/>
+           </div>
+           <div class="article_title hidden-md hidden-sm hidden-xs">
+            تحذير "للبنات فقط" من الألعاب الإلكترونية
+           </div>
+           <div class="article_title hidden-lg hidden-sm hidden-xs">
+            تحذير "للبنات فقط" من الألعاب ....
+           </div>
+           <div class="article_title hidden-lg hidden-md hidden-xs">
+            تحذير "للبنات فقط" من الألعاب ....
+           </div>
+           <div class="article_title hidden-lg hidden-md hidden-sm">
+            تحذير "للبنات فقط" من الألعاب ....
+           </div>
+           <p class="tagLine">
+            <i aria-label="Time Created" class="fa fa-clock-o">
+            </i>
+            منذ 5 ساعات
+           </p>
+          </div>
+         </a>
+         <a href="https://royanews.tv/news/180398">
+          <div class="col-sm-6 col-xs-6 related_articles_item related_item_2">
+           <div class="related_article_image col-sm-12 col-md-6 col-xs-5">
+            <img alt="إطلاق حملة تطعيم في مخيم الأزرق" class="b-lazy" data-src="https://cdnimg.royanews.tv/imageserv/Size228Q40/news/20190423/1GhcqfuD2PDGP66hMFTKQnOhdaLYOdfGkUTI657c.png" onerror="imgError(this)" src="https://cdnimg.royanews.tv/imageserv/Size228Q40/site/placeholder.JPG" title="إطلاق حملة تطعيم في مخيم الأزرق"/>
+           </div>
+           <div class="article_title hidden-md hidden-sm hidden-xs">
+            إطلاق حملة تطعيم في مخيم الأزرق
+           </div>
+           <div class="article_title hidden-lg hidden-sm hidden-xs">
+            إطلاق حملة تطعيم في مخيم الأزرق
+           </div>
+           <div class="article_title hidden-lg hidden-md hidden-xs">
+            إطلاق حملة تطعيم في مخيم ....
+           </div>
+           <div class="article_title hidden-lg hidden-md hidden-sm">
+            إطلاق حملة تطعيم في مخيم الأزرق
+           </div>
+           <p class="tagLine">
+            <i aria-label="Time Created" class="fa fa-clock-o">
+            </i>
+            منذ يوم
+           </p>
+          </div>
+         </a>
+         <a href="https://royanews.tv/news/180394">
+          <div class="col-sm-6 col-xs-6 related_articles_item related_item_3">
+           <div class="related_article_image col-sm-12 col-md-6 col-xs-5">
+            <img alt="الشواربة يفرح عمال أمانة عمان بهذا الخبر" class="b-lazy" data-src="https://cdnimg.royanews.tv/imageserv/Size228Q40/news/20190423/lNLh8CUpoRs54KgBIdZGjU4RBM2s15kJHAgtZS9K.png" onerror="imgError(this)" src="https://cdnimg.royanews.tv/imageserv/Size228Q40/site/placeholder.JPG" title="الشواربة يفرح عمال أمانة عمان بهذا الخبر"/>
+           </div>
+           <div class="article_title hidden-md hidden-sm hidden-xs">
+            الشواربة يفرح عمال أمانة عمان بهذا الخبر
+           </div>
+           <div class="article_title hidden-lg hidden-sm hidden-xs">
+            الشواربة يفرح عمال أمانة عمان ....
+           </div>
+           <div class="article_title hidden-lg hidden-md hidden-xs">
+            الشواربة يفرح عمال أمانة عمان ....
+           </div>
+           <div class="article_title hidden-lg hidden-md hidden-sm">
+            الشواربة يفرح عمال أمانة عمان بهذا ....
+           </div>
+           <p class="tagLine">
+            <i aria-label="Time Created" class="fa fa-clock-o">
+            </i>
+            منذ يوم
+           </p>
+          </div>
+         </a>
+         <a href="https://royanews.tv/news/180387">
+          <div class="col-sm-6 col-xs-6 related_articles_item related_item_4">
+           <div class="related_article_image col-sm-12 col-md-6 col-xs-5">
+            <img alt="أربعيني يهتك عرض ابنة زوجته القاصر والجنايات تغلظ عقوبته" class="b-lazy" data-src="https://cdnimg.royanews.tv/imageserv/Size228Q40/news/20190423/YiWe0fvf01UuS138E3UcNf6PiCSztqvjMmuMBacg.png" onerror="imgError(this)" src="https://cdnimg.royanews.tv/imageserv/Size228Q40/site/placeholder.JPG" title="أربعيني يهتك عرض ابنة زوجته القاصر والجنايات تغلظ عقوبته"/>
+           </div>
+           <div class="article_title hidden-md hidden-sm hidden-xs">
+            أربعيني يهتك عرض ابنة زوجته القاصر والجنايات تغلظ عقوبته
+           </div>
+           <div class="article_title hidden-lg hidden-sm hidden-xs">
+            أربعيني يهتك عرض ابنة زوجته ....
+           </div>
+           <div class="article_title hidden-lg hidden-md hidden-xs">
+            أربعيني يهتك عرض ابنة زوجته ....
+           </div>
+           <div class="article_title hidden-lg hidden-md hidden-sm">
+            أربعيني يهتك عرض ابنة زوجته القاصر ....
+           </div>
+           <p class="tagLine">
+            <i aria-label="Time Created" class="fa fa-clock-o">
+            </i>
+            منذ يوم
+           </p>
+          </div>
+         </a>
+         <a href="https://royanews.tv/news/180386">
+          <div class="col-sm-6 col-xs-6 related_articles_item related_item_5">
+           <div class="related_article_image col-sm-12 col-md-6 col-xs-5">
+            <img alt="القبض على مطلوب خطير أبدى مقاومة شديدة في المفرق" class="b-lazy" data-src="https://cdnimg.royanews.tv/imageserv/Size228Q40/news/20190423/jKy2Pqq1ih3gI3jsO44TpSGfdb682Pv40XOcdnJU.png" onerror="imgError(this)" src="https://cdnimg.royanews.tv/imageserv/Size228Q40/site/placeholder.JPG" title="القبض على مطلوب خطير أبدى مقاومة شديدة في المفرق"/>
+           </div>
+           <div class="article_title hidden-md hidden-sm hidden-xs">
+            القبض على مطلوب خطير أبدى مقاومة شديدة في المفرق
+           </div>
+           <div class="article_title hidden-lg hidden-sm hidden-xs">
+            القبض على مطلوب خطير أبدى ....
+           </div>
+           <div class="article_title hidden-lg hidden-md hidden-xs">
+            القبض على مطلوب خطير أبدى ....
+           </div>
+           <div class="article_title hidden-lg hidden-md hidden-sm">
+            القبض على مطلوب خطير أبدى مقاومة شديدة ....
+           </div>
+           <p class="tagLine">
+            <i aria-label="Time Created" class="fa fa-clock-o">
+            </i>
+            منذ يوم
+           </p>
+          </div>
+         </a>
+         <a href="https://royanews.tv/news/180383">
+          <div class="col-sm-6 col-xs-6 related_articles_item related_item_6">
+           <div class="related_article_image col-sm-12 col-md-6 col-xs-5">
+            <img alt="توقيف موظف بضريبة غرب عمان شطب ارصدة مكلفين" class="b-lazy" data-src="https://cdnimg.royanews.tv/imageserv/Size228Q40/news/20190423/hbl5cJrxepdoGrcA08eodcbh1pi1KWh8nrnzEC8C.png" onerror="imgError(this)" src="https://cdnimg.royanews.tv/imageserv/Size228Q40/site/placeholder.JPG" title="توقيف موظف بضريبة غرب عمان شطب ارصدة مكلفين"/>
+           </div>
+           <div class="article_title hidden-md hidden-sm hidden-xs">
+            توقيف موظف بضريبة غرب عمان شطب ارصدة مكلفين
+           </div>
+           <div class="article_title hidden-lg hidden-sm hidden-xs">
+            توقيف موظف بضريبة غرب عمان شطب ....
+           </div>
+           <div class="article_title hidden-lg hidden-md hidden-xs">
+            توقيف موظف بضريبة غرب عمان ....
+           </div>
+           <div class="article_title hidden-lg hidden-md hidden-sm">
+            توقيف موظف بضريبة غرب عمان شطب ارصدة ....
+           </div>
+           <p class="tagLine">
+            <i aria-label="Time Created" class="fa fa-clock-o">
+            </i>
+            منذ يوم
+           </p>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+     </section>
+     <div id="jubna582">
+     </div>
+     <script type="text/javascript">
+      (function () {
+                var params =
+                    {
+                        id: "984c27ec-ea7f3c76-02f2000b-1bfef3b8",
+                        d: "YWJvdWRjcm0uY29t",
+                        cb: ((new Date()).valueOf().toString())
+                    };
+                var qs = "";
+                for (var key in params) {
+                    qs += key + "=" + params[key] + "&"
+                }
+                qs = qs.substring(0, qs.length - 1);
+                var s = document.createElement("script");
+                s.type = "text/javascript";
+                s.setAttribute("data-cfasyn", "false");
+                s.src = "https://jubna.com/ar/api/widget/582?" + qs;
+                s.async = true;
+                document.getElementById("jubna582").appendChild(s);
+            })();
+     </script>
+     <section class="container-fluid latest-news mb_20" id="adSloom">
+      <div class="AdsLoomWidget" id="AdsLoom_58">
+      </div>
+      <div class="AdsLoomAssest">
+       <link href="//adsloomwebservices.adsloom.com/scripts/AdsLoom.css" rel="stylesheet"/>
+       <script defer="" id="scriptAdsLoom" src="//adsloomwebservices.adsloom.com/scripts/AdsLoom.js">
+       </script>
+      </div>
+     </section>
+     <div id="div-gpt-ad-1527167511851-0" style="margin-bottom: 10px">
+      <script>
+       googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527167511851-0'); });
+      </script>
+     </div>
+    </div>
+    <div class="visible-xs">
+     <div class="to_top" style="display:none">
+      <i class="fa fa-chevron-up">
+      </i>
+     </div>
+    </div>
+    <aside class="col-xs-12 col-sm-4" id="leftSide">
+     <div class="container-fluid" id="left_side_wrapper">
+      <section class="banner">
+       <div id="div-gpt-ad-1470227758270-0" style="margin-bottom:10px; text-align: center;">
+        <script>
+         googletag.cmd.push(function () {
+                            googletag.display('div-gpt-ad-1470227758270-0');
+                        });
+        </script>
+       </div>
+      </section>
+      <section id="most_watched_wrap">
+       <ul class="nav nav-pills nav-justified">
+        <li>
+         <a class="latest_tab leftSideTab" data-toggle="pill" href="#latest">
+          أحدث الأخبار
+         </a>
+        </li>
+        <li class="active">
+         <a class="commonSideTab" data-toggle="pill" href="#common">
+          الأكثر شيوعاً
+         </a>
+        </li>
+       </ul>
+       <div class="tab-content">
+        <div class="tab-pane" id="latest">
+         <ul class="Latest_Tab_Content">
+          <li class="latest_item1">
+           <p>
+            <a href="https://royanews.tv/news/180493">
+             ماذا قال الأمير علي عن الرياضة السعودية ؟
+            </a>
+           </p>
+           <div class="tagLine">
+            <a href="https://royanews.tv/section/14">
+             رياضة |
+             <i aria-label="وقت النشر" class="fa fa-clock-o">
+             </i>
+             منذ 15 دقيقة
+            </a>
+           </div>
+          </li>
+          <li class="latest_item2">
+           <p>
+            <a href="https://royanews.tv/news/180492">
+             الشواربة يقترح حلولاً لتقاطع مستشفى الجامعة الأردنية
+            </a>
+           </p>
+           <div class="tagLine">
+            <a href="https://royanews.tv/section/1">
+             محليات |
+             <i aria-label="وقت النشر" class="fa fa-clock-o">
+             </i>
+             منذ 23 دقيقة
+            </a>
+           </div>
+          </li>
+          <li class="latest_item3">
+           <p>
+            <a href="https://royanews.tv/news/180491">
+             الحكومة تعفي اعفاء بذار البطيخ والشمام من ضريبة المبيعات
+            </a>
+           </p>
+           <div class="tagLine">
+            <a href="https://royanews.tv/section/12">
+             اقتصاد |
+             <i aria-label="وقت النشر" class="fa fa-clock-o">
+             </i>
+             منذ ساعة
+            </a>
+           </div>
+          </li>
+          <li class="latest_item4">
+           <p>
+            <a href="https://royanews.tv/news/180490">
+             مستشار قاضي القضاة يصف استمرار عزوف الشباب الأردني عن الزواج بالخطير.. فيديو
+            </a>
+           </p>
+           <div class="tagLine">
+            <a href="https://royanews.tv/section/1">
+             محليات |
+             <i aria-label="وقت النشر" class="fa fa-clock-o">
+             </i>
+             منذ ساعة
+            </a>
+           </div>
+          </li>
+          <li class="latest_item5">
+           <p>
+            <a href="https://royanews.tv/news/180489">
+             فقدان طفلين في مخيم حطين والأمن يبحث عنهما
+            </a>
+           </p>
+           <div class="tagLine">
+            <a href="https://royanews.tv/section/1">
+             محليات |
+             <i aria-label="وقت النشر" class="fa fa-clock-o">
+             </i>
+             منذ ساعتين
+            </a>
+           </div>
+          </li>
+          <li class="latest_item6">
+           <p>
+            <a href="https://royanews.tv/news/180488">
+             مقتل شخص وإصابة آخر بمشاجرة مسلحة في العقبة
+            </a>
+           </p>
+           <div class="tagLine">
+            <a href="https://royanews.tv/section/1">
+             محليات |
+             <i aria-label="وقت النشر" class="fa fa-clock-o">
+             </i>
+             منذ ساعتين
+            </a>
+           </div>
+          </li>
+         </ul>
+         <a class="moreLink mb_10" href="https://royanews.tv/latest-news" id="more_latest">
+          للمزيد
+         </a>
+        </div>
+        <div class="tab-pane in active" id="common">
+         <ul class="Latest_Tab_Content" id="ranks-js">
+          <li class="rating-bar-bg rating-bar" data-size="100">
+           <p class="rb-content">
+            <a href="https://royanews.tv/news/180376">
+             حكومة الرزاز تبشر الأردنيين بالنفط المحلي
+            </a>
+           </p>
+           <div class="tagLine">
+            <a href="https://royanews.tv/section/12">
+             اقتصاد
+            </a>
+           </div>
+          </li>
+          <li class="rating-bar-bg rating-bar" data-size="88.400857031554">
+           <p class="rb-content">
+            <a href="https://royanews.tv/news/180410">
+             تحذير جديد لمن يبث مسلسل باب الحارة "الجزء العاشر".. وثائق
+            </a>
+           </p>
+           <div class="tagLine">
+            <a href="https://royanews.tv/section/15">
+             هنا وهناك
+            </a>
+           </div>
+          </li>
+          <li class="rating-bar-bg rating-bar" data-size="84.592910011687">
+           <p class="rb-content">
+            <a href="https://royanews.tv/news/180400">
+             هل ستؤجل الحكومة عطلة عيد العمال للعام 2019؟
+            </a>
+           </p>
+           <div class="tagLine">
+            <a href="https://royanews.tv/section/1">
+             محليات
+            </a>
+           </div>
+          </li>
+          <li class="rating-bar-bg rating-bar" data-size="70.471367354889">
+           <p class="rb-content">
+            <a href="https://royanews.tv/news/180387">
+             أربعيني يهتك عرض ابنة زوجته القاصر والجنايات تغلظ عقوبته
+            </a>
+           </p>
+           <div class="tagLine">
+            <a href="https://royanews.tv/section/1">
+             محليات
+            </a>
+           </div>
+          </li>
+          <li class="rating-bar-bg rating-bar" data-size="64.027399039086">
+           <p class="rb-content">
+            <a href="https://royanews.tv/news/180305">
+             طقس العرب: سحب ماطرة تندفع نحو شمال المملكة
+            </a>
+           </p>
+           <div class="tagLine">
+            <a href="https://royanews.tv/section/4">
+             طقس
+            </a>
+           </div>
+          </li>
+          <li class="rating-bar-bg rating-bar" data-size="53.885858979353">
+           <p class="rb-content">
+            <a href="https://royanews.tv/news/180443">
+             عطلة "يوم العمال" الخميس الثاني من ايار
+            </a>
+           </p>
+           <div class="tagLine">
+            <a href="https://royanews.tv/section/1">
+             محليات
+            </a>
+           </div>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <section class="weather_block">
+        <div class="panel-group" id="weather-collapse">
+         <div class="panel panel-default">
+          <div class="panel-heading">
+           <h3 class="panel-title">
+            <a data-parent="#accordion" data-toggle="collapse" href="#weather">
+             <i aria-label="Collapse and Expand" class="fa fa-minus pull-left">
+             </i>
+             الطقس
+            </a>
+           </h3>
+          </div>
+          <div class="panel-collapse collapse in" id="weather">
+           <div class="panel-body">
+            <iframe class="weather_iframe" frameborder="0" src="//roya-widget.devops.arabiaweather.com/royaa/new/widget/">
+            </iframe>
+            <ul class="tab-content">
+             <li>
+              <p>
+               <a href="https://royanews.tv/news/180476">
+                طقس العرب: حرارة ثلاثينية متوقعة مطلع شهر أيار.. فكيف سيكون الطقس في بداية رمضان؟
+               </a>
+              </p>
+             </li>
+             <li>
+              <p>
+               <a href="https://royanews.tv/news/180437">
+                ارتفاع واضح على درجات الحرارة خلال الأيام المقبلة
+               </a>
+              </p>
+             </li>
+             <li>
+              <p>
+               <a href="https://royanews.tv/news/180428">
+                الأربعاء.. طقس ربيعي مشمس وارتفاع واضح على درجات الحرارة - فيديو
+               </a>
+              </p>
+             </li>
+            </ul>
+            <a class="moreLink" href="https://royanews.tv/section/4">
+             المزيد من
+الطقس
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="banner mt_10">
+          <div id="div-gpt-ad-1473001122662-0" style="height:250px; width:100%; text-align:center;">
+           <script>
+            googletag.cmd.push(function () {
+                                    googletag.display('div-gpt-ad-1473001122662-0');
+                                });
+           </script>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="caricature_block">
+        <div class="panel-group">
+         <div class="panel panel-default">
+          <div class="panel-heading">
+           <h3 class="panel-title">
+            <a data-parent="#accordion" data-toggle="collapse" href="#caricature">
+             <i aria-label="Collapse and Expand" class="fa fa-minus pull-left">
+             </i>
+             كاريكاتير
+            </a>
+           </h3>
+          </div>
+          <div class="panel-collapse collapse in" id="caricature">
+           <a href="https://royanews.tv/caricature/884" title="كاريكاتير">
+            <div class="panel-body Lead">
+             <img alt="كاريكاتير لطيف فتياني لنشرة أخبار رؤيا" class="b-lazy" data-src="https://cdnimg.royanews.tv/imageserv/Size600Q40/caricature/z5lqzNgRD8PGlUYIchOdkhOaGVhMs7VBU5xFxpns.png" onerror="imgError(this)" src="https://cdnimg.royanews.tv/imageserv/Size728Q40/site/placeholder.JPG" title="كاريكاتير لطيف فتياني لنشرة أخبار رؤيا"/>
+            </div>
+           </a>
+           <a class="moreLink" href="https://royanews.tv/caricatures">
+            المزيد من الكاريكاتير
+           </a>
+           <div class="banner mt_10 mb_10">
+            <div id="div-gpt-ad-1471269114372-0" style="height:250px; width:100%; text-align:center">
+             <script>
+              googletag.cmd.push(function () {
+                                            googletag.display('div-gpt-ad-1471269114372-0');
+                                        });
+             </script>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="articles_block">
+        <div class="panel-group">
+         <div class="panel panel-default">
+          <div class="panel-heading">
+           <h3 class="panel-title">
+            <a data-parent="#accordion" data-toggle="collapse" href="#writers_articles">
+             <i aria-label="Collapse and Expand" class="fa fa-minus pull-left">
+             </i>
+             مقالات
+            </a>
+           </h3>
+          </div>
+          <div class="panel-collapse collapse in" id="writers_articles">
+           <div class="tab-pane">
+            <ul class="tab-content">
+             <li>
+              <p>
+               <a href="https://royanews.tv/article/90">
+                البهارات والكاجو والمكسرات .. استثمار؟!
+               </a>
+              </p>
+              <div class="writer_title">
+               <a href="https://royanews.tv/writer/28">
+                عصام قضماني
+               </a>
+              </div>
+             </li>
+             <li>
+              <p>
+               <a href="https://royanews.tv/article/89">
+                نتائج انتخابات المستعمرة: الخل أخو ....
+               </a>
+              </p>
+              <div class="writer_title">
+               <a href="https://royanews.tv/writer/19">
+                حمادة فراعنة
+               </a>
+              </div>
+             </li>
+             <li>
+              <p>
+               <a href="https://royanews.tv/article/88">
+                تكوين الدولة محاولة للفهم
+               </a>
+              </p>
+              <div class="writer_title">
+               <a href="https://royanews.tv/writer/1">
+                الدكتور مهند مبيضين
+               </a>
+              </div>
+             </li>
+             <li>
+              <p>
+               <a href="https://royanews.tv/article/87">
+                الجمعية الإمبراطورية الأرثوذكسية ....
+               </a>
+              </p>
+              <div class="writer_title">
+               <a href="https://royanews.tv/writer/27">
+                عيسى يوسف حدّاد
+               </a>
+              </div>
+             </li>
+             <li>
+              <p>
+               <a href="https://royanews.tv/article/86">
+                مسيحيو الأردن: حفظوا تاريخ المكان ....
+               </a>
+              </p>
+              <div class="writer_title">
+               <a href="https://royanews.tv/writer/2">
+                الدكتور صبري اربيحات
+               </a>
+              </div>
+             </li>
+             <li>
+              <p>
+               <a href="https://royanews.tv/article/85">
+                السياحة الجيولوجية وحديث الارض ...
+               </a>
+              </p>
+              <div class="writer_title">
+               <a href="https://royanews.tv/writer/12">
+                صخر النسور
+               </a>
+              </div>
+             </li>
+            </ul>
+            <a class="moreLink" href="https://royanews.tv/writers-articles">
+             المزيد من مقالات
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <div id="div-gpt-ad-1527167843836-0" style="height:250px; width:100%; text-align:center;">
+        <script>
+         googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527167843836-0'); });
+        </script>
+       </div>
+       <section class="adSloom_block mt_10 mb_10 hidden">
+        <div class="AdsLoomWidget" id="AdsLoom_2208">
+        </div>
+        <div class="AdsLoomAssest">
+         <link href="//adsloomwebservices.adsloom.com/scripts/AdsLoom.css" rel="stylesheet"/>
+         <script defer="" id="scriptAdsLoom" src="//adsloomwebservices.adsloom.com/scripts/AdsLoom.js">
+         </script>
+        </div>
+       </section>
+      </section>
+      <section class="deceased_block">
+       <div class="panel-group">
+        <div class="panel panel-default">
+         <div class="panel-heading">
+          <h3 class="panel-title">
+           <a data-parent="#accordion" data-toggle="collapse" href="#deceased">
+            <i aria-label="Collapse and Expand" class="fa fa-minus pull-left">
+            </i>
+            وفيات
+           </a>
+          </h3>
+         </div>
+         <div class="mt_10 panel-collapse collapse in" id="deceased">
+          <div class="death Lead">
+           <a href="https://royanews.tv/death/1642" title="الوفيات">
+            <img alt="الوفيات" src="/images/site/deceased.png" title="الوفيات"/>
+           </a>
+          </div>
+          <a class="moreLink" href="https://royanews.tv/death">
+           المزيد من وفيات
+          </a>
+          <div class="banner mt_10">
+           <div id="div-gpt-ad-1471267755992-0" style="height:250px; width:100%;text-align:center">
+            <script>
+             googletag.cmd.push(function () {
+                                        googletag.display('div-gpt-ad-1471267755992-0');
+                                    });
+            </script>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </section>
+      <section class="container-fluid" id="fb-root">
+       <div class="fb-page col-lg-12 col-md-12 col-sm-12 col-xs-12" data-adapt-container-width="true" data-height="1226px" data-hide-cover="false" data-href="https://www.facebook.com/RoyaNews" data-show-facepile="true" data-small-header="true" data-tabs="timeline" data-width="370px">
+        <blockquote cite="https://www.facebook.com/RoyaNews" class="fb-xfbml-parse-ignore">
+         <a href="https://www.facebook.com/RoyaNews">
+          Facebook
+         </a>
+        </blockquote>
+       </div>
+      </section>
+     </div>
+    </aside>
+   </div>
+  </div>
+  <footer>
+   <div class="footer_bg">
+    <div class="container">
+     <div class="row">
+      <div class="col-xs-12 col-sm-4">
+       <h3>
+        عن رؤيا الإخباري
+       </h3>
+       <p>
+        موقع أخباري أردني تابع لقناة رؤيا الفضائية ينقل لكم الأخبار المحلية الأردنية وأخبار فلسطين وأبرز الأخبار العربية والدولية.
+       </p>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+       <h3>
+        اتصل بنا
+       </h3>
+       <p>
+        مكاتب رؤيا في عمّان، الأردن، أم الحيران، مبنى المدينة الاعلامية، شارع الصخرة المشرفة بجانب مبنى الاذاعة والتلفزيون
+        <br/>
+        هاتف رقم
+        <a href="tel:0096264206419">
+         0096264206419
+        </a>
+        <br/>
+        فاكس رقم
+        <a href="tel:0096264206524">
+         0096264206524
+        </a>
+        <br/>
+        صندوق بريد 961401 عمّان الأردن 11196
+        <br/>
+       </p>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+       <h3>
+        تواصلوا معنا
+       </h3>
+       <ul class="social_links">
+        <li>
+         <a class="facebook" href="https://www.facebook.com/RoyaNews" target="_blank" title="رؤيا الإخباري فايسبوك">
+          <i aria-label="رؤيا الإخباري فايسبوك" class="fa fa-facebook-square">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a class="twitter" href="https://www.twitter.com/RoyaNews" target="_blank" title="رؤيا الإخباري تويتر">
+          <i aria-label="رؤيا الإخباري تويتر" class="fa fa-twitter">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a class="instagram" href="https://instagram.com/RoyaNews" target="_blank" title="رؤيا الإخباري إنستغرام">
+          <i aria-label="رؤيا الإخباري إنستغرام" class="fa fa-instagram">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a class="youtube" href="https://www.youtube.com/user/RoyaNews" target="_blank" title="رؤيا الإخباري يوتيوب">
+          <i aria-label="رؤيا الإخباري يوتيوب" class="fa fa-youtube-play">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a class="rss" href="https://www.royanews.tv/rss" target="_blank" title="رؤيا الإخباري RSS">
+          <i aria-label="رؤيا الإخباري RSS" class="fa fa-rss">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a class="Gplus" href="https://plus.google.com/+RoyaNews" target="_blank" title="رؤيا الإخباري جوجل">
+          <i aria-label="رؤيا الإخباري جوجل" class="fa fa-google-plus-square">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a href="https://nabd.com/royanews" target="_blank" title="تطبيق نبض">
+          <img alt="تطبيق نبض" class="nbd_img" src="/images/site/nbd.png" title="تطبيق نبض"/>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="row">
+      <div class="text-right col-xs-12 col-sm-6">
+       جميع الحقوق محفوظة © 2019 رؤيا
+      </div>
+      <div class="text-left col-xs-12 col-sm-6">
+       <a href="https://royanews.tv/privacy-policy">
+        سياسة الخصوصية
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <section class="side_bar hidden-xs hidden-sm hidden-md">
+   <ul class="social_list">
+    <li class="facebook">
+     <a href="https://www.facebook.com/RoyaNews" target="_blank" title="رؤيا الإخباري فايسبوك">
+      <i aria-label="رؤيا الإخباري فايسبوك" class="fa fa-facebook">
+      </i>
+     </a>
+    </li>
+    <li class="twitter">
+     <a href="https://www.twitter.com/RoyaNews" target="_blank" title="رؤيا الإخباري تويتر">
+      <i aria-label="رؤيا الإخباري تويتر" class="fa fa-twitter">
+      </i>
+     </a>
+    </li>
+    <li class="instagram">
+     <a href="https://instagram.com/RoyaNews" target="_blank" title="رؤيا الإخباري إنستغرام">
+      <i aria-label="رؤيا الإخباري إنستغرام" class="fa fa-instagram">
+      </i>
+     </a>
+    </li>
+    <li class="youtube">
+     <a href="https://www.youtube.com/user/RoyaNews" target="_blank" title="رؤيا الإخباؤي يوتيوب">
+      <i aria-label="رؤيا الإخباؤي يوتيوب" class="fa fa-youtube-play">
+      </i>
+     </a>
+    </li>
+    <li class="rss">
+     <a href="https://www.royanews.tv/rss" target="_blank" title="رؤيا الإخباري RSS">
+      <i aria-label="رؤيا الإخباري RSS" class="fa fa-rss">
+      </i>
+     </a>
+    </li>
+    <li class="google">
+     <a href="https://plus.google.com/+RoyaNews" target="_blank" title="رؤيا الإخباري جوجل">
+      <i aria-label="رؤيا الإخباري جوجل" class="fa fa-google-plus">
+      </i>
+     </a>
+    </li>
+    <li class="nbd">
+     <a href="https://nabd.com/royanews" target="_blank" title="تطبيق نبض">
+      <img alt="تطبيق نبض" src="/images/site/nbd.png" title="تطبيق نبض"/>
+     </a>
+    </li>
+   </ul>
+  </section>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"aabc10350a","applicationID":"134514504","transactionName":"MVAHZhAFWRBUABJYXwgaJFEWDVgNGg0DRkNIRg1dFQ==","queueTime":0,"applicationTime":43,"atts":"HRcEEFgfSh4=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+ <script src="/js/app.js?id=4fce7c0a816293f88a93">
+ </script>
+ <script src="/js/blazy.js">
+ </script>
+ <script>
+  fixedLeftSide = 'false';
+    readmore = 'false';
+
+    /** Application Download Screen **/
+    $(document).ready(function () {
+        $(window).scroll(function() {
+            if($(this).scrollTop() > 200) {
+                $('#android,#iOS').fadeOut();
+            }
+        });
+        $('#android .close_popUp').click(function(){
+            $('#android').fadeOut();
+        });
+        $('#iOS .close_popUp').click(function(){
+            $('#iOS').fadeOut();
+        })
+    });
+
+    /** Events/Menu Position **/
+    
+    /** Smart Banner **/
+    $(function () {
+        $.smartbanner({
+            title: 'رؤيا الإخباري', // What the title of the app should be in the banner (defaults to <title>)
+            author: 'قناة رؤيا', // What the author of the app should be in the banner (defaults to <meta name="author"> or hostname)
+            price: 'مجاناً', // Price of the app
+            appStoreLanguage: 'ar', // Language code for App Store
+            inAppStore: 'على متجر ابل', // Text of price for iOS
+            inGooglePlay: 'على متجر جوجل', // Text of price for Android
+            icon: null, // The URL of the icon (defaults to <meta name="apple-touch-icon">)
+            iconGloss: null, // Force gloss effect for iOS even for precomposed
+            url: null, // The URL for the button. Keep null if you want the button to link to the app store.
+            button: 'تنزيل', // Text for the install button
+            scale: 'auto', // Scale based on viewport size (set to 1 to disable)
+            speedIn: 300, // Show animation speed of the banner
+            speedOut: 400, // Close animation speed of the banner
+            daysHidden: 15, // Duration to hide the banner after being closed (0 = always show banner)
+            daysReminder: 90, // Duration to hide the banner after "VIEW" is clicked *separate from when the close button is clicked* (0 = always show banner)
+            force: null, // Choose 'ios', 'android' or 'windows'. Don't do a browser check, just always show this banner
+            hideOnInstall: true, // Hide the banner after "VIEW" is clicked.
+            layer: false, // Display as overlay layer or slide down the page
+            iOSUniversalApp: true, // If the iOS App is a universal app for both iPad and iPhone, display Smart Banner to iPad users, too.
+            appendToSelector: 'body' //Append the banner to a specific selector
+        })
+    });
+
+    $(window).on('scroll',function(){
+        $('#smartbanner').css('display','none');
+    });
+ </script>
+ <script src="/js/news.js?id=ed0f8320ab22d86177b4">
+ </script>
+ <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js">
+ </script>
+ <script async="" src="//www.instagram.com/embed.js">
+ </script>
+ <script>
+  var bLazy = new Blazy();
+
+        fixedLeftSide = 'true';
+
+        
+        function latestCorrespondingTab() {
+            $('#most_watched_wrap a[href="#latest"]').tab('show');
+            $('html, body').stop().animate({
+                scrollTop: $(".leftSideTab").offset().top - 80
+            },2000);
+            $('.to_top').fadeIn();
+        }
+
+        function mostCorrespondingTab() {
+            var common = $('#most_watched_wrap a[href="#common"]').tab('show');
+            $('html, body').stop().animate({
+                scrollTop: $(".commonSideTab").offset().top - 80
+            },2000);
+            $('.to_top').fadeIn();
+        }
+ </script>
+</html>

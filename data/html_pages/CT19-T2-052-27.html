@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://fussilat.org/xmlrpc.php">
+
+<title>كيف ستكون الحياة بلا قمر؟ وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ &#8211; الإعجاز العلمي في الشمس والقمر والفصول &#8211; موقع فصلت لـ الاعجاز العلمي في القرآن الكريم وبالحقائق العلمية، الاعجاز العلمي في القرآن، معجزات القرآن العلمية، الاعجاز العلمي في القران الكريم</title>
+<meta name="google-site-verification" content="_0cwmjRRWvS4UcmMjbzl8RoXxsUgsQQ7iXC-5xNt7uA" />
+<meta name="msvalidate.01" content="1BF7C32E814D9ADC041AD8A5C4810B51" />
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9mdXNzaWxhdC5vcmc%3D"
+		+ "&wpcomid=33627109"
+		+ "&time=1556190214";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//fussilatdotorg.wordpress.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="موقع فصلت لـ الاعجاز العلمي في القرآن الكريم وبالحقائق العلمية، الاعجاز العلمي في القرآن، معجزات القرآن العلمية، الاعجاز العلمي في القران الكريم &raquo; الخلاصة" href="https://fussilat.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="موقع فصلت لـ الاعجاز العلمي في القرآن الكريم وبالحقائق العلمية، الاعجاز العلمي في القرآن، معجزات القرآن العلمية، الاعجاز العلمي في القران الكريم &raquo; خلاصة التعليقات" href="https://fussilat.org/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="موقع فصلت لـ الاعجاز العلمي في القرآن الكريم وبالحقائق العلمية، الاعجاز العلمي في القرآن، معجزات القرآن العلمية، الاعجاز العلمي في القران الكريم &raquo; كيف ستكون الحياة بلا قمر؟ وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ &#8211; الإعجاز العلمي في الشمس والقمر والفصول خلاصة التعليقات" href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1550249335h&ver=5.2-beta3-45264"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/wp-content/mu-plugins/wpcom-smileys/rtl/wpcom-smileys-rtl.css?m=1459241938h&cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_related-posts-rtl-css'  href='https://s0.wp.com/wp-content/mu-plugins/related-posts/related-posts-rtl.css?m=1554981652h&#038;ver=20190204' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s2.wp.com/wp-content/mu-plugins/likes/rtl/jetpack-likes-rtl.css?m=1543866895h&cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-rtl-css'  href='https://s2.wp.com/wp-includes/css/dist/block-library/style-rtl.min.css?m=1546888462h&#038;ver=5.2-beta3-45264' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-4-1' href='https://s0.wp.com/_static/??-eJx9juEOgjAMhF/IuhCRyA/js8BsYLJuy7qF16dgEE3M/jS95r67qjmA9i6hS4oyBJsH41hpH1HuFLqkxEH4NB1aJLGdNfNJ/ccoNDsVk93k2OmJQVSJm4NQ0PchIjPIJJMJ0iiFXOKEWl8CayYUxbzV/lyPaqOcT0ZS+LOUsgd0GN/2r3XNP+Qe/qB7VdeXprre2va1AGjqfyA=?cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='dyad-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif%3A400%2C400italic%2C700%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-6-1' href='https://s0.wp.com/_static/??-eJyFkd0KwyAMRl9oLi2buxt7FmuddagRYyl9+9kfRsuKvfsSziEJgSEwiT4pnyB1yimC0DfQjqIFSqNVV0l0gQJlvFxINgSJ7o93PQu218YTDKbVKhEkDCwg5XQ8YqNohcyiFMmg3xXsbYWJJTWqxqLOUUOmICa7abFclmQhpyGNiLP3q8606aplM6BOxGn25K/5zCaURth8osZl323jUF6f0d1nXFtsMl4G99DLPWvOHxW/Vbz+fAG0BsRj?cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJyFj+EKwjAMhF/Irug6/CU+S91iSW3T2rQb+vS2oD8cQyEQjnzcXeQSBdLoygQsbZ17gfR4r87yTv4ChEeTdIbOI33gMVAGyo2NgbMHZm1g4+rDBR2IwpAqQLnGXMOa80VEVwwSywSuRk2iua7Uhvv3I0gzwvIXs5CjHm8iAeOzdT77034Y1KHvj0rZFzMJcHE='></script>
+<link rel='stylesheet' id='all-css-0-2' href='https://s1.wp.com/wp-content/mu-plugins/highlander-comments/rtl/style-rtl.css?m=1522184747h&cssminify=yes' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/rtl/style-ie7-rtl.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://fussilatdotorg.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='And When the Heaven is Split Open and Becomes a Rose, Colored Like Oil' href='https://fussilat.org/2012/04/20/heaven-is-split-rose-colored-like-oil/' />
+<link rel='next' title='كيف أنزل الله الماء؟ وَأَنزَلْنَا مِنَ ٱلسَّمَآءِ مَآءً بِقَدَرٍ فَأَسْكَنَّٰهُ فِي ٱلأَرْضِ وَإِنَّا عَلَىٰ ذَهَابٍ بِهِ لَقَٰدِرُونَ ، الاعجاز العلمي في سورة المؤمنون' href='https://fussilat.org/2012/05/15/%d9%83%d9%8a%d9%81-%d8%a3%d9%86%d8%b2%d9%84-%d8%a7%d9%84%d9%84%d9%87-%d8%a7%d9%84%d9%85%d8%a7%d8%a1%d8%9f-%d9%88%d9%8e%d8%a3%d9%8e%d9%86%d8%b2%d9%8e%d9%84%d9%92%d9%86%d9%8e%d8%a7-%d9%85%d9%90%d9%86/' />
+<link rel="stylesheet" href="https://s2.wp.com/wp-content/themes/pub/dyad/rtl.css?m=1483039525" type="text/css" media="screen" /><meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/" />
+<link rel='shortlink' href='https://wp.me/p2h5WJ-3r' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Ffussilat.org%2F2012%2F04%2F27%2F%25d9%2588%25d9%258e%25d8%25b3%25d9%258e%25d8%25ae%25d9%258e%25d9%2591%25d8%25b1%25d9%258e-%25d9%25b1%25d9%2584%25d8%25b4%25d9%258e%25d9%2591%25d9%2585%25d9%2592%25d8%25b3%25d9%258e-%25d9%2588%25d9%258e%25d9%25b1%25d9%2584%25d9%2592%25d9%2582%25d9%258e%25d9%2585%25d9%258e%25d8%25b1%25d9%258e-%25d8%25a7%25d9%2584%25d8%25a5%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Ffussilat.org%2F2012%2F04%2F27%2F%25d9%2588%25d9%258e%25d8%25b3%25d9%258e%25d8%25ae%25d9%258e%25d9%2591%25d8%25b1%25d9%258e-%25d9%25b1%25d9%2584%25d8%25b4%25d9%258e%25d9%2591%25d9%2585%25d9%2592%25d8%25b3%25d9%258e-%25d9%2588%25d9%258e%25d9%25b1%25d9%2584%25d9%2592%25d9%2582%25d9%258e%25d9%2585%25d9%258e%25d8%25b1%25d9%258e-%25d8%25a7%25d9%2584%25d8%25a5%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="كيف ستكون الحياة بلا قمر؟ وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ &#8211; الإعجاز العلمي في الشمس والقمر والفصول" />
+<meta property="og:url" content="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/" />
+<meta property="og:description" content="كيف ستكون الحياة بلا قمر؟ وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ &#8211; الإعجاز العلمي في القرأن الكريم الإعجاز العلمي في القرآن الكريم &#8211; وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ ذُكر القمر في القرآن الكريم…" />
+<meta property="article:published_time" content="2012-04-27T10:23:30+00:00" />
+<meta property="article:modified_time" content="2016-09-01T16:09:02+00:00" />
+<meta property="og:site_name" content="موقع فصلت لـ الاعجاز العلمي في القرآن الكريم وبالحقائق العلمية، الاعجاز العلمي في القرآن، معجزات القرآن العلمية، الاعجاز العلمي في القران الكريم" />
+<meta property="og:image" content="https://fussilatdotorg.files.wordpress.com/2012/04/d8a7d984d8a3d8b1d8b6-d988d8a7d984d982d985d8b11.jpg" />
+<meta property="og:image:width" content="622" />
+<meta property="og:image:height" content="260" />
+<meta property="og:image:alt" content="قوة الجذب بين الأرض والقمر" />
+<meta property="og:locale" content="ar_AR" />
+<meta name="twitter:creator" content="@hkattab" />
+<meta name="twitter:site" content="@hkattab" />
+<meta name="twitter:text:title" content="كيف ستكون الحياة بلا قمر؟ وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ &#8211; الإعجاز العلمي في الشمس والقمر والفصول" />
+<meta name="twitter:image" content="https://fussilatdotorg.files.wordpress.com/2012/04/d8a7d984d8a3d8b1d8b6-d988d8a7d984d982d985d8b11.jpg?w=640" />
+<meta name="twitter:image:alt" content="قوة الجذب بين الأرض والقمر" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/e3f706f35b04db201eff030354e96c8e?s=32" sizes="16x16" />
+<link rel="icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/e3f706f35b04db201eff030354e96c8e?s=32" sizes="16x16" />
+<link rel="apple-touch-icon-precomposed" href="https://secure.gravatar.com/blavatar/e3f706f35b04db201eff030354e96c8e?s=114" />
+<link rel='openid.server' href='https://fussilatdotorg.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://fussilatdotorg.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://fussilat.org/osd.xml" title="موقع فصلت لـ الاعجاز العلمي في القرآن الكريم وبالحقائق العلمية، الاعجاز العلمي في القرآن، معجزات القرآن العلمية، الاعجاز العلمي في القران الكريم" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+	<style type="text/css">
+	body {font-family: Tahoma, Arial, sans-serif;}
+	</style>
+			<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<style>
+.milestone-widget {
+	margin-bottom: 1em;
+}
+.milestone-content {
+	line-height: 2;
+	margin-top: 5px;
+	max-width: 17em;
+	padding: 0;
+	text-align: center;
+}
+.milestone-header {
+	background-color: #6a6c6e;
+	color: #ffffff;
+	line-height: 1.3;
+	margin: 0;
+	padding: .8em;
+}
+.milestone-header .event,
+.milestone-header .date {
+	display: block;
+}
+.milestone-header .event {
+	font-size: 120%;
+}
+.milestone-countdown .difference {
+	display: block;
+	font-size: 500%;
+	font-weight: bold;
+	line-height: 1.2;
+}
+.milestone-countdown,
+.milestone-message {
+	background-color: #ffffff;
+	border: 1px solid #c0c9d3;
+	border-top: 0;
+	color: #6a6c6e;
+	padding-bottom: 1em;
+}
+.milestone-message {
+	padding-top: 1em
+}
+</style>
+		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="موقع فصلت لـ الاعجاز العلمي في القرآن الكريم وبالحقائق العلمية، الاعجاز العلمي في القرآن، معجزات القرآن العلمية، الاعجاز العلمي في القران الكريم" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="موقع فُصِّلَتْ لـ الاعجاز العلمي في القرآن الكريم، الاعجاز العلمي في القرآن،  الاعجاز العلمي في القران، الاعجاز العلمي في القرآن الكريم - تفسير الآيات القرآنية من خلال كتب التفسير والأحاديث النبوية وعقلها مع العلم الحديث - موقع فُصِّلَتْ لـ الاعجاز العلمي في القرآن الكريم  Fussilat.org الاعجاز العلمي في القران" /><meta name="msapplication-task" content="name=اشترك;action-uri=https://fussilat.org/feed/;icon-uri=https://secure.gravatar.com/blavatar/e3f706f35b04db201eff030354e96c8e?s=16" /><meta name="msapplication-task" content="name=سجّل اشتراكك في مدوّنة مجانية;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=دعم وردبرس.كوم;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=منتديات وردبرس.كوم;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="description" content="كيف ستكون الحياة بلا قمر؟ وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ - الإعجاز العلمي في القرأن الكريم الإعجاز العلمي في القرآن الكريم - وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ ذُكر القمر في القرآن الكريم 27 مرة منها 7 مرات حول موضوع تسخير الشمس والقمر. والمعنى في كتب التفسير حول تسخير الشمس والقمر هو &quot;{ وسَخَّرَ الشَّمْسَ والقَمَرَ } يقول: وأجرى الشمس&hellip;" />
+<link rel="amphtml" href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body class="rtl post-template-default single single-post postid-213 single-format-gallery mp6 customizer-styles-applied is-singular has-post-thumbnail no-js highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">التجاوز إلى المحتوى</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+						<h1 class="site-title">
+				<a href="https://fussilat.org/" rel="home">
+					موقع فصلت لـ الاعجاز العلمي في القرآن الكريم وبالحقائق العلمية، الاعجاز العلمي في القرآن، معجزات القرآن العلمية، الاعجاز العلمي في القران الكريم				</a>
+			</h1>
+			<p class="site-description">موقع فُصِّلَتْ لـ الاعجاز العلمي في القرآن الكريم، الاعجاز العلمي في القرآن،  الاعجاز العلمي في القران، الاعجاز العلمي في القرآن الكريم &#8211; تفسير الآيات القرآنية من خلال كتب التفسير والأحاديث النبوية وعقلها مع العلم الحديث &#8211; موقع فُصِّلَتْ لـ الاعجاز العلمي في القرآن الكريم  Fussilat.org الاعجاز العلمي في القران</p>
+		</div><!-- .site-branding -->
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">القائمة</button>
+			<div class="primary-menu"><ul id="primary-menu" class="menu"><li id="menu-item-831" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-831"><a href="https://fussilat.org/">الصفحة الرئيسية</a></li>
+<li id="menu-item-829" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-829"><a href="https://fussilat.org/category/%d9%85%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d8%a8%d8%a7%d9%84%d9%84%d8%ba%d8%a9-%d8%a7%d9%84%d8%b9%d8%b1%d8%a8%d9%8a%d8%a9/">مقالات باللغة العربية</a></li>
+<li id="menu-item-762" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-762"><a href="https://fussilat.org/about/">عن المدوّنة</a></li>
+<li id="menu-item-982" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-982"><a href="https://fussilat.org/category/english-articles/">English Articles</a></li>
+<li id="menu-item-760" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-760"><a href="http://en.fussilat.org">Fussilat English Site</a></li>
+</ul></div>		</nav>
+
+	</header><!-- #masthead -->
+
+	<div class="site-inner">
+
+		
+		<div id="content" class="site-content">
+
+	<main id="primary" class="content-area" role="main">
+
+		
+			
+<article id="post-213" class="post-213 post type-post status-publish format-gallery has-post-thumbnail hentry category-29264716 category-2405600 category-4712529 category-7049361 category-20891811 category-1315948 tag-121927702 post_format-post-format-gallery">
+			
+		<div class="entry-media" style="background-image: url(https://fussilatdotorg.files.wordpress.com/2012/04/d8a7d984d8a3d8b1d8b6-d988d8a7d984d982d985d8b11.jpg?w=622&#038;h=260&#038;crop=1)">
+			<div class="entry-media-thumb" style="background-image: url(https://fussilatdotorg.files.wordpress.com/2012/04/d8a7d984d8a3d8b1d8b6-d988d8a7d984d982d985d8b11.jpg?w=622&#038;h=260&#038;crop=1); "></div>
+		</div><!-- .entry-media -->
+	
+
+	<div class="entry-inner">
+
+		<header class="entry-header">
+			<div class="entry-meta">
+				<span class="cat-links"><a href="https://fussilat.org/category/%d9%85%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d8%a8%d8%a7%d9%84%d9%84%d8%ba%d8%a9-%d8%a7%d9%84%d8%b9%d8%b1%d8%a8%d9%8a%d8%a9/" rel="category tag">مقالات باللغة العربية</a>، <a href="https://fussilat.org/category/%d8%b9%d9%84%d9%85-%d8%a7%d9%84%d9%81%d9%84%d9%83/%d8%a7%d9%84%d9%82%d9%85%d8%b1/" rel="category tag">القمر</a>، <a href="https://fussilat.org/category/%d8%b9%d9%84%d9%85-%d8%a7%d9%84%d9%81%d9%84%d9%83/%d8%a7%d9%84%d8%a3%d8%b1%d8%b6/" rel="category tag">الأرض</a>، <a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a5%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%a7%d9%84%d9%82%d8%b1%d8%a2%d9%86-%d8%a7%d9%84%d9%83%d8%b1%d9%8a%d9%85/" rel="category tag">الإعجاز العلمي في القرآن الكريم</a>، <a href="https://fussilat.org/category/%d8%b9%d9%84%d9%85-%d8%a7%d9%84%d9%81%d9%84%d9%83/" rel="category tag">علم الفلك</a>، <a href="https://fussilat.org/category/%d8%b9%d9%84%d9%88%d9%85-%d8%a7%d9%84%d8%a3%d8%b1%d8%b6/" rel="category tag">علوم الأرض</a></span>			</div><!-- .entry-meta -->
+
+			<h1 class="entry-title">كيف ستكون الحياة بلا قمر؟ وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ &#8211; الإعجاز العلمي في الشمس والقمر والفصول</h1>
+			<div class="entry-posted">
+				<div class="posted-info"><span class="byline">كتبت بواسطة <span class="author vcard"><a class="url fn n" href="https://fussilat.org/author/hkattab/">حسين كتّاب</a></span></span><span class="posted-on"> <span class="date-published-word">on</span> <a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/" rel="bookmark"><time class="entry-date published" datetime="2012-04-27T13:23:30+03:00">27 أبريل 2012</time><time class="updated" datetime="2016-09-01T19:09:02+03:00">1 سبتمبر 2016</time></a></span></div>			</div><!-- .entry-posted -->
+		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<p style="text-align:justify;"><strong>كيف ستكون الحياة بلا قمر؟ وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ &#8211; الإعجاز العلمي في القرأن الكريم</strong></p>
+<p style="text-align:justify;">الإعجاز العلمي في القرآن الكريم &#8211; وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ</p>
+<p style="text-align:justify;">ذُكر القمر في القرآن الكريم 27 مرة منها 7 مرات حول موضوع تسخير الشمس والقمر. <a href="http://www.altafsir.com/Tafasir.asp?tMadhNo=1&amp;tTafsirNo=1&amp;tSoraNo=13&amp;tAyahNo=2&amp;tDisplay=yes&amp;Page=2&amp;Size=1&amp;LanguageId=1" target="_blank">والمعنى في كتب التفسير حول تسخير الشمس والقمر هو</a> &#8220;{ وسَخَّرَ الشَّمْسَ والقَمَرَ } يقول: وأجرى الشمس والقمر فـي السماء، <span style="text-decoration:underline;">فسخرهما فـيها (السماء) لـمصالـح خـلقه، وذللهما لـمنافعهم</span>&#8220;، أي أن الشمس والقمر ذُللت لمنافع ومصالح خلق الله، ولكن كيف؟</p>
+<p style="text-align:justify;">فوائد الشمس واضحة وجليّة، فالحياة غير ممكنة بدونها إذ ستصبح الأرض كتلة متجمدة لا حياة فيها خاصةً وأنه لن يوجد نهار، فقط ظلام دامس ودائم، فهو مطلوب من الشمس أن تمدنا بالطاقة والضوء لتنعم الكرة الأرضية بالدفء والمناخ الملائم للحياة بالإضافة الى نورها الذي اذا اقتُرن مع دوران الأرض حول نفسها يعطينا <a title="الليل نسلخ منه النهار" href="http://www.altafsir.com/Tafasir.asp?tMadhNo=1&amp;tTafsirNo=1&amp;tSoraNo=36&amp;tAyahNo=37&amp;tDisplay=yes&amp;Languageid=1" target="_blank">آية الليل والنهار</a>. ولكن كيف سيكون الحال اذا كانت هناك شمس ولكن بلا قمر؟</p>
+<p style="text-align:justify;"><a href="http://en.wikipedia.org/wiki/Axial_tilt"><img class="alignleft" title="ميلان محور دوران الأرض" src="https://i2.wp.com/upload.wikimedia.org/wikipedia/commons/thumb/5/58/Earth_tilt_animation.gif/220px-Earth_tilt_animation.gif" alt="" width="220" height="111" /></a>لو كان محور دوران الأرض حول نفسها عامودياً (90 درجة)، <a href="http://www.youtube.com/watch?v=nFbNxezDyjw" target="_blank">لما وجدت الفصول</a> ولكان طول النهار 12 ساعة مثل طول الليل ولتجمعت الثلوج في أقطاب الكرة الأرضية وأدت الى انخفاض مستوى البحار والمحيطات، أمّا مناطق خط الاستواء، <span style="text-decoration:underline;">فقد</span> تصبح صحراء ملتهبة. تدور الأرض حول محورها بانحراف مقدارة 23.5 درجة عن محور دورانها حول الشمس وهذا ما يؤدي الى ظاهرة الفصول الأربعة وتنوع الحياة كما نعرفها كما ويعتقد العلماء بأن ولادة القمر هو أحد مسببات ميلان محور دوران الأرض</p>
+<p style="text-align:justify;"><img data-attachment-id="295" data-permalink="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/%d8%a7%d9%84%d8%a3%d8%b1%d8%b6-%d9%88%d8%a7%d9%84%d9%82%d9%85%d8%b1/" data-orig-file="https://fussilatdotorg.files.wordpress.com/2012/04/d8a7d984d8a3d8b1d8b6-d988d8a7d984d982d985d8b11.jpg" data-orig-size="622,260" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="الأرض والقمر" data-image-description="" data-medium-file="https://fussilatdotorg.files.wordpress.com/2012/04/d8a7d984d8a3d8b1d8b6-d988d8a7d984d982d985d8b11.jpg?w=300&#038;h=125" data-large-file="https://fussilatdotorg.files.wordpress.com/2012/04/d8a7d984d8a3d8b1d8b6-d988d8a7d984d982d985d8b11.jpg?w=622" class="alignleft size-medium wp-image-295" title="وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ - الإعجاز العلمي في تفسير القرآن الكريم" src="https://fussilatdotorg.files.wordpress.com/2012/04/d8a7d984d8a3d8b1d8b6-d988d8a7d984d982d985d8b11.jpg?w=300&#038;h=125" alt="وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ - الإعجاز العلمي في تفسير القرآن الكريم" width="300" height="125" srcset="https://fussilatdotorg.files.wordpress.com/2012/04/d8a7d984d8a3d8b1d8b6-d988d8a7d984d982d985d8b11.jpg?w=300&amp;h=125 300w, https://fussilatdotorg.files.wordpress.com/2012/04/d8a7d984d8a3d8b1d8b6-d988d8a7d984d982d985d8b11.jpg?w=598&amp;h=250 598w, https://fussilatdotorg.files.wordpress.com/2012/04/d8a7d984d8a3d8b1d8b6-d988d8a7d984d982d985d8b11.jpg?w=150&amp;h=63 150w" sizes="(max-width: 300px) 100vw, 300px" />يُعتبر القمر من الحالات الخاصة في المجموعة الشمسية حيث يبلغ قطر القمر رُبع قطر الأرض، ولو قارنّا باقي كواكب المجموعة الشمسية مع أقمارها لما وجدنا أي منها يصل الى هذه النسبة، ولهذا السبب تعتبر قوة الجاذبية بين الأرض والقمر قوية لدرجة أن وجه القمر ثابت باتجاه الأرض ولا نراه يدور حول نفسه وقوة الجذب هذه هي المسؤولة عن ظاهرة المد والجزر في البحار. يقوم القمر بعمل دور المثبِّت لدوران الأرض ويمنعها من الإنحراف والتمايل حيث أن وجود قمر بهذا الحجم والكتلة يمنع محور الأرض من التأرجح مثل &#8220;الـبلبل&#8221; الذي يلعب به اطفالنا والذي قد يتأرجح ليصل الى 90 درجة، <a title="محور دوران القمر حول الأرض" href="http://en.wikipedia.org/wiki/Moon" target="_blank"><img class="alignleft" title="محور دوران القمر حول الأرض" src="https://i1.wp.com/upload.wikimedia.org/wikipedia/commons/thumb/4/43/Earth-Moon.PNG/350px-Earth-Moon.PNG" alt="" width="350" height="222" /></a>مما يعني أن احد اقطاب الأرض سيصبح استوائياً بينما يصبح خط الاستواء ثلجياً. من مؤثرات القمر على الأرض هو أن العلماء قدروا أن القمر خلال مليارات السنين من دورانه حول الأرض خَفّض من سرعة دوران الأرض حول نفسها الى النصف مما أدى الى اعتدال سرعة الرياح التي كان من الممكن أن يصل معدّلها الى ما بين 100 الى 200 كيلومتر في الساعة مما يجعل العوامل البيئية صعبة على الكائنات الحية.</p>
+<p>أهم فوائد دوران القمر الدائم حول الأرض هو أنه يُبقي باطن الأرض المنصهر في حالة حركة دائمة ويمنعه من التجمد، هذه الحركة الدائمة هي المسؤولة عن توليد المجال المغناطيسي للأرض، وهو الحزام الذي يقوم بصد الرياح الشمسية القادمة من الشمس، والتي، إن وصلت الغلاف الجوي، فإنها ستقوم بطرد الماء والأوكسجين من الغلاف الجوي. أي سيصبح هناك كوكبا غير صالح للحياة.</p>
+<p>يظهر الفيلم التالي تسلسل لصور التقطتها مركبة ايبوكسي للقمر وهو يمر من امام الأرض، لاحظ اتجاة دوران الأرض حول نفسها واتجاه دوران القمر</p>
+<div class="jetpack-video-wrapper"><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='1000' height='563' src='https://www.youtube.com/embed/MEcqWuYqrSo?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></div>
+<table dir="rtl" style="width:250px;margin-right:16px;" align="left">
+<tbody>
+<tr>
+<td style="background-color:#ffffcc;text-align:justify;">تمت الاشارة الى كافة المراجع المستخدمة في هذه المقالة بروابط تؤدي الى اصل المعلومة مثل موقع تفسير القرآن الكريم، ومواقع وكالة الفضاء الأمريكية ناسا، وموقع ويكيبيديا، ومواقع اخبارية ومواقع علمية أخرى ذات علاقة، بالإضافة الى موقع باحث اللغوي وذلك لكي يتأكد القارئ من صدق المعلومة.</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align:justify;">يقول بعض العلماء أن الأرض تمت هندستها بدقة لكي تنعم بالبيئة المناسبة للحياة، فمعظم الأنظمة الشمسية التي يتم اكتشافها تتكون من نجمين Binary Star System مما يعني أن ظاهرة الليل والنهار قد تكون مستحيلة كما أن الحرارة لن تكون مستقرة على أي كوكب يدور حول احدى هذه النجوم، أما في مجموعتنا الشمسية، فإذا كانت الأرض أقرب الى الشمس لأصبح الجو غير ملائم للحياة وإذا كانت سرعة دوران الأرض حول نفسها ضعف سرعتها الحالية لكانت هناك عواصف عاتية ولكان النهار والليل قصيرين ليساهما في عملية النمو والراحة ولولا انحراف محور دوران الأرض حول نفسها لما كانت هناك فصول أربعة ولولا &#8230; وهنا يأتي قوله تعالى <a title="تفسير الآية" href="http://www.altafsir.com/Tafasir.asp?tMadhNo=1&amp;tTafsirNo=1&amp;tSoraNo=2&amp;tAyahNo=164&amp;tDisplay=yes&amp;Languageid=1">{ إِنَّ فِي خَلْقِ ٱلسَّمَٰوَٰتِ وَٱلأَرْضِ وَٱخْتِلاَفِ ٱللَّيْلِ وَٱلنَّهَارِ وَٱلْفُلْكِ ٱلَّتِي تَجْرِي فِي ٱلْبَحْرِ بِمَا يَنفَعُ ٱلنَّاسَ وَمَآ أَنزَلَ ٱللَّهُ مِنَ ٱلسَّمَآءِ مِن مَّآءٍ فَأَحْيَا بِهِ ٱلأَرْضَ بَعْدَ مَوْتِهَا وَبَثَّ فِيهَا مِن كُلِّ دَآبَّةٍ وَتَصْرِيفِ ٱلرِّيَاحِ وَٱلسَّحَابِ ٱلْمُسَخَّرِ بَيْنَ ٱلسَّمَآءِ وَٱلأَرْضِ لآيَاتٍ لِّقَوْمٍ يَعْقِلُونَ } </a></p>
+<p style="text-align:justify;">رغم صغر حجم الأرض مقارنة بالشمس ومجرة درب التبانه التي تتكون من 200 مليار نجمة مثل شمسنا والمجرات في السماء والتي يتوقع أن يزيد عددها عن 200 مليار مجرة، إلا أن الله تعالى إفتخر وأعتز بخلق السموات وألارض ووصف نفسه بـ <strong><a title="تفسير الآية" href="http://www.altafsir.com/Tafasir.asp?tMadhNo=1&amp;tTafsirNo=1&amp;tSoraNo=2&amp;tAyahNo=117&amp;tDisplay=yes&amp;Languageid=1" target="_blank">بَدِيعُ ٱلسَّمَٰوَٰتِ وَٱلأَرْضِ </a></strong>. فعلى الرغم من أن السماء مليئة بالأشعة الكونية المُدمِرة للحياة و الحرارة العالية جداً أو الباردة جدا والاصطدامات العنيفة وانفجارات النجوم في كل مكانً، خلق الله هذه البيئة المناسبة &#8220;ٱلسَّمَٰوَٰتِ وَٱلأَرْضِ&#8221; لكي تزخر بالحياة، وأكد تعالى بأنه قادر على أن يخلق مثلهما عندما قال  <a title="خاتمة سورة يس" href="http://www.altafsir.com/Tafasir.asp?tMadhNo=1&amp;tTafsirNo=1&amp;tSoraNo=36&amp;tAyahNo=81&amp;tDisplay=yes&amp;Languageid=1" target="_blank">أَوَلَـيْسَ ٱلَذِي خَلَقَ ٱلسَّمَٰوَٰتِ وَٱلأَرْضَ بِقَادِرٍ عَلَىٰ أَن يَخْلُقَ مِثْلَهُم بَلَىٰ وَهُوَ ٱلْخَلاَّقُ ٱلْعَلِيمُ </a> { إِنَّمَآ أَمْرُهُ إِذَآ أَرَادَ شَيْئاً أَن يَقُولَ لَهُ كُن فَيَكُونُ } * { فَسُبْحَانَ ٱلَّذِي بِيَدِهِ <strong>مَلَكُوتُ كُلِّ شَيْءٍ</strong> وَإِلَيْهِ تُرْجَعُونَ }</p>
+<p style="text-align:justify;">التسجيل التالي يوضح مدى اهمية القمر لثبات دوران الأرض وأهميته لوجودنا حيث أن اشكال الحياة المتقدمة قد تكون شبه مستحيلة في كوكب لا ينعم بالاستقرار المناخي، حقائق أكّدها القرآن الكريم قبل ما يزيد عن 1400 سنة.</p>
+<p>بقلم: حسين أحمد كتاب</p>
+<p><strong>لمزيد من المقالات</strong>، <a title="قائمة المقالات" href="https://fussilat.org/category/%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA-%D8%A8%D8%A7%D9%84%D9%84%D8%BA%D8%A9-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9/">انقر هنا</a></p>
+<div class="jetpack-video-wrapper"><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='1000' height='563' src='https://www.youtube.com/embed/c0FCE4H0Dro?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></div>
+<p><a href="http://fussilat.org"><img data-attachment-id="2080" data-permalink="https://fussilat.org/2013/05/15/%d9%88%d8%a7%d9%84%d9%89-%d8%a7%d9%84%d8%a7%d8%b1%d8%b6-%d9%83%d9%8a%d9%81-%d8%b3%d8%b7%d8%ad%d8%aa/footer-3/" data-orig-file="https://fussilatdotorg.files.wordpress.com/2013/07/footer.jpg?w=640&#038;h=76" data-orig-size="640,76" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="footer" data-image-description="" data-medium-file="https://fussilatdotorg.files.wordpress.com/2013/07/footer.jpg?w=640&#038;h=76?w=300" data-large-file="https://fussilatdotorg.files.wordpress.com/2013/07/footer.jpg?w=640&#038;h=76?w=640" class="aligncenter  wp-image-2080" src="https://fussilatdotorg.files.wordpress.com/2013/07/footer.jpg?w=640&#038;h=76" alt="footer" width="640" height="76" srcset="https://fussilatdotorg.files.wordpress.com/2013/07/footer.jpg 640w, https://fussilatdotorg.files.wordpress.com/2013/07/footer.jpg?w=150&amp;h=18 150w, https://fussilatdotorg.files.wordpress.com/2013/07/footer.jpg?w=300&amp;h=36 300w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<div id="jp-post-flair" class="sharedaddy sd-rating-enabled sd-like-enabled sd-sharing-enabled"><div class="sd-block sd-rating"><h3 class="sd-title">قيّم هذا:</h3><div class="pd-rating" id="pd_rating_holder_5737625_post_213"></div></div><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">الدال على الخير كفاعله، انشروها من فضلكم</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-213" class="share-facebook sd-button share-icon" href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?share=facebook" target="_blank" title="Click to share on Facebook"><span>فيس بوك</span></a></li><li class="share-linkedin"><a rel="nofollow noopener noreferrer" data-shared="sharing-linkedin-213" class="share-linkedin sd-button share-icon" href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?share=linkedin" target="_blank" title="اضغط لتشارك على LinkedIn"><span>LinkedIn</span></a></li><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-213" class="share-twitter sd-button share-icon" href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?share=twitter" target="_blank" title="اضغط للمشاركة على تويتر"><span>Twitter</span></a></li><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="" class="share-email sd-button share-icon" href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?share=email" target="_blank" title="انقر لإرسال هذا بالبريد الإلكتروني إلى صديق"><span>البريد الإلكتروني</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-33627109-213-5cc1940657101' data-src='//widgets.wp.com/likes/index.html?ver=20190321#blog_id=33627109&amp;post_id=213&amp;origin=fussilatdotorg.wordpress.com&amp;obj_id=33627109-213-5cc1940657101&amp;domain=fussilat.org' data-name='like-post-frame-33627109-213-5cc1940657101'><h3 class='sd-title'>معجب بهذه:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>إعجاب</span></span> <span class="loading">تحميل...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>مرتبط</em></h3>
+</div></div>					</div><!-- .entry-content -->
+
+		<footer class="entry-footer"><div class="tags-links"><a href="https://fussilat.org/tag/%d8%a7%d9%84%d8%a5%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%aa%d8%b3%d8%ae%d9%8a%d8%b1-%d8%a7%d9%84%d8%b4%d9%85%d8%b3-%d9%88%d8%a7%d9%84%d9%82%d9%85%d8%b1/" rel="tag">الإعجاز العلمي في تسخير الشمس والقمر</a></div></footer>	</div><!-- .entry-inner -->
+</article><!-- #post-## -->
+
+
+			
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">التنقل بين المواضيع</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://fussilat.org/2012/04/20/heaven-is-split-rose-colored-like-oil/" rel="prev"><div class="nav-previous"><span class="nav-subtitle">مقالة سابقة</span> <span class="nav-title">And When the Heaven is Split Open and Becomes a Rose, Colored Like Oil</span></div></a></div><div class="nav-next"><a href="https://fussilat.org/2012/05/15/%d9%83%d9%8a%d9%81-%d8%a3%d9%86%d8%b2%d9%84-%d8%a7%d9%84%d9%84%d9%87-%d8%a7%d9%84%d9%85%d8%a7%d8%a1%d8%9f-%d9%88%d9%8e%d8%a3%d9%8e%d9%86%d8%b2%d9%8e%d9%84%d9%92%d9%86%d9%8e%d8%a7-%d9%85%d9%90%d9%86/" rel="next"><div class="nav-next"><span class="nav-subtitle">مقالة لاحقة</span> <span class="nav-title">كيف أنزل الله الماء؟ وَأَنزَلْنَا مِنَ ٱلسَّمَآءِ مَآءً بِقَدَرٍ فَأَسْكَنَّٰهُ فِي ٱلأَرْضِ وَإِنَّا عَلَىٰ ذَهَابٍ بِهِ لَقَٰدِرُونَ ، الاعجاز العلمي في سورة المؤمنون</span></div></a></div></div>
+	</nav>
+		
+		
+<div class="comments-area-wrapper">
+
+	<div id="comments" class="comments-area">
+
+		
+					<h2 class="comments-title">
+				32 Comments
+									<a href="#respond" class="add-comment-link">اضافة لك </a>
+							</h2>
+
+			
+			<ol class="comment-list">
+						<li class="comment even thread-even depth-1 highlander-comment" id="comment-1546">
+				<div id="div-comment-1546" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn">محمد</cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-1546">
+			26 يناير 2016 عند 5:35 ص				</a>
+						</div>
+
+		<p>التصوير المزيف</p>
+<p id="comment-like-1546" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=1546&#038;_wpnonce=fac48fa2b8" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-1546" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=1546#respond' data-commentid="1546" data-postid="213" data-belowelement="div-comment-1546" data-respondelement="respond" aria-label='رد على محمد'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent highlander-comment" id="comment-1529">
+				<div id="div-comment-1529" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn">Hassan Kasim</cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-1529">
+			12 يناير 2016 عند 2:45 م				</a>
+						</div>
+
+		<p>اذا كان القمر كما يزعمون اصطدم كتله بالارض و يخرج جزء ليدور حول الارض وكانوا فى حاله منصهره يبقى السؤال لماذا القمر مصمت من الداخل وليس فى داخله صخور منصهره كما هو الحال على الارض ولماذا لاتوجد براكين ايضا ؟؟</p>
+<p id="comment-like-1529" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=1529&#038;_wpnonce=fd4fba2c5f" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-1529" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=1529#respond' data-commentid="1529" data-postid="213" data-belowelement="div-comment-1529" data-respondelement="respond" aria-label='رد على Hassan Kasim'>رد</a></div>
+				</div>
+				<ol class="children">
+		<li class="comment byuser comment-author-hkattab bypostauthor even depth-2 highlander-comment" id="comment-1531">
+				<div id="div-comment-1531" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://www.fussilat.org' rel='external nofollow' class='url'>حسين كتّاب</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-1531">
+			12 يناير 2016 عند 6:08 م				</a>
+						</div>
+
+		<p>الأخ الكريم حسن/حسّان<br />
+كوكب الأرض هو أكثر الكواكب الصلبة كثافة في نظامنا الشمسي وذلك بسبب كمية الحديد والنيكل الموجودة في مركز الأرض، وهو المسؤول عن الحفاظ على حرارة باطن الارض، بينما لا يحتوي باطن القمر على الحديد ومعدل كثافته تعادل نصف معدل كثافة الأرض. ستجد ايضاحا أكبر في مقالتنا كيف أنزل الله الحديد على <a href="https://fussilat.org/2014/10/03/%D9%88%D8%A3%D9%86%D8%B2%D9%84%D9%86%D8%A7-%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AF-%D9%81%D9%8A%D9%87-%D8%A8%D8%A3%D8%B3-%D8%B4%D8%AF%D9%8A%D8%AF/" target="_blank" rel="nofollow">هذا الرابط</a>.</p>
+<p id="comment-like-1531" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=1531&#038;_wpnonce=f7e3f40d7f" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-1531" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=1531#respond' data-commentid="1531" data-postid="213" data-belowelement="div-comment-1531" data-respondelement="respond" aria-label='رد على حسين كتّاب'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-1230">
+				<div id="div-comment-1230" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://gmail' rel='external nofollow' class='url'>خلــــــــــيل بوضياف</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-1230">
+			21 يناير 2015 عند 9:25 م				</a>
+						</div>
+
+		<p>لن تكون هناك حياة تذكر على وجه الأرض لو يتنحى القمر و يُبْعَد عن مكانه ( مستقره ) حول الأرض ، و لن تبرح الأرض مستقرها حول الشمس أبدا ، أما ميلان محور دوران الأرض بالنسبة للأفق فسببه موجود بالقرآن و لا أحد من علماء الإسلام انتبه إلى إشارر ته لذلك و لم يبلغ علمه بشر بعد &#8230;</p>
+<p id="comment-like-1230" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=1230&#038;_wpnonce=2ab8f2d1e6" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-1230" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=1230#respond' data-commentid="1230" data-postid="213" data-belowelement="div-comment-1230" data-respondelement="respond" aria-label='رد على خلــــــــــيل بوضياف'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="comment-1194">
+				<div id="div-comment-1194" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn">عزوزي عبدو</cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-1194">
+			12 ديسمبر 2014 عند 3:39 م				</a>
+						</div>
+
+		<p>جزاكم الله خيرا على مجهودكم و اتمنى انكم تواصلوا</p>
+<p id="comment-like-1194" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=1194&#038;_wpnonce=2684de3f9e" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-1194" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=1194#respond' data-commentid="1194" data-postid="213" data-belowelement="div-comment-1194" data-respondelement="respond" aria-label='رد على عزوزي عبدو'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-1144">
+				<div id="div-comment-1144" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='https://www.facebook.com/ismail.dualbait' rel='external nofollow' class='url'>Ismail DualBait</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-1144">
+			16 نوفمبر 2014 عند 12:58 م				</a>
+						</div>
+
+		<p>بارك الله فيكم واشكركم جزيل الشكر ووفقكم الله</p>
+<p id="comment-like-1144" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=1144&#038;_wpnonce=3006b12cd9" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-1144" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=1144#respond' data-commentid="1144" data-postid="213" data-belowelement="div-comment-1144" data-respondelement="respond" aria-label='رد على Ismail DualBait'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="comment-1121">
+				<div id="div-comment-1121" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn">آية حسان</cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-1121">
+			20 أكتوبر 2014 عند 1:47 م				</a>
+						</div>
+
+		<p>تبارك الله أحسن الخالقين</p>
+<p id="comment-like-1121" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=1121&#038;_wpnonce=ac56bf508a" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-1121" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=1121#respond' data-commentid="1121" data-postid="213" data-belowelement="div-comment-1121" data-respondelement="respond" aria-label='رد على آية حسان'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-697">
+				<div id="div-comment-697" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='https://www.facebook.com/amer.amimer.5' rel='external nofollow' class='url'>Amer Amimer</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-697">
+			19 أبريل 2014 عند 2:01 م				</a>
+						</div>
+
+		<p>جزاكم الله منا خيرا</p>
+<p id="comment-like-697" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=697&#038;_wpnonce=1ba5318259" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-697" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=697#respond' data-commentid="697" data-postid="213" data-belowelement="div-comment-697" data-respondelement="respond" aria-label='رد على Amer Amimer'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="comment-586">
+				<div id="div-comment-586" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://LIHAMDILLAHSUBHAANAHUWATAA&#039;AALAA&#039;AZZAWAJALL' rel='external nofollow' class='url'>QASIM</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-586">
+			13 فبراير 2014 عند 9:37 ص				</a>
+						</div>
+
+		<p>ALLAAHU NOOR US SAMAAWAATI WAL ARDD.MATHALU NURIHI KA MISHKAATIN FIHA MISBAAH. AL MISBAAHU FI ZUJAAJAH. AZZUJAAJATU KAANNAHA KAUKABUN DURRIYUN YUQADU MIN SHAJARATIN MUBARAKATIN ZAITUNATILLAA SHARQIYYATIN WALA GHARBIYYAH. YA KAADU ZAITUHA YUDDEE&#8217;U WA LAUU LUM TAMSUS HU NAAR. NOORUN  A&#8217;LA NOOR. YAH DILLAAHU BINOORIHI MAYYYA SHAA&#8217;A. WA YADD&#8217;RI BULLAAHUL AMTHH&#8217;AALE&#8217; LINNAAS. WALLAAHU BI KULLI SHAIIN A&#8217;LEEM&#8230;.. WA MULLUM YAJA&#8217;LILLAAHU  LAHU NOORUN  FAMAA  LAHU  MIN  NOOR&#8230;</p>
+<p id="comment-like-586" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=586&#038;_wpnonce=ad18a387eb" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-586" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=586#respond' data-commentid="586" data-postid="213" data-belowelement="div-comment-586" data-respondelement="respond" aria-label='رد على QASIM'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-467">
+				<div id="div-comment-467" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='https://www.facebook.com/profile.php?id=100005098412599' rel='external nofollow' class='url'>ابوعاصم غانم</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-467">
+			17 نوفمبر 2013 عند 5:25 م				</a>
+						</div>
+
+		<p>الحمد لله على نعم الخالق</p>
+<p id="comment-like-467" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=467&#038;_wpnonce=00901e45b0" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-467" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=467#respond' data-commentid="467" data-postid="213" data-belowelement="div-comment-467" data-respondelement="respond" aria-label='رد على ابوعاصم غانم'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="comment-436">
+				<div id="div-comment-436" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://مصطفىابوالعلا' rel='external nofollow' class='url'>مصطفى سيد ابةالعلا - ابوزياد الدخاخنى</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-436">
+			7 أكتوبر 2013 عند 11:53 م				</a>
+						</div>
+
+		<p>سبحان الخلاق العليم القادر &#8211; انا نفسى اعرف العلماء الذين يقولون ان هذا هو خلق الطبيعة  الم يعلموا ان وراء كل هذا الاتقان والخلق البديع من خالق ماهر قادر على كل شىء</p>
+<p id="comment-like-436" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=436&#038;_wpnonce=98cdfc3e45" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-436" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=436#respond' data-commentid="436" data-postid="213" data-belowelement="div-comment-436" data-respondelement="respond" aria-label='رد على مصطفى سيد ابةالعلا - ابوزياد الدخاخنى'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-429">
+				<div id="div-comment-429" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://yahoo' rel='external nofollow' class='url'>معاذ</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-429">
+			3 أكتوبر 2013 عند 10:57 ص				</a>
+						</div>
+
+		<p>لا اله</p>
+<p> الا الله محمد رسول الله</p>
+<p id="comment-like-429" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=429&#038;_wpnonce=908e296ae2" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-429" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=429#respond' data-commentid="429" data-postid="213" data-belowelement="div-comment-429" data-respondelement="respond" aria-label='رد على معاذ'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li id="comment-418" class="pingback even thread-odd thread-alt depth-1 highlander-comment">
+			<div class="comment-body">
+				التنبيهات: <a href='https://fussilat.org/2013/09/30/%d9%88%d8%a5%d9%84%d9%89-%d8%a7%d9%84%d8%ac%d8%a8%d8%a7%d9%84-%d9%83%d9%8a%d9%81-%d9%86%d8%b5%d8%a8%d8%aa/' rel='external nofollow' class='url'>ورد ذكر هذه المقالة في مقالتنا "والى الجبال كيف نصبت"</a> 			</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-407">
+				<div id="div-comment-407" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://تونس' rel='external nofollow' class='url'>hajjiamar</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-407">
+			26 أغسطس 2013 عند 12:53 ص				</a>
+						</div>
+
+		<p>لإ إلله إلا الله وحده لا شريك له  وأن محمد رسول الله</p>
+<p id="comment-like-407" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=407&#038;_wpnonce=97c8bc5bfc" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-407" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=407#respond' data-commentid="407" data-postid="213" data-belowelement="div-comment-407" data-respondelement="respond" aria-label='رد على hajjiamar'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="comment-340">
+				<div id="div-comment-340" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn">ميرو دودى ذيكو</cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-340">
+			2 يوليو 2013 عند 4:03 ص				</a>
+						</div>
+
+		<p>سبحانك ربنا ما خلقت هذا باطلا فقنا عذاب النار</p>
+<p id="comment-like-340" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=340&#038;_wpnonce=41669951f3" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-340" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=340#respond' data-commentid="340" data-postid="213" data-belowelement="div-comment-340" data-respondelement="respond" aria-label='رد على ميرو دودى ذيكو'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-295">
+				<div id="div-comment-295" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn">ياسر احمد</cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-295">
+			9 مايو 2013 عند 3:14 ص				</a>
+						</div>
+
+		<p>الله اكبر ماذا عسي ان نقول بعد كلام الخالق عز وجل ولكن اعجب ممن يري التصميم والاتقان في كل شي من حوله ولايؤمن بالمصمم وممن الممكن ان اسال اي رجل مومنا كانام كافرا كيف يمكن ان يكون هذا التصميم البديع والتوازن في الارض وسرعتها  وعلاقاتها مع جيرانها وميل محورها بهذه الدرجة المناسبة لحصول الفصول والحياة في صالحنا وبعد الارض عن الشمس ونسبة الاكسجين في الغلاف الجوي التي لوزادت عن هذه النسبة 21 لو احترقت ورقة في غابة لاصبح احتمال احتراق الغابة امرا حتميا تصميم بديع يشهد علي عظمة الخالق جل جلاله واختياره الار ض مكانا مناسبا لسكني الانسان ولكن ابي الظالمون الاكفورا وعطلوتا عقولهم صنعة ظاهرة لاينقصنا الا رؤية الصانع فقط عز وجل (وقالوا لو كنا نسمع اونعقل ما كنا في اصحاب السعير )اللهم ثبتنا علي الايمان حتي نلقاك به وجزي الله الاخ كاتب المقاله خيرا ووفقه امين</p>
+<p id="comment-like-295" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=295&#038;_wpnonce=3f988ea7dd" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-295" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=295#respond' data-commentid="295" data-postid="213" data-belowelement="div-comment-295" data-respondelement="respond" aria-label='رد على ياسر احمد'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="comment-278">
+				<div id="div-comment-278" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://الأردن' rel='external nofollow' class='url'>أبو عثمان</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-278">
+			23 أبريل 2013 عند 12:52 ص				</a>
+						</div>
+
+		<p>أشهد أن لا إله إلا الله وان محمد رسول الله ..<br />
+أشهد ربي أني من المسلمين ومن المؤمنين &#8230;والله شيء راااااااااااااااااااااااائع جداً&#8230;<br />
+كما قال تعالى :&#8221; إنما يخشى اللهَ من عباده العلماءُ&#8221;</p>
+<p id="comment-like-278" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=278&#038;_wpnonce=281cb411d0" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-278" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=278#respond' data-commentid="278" data-postid="213" data-belowelement="div-comment-278" data-respondelement="respond" aria-label='رد على أبو عثمان'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-236">
+				<div id="div-comment-236" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://GOOGLE' rel='external nofollow' class='url'>الياقوت الجزائر</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-236">
+			16 مارس 2013 عند 1:30 ص				</a>
+						</div>
+
+		<p>اشهد ان لا اله الا الله وحده لا شريك له و اشهد ان محمدا صلى الله عليه و سلم عبده و رسوله الحمد لله انني مسلمة و الحمد لله انني اعرف الله و اوحده و جزاكم الله كل الخير على اعملكم و كل ما اتمناه لكم يا عزيز يا غفار يا رحيم ارزقهم اجور الانبياء و احشرهم في زمرة الانبياء هذا هو جزاءكم امين اميييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييييين</p>
+<p id="comment-like-236" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=236&#038;_wpnonce=1bc9b77769" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-236" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=236#respond' data-commentid="236" data-postid="213" data-belowelement="div-comment-236" data-respondelement="respond" aria-label='رد على الياقوت الجزائر'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="comment-200">
+				<div id="div-comment-200" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn">nora maher</cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-200">
+			9 يناير 2013 عند 3:21 م				</a>
+						</div>
+
+		<p>sob7ana allah it’s amazing</p>
+<p id="comment-like-200" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=200&#038;_wpnonce=4de7f2f6f8" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-200" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=200#respond' data-commentid="200" data-postid="213" data-belowelement="div-comment-200" data-respondelement="respond" aria-label='رد على nora maher'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-169">
+				<div id="div-comment-169" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn">rachid kay</cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-169">
+			16 نوفمبر 2012 عند 10:08 م				</a>
+						</div>
+
+		<p>جزاكم الله خيرا وبارك فيكم وفي عملكم</p>
+<p id="comment-like-169" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=169&#038;_wpnonce=c482ceffd8" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-169" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=169#respond' data-commentid="169" data-postid="213" data-belowelement="div-comment-169" data-respondelement="respond" aria-label='رد على rachid kay'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="comment-98">
+				<div id="div-comment-98" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn">Dr Kamal Kattab</cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-98">
+			12 أغسطس 2012 عند 4:41 م				</a>
+						</div>
+
+		<p>جزاكم الله عنا كل خير وبارك لكم جهودكم<br />
+د كمال كتاب</p>
+<p id="comment-like-98" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=98&#038;_wpnonce=8663db0c17" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-98" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=98#respond' data-commentid="98" data-postid="213" data-belowelement="div-comment-98" data-respondelement="respond" aria-label='رد على Dr Kamal Kattab'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-91">
+				<div id="div-comment-91" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://www.ESAM_KING81@YAHOO.COM' rel='external nofollow' class='url'>عصام طلعت</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-91">
+			31 يوليو 2012 عند 4:36 ص				</a>
+						</div>
+
+		<p>سبحان الله هو عالم الغيب  وهو اعلم بالملكوت </p>
+<p id="comment-like-91" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=91&#038;_wpnonce=cd1036ceb4" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-91" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=91#respond' data-commentid="91" data-postid="213" data-belowelement="div-comment-91" data-respondelement="respond" aria-label='رد على عصام طلعت'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="comment-66">
+				<div id="div-comment-66" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn">ليلى دحماني</cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-66">
+			22 يونيو 2012 عند 10:05 م				</a>
+						</div>
+
+		<p>سبحان الله الحي القيوم<br />
+اللهم اعنا على طاعتك كما ينبغي لجلال وجهك العظيم<br />
+بارك الله فيكم على هذه المواضيع الرائعة وجزاكم عنا كل خير</p>
+<p id="comment-like-66" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=66&#038;_wpnonce=27fdb40979" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-66" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=66#respond' data-commentid="66" data-postid="213" data-belowelement="div-comment-66" data-respondelement="respond" aria-label='رد على ليلى دحماني'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-63">
+				<div id="div-comment-63" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://twitter.com/monzonur' rel='external nofollow' class='url'>DR. MONZO NUR (@monzonur)</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-63">
+			6 يونيو 2012 عند 3:45 م				</a>
+						</div>
+
+		<p>جزاكم الله خيرا</p>
+<p id="comment-like-63" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=63&#038;_wpnonce=94d7c98b69" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-63" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=63#respond' data-commentid="63" data-postid="213" data-belowelement="div-comment-63" data-respondelement="respond" aria-label='رد على DR. MONZO NUR (@monzonur)'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="comment-58">
+				<div id="div-comment-58" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://facebook' rel='external nofollow' class='url'>simo baha</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-58">
+			1 يونيو 2012 عند 11:40 م				</a>
+						</div>
+
+		<p>اخرجتمونا من الظلام الله ينور طريقكم</p>
+<p id="comment-like-58" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=58&#038;_wpnonce=6ed8240c5c" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-58" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=58#respond' data-commentid="58" data-postid="213" data-belowelement="div-comment-58" data-respondelement="respond" aria-label='رد على simo baha'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-48">
+				<div id="div-comment-48" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://roseline-music@life.fr' rel='external nofollow' class='url'>RoOsel!!ne</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-48">
+			24 مايو 2012 عند 10:10 م				</a>
+						</div>
+
+		<p>waaaaaw it&#8217;s amazing</p>
+<p id="comment-like-48" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=48&#038;_wpnonce=258aa63f99" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-48" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=48#respond' data-commentid="48" data-postid="213" data-belowelement="div-comment-48" data-respondelement="respond" aria-label='رد على RoOsel!!ne'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 parent highlander-comment" id="comment-43">
+				<div id="div-comment-43" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://مصر' rel='external nofollow' class='url'>محمد ابراهيم خليل عبدالرحيم</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-43">
+			19 مايو 2012 عند 4:31 م				</a>
+						</div>
+
+		<p>اللهم ياربنا يابديع السماوات والارض يامن احسنت كل شئ صنعا يامن لايعجزك شئ فى الارض ولا فى السماء يامن تقول للشئ كن فيكون<br />
+ماذا اقول وماذا اثنى على ربى الذى يكفينى فخرا وشرفا ان كنت تحت قولك ياعبادى اللهم ثبت قلوبنا على الايمان اللهم لا تفتنا فى ديننا رب ارزقنى الخشوع فى الصلاه رب حببنى من كل طاعه وارزقنى لذتها وباعدنى عن كل ذنب ومعصيه يغضبك منى اللهم ياواسع المغفره والجود والاحسان ارزقنى توبة صادقة قبل الممات اللهم امتنى على طاعه اللهم اجعل قلبى لا يعرف حبا ولا تعلقا ولا شغفا الا بك اللهم اجعلنى ممن يسير فى درب مرضاتك اللهم اغفر لى اللهم اغفر لى اللهم اغفر &#8230;<br />
+اللهم لك الحمد على نعمة الاسلام وكفى بها نعمه والحمد لله رب العالمين والصلاة والسلام على اشرف المرسلين المبعوث رحمة للعالمين..<br />
+اللهم ارقنى الاخلاص فى القول والعمل .. رب لاتمتنى الا وانت راض عنى &#8230; واشهد أن لا إله إلا الله وأشهد أن محمدا رسول الله</p>
+<p id="comment-like-43" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=43&#038;_wpnonce=aaf50ee5d8" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-43" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=43#respond' data-commentid="43" data-postid="213" data-belowelement="div-comment-43" data-respondelement="respond" aria-label='رد على محمد ابراهيم خليل عبدالرحيم'>رد</a></div>
+				</div>
+				<ol class="children">
+		<li class="comment odd alt depth-2 parent highlander-comment" id="comment-67">
+				<div id="div-comment-67" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn">ليلى دحماني</cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-67">
+			22 يونيو 2012 عند 10:06 م				</a>
+						</div>
+
+		<p>اللهم آآآآآآآآآآمييييين</p>
+<p id="comment-like-67" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=67&#038;_wpnonce=b7b913e456" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-67" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=67#respond' data-commentid="67" data-postid="213" data-belowelement="div-comment-67" data-respondelement="respond" aria-label='رد على ليلى دحماني'>رد</a></div>
+				</div>
+				<ol class="children">
+		<li class="comment even depth-3 highlander-comment" id="comment-166">
+				<div id="div-comment-166" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://المغرب' rel='external nofollow' class='url'>ادريس الخنسي</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-166">
+			4 نوفمبر 2012 عند 3:22 ص				</a>
+						</div>
+
+		<p>اللهم آآآآآآآآآآآآآآآآآآآآآآآآآآآآآمين يارب العالمين</p>
+<p id="comment-like-166" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=166&#038;_wpnonce=3dfe636cb4" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-166" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=166#respond' data-commentid="166" data-postid="213" data-belowelement="div-comment-166" data-respondelement="respond" aria-label='رد على ادريس الخنسي'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 parent highlander-comment" id="comment-27">
+				<div id="div-comment-27" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn">tayab jaouad</cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-27">
+			8 مايو 2012 عند 3:36 م				</a>
+						</div>
+
+		<p>سبحان الله والله لو قارنا حجمنا بحجم الأرض ولو قارنا حجم الأرض يالشمس ولو قارنا حجم الشمس بالمجرة ولو قارنا حجم المجرة بالكون لعرفنا الله الذي أحسن كل شيء صنعا</p>
+<p id="comment-like-27" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=27&#038;_wpnonce=4670af5a69" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-27" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=27#respond' data-commentid="27" data-postid="213" data-belowelement="div-comment-27" data-respondelement="respond" aria-label='رد على tayab jaouad'>رد</a></div>
+				</div>
+				<ol class="children">
+		<li class="comment byuser comment-author-hkattab bypostauthor even depth-2 highlander-comment" id="comment-57">
+				<div id="div-comment-57" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn"><a href='http://www.fussilat.org' rel='external nofollow' class='url'>hkattab</a></cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-57">
+			1 يونيو 2012 عند 6:07 م				</a>
+						</div>
+
+		<p>نحن نُكبِّر قبل كل صلاة وفي كل صلاة، ونقولها عندما نرى شيئاً عجباً، ولكن هذا هو المعني الحقيقي لـ &#8220;ألله أكبر&#8221;، فإن أي شيء تراه فإن الله أكبر منه، انظر المحاكاة التالية على يوتيوب لتدرك ذلك.<br />
+.</p>
+<div class="jetpack-video-wrapper"><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='1000' height='563' src='https://www.youtube.com/embed/_IVqMXPFYwI?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></div>
+<p id="comment-like-57" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=57&#038;_wpnonce=48a57e7547" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-57" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=57#respond' data-commentid="57" data-postid="213" data-belowelement="div-comment-57" data-respondelement="respond" aria-label='رد على hkattab'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-20">
+				<div id="div-comment-20" class="comment-body">
+				<div class="comment-author vcard">
+						<cite class="fn">tarekmoayed</cite> <span class="says">كتب:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/#comment-20">
+			28 أبريل 2012 عند 2:03 م				</a>
+						</div>
+
+		<p>بارك الله فيكم وفي عملكم</p>
+<p id="comment-like-20" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="https://fussilat.org/2012/04/27/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5/?like_comment=20&#038;_wpnonce=4f87b8c066" class="comment-like-link needs-login" rel="nofollow" data-blog="33627109"><span>إعجاب</span></a><span id="comment-like-count-20" class="comment-like-feedback">إعجاب</span></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/?replytocom=20#respond' data-commentid="20" data-postid="213" data-belowelement="div-comment-20" data-respondelement="respond" aria-label='رد على tarekmoayed'>رد</a></div>
+				</div>
+				</li><!-- #comment-## -->
+			</ol><!-- .comment-list -->
+
+			
+		
+		
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">اترك رد <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/#respond" style="display:none;">إلغاء الرد</a></small></h3>			<form action="https://fussilat.org/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="b71d4584ca" /><input type="hidden" name="_wp_http_referer" value="/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/" />
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest" />
+
+<div class="comment-form-field comment-textarea">
+	<label for="comment">ضع ردك هنا...</label>
+	<div id="comment-form-comment"><textarea id="comment" name="comment" title="ضع ردك هنا..."></textarea></div>
+</div>
+
+<div id="comment-form-identity">
+	<div id="comment-form-nascar">
+		<p>إملأ الحقول أدناه بالمعلومات المناسبة أو إضغط على إحدى الأيقونات لتسجيل الدخول:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" class="nascar-signin-link"
+                   title="Login via زائر">
+									</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" class="nascar-signin-link"
+                   title="Login via WordPress.com">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#0087be" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></g></svg>				</a>
+			</li>
+			<li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" class="nascar-signin-link"
+                   title="Login via Twitter">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#1DA1F2" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"/></g></svg>				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" class="nascar-signin-link"
+                   title="Login via Facebook">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#3B5998" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"/></g></svg>				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="" alt="Gravatar" width="25" class="no-grav" />
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">البريد الإلكتروني <span class="required">**مطلوب</span> <span class="nopublish">(البريد الإلكتروني لن يتم نشره)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">الاسم <span class="required">**مطلوب</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">الموقع</label>
+					<div class="comment-form-input"><input id="url" name="url" type="url" value="" /></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="شعار وردبرس.كوم" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" />
+						<p class="comment-form-posting-as pa-wordpress">
+			<strong></strong>
+			أنت تعلق بإستخدام حساب WordPress.com.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );">تسجيل خروج &nbsp;</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">تغيير</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#0087be" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Google photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="" />
+						<p class="comment-form-posting-as pa-googleplus">
+			<strong></strong>
+			أنت تعلق بإستخدام حساب Google.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'googleplus' );">تسجيل خروج &nbsp;</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">تغيير</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" x="0px" y="0px" viewBox="0 0 60 60" ><path fill="#519bf7" d="M56.3,30c0,-1.6 -0.2,-3.4 -0.6,-5h-3.1H42.2H30v10.6h14.8C44,39.3 42,42 39.1,43.9l8.8,6.8C53,46 56.3,39 56.3,30z" /><path fill="#3db366" d="M30,57.5c6.7,0 13.1,-2.4 17.9,-6.8l-8.8,-6.8c-2.5,1.6 -5.6,2.4 -9.1,2.4c-7.2,0 -13.3,-4.7 -15.4,-11.2l-9.3,7.1C9.8,51.3 19.1,57.5 30,57.5z" /><path fill="#fdc600" d="M5.3,42.2l9.3,-7.1c-0.5,-1.6 -0.8,-3.3 -0.8,-5.1s0.3,-3.5 0.8,-5.1l-9.3,-7.1C3.5,21.5 2.5,25.6 2.5,30S3.5,38.5 5.3,42.2z" /><path fill="#f15b44" d="M40.1,17.4l8,-8C43.3,5.1 37,2.5 30,2.5C19.1,2.5 9.8,8.7 5.3,17.8l9.3,7.1c2.1,-6.5 8.2,-11.1 15.4,-11.1C33.9,13.7 37.4,15.1 40.1,17.4z" /></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="صورة تويتر" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" />
+						<p class="comment-form-posting-as pa-twitter">
+			<strong></strong>
+			أنت تعلق بإستخدام حساب Twitter.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );">تسجيل خروج &nbsp;</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">تغيير</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#1DA1F2" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"/></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Facebook photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" />
+						<p class="comment-form-posting-as pa-facebook">
+			<strong></strong>
+			أنت تعلق بإستخدام حساب Facebook.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );">تسجيل خروج &nbsp;</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">تغيير</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#3B5998" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"/></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">إلغاء</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;"/> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">أبلغني بالتعليقات الجديدة عبر البريد الإلكتروني.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;"/> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog"  style="display: inline;">أعلمني بالمشاركات الجديدة عن طريق بريدي الإلكتروني</label></p></div>
+
+
+
+
+<p class="form-submit"><input name="submit" type="submit" id="comment-submit" class="submit" value="أضف تعليقاً" /> <input type='hidden' name='comment_post_ID' value='213' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="440ea99ff6" /></p>
+<input type="hidden" name="genseq" value="1556190214" />
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="127"/></p>			</form>
+			</div><!-- #respond -->
+	<div style="clear: both"></div>
+	</div><!-- #comments -->
+</div><!-- .comments-area-wrapper -->
+
+	</main><!-- #primary -->
+
+
+		</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			
+				<div class="widget-area widgets-four" role="complementary">
+					<div class="grid-container">
+						<aside id="search-3" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://fussilat.org/">
+				<label>
+					<span class="screen-reader-text">ابحث عن: </span>
+					<input type="search" class="search-field" placeholder="بحث &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="بحث" />
+			</form></aside><aside id="blog_subscription-3" class="widget widget_blog_subscription jetpack_subscription_widget">            <form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8"
+                  id="subscribe-blog">
+									<p>اكتب عنوان البريد الإلكتروني لمتابعة هذه المدونة واستلام تنبيهات التدوينات الجديدة بالبريد الإلكتروني.</p>
+<p>انضم 1٬243 متابعون آخرين</p>
+                    <p><input type="text" name="email" style="width: 95%; padding: 1px 2px"
+                              placeholder="أكتب بريدك الإلكتروني" value=""
+                              id="subscribe-field"/></p>
+				
+                <p>
+                    <input type="hidden" name="action" value="subscribe"/>
+                    <input type="hidden" name="blog_id" value="33627109"/>
+                    <input type="hidden" name="source" value="https://fussilat.org/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/"/>
+                    <input type="hidden" name="sub-type" value="widget"/>
+                    <input type="hidden" name="redirect_fragment" value="blog_subscription-3"/>
+					<input type="hidden" id="_wpnonce" name="_wpnonce" value="22514b3d41" />                    <button type="submit"
+	                    		                	                >
+	                    تابع                    </button>
+                </p>
+            </form>
+			
+</aside><aside id="milestone_widget-3" class="widget milestone-widget"><div class="milestone-content"><div class="milestone-header"><strong class="event">اليوم الكبير</strong><span class="date">أبريل 25th, 2019</span></div><div class="milestone-message">لقد وصل اليوم الكبير.</div></div><!--milestone-content--></aside>		<aside id="recent-posts-3" class="widget widget_recent_entries">		<h3 class="widget-title">أحدث التدوينات</h3>		<ul>
+											<li>
+					<a href="https://fussilat.org/2019/03/01/and-that-ye-fast-is-better-for-you-if-ye-did-but-know/">And that ye fast is better for you if ye did but know</a>
+									</li>
+											<li>
+					<a href="https://fussilat.org/2019/02/23/%d9%88%d9%8e%d8%a3%d9%8e%d9%86-%d8%aa%d9%8e%d8%b5%d9%8f%d9%88%d9%85%d9%8f%d9%88%d8%a7%d9%92-%d8%ae%d9%8e%d9%8a%d9%92%d8%b1%d9%8c-%d9%84%d9%91%d9%8e%d9%83%d9%8f%d9%85%d9%92-%d8%a5%d9%90%d9%86-%d9%83/">وَأَن تَصُومُواْ خَيْرٌ لَّكُمْ إِن كُنْتُمْ تَعْلَمُونَ</a>
+									</li>
+											<li>
+					<a href="https://fussilat.org/2018/05/07/%d9%84%d8%a7-%d8%a7%d9%84%d8%b4%d9%85%d8%b3-%d9%8a%d9%86%d8%a8%d8%ba%d9%8a-%d9%84%d9%87%d8%a7-%d8%a3%d9%86-%d8%aa%d8%af%d8%b1%d9%83-%d8%a7%d9%84%d9%82%d9%85%d8%b1-%d9%88%d8%ac%d9%85%d8%b9-%d8%a7/">لا الشمس ينبغي لها أن تدرك القمر &#8230; وجمع الشمس والقمر!</a>
+									</li>
+											<li>
+					<a href="https://fussilat.org/2017/06/29/%d9%87%d9%84-%d8%a7%d9%84%d8%a3%d8%b1%d8%b6-%d9%83%d8%b1%d9%88%d9%8a%d8%a9-%d9%81%d9%8a-%d8%a7%d9%84%d9%82%d8%b1%d8%a2%d9%86%d8%9f/">هل الأرض كروية في القرآن؟ يُكَوِّرُ اللَّيْلَ عَلَى النَّهَارِ وَيُكَوِّرُ النَّهَارَ عَلَى اللَّيْلِ</a>
+									</li>
+											<li>
+					<a href="https://fussilat.org/2017/02/06/%d9%87%d9%84-%d9%81%d9%8e%d8%aa%d9%92%d9%82%d9%8f-%d8%a7%d9%84%d8%b3%d9%85%d9%88%d8%a7%d8%aa-%d8%b9%d9%86-%d8%a7%d9%84%d8%a3%d8%b1%d8%b6-%d9%87%d9%88-%d8%a7%d9%84%d8%a7%d9%86%d9%81%d8%ac%d8%a7%d8%b1/">هل فَتْقُ السموات عن الأرض هو الانفجار العظيم؟ {أَوَلَمْ يَرَ ٱلَّذِينَ كَفَرُوۤاْ أَنَّ ٱلسَّمَٰوَٰتِ وَٱلأَرْضَ كَانَتَا رَتْقاً فَفَتَقْنَاهُمَا}</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-4" class="widget widget_recent_comments"><h3 class="widget-title">أحدث التعليقات</h3>				<table class="recentcommentsavatar" cellspacing="0" cellpadding="0" border="0">
+					<tr><td title="د. أمينه" class="recentcommentsavatartop" style="height:48px; width:48px;"></td><td class="recentcommentstexttop" style="">د. أمينه على <a href="https://fussilat.org/2013/05/15/%d9%88%d8%a7%d9%84%d9%89-%d8%a7%d9%84%d8%a7%d8%b1%d8%b6-%d9%83%d9%8a%d9%81-%d8%b3%d8%b7%d8%ad%d8%aa/#comment-2629">والى الارض كيف سطحت ! أليست ال&hellip;</a></td></tr><tr><td title="حسين كتّاب" class="recentcommentsavatarend" style="height:48px; width:48px;"><a href="http://www.fussilat.org" rel="nofollow"></a></td><td class="recentcommentstextend" style=""><a href="http://www.fussilat.org" rel="nofollow">حسين كتّاب</a> على <a href="https://fussilat.org/2013/05/15/%d9%88%d8%a7%d9%84%d9%89-%d8%a7%d9%84%d8%a7%d8%b1%d8%b6-%d9%83%d9%8a%d9%81-%d8%b3%d8%b7%d8%ad%d8%aa/#comment-2625">والى الارض كيف سطحت ! أليست ال&hellip;</a></td></tr><tr><td title="عدى" class="recentcommentsavatarend" style="height:48px; width:48px;"></td><td class="recentcommentstextend" style="">عدى على <a href="https://fussilat.org/2013/05/15/%d9%88%d8%a7%d9%84%d9%89-%d8%a7%d9%84%d8%a7%d8%b1%d8%b6-%d9%83%d9%8a%d9%81-%d8%b3%d8%b7%d8%ad%d8%aa/#comment-2624">والى الارض كيف سطحت ! أليست ال&hellip;</a></td></tr><tr><td title="بكار المصري" class="recentcommentsavatarend" style="height:48px; width:48px;"></td><td class="recentcommentstextend" style="">بكار المصري على <a href="https://fussilat.org/2013/05/15/%d9%88%d8%a7%d9%84%d9%89-%d8%a7%d9%84%d8%a7%d8%b1%d8%b6-%d9%83%d9%8a%d9%81-%d8%b3%d8%b7%d8%ad%d8%aa/#comment-2623">والى الارض كيف سطحت ! أليست ال&hellip;</a></td></tr><tr><td title="مصطفى" class="recentcommentsavatarend" style="height:48px; width:48px;"><a href="http://morroco" rel="nofollow"></a></td><td class="recentcommentstextend" style=""><a href="http://morroco" rel="nofollow">مصطفى</a> على <a href="https://fussilat.org/2013/05/15/%d9%88%d8%a7%d9%84%d9%89-%d8%a7%d9%84%d8%a7%d8%b1%d8%b6-%d9%83%d9%8a%d9%81-%d8%b3%d8%b7%d8%ad%d8%aa/#comment-2597">والى الارض كيف سطحت ! أليست ال&hellip;</a></td></tr>				</table>
+				</aside><aside id="meta-3" class="widget widget_meta"><h3 class="widget-title">منوعات</h3>			<ul>
+			<li><a href="https://wordpress.com/start/ar?ref=wplogin">تسجيل</a></li>			<li><a href="https://fussilatdotorg.wordpress.com/wp-login.php">تسجيل الدخول</a></li>
+			<li><a href="https://fussilat.org/feed/">خلاصة آخر المقالات <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://fussilat.org/comments/feed/">خلاصة التعليقات <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.com/" title="هذا الموقع يستخدم ووردبريس المعرب، منصة دلالية للنشر الشخصي.">WordPress.com</a></li>			</ul>
+			</aside><aside id="categories-3" class="widget widget_categories"><h3 class="widget-title">التصنيفات</h3>		<ul>
+				<li class="cat-item cat-item-23972"><a href="https://fussilat.org/category/english-articles/">English Articles</a>
+</li>
+	<li class="cat-item cat-item-29264716"><a href="https://fussilat.org/category/%d9%85%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d8%a8%d8%a7%d9%84%d9%84%d8%ba%d8%a9-%d8%a7%d9%84%d8%b9%d8%b1%d8%a8%d9%8a%d8%a9/">مقالات باللغة العربية</a>
+</li>
+	<li class="cat-item cat-item-5624626"><a href="https://fussilat.org/category/%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d9%82%d9%8a%d8%a7%d9%85%d8%a9/" title="يوم القيامة">يوم القيامة</a>
+</li>
+	<li class="cat-item cat-item-2405600"><a href="https://fussilat.org/category/%d8%b9%d9%84%d9%85-%d8%a7%d9%84%d9%81%d9%84%d9%83/%d8%a7%d9%84%d9%82%d9%85%d8%b1/">القمر</a>
+</li>
+	<li class="cat-item cat-item-4510297"><a href="https://fussilat.org/category/%d8%a7%d9%84%d9%85%d8%a7%d8%a1/">الماء</a>
+</li>
+	<li class="cat-item cat-item-19291802"><a href="https://fussilat.org/category/%d8%a7%d9%84%d9%85%d8%b0%d9%86%d8%a8%d8%a7%d8%aa/">المذنبات</a>
+</li>
+	<li class="cat-item cat-item-4712529"><a href="https://fussilat.org/category/%d8%b9%d9%84%d9%85-%d8%a7%d9%84%d9%81%d9%84%d9%83/%d8%a7%d9%84%d8%a3%d8%b1%d8%b6/">الأرض</a>
+</li>
+	<li class="cat-item cat-item-7049361"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a5%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%a7%d9%84%d9%82%d8%b1%d8%a2%d9%86-%d8%a7%d9%84%d9%83%d8%b1%d9%8a%d9%85/" title="الإعجاز العلمي في القرآن الكريم">الإعجاز العلمي في القرآن الكريم</a>
+</li>
+	<li class="cat-item cat-item-191739558"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a5%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%a7%d9%84%d9%82%d8%b1%d8%a7%d9%86/" title="الإعجاز العلمي في القرآن الكريم">الإعجاز العلمي في القران</a>
+</li>
+	<li class="cat-item cat-item-220699602"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a5%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d9%81%d8%b1%d9%82%d8%a7%d9%86/">الإعجاز العلمي في سورة الفرقان</a>
+</li>
+	<li class="cat-item cat-item-160016737"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a5%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d9%82%d8%a7%d8%b1%d8%b9%d8%a9/">الإعجاز العلمي في سورة القارعة</a>
+</li>
+	<li class="cat-item cat-item-121927112"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a5%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%a3%d9%86%d8%a8%d9%8a%d8%a7%d8%a1/">الإعجاز العلمي في سورة الأنبياء</a>
+</li>
+	<li class="cat-item cat-item-121927195"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a5%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%b1%d8%ad%d9%85%d9%86/">الإعجاز العلمي في سورة الرحمن</a>
+</li>
+	<li class="cat-item cat-item-121927350"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a5%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%b1%d8%b9%d8%af/">الإعجاز العلمي في سورة الرعد</a>
+</li>
+	<li class="cat-item cat-item-121927502"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a5%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%b7%d8%a7%d8%b1%d9%82/">الإعجاز العلمي في سورة الطارق</a>
+</li>
+	<li class="cat-item cat-item-584958197"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d9%81%d8%a7%d8%b7%d8%b1/">الاعجاز العلمي في سورة فاطر</a>
+</li>
+	<li class="cat-item cat-item-176610901"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d9%81%d8%b5%d9%84%d8%aa/">الاعجاز العلمي في سورة فصلت</a>
+</li>
+	<li class="cat-item cat-item-168898348"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d9%82/">الاعجاز العلمي في سورة ق</a>
+</li>
+	<li class="cat-item cat-item-195273557"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d9%84%d9%82%d9%85%d8%a7%d9%86/">الاعجاز العلمي في سورة لقمان</a>
+</li>
+	<li class="cat-item cat-item-168898372"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d9%86%d9%88%d8%ad/">الاعجاز العلمي في سورة نوح</a>
+</li>
+	<li class="cat-item cat-item-176606767"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d9%8a%d8%b3/">الاعجاز العلمي في سورة يس</a>
+</li>
+	<li class="cat-item cat-item-160016645"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d9%82%d9%8a%d8%a7%d9%85%d8%a9/">الاعجاز العلمي في سورة القيامة</a>
+</li>
+	<li class="cat-item cat-item-176610959"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d9%85%d9%84%d9%83/">الاعجاز العلمي في سورة الملك</a>
+</li>
+	<li class="cat-item cat-item-160016664"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d9%86%d8%a7%d8%b2%d8%b9%d8%a7%d8%aa/">الاعجاز العلمي في سورة النازعات</a>
+</li>
+	<li class="cat-item cat-item-168898189"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d9%86%d8%a8%d8%a3/">الاعجاز العلمي في سورة النبأ</a>
+</li>
+	<li class="cat-item cat-item-430343436"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d9%86%d8%ac%d9%85/">الاعجاز العلمي في سورة النجم</a>
+</li>
+	<li class="cat-item cat-item-195273551"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d9%86%d8%ad%d9%84/">الاعجاز العلمي في سورة النحل</a>
+</li>
+	<li class="cat-item cat-item-147938057"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d9%88%d8%a7%d9%82%d8%b9%d8%a9/">الاعجاز العلمي في سورة الواقعة</a>
+</li>
+	<li class="cat-item cat-item-160016416"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%a5%d9%86%d8%b4%d9%82%d8%a7%d9%82/">الاعجاز العلمي في سورة الإنشقاق</a>
+</li>
+	<li class="cat-item cat-item-168898153"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%a8%d9%82%d8%b1%d8%a9/">الاعجاز العلمي في سورة البقرة</a>
+</li>
+	<li class="cat-item cat-item-139902882"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%aa%d9%83%d9%88%d9%8a%d8%b1/">الاعجاز العلمي في سورة التكوير</a>
+</li>
+	<li class="cat-item cat-item-176614675"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%ad%d8%a7%d9%82%d8%a9/">الاعجاز العلمي في سورة الحاقة</a>
+</li>
+	<li class="cat-item cat-item-160016608"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%ad%d8%ac/">الاعجاز العلمي في سورة الحج</a>
+</li>
+	<li class="cat-item cat-item-168898310"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%ad%d8%ac%d8%b1/">الاعجاز العلمي في سورة الحجر</a>
+</li>
+	<li class="cat-item cat-item-287694241"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%ad%d8%af%d9%8a%d8%af/">الاعجاز العلمي في سورة الحديد</a>
+</li>
+	<li class="cat-item cat-item-160016552"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%b2%d9%84%d8%b2%d9%84%d8%a9/">الاعجاز العلمي في سورة الزلزلة</a>
+</li>
+	<li class="cat-item cat-item-584957790"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%b2%d9%85%d8%b1/">الاعجاز العلمي في سورة الزمر</a>
+</li>
+	<li class="cat-item cat-item-168898402"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%b4%d9%85%d8%b3/">الاعجاز العلمي في سورة الشمس</a>
+</li>
+	<li class="cat-item cat-item-176610833"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%b5%d8%a7%d9%81%d8%a7%d8%aa/">الاعجاز العلمي في سورة الصافات</a>
+</li>
+	<li class="cat-item cat-item-168906740"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%ba%d8%a7%d8%b4%d9%8a%d8%a9/">الاعجاز العلمي في سورة الغاشية</a>
+</li>
+	<li class="cat-item cat-item-176614717"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%a7%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d9%81%d9%8a-%d8%b3%d9%88%d8%b1%d8%a9-%d8%b7%d9%87/">الاعجاز العلمي في سورة طه</a>
+</li>
+	<li class="cat-item cat-item-115190154"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%b3%d9%85%d9%88%d8%a7%d8%aa-%d9%88%d8%a7%d9%84%d8%a3%d8%b1%d8%b6/">السموات والأرض</a>
+</li>
+	<li class="cat-item cat-item-1719925"><a href="https://fussilat.org/category/%d8%a7%d9%84%d8%b3%d9%85%d8%a7%d8%a1/">السماء</a>
+</li>
+	<li class="cat-item cat-item-11564701"><a href="https://fussilat.org/category/%d8%b3%d9%88%d8%b1%d8%a9-%d9%81%d8%b5%d9%84%d8%aa/">سورة فصلت</a>
+</li>
+	<li class="cat-item cat-item-1648580"><a href="https://fussilat.org/category/%d8%b3%d9%88%d8%b1%d8%a9-%d9%8a%d8%b3/">سورة يس</a>
+</li>
+	<li class="cat-item cat-item-11564362"><a href="https://fussilat.org/category/%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d9%85%d8%a4%d9%85%d9%86%d9%88%d9%86/">سورة المؤمنون</a>
+</li>
+	<li class="cat-item cat-item-11565105"><a href="https://fussilat.org/category/%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%aa%d9%83%d9%88%d9%8a%d8%b1/">سورة التكوير</a>
+</li>
+	<li class="cat-item cat-item-82918650"><a href="https://fussilat.org/category/%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%b0%d8%a7%d8%b1%d9%8a%d8%a7%d8%aa/">سورة الذاريات</a>
+</li>
+	<li class="cat-item cat-item-20891811"><a href="https://fussilat.org/category/%d8%b9%d9%84%d9%85-%d8%a7%d9%84%d9%81%d9%84%d9%83/">علم الفلك</a>
+</li>
+	<li class="cat-item cat-item-1315948"><a href="https://fussilat.org/category/%d8%b9%d9%84%d9%88%d9%85-%d8%a7%d9%84%d8%a3%d8%b1%d8%b6/">علوم الأرض</a>
+</li>
+		</ul>
+			</aside>					</div><!-- .grid-container -->
+				</div><!-- #secondary -->
+
+			
+			<div class="footer-bottom-info ">
+				
+				<div class="site-info">
+					<a href="https://ar.wordpress.com/?ref=footer_blog">المدونة لدى وردبرس.كوم.</a>
+					
+					قالب: Dyad بواسطة <a href="http://wordpress.com/themes/" rel="designer">WordPress.com</a>.				</div><!-- .site-info -->
+			</div><!-- .footer-bottom-info -->
+
+		</footer><!-- #colophon -->
+
+	</div><!-- .site-inner -->
+</div><!-- #page -->
+
+<!--  -->
+	<div style="display:none">
+	</div>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"\u0623\u0636\u0641 \u062a\u0639\u0644\u064a\u0642\u0627\u064b","connectingToText":"Connecting to %s","commentingAsText":"%1$s: \u0623\u0646\u062a \u062a\u0642\u0648\u0645 \u0628\u0627\u0644\u062a\u0639\u0644\u064a\u0642 \u0628\u0625\u0633\u062a\u062e\u062f\u0627\u0645 \u062d\u0633\u0627\u0628 %2$s.","logoutText":"\u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u062e\u0631\u0648\u062c","loginText":"\u062f\u062e\u0648\u0644","connectURL":"https:\/\/fussilatdotorg.wordpress.com\/public.api\/connect\/?action=request&domain=fussilat.org","logoutURL":"https:\/\/fussilatdotorg.wordpress.com\/wp-login.php?action=logout&_wpnonce=a7ba0f3480","homeURL":"https:\/\/fussilat.org\/","postID":"213","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0627\u0644\u0643\u062a\u0631\u0648\u0646\u064a \u063a\u064a\u0631 \u0635\u0627\u0644\u062d","enterAuthorError":"Please enter your name here","gravatarFromEmail":"\u0633\u062a\u0638\u0647\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0648\u0631\u0629 \u0643\u0644\u0645\u0627 \u062a\u0631\u0643\u062a \u062a\u0639\u0644\u064a\u0642\u0627\u064b. \u0625\u0636\u063a\u0637 \u0644\u062a\u062e\u0635\u064a\u0635\u0647\u0627.","logInToExternalAccount":"\u0633\u062c\u0651\u0644 \u062f\u062e\u0648\u0644\u0643 \u0644\u0625\u0633\u062a\u062e\u062f\u0627\u0645 \u0627\u0644\u0645\u0639\u0644\u0648\u0645\u0627\u062a \u0645\u0646 \u0623\u062d\u062f \u0647\u0630\u0647 \u0627\u0644\u062d\u0633\u0627\u0628\u0627\u062a.","change":"\u062a\u063a\u064a\u064a\u0631","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"","text_direction":"rtl"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1551752381j'></script>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="أضف أفكارك هنا... (اختياري)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">إرسال إلى</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">إلغاء</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="إعادة تدوين المقالة" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="33627109" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://fussilat.org" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="موقع فصلت لـ الاعجاز العلمي في القرآن الكريم وبالحقائق العلمية، الاعجاز العلمي في القرآن، معجزات القرآن العلمية، الاعجاز العلمي في القران الكريم" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="536a098ee5" /><input type="hidden" name="_wp_http_referer" value="/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+<script type='text/javascript' charset='UTF-8' id='polldaddyRatings'><!--//--><![CDATA[//><!--
+PDRTJS_settings_5737625_post_213={"id":5737625,"unique_id":"wp-post-213","title":"%D9%83%D9%8A%D9%81%20%D8%B3%D8%AA%D9%83%D9%88%D9%86%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A8%D9%84%D8%A7%20%D9%82%D9%85%D8%B1%D8%9F%20%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E%20%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E%20%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E%20%26%238211%3B%20%D8%A7%D9%84%D8%A5%D8%B9%D8%AC%D8%A7%D8%B2%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B4%D9%85%D8%B3%20%D9%88%D8%A7%D9%84%D9%82%D9%85%D8%B1%20%D9%88%D8%A7%D9%84%D9%81%D8%B5%D9%88%D9%84","permalink":"https:\/\/fussilat.org\/2012\/04\/27\/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5\/","item_id":"_post_213"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_5737625_post_213 == 'undefined' ){PDRTJS_5737625_post_213 = new PDRTJS_RATING( PDRTJS_settings_5737625_post_213 );}}
+//--><!]]></script><script type='text/javascript' charset='UTF-8' src='https://polldaddy.com/js/rating/rating.js'></script>
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/fussilat.org\/2012\/04\/27\/%d9%88%d9%8e%d8%b3%d9%8e%d8%ae%d9%8e%d9%91%d8%b1%d9%8e-%d9%b1%d9%84%d8%b4%d9%8e%d9%91%d9%85%d9%92%d8%b3%d9%8e-%d9%88%d9%8e%d9%b1%d9%84%d9%92%d9%82%d9%8e%d9%85%d9%8e%d8%b1%d9%8e-%d8%a7%d9%84%d8%a5\/":213};
+	</script>
+					<div id="sharing_email" style="display: none;">
+		<form action="/2012/04/27/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5/" method="post">
+			<label for="target_email">إرسال إلى بريد إلكتروني</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">إسمك</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">بريدك الإلكتروني</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" title="This field is for validation and should not be changed" />
+			
+			<div
+				class="g-recaptcha"
+				data-sitekey="6LcmyE0UAAAAALID28yVNg7pFCodGaArJzHitez_"
+				data-theme="light"
+				data-type="image"
+				data-tabindex="0"></div>
+			<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=ar" async></script>
+			
+			<img style="float: right; display: none" class="loading" src="https://s2.wp.com/wp-content/mu-plugins/post-flair/sharing/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="إرسال بريد إلكتروني" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel" role="button">إلغاء</a>
+
+			<div class="errors errors-1" style="display: none;">
+				لم يتم إرسال الموضوع - تحقق من عناوين بريدك الإلكترونية!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				فشل التأكد من البريد الإلكتروني، من فضلك أعد المحاولة			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				عفواً، لا يستطيع موقعك مشاركة المواضيع من خلال البريد الإلكتروني.			</div>
+		</form>
+	</div>
+<link rel='stylesheet' id='jetpack-carousel-rtl-css'  href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-rtl.css?m=1524699534h&#038;ver=20120629' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-2-3' href='https://s1.wp.com/wp-content/mu-plugins/responsive-videos/responsive-videos.css?m=1445367997h&cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var comment_like_text = {"loading":"\u062a\u062d\u0645\u064a\u0644..."};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var actionbardata = {"siteID":"33627109","siteName":"\u0645\u0648\u0642\u0639 \u0641\u0635\u0644\u062a \u0644\u0640 \u0627\u0644\u0627\u0639\u062c\u0627\u0632 \u0627\u0644\u0639\u0644\u0645\u064a \u0641\u064a \u0627\u0644\u0642\u0631\u0622\u0646 \u0627\u0644\u0643\u0631\u064a\u0645 \u0648\u0628\u0627\u0644\u062d\u0642\u0627\u0626\u0642 \u0627\u0644\u0639\u0644\u0645\u064a\u0629\u060c \u0627\u0644\u0627\u0639\u062c\u0627\u0632 \u0627\u0644\u0639\u0644\u0645\u064a \u0641\u064a \u0627\u0644\u0642\u0631\u0622\u0646\u060c \u0645\u0639\u062c\u0632\u0627\u062a \u0627\u0644\u0642\u0631\u0622\u0646 \u0627\u0644\u0639\u0644\u0645\u064a\u0629\u060c \u0627\u0644\u0627\u0639\u062c\u0627\u0632 \u0627\u0644\u0639\u0644\u0645\u064a \u0641\u064a \u0627\u0644\u0642\u0631\u0627\u0646 \u0627\u0644\u0643\u0631\u064a\u0645","siteURL":"https:\/\/fussilat.org","icon":"<img alt='' src='https:\/\/secure.gravatar.com\/blavatar\/e3f706f35b04db201eff030354e96c8e?s=50&d=https%3A%2F%2Fs2.wp.com%2Fi%2Flogo%2Fwpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/dyad","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Ffussilat.org%2F2012%2F04%2F27%2F%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5%2F&signup_flow=account&domain=fussilat.org","themeURL":"","xhrURL":"https:\/\/fussilat.org\/wp-admin\/admin-ajax.php","nonce":"adfa120fc4","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"22514b3d41\" \/>","referer":"https:\/\/fussilat.org\/2012\/04\/27\/%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5\/","canFollow":"1","feedID":"2137322","statusMessage":"","customizeLink":"https:\/\/fussilatdotorg.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Ffussilatdotorg.wordpress.com%2F2012%2F04%2F27%2F%25D9%2588%25D9%258E%25D8%25B3%25D9%258E%25D8%25AE%25D9%258E%25D9%2591%25D8%25B1%25D9%258E-%25D9%25B1%25D9%2584%25D8%25B4%25D9%258E%25D9%2591%25D9%2585%25D9%2592%25D8%25B3%25D9%258E-%25D9%2588%25D9%258E%25D9%25B1%25D9%2584%25D9%2592%25D9%2582%25D9%258E%25D9%2585%25D9%258E%25D8%25B1%25D9%258E-%25D8%25A7%25D9%2584%25D8%25A5%2F","postID":"213","shortlink":"https:\/\/wp.me\/p2h5WJ-3r","canEditPost":"","editLink":"https:\/\/wordpress.com\/post\/fussilat.org\/213","statsLink":"https:\/\/wordpress.com\/stats\/post\/213\/fussilat.org","i18n":{"view":"\u0645\u0634\u0627\u0647\u062f\u0629 \u0627\u0644\u0645\u0648\u0642\u0639","follow":"\u062a\u0627\u0628\u0639","following":"\u0645\u062a\u0627\u0628\u0639 ","edit":"\u062a\u062d\u0631\u064a\u0631","login":"\u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u062f\u062e\u0648\u0644","signup":"\u0633\u062c\u0651\u0644 \u0628\u0627\u0644\u0645\u0648\u0642\u0639!","customize":"\u062a\u062e\u0635\u064a\u0635","report":"\u0625\u0628\u0644\u0627\u063a \u0639\u0646 \u0647\u0630\u0627 \u0627\u0644\u0645\u062d\u062a\u0648\u0649","themeInfo":"\u0627\u0644\u062d\u0635\u0648\u0644 \u0639\u0644\u0649 \u0642\u0627\u0644\u0628: Dyad","shortlink":"\u0646\u0633\u062e \u0627\u0644\u0631\u0627\u0628\u0637 \u0627\u0644\u0642\u0635\u064a\u0631","copied":"\u062a\u0645 \u0627\u0644\u0646\u0633\u062e","followedText":"\u0633\u062a\u0638\u0647\u0631 \u0645\u0642\u0627\u0644\u0627\u062a \u062c\u062f\u064a\u062f\u0629 \u0645\u0646 \u0647\u0630\u0627 \u0627\u0644\u0645\u0648\u0642\u0639 \u0641\u064a <a href=\"https:\/\/wordpress.com\/\">\u0627\u0644\u0642\u0627\u0631\u0626<\/a> \u0627\u0644\u062e\u0627\u0635 \u0628\u0643","foldBar":"\u0637\u064a \u0647\u0630\u0627 \u0627\u0644\u0634\u0631\u064a\u0637","unfoldBar":"\u062a\u0648\u0633\u064a\u0639 \u0647\u0630\u0627 \u0627\u0644\u0634\u0631\u064a\u0637","editSubs":"\u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643\u0627\u062a","viewReader":"\u0645\u0634\u0627\u0647\u062f\u0629 \u0627\u0644\u0645\u0648\u0642\u0639 \u0641\u064a \u0648\u0636\u0639 \"\u0627\u0644\u0642\u0627\u0631\u0626\"","viewReadPost":"View post in Reader","subscribe":"\u0633\u062c\u0644 \u062f\u062e\u0648\u0644\u064a","enterEmail":"\u0623\u0643\u062a\u0628 \u0628\u0631\u064a\u062f\u0643 \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a","followers":"\u0627\u0646\u0636\u0645 1\u066c243 \u0645\u062a\u0627\u0628\u0639\u0648\u0646 \u0622\u062e\u0631\u064a\u0646","alreadyUser":"\u0623\u0644\u062f\u064a\u0643 \u062d\u0633\u0627\u0628 \u0648\u0631\u062f\u0628\u0631\u0633.\u0643\u0648\u0645 \u0628\u0627\u0644\u0641\u0639\u0644\u061f <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Ffussilat.org%2F2012%2F04%2F27%2F%D9%88%D9%8E%D8%B3%D9%8E%D8%AE%D9%8E%D9%91%D8%B1%D9%8E-%D9%B1%D9%84%D8%B4%D9%8E%D9%91%D9%85%D9%92%D8%B3%D9%8E-%D9%88%D9%8E%D9%B1%D9%84%D9%92%D9%82%D9%8E%D9%85%D9%8E%D8%B1%D9%8E-%D8%A7%D9%84%D8%A5%2F&signup_flow=account&domain=fussilat.org\">\u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u062f\u062e\u0648\u0644 \u0627\u0644\u0622\u0646.<\/a>","stats":"\u0625\u062d\u0635\u0627\u0626\u064a\u0627\u062a"}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"ar","ajaxurl":"https:\/\/fussilat.org\/wp-admin\/admin-ajax.php","nonce":"3b4a2fdf92","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"\u062a\u0639\u0644\u064a\u0642","post_comment":"\u0623\u0636\u0641 \u062a\u0639\u0644\u064a\u0642\u0627\u064b","write_comment":"\u0627\u0643\u062a\u0628 \u062a\u0639\u0644\u064a\u0642\u0627\u064b...","loading_comments":"\u062a\u062d\u0645\u064a\u0644 \u0627\u0644\u062a\u0639\u0644\u064a\u0642\u0627\u062a...","download_original":"\u0639\u0631\u0636 \u0628\u0627\u0644\u062d\u062c\u0645 \u0627\u0644\u0643\u0627\u0645\u0644 <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"\u064a\u0631\u062c\u0649 \u0627\u0644\u062a\u0623\u0643\u062f \u0645\u0646 \u0643\u062a\u0627\u0628\u0629 \u0628\u0639\u0636 \u0627\u0644\u0646\u0635\u0648\u0635 \u062f\u0627\u062e\u0644 \u062a\u0639\u0644\u064a\u0642\u0643.","no_comment_email":"\u0631\u062c\u0627\u0621 \u0642\u0645 \u0628\u062a\u0641\u0639\u064a\u0644 \u0628\u0631\u064a\u062f\u0643 \u0627\u0644\u0627\u0644\u0643\u062a\u0631\u0648\u0646\u064a \u0644\u0648\u0636\u0639 \u062a\u0639\u0644\u064a\u0642\u0643.","no_comment_author":"\u0631\u062c\u0627\u0621 \u0642\u0645 \u0628\u062a\u0641\u0639\u064a\u0644 \u0623\u0633\u0645\u0643 \u0644\u0648\u0636\u0639 \u062a\u0639\u0644\u064a\u0642\u0643.","comment_post_error":"\u0639\u0641\u0648\u0627\u064b\u060c \u0644\u0643\u0646 \u0647\u0646\u0627\u0643 \u0645\u0634\u0643\u0644\u0629 \u0628\u0646\u0634\u0631 \u062a\u0639\u0644\u064a\u0642\u0643. \u064a\u0631\u062c\u0649 \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649 \u0644\u0627\u062d\u0642\u0627\u064b.","comment_approved":"\u062a\u0645\u062a \u0627\u0644\u0645\u0648\u0627\u0641\u0642\u0629 \u0639\u0644\u0649 \u062a\u0639\u0644\u064a\u0642\u0643.","comment_unapproved":"\u062a\u0639\u0644\u064a\u0642\u0643 \u0628\u062d\u0627\u062c\u0629 \u0644\u0645\u0648\u0627\u0641\u0642\u0629 \u0627\u0644\u0645\u062f\u064a\u0631.","camera":"\u0627\u0644\u0643\u0627\u0645\u064a\u0631\u0627","aperture":"\u0641\u062a\u062d\u0629 \u0627\u0644\u0639\u062f\u0633\u0629","shutter_speed":"\u0633\u0631\u0639\u0629 \u0627\u0644\u063a\u0627\u0644\u0642","focal_length":"\u0627\u0644\u0628\u0639\u062f \u0627\u0644\u0628\u0624\u0631\u064a","copyright":"\u062d\u0642\u0648\u0642 \u0627\u0644\u0646\u0633\u062e","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/fussilatdotorg.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Ffussilat.org%2F2012%2F04%2F27%2F%25d9%2588%25d9%258e%25d8%25b3%25d9%258e%25d8%25ae%25d9%258e%25d9%2591%25d8%25b1%25d9%258e-%25d9%25b1%25d9%2584%25d8%25b4%25d9%258e%25d9%2591%25d9%2585%25d9%2592%25d8%25b3%25d9%258e-%25d9%2588%25d9%258e%25d9%25b1%25d9%2584%25d9%2592%25d9%2582%25d9%258e%25d9%2585%25d9%258e%25d8%25b1%25d9%258e-%25d8%25a7%25d9%2584%25d8%25a5%2F","blog_id":"33627109","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">\u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a (\u0645\u0637\u0644\u0648\u0628)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">\u0627\u0644\u0627\u0633\u0645 (\u0645\u0637\u0644\u0648\u0628)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">\u0627\u0644\u0645\u0648\u0642\u0639<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"\u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u062a\u062f\u0648\u064a\u0646","reblogged":"\u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u062a\u062f\u0648\u064a\u0646","reblog_add_thoughts":"\u0623\u0636\u0641 \u0623\u0641\u0643\u0627\u0631\u0643 \u0647\u0646\u0627... (\u0627\u062e\u062a\u064a\u0627\u0631\u064a)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=33627109&v=wpcom&tz=3&user_id=0&subd=fussilatdotorg","is_public":"1","reblog_enabled":""};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJyVkutugzAMhV9oIbtVWn9Me5TJEEMNuc1OaHn7BXVUbEKo+5Xo5Hz2iRN9jqoJPqFPuhdtcKQG46Xq5UGvjlxW0eaOvGhLA4r+ypjxBN5Y5B1zE5wrkrpC/UzXWs4U8T/QL2EByTc2m6uBHHQoNoBBUznyf4unE7rijLnWZgIzIx5G6iBRuMcsA8XS3Q+qDU0W1dJlK8aSkzHaaZ1jbXIgwfN0Z8zOhhrszrDAlEKqBp4LJ+SyU2FEZpr73bR/VkgMzSB7UDOPboZuu63LStweQl/+D08/S7V2bf0H4JAFre4xxZJLLcIOwygxeKER1VgmETaUrRdY33AgcZjUS/WoP0t23QZ2O/4YJKnWArGWEzD5blkL9OHenw6H1+Px+HZ47r8BeVFLKA=='></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-linkedin', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>		<iframe src='https://widgets.wp.com/likes/master.html?ver=20190321#ver=20190321&amp;lang=ar' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> مدونون معجبون بهذه:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="//stats.wp.com/w.js?60" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'33627109','blog_tz':'3','user_lang':'ar','blog_lang':'ar','user_id':'0'}]);
+_stq.push(['view', {'blog':'33627109','v':'wpcom','tz':'3','user_id':'0','post':'213','subd':'fussilatdotorg'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1TaVhzUzFMbjdWNHpwZGhTayxPSUFCMGRVYVNrSFguN3FwSmQ5RGtNX3VQcj1yVzhiflM1THQtLGFdQ2toOXYlaVQwL1o3UDlQdnFdNmZtXTFEVGpBRzg2VXlvYnlON2gvLHl0YWJPZUIlLix4ZXBmQW5QZUpXdn5XUWxufjhMa2FzM1tOeUhsWXZfTTBqQ3dGYTVfeDNnbnB2ci93Tm9pUjFJVHAtWHwvcWhmbS1IMndYaCZoLDc0bkE0WHJ8VGJWPVNCb3hMaEttfmhzbm5CdEhCK0ZHVjl4UHJWbXw1ZC85JTFXZUU1STNdPXdUQUxvLys2W1JSQyxPdUhiX1BHQ3UwVkJkQ1FTaz1OdTVpW1B6S0NMTFpGUCZiOUErU1ImT1hqLmUyMXkzTnxNWA=='}]);
+_stq.push([ 'clickTrackerInit', '33627109', '213' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>

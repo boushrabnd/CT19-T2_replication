@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+ <head>
+  <link href="//www.supermama.me" rel="dns-prefetch"/>
+  <link href="//live2.supermama.me" rel="dns-prefetch"/>
+  <link href="//itunes.apple.com" rel="dns-prefetch"/>
+  <link href="//play.google.com" rel="dns-prefetch"/>
+  <link href="//www.googletagmanager.com" rel="dns-prefetch"/>
+  <link href="//t.effectivemeasure.net','_em" rel="dns-prefetch"/>
+  <link href="//collector.effectivemeasure.net" rel="dns-prefetch"/>
+  <link href="//z.moatads.com" rel="dns-prefetch"/>
+  <link href="//cse.google.com" rel="dns-prefetch"/>
+  <link href="//www.facebook.com" rel="dns-prefetch"/>
+  <link href="//www.youtube.com" rel="dns-prefetch"/>
+  <link href="//plus.google.com" rel="dns-prefetch"/>
+  <link href="//www.instagram.com" rel="dns-prefetch"/>
+  <link href="//twitter.com" rel="dns-prefetch"/>
+  <link href="//www.pinterest.com" rel="dns-prefetch"/>
+  <link href="//super-mama.tumblr.com" rel="dns-prefetch"/>
+  <link href="//www.dailymotion.com" rel="dns-prefetch"/>
+  <link href="//schema.org" rel="dns-prefetch"/>
+  <link href="//www.vezeeta.com" rel="dns-prefetch"/>
+  <link href="//d1ohqf92fg2anw.cloudfront.net" rel="dns-prefetch"/>
+  <link href="//bit.ly" rel="dns-prefetch"/>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);
+  </script>
+  <title>
+   كيف تحفزين الأيض أو عملية الحرق فى الجسم | سوبر ماما
+  </title>
+  <meta content="المياه، الأكل الحامي و السناكس و بعض النصائح الكثيرة التي ذكرتها في المقال من أفضل العوامل التي تحفز عملية الحرق في الجسم لأن عملية الحرق تختلف من شخص لأخر" name="description"/>
+  <link href="https://www.supermama.me/posts/%D9%83%D9%8A%D9%81-%D8%AA%D8%AD%D9%81%D8%B2%D9%8A%D9%86-%D8%A7%D9%84%D8%A3%D9%8A%D8%B6-%D8%A3%D9%88-%D8%B9%D9%85%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%AD%D8%B1%D9%82-%D9%81%D9%89-%D8%A7%D9%84%D8%AC%D8%B3%D9%85" rel="canonical"/>
+  <link as="font" href="https://www.supermama.me/fonts/3dcd8af4-4491-43cc-9274-d92109c2c6f2.woff2?cbf717bedf70d315170932ba95ee121d" rel="preload"/>
+  <link as="font" href="https://www.supermama.me/fonts/046d3e46-ad9c-4544-a895-6cfdada4655b.woff2?4061f84b4f1f5ec49e8518b51dfdf763" rel="preload"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="#e55cad" name="theme-color"/>
+  <meta content="تطبيق لمتابعة حملك أسبوع بأسبوع" name="smartbanner:title"/>
+  <meta content="من سوبرماما" name="smartbanner:author"/>
+  <meta content=" " name="smartbanner:price"/>
+  <meta content="https://live2.supermama.me/sites/all/themes/supermama_2015/images/9monthsapp.jpg" name="smartbanner:icon-apple"/>
+  <meta content="https://live2.supermama.me/sites/all/themes/supermama_2015/images/9monthsapp.jpg" name="smartbanner:icon-google"/>
+  <meta content="حمليه الآن" name="smartbanner:button"/>
+  <meta content=" " name="smartbanner:price-suffix-apple"/>
+  <meta content=" " name="smartbanner:price-suffix-google"/>
+  <meta content="https://itunes.apple.com/us/app/%D8%AA%D8%B3%D8%B9%D8%A9-%D8%A3%D8%B4%D9%87%D8%B1-%D9%85%D8%AA%D8%A7%D8%A8%D8%B9%D8%A9-%D8%A7%D9%84%D8%AD%D9%85%D9%84-%D8%A3%D8%B3%D8%A8%D9%88%D8%B9%D9%8A%D8%A7/id1195425709?ls=1&amp;mt=8" name="smartbanner:button-url-apple"/>
+  <meta content="https://play.google.com/store/apps/details?id=com.supermama.supermama" name="smartbanner:button-url-google"/>
+  <meta content="android,ios" name="smartbanner:enabled-platforms"/>
+  <meta content="347982675614455" property="fb:app_id"/>
+  <meta content="207475445954193" property="fb:pages"/>
+  <meta content="article" property="og:type"/>
+  <meta content="https://www.supermama.me/posts/%D9%83%D9%8A%D9%81-%D8%AA%D8%AD%D9%81%D8%B2%D9%8A%D9%86-%D8%A7%D9%84%D8%A3%D9%8A%D8%B6-%D8%A3%D9%88-%D8%B9%D9%85%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%AD%D8%B1%D9%82-%D9%81%D9%89-%D8%A7%D9%84%D8%AC%D8%B3%D9%85" property="og:url"/>
+  <meta content="كيف تحفزين الأيض أو عملية الحرق فى الجسم" property="og:title"/>
+  <meta content="https://www.supermama.me/system/App/Entities/Article/images/000/036/024/watermarked/%258A%25D9%2581-%25D8%25AA%25D8%25AD%25D9%2581%25D8%25B2%25D9%258A%25D9%2586-%25D8%25A7%25D9%2584%25D8%25A3%25D9%258A%25D8%25B6-%25D8%25A3%25D9%2588-%25D8%25B9%25D9%2585%25D9%2584%25D9%258A%25D8%25A9-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D9%2582-%25D9%2581%25D9%2589-%25D8%25A7%25D9%2584%25D8%25AC%25D8%25B3%25D9%2585.jpg" property="og:image"/>
+  <meta content="كيف تحفزين الأيض أو عملية الحرق فى الجسم" property="og:image:alt"/>
+  <meta content="المياه، الأكل الحامي و السناكس و بعض النصائح الكثيرة التي ذكرتها في المقال من أفضل العوامل التي تحفز عملية الحرق في الجسم لأن عملية الحرق تختلف من شخص لأخر" property="og:description"/>
+  <link href="https://www.supermama.me/favicon.ico" rel="shortcut icon"/>
+  <link href="https://www.supermama.me/web/styles/vendor.css" rel="stylesheet"/>
+  <link href="https://www.supermama.me/web/styles/main.css?ver=4.5" rel="stylesheet"/>
+  <script type="text/javascript">
+   dataLayer = [{ 'category': 'صحة وريجيم', 'subCategory': 'ريجيم' }];
+  </script>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-CVC6');
+  </script>
+  <script>
+   var screenType= function() { if(typeof matchMedia == 'function') { var mediaMobile = window.matchMedia('(min-width: 320px and max-width: 667px)'); var mediaTablet = window.matchMedia('(min-width: 668px and max-width: 1024px)'); var mediaDesktop = window.matchMedia('(min-width: 1024px)'); if(mediaMobile.matches) { return 'mobile'; } if(mediaTablet.matches) { return 'tablet'; } if(mediaDesktop.matches) { return 'desktop'; } } return 'desktop'; }
+  </script>
+  <script>
+   var signal = { "User": { "UserId": '' === '' ? null : '', "isLoggedIn": 'false' === '' ? null : 'false', "EmailHash": '' === '' ? null : '', }, "Content": { "ContentCategoryLevel1": 'صحة وريجيم' === '' ? null : 'صحة وريجيم', "ContentCategoryLevel2": 'ريجيم' === '' ? null : 'ريجيم', "Keywords": 'حرق السعرات' === '' ? null : 'حرق السعرات'.split(','), "ArticleId": '36024' === '' ? null : '36024', "ArticleTitle": 'كيف تحفزين الأيض أو عملية الحرق فى الجسم' === '' ? null : 'كيف تحفزين الأيض أو عملية الحرق فى الجسم', "ArticleAuthorName": 'ياسمين عطية' === '' ? null : 'ياسمين عطية' , "ArticlePublishDate": '12 May 2013 - 08:10' === '' ? null : '12 May 2013 - 08:10', "ContentType": 'article' === '' ? null : 'article', "IsVideo": '' === '' ? null : '', "VideoTitle": '' === '' ? null : '', "VideoLength": '' === '' ? null : '', "SearchTerm": '' === '' ? null : '' }, "Page": { "ChannelLevel1": 'Health' === '' ? null : 'Health', "ChannelLevel2": 'Diet' === '' ? null : 'Diet' }, "Device": { "Device": screenType() } }
+  </script>
+  <script type="text/javascript">
+   (function(t,r,a,c,k,n,o,w){t['em_ns']=k;w=1*new Date();t[k]=t[k]||function(){ (t[k].q=t[k].q||[]).push(arguments)},t[k].t=w;n=r.createElement(a);n.async=1; n.src=c+'/tag'+(t.addEventListener&&'.'||'_.')+'js?'+parseInt(w/1e9, 10); o=r.getElementsByTagName(a)[0];o.parentNode.insertBefore(n,o) })(window,document,'script','https://t.effectivemeasure.net','_em');
+  </script>
+  <noscript>
+   <img alt="" class="page_speed_1049624110" src="https://collector.effectivemeasure.net/noscript"/>
+  </noscript>
+  <script async="" src="https://z.moatads.com/choueirigroupheaderdfp445340272806/moatheader.js">
+  </script>
+  <style>
+   .page_speed_1049624110{ position:absolute; left:-5px; } .page_speed_766769757{ display:none } .page_speed_2036957083{ display:none;visibility:hidden } .page_speed_1884575973{ background:#fff; margin: auto; max-width:320px; direction:rtl; display: table; } .page_speed_1634370421{ object-fit:contain; width: 100%; }
+  </style>
+ </head>
+ <body>
+  <script>
+   (function() { var cx = '003495630256808307750:bwsjpbxy33e'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();
+  </script>
+  <noscript>
+   <img class="page_speed_766769757" height="1" src="https://www.facebook.com/tr?id=582181898642595&amp;ev=PageView&amp;noscript=1" width="1"/>
+  </noscript>
+  <noscript>
+   <iframe class="page_speed_2036957083" height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-CVC6" width="0">
+   </iframe>
+  </noscript>
+  <script type="text/javascript">
+   (function () { var tagjs = document.createElement("script"); var s = document.getElementsByTagName("script")[0]; tagjs.async = true; tagjs.src = "//s.btstatic.com/tag.js#site=jZrSrka"; s.parentNode.insertBefore(tagjs, s); }());
+  </script>
+  <noscript>
+   <iframe frameborder="0" height="1" marginheight="0" marginwidth="0" scrolling="no" src="//s.thebrighttag.com/iframe?c=jZrSrka" width="1">
+   </iframe>
+  </noscript>
+  <div id="fb-root">
+  </div>
+  <header>
+   <div class="main-header">
+    <div class="main-header-wrapper">
+     <div class="container clearfix">
+      <div class="header-actions header-actions--primary pull-right">
+       <div class="nav-container">
+        <button class="burger-menu">
+         <svg>
+          <use xlink:href="/web/images/svg-defs.svg#shape-burger-menu">
+          </use>
+         </svg>
+        </button>
+        <div class="menu-wrapper">
+         <div class="menu-container">
+          <div class="container menu__actions">
+           <a class="button button--green" href="https://www.supermama.me/mam/login">
+            تسجيل الدخول
+           </a>
+           <a class="button button--transparent" href="https://www.supermama.me/mam/register">
+            حساب جديد
+           </a>
+          </div>
+          <nav class="main-nav">
+           <ul class="clearfix">
+            <li class="sub-menu-title">
+             <a href="#!">
+              أدوات
+              <svg class="go-to-arrows">
+               <use xlink:href="/web/images/svg-defs.svg#shape-menu-go-to-arrows">
+               </use>
+              </svg>
+             </a>
+             <div class="sub-menu-container">
+              <p class="menu-back">
+               <a href="#!">
+                &lt; العودة إلى القائمة الرئيسية
+               </a>
+              </p>
+              <a class="sub-menu-header">
+               أدوات
+              </a>
+              <ul class="sub-menu">
+               <li>
+                <a href="https://www.supermama.me/%D9%87%D8%AF%D9%8A%D8%A9-%D8%B9%D9%8A%D8%AF-%D8%A7%D9%84%D8%A3%D9%85">
+                 <span>
+                  هدية عيد الأم
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/ask-supermama/ask">
+                 <span>
+                  اسألي سوبرماما
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D8%AF%D8%A7%D8%A9-%D8%AD%D8%B3%D8%A7%D8%A8-%D8%A7%D9%84%D8%AD%D9%85%D9%84-%D9%88-%D9%88%D9%82%D8%AA-%D8%A7%D9%84%D8%AA%D8%A8%D9%88%D9%8A%D8%B6-%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%AD%D9%85%D9%84">
+                 <span>
+                  حاسبة الحمل
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D8%B3%D9%85%D8%A7%D8%A1-%D8%A7%D9%84%D9%85%D9%88%D8%A7%D9%84%D9%8A%D8%AF-%D8%A3%D8%B3%D9%85%D8%A7%D8%A1-%D8%A3%D9%88%D9%84%D8%A7%D8%AF-%D9%88%D8%A8%D9%86%D8%A7%D8%AA-%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9-%D9%88%D9%85%D8%B9%D8%A7%D9%86%D9%8A%D9%87%D8%A7">
+                 <span>
+                  أسماء المواليد
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%AD%D8%B3%D8%A7%D8%A8-%D9%85%D9%88%D8%B9%D8%AF-%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9">
+                 <span>
+                  حاسبة موعد الولادة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/stages/%D8%AC%D8%AF%D9%88%D9%84-%D9%88-%D9%85%D8%B1%D8%A7%D8%AD%D9%84-%D9%86%D9%85%D9%88-%D8%A7%D9%84%D8%B7%D9%81%D9%84-%D9%88-%D8%AA%D8%B7%D9%88%D8%B1-%D8%A7%D9%84%D8%AD%D8%B1%D9%83%D9%8A-%D9%88-%D8%A7%D9%84%D8%A7%D8%AF%D8%B1%D8%A7%D9%83%D9%8A">
+                 <span>
+                  مراحل نمو الطفل
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/stages/%D9%85%D8%B1%D8%A7%D8%AD%D9%84-%D8%A7%D9%84%D8%AD%D9%85%D9%84-%D9%88-%D9%85%D8%B1%D8%A7%D8%AD%D9%84-%D9%86%D9%85%D9%88-%D8%A7%D9%84%D8%AC%D9%86%D9%8A%D9%86-%D8%A8%D8%A7%D9%84%D8%A5%D8%B3%D8%A8%D9%88%D8%B9">
+                 <span>
+                  مراحل الحمل
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/whenTools/%D9%85%D8%AA%D9%89-%D9%8A%D8%A8%D8%AF%D8%A3-%D8%B7%D9%81%D9%84%D9%8A">
+                 <span>
+                  متى يبدأ طفلي؟
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/recipes/finder">
+                 <span>
+                  هناكل إيه النهاردة؟
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%AF%D9%84%D9%8A%D9%84-%D8%B3%D9%88%D8%A8%D8%B1%D9%85%D8%A7%D9%85%D8%A7">
+                 <span>
+                  مدارس وحضانات
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/downloadItems">
+                 <span>
+                  للتحميل مجاناً
+                 </span>
+                </a>
+               </li>
+              </ul>
+             </div>
+            </li>
+            <li class="sub-menu-title">
+             <a href="#!">
+              الحمل
+              <svg class="go-to-arrows">
+               <use xlink:href="/web/images/svg-defs.svg#shape-menu-go-to-arrows">
+               </use>
+              </svg>
+             </a>
+             <div class="sub-menu-container">
+              <p class="menu-back">
+               <a href="#!">
+                &lt; العودة إلى القائمة الرئيسية
+               </a>
+              </p>
+              <a class="sub-menu-header" href="https://www.supermama.me/%D8%A7%D9%84%D8%AD%D9%85%D9%84">
+               الحمل
+              </a>
+              <ul class="sub-menu">
+               <li>
+                <a href="https://www.supermama.me/%D8%A7%D9%84%D8%AD%D9%85%D9%84">
+                 <span>
+                  كل موضوعات الحمل
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%AA%D8%BA%D8%B0%D9%8A%D8%A9-%D9%88%D8%B5%D8%AD%D8%A9-%D8%A7%D9%84%D8%AD%D8%A7%D9%85%D9%84">
+                 <span>
+                  تغذية وصحة الحامل
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9">
+                 <span>
+                  الولادة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%A7%D9%84%D8%AA%D8%AE%D8%B7%D9%8A%D8%B7-%D9%84%D9%84%D8%AD%D9%85%D9%84">
+                 <span>
+                  التخطيط للحمل
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%A3%D9%86%D8%B4%D8%B7%D8%A9-%D8%A7%D9%84%D8%AD%D9%85%D9%84%20">
+                 <span>
+                  أنشطة الحمل
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D9%86%D9%85%D9%88-%D8%A7%D9%84%D8%AC%D9%86%D9%8A%D9%86">
+                 <span>
+                  نمو الجنين
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A7%D9%84%D9%85%D9%85%D9%86%D9%88%D8%B9-%D9%88%D8%A7%D9%84%D9%85%D8%B3%D9%85%D9%88%D8%AD-%D9%81%D9%8A-%D8%A7%D9%84%D8%AD%D9%85%D9%84">
+                 <span>
+                  الممنوع والمسموح في الحمل
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D9%85%D8%B3%D8%AA%D9%84%D8%B2%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D9%88%D9%84%D9%88%D8%AF%20%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF">
+                 <span>
+                  مستلزمات المولود الجديد
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D9%81%D8%AA%D8%B1%D8%A9%20%D8%A7%D9%84%D9%86%D9%81%D8%A7%D8%B3">
+                 <span>
+                  فترة النفاس
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D8%B3%D9%85%D8%A7%D8%A1-%D8%A7%D9%84%D9%85%D9%88%D8%A7%D9%84%D9%8A%D8%AF-%D8%A3%D8%B3%D9%85%D8%A7%D8%A1-%D8%A3%D9%88%D9%84%D8%A7%D8%AF-%D9%88%D8%A8%D9%86%D8%A7%D8%AA-%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9-%D9%88%D9%85%D8%B9%D8%A7%D9%86%D9%8A%D9%87%D8%A7">
+                 <span>
+                  أسماء المواليد
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/stages/%D9%85%D8%B1%D8%A7%D8%AD%D9%84-%D8%A7%D9%84%D8%AD%D9%85%D9%84-%D9%88-%D9%85%D8%B1%D8%A7%D8%AD%D9%84-%D9%86%D9%85%D9%88-%D8%A7%D9%84%D8%AC%D9%86%D9%8A%D9%86-%D8%A8%D8%A7%D9%84%D8%A5%D8%B3%D8%A8%D9%88%D8%B9">
+                 <span>
+                  مراحل تطور الحمل والجنين أسبوعيًا
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D8%AF%D8%A7%D8%A9-%D8%AD%D8%B3%D8%A7%D8%A8-%D8%A7%D9%84%D8%AD%D9%85%D9%84-%D9%88-%D9%88%D9%82%D8%AA-%D8%A7%D9%84%D8%AA%D8%A8%D9%88%D9%8A%D8%B6-%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%AD%D9%85%D9%84">
+                 <span>
+                  حاسبة الحمل وقت التبويض
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%AD%D8%B3%D8%A7%D8%A8-%D9%85%D9%88%D8%B9%D8%AF-%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9">
+                 <span>
+                  حاسبة موعد الولادة
+                 </span>
+                </a>
+               </li>
+              </ul>
+             </div>
+            </li>
+            <li class="sub-menu-title">
+             <a href="#!">
+              رضع
+              <svg class="go-to-arrows">
+               <use xlink:href="/web/images/svg-defs.svg#shape-menu-go-to-arrows">
+               </use>
+              </svg>
+             </a>
+             <div class="sub-menu-container">
+              <p class="menu-back">
+               <a href="#!">
+                &lt; العودة إلى القائمة الرئيسية
+               </a>
+              </p>
+              <a class="sub-menu-header" href="https://www.supermama.me/%D8%B1%D8%B6%D8%B9">
+               رضع
+              </a>
+              <ul class="sub-menu">
+               <li>
+                <a href="https://www.supermama.me/%D8%B1%D8%B6%D8%B9">
+                 <span>
+                  كل موضوعات الرضع
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%AA%D8%BA%D8%B0%D9%8A%D8%A9-%D9%88%D8%B5%D8%AD%D8%A9-%D8%A7%D9%84%D8%B1%D8%B6%D8%B9">
+                 <span>
+                  تغذية وصحة الرضع
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%B1%D8%B9%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%B1%D8%B6%D8%B9">
+                 <span>
+                  رعاية الرضع
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D9%84%D9%84%D8%B1%D8%B6%D8%B9">
+                 <span>
+                  منتاجات للرضع
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%A7%D9%84%D8%B1%D8%B6%D8%A7%D8%B9%D8%A9">
+                 <span>
+                  الرضاعة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%A3%D9%85%D8%B1%D8%A7%D8%B6-%D8%A7%D9%84%D8%B1%D8%B6%D8%B9">
+                 <span>
+                  أمراض الرضع
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%AD%D8%AF%D9%8A%D8%AB%D9%8A-%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9">
+                 <span>
+                  حديثي الولادة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%A3%D8%B7%D8%B9%D9%85%D8%A9_%D9%84%D9%84%D8%B1%D8%B6%D8%B9">
+                 <span>
+                  أطعمة للرضع
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D9%86%D9%88%D9%85-%D8%A7%D9%84%D8%B1%D8%B6%D8%B9">
+                 <span>
+                  نوم الرضع
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/stages/%D8%AC%D8%AF%D9%88%D9%84-%D9%88-%D9%85%D8%B1%D8%A7%D8%AD%D9%84-%D9%86%D9%85%D9%88-%D8%A7%D9%84%D8%B7%D9%81%D9%84-%D9%88-%D8%AA%D8%B7%D9%88%D8%B1-%D8%A7%D9%84%D8%AD%D8%B1%D9%83%D9%8A-%D9%88-%D8%A7%D9%84%D8%A7%D8%AF%D8%B1%D8%A7%D9%83%D9%8A">
+                 <span>
+                  مراحل تطور الطفل
+                 </span>
+                </a>
+               </li>
+              </ul>
+             </div>
+            </li>
+            <li class="sub-menu-title">
+             <a href="#!">
+              صغار
+              <svg class="go-to-arrows">
+               <use xlink:href="/web/images/svg-defs.svg#shape-menu-go-to-arrows">
+               </use>
+              </svg>
+             </a>
+             <div class="sub-menu-container">
+              <p class="menu-back">
+               <a href="#!">
+                &lt; العودة إلى القائمة الرئيسية
+               </a>
+              </p>
+              <a class="sub-menu-header" href="https://www.supermama.me/%D8%B5%D8%BA%D8%A7%D8%B1">
+               صغار
+              </a>
+              <ul class="sub-menu">
+               <li>
+                <a href="https://www.supermama.me/%D8%B5%D8%BA%D8%A7%D8%B1">
+                 <span>
+                  كل موضوعات الصغار
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%AA%D8%BA%D8%B0%D9%8A%D8%A9-%D9%88%D8%B5%D8%AD%D8%A9-%D8%A7%D9%84%D8%B5%D8%BA%D8%A7%D8%B1">
+                 <span>
+                  تغذية وصحة الصغار
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%B1%D8%B9%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%B5%D8%BA%D8%A7%D8%B1">
+                 <span>
+                  رعاية الصغار
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D9%84%D9%84%D8%B5%D8%BA%D8%A7%D8%B1">
+                 <span>
+                  منتجات للصغار
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%AD%D9%85%D8%A7%D9%85">
+                 <span>
+                  التدريب على الحمام
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B5%D8%BA%D8%A7%D8%B1">
+                 <span>
+                  تربية الصغار
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%A7%D9%84%D8%AD%D8%B6%D8%A7%D9%86%D8%A9">
+                 <span>
+                  الحضانة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/whenTools/%D9%85%D8%AA%D9%89-%D9%8A%D8%A8%D8%AF%D8%A3-%D8%B7%D9%81%D9%84%D9%8A">
+                 <span>
+                  متى يبدأ طفلي؟
+                 </span>
+                </a>
+               </li>
+              </ul>
+             </div>
+            </li>
+            <li class="sub-menu-title">
+             <a href="#!">
+              أطفال
+              <svg class="go-to-arrows">
+               <use xlink:href="/web/images/svg-defs.svg#shape-menu-go-to-arrows">
+               </use>
+              </svg>
+             </a>
+             <div class="sub-menu-container">
+              <p class="menu-back">
+               <a href="#!">
+                &lt; العودة إلى القائمة الرئيسية
+               </a>
+              </p>
+              <a class="sub-menu-header" href="https://www.supermama.me/%D8%A3%D8%B7%D9%81%D8%A7%D9%84">
+               أطفال
+              </a>
+              <ul class="sub-menu">
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D8%B7%D9%81%D8%A7%D9%84">
+                 <span>
+                  كل موضوعات الأطفال
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%AA%D8%BA%D8%B0%D9%8A%D8%A9-%D9%88%D8%B5%D8%AD%D8%A9-%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84">
+                 <span>
+                  تغذية وصحة الأطفال
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/-%D8%A3%D8%B7%D9%81%D8%A7%D9%84%D8%B1%D8%B9%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84">
+                 <span>
+                  رعاية الأطفال
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D9%85%D8%B1%D8%A7%D9%87%D9%82%D9%88%D9%86">
+                 <span>
+                  مراهقون
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9">
+                 <span>
+                  مدرسة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84">
+                 <span>
+                  تربية الأطفال
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%A3%D9%86%D8%B4%D8%B7%D8%A9%20%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84">
+                 <span>
+                  أنشطة للأطفال
+                 </span>
+                </a>
+               </li>
+              </ul>
+             </div>
+            </li>
+            <li class="sub-menu-title">
+             <a href="#!">
+              صحة
+              <svg class="go-to-arrows">
+               <use xlink:href="/web/images/svg-defs.svg#shape-menu-go-to-arrows">
+               </use>
+              </svg>
+             </a>
+             <div class="sub-menu-container">
+              <p class="menu-back">
+               <a href="#!">
+                &lt; العودة إلى القائمة الرئيسية
+               </a>
+              </p>
+              <a class="sub-menu-header" href="https://www.supermama.me/%D8%B5%D8%AD%D8%A9-%D9%88%D8%B1%D9%8A%D8%AC%D9%8A%D9%85">
+               صحة
+              </a>
+              <ul class="sub-menu">
+               <li>
+                <a href="https://www.supermama.me/%D8%B5%D8%AD%D8%A9-%D9%88%D8%B1%D9%8A%D8%AC%D9%8A%D9%85">
+                 <span>
+                  كل موضوعات الصحة والريجيم
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%B5%D8%AD%D8%A9">
+                 <span>
+                  صحة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%B1%D9%8A%D8%AC%D9%8A%D9%85">
+                 <span>
+                  ريجيم
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%AA%D8%BA%D8%B0%D9%8A%D8%A9">
+                 <span>
+                  تغذية
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%AA%D9%85%D8%A7%D8%B1%D9%8A%D9%86">
+                 <span>
+                  تمارين
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D8%B4%D9%87%D8%B1%D9%8A%D8%A9">
+                 <span>
+                  الدورة الشهرية
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D9%85%D9%86%D8%B9-%D8%A7%D9%84%D8%AD%D9%85%D9%84">
+                 <span>
+                  منع الحمل
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%A3%D9%85%D8%B1%D8%A7%D8%B6_%D9%86%D8%B3%D8%A7%D8%A1">
+                 <span>
+                  أمراض نساء
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%B9%D9%84%D8%A7%D8%AC%D8%A7%D8%AA_%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9">
+                 <span>
+                  علاجات طبيعية
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%A7%D9%84%D8%B5%D8%AD%D8%A9-%D8%A7%D9%84%D8%AC%D9%86%D8%B3%D9%8A%D8%A9">
+                 <span>
+                  الصحة الجنسية
+                 </span>
+                </a>
+               </li>
+              </ul>
+             </div>
+            </li>
+            <li class="sub-menu-title">
+             <a href="#!">
+              بيت
+              <svg class="go-to-arrows">
+               <use xlink:href="/web/images/svg-defs.svg#shape-menu-go-to-arrows">
+               </use>
+              </svg>
+             </a>
+             <div class="sub-menu-container">
+              <p class="menu-back">
+               <a href="#!">
+                &lt; العودة إلى القائمة الرئيسية
+               </a>
+              </p>
+              <a class="sub-menu-header" href="https://www.supermama.me/%D8%A8%D9%8A%D8%AA">
+               بيت
+              </a>
+              <ul class="sub-menu">
+               <li>
+                <a href="https://www.supermama.me/%D8%A8%D9%8A%D8%AA">
+                 <span>
+                  كل موضوعات البيت
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%AA%D9%86%D8%B8%D9%8A%D9%81-%D9%88%D8%AA%D9%86%D8%B8%D9%8A%D9%85">
+                 <span>
+                  تنظيم وتنظيف
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%A3%D8%AC%D9%87%D8%B2%D8%A9-%D9%85%D9%86%D8%B2%D9%84%D9%8A%D8%A9">
+                 <span>
+                  أجهزة منزلية
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%AD%D9%81%D9%84%D8%A7%D8%AA">
+                 <span>
+                  حفلات
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%AF%D9%8A%D9%83%D9%88%D8%B1">
+                 <span>
+                  ديكور
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%A9">
+                 <span>
+                  ميزانية
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D9%85%D8%B4%D8%BA%D9%88%D9%84%D8%A7%D8%AA">
+                 <span>
+                  مشغولات
+                 </span>
+                </a>
+               </li>
+              </ul>
+             </div>
+            </li>
+            <li class="sub-menu-title">
+             <a href="#!">
+              جمال
+              <svg class="go-to-arrows">
+               <use xlink:href="/web/images/svg-defs.svg#shape-menu-go-to-arrows">
+               </use>
+              </svg>
+             </a>
+             <div class="sub-menu-container">
+              <p class="menu-back">
+               <a href="#!">
+                &lt; العودة إلى القائمة الرئيسية
+               </a>
+              </p>
+              <a class="sub-menu-header" href="https://www.supermama.me/%D8%AC%D9%85%D8%A7%D9%84-%D9%88%D9%85%D9%88%D8%B6%D8%A9">
+               جمال
+              </a>
+              <ul class="sub-menu">
+               <li>
+                <a href="https://www.supermama.me/%D8%AC%D9%85%D8%A7%D9%84-%D9%88%D9%85%D9%88%D8%B6%D8%A9">
+                 <span>
+                  كل موضوعات الجمال و الموضة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%A7%D9%84%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D8%A9">
+                 <span>
+                  العناية بالبشرة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%A7%D9%84%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%B4%D8%B9%D8%B1">
+                 <span>
+                  العناية بالشعر
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D9%85%D9%83%D9%8A%D8%A7%D8%AC">
+                 <span>
+                  مكياج
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D9%85%D9%88%D8%B6%D8%A9">
+                 <span>
+                  موضة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D9%88%D8%B5%D9%81%D8%A7%D8%AA%20%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9">
+                 <span>
+                  وصفات طبيعية
+                 </span>
+                </a>
+               </li>
+              </ul>
+             </div>
+            </li>
+            <li class="sub-menu-title">
+             <a href="#!">
+              مطبخ
+              <svg class="go-to-arrows">
+               <use xlink:href="/web/images/svg-defs.svg#shape-menu-go-to-arrows">
+               </use>
+              </svg>
+             </a>
+             <div class="sub-menu-container">
+              <p class="menu-back">
+               <a href="#!">
+                &lt; العودة إلى القائمة الرئيسية
+               </a>
+              </p>
+              <a class="sub-menu-header" href="https://www.supermama.me/%D8%A7%D9%84%D9%85%D8%B7%D8%A8%D8%AE">
+               مطبخ
+              </a>
+              <ul class="sub-menu">
+               <li>
+                <a href="https://www.supermama.me/%D8%A7%D9%84%D9%85%D8%B7%D8%A8%D8%AE">
+                 <span>
+                  كل موضوعات المطبخ
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D9%86%D8%B5%D8%A7%D8%A6%D8%AD-%D8%A7%D9%84%D8%B7%D8%A8%D8%AE">
+                 <span>
+                  نصائح طبخ
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%A3%D8%AC%D9%87%D8%B2%D8%A9-%D8%A7%D9%84%D9%85%D8%B7%D8%A8%D8%AE">
+                 <span>
+                  أجهزة المطبخ
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%AA%D9%86%D8%B8%D9%8A%D9%81-%D8%A7%D9%84%D9%85%D8%B7%D8%A8%D8%AE">
+                 <span>
+                  تنظيف المطبخ
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D9%85%D9%86%D9%8A%D9%88-%D8%A7%D9%84%D8%A3%D8%B3%D8%A8%D9%88%D8%B9">
+                 <span>
+                  منيو الأسبوع
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/7%20%D9%88%D8%B5%D9%81%D8%A7%D8%AA">
+                 <span>
+                  ٧ وصفات
+                 </span>
+                </a>
+               </li>
+              </ul>
+             </div>
+            </li>
+            <li class="sub-menu-title">
+             <a href="#!">
+              علاقات
+              <svg class="go-to-arrows">
+               <use xlink:href="/web/images/svg-defs.svg#shape-menu-go-to-arrows">
+               </use>
+              </svg>
+             </a>
+             <div class="sub-menu-container">
+              <p class="menu-back">
+               <a href="#!">
+                &lt; العودة إلى القائمة الرئيسية
+               </a>
+              </p>
+              <a class="sub-menu-header" href="https://www.supermama.me/%D8%B9%D9%84%D8%A7%D9%82%D8%A7%D8%AA">
+               علاقات
+              </a>
+              <ul class="sub-menu">
+               <li>
+                <a href="https://www.supermama.me/%D8%B9%D9%84%D8%A7%D9%82%D8%A7%D8%AA">
+                 <span>
+                  كل موضوعات العلاقات
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%B2%D9%88%D8%AC%D9%8A%D8%A9">
+                 <span>
+                  العلاقة الزوجية
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%B9%D9%84%D8%A7%D9%82%D8%A7%D8%AA-%D8%A3%D8%B3%D8%B1%D9%8A%D8%A9">
+                 <span>
+                  علاقات أسرية
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%AE%D8%B1%D9%88%D8%AC%D8%A7%D8%AA-%D9%88%D8%B3%D9%81%D8%B1">
+                 <span>
+                  خروجات وسفر
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%B3%D9%88%D8%A8%D8%B1%D8%A8%D8%A7%D8%A8%D8%A7">
+                 <span>
+                  سوبر بابا
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/tags/%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%AD%D9%85%D9%8A%D9%85%D8%A9">
+                 <span>
+                  العلاقة الحميمة
+                 </span>
+                </a>
+               </li>
+              </ul>
+             </div>
+            </li>
+            <li class="sub-menu-title">
+             <a href="#!">
+              وصفات
+              <svg class="go-to-arrows">
+               <use xlink:href="/web/images/svg-defs.svg#shape-menu-go-to-arrows">
+               </use>
+              </svg>
+             </a>
+             <div class="sub-menu-container">
+              <p class="menu-back">
+               <a href="#!">
+                &lt; العودة إلى القائمة الرئيسية
+               </a>
+              </p>
+              <a class="sub-menu-header" href="https://www.supermama.me/%D9%88%D8%B5%D9%81%D8%A7%D8%AA">
+               وصفات
+              </a>
+              <ul class="sub-menu">
+               <li>
+                <a href="https://www.supermama.me/%D9%88%D8%B5%D9%81%D8%A7%D8%AA">
+                 <span>
+                  كل الوصفات
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%B7%D8%A8%D9%82%20%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A">
+                 <span>
+                  طبق رئيسي
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%AD%D9%84%D9%88%D9%8A%D8%A7%D8%AA">
+                 <span>
+                  حلويات
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%B7%D8%A8%D9%82%20%D8%AC%D8%A7%D9%86%D8%A8%D9%8A">
+                 <span>
+                  طبق جانبي
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D9%85%D9%82%D8%A8%D9%84%D8%A7%D8%AA">
+                 <span>
+                  مقبلات
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%B5%D9%88%D8%B5">
+                 <span>
+                  صوص
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%B5%D9%88%D8%B5">
+                 <span>
+                  صوص
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%A5%D9%81%D8%B7%D8%A7%D8%B1">
+                 <span>
+                  إفطار
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%B3%D9%84%D8%B7%D8%A7%D8%AA">
+                 <span>
+                  سلطات
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%B4%D9%88%D8%B1%D8%A8%D8%A9">
+                 <span>
+                  شوربة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D9%88%D8%B5%D9%81%D8%A7%D8%AA-%D9%84%D9%84%D8%B1%D8%B6%D8%B9">
+                 <span>
+                  وصفات للرضع
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D9%88%D8%B5%D9%81%D8%A7%D8%AA-%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84">
+                 <span>
+                  وصفات للأطفال
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D9%85%D8%B4%D8%B1%D9%88%D8%A8%D8%A7%D8%AA">
+                 <span>
+                  مشروبات
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/all/%D8%B3%D9%86%D8%AF%D9%88%D9%8A%D8%B4%D8%A7%D8%AA">
+                 <span>
+                  سندويشات
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/recipes/tags/%D8%B3%D8%B1%D9%8A%D8%B9%D8%A9">
+                 <span>
+                  وصفات سريعة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/recipes/tags/%D8%A8%D8%A7%D9%84%D9%81%D8%B1%D9%86">
+                 <span>
+                  وصفات في الفرن
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/recipes/tags/%D8%B5%D9%8A%D8%A7%D9%85%D9%8A">
+                 <span>
+                  وصفات صيامي
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/recipes/tags/%D8%A3%D9%83%D9%84%D8%A7%D8%AA-%D9%85%D8%B7%D8%A7%D8%B9%D9%85">
+                 <span>
+                  أكلات مطاعم
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/recipes/tags/%D8%A3%D9%83%D9%84%D8%A7%D8%AA-%D9%85%D8%B7%D8%A7%D8%B9%D9%85">
+                 <span>
+                  أكلات مطاعم
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/recipes/tags/%D9%88%D8%B5%D9%81%D8%A7%D8%AA_%D8%B1%D8%AC%D9%8A%D9%85">
+                 <span>
+                  وصفات رجيم
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/recipes/finder">
+                 <span>
+                  هناكل إيه النهاردة؟
+                 </span>
+                </a>
+               </li>
+              </ul>
+             </div>
+            </li>
+            <li class="sub-menu-title">
+             <a href="#!">
+              أفضل المنتجات
+              <svg class="go-to-arrows">
+               <use xlink:href="/web/images/svg-defs.svg#shape-menu-go-to-arrows">
+               </use>
+              </svg>
+             </a>
+             <div class="sub-menu-container">
+              <p class="menu-back">
+               <a href="#!">
+                &lt; العودة إلى القائمة الرئيسية
+               </a>
+              </p>
+              <a class="sub-menu-header" href="https://www.supermama.me/%D8%A3%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/%D8%A3%D8%AC%D9%87%D8%B2%D8%A9-%D9%88%D8%A3%D8%AF%D9%88%D8%A7%D8%AA-%D9%85%D8%B7%D8%A8%D8%AE">
+               أفضل المنتجات
+              </a>
+              <ul class="sub-menu">
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/%D8%A3%D8%AC%D9%87%D8%B2%D8%A9-%D9%88%D8%A3%D8%AF%D9%88%D8%A7%D8%AA-%D9%85%D8%B7%D8%A8%D8%AE">
+                 <span>
+                  كل المنتجات
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D9%88%D9%85%D8%B3%D8%AA%D9%84%D8%B2%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%B1%D8%B6%D8%B9">
+                 <span>
+                  منتجات ومستلزمات الرضع
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/%D8%A3%D8%AC%D9%87%D8%B2%D8%A9-%D9%88%D8%A3%D8%AF%D9%88%D8%A7%D8%AA-%D9%85%D8%B7%D8%A8%D8%AE">
+                 <span>
+                  أجهزة وأدوات مطبخ
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D9%84%D9%84%D8%A3%D9%85-%D8%A8%D8%B9%D8%AF-%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9">
+                 <span>
+                  منتجات العناية الشخصية
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D9%84%D9%84%D8%A3%D9%85-%D8%A8%D8%B9%D8%AF-%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9">
+                 <span>
+                  منتجات للأم بعد الولادة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/%D8%A3%D8%AC%D9%87%D8%B2%D8%A9-%D9%85%D9%86%D8%B2%D9%84%D9%8A%D8%A9-%D9%83%D8%A8%D9%8A%D8%B1%D8%A9">
+                 <span>
+                  أجهزة منزلية كبيرة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D9%84%D9%84%D8%AD%D8%A7%D9%85%D9%84">
+                 <span>
+                  منتجات للحامل
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D8%AA%D9%86%D8%B8%D9%8A%D9%81">
+                 <span>
+                  منتجات تنظيف
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D8%A9">
+                 <span>
+                  منتجات العناية بالبشرة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%B4%D8%B9%D8%B1">
+                 <span>
+                  منتجات العناية بالشعر
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/%D8%A3%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D9%88%D8%A3%D9%84%D8%B9%D8%A7%D8%A8-%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84">
+                 <span>
+                  منتجات وألعاب للأطفال
+                 </span>
+                </a>
+               </li>
+              </ul>
+             </div>
+            </li>
+            <li class="sub-menu-title">
+             <a href="#!">
+              فيديو
+              <svg class="go-to-arrows">
+               <use xlink:href="/web/images/svg-defs.svg#shape-menu-go-to-arrows">
+               </use>
+              </svg>
+             </a>
+             <div class="sub-menu-container">
+              <p class="menu-back">
+               <a href="#!">
+                &lt; العودة إلى القائمة الرئيسية
+               </a>
+              </p>
+              <a class="sub-menu-header" href="https://www.supermama.me/videos/main">
+               فيديو
+              </a>
+              <ul class="sub-menu">
+               <li>
+                <a href="https://www.supermama.me/videos/main">
+                 <span>
+                  كل الفيديوهات
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/videos/categories/%D8%A7%D9%84%D8%AD%D9%85%D9%84">
+                 <span>
+                  فيديوهات الحمل
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/videos/categories/%D8%B1%D8%B6%D8%B9">
+                 <span>
+                  فيديوهات رضع
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/videos/categories/%D9%85%D8%B7%D8%A8%D8%AE-%D9%88%D9%88%D8%B5%D9%81%D8%A7%D8%AA">
+                 <span>
+                  فيديوهات مطبخ ووصفات
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/videos/categories/%D8%B5%D8%AD%D8%A9-%D9%88%D8%B1%D9%8A%D8%AC%D9%8A%D9%85">
+                 <span>
+                  فيديوهات صحة وريجيم
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/videos/categories/%D8%B5%D8%BA%D8%A7%D8%B1">
+                 <span>
+                  فيديوهات صغار
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/videos/categories/%D8%A3%D8%B7%D9%81%D8%A7%D9%84">
+                 <span>
+                  فيديوهات أطفال
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/videos/categories/%D8%AC%D9%85%D8%A7%D9%84-%D9%88%D9%85%D9%88%D8%B6%D8%A9">
+                 <span>
+                  فيديوهات جمال وموضة
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/videos/categories/%D8%A8%D9%8A%D8%AA">
+                 <span>
+                  فيديوهات بيت
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/videos/categories/%D8%B9%D9%84%D8%A7%D9%82%D8%A7%D8%AA">
+                 <span>
+                  فيديوهات علاقات
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a href="https://www.supermama.me/videos/categories/%D9%85%D9%86%D9%88%D8%B9%D8%A7%D8%AA">
+                 <span>
+                  فيديوهات منوعات
+                 </span>
+                </a>
+               </li>
+              </ul>
+             </div>
+            </li>
+           </ul>
+          </nav>
+          <div class="social-share">
+           <ul class="social-share__list clearfix">
+            <li class="social-share__list__item social-share__list__item--fb">
+             <a href="https://www.facebook.com/supermama.me" rel="noopener noreferrer" target="_blank">
+              <svg>
+               <use xlink:href="/web/images/svg-defs.svg#shape-facebook">
+               </use>
+              </svg>
+             </a>
+            </li>
+            <li class="social-share__list__item social-share__list__item--utube">
+             <a href="https://www.youtube.com/user/SuperMamaVideos" rel="noopener noreferrer" target="_blank">
+              <svg>
+               <use xlink:href="/web/images/svg-defs.svg#shape-utube">
+               </use>
+              </svg>
+             </a>
+            </li>
+            <li class="social-share__list__item social-share__list__item--google">
+             <a href="https://plus.google.com/+SupermamaMe" rel="noopener noreferrer" target="_blank">
+              <svg>
+               <use xlink:href="/web/images/svg-defs.svg#shape-google">
+               </use>
+              </svg>
+             </a>
+            </li>
+            <li class="social-share__list__item social-share__list__item--instagram">
+             <a href="https://www.instagram.com/supermamame/" rel="noopener noreferrer" target="_blank">
+              <svg>
+               <use xlink:href="/web/images/svg-defs.svg#shape-instagram">
+               </use>
+              </svg>
+             </a>
+            </li>
+            <li class="social-share__list__item social-share__item--twitter-menu">
+             <a href="https://twitter.com/supermamame" rel="noopener noreferrer" target="_blank">
+              <svg>
+               <use xlink:href="/web/images/svg-defs.svg#shape-twitter-menu">
+               </use>
+              </svg>
+             </a>
+            </li>
+            <li class="social-share__list__item social-share__list__item--pinterest">
+             <a href="https://www.pinterest.com/supermamame/" rel="noopener noreferrer" target="_blank">
+              <svg>
+               <use xlink:href="/web/images/svg-defs.svg#shape-pinterest-logo">
+               </use>
+              </svg>
+             </a>
+            </li>
+            <li class="social-share__list__item social-share__list__item--tumblr">
+             <a href="http://super-mama.tumblr.com/" rel="noopener noreferrer" target="_blank">
+              <svg>
+               <use xlink:href="/web/images/svg-defs.svg#shape-tumblr">
+               </use>
+              </svg>
+             </a>
+            </li>
+            <li class="social-share__list__item social-share__list__item--dailymotion">
+             <a href="http://www.dailymotion.com/supermama" rel="noopener noreferrer" target="_blank">
+              <svg>
+               <use xlink:href="/web/images/svg-defs.svg#shape-dailymotion">
+               </use>
+              </svg>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="logo">
+        <span class="visually-hidden">
+         SUPERMAMA
+        </span>
+        <a href="/">
+         <img alt="سوبرماما - الموقع الأول للأم العربية" src="https://www.supermama.me/web/images/logo.png"/>
+        </a>
+       </div>
+      </div>
+      <div class="pull-left header-actions header-actions--secondary clearfix">
+       <div class="menu-videos">
+        <a class="videos-icon" href="https://www.supermama.me/videos/main">
+         <svg>
+          <use xlink:href="/web/images/svg-defs.svg#shape-menu-videos">
+          </use>
+         </svg>
+        </a>
+       </div>
+       <div class="menu-search">
+        <a href="#!">
+         <svg>
+          <use xlink:href="/web/images/svg-defs.svg#shape-menu-search">
+          </use>
+         </svg>
+        </a>
+       </div>
+      </div>
+     </div>
+     <section class="search-form-container">
+      <div class="container">
+       <gcse:search>
+       </gcse:search>
+      </div>
+     </section>
+     <div class="overlay">
+     </div>
+    </div>
+   </div>
+  </header>
+  <script type="application/ld+json">
+   { "@context": "http://schema.org", "@type": "NewsArticle", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.supermama.me/posts/%D9%83%D9%8A%D9%81-%D8%AA%D8%AD%D9%81%D8%B2%D9%8A%D9%86-%D8%A7%D9%84%D8%A3%D9%8A%D8%B6-%D8%A3%D9%88-%D8%B9%D9%85%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%AD%D8%B1%D9%82-%D9%81%D9%89-%D8%A7%D9%84%D8%AC%D8%B3%D9%85" }, "headline": "كيف تحفزين الأيض أو عملية الحرق فى الجسم", "image": { "@type": "ImageObject", "url": "https://www.supermama.me/system/App/Entities/Article/images/000/036/024/mobile-watermarked-large-card/%258A%25D9%2581-%25D8%25AA%25D8%25AD%25D9%2581%25D8%25B2%25D9%258A%25D9%2586-%25D8%25A7%25D9%2584%25D8%25A3%25D9%258A%25D8%25B6-%25D8%25A3%25D9%2588-%25D8%25B9%25D9%2585%25D9%2584%25D9%258A%25D8%25A9-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D9%2582-%25D9%2581%25D9%2589-%25D8%25A7%25D9%2584%25D8%25AC%25D8%25B3%25D9%2585.jpg", "height": 197, "width": 375 }, "datePublished": "12 May 2013 - 08:10", "dateModified": "2018-12-25 04:29:46", "author": { "@type": "Person", "name": "ياسمين عطية" }, "publisher": { "@type": "Organization", "name": "Supermama", "logo": { "@type": "ImageObject", "url": "https://www.supermama.me/web/images/logo.png", "width": 142, "height": 19 } }, "description": "المياه، الأكل الحامي و السناكس و بعض النصائح الكثيرة التي ذكرتها في المقال من أفضل العوامل التي تحفز عملية الحرق في الجسم لأن عملية الحرق تختلف من شخص لأخر", "citation": ""}
+  </script>
+  <main>
+   <div class="ads ads--secondary">
+    <div id="Leaderboard">
+    </div>
+   </div>
+   <article class="theme--purple article--text desktop-container">
+    <header class="article__header">
+     <ul class="article-tags">
+      <li class="article-tags__item">
+       <a href="https://www.supermama.me/all/%D8%B5%D8%AD%D8%A9-%D9%88%D8%B1%D9%8A%D8%AC%D9%8A%D9%85">
+        صحة وريجيم
+       </a>
+      </li>
+      <li class="article-tags__item">
+       <a href="https://www.supermama.me/all/%D8%B1%D9%8A%D8%AC%D9%8A%D9%85">
+        ريجيم
+       </a>
+      </li>
+     </ul>
+     <h1 class="article__header__title">
+      كيف تحفزين الأيض أو عملية الحرق فى الجسم
+     </h1>
+     <div class="article-meta clearfix">
+      <p class="article__header__publish-date">
+       2013 مايو 12
+      </p>
+      <button class="article__save ">
+       <svg>
+        <use xlink:href="/web/images/svg-defs.svg#shape-heart">
+        </use>
+       </svg>
+      </button>
+     </div>
+     <div class="article-meta clearfix">
+      <p class="article__header__publish-date">
+       2018 ديسمبر 25
+      </p>
+      <p class="article__duration">
+       آخر تحديث
+      </p>
+     </div>
+    </header>
+    <div class="hero-wrapper clearfix">
+     <div class="article-image-components clearfix">
+      <div class="article__imageWrapper">
+       <picture>
+        <source media="(min-width: 1200px)" srcset="https://www.supermama.me/system/App/Entities/Article/images/000/036/024/web-watermarked-large/%258A%25D9%2581-%25D8%25AA%25D8%25AD%25D9%2581%25D8%25B2%25D9%258A%25D9%2586-%25D8%25A7%25D9%2584%25D8%25A3%25D9%258A%25D8%25B6-%25D8%25A3%25D9%2588-%25D8%25B9%25D9%2585%25D9%2584%25D9%258A%25D8%25A9-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D9%2582-%25D9%2581%25D9%2589-%25D8%25A7%25D9%2584%25D8%25AC%25D8%25B3%25D9%2585.jpg"/>
+        <img alt="" src="https://www.supermama.me/system/App/Entities/Article/images/000/036/024/mobile-watermarked-large-card/%258A%25D9%2581-%25D8%25AA%25D8%25AD%25D9%2581%25D8%25B2%25D9%258A%25D9%2586-%25D8%25A7%25D9%2584%25D8%25A3%25D9%258A%25D8%25B6-%25D8%25A3%25D9%2588-%25D8%25B9%25D9%2585%25D9%2584%25D9%258A%25D8%25A9-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D9%2582-%25D9%2581%25D9%2589-%25D8%25A7%25D9%2584%25D8%25AC%25D8%25B3%25D9%2585.jpg"/>
+       </picture>
+      </div>
+     </div>
+    </div>
+    <div class="table-of-contents">
+     <p class="table-of-contents__title">
+      محتويات
+     </p>
+     <ol class="table-of-contents__list">
+     </ol>
+    </div>
+    <section class="container clearfix">
+     <div class="ads ad-on-the-side">
+      <div id="MPU">
+      </div>
+     </div>
+     <div class="article__content">
+      <p>
+       الأيض، الحرق، والتمثيل الغذائى.. كلها مرادفات لعملية حرق السعرات التى تتناوليها، مما يساعد فى عملية هضم الطعام، تحفيز هذه العملية يساعدك على فقدان الوزن بصورة أسرع، والمحافظة على الوزن بعد انتهائك من الحمية، إليكِ هذه النصائح لتحفيز الأيض.
+      </p>
+      <ul>
+       <li>
+        <h3>
+         <strong>
+          افهمى ما تعنيه كلمة الأيض
+         </strong>
+        </h3>
+       </li>
+      </ul>
+      <div>
+       ببساطة معدل الأيض هو المعدل الذى يحرق السعرات الحرارية فى الجسم، عدد قليل جداً من الناس لديهم عملية التمثيل الغذائى السريع، والمثير للدهشة أن أولئك الذين يعانون من زيادة الوزن لديهم عملية التمثيل الغذائى سريعة نسبياً، لأنهم يزنون أكثر، ولكن إذا كان وزنهم ثابت فعملية الأيض لديهم ليست سريعة بما يكفى لتعويض استهلاكهم من السعرات الحرارية، خلاصة القول هى أن زيادة التمثيل الغذائى سوف يمكنك من معادلة نظامك الغذائى والوزن.
+      </div>
+      <div>
+       <h4>
+        شاهدي أيضًا: ما هو التمثيل الغذائي للجسم؟
+       </h4>
+       <p>
+       </p>
+       <div class="video-filter">
+        <iframe allowfullscreen="true" class="video-filter video-vimeo vf-166816702" frameborder="0" height="500" src="//player.vimeo.com/video/166816702?autopause=1&amp;autoplay=0&amp;badge=1&amp;byline=1&amp;loop=0&amp;portrait=1&amp;autopause=1&amp;fullscreen=1" width="500">
+        </iframe>
+       </div>
+      </div>
+      <ul>
+       <li>
+        <h3>
+         <strong>
+          حددى ما الذى يؤثر فى عملية الأيض لديكِ
+         </strong>
+        </h3>
+       </li>
+      </ul>
+      <div>
+       وهنا بعض العوامل التي يمكنك التحكم فيها وتغييرها، وبعض العوامل التى لا يمكنك التحكم فيها.
+      </div>
+      <ol>
+       <li>
+        العمر: معدل الأيض ينخفض بنسبة 5٪ كل عشر سنوات بعد سن الـ40، وذلك يكون بسبب انخفاض كتلة العضلات.
+       </li>
+       <li>
+        اختلاف بين الجنسين: فى العموم الرجال يحرقون السعرات الحرارية  بسرعة أكبر من النساء، لأن لديهم المزيد من الأنسجة العضلية.
+       </li>
+       <li>
+        الوراثة: يمكنك أن ترثى معدل الأيض الخاص بكِ من الأجيال السابقة.(اقرأي ايضا :
+        <a href="https://www.supermama.me/posts/%D9%A7-%D9%88%D8%B5%D9%81%D8%A7%D8%AA-%D9%84%D8%A3%D8%B7%D8%A8%D8%A7%D9%82-%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9-%D9%82%D9%84%D9%8A%D9%84%D8%A9-%D8%A7%D9%84%D8%B3%D8%B9%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%AD%D8%B1%D8%A7%D8%B1%D9%8A%D8%A9">
+         ٧ وصفات لأطباق رئيسية قليلة السعرات الحرارية
+        </a>
+        )
+       </li>
+       <li>
+        اضطراب الغدة الدرقية: قصور الغدة الدرقية «كسل الغدة الدرقية» وفرط نشاط الغدة الدرقية، يمكن أن يبطئ أو يسرع عملية التمثيل الغذائى، ولكن فقط 3٪ من الناس لديهم قصور الغدة الدرقية، و0.3٪  لديهم فرط نشاط الغدة الدرقية.
+       </li>
+       <li>
+        الوزن: الأنسجة المختلفة فى الجسم تسهم بنسب مختلفة فى الأيض، العضلات تسهم أكثر من الدهون لكل وحدة كتلة، لأنها أكثر كثافة من الدهون، والعضلات تساهم أكثر من ذلك بكثير فى وحدة الحجم، ولكن هذا قد لا يشكل فرق كبير من الناحية العملية.
+       </li>
+      </ol>
+      <ul>
+       <li>
+        <h3>
+         <em>
+          <strong>
+           تقدير معدل الأيض أثناء الراحة «RMR»
+          </strong>
+         </em>
+        </h3>
+       </li>
+      </ul>
+      <div>
+       هذه المعادلة تظهر لكِ أنه كلما زاد وزنك، كلما زاد معدل الـ«RMR» الخاص بكِ!  (اقرأي ايضا :
+       <a href="https://www.supermama.me/posts/%D8%AD%D9%8A%D9%84-%D8%B3%D8%AD%D8%B1%D9%8A%D8%A9-%D9%84%D8%A5%D9%86%D9%82%D8%A7%D8%B5-%D8%A7%D9%84%D9%88%D8%B2%D9%86-%D8%A8%D8%AF%D9%88%D9%86-%D8%B1%D8%AC%D9%8A%D9%85">
+        حيل سحرية لإنقاص الوزن بدون رجيم
+       </a>
+       )
+      </div>
+      <ul>
+       <li>
+        <h3>
+         <strong>
+          حساب الـ«RMR»:
+         </strong>
+        </h3>
+       </li>
+      </ul>
+      <ol>
+       <li>
+        RMR = 9.99w + 6.25s - 4.92a + 166g-161
+       </li>
+       <li>
+        w = الوزن بالكيلوجرام
+       </li>
+       <li>
+        s = الطول بالسنتيمتر
+       </li>
+       <li>
+        a = سنك
+       </li>
+       <li>
+        g = الجنسين = 1 للذكور، 0 للإناث
+       </li>
+      </ol>
+      <ul>
+       <li>
+        <h3>
+         <strong>
+          تناولى وجبات أكثر لكن أصغر خلال اليوم
+         </strong>
+        </h3>
+       </li>
+      </ul>
+      <div>
+       يأكل الناس عموماً أقل عندما يأكلون وجبات صغيرة، لكنها متكررة، تناولى الفاكهة والشوفان أو أي شيء كبير الحجم يحتوى علي سعرات حرارية قليلة، تناول وجبات خفيفة صحية أيضاً سوف يزيد الأيض.
+      </div>
+      <ul>
+       <li>
+        <h3>
+         <strong>
+          شرب الماء المثلج
+         </strong>
+        </h3>
+       </li>
+      </ul>
+      <div>
+       كما هو الحال مع الغذاء، يمكن لحرمان الجسم من الماء أن يجعله يخزن بدلاً من أن يحرق، عند شرب الماء المثلج، جسمك يحرق السعرات الحرارية برفع درجة حرارته لدرجة حرارة الجسم، أكثر من 90٪ من التفاعلات الكيميائية فى الجسم تحدث فى الماء، لذلك تأكدى من شرب كمية مناسبة من الماء يومياً. (اقرأي ايضا :
+       <a href="https://www.supermama.me/posts/%D8%B1%D8%AC%D9%8A%D9%85-%D8%B4%D9%88%D8%B1%D8%A8%D8%A9-%D8%A7%D9%84%D9%83%D8%B1%D9%86%D8%A8">
+        رجيم شوربة الكرنب
+       </a>
+       )
+      </div>
+      <ul>
+       <li>
+        <h3>
+         <strong>
+          حفزى الأيض بممارسة الأيروبيك
+         </strong>
+        </h3>
+       </li>
+      </ul>
+      <div>
+       الأنشطة المختلفة تحرق كميات مختلفة من السعرات الحرارية، ولكن الشيء المهم هو أن ترفعى معدل نبضات قلبك، والحفاظ على النشاط لنحو ثلاثين دقيقة على الأقل.
+      </div>
+      <ul>
+       <li>
+        <h3>
+         <strong>
+          حفزى الأيض بصورة طويلة المدى للحفاظ على الوزن ببناء العضلات
+         </strong>
+        </h3>
+       </li>
+      </ul>
+      <div>
+       العضلات تحرق سعرات حرارية أكثر مما تحرقه الدهون «73 سعرات حرارية أكثر للكيلوجرام الواحد فى اليوم الواحد، على وجه التحديد»، وبالتالى فإن  بناء المزيد من العضلات، يزيد معدل الأيض أثناء الراحة «RMR»، هذا هو السبيل الوحيد لزيادة الـ«RMR»، الذى يمثل 60٪ إلى 70٪ من السعرات الحرارية التي تحرق يوميا.
+      </div>
+      <div>
+      </div>
+      <div>
+       <h4 dir="RTL">
+        شاهدي بالفيديو نصائح لزيادة معدل حرق الدهون في الجسم
+       </h4>
+       <p>
+       </p>
+       <div class="video-filter">
+        <iframe allowfullscreen="true" class="video-filter video-vimeo vf-167997690" frameborder="0" height="500" src="//player.vimeo.com/video/167997690?autopause=1&amp;autoplay=0&amp;badge=1&amp;byline=1&amp;loop=0&amp;portrait=1&amp;autopause=1&amp;fullscreen=1" width="500">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </section>
+    <a class="vez-widget page_speed_1884575973" href="https://www.vezeeta.com/ar/دكتور/تخسيس-وتغذية/مصر/?ref=supermama&amp;utm_source=supermama&amp;utm_medium=partnerships&amp;utm_campaign=Dietitian-and-Nutrition" target="_blank">
+     <img alt="افضل دكتور تخسيس وتغذية في مصر" class="page_speed_1634370421" src="https://d1ohqf92fg2anw.cloudfront.net/affiliate/supermama-widget-320x90-nutrition.png" title="افضل دكتور تخسيس وتغذية في مصر"/>
+    </a>
+    <p class="back-to-category-wrapper">
+     <a class="button back-to-category" href="https://www.supermama.me/%D8%B5%D8%AD%D8%A9-%D9%88%D8%B1%D9%8A%D8%AC%D9%8A%D9%85">
+      عودة إلى صحة وريجيم
+     </a>
+    </p>
+    <footer class="go-to-author">
+     <div class="author-title clearfix">
+      <div class="author-title__image-wrapper">
+       <a href="https://www.supermama.me/authors/%D9%8A%D8%A7%D8%B3%D9%85%D9%8A%D9%86-%D8%B9%D8%B7%D9%8A%D8%A9">
+        <picture>
+         <img alt="ياسمين عطية" src="https://www.supermama.me/system/App/Entities/Author/images/000/010/985/thumb/ffffff.png"/>
+        </picture>
+       </a>
+      </div>
+      <div class="author-title__details">
+       <a href="https://www.supermama.me/authors/%D9%8A%D8%A7%D8%B3%D9%85%D9%8A%D9%86-%D8%B9%D8%B7%D9%8A%D8%A9">
+        <p class="written-by">
+         بقلم/
+        </p>
+        <p>
+         ياسمين عطية
+        </p>
+       </a>
+      </div>
+     </div>
+    </footer>
+   </article>
+   <section class="theme--green">
+    <div class="section-title">
+     موضوعات أخرى
+    </div>
+    <div class="container">
+     <div class="cards clearfix cards--full-width">
+      <div class="card ">
+       <div class="card__image-wrapper">
+        <a href="https://www.supermama.me/posts/%D8%AA%D8%B9%D8%B1%D9%81%D9%8A-%D8%B9%D9%84%D9%89-%D8%B1%D8%AC%D9%8A%D9%85-%D8%A7%D9%84%D8%A8%D8%B1%D8%AA%D9%82%D8%A7%D9%84-%D8%A7%D9%84%D8%B3%D8%B1%D9%8A%D8%B9">
+         <picture>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/037/941/mobile-watermarked-large-card/%25D8%25B1%25D9%258A%25D8%25AC%25D9%258A%25D9%2585-%25D8%25A7%25D9%2584%25D8%25A8%25D8%25B1%25D8%25AA%25D9%2582%25D8%25A7%25D9%2584.jpg" media="(min-width: 1200px)"/>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/037/941/mobile-watermarked-large-card/%25D8%25B1%25D9%258A%25D8%25AC%25D9%258A%25D9%2585-%25D8%25A7%25D9%2584%25D8%25A8%25D8%25B1%25D8%25AA%25D9%2582%25D8%25A7%25D9%2584.jpg"/>
+          <img alt="" data-src="https://www.supermama.me/system/App/Entities/Article/images/000/037/941/mobile-watermarked-medium-card/%25D8%25B1%25D9%258A%25D8%25AC%25D9%258A%25D9%2585-%25D8%25A7%25D9%2584%25D8%25A8%25D8%25B1%25D8%25AA%25D9%2582%25D8%25A7%25D9%2584.jpg"/>
+         </picture>
+        </a>
+       </div>
+       <div class="card__details">
+        <h3 class="card__details__title">
+         <a href="https://www.supermama.me/posts/%D8%AA%D8%B9%D8%B1%D9%81%D9%8A-%D8%B9%D9%84%D9%89-%D8%B1%D8%AC%D9%8A%D9%85-%D8%A7%D9%84%D8%A8%D8%B1%D8%AA%D9%82%D8%A7%D9%84-%D8%A7%D9%84%D8%B3%D8%B1%D9%8A%D8%B9">
+          تعرفي على رجيم البرتقال السريع
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="card ">
+       <div class="card__image-wrapper">
+        <a href="https://www.supermama.me/posts/%D9%A1%D9%A3-%D9%86%D8%B5%D9%8A%D8%AD%D8%A9-%D8%B0%D9%87%D8%A8%D9%8A%D8%A9-%D9%84%D8%AA%D8%B3%D8%B1%D9%8A%D8%B9-%D8%AD%D8%B1%D9%82-%D8%A7%D9%84%D8%B3%D8%B9%D8%B1%D8%A7%D8%AA">
+         <picture>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/033/318/mobile-watermarked-large-card/%25D8%25AD%25D8%25B1%25D9%2582-%25D8%25A7%25D9%2584%25D8%25B3%25D8%25B9%25D8%25B1%25D8%25A7%25D8%25AA-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D8%25A7%25D8%25B1%25D9%258A%25D8%25A9.jpg" media="(min-width: 1200px)"/>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/033/318/mobile-watermarked-medium-card/%25D8%25AD%25D8%25B1%25D9%2582-%25D8%25A7%25D9%2584%25D8%25B3%25D8%25B9%25D8%25B1%25D8%25A7%25D8%25AA-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D8%25A7%25D8%25B1%25D9%258A%25D8%25A9.jpg"/>
+          <img alt="" data-src="https://www.supermama.me/system/App/Entities/Article/images/000/033/318/mobile-watermarked-medium-card/%25D8%25AD%25D8%25B1%25D9%2582-%25D8%25A7%25D9%2584%25D8%25B3%25D8%25B9%25D8%25B1%25D8%25A7%25D8%25AA-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D8%25A7%25D8%25B1%25D9%258A%25D8%25A9.jpg"/>
+         </picture>
+        </a>
+       </div>
+       <div class="card__details">
+        <h3 class="card__details__title">
+         <a href="https://www.supermama.me/posts/%D9%A1%D9%A3-%D9%86%D8%B5%D9%8A%D8%AD%D8%A9-%D8%B0%D9%87%D8%A8%D9%8A%D8%A9-%D9%84%D8%AA%D8%B3%D8%B1%D9%8A%D8%B9-%D8%AD%D8%B1%D9%82-%D8%A7%D9%84%D8%B3%D8%B9%D8%B1%D8%A7%D8%AA">
+          ١٣ نصيحة ذهبية لتسريع حرق السعرات
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="card ">
+       <div class="card__image-wrapper">
+        <a href="https://www.supermama.me/posts/%D8%B1%D8%AC%D9%8A%D9%85-%D8%AF%D8%B4%D8%AA%D9%8A-%D8%A7%D9%84%D9%86%D8%B3%D8%AE%D8%A9-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D9%85%D9%86-%D8%B1%D8%AC%D9%8A%D9%85-%C2%AB%D8%A3%D8%AA%D9%83%D9%86%D8%B2%C2%BB">
+         <picture>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/034/808/mobile-watermarked-large-card/%25D8%25B1%25D8%25AC%25D9%258A%25D9%2585-%25D8%25AF%25D8%25B4%25D8%25AA%25D9%258A.jpg" media="(min-width: 1200px)"/>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/034/808/mobile-watermarked-medium-card/%25D8%25B1%25D8%25AC%25D9%258A%25D9%2585-%25D8%25AF%25D8%25B4%25D8%25AA%25D9%258A.jpg"/>
+          <img alt="" data-src="https://www.supermama.me/system/App/Entities/Article/images/000/034/808/mobile-watermarked-medium-card/%25D8%25B1%25D8%25AC%25D9%258A%25D9%2585-%25D8%25AF%25D8%25B4%25D8%25AA%25D9%258A.jpg"/>
+         </picture>
+        </a>
+       </div>
+       <div class="card__details">
+        <h3 class="card__details__title">
+         <a href="https://www.supermama.me/posts/%D8%B1%D8%AC%D9%8A%D9%85-%D8%AF%D8%B4%D8%AA%D9%8A-%D8%A7%D9%84%D9%86%D8%B3%D8%AE%D8%A9-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D9%85%D9%86-%D8%B1%D8%AC%D9%8A%D9%85-%C2%AB%D8%A3%D8%AA%D9%83%D9%86%D8%B2%C2%BB">
+          رجيم دشتي: النسخة العربية من رجيم «أتكنز»
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="card ">
+       <div class="card__image-wrapper">
+        <a href="https://www.supermama.me/posts/%D8%A7%D9%84%D8%AA%D9%85%D8%A7%D8%B1%D9%8A%D9%86-%D8%A7%D9%84%D9%82%D8%B5%D9%8A%D8%B1%D8%A9-%D8%AA%D8%B3%D8%A7%D8%B9%D8%AF%D9%83-%D9%81%D9%89-%D8%A7%D9%84%D8%AD%D9%81%D8%A7%D8%B8-%D8%B9%D9%84%D9%89-%D9%88%D8%B2%D9%86%D9%83">
+         <picture>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/040/814/mobile-watermarked-large-card/%25D9%2580%25D9%2585%25D8%25A7%25D8%25B1%25D9%258A%25D9%2586-%25D8%25A8%25D8%25B3%25D9%258A%25D8%25B7%25D8%25A9-%25D9%2584%25D9%2584%25D8%25AD%25D9%2581%25D8%25A7%25D8%25B8-%25D8%25B9%25D9%2584%25D9%2589-%25D8%25A7%25D9%2584%25D9%2588%25D8%25B2%25D9%2586.jpg" media="(min-width: 1200px)"/>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/040/814/mobile-watermarked-medium-card/%25D9%2580%25D9%2585%25D8%25A7%25D8%25B1%25D9%258A%25D9%2586-%25D8%25A8%25D8%25B3%25D9%258A%25D8%25B7%25D8%25A9-%25D9%2584%25D9%2584%25D8%25AD%25D9%2581%25D8%25A7%25D8%25B8-%25D8%25B9%25D9%2584%25D9%2589-%25D8%25A7%25D9%2584%25D9%2588%25D8%25B2%25D9%2586.jpg"/>
+          <img alt="" data-src="https://www.supermama.me/system/App/Entities/Article/images/000/040/814/mobile-watermarked-medium-card/%25D9%2580%25D9%2585%25D8%25A7%25D8%25B1%25D9%258A%25D9%2586-%25D8%25A8%25D8%25B3%25D9%258A%25D8%25B7%25D8%25A9-%25D9%2584%25D9%2584%25D8%25AD%25D9%2581%25D8%25A7%25D8%25B8-%25D8%25B9%25D9%2584%25D9%2589-%25D8%25A7%25D9%2584%25D9%2588%25D8%25B2%25D9%2586.jpg"/>
+         </picture>
+        </a>
+       </div>
+       <div class="card__details">
+        <h3 class="card__details__title">
+         <a href="https://www.supermama.me/posts/%D8%A7%D9%84%D8%AA%D9%85%D8%A7%D8%B1%D9%8A%D9%86-%D8%A7%D9%84%D9%82%D8%B5%D9%8A%D8%B1%D8%A9-%D8%AA%D8%B3%D8%A7%D8%B9%D8%AF%D9%83-%D9%81%D9%89-%D8%A7%D9%84%D8%AD%D9%81%D8%A7%D8%B8-%D8%B9%D9%84%D9%89-%D9%88%D8%B2%D9%86%D9%83">
+          التمارين القصيرة تساعدك فى الحفاظ على وزنك
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="card ">
+       <div class="card__image-wrapper">
+        <a href="https://www.supermama.me/posts/7-%D9%86%D8%B5%D8%A7%D8%A6%D8%AD-%D9%84%D8%B1%D8%AC%D9%8A%D9%85-%D8%A8%D8%AF%D9%88%D9%86-%D8%AD%D8%B1%D9%85%D8%A7%D9%86">
+         <picture>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/044/846/mobile-watermarked-large-card/%25D8%25B1%25D8%25AC%25D9%258A%25D9%2585-%25D8%25A8%25D8%25AF%25D9%2588%25D9%2586-%25D8%25AD%25D8%25B1%25D9%2585%25D8%25A7%25D9%2586_0.jpg" media="(min-width: 1200px)"/>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/044/846/mobile-watermarked-medium-card/%25D8%25B1%25D8%25AC%25D9%258A%25D9%2585-%25D8%25A8%25D8%25AF%25D9%2588%25D9%2586-%25D8%25AD%25D8%25B1%25D9%2585%25D8%25A7%25D9%2586_0.jpg"/>
+          <img alt="" data-src="https://www.supermama.me/system/App/Entities/Article/images/000/044/846/mobile-watermarked-medium-card/%25D8%25B1%25D8%25AC%25D9%258A%25D9%2585-%25D8%25A8%25D8%25AF%25D9%2588%25D9%2586-%25D8%25AD%25D8%25B1%25D9%2585%25D8%25A7%25D9%2586_0.jpg"/>
+         </picture>
+        </a>
+       </div>
+       <div class="card__details">
+        <h3 class="card__details__title">
+         <a href="https://www.supermama.me/posts/7-%D9%86%D8%B5%D8%A7%D8%A6%D8%AD-%D9%84%D8%B1%D8%AC%D9%8A%D9%85-%D8%A8%D8%AF%D9%88%D9%86-%D8%AD%D8%B1%D9%85%D8%A7%D9%86">
+          7 نصائح لرجيم بدون حرمان
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="card ">
+       <div class="card__image-wrapper">
+        <a href="https://www.supermama.me/posts/%D9%85%D8%B4%D8%B1%D9%88%D8%A8%D8%A7%D8%AA-%D8%AA%D8%B3%D8%A7%D8%B9%D8%AF-%D9%81%D9%8A-%D8%AA%D8%AE%D9%81%D9%8A%D9%81-%D8%A7%D9%84%D9%88%D8%B2%D9%86">
+         <picture>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/027/457/mobile-watermarked-large-card/%25D9%2585%25D8%25B4%25D8%25B1%25D9%2588%25D8%25A8%25D8%25A7%25D8%25AA-%25D8%25AA%25D8%25B3%25D8%25A7%25D8%25B9%25D8%25AF-%25D8%25B9%25D9%2584%25D9%2589-%25D8%25AA%25D8%25AE%25D9%2581%25D9%258A%25D9%2581-%25D8%25A7%25D9%2584%25D9%2588%25D8%25B2%25D9%2586.jpg" media="(min-width: 1200px)"/>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/027/457/mobile-watermarked-medium-card/%25D9%2585%25D8%25B4%25D8%25B1%25D9%2588%25D8%25A8%25D8%25A7%25D8%25AA-%25D8%25AA%25D8%25B3%25D8%25A7%25D8%25B9%25D8%25AF-%25D8%25B9%25D9%2584%25D9%2589-%25D8%25AA%25D8%25AE%25D9%2581%25D9%258A%25D9%2581-%25D8%25A7%25D9%2584%25D9%2588%25D8%25B2%25D9%2586.jpg"/>
+          <img alt="ريجيم" data-src="https://www.supermama.me/system/App/Entities/Article/images/000/027/457/mobile-watermarked-medium-card/%25D9%2585%25D8%25B4%25D8%25B1%25D9%2588%25D8%25A8%25D8%25A7%25D8%25AA-%25D8%25AA%25D8%25B3%25D8%25A7%25D8%25B9%25D8%25AF-%25D8%25B9%25D9%2584%25D9%2589-%25D8%25AA%25D8%25AE%25D9%2581%25D9%258A%25D9%2581-%25D8%25A7%25D9%2584%25D9%2588%25D8%25B2%25D9%2586.jpg"/>
+         </picture>
+        </a>
+       </div>
+       <div class="card__details">
+        <h3 class="card__details__title">
+         <a href="https://www.supermama.me/posts/%D9%85%D8%B4%D8%B1%D9%88%D8%A8%D8%A7%D8%AA-%D8%AA%D8%B3%D8%A7%D8%B9%D8%AF-%D9%81%D9%8A-%D8%AA%D8%AE%D9%81%D9%8A%D9%81-%D8%A7%D9%84%D9%88%D8%B2%D9%86">
+          مشروبات تساعد في تخفيف الوزن
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="card ">
+       <div class="card__image-wrapper">
+        <a href="https://www.supermama.me/posts/%D9%A7-%D9%88%D8%B5%D9%81%D8%A7%D8%AA-%D9%84%D8%A3%D8%B7%D8%A8%D8%A7%D9%82-%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9-%D9%85%D9%86%D8%AE%D9%81%D8%B6%D8%A9-%D8%A7%D9%84%D8%B3%D8%B9%D8%B1%D8%A7%D8%AA">
+         <picture>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/016/409/mobile-watermarked-large-card/stuffed%2520chicken_1.jpg" media="(min-width: 1200px)"/>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/016/409/mobile-watermarked-medium-card/stuffed%2520chicken_1.jpg"/>
+          <img alt="نصائح الطبخ" data-src="https://www.supermama.me/system/App/Entities/Article/images/000/016/409/mobile-watermarked-medium-card/stuffed%2520chicken_1.jpg"/>
+         </picture>
+        </a>
+       </div>
+       <div class="card__details">
+        <h3 class="card__details__title">
+         <a href="https://www.supermama.me/posts/%D9%A7-%D9%88%D8%B5%D9%81%D8%A7%D8%AA-%D9%84%D8%A3%D8%B7%D8%A8%D8%A7%D9%82-%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9-%D9%85%D9%86%D8%AE%D9%81%D8%B6%D8%A9-%D8%A7%D9%84%D8%B3%D8%B9%D8%B1%D8%A7%D8%AA">
+          ٧ وصفات لأطباق رئيسية منخفضة السعرات
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="card ">
+       <div class="card__image-wrapper">
+        <a href="https://www.supermama.me/posts/%D8%A7%D9%84%D8%AC%D8%B1%D9%8A%D8%A8-%D9%81%D8%B1%D9%88%D8%AA-%D9%88%D8%A7%D9%84%D8%B1%D8%AC%D9%8A%D9%85-%D8%B9%D9%84%D8%A7%D9%82%D8%A9-%D9%84%D8%A7-%D8%AA%D9%86%D8%AA%D9%87%D9%8A">
+         <picture>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/044/815/mobile-watermarked-large-card/%25D8%25AC%25D8%25B1%25D9%258A%25D8%25A8-%25D9%2581%25D8%25B1%25D9%2588%25D8%25AA-%25D9%2588%25D8%25A7%25D9%2584%25D8%25B1%25D8%25AC%25D9%258A%25D9%2585.jpg" media="(min-width: 1200px)"/>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/044/815/mobile-watermarked-medium-card/%25D8%25AC%25D8%25B1%25D9%258A%25D8%25A8-%25D9%2581%25D8%25B1%25D9%2588%25D8%25AA-%25D9%2588%25D8%25A7%25D9%2584%25D8%25B1%25D8%25AC%25D9%258A%25D9%2585.jpg"/>
+          <img alt="" data-src="https://www.supermama.me/system/App/Entities/Article/images/000/044/815/mobile-watermarked-medium-card/%25D8%25AC%25D8%25B1%25D9%258A%25D8%25A8-%25D9%2581%25D8%25B1%25D9%2588%25D8%25AA-%25D9%2588%25D8%25A7%25D9%2584%25D8%25B1%25D8%25AC%25D9%258A%25D9%2585.jpg"/>
+         </picture>
+        </a>
+       </div>
+       <div class="card__details">
+        <h3 class="card__details__title">
+         <a href="https://www.supermama.me/posts/%D8%A7%D9%84%D8%AC%D8%B1%D9%8A%D8%A8-%D9%81%D8%B1%D9%88%D8%AA-%D9%88%D8%A7%D9%84%D8%B1%D8%AC%D9%8A%D9%85-%D8%B9%D9%84%D8%A7%D9%82%D8%A9-%D9%84%D8%A7-%D8%AA%D9%86%D8%AA%D9%87%D9%8A">
+          الجريب فروت والرجيم: علاقة لا تنتهي
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="card ">
+       <div class="card__image-wrapper">
+        <a href="https://www.supermama.me/posts/10-%D9%86%D8%B5%D8%A7%D8%A6%D8%AD-%D9%84%D8%B1%D9%8A%D8%AC%D9%8A%D9%85-%D8%B5%D8%AD%D9%8A-%D9%81%D9%8A-%D8%B1%D9%85%D8%B6%D8%A7%D9%86">
+         <picture>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/024/743/mobile-watermarked-large-card/%25D8%25B1%25D8%25AC%25D9%258A%25D9%2585-%25D8%25B1%25D9%2585%25D8%25B6%25D8%25A7%25D9%2586.jpg" media="(min-width: 1200px)"/>
+          <source data-srcset="https://www.supermama.me/system/App/Entities/Article/images/000/024/743/mobile-watermarked-medium-card/%25D8%25B1%25D8%25AC%25D9%258A%25D9%2585-%25D8%25B1%25D9%2585%25D8%25B6%25D8%25A7%25D9%2586.jpg"/>
+          <img alt="ريجيم" data-src="https://www.supermama.me/system/App/Entities/Article/images/000/024/743/mobile-watermarked-medium-card/%25D8%25B1%25D8%25AC%25D9%258A%25D9%2585-%25D8%25B1%25D9%2585%25D8%25B6%25D8%25A7%25D9%2586.jpg"/>
+         </picture>
+        </a>
+       </div>
+       <div class="card__details">
+        <h3 class="card__details__title">
+         <a href="https://www.supermama.me/posts/10-%D9%86%D8%B5%D8%A7%D8%A6%D8%AD-%D9%84%D8%B1%D9%8A%D8%AC%D9%8A%D9%85-%D8%B5%D8%AD%D9%8A-%D9%81%D9%8A-%D8%B1%D9%85%D8%B6%D8%A7%D9%86">
+          10 نصائح لريجيم صحي في رمضان
+         </a>
+        </h3>
+       </div>
+      </div>
+     </div>
+     <p class="cards__read-more text-center">
+      <a class="button" href="https://www.supermama.me/all/%D8%B1%D9%8A%D8%AC%D9%8A%D9%85">
+       المزيد من المقالات
+      </a>
+     </p>
+    </div>
+   </section>
+  </main>
+  <div class="supermama-ads">
+   <a href="http://bit.ly/2PAHYTB">
+    <img alt="supermama" src="https://www.supermama.me/system/App/Entities/Advertisement/images/000/000/015/medium/in-house3.jpg"/>
+   </a>
+  </div>
+  <script>
+   document.getElementsByClassName('supermama-ads')[0].addEventListener('click', function(){ let request = new XMLHttpRequest(); let parameters = 'advertisementId=15&_token=oqwsILRBv5CffEYhcAii6ymmRoBjLkYvNw9omBuJ'; request.open('POST', 'https://www.supermama.me/ajax/advertisementViewCount'); request.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); request.send(parameters); });
+  </script>
+  <div class="share-icon share-icon--mobile">
+   <a class="share-icon__whatsapp" data-action="share/whatsapp/share" href="whatsapp://send?text=سوبرماما - كيف تحفزين الأيض أو عملية الحرق فى الجسم https%3A%2F%2Fwww.supermama.me%2Fposts%2F%25D9%2583%25D9%258A%25D9%2581-%25D8%25AA%25D8%25AD%25D9%2581%25D8%25B2%25D9%258A%25D9%2586-%25D8%25A7%25D9%2584%25D8%25A3%25D9%258A%25D8%25B6-%25D8%25A3%25D9%2588-%25D8%25B9%25D9%2585%25D9%2584%25D9%258A%25D8%25A9-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D9%2582-%25D9%2581%25D9%2589-%25D8%25A7%25D9%2584%25D8%25AC%25D8%25B3%25D9%2585">
+    <span class="visually-hidden">
+     Share via Whatsapp
+    </span>
+    <img alt="Whatsapp Icon" src="https://www.supermama.me/images/share/whatsapp.svg"/>
+   </a>
+   <a class="share-icon__messenger" href="fb-messenger://share/?link=https%3A%2F%2Fwww.supermama.me%2Fposts%2F%25D9%2583%25D9%258A%25D9%2581-%25D8%25AA%25D8%25AD%25D9%2581%25D8%25B2%25D9%258A%25D9%2586-%25D8%25A7%25D9%2584%25D8%25A3%25D9%258A%25D8%25B6-%25D8%25A3%25D9%2588-%25D8%25B9%25D9%2585%25D9%2584%25D9%258A%25D8%25A9-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D9%2582-%25D9%2581%25D9%2589-%25D8%25A7%25D9%2584%25D8%25AC%25D8%25B3%25D9%2585&amp;app_id=347982675614455">
+    <span class="visually-hidden">
+     Send In Messenger
+    </span>
+    <img alt="Messenger Icon" src="https://www.supermama.me/images/share/messenger.svg"/>
+   </a>
+   <a class="share-icon__facebook" href="https://www.facebook.com/dialog/share?app_id=347982675614455&amp;display=popup&amp;href=https%3A%2F%2Fwww.supermama.me%2Fposts%2F%25D9%2583%25D9%258A%25D9%2581-%25D8%25AA%25D8%25AD%25D9%2581%25D8%25B2%25D9%258A%25D9%2586-%25D8%25A7%25D9%2584%25D8%25A3%25D9%258A%25D8%25B6-%25D8%25A3%25D9%2588-%25D8%25B9%25D9%2585%25D9%2584%25D9%258A%25D8%25A9-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D9%2582-%25D9%2581%25D9%2589-%25D8%25A7%25D9%2584%25D8%25AC%25D8%25B3%25D9%2585&amp;redirect_uri=https%3A%2F%2Fwww.supermama.me%2Fposts%2F%25D9%2583%25D9%258A%25D9%2581-%25D8%25AA%25D8%25AD%25D9%2581%25D8%25B2%25D9%258A%25D9%2586-%25D8%25A7%25D9%2584%25D8%25A3%25D9%258A%25D8%25B6-%25D8%25A3%25D9%2588-%25D8%25B9%25D9%2585%25D9%2584%25D9%258A%25D8%25A9-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D9%2582-%25D9%2581%25D9%2589-%25D8%25A7%25D9%2584%25D8%25AC%25D8%25B3%25D9%2585">
+    <span class="visually-hidden">
+     Share via Facebook
+    </span>
+    <img alt="Facebook Icon" src="https://www.supermama.me/images/share/facebook.svg"/>
+   </a>
+  </div>
+  <div class="share-icon share-icon--desktop">
+   <a class="share-icon__facebook" href="https://www.facebook.com/dialog/share?app_id=347982675614455&amp;display=popup&amp;href=https%3A%2F%2Fwww.supermama.me%2Fposts%2F%25D9%2583%25D9%258A%25D9%2581-%25D8%25AA%25D8%25AD%25D9%2581%25D8%25B2%25D9%258A%25D9%2586-%25D8%25A7%25D9%2584%25D8%25A3%25D9%258A%25D8%25B6-%25D8%25A3%25D9%2588-%25D8%25B9%25D9%2585%25D9%2584%25D9%258A%25D8%25A9-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D9%2582-%25D9%2581%25D9%2589-%25D8%25A7%25D9%2584%25D8%25AC%25D8%25B3%25D9%2585&amp;redirect_uri=https%3A%2F%2Fwww.supermama.me%2Fposts%2F%25D9%2583%25D9%258A%25D9%2581-%25D8%25AA%25D8%25AD%25D9%2581%25D8%25B2%25D9%258A%25D9%2586-%25D8%25A7%25D9%2584%25D8%25A3%25D9%258A%25D8%25B6-%25D8%25A3%25D9%2588-%25D8%25B9%25D9%2585%25D9%2584%25D9%258A%25D8%25A9-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D9%2582-%25D9%2581%25D9%2589-%25D8%25A7%25D9%2584%25D8%25AC%25D8%25B3%25D9%2585" rel="noopener noreferrer" target="_blank">
+    <span class="visually-hidden">
+     Share via Facebook
+    </span>
+    <img alt="Facebook Icon" src="https://www.supermama.me/images/share/facebook.svg"/>
+   </a>
+   <a class="share-icon__twitter" href="https://twitter.com/home?status=%D8%B3%D9%88%D8%A8%D8%B1%D9%85%D8%A7%D9%85%D8%A7+-+%D9%83%D9%8A%D9%81+%D8%AA%D8%AD%D9%81%D8%B2%D9%8A%D9%86+%D8%A7%D9%84%D8%A3%D9%8A%D8%B6+%D8%A3%D9%88+%D8%B9%D9%85%D9%84%D9%8A%D8%A9+%D8%A7%D9%84%D8%AD%D8%B1%D9%82+%D9%81%D9%89+%D8%A7%D9%84%D8%AC%D8%B3%D9%85+https%3A%2F%2Fwww.supermama.me%2Fposts%2F%25D9%2583%25D9%258A%25D9%2581-%25D8%25AA%25D8%25AD%25D9%2581%25D8%25B2%25D9%258A%25D9%2586-%25D8%25A7%25D9%2584%25D8%25A3%25D9%258A%25D8%25B6-%25D8%25A3%25D9%2588-%25D8%25B9%25D9%2585%25D9%2584%25D9%258A%25D8%25A9-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B1%25D9%2582-%25D9%2581%25D9%2589-%25D8%25A7%25D9%2584%25D8%25AC%25D8%25B3%25D9%2585" rel="noopener noreferrer" target="_blank">
+    <span class="visually-hidden">
+     Share via Twitter
+    </span>
+    <img alt="Twitter Icon" src="https://www.supermama.me/images/share/twitter.svg"/>
+   </a>
+  </div>
+  <footer class="actions">
+   <div class="row">
+    <div class="column">
+     <header>
+      <div class="section-title">
+       <span class="visually-hidden">
+        Supermama
+       </span>
+       <picture>
+        <source media="(min-width: 1200px)" srcset="https://www.supermama.me/web/images/logo-footer-desktop.png"/>
+        <img alt="Super Mama logo" src="https://www.supermama.me/web/images/super-mama-actions-logo.png"/>
+       </picture>
+      </div>
+     </header>
+     <div class="actions__sign">
+      <ul class="actions__sign__list clearfix">
+       <li class="actions__sign__list__item">
+        <a href="https://www.supermama.me/mam/login">
+         تسجيل الدخول
+        </a>
+       </li>
+       <li class="actions__sign__list__item">
+        <a href="https://www.supermama.me/mam/register">
+         إنشاء حساب جديد
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="actions__download">
+      <p class="actions__download__title">
+       حملي الآن تطبيق تسعة أشهر لمتابعة الحمل أسبوعيا
+      </p>
+      <div class="actions__download__list clearfix">
+       <div class="actions__download__list__item actions__download__list__item--google">
+        <a href="https://play.google.com/store/apps/details?id=com.supermama.supermama" rel="noopener noreferrer" target="_blank">
+         <img alt="Google Play" data-src="https://www.supermama.me/web/images/google-play-badge.png"/>
+        </a>
+       </div>
+       <div class="actions__download__list__item">
+        <a href="https://itunes.apple.com/us/app/تسعة-أشهر-متابعة-الحمل-أسبوعيا/id1195425709?mt=8" rel="noopener noreferrer" target="_blank">
+         <svg>
+          <use xlink:href="/web/images/svg-defs.svg#shape-app-store-badge">
+          </use>
+         </svg>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="column">
+     <div class="actions__tags">
+      <ul class="action__tags__list clearfix">
+       <li class="action__tags__list__item">
+        <a href="https://www.supermama.me/all/%D8%A7%D9%84%D8%AD%D9%85%D9%84">
+         الحمل
+        </a>
+       </li>
+       <li class="action__tags__list__item">
+        <a href="https://www.supermama.me/all/%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9">
+         الولادة
+        </a>
+       </li>
+       <li class="action__tags__list__item">
+        <a href="https://www.supermama.me/all/%D8%B1%D8%B6%D8%B9">
+         رضع
+        </a>
+       </li>
+       <li class="action__tags__list__item">
+        <a href="https://www.supermama.me/all/%D8%B5%D8%BA%D8%A7%D8%B1">
+         صغار
+        </a>
+       </li>
+       <li class="action__tags__list__item">
+        <a href="https://www.supermama.me/all/%D8%A3%D8%B7%D9%81%D8%A7%D9%84">
+         أطفال
+        </a>
+       </li>
+       <li class="action__tags__list__item">
+        <a href="https://www.supermama.me/all/%D8%B5%D8%AD%D8%A9-%D9%88%D8%B1%D9%8A%D8%AC%D9%8A%D9%85">
+         صحة وريجيم
+        </a>
+       </li>
+       <li class="action__tags__list__item">
+        <a href="https://www.supermama.me/all/%D9%88%D8%B5%D9%81%D8%A7%D8%AA">
+         وصفات
+        </a>
+       </li>
+       <li class="action__tags__list__item">
+        <a href="https://www.supermama.me/all/%D9%86%D8%B5%D8%A7%D8%A6%D8%AD-%D8%A7%D9%84%D8%B7%D8%A8%D8%AE">
+         نصائح الطبخ
+        </a>
+       </li>
+       <li class="action__tags__list__item">
+        <a href="https://www.supermama.me/all/%D8%A8%D9%8A%D8%AA-3011">
+         بيت
+        </a>
+       </li>
+       <li class="action__tags__list__item">
+        <a href="https://www.supermama.me/all/%D8%AC%D9%85%D8%A7%D9%84-%D9%88%D9%85%D9%88%D8%B6%D8%A9">
+         جمال وموضة
+        </a>
+       </li>
+       <li class="action__tags__list__item">
+        <a href="https://www.supermama.me/all/%D8%B9%D9%84%D8%A7%D9%82%D8%A7%D8%AA">
+         علاقات
+        </a>
+       </li>
+       <li class="action__tags__list__item">
+        <a href="https://www.supermama.me/all/%D9%85%D9%86%D9%88%D8%B9%D8%A7%D8%AA">
+         منوعات
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="column">
+     <div class="search desktop">
+      <p class="search-title">
+       ابحث في سوبرماما
+      </p>
+      <section class="search-form-container">
+      </section>
+     </div>
+     <div class="social-share">
+      <ul class="social-share__list clearfix">
+       <li class="social-share__list__item social-share__list__item--fb">
+        <a href="https://www.facebook.com/supermama.me" rel="noopener noreferrer" target="_blank">
+         <svg>
+          <use xlink:href="/web/images/svg-defs.svg#shape-facebook">
+          </use>
+         </svg>
+        </a>
+       </li>
+       <li class="social-share__list__item social-share__list__item--utube">
+        <a href="https://www.youtube.com/user/SuperMamaVideos" rel="noopener noreferrer" target="_blank">
+         <svg>
+          <use xlink:href="/web/images/svg-defs.svg#shape-utube">
+          </use>
+         </svg>
+        </a>
+       </li>
+       <li class="social-share__list__item social-share__list__item--google">
+        <a href="https://plus.google.com/+SupermamaMe" rel="noopener noreferrer" target="_blank">
+         <svg>
+          <use xlink:href="/web/images/svg-defs.svg#shape-google">
+          </use>
+         </svg>
+        </a>
+       </li>
+       <li class="social-share__list__item social-share__list__item--instagram">
+        <a href="https://www.instagram.com/supermamame/" rel="noopener noreferrer" target="_blank">
+         <svg>
+          <use xlink:href="/web/images/svg-defs.svg#shape-instagram">
+          </use>
+         </svg>
+        </a>
+       </li>
+       <li class="social-share__list__item social-share__list__item--twitter">
+        <a href="https://twitter.com/supermamame" rel="noopener noreferrer" target="_blank">
+         <svg>
+          <use xlink:href="/web/images/svg-defs.svg#shape-twitter">
+          </use>
+         </svg>
+        </a>
+       </li>
+       <li class="social-share__list__item social-share__list__item--pinterest">
+        <a href="https://www.pinterest.com/supermamame/" rel="noopener noreferrer" target="_blank">
+         <svg>
+          <use xlink:href="/web/images/svg-defs.svg#shape-pinterest-logo">
+          </use>
+         </svg>
+        </a>
+       </li>
+       <li class="social-share__list__item social-share__list__item--tumblr">
+        <a href="http://super-mama.tumblr.com/" rel="noopener noreferrer" target="_blank">
+         <svg>
+          <use xlink:href="/web/images/svg-defs.svg#shape-tumblr">
+          </use>
+         </svg>
+        </a>
+       </li>
+       <li class="social-share__list__item social-share__list__item--dailymotion">
+        <a href="http://www.dailymotion.com/supermama" rel="noopener noreferrer" target="_blank">
+         <svg>
+          <use xlink:href="/web/images/svg-defs.svg#shape-dailymotion">
+          </use>
+         </svg>
+        </a>
+       </li>
+      </ul>
+     </div>
+     <ul class="container corporate-links">
+      <li>
+       <a href="https://www.supermama.me/about">
+        من نحن
+       </a>
+      </li>
+      <li>
+       <a href="https://www.supermama.me/privacy-policy">
+        سياسة الخصوصية
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </footer>
+  <script src="https://www.supermama.me/web/scripts/vendor.js?ver=1.3">
+  </script>
+  <script type="text/javascript">
+   var assetsPath = "https://www.supermama.me/web"; var logged_in_admin = false;
+  </script>
+  <script src="https://www.supermama.me/web/scripts/main.js?ver=2.2">
+  </script>
+  <script>
+   saveButton = $('.article__save'); saveButton.click(function(){ $.ajax({ url:'https://www.supermama.me/ajax/saveMamPost', method: 'POST', data: { 'postId': '36024', '_token': 'oqwsILRBv5CffEYhcAii6ymmRoBjLkYvNw9omBuJ', }, success: function(data) { if(data) { togglePostSave(saveButton); } else { window.location = "https://www.supermama.me/mam/login"; } } }); }); function togglePostSave(button) { if(button.hasClass('article__save--active')) { button.removeClass('article__save--active'); } else { button.addClass('article__save--active'); } }
+  </script>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b7e11299b4","applicationID":"82087209","transactionName":"NVJSYRNUWkpRBhYLCwwYcVYVXFtXHxIHAEoDRR5GCFtTVVU1DREQMlZXUA==","queueTime":0,"applicationTime":271,"atts":"GRVRF1tOSUQ=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>

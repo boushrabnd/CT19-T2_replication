@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="ar" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <link href="/imgs/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <style>
+   @font-face{font-family:'DinNext';font-style:normal;font-weight:400;src:url('/css/fonts/dinnext/DinNextRegular.eot?v=1');src:url('/css/fonts/dinnext/DinNextRegular.eot?v=1') format('embedded-opentype'), url('/css/fonts/dinnext/DinNextRegular.woff?v=1') format('woff'), url('/css/fonts/dinnext/DinNextRegular.ttf?v=1') format('truetype'), url('/css/fonts/dinnext/DinNextRegular.svg?v=1#DinNextRegular') format('svg');}@font-face{font-family:'DinNext';font-style:normal;font-weight:600;src:url('/css/fonts/dinnext/DinNextMedium.eot?v=1');src:url('/css/fonts/dinnext/DinNextMedium.eot?v=1') format('embedded-opentype'), url('/css/fonts/dinnext/DinNextMedium.woff?v=1') format('woff'), url('/css/fonts/dinnext/DinNextMedium.ttf?v=1') format('truetype'), url('/css/fonts/dinnext/DinNextMedium.svg?v=1#DinNextMedium') format('svg');}@font-face{font-family:'DinNext';font-style:normal;font-weight:700;src:url('/css/fonts/dinnext/DinNextBold.eot?v=1');src:url('/css/fonts/dinnext/DinNextBold.eot?v=1') format('embedded-opentype'), url('/css/fonts/dinnext/DinNextBold.woff?v=1') format('woff'), url('/css/fonts/dinnext/DinNextBold.ttf?v=1') format('truetype'), url('/css/fonts/dinnext/DinNextBold.svg?v=1#DinNextBold') format('svg');}
+    *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-family:DinNext;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;color:#bf3822;text-decoration:none;}a:active,a:hover{outline:0}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.container{margin-left:auto;margin-right:auto;padding-right:15px;padding-left:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-left:auto;margin-right:auto;padding-right:15px;padding-left:15px}.row{margin-right:-15px;margin-left:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:right}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:right}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:right}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:right}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}}.nav{margin-bottom:0;padding-right:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}@media (min-width:768px){.nav-tabs.nav-justified>li>a{border-bottom:1px solid #ddd;border-radius:4px 4px 0 0}.nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>.active>a:hover,.nav-tabs.nav-justified>.active>a:focus{border-bottom-color:#fff}}.nav-pills>li{float:right}.nav-pills>li>a{border-radius:4px}.nav-pills>li+li{margin-right:2px}.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus{color:#fff;background-color:#bf3822}.nav-stacked>li{float:none}.nav-stacked>li+li{margin-top:2px;margin-right:0}.nav-justified{width:100%}.nav-justified>li{float:none}.nav-justified>li>a{text-align:center;margin-bottom:5px}.nav-justified>.dropdown .dropdown-menu{top:auto;right:auto}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar-header{float:right}}.navbar-fixed-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse{max-height:340px}.navbar-static-top{z-index:1000;border-width:0 0 1px}.navbar-fixed-top,.navbar-fixed-bottom{position:fixed;left:0;right:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top,.navbar-fixed-bottom{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-fixed-bottom{bottom:0;margin-bottom:0;border-width:1px 0 0}.navbar-brand{float:right;padding:15px 15px;font-size:18px;line-height:20px;height:50px}.navbar-brand:hover,.navbar-brand:focus{text-decoration:none}.navbar-brand>img{display:block}@media (min-width:768px){.navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand{margin-right:-15px}}@media (min-width:768px){.navbar-nav{float:right;margin:0}.navbar-nav>li{float:right}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-left{float:left !important}.navbar-right{float:right !important;margin-right:-15px}.navbar-right~.navbar-right{margin-right:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after,.form-horizontal .form-group:before,.form-horizontal .form-group:after,.nav:before,.nav:after,.navbar:before,.navbar:after,.navbar-header:before,.navbar-header:after,.navbar-collapse:before,.navbar-collapse:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after,.form-horizontal .form-group:after,.nav:after,.navbar:after,.navbar-header:after,.navbar-collapse:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}
+    .sr-only {position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0;}
+    @media (min-width: 991px){.navbar-toggle {display: none;}}
+    .navbar-toggle {position: relative;float: left;margin: 10px 0;padding: 6px 8px;background: transparent;border: 0;border-radius: 0;}
+    ul,ol{padding:0;margin:0;list-style: none;}.dropdown-menu{display:none}
+    body{background:#f6f6f6 url(/imgs/bdy_bg.jpg) repeat-x left -280px;font:18px/1.4 'DinNext', Arial, Helvetica, sans-serif;color:#5d5d5f;direction:rtl;text-align:right;margin-top:100px;}
+    body.home{margin-top:0;background-position:center top;}
+    .owl-carousel .owl-stage-outer {position: relative;overflow: hidden;}
+    .site-header{padding-top:30px;padding-bottom:30px;border-bottom:solid 3px #dcccbf;background:#fff;display:none;}
+    .home .site-header{display:block;}
+    .logo img{height:90px;}
+    .top-ad{text-align:left;}
+    .top-ad img, .top-ad iframe, .top-ad embed{max-width:100%;}
+    .topnav{background:#f2ece4;font-size:16px;margin-top:30px;display:none;}
+    .topnav:after{content:'';display:block;clear:both;}
+    .ittihad-pdf{background:#bf3822;color:#fff;display:block;height:50px;padding:8px 12px;line-height:32px;font-size:14px;font-weight:bold;}
+    .ittihad-pdf i{float:left;font-size:32px;line-height:50px;overflow:hidden;margin-right:8px;margin:-8px 20px -8px 0;}
+    .ittihad-pdf i:after{margin:0;}
+    .ittihad-pdf:hover{background:#ba8d65;color:#fff;}
+    body:not(.home) .navbar {position:fixed;right:0;left:0;top:0;z-index:1030;}
+    nav.navbar{border-bottom:solid 2px #efefef;background:rgba(255, 255, 255, 0.9);border-radius:0;}
+    .navbar-fixed-top{box-shadow:0 1px 3px rgba(0, 0, 0, 0.05);}
+    nav.navbar:after{content:'';clear:both;display:block;}
+    .navbar-logo{padding:10px 0;margin-left:20px;height:60px;-webkit-transition:all .4s ease-in-out;-moz-transition:all .4s ease-in-out;-o-transition:all .4s ease-in-out;transition:all .4s ease-in-out;}
+    .navbar-logo img{max-height:100%;max-width:100%;width:auto;height:auto;}
+    .home .navbar-logo{height:1px;margin-left:0;overflow:hidden;}
+    .home .navbar-fixed-top .navbar-logo{height:60px;margin-left:20px;}
+    nav.navbar .navbar-collapse{padding:0;}
+    .navbar-nav > li{padding-left:10px;}
+    .navbar-nav > li > a{position:relative;display:block;padding:15px 10px;line-height:28px;font-size:16px;color:#000;}
+    .navbar-nav > li > a span{position:relative;z-index:20;}
+    .navbar-nav > li > a:after{content:'';width:100%;height:3px;background:#000;position:absolute;left:0;right:0;bottom:0;z-index:10;-webkit-transition:all .4s ease-in-out;-moz-transition:all .4s ease-in-out;-o-transition:all .4s ease-in-out;transition:all .4s ease-in-out;}
+    .navbar-nav > li > a i{font-size:11px;margin-right:5px;position:relative;z-index:20;line-height:1; display: inline-block}
+    .navbar-nav > li > a:hover, .navbar-nav > li.on > a, .navbar-nav > li.open > a{color:#fff;background:transparent;}
+    .navbar-nav > li > a:hover:after, .navbar-nav > li.on > a:after, .navbar-nav > li.open > a:after{height:100%;}
+    .navbar-nav .dropdown-menu{left:auto!important;background:#000;border:0;border-radius:0;margin:0;padding:0 10px;width:100%;box-shadow:0 1px 4px rgba(0, 0, 0, 0.1)}
+    .navbar-nav .dropdown-menu li a{display:block;color:#fff;line-height:42px;font-size:14px;border-bottom:solid 1px rgba(255, 255, 255, 0.2);width:100%;padding:0;}
+    .navbar-nav .dropdown-menu li a:hover, .navbar-nav .dropdown-menu li a:focus{background:rgba(255, 255, 255, 0.2);padding-right:5px;}
+    .navbar-nav > li.light-cyan > a:after{background:#4ee8fc;}
+    .navbar-nav > li.deep-cyan > a:after{background:#1f7089;}
+    .navbar-nav > li.vivid-orange > a:after{background:#f5800b;}
+    .navbar-nav > li.aquamarine > a:after{background:#1ee38e;}
+    .navbar-nav > li.strong-violet > a:after{background:#7a39c1;}
+    .navbar-nav > li.moderate-brown > a:after{background:#b38e6b;}
+    .navbar-nav > li.solid-black > a:after{background:#000000;}
+    .navbar-nav > li.strong-scarlet > a:after{background:#bf3822;}
+    .navbar-nav > li.bright-yellow > a:after{background:#ff9f1c;}
+    .navbar-nav > li.rose-madder > a:after{background:#e71d36;}
+    .navbar-nav > li.steel-blue > a:after{background:#348aa7;}
+    .navbar-nav > li.independence > a:after{background:#4f4f59;}
+    .navbar-nav > li.emerald > a:after{background:#32936f;}
+    .navbar-nav > li.fluorescent-orange > a:after{background:#ffbf00;}
+    .navbar-nav > li.paradise-pink > a:after{background:#e83f6f;}
+    .navbar-nav > li.lapis-lazuli > a:after{background:#2274a5;}
+    .navbar-nav > li.maximum-green > a:after{background:#679436;}
+    .navbar-nav > li.limerick > a:after{background:#a5be00;}
+    .navbar-nav > li.anti-flash > a:after{background:#ebf2fa;}
+    .navbar-nav > li.queen-blue > a:after{background:#427aa1;}
+    .navbar-nav > li.sea-blue > a:after{background:#05668d;}
+    .navbar-nav .light-cyan .dropdown-menu{background:#4ee8fc;}
+    .navbar-nav .deep-cyan .dropdown-menu{background:#1f7089;}
+    .navbar-nav .vivid-orange .dropdown-menu{background:#f5800b;}
+    .navbar-nav .aquamarine .dropdown-menu{background:#1ee38e;}
+    .navbar-nav .strong-violet .dropdown-menu{background:#7a39c1;}
+    .navbar-nav .moderate-brown .dropdown-menu{background:#b38e6b;}
+    .navbar-nav .solid-black .dropdown-menu{background:#000000;}
+    .navbar-nav .strong-scarlet .dropdown-menu{background:#bf3822;}
+    .navbar-nav .bright-yellow .dropdown-menu{background:#ff9f1c;}
+    .navbar-nav .rose-madder .dropdown-menu{background:#e71d36;}
+    .navbar-nav .steel-blue .dropdown-menu{background:#348aa7;}
+    .navbar-nav .independence .dropdown-menu{background:#4f4f59;}
+    .navbar-nav .emerald .dropdown-menu{background:#32936f;}
+    .navbar-nav .fluorescent-orange .dropdown-menu{background:#ffbf00;}
+    .navbar-nav .paradise-pink .dropdown-menu{background:#e83f6f;}
+    .navbar-nav .lapis-lazuli .dropdown-menu{background:#2274a5;}
+    .navbar-nav .maximum-green .dropdown-menu{background:#679436;}
+    .navbar-nav .limerick .dropdown-menu{background:#a5be00;}
+    .navbar-nav .anti-flash .dropdown-menu{background:#ebf2fa;}
+    .navbar-nav .queen-blue .dropdown-menu{background:#427aa1;}
+    .navbar-nav .sea-blue .dropdown-menu{background:#05668d;}
+    .site-search{margin-top:10px;background:#fff;border:solid 1px #f2ece4;height:40px;padding-left:40px;position:relative;}
+    .site-search input{height:34px;border:0;padding:0 15px;line-height:34px;font-size:20px;color:#000;width:200px;}
+    .site-search input::placeholder{color:#000;}
+    .site-search a{display:block;width:38px;height:38px;position:absolute;left:0;top:0;color:#000;font-size:22px;line-height:36px;text-align:center;}
+    .site-search a:hover{color:#bf3822;}
+    .mobile-search{display:none;width:40px;height:52px;color:#000;font-size:22px;line-height:46px;text-align:center;margin-top:8px;}
+    .mobile-search.open{background:#efefef;}
+    .navbar-toggle{margin:10px 0;padding:6px 8px;border-radius:0;background:#000;}
+    .navbar-toggle.collapsed{background:transparent;}
+    .navbar-toggle .icon-bar{height:4px;margin-bottom:3px;background:#fff;width:30px;transform:skewx(-54deg);-moz-transform:skewx(-54deg);-webkit-transform:skewx(-54deg);}
+    .navbar-toggle .icon-bar:last-child{margin-bottom:0;}
+    .navbar-toggle.collapsed .icon-bar{background:#000;}
+    .navbar-toggle{margin:10px 0;padding:6px 8px;border-radius:0;background:#000;}
+    .navbar-toggle.collapsed{background:transparent;}
+    .navbar-toggle .icon-bar{height:4px;margin-bottom:3px;background:#fff;width:30px;transform:skewx(-54deg);-moz-transform:skewx(-54deg);-webkit-transform:skewx(-54deg);}
+    .navbar-toggle .icon-bar:last-child{margin-bottom:0;}
+    .navbar-toggle.collapsed .icon-bar{background:#000;}
+    .mainpagewrap{opacity:0;-webkit-transition:all .6s ease-in-out;-moz-transition:all .6s ease-in-out;-o-transition:all .6s ease-in-out;transition:all .6s ease-in-out;}
+    .slim-list-itm h4, .slim-list-itm h3{font-size: 14px;margin:0;font-weight:600;}
+    .slim-list-itm h4 a, .slim-list-itm h3 a{color:#000;}
+    .slim-list-itm h4 a:hover, .slim-list-itm h3 a:hover{color:#bf3822;}
+    .overlay-color h2, .overlay-color h3{font-size:23px;line-height:27px;width:auto;max-width:90%;padding:8px 30px 16px 80px;right:auto;left:-55px;bottom:30px;}
+    .overlay a, a.overlay{color:#fff;-webkit-transition: color 0 ease-in-out;-moz-transition: color 0 ease-in-out;-o-transition: color 0 ease-in-out;transition: color 0 ease-in-out}
+    @media (max-width:1200px){.container{width:990px;}
+      .navbar-nav > li{padding-left:5px;}
+      .navbar-nav > li > a{padding:15px 5px;}
+    }
+    @media (max-width:992px){
+      .container{width:760px;}
+      .site-header{padding-top:15px;padding-bottom:15px;}
+      .site-header .logo{text-align:center;}
+      .top-ad{text-align:center;padding:15px 15px 0;}
+      .navbar-nav{margin:0;}
+      .navbar-collapse{clear:both;overflow-y:auto;}
+      .navbar-nav, .navbar-nav>li{float:none;padding:0;margin-bottom:1px;}
+      .navbar-nav > li > a{padding:5px 10px;position:relative;}
+      .navbar-nav > li > a:after{height:1px;}
+      .navbar-nav > li > a i{position:absolute;left:0;top:0;width:40px;height:100%;text-align:center;line-height:38px;}
+      .navbar-nav>li>.dropdown-menu{position:static;float:none;box-shadow:0 0 0;}
+      .site-search{display:none;}
+      .navbar-collapse {clear: both;overflow-y: auto;display:none;}
+    }
+    @media (max-width:767px){
+      .container{width:100%;}
+      /*.top-ad {display:none;}*/
+      .topnav{position:relative;margin-top:15px;}
+      .topnav > .container{padding:0;}
+      body{margin-top:80px;}
+      body.home{margin-top:0;}
+    }
+    @media (max-width:619px){
+      .logo img{height:49px;}
+    }
+  </style>
+  <title>
+   صحيفة الاتحاد - مسؤولة "هواوي" الموقوفة تواجه تهماً أميركية بالتحايل على العقوبات ضد إيران
+  </title>
+  <script async="" src="/js/jquery.min.js">
+  </script>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Article" property="og:type"/>
+  <meta content="380003235874128" property="fb:app_id"/>
+  <meta content="ar_AR" property="og:locale"/>
+  <!-- GPT Header Part Tag End-->
+  <script>
+   var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function() {
+   var gads = document.createElement('script');
+   gads.async = true;
+   var useSSL = 'https:' == document.location.protocol;
+   gads.src = (useSSL ? 'https:' : 'http:') +
+       '//www.googletagservices.com/tag/js/gpt.js';
+   var node = document.getElementsByTagName('script')[0];
+   node.parentNode.insertBefore(gads, node);
+ })();
+  </script>
+  <script>
+   var gptAdSlots = [];
+ googletag.cmd.push(function() {
+
+
+  var mapping1= googletag.sizeMapping().
+   addSize([100, 100], [88, 31]). 
+   addSize([320, 400], [[320, 50], [300, 50]]). 
+   addSize([320, 700], [[320, 50], [300, 50]]).
+   addSize([750, 200], [728, 90]). 
+   addSize([1050, 200], [[728, 90],[970, 90],[970,250]]).build();
+   
+    var mapping2= googletag.sizeMapping().
+   addSize([100, 100], [88, 31]). 
+   addSize([320, 400], [300, 250]). 
+   addSize([320, 700], [300, 250]).
+   addSize([750, 200], [300, 250]). 
+   addSize([1050, 200], [300, 600]).build();
+   
+   var mapping3= googletag.sizeMapping().
+   addSize([100, 100], [88, 31]). 
+   addSize([320, 400], [300, 250]). 
+   addSize([320, 700], [300, 250]).
+   addSize([750, 200], [300, 250]). 
+   addSize([1050, 200], [300, 250]).build();
+   
+  
+  
+   var mapping4= googletag.sizeMapping().
+   addSize([100, 100], [1, 1]). 
+   addSize([320, 400],[1, 1]). 
+   addSize([320, 700], [1, 1]).
+   addSize([750, 200], [1, 1]). 
+   addSize([1050, 200], [1, 1]).build();
+
+  gptAdSlots[1] = googletag.defineSlot('/5730/alittihad.ae_other', [320, 20], 'leaderboard').							
+  defineSizeMapping(mapping1).
+  setCollapseEmptyDiv(true).
+  addService(googletag.pubads());
+
+  gptAdSlots[2] = googletag.defineSlot('/5730/alittihad.ae_other', [300, 250], 'HPB').							
+  defineSizeMapping(mapping2).
+  setCollapseEmptyDiv(true).
+  addService(googletag.pubads());
+  
+  gptAdSlots[3] = googletag.defineSlot('/5730/alittihad.ae_other', [300, 250], 'mpu').							
+  defineSizeMapping(mapping3).
+  setCollapseEmptyDiv(true).
+  addService(googletag.pubads());
+  
+  gptAdSlots[4] = googletag.defineSlot('/5730/alittihad.ae_other', [1, 1], 'skin').							
+  defineSizeMapping(mapping4).
+  addService(googletag.pubads());
+  
+  googletag.defineOutOfPageSlot('/5730/alittihad.ae_other', 'overlay').addService(googletag.pubads());
+    
+    googletag.defineSlot('/5730/alittihad_native_videos', ['fluid'], 'div-gpt-ad-1543874238718-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+  </script>
+  <!-- GPT Header Part Tag End-->
+  <!-- Google Tag Manager -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-52067102-1">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-52067102-1');
+  </script>
+  <!-- End Google Tag Manager -->
+  <link href="https://www.alittihad.ae/article/78672/2018/مسؤولة-هواوي-الموقوفة-تواجه-تهما-أميركية-بالتحايل-على-العقوبات-ضد-إيران" rel="canonical"/>
+  <link href="https://www.alittihad.ae/articleamp/78672/2018/مسؤولة-هواوي-الموقوفة-تواجه-تهما-أميركية-بالتحايل-على-العقوبات-ضد-إيران" rel="amphtml">
+   <meta content="مسؤولة " name="title" أميركية="" إيران"="" العقوبات="" الموقوفة="" بالتحايل="" تهماً="" تواجه="" ضد="" على="" هواوي"=""/>
+   <meta content="مسؤولة " name="twitter:title" أميركية="" إيران"="" العقوبات="" الموقوفة="" بالتحايل="" تهماً="" تواجه="" ضد="" على="" هواوي"=""/>
+   <meta content="
+
+
+
+" name="twitter:description"/>
+   <meta content="مينغ وانتشو،هواوي،الولايات المتحدة ،الصين،كندا" name="Keywords"/>
+   <meta content="
+
+
+
+" name="description"/>
+   <meta content="
+
+
+
+" property="og:description"/>
+   <meta content="مسؤولة " property="og:title" أميركية="" إيران"="" العقوبات="" الموقوفة="" بالتحايل="" تهماً="" تواجه="" ضد="" على="" هواوي"=""/>
+   <meta content="https://www.alittihad.ae/article/78672/2018/" property="og:url"/>
+   <meta content="https://www.alittihad.ae/assets/images/Articles/750x425/2018/12/20181289226941GA.jpg" property="og:image"/>
+   <meta content="https://www.alittihad.ae/assets/images/Articles/750x425/2018/12/20181289226941GA.jpg" property="twitter:image"/>
+  </link>
+ </head>
+ <body id="PgBody">
+  <form action="./مسؤولة-هواوي-الموقوفة-تواجه-تهما-أميركية-بالتحايل-على-العقوبات-ضد-إيران?ArticleId=78672&amp;YearID=2018" id="form1" method="post" onsubmit="javascript:return WebForm_OnSubmit();">
+   <div class="aspNetHidden">
+    <input id="__EVENTTARGET" name="__EVENTTARGET" type="hidden" value=""/>
+    <input id="__EVENTARGUMENT" name="__EVENTARGUMENT" type="hidden" value=""/>
+    <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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"/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+   </script>
+   <script src="/WebResource.axd?d=eSwvJ29ASq6IIbITfzi4JCEeqU6aBpF7oiOkdXUR0iSs49cSiJBOIGLkUl32r5MS6pR1A6tkKhDdv_KjR55YHOnTQs01&amp;t=636639624820249788" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=v_-IKDmePWh1bStP4mbAWGK3_1BI8xPY99DWEK1XNq0-V5HdryoS1XijYNEygmfXNK840-0C05KZPs-3KB1ldrJCviZs9ckH43NYoIly9fcG6yUMYFI9MXIZ8lnLWXfRuhYZd6MA-7NfBdxBouQxeRxMmTA1&amp;t=ffffffffcd955fc1" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=k0wZR7DILkQp4Hdq-WpaCGcKaYjXOLFn-fCc-PJfxlRTWlP88PSgUEhc5rQ7wOoNKXVxQBRCxCHO-FokXwZ_j4JgghI2F7FrYCYM_f6IhuvRbY1U-FCkgFsODrA7l0uILvD8vNQGu10CrnqlZb-h1aYlHaM1&amp;t=ffffffffcd368728" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=o5t_tgCtzrkE6D9rfE181m5cIuK3vFC2uWvEbe9RicKT7yqx0vO-1_noJFuriqr58V6BgJZ9nCm4LCRR3344seX4ZK_IhJ9SYLNlLnu2RpBCHoAZybW-70rlfNcWmZG-6yG9PshYE98i0J4iaoeuwrGASyGtYYHyyu7i-UTSxhwCYLM_0&amp;t=ffffffffcd368728" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+   </script>
+   <div class="aspNetHidden">
+    <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="2173C2F0"/>
+    <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="sjtJU6qnuwIO+1SlTN6RaZpH0stIUyEtK5k5micO22/llz3OJ6eWKi/j6P56JBJ5seX4f68G7wTAFRoGJBpC8ki0IVJDVIau/g1Ow4RxjwO8N4HoarkhoXRfg28ENh+3vAZz1Qv1hTZtL126HflupnqwAM0TON7UmZzg9UsZm3uxf72fqzrxCH4bjQqd5qiy+5lWMbtU9jUmQBzfS+YryPjowdCy01YNQML2f3dndttBIGpAT6FENSncs77gbZj/EBJ5emb/3UfTypsOUWGkCO+skcdnprkkbfbm44NLtpccMJfyUgofIeHueOGexAt4ia6A65wHwb3PTpgmq7GPyyMX7u8sOr5NWn6xIZLOfYTd60i3S4Y6kSvMEovU1Rrq5qII4yGTddZGzKyjDaRiG4oUae48Uubz38JPV6hNCiv95DtAYXW0wv0kVhh6EQ0NWckVUwoMrmPA8swI3be2i6gq2qw="/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$sc1', 'form1', ['tctl00$upmailList','upmailList'], [], [], 90, 'ctl00');
+//]]>
+   </script>
+   <nav class="navbar">
+    <div class="container">
+     <div class="navbar-wrap">
+      <div class="navbar-logo pull-right">
+       <a href="/" title="صحيفة الاتحاد">
+        <img alt="صحيفة الاتحاد" src="/imgs/logo.png"/>
+       </a>
+      </div>
+      <div class="navbar-header pull-right">
+       <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#mainnav-collapse" data-toggle="collapse" type="button">
+        <span class="sr-only">
+         القائمة الرئيسية
+        </span>
+        <span class="icon-bar">
+        </span>
+        <span class="icon-bar">
+        </span>
+        <span class="icon-bar">
+        </span>
+       </button>
+      </div>
+      <div class="pull-left mobile-search">
+       <i class="co-search">
+       </i>
+      </div>
+      <div class="navbar-left site-search" id="PnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'LinkSearch')">
+       <input class="search-txt" id="txtSearch" name="ctl00$txtSearch" placeholder="ابحث هنا" type="text"/>
+       <a class="search-btn" href="javascript:__doPostBack('ctl00$LinkSearch','')" id="LinkSearch">
+        <i class="co-search">
+        </i>
+       </a>
+      </div>
+      <div class="collapse navbar-collapse" id="mainnav-collapse">
+       <ul class="nav navbar-nav">
+        <li class="dropdown light-cyan">
+         <a href="/section/2/الإمارات">
+          <span>
+           الإمارات
+           <input id="RepHeaderMenu_HiddenSecID_0" name="ctl00$RepHeaderMenu$ctl00$HiddenSecID" type="hidden" value="2"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown sea-blue">
+         <a href="/section/3/عربي-ودولي">
+          <span>
+           عربي ودولي
+           <input id="RepHeaderMenu_HiddenSecID_1" name="ctl00$RepHeaderMenu$ctl01$HiddenSecID" type="hidden" value="3"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown bright-yellow">
+         <a href="/section/26/الاقتصادي">
+          <span>
+           الاقتصادي
+           <input id="RepHeaderMenu_HiddenSecID_2" name="ctl00$RepHeaderMenu$ctl02$HiddenSecID" type="hidden" value="26"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown emerald">
+         <a href="/section/51/الرياضي">
+          <span>
+           الرياضي
+           <input id="RepHeaderMenu_HiddenSecID_3" name="ctl00$RepHeaderMenu$ctl03$HiddenSecID" type="hidden" value="51"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown independence">
+         <a href="/wejhat.aspx">
+          <span>
+           وجهات نظر
+           <input id="RepHeaderMenu_HiddenSecID_4" name="ctl00$RepHeaderMenu$ctl04$HiddenSecID" type="hidden" value="55"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown strong-violet">
+         <a href="/section/33/منوعات">
+          <span>
+           منوعات
+           <input id="RepHeaderMenu_HiddenSecID_5" name="ctl00$RepHeaderMenu$ctl05$HiddenSecID" type="hidden" value="33"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown moderate-brown">
+         <a href="/section/78/ثقافة">
+          <span>
+           ثقافة
+           <input id="RepHeaderMenu_HiddenSecID_6" name="ctl00$RepHeaderMenu$ctl06$HiddenSecID" type="hidden" value="78"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+        <li class="dropdown lapis-lazuli">
+         <a href="/section/133/ملفات">
+          <span>
+           ملفات
+           <input id="RepHeaderMenu_HiddenSecID_7" name="ctl00$RepHeaderMenu$ctl07$HiddenSecID" type="hidden" value="133"/>
+          </span>
+         </a>
+         <ul class="dropdown-menu">
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+     </div>
+    </div>
+   </nav>
+   <div class="mainpagewrap">
+    <div class="container">
+     <div class="box-home box-ad">
+      <div id="leaderboard">
+       <script>
+        googletag.cmd.push(function() { googletag.display('leaderboard'); });
+       </script>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-md-8 article-content">
+       <div class="articlecontentt">
+        <article class="box-home article-page 0" id="ContentPlaceHolder1_ArticleTag" itemscope="" itemtype="http://schema.org/NewsArticle">
+         <meta content="ar" itemprop="inLanguage"/>
+         <meta content="True" itemprop="isFamilyFriendly"/>
+         <meta content="https://www.alittihad.ae/article/78672/2018/مسؤولة-هواوي-الموقوفة-تواجه-تهما-أميركية-بالتحايل-على-العقوبات-ضد-إيران" itemprop="url"/>
+         <meta content="تواجه مينغ وانتشو، المديرة المالية لشركة هواوي الصينية العملاقة للاتصالات، تهماً أميركية مرتبطة بالقيام بأعمال تجارية للتحايل على العقوبات المفروضة على إيران، وفق ما كشفته جلسة استماع لمحكمة كندية بعد أسبوع على توقيف مينغ بطلب أميركي.  وكانت مينغ وانتشو، البالغة 46 عاماً قد اعتقلت في مدينة فانكوفر في الأول من ديسمبر، ..." itemprop="description"/>
+         <meta content="مينغ وانتشو،هواوي،الولايات المتحدة ،الصين،كندا" itemprop="keywords"/>
+         <meta content="تواجه مينغ وانتشو، المديرة المالية لشركة هواوي الصينية العملاقة للاتصالات، تهماً أميركية مرتبطة بالقيام بأعمال تجارية للتحايل على العقوبات المفروضة على إيران، وفق ما كشفته جلسة استماع لمحكمة كندية بعد أسبوع على توقيف مينغ بطلب أميركي.  وكانت مينغ وانتشو، البالغة 46 عاماً قد اعتقلت في مدينة فانكوفر في الأول من ديسمبر، ..." id="ContentPlaceHolder1_MetaItemEntity" itemprop="mainEntityOfPage"/>
+         <div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization" style="display: none;">
+          <span itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+           <img alt="الاتحاد" itemprop="url" src="/imgs/logo.png"/>
+          </span>
+          <span itemprop="name">
+           الاتحاد
+          </span>
+          <meta content="https://www.alittihad.ae" itemprop="url"/>
+          <meta content="https://www.facebook.com/aletihadae" itemprop="sameAs"/>
+          <meta content="https://twitter.com/aletihadae" itemprop="sameAs"/>
+          <meta content="https://instagram.com/aletihadae/" itemprop="sameAs"/>
+          <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+           <meta content="Office 1006 Indigo Icon Tower Jumeirah Lakes Towers Cluster F" itemprop="streetAddress"/>
+           <meta content="Dubai" itemprop="addressLocality"/>
+           <meta content="393475" itemprop="postalCode"/>
+           <meta content="UAE" itemprop="addressCountry"/>
+          </div>
+         </div>
+         <header>
+          <p class="box-home-title box-cat-title">
+           <span>
+            ألوان
+           </span>
+          </p>
+          <h1 itemprop="name headline">
+           مسؤولة "هواوي" الموقوفة تواجه تهماً أميركية بالتحايل على العقوبات ضد إيران
+          </h1>
+          <div class="article-meta">
+           <span class="article-meta-date">
+            <time datetime="2018-12-08T08:36:45+04:00" id="ContentPlaceHolder1_TimePubDate" itemprop="dateCreated datePublished dateModified">
+             8 ديسمبر 2018  -  08:36 AM
+            </time>
+           </span>
+          </div>
+         </header>
+         <div class="article-media">
+          <span>
+           <img alt="مينغ وانتشو، المديرة المالية لشركة هواوي" id="ContentPlaceHolder1_Img1" itemprop="thumbnailUrl image" src="/assets/images/Articles/750x425/2018/12/20181289226941GA.jpg">
+            <p class="article-media-tit">
+             مينغ وانتشو، المديرة المالية لشركة هواوي
+            </p>
+           </img>
+          </span>
+         </div>
+         <div class="article-tags">
+          <a href="/tag/مينغ وانتشو">
+           مينغ وانتشو
+          </a>
+          <a href="/tag/هواوي">
+           هواوي
+          </a>
+          <a href="/tag/الولايات المتحدة">
+           الولايات المتحدة
+          </a>
+          <a href="/tag/الصين">
+           الصين
+          </a>
+          <a href="/tag/كندا">
+           كندا
+          </a>
+         </div>
+         <div class="article-meta" id="ContentPlaceHolder1_DivSourceMetaWriter" itemprop="author" itemscope="" itemtype="http://schema.org/Person" style="display:none">
+          <span class="article-meta-writer" itemprop="name">
+           صحيفة الاتحاد
+          </span>
+         </div>
+         <div class="article-content-editor" itemprop="articleBody">
+          <p>
+           تواجه مينغ وانتشو، المديرة المالية لشركة هواوي الصينية العملاقة للاتصالات، تهماً أميركية مرتبطة بالقيام بأعمال تجارية للتحايل على العقوبات المفروضة على إيران، وفق ما كشفته جلسة استماع لمحكمة كندية بعد أسبوع على توقيف مينغ بطلب أميركي.
+           <br/>
+           <br/>
+           وكانت مينغ وانتشو، البالغة 46 عاماً قد اعتقلت في مدينة فانكوفر في الأول من ديسمبر، خلال تبديلها للطائرات في كندا اثناء توجهها في رحلة من هونغ كونغ الى المكسيك، ما أدى إلى عودة التوتر بين الولايات المتحدة والصين بعد توافقهما على هدنة في حربهما التجارية.
+          </p>
+          <p>
+           وبعد جلسة استماع في محكمة بريتش كولومبيا استمرت طوال النهار، قام القاضي بتأجيل النظر في طلب إطلاق مينغ بكفالة إلى الإثنين، وهي ستبقى حتى ذلك الحين قيد التوقيف.
+           <br/>
+           <br/>
+           وطلب محامي الحكومة الكندية جون جيب-كارسلي من المحكمة رفض إطلاق سراحها بكفالة، لاعتباره أن مينغ متهمة "بالتآمر للتحايل على عدة مؤسسات مالية"، وفي حال إدانتها سيحكم عليها بالسجن لأكثر من 30 عاماً.
+           <br/>
+           <br/>
+           ومينغ على وجه الخصوص متهمة بالكذب على مصرف أميركي، عرّف عنه محاميها بأنه مصرف "هونغ كونغ بانك"، وذلك بزعم استخدامها لاحدى الشركات كوكيل سري لشركة "هواوي" لعقد صفقات تجارية مع إيران في خرق للعقوبات.
+           <br/>
+           <br/>
+           وكانت مينغ، قد نفت بشكل شخصي لمسؤولي المصرف أي علاقة مباشرة لـ"هواوي" والشركة الوكيلة "سكاي كوم"، في الوقت الذي أكد فيه جيب-كارسلي أن "سكاي كوم هي هواوي"، وهذا ما وضع المصرف في موقف ضعيف ازاء انتهاك العقوبات ضد ايران.
+           <br/>
+           <br/>
+           وتعود المزاعم بعمليات التحايل التي قامت بها مينغ الى عام 2013. وكانت مينغ عضوا في مجلس ادارة "سكاي كوم" قبل نحو عقد، لكن الشركة بيعت لاحقا، وفق محاميها ديفيد مارتن.
+          </p>
+          <p>
+           ومع ذلك تدّعي السلطات الأميركية أن "هواوي" استمرت بالسيطرة على "سكاي كوم"، مع اشارة جب-كارسلي الى أن موظفي "سكاي كوم" يحملون بطاقات تعريف من "هواوي" ويستخدمون بريدها الإلكتروني.
+          </p>
+          <p>
+           ولفت جيب-كارسلي الى أن مينغ تعمّدت بشكل منتظم تجنّب المرور عبر الولايات المتحدة خلال العام الماضي منذ أن أصبحت على علم بالتحقيق في القضية، واعتبر انه بسبب ثرائها وعلاقاتها السياسية وعدم ارتباطها بأي علاقة بكندا، فإن هناك خطر بأن تفر من البلاد في حال اطلاقها بكفالة.
+           <br/>
+           <br/>
+           وقالت "هواوي" في بيان الجمعة إنها "ستواصل متابعة جلسة الاستماع حول الكفالة" الأسبوع المقبل، معربة عن "ثقتها بأن النظامين القانونيين الكندي والأميركي سيتوصلان إلى النتيجة الصحيحة".
+           <br/>
+           <br/>
+           وتم توقيف مينغ في كندا، في اليوم الذي عقدت فيه قمة بين الرئيس الاميركي دونالد ترامب ونظيره الصيني شي جينبينغ اتفقا خلاله على هدنة في الحرب التجارية المستعرة بين البلدين.
+           <br/>
+           <br/>
+           وتقول الصين إن مينغ ابنة مؤسس هواوي رن زتشنغفي المهندس السابق في جيش التحرير الشعبي الصيني، لم ترتكب أي مخالفات لا في كندا أو الولايات المتحدة، وطالبت بإطلاق سراحها.
+          </p>
+          <p>
+           <strong>
+            اقرأ أيضاً....
+           </strong>
+           <a href="../article/78366/2018/%D8%A7%D8%B9%D8%AA%D9%82%D8%A7%D9%84-%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-%D9%84%D8%B4%D8%B1%D9%83%D8%A9-%D9%87%D9%88%D8%A7%D9%88%D9%8A-%D8%A8%D9%83%D9%86%D8%AF%D8%A7-%D9%88%D8%A7%D9%84%D8%B5%D9%8A%D9%86-%D8%AA%D8%AD%D8%AA%D8%AC">
+            اعتقال المديرة المالية لشركة هواوي بكندا والصين تحتج
+           </a>
+          </p>
+         </div>
+         <div class="article-meta" id="ContentPlaceHolder1_DivSourceMeta">
+          <span class="article-meta-writer">
+           المصدر: آ ف ب
+          </span>
+         </div>
+        </article>
+       </div>
+      </div>
+      <div class="col-md-4 article-side">
+       <div class="article-side-cont">
+        <h2 class="article-quote" style="display: none">
+        </h2>
+        <div class="box-side box-s-ad">
+         <div id="mpu">
+          <script>
+           googletag.cmd.push(function() { googletag.display('mpu'); });
+          </script>
+         </div>
+        </div>
+        <div class="box-side box-s-ad">
+         <div id="HPB">
+          <script>
+           googletag.cmd.push(function() { googletag.display('HPB'); });
+          </script>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="row classic-grid-list article-related-list">
+      <h3 class="box-home-title">
+       <span>
+        اقرأ أيضا
+       </span>
+      </h3>
+      <div class="col-md-3 col-xs-6">
+       <div class="classic-grid-itm" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="1" itemprop="position"/>
+        <a href="/article/16895/2019/ارتفاع-عدد-القتلى-الصحفيين-في-المكسيك-منذ-بداية-العام" itemprop="url">
+         <img alt="ارتفاع عدد القتلى الصحفيين في المكسيك منذ بداية العام" itemprop="image" src="/assets/images/Articles/360x210/2019/3/20193171072590KO.jpg"/>
+        </a>
+        <h3 itemprop="name">
+         <a href="/article/16895/2019/ارتفاع-عدد-القتلى-الصحفيين-في-المكسيك-منذ-بداية-العام">
+          ارتفاع عدد القتلى الصحفيين في المكسيك منذ بداية العام
+         </a>
+        </h3>
+       </div>
+      </div>
+      <div class="col-md-3 col-xs-6">
+       <div class="classic-grid-itm" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="2" itemprop="position"/>
+        <a href="/article/14369/2019/زلزالان-قويان-يضربان-مناطق-في-الفلبين" itemprop="url">
+         <img alt="زلزالان قويان يضربان مناطق في الفلبين" itemprop="image" src="/assets/images/Articles/360x210/2019/3/20193684324916IQ.jpg"/>
+        </a>
+        <h3 itemprop="name">
+         <a href="/article/14369/2019/زلزالان-قويان-يضربان-مناطق-في-الفلبين">
+          زلزالان قويان يضربان مناطق في الفلبين
+         </a>
+        </h3>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="container footer-line">
+    </div>
+    <div class="box-home box-ad container" style="display:none">
+    </div>
+   </div>
+   <footer class="main-footer">
+    <div class="footer-logo">
+     <div class="container">
+      <a href="/" title="صحيفة الاتحاد">
+       <img alt="صحيفة الاتحاد" src="/imgs/logo.png"/>
+      </a>
+     </div>
+    </div>
+    <div class="social-footer">
+     <div class="container">
+      <h4>
+       تواصل معنا
+      </h4>
+      <ul>
+       <li>
+        <a href="https://www.facebook.com/aletihadae" id="a_Website_Facebook" target="_blank" title="Facebook">
+         <i class="co-facebook-official">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a href="https://twitter.com/aletihadae" id="a_Website_Twitter" target="_blank" title="Twitter">
+         <i class="co-twitter-1">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a href="https://instagram.com/aletihadae/" id="a_Website_Instagram" target="_blank" title="Instagram">
+         <i class="co-instagram">
+         </i>
+        </a>
+       </li>
+       <li style="display:none">
+        <a href="#" target="_blank">
+         <i class="co-whatsapp">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a href="/rss_feed.aspx" id="a_Website_RSS" title="RSS Feed">
+         <i class="co-rss">
+         </i>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer-blocks">
+     <div class="container">
+      <div class="row">
+       <div class="col-md-4 footer-links-list">
+        <a href="/section/2/الإمارات">
+         الإمارات
+        </a>
+        <a href="/section/3/عربي-ودولي">
+         عربي ودولي
+        </a>
+        <a href="/section/26/الاقتصادي">
+         الاقتصادي
+        </a>
+        <a href="/section/51/الرياضي">
+         الرياضي
+        </a>
+        <a href="/section/55/وجهات-نظر">
+         وجهات نظر
+        </a>
+        <a href="/section/33/منوعات">
+         منوعات
+        </a>
+        <a href="/section/78/ثقافة">
+         ثقافة
+        </a>
+        <a href="/section/133/ملفات">
+         ملفات
+        </a>
+       </div>
+       <div class="col-md-8 footer-maillist">
+        <h4>
+         الاشتراك للحصول على ملخص أسبوعي علي بريدك الإلكتروني
+        </h4>
+        <div id="upmailList">
+         <div class="maillist-form">
+          <input id="txtEmailList" name="ctl00$txtEmailList" placeholder="بريدك الإلكتروني" type="text"/>
+          <span class="alert alert-danger" id="RequiredFieldValidator2" style="display:none;">
+           من فضلك ادخل بريدك الالكتروني
+          </span>
+          <span class="alert alert-danger" id="RegEmail" style="display:none;">
+           من فضلك أدخل بريد الكتروني صحيح
+          </span>
+          <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$LinkMailList", "", true, "EmailListVGroup", "", false, true))' id="LinkMailList">
+           اشترك
+          </a>
+         </div>
+        </div>
+        <div class="mobile-download">
+         <p>
+          تحميل التطبيق
+         </p>
+         <a href="https://play.google.com/store/apps/details?id=com.aletihadnew.distribution" target="_blank">
+          <i class="co-android">
+          </i>
+         </a>
+         <a href="https://itunes.apple.com/ae/app/al-etihad-%D8%A7%D9%84%D8%A7%D8%AA%D8%AD%D8%A7%D8%AF/id987908202" target="_blank">
+          <i class="co-apple">
+          </i>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="row footer-rits">
+       <div class="col-md-4">
+        حقوق النشر محفوظة لصحيفة الاتحاد 2019
+       </div>
+       <div class="col-md-8 footer-rits-links">
+        <a href="/about-emirates">
+         عن الإمارات
+        </a>
+        <a href="/about-us">
+         عن الاتحاد
+        </a>
+        <a href="/privacy">
+         بيان الخصوصية
+        </a>
+        <a href="/Terms">
+         شروط الخدمة
+        </a>
+        <a href="https://www.tawzea.ae/ar/adm-publications" target="_blank">
+         الاشتراكات
+        </a>
+        <a href="/map.aspx">
+         خريطة الموقع
+        </a>
+        <a href="/contact.aspx">
+         اتصل بنا
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+   <div class="social-share" id="DivSocialShare">
+    <a class="share-desktop" href="#">
+     <i class="co-left-open-1">
+     </i>
+    </a>
+    <a class="share-mobile" href="#">
+     <i class="co-down-open-1">
+     </i>
+    </a>
+    <div class="social-share-links">
+     <a class="fb a_FaceBook" href="javascript:void(0)" id="a_FaceBook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.alittihad.ae/article/78672/2018/&amp;t=', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600')" title="شارك المحتوي علي فيسبوك">
+      <i class="co-facebook">
+      </i>
+     </a>
+     <a class="tw a_Twitter" href="javascript:void(0)" id="a_Twitter" onclick="window.open('http://twitter.com/intent/tweet?url=https://www.alittihad.ae/article/78672/2018/&amp;text=مسؤولة &quot;هواوي&quot; الموقوفة تواجه تهماً أميركية بالتحايل على العقوبات ضد إيران&amp;via=aletihadae', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600')" title="شارك المحتوي علي تويتر">
+      <i class="co-twitter-1">
+      </i>
+     </a>
+     <a class="gp a_GPlus" href="javascript:void(0)" id="a_GPlus" onclick="window.open('https://plus.google.com/share?url=https://www.alittihad.ae/article/78672/2018/', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600')" title="شارك المحتوي علي جوجل بلس">
+      <i class="co-gplus-1">
+      </i>
+     </a>
+     <a class="wa a_whatsapp hidden-lg" data-text="" href="whatsapp://send?text= %0A https://www.alittihad.ae/article/78672/2018/" id="a_whatsapp" title="شارك المحتوي علي واتساب">
+      <i class="co-whatsapp">
+      </i>
+     </a>
+    </div>
+   </div>
+   <link href="/css/components.min.css?ver=2.8" rel="stylesheet"/>
+   <link href="/css/style.css?ver=3.7" rel="stylesheet"/>
+   <script src="/js/components.min.js?ver=2.8">
+   </script>
+   <script src="/js/scripts.min.js?ver=1.5?ver=2.9">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+var Page_Validators =  new Array(document.getElementById("RequiredFieldValidator2"), document.getElementById("RegEmail"));
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+var RequiredFieldValidator2 = document.all ? document.all["RequiredFieldValidator2"] : document.getElementById("RequiredFieldValidator2");
+RequiredFieldValidator2.controltovalidate = "txtEmailList";
+RequiredFieldValidator2.errormessage = "من فضلك ادخل بريدك الالكتروني";
+RequiredFieldValidator2.display = "Dynamic";
+RequiredFieldValidator2.validationGroup = "EmailListVGroup";
+RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator2.initialvalue = "";
+var RegEmail = document.all ? document.all["RegEmail"] : document.getElementById("RegEmail");
+RegEmail.controltovalidate = "txtEmailList";
+RegEmail.errormessage = "من فضلك أدخل بريد الكتروني صحيح";
+RegEmail.display = "Dynamic";
+RegEmail.validationGroup = "EmailListVGroup";
+RegEmail.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+RegEmail.validationexpression = "\\w+([-.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator2'));
+}
+
+document.getElementById('RegEmail').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegEmail'));
+}
+//]]>
+   </script>
+  </form>
+ </body>
+</html>

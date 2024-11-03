@@ -1,0 +1,2162 @@
+<input id="nums" style="display:none" value="3"/>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <link href="favicon.ico" rel="shortcut icon" title="Favicon"/>
+  <meta content="width=device-width" name="viewport"/>
+  <link href="css/style(1).css" id="magz-style-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="css/swipemenu.css" id="swipemenu-css" media="all" rel="stylesheet" type="text/css"/>
+  <!--<link rel="stylesheet" id="flexslider-css" href="css/flexslider.css" type="text/css" media="all">-->
+  <link href="css/bootstrap.css" id="bootstrap-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="css/bootstrap-responsive.css" id="bootstrap-responsive-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="css/jquery.simplyscroll.css" id="simplyscroll-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="css/ie.css" id="ie-styles-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="bootstrap/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="css/astyle.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="css/font-awesome.css" rel="stylesheet"/>
+  <link href="jquery.marquee/css/jquery.marquee.css" media="all" rel="stylesheet" type="text/css">
+   <link href="css/animate.css" rel="stylesheet"/>
+   <script src="js/jquery-2.1.3.min.js" type="text/javascript">
+   </script>
+   <script src="js/html5.js" type="text/javascript">
+   </script>
+   <script src="js/bootstrap.min.js" type="text/javascript">
+   </script>
+   <script src="js/jquery.simplyscroll.js" type="text/javascript">
+   </script>
+   <script src="js/jquery.idTabs.min.js" type="text/javascript">
+   </script>
+   <script src="js/jquery.sidr.min.js" type="text/javascript">
+   </script>
+   <script src="js/custom.js" type="text/javascript">
+   </script>
+   <script src="jquery.marquee/lib/jquery.marquee.js" type="text/javascript">
+   </script>
+   <script src="js/jquery.marquee.min.js" type="text/javascript">
+   </script>
+   <link href="styles/monthly.css" rel="stylesheet"/>
+   <script src="js/monthly.js" type="text/javascript">
+   </script>
+   <style>
+    body{direction:rtl}
+.pagination>li{float:right}
+#fastnewspanel{overflow:hidden}
+.title_bar
+{
+    font-size: 28px;
+    margin: 15px 0;
+    color: #23527c;
+    text-align: center;
+    padding: 0;
+    font-family:"HelveticaNeueBold";
+}    
+.sp-next-arrow:after, .sp-next-arrow:before, .sp-previous-arrow:after, .sp-previous-arrow:before{
+box-shadow: -1px 0px 3px #2B2B2B;
+}
+.fa:before {
+    font-family: "FontAwesome";
+}
+.fa:hover{color:#933c67}
+.fa{transition:all 0.3s}
+.glyphicon{transition:all 0.3s}
+.glyphicon:hover{color:#933c67}
+.dropdown:hover > a:first-child{background:#303e45;color:#fff !important}
+.dropdown-menu{right:0;left:inherit;text-align:right;}
+.footermenu {text-align:center;direction: rtl;   }  
+.footermenu li {    
+	list-style: none;
+    display: inline-block;
+    padding-top:7px;
+    padding-bottom:7px;
+    padding-right:20px;
+    padding-left:20px;
+	}
+.footermenu li a{
+	color:#fff;
+	font-size:16px;
+	
+}
+#s_button {
+    margin: 5px;
+    margin-top: 5px !important;
+    height: 29px;
+}
+.bx-wrapper .bx-caption span{
+	font-size: 1.15em;
+    padding: 16px;
+	font-family: inherit;
+}
+.bx-wrapper{
+	max-width:100% !important;
+	height: 637px;
+}
+.bx-wrapper .bx-caption{text-align:right;}
+@media (min-width:1199px){
+.bx-viewport{height: 637px !important;}
+.bxslider li{height: 637px !important;}
+.bxslider li img{height: 100%;}
+.bxslider {height: 637px !important;}
+}
+
+.camera_fakehover{
+	width: 70% !important;
+	float: right;
+}
+.camera_src{
+	float:right;
+}
+.camera_thumbs_cont ul li{
+	display: block !important;
+}
+.newTitle{
+transition:all 0.5s;
+}
+.slidercontent{
+	float: left !important;
+    margin-right: 10px !important;
+  
+}
+.camera_thumbs{
+	float: right;
+    margin-right: 15px;
+}
+.camera_wrap{
+margin-bottom:0 !important;
+}
+.camera_wrap{
+	max-height:355px; 
+}
+a{color:#23527c;transition:all 0.5s;-moz-transition:all 0.5s;text-decoration:none !important}
+			a:hover{color:#933c67;transition:all 0.5s;-moz-transition:all 0.5s;text-decoration:none !important}
+.sp-caption-container {
+       text-align: center;
+    /* margin-bottom: 10px; */
+    position: absolute;
+    top: 62%;
+    z-index: 999999;
+    width: 100%;
+    text-align: right;
+    left: 0 ;
+    top: -40px;
+    margin: 0;
+    color: #933c67;
+    font-size: 2em;
+    height: 35px;
+    font-family: "HelveticaNeueBold";
+    overflow: hidden;
+    font-weight: normal;
+}
+.sp-left-thumbnails .sp-thumbnail-container, .sp-right-thumbnails .sp-thumbnail-container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+#example5 .sp-thumbnail-text {
+    min-width: 300px !important;
+    height: 101px;
+	border-bottom: 1px solid #E6E6E6;
+}
+#example5 .sp-thumbnail-image-container {
+    width: 0 !important;
+    height: 0 !important;
+    display: none;
+}
+.sp-thumbnail-text{
+background-color:inherit !important;
+	text-align:right;
+}
+
+.sp-slides-container{
+	border-top: 2px solid #491D5A;
+}
+.sp-thumbnail-title{
+	color:#4d4d4d;
+}
+
+.sp-selected-thumbnail .sp-thumbnail-title{
+	color:#933c67;
+}
+.header-gradiant{
+	font-size:1.8em;
+	color:#933c67;
+	font-family:"HelveticaNeueBold";
+	text-align:right;
+}
+.b-ol-list-text-container{text-align:right}
+
+.simply-scroll-clip{
+	max-width: inherit !important;
+}
+.image130 div{
+	top: 0;
+    text-align: justify !important;
+    float: right;
+    direction: rtl;
+	}
+.image130:hover > .thumbnail img{
+	width:120% !important;
+}
+.wafaimp div{
+	top: 80%;
+    background: rgba(0, 0, 0, 0.48);
+    right: 0;
+    left: 0;
+    margin:0 10px;
+    padding: inherit;
+	transition:all 0.3s;
+}
+.wafaimp{background-size:100% !important;transition:all 0.3s;}
+.wafaimp:hover{
+	background-size:108% !important;
+	background-position:top center;
+	transition:all 0.3s;
+}
+.wafaimp:hover > div{
+	top:0;
+    background: rgba(0, 0, 0, 0.48);
+    right: 0;
+    left: 0;
+    margin: 0 10px;
+    padding: 29px;
+	transition:all 0.3s;
+}
+.b-ol-list-text-container1:hover{
+	-webkit-animation: mymove 0.5s; /* Chrome, Safari, Opera */ 
+    animation: mymove 0.5s;
+	
+}
+@-webkit-keyframes mymove {
+	0% 	 {box-shadow:0 0 0 rgba(53, 53, 53, 0.0);}
+    50%  {box-shadow:0 0 20px rgba(53, 53, 53, 0.95);}
+    100% {box-shadow:0 0 0 rgba(53, 53, 53, 0.95);}
+}
+
+.studies:hover > .header-gradiant{
+	-webkit-animation: mymove2 0.7s; /* Chrome, Safari, Opera */ 
+    animation: mymove2 0.7s;
+}
+.reports:hover > .header-gradiant{
+	-webkit-animation: mymove3 0.7s; /* Chrome, Safari, Opera */ 
+    animation: mymove3 0.7s;
+}
+.ta7:hover > .header-gradiant{
+	-webkit-animation: mymove4 0.7s; /* Chrome, Safari, Opera */ 
+    animation: mymove4 0.7s;
+}
+@-webkit-keyframes mymove2 {
+	0% 	 {box-shadow: inset 0px 0px 4px rgba(147, 60, 103, 0.0)}
+    50%  {box-shadow: inset 0px 0px 4px rgba(147, 60, 103, 1);}
+    100% {box-shadow: inset 0px 0px 4px rgba(147, 60, 103, 0.0)}
+}
+@-webkit-keyframes mymove3 {
+	0% 	 {box-shadow: inset 0px 0px 4px rgba(0, 102, 146, 0)}
+    50%  {box-shadow: inset 0px 0px 4px rgba(0, 102, 146, 1);}
+    100% {box-shadow: inset 0px 0px 4px rgba(0, 102, 146, 0)}
+}
+@-webkit-keyframes mymove4 {
+	0% 	 {box-shadow: inset 0px 0px 4px rgba(26, 147, 199, 0)}
+    50%  {box-shadow: inset 0px 0px 4px rgba(26, 147, 199, 1);}
+    100% {box-shadow: inset 0px 0px 4px rgba(26, 147, 199, 0)}
+}
+.simply-scroll .simply-scroll-list li {
+
+    max-width: inherit;
+    width: initial;
+}
+.nav > li > a{
+	text-shadow:inherit !important;
+}
+.sidr ul li{text-align:right;}
+.sidr ul li:first-child{text-align:inherit;}
+
+@media (max-width:767px){
+.wafaotherlinks{padding:0 !important}
+.navbar{display:none;}
+#logo{padding:0 !important}
+.topembed{display:none}
+.bx-wrapper{
+	height:auto !important;
+}
+#intr .span10{
+	width:calc(100% - 130px) !important;
+	float:left;
+	padding-top: 4px;
+}
+#intr .span2{
+	padding:0;		
+	width: 96px !important;
+	float:right;
+	margin-top: 0px;
+}
+.js-marquee
+{
+	color:White;
+	font-size:15px;
+}
+   </style>
+   <script type="text/javascript">
+    jQuery(function($) {
+    $("#searchshow").click(function() {
+        $(".formpanel").stop().toggle(300);
+        $("#searchkey").focus();
+    });
+        $(".socmed ul li a").hover(function() {
+            $(this).attr("class", "animated fadeIn");
+        }, function() {
+            $(this).attr("class", "");
+        });
+    });
+    jQuery(function($) {
+        $('.marquee').marquee({
+            direction: 'right',
+            pauseOnHover: true,
+            duration: 10000
+        });
+        $("#marquee").marquee();
+    });
+   </script>
+   <script>
+    jQuery(function($) {
+        var nums=$("#nums").val();
+        //var nums = 7;
+        var menuwidth = $(".navbar").width() - 0.5;
+        var liwidth = menuwidth / nums;
+        //$(".liwidth").css("width", liwidth);
+
+        $(".liwidth").css("text-align", "center");
+    });
+   </script>
+   <meta content="" http-equiv="Description"/>
+   <meta content="" http-equiv="Keywords"/>
+   <title>
+    رصد الانتهاكات الإسرائيلية للصحفيين خلال عام  2015 | مركز المعلومات الوطني الفلسطيني
+   </title>
+   <meta content="وكالة الأنباء والمعلومات الفلسطينية - وفا" property="og:site_name">
+    <meta content="ar_pages.aspx?id=9633" property="og:url">
+     <meta content="ar_pages.aspx?id=9633" name="twitter:url">
+      <meta content="summary" name="twitter:card">
+       <meta content="رصد الانتهاكات الإسرائيلية للصحفيين خلال عام  2015" property="og:title"/>
+       <meta content="" property="og:description"/>
+       <meta content="https://www.jdeco.net/images/fb_logo.png" property="og:image"/>
+       <link href="https://www.jdeco.net/images/fb_logo.png" rel="image_src" type="image/png">
+        <style>
+         .header-gradiant{
+            font-size:1.4em;
+        }
+        .list li > a{
+            /*font-size:14px;*/
+        }
+        </style>
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76306428-1', 'auto');
+  ga('send', 'pageview');
+        </script>
+       </link>
+      </meta>
+     </meta>
+    </meta>
+   </meta>
+  </link>
+ </head>
+ <body>
+  <form action="./ar_page.aspx?id=9633" id="form1" method="post">
+   <div class="aspNetHidden">
+    <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="/wEPDwUKMTYwMDM0NDA0MGRkoDUyB+8yD5J49ribtxGvYztpIf35g4Vgyc3sxNyzRPw=">
+    </input>
+   </div>
+   <div class="aspNetHidden">
+    <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="F8819CED"/>
+    <input id="__EVENTTARGET" name="__EVENTTARGET" type="hidden" value=""/>
+    <input id="__EVENTARGUMENT" name="__EVENTARGUMENT" type="hidden" value=""/>
+    <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="/wEdAAPCyvCVmE2BJcimW0UXYcinjgTkjQ87oCyiy3alW6+YLVhKCAMpM3xFq3Kjaj2wLNzmciZujGkdmQ2UOj29W4P9fj/9zLlxRJb+heas8okFBA=="/>
+   </div>
+   <!-- ##### Top Side ##### -->
+   <div style="background:#4d4d4d;min-height:30px;">
+    <div class="container" style="text-align:left;direction:ltr">
+     <a href="#swipe-menu" id="responsive-menu-button" style="right: 20px;z-index: 999999;margin-top: 5px !important;
+    background: #AFAFAF;">
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+     </a>
+     <a href="https://www.facebook.com/pages/WAFA-News-Agency/124368524307970" target="_blank">
+      <img class="animated animated-pulse" src="images/facelogo.png" style="padding-top: 3px;width: 35px;height: 35px;"/>
+     </a>
+     <a href="https://twitter.com/wafa_ps" target="_blank">
+      <img src="images/twitlogo.png" style="padding-top: 3px;width: 35px;height: 35px;"/>
+     </a>
+     <!--<a target=_blank href="#"><img style="padding-top: 3px;" src="images/i1.png"></a>
+     <a target=_blank href="#"><img style="padding-top: 3px;" src="images/i2.png"></a>
+     <a target=_blank href="#"><img style="padding-top: 3px;" src="images/i3.png"></a>-->
+     <a href="https://www.youtube.com/user/WAFAPS" target="_blank">
+      <img src="images/youtubelogo.png" style="padding-top: 3px;width: 35px;height: 35px;"/>
+     </a>
+     <a href="http://english.wafa.ps" target="_blank">
+      <img src="images/i5.png" style="padding-top: 3px;"/>
+     </a>
+     <a href="http://french.wafa.ps" target="_blank">
+      <img src="images/i8.png" style="padding-top: 3px;"/>
+     </a>
+     <a href="ar_search.aspx" id="searchshow">
+      <img src="images/i6.png" style="padding-top: 3px;"/>
+     </a>
+     <div class="formpanel" style="float:right;width:77%;display:none">
+      <div id="pnl_search" onkeypress="javascript:return WebForm_FireDefaultButton(event, 's_button')">
+       <div class="">
+        <input class="btn btn-warning button-gray" id="s_button" name="ctl00$s_button" style="height:23px;padding-top: 3px;float:left" type="submit" value="ابحث"/>
+        <input class="form-control" id="searchkey" name="ctl00$searchkey" style="width:19%;height: 22px;margin-top: 6px;padding: 10px 12px;text-align:left;direction:rtl" type="text"/>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <header class="container" id="header">
+    <div class="row">
+     <div class="col-xs-6 col-md-3 col-sm-3" style="float:right;">
+      <div id="col-xs-12 mast-head">
+       <div id="logo" style="text-align: center;">
+        <a href="index.aspx" rel="home" title="WAFA">
+         <img alt="WAFA" class="img-responsive" src="images/logo.png" style="margin:auto;"/>
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="col-xs-6 col-md-9 col-sm-9">
+      <div class="col-xs-12 col-md-8 col-sm-8 topembed" style="margin-top:0px;border-radius: 5px;float:right;margin-bottom:7px;">
+       <div style="text-align:right">
+        <!-- #####  <embed src="userfiles/flash/wafa_banners.swf" quality="high" bgcolor="#ffffff" width="100%" height="100" name="wafa_ad" align="middle" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />  
+                                       ##### -->
+        <img alt="" class="img-responsive" src="userfiles/flash/header1.gif" style="margin: auto;">
+        </img>
+       </div>
+       <nav class="navbar navbar-inverse clearfix nobot" style="margin-top:20px;">
+        <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+        <div class="nav-collapse" id="swipe-menu-responsive">
+         <ul class="nav">
+          <li>
+           <span id="close-menu">
+            <a class="close-this-menu" href="#">
+             Close
+            </a>
+            <script type="text/javascript">
+             $('a.sidr-class-close-this-menu').click(function () {
+												        $('div.sidr').css({
+												            'right': '-476px'
+												        });
+												        $('body').css({
+												            'right': '0'
+												        });
+												    });
+            </script>
+           </span>
+          </li>
+          <li class="home">
+           <a href="" style="font-size: 1.9em;padding: 5px !important;background: #B3B3B3;border-radius:3px;color: #fff !important;">
+            <i class="fa fa-home">
+            </i>
+           </a>
+          </li>
+          <li class="dropdown liwidth" id="td0">
+           <a class="dropdown-toggle disabled" href="index.aspx" target="_self">
+            الرئيسية
+           </a>
+          </li>
+          <li class="dropdown liwidth" id="td1">
+           <a class="dropdown-toggle disabled" href="ar_page.aspx?id=RF6ESza3533858889aRF6ESz" target="_self">
+            اتصل بنا
+           </a>
+          </li>
+          <li class="dropdown liwidth" id="td2">
+           <a class="dropdown-toggle disabled" href="ar_page.aspx?id=LsQzgua3532907136aLsQzgu" target="_self">
+            من نحن
+           </a>
+          </li>
+         </ul>
+        </div>
+        <!--/.nav-collapse -->
+       </nav>
+       <!-- /.navbar -->
+      </div>
+      <div class="col-xs-12 col-md-4 col-sm-4 wafaotherlinks" style="float:right;margin-bottom:15px;height:95px;padding-left:0px;">
+       <div class="col-xs-12" style="padding:0px;">
+        <a href="index.aspx">
+         <img src="images/info_left.png" style="width:100%;margin-bottom:5px;"/>
+        </a>
+       </div>
+       <div class="col-xs-12" style="padding:0px;">
+        <a href="http://images.wafa.ps" target="_blank">
+         <img src="images/images_left.png" style="width:100%;margin-bottom:5px;"/>
+        </a>
+       </div>
+       <div class="col-xs-12" style="padding:0px;">
+        <a href="http://www.wafa.ps" target="_blank">
+         <img src="images/news_left.png" style="width:100%;margin-bottom:5px;"/>
+        </a>
+       </div>
+      </div>
+      <!--<div class="col-xs-4" style="padding:0px;padding-top:3px;margin-bottom:15px;">
+                            <div class="col-xs-6" style="padding:0px;" ><a href="http://www.wafa.ps" target="_blank" ><img src="images/news.png" style="width:100%;" alt="" /></a></div>
+                            <div class="col-xs-6" style="padding:0px;" ><a href="http://images.wafa.ps" target="_blank" ><img src="images/images.png"  style="width:100%;" alt="" /></a></div>
+                        </div>-->
+     </div>
+    </div>
+   </header>
+   <!-- #masthead -->
+   <!-- End top side -->
+   <!--####### Home Center ########-->
+   <div class="l-main-container" style="min-height:500px">
+    <section class="b-desc-section-container b-diagonal-line-bg-light">
+     <div class="container-fluid" style="background-color:#F2F2F2;padding-top:15px;">
+      <div class="container">
+       <div class="col-xs-12 col-md-9 col-sm-12" style="float:left;">
+        <!-- Middle side -->
+        <div id="center_side_web_pnl">
+         <span id="center_side_ctl00_lbl_content">
+         </span>
+         <div class="row">
+          <div class="col-xs-12 date">
+           <span id="center_side_ctl00_lbl_date">
+           </span>
+          </div>
+         </div>
+         <div class="row text pg_content" style="padding-top:0px;">
+          <div class="col-xs-12" style="">
+           <div class="row">
+            <!-- AddThis Button BEGIN -->
+            <div class="col-md-4 text-left" style="float:left;min-width:120px;" text-="">
+             <a href="#" onclick="return addthis_sendto()" onmouseout="addthis_close()" onmouseover="return addthis_open(this, '', 'http://info.wafa.ps/ar_page.aspx?id=9633', 'رصد الانتهاكات الإسرائيلية للصحفيين خلال عام  2015')">
+              <img alt="Bookmark and Share This Page" height="16" src="images/share.gif" style="border:0" width="125"/>
+             </a>
+             <script src="scripts/share.js" type="text/javascript">
+             </script>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-8 text-right" style="direction:rtl">
+             <a class="stext" href="index.aspx">
+              الرئيسية
+             </a>
+             »
+             <a class="stext" href="ar_page.aspx?id=3j4Egja9164429637a3j4Egj">
+              الانتهاكات الإسرائيلية بحق الصحفيين خلال العام 2015
+             </a>
+             »
+            </div>
+           </div>
+           <!-- AddThis Button END -->
+           <div class="row">
+            <div class="col-xs-12" style="margin-top:0px;">
+             <div align="center" class="col-xs-12" style="padding:7px;">
+              <font class="title" style="text-align:right">
+               رصد الانتهاكات الإسرائيلية للصحفيين خلال عام  2015
+              </font>
+             </div>
+            </div>
+           </div>
+           <div class="row text-center">
+            <div class="col-xs-12">
+            </div>
+           </div>
+           <div class="text">
+            <p align="justify">
+             <strong>
+              1-1-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتدت قوات الاحتلال الإسرائيلي على خمسة مصورين صحفيين خلال قمع مسيرة لنشطاء ضد الاستيطان في قرية النبي صالح وهم: محمد شوشة، وشادي حاتم، عصام الريماوي، وسامر نزال، خالد صبارنة.
+            </p>
+            <p align="justify">
+             <strong>
+              1-1-2015
+             </strong>
+             <br/>
+             <br/>
+             احتجزت قوات الاحتلال الإسرائيلي مراسل فضائية فلسطين (علي دار علي)، على مدخل قرية النبي صالح شمال غرب رام الله لأكثر من 3 ساعات.
+            </p>
+            <p align="justify">
+             <strong>
+              11-1-2015
+             </strong>
+             <br/>
+             <br/>
+             استجوبت شرطة الاحتلال الإسرائيلي في مدينة القدس الصحافي فراس الدبس (مسؤول الإعلام والعلاقات العامة في دائرة الأوقاف الإسلامية في المسجد "الأقصى")، وأخضعته للتحقيق حول عمله الصحافي في دائرة الأوقاف.
+            </p>
+            <p align="justify">
+             <strong>
+              16-1-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب مصور وكالة “وفا” (أيمن النوباني) بقنبلة غاز في الركبة خلال تغطيته لمسيرة كفر قدوم الأسبوعية المنددة بالاستيطان.
+            </p>
+            <p align="justify">
+             <strong>
+              18/1/2014
+             </strong>
+            </p>
+            <p align="justify">
+             شرطة الاحتلال تستهدف بشكل مباشر مراسل موقع "بانيت" وصحيفة "بانوراما" الصحافي حسين العبرة، بقنبلتي غاز وصوت،؛ ما أدى إلى إصابته باختناق وجرح طفيف في قدمه قبل أن يغمى عليه، خلال تغطيته الاشتباكات بين عناصر الشرطة وشبان فلسطينيين في مقبرة مدينة رهط أثناء تشييع الشاب الشهيد سامي الجعار الذي قتل بنيران الشرطة.
+            </p>
+            <p align="justify">
+             <strong>
+              19-1-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتقلت قوات الاحتلال الإسرائيلي الصحافي مجاهد بني مفلح محرر في شبكة "هنا القدس" بعد اقتحام منزله في بلدة بيتونيا غرب رام الله؛ وقام عناصرها بتفتيش المنزل ومصادرة جهاز الحاسوب المنزلي وجهاز الحاسوب المحمول الخاص بمجاهد، وجهازي هاتف جوّال.
+            </p>
+            <p align="justify">
+             <strong>
+              21-1-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتقلت قوات الاحتلال الإسرائيلي الصحفي علاء الطيطي (مراسل قناة الأقصى الفضائية)، بعد مداهمة منزله في مخيم العروب شمال مدينة الخليل.
+            </p>
+            <p align="justify">
+             <strong>
+              23-1-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب المصورين إياد جاد الله، مصور وكالة "وفا"، ومحمد ياسين بقنابل الغاز المسيل للدموع بشكل مباشر، خلال تغطيتهم قمع الاحتلال لمسيرة بلعين الأسبوعية المنددة بالجدار الفاصل.
+            </p>
+            <p align="justify">
+             <strong>
+              24-1-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتقلت قوات الاحتلال الإسرائيلي الصحافي رامي علارية، رئيس تحرير موقع أخبار القدس، من بلدة العيزرية خلال تغطيته للمواجهات هناك وتم الاعتداء عليه بشكل وحشي، وتم الإفراج عنه بكفالة ماليه بقيمه 2000 شيكل؛ بالإضافة إلى جلسة محاكمة في شهر (8)  ووجهت له قوات الاحتلال التصوير في منطقة عسكرية مغلقة.
+            </p>
+            <p align="justify">
+             <strong>
+              30-1-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب المصور الصحفي احمد طلعت بقنبلة غاز في الكتف، خلال تغطيته لقمع الاحتلال لمسيرة كفر قدوم القريبة من قلقيلية.
+            </p>
+            <p align="justify">
+             <strong>
+              1-2-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتقلت شرطة الاحتلال الإسرائيلي الصحفية المقدسية صابرين عبيدات لدى خروجها من المسجد الأقصى عند باب المجلس. وتم الإفراج عنها وإبعادها عن المسجد الأقصى لمدة شهر مع غرامة 500 شيكل.
+            </p>
+            <p align="justify">
+             <strong>
+              4-2-2015
+             </strong>
+             <br/>
+             <br/>
+             أوقفت شرطة الاحتلال الإسرائيلي الصحفية بيان الجعبة من مركز إعلام القدس لدى خروجها من المسجد الأقصى المبارك عبر باب المجلس، وقامت باستجوابها حول عملها الصحفي وتغطيتها للأحداث في الأقصى.
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <strong>
+              5-2-2015
+             </strong>
+             <br/>
+             <br/>
+             فتحت قوات الاحتلال الإسرائيلي نيران رشاشاتها صوب الصحفيان مثنى النجار من إذاعة صوت القدس ويوسف أبو مغيصيب من إذاعة صوت فلسطين أثناء مهمة إعلامية لتغطية استهداف الاحتلال لرعاة الأغنام في منطقة بوابة النمر قرب السياج الحدودي المحيط بقطاع غزة، دون أن تسجل إصابات.
+            </p>
+            <p align="justify">
+             <strong>
+              6-2-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب المصوران محمد ناصر من وكالة الأنباء الفلسطينية "وفا وعبد الرحيم قوصيني من وكالة رويترز بحالة اختناق خلال تغطيتهم استهداف جنود الاحتلال الإسرائيلي بشكل مباشر الطواقم الإعلامية المشاركة في تغطية مسيرة كفر قدوم شرق قلقيلية.
+            </p>
+            <p align="justify">
+             <strong>
+              7-2-2015
+             </strong>
+             <br/>
+             <br/>
+             تعرض طاقم وكالة الأناضول التركية الذي يضم المراسل قيس أبو سمرة، والمصورين عصام الريماوي وصالح حمد، للرشق بحجارة من المستوطنين خلال إعداد تقرير مصور عن عائلة محاصرة داخل مستوطنة بقرية بيت اجزا شمال غرب القدس.
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <strong>
+              9-2-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتدى مستوطن إسرائيلي على مصور قناة رؤيا الأردنية جهاد المحتسب، ومراسلتها نبال فرسخ  خلال تغطيتهما لزراعة أشتال الزيتون في الأراضي المصادرة لصالح مستوطنة عوفرا شرق رام الله.
+            </p>
+            <p align="justify">
+             <strong>
+              13-2-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب كل من مصور وكالة الأناضول التركية (عصام الريماوي) ومحمد تركمان (مصور وكالة رويترز)، بعد أن قام جندي إسرائيلي برشهم  بغاز الفلفل الحارق في وجههما مباشرة، أثناء تغطية مسيرة قرية بلعين الأسبوعية.
+            </p>
+            <p align="justify">
+             <strong>
+              16-2-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتدى جنود الاحتلال الإسرائيلي على المصور في تلفزيون القدس التربوي سامي عمر الفقيه، وقاموا برشه بمادة الفلفل في عيونه أثناء تصويره أحداثا في بلدة أبو ديس غرب القدس؛ ما أدى لإصابته بحالة إغماء.
+            </p>
+            <p align="justify">
+             <strong>
+              22-2-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتدى جنود الاحتلال الإسرائيلي بالضرب بأعقاب البنادق على مصور شبكة فلسطين الإخبارية ( PNN) (وليد العزة) خلال تغطيته اقتحام مخيم عايدة شمال بيت لحم.
+            </p>
+            <p align="justify">
+             <strong>
+              27-2-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب المصوران الصحفيان عبد الرحيم القوصيني من وكالة رويترز بقنبلة غاز في الرقبة،  ومصور وكالة الأنباء الصينية نضال اشتية بأنحاء مختلفة من جسمه، خلال تغطيتهما مسيرة قرية كفر قدوم الأسبوعية شرق قلقيلية.
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <strong>
+              27-2-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب المصور الصحفي أمين علارية من مركز أخبار القدس بجروح خطيرة خلال تغطيته مواجهات بلعين. حيث كانت إصابته  مباشرة  في رأسه وتسببت في  كسر بالجمجمة.
+            </p>
+            <p align="justify">
+             <strong>
+              5-3-2015
+             </strong>
+             <br/>
+             <br/>
+             احتجزت شرطة الاحتلال الإسرائيلي، مراسل التلفزيون الأردني الرسمي (الصحافي رامي الخطيب) ساعة واحدة، خلال تصوير تقرير عند المدخل المؤدي إلى حائط البراق في القدس، بعد أن هددته باقتياده إلى مركز الشرطة للتحقيق معه.
+            </p>
+            <p align="justify">
+             <strong>
+              6-3-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب الصحفيان مصور صحيفة القدس اليومية محمود عليان برصاصة مطاطية في القدم، ومراسلة تلفزيون فلسطين سارة العدرة- بحالة اختناق شديدة خلال تغطية فعالية بوابة القدس في منطقة أبو ديس شمال القدس المحتلة.
+            </p>
+            <p align="justify">
+             <strong>
+              9-3-2015
+             </strong>
+             <br/>
+             <br/>
+             داهمت شرطة الاحتلال الإسرائيلي، مكتب وكالة "كيو برس" في أم الفحم، واعتقلت كلاً من الصحافيين أنس غنايم، وحكمت نعامنة، وساهر غزاوي، وبدر أغبارية، ومحمد خلايلة؛ إضافة إلى اثنين من العاملين فيها؛ بتهمة "إعطاء خدمة لمؤسسة محظورة خارجة عن القانون"، وأطلقت سراحهم في اليوم نفسه بعد التحقيق معهم.
+            </p>
+            <p align="justify">
+             <strong>
+              13-3-2015
+             </strong>
+             <br/>
+             <br/>
+             منعت قوات الاحتلال الاسرئيلي  الصحفي سامي أبو سالم من السفر من معبر بيت حانون لحضور حفل استلام جائزة دولية؛ حيث فاز أبو سالم بالمرتبة الثالثة في مسابقة zzz*zالتصوير الصحفي 2014zzz*z التي تنظمها مؤسسة المصورين النرويجيين.
+            </p>
+            <p align="justify">
+             <strong>
+              13-3-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب المصور الصحافي أكرم دراوشة بعيار معدني مغلف في القدم، خلال تغطيته قمع قوات الاحتلال الإسرائيلي، مسيرة كفر قدوم الأسبوعية، بمحافظة قلقيلية، المناهضة للاستيطان والمطالبة بفتح شارع القرية الرئيس المغلق منذ ما يزيد على أربع عشرة سنة لصالح مستوطنة (قدوميم) المقامة على أراضي القرية.
+            </p>
+            <p align="justify">
+             <strong>
+              16-3-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتقلت قوات  الاحتلال الإسرائيلي الصحفي إسلام سالم (المراسل في شبكة بيت لحم الإخبارية).
+            </p>
+            <p align="justify">
+             <strong>
+              17-3-2015
+             </strong>
+             <br/>
+             <br/>
+             تعرض كل من مصور القناة الفرنسية الأولى (?TF1) (الصحافي جميل قضماني) ومراسلة "فرانس 24"  (ليلى عودة)، لمحاولة تفتيش مهينة عند دخولهما مقر حزب العمل الإسرائيلي في تل أبيب لتغطية الانتخابات؛ إذ طلب منهما الحراس أن يخلعا ملابسهما، فانسحبا من المكان بعد رفضهما الطلب.
+            </p>
+            <p align="justify">
+             <strong>
+              18-3-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتقلت قوات  الاحتلال الإسرائيلي الاحتلال الصحفي إسلام فقهاء من منزله في قرية سنجل شمال رام الله، وأفرجت عنه بعد يوم واحد، بكفالة مالية قدرها ( 5000 شيكل).
+            </p>
+            <p align="justify">
+             <strong>
+              20-3-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب مصور وكالة الأنباء الأوروبية علاء بدارنة برضوض في رجله؛ جراء وقوعه على الأرض بعد مضايقته من قبل جنود الاحتلال الإسرائيلي، خلال تغطيته مسيرة كفر قدوم الأسبوعية، بمحافظة قلقيلية، المناهضة للاستيطان والمطالبة بفتح شارع القرية الرئيس المغلق منذ ما يزيد على 14 عاماً لصالح مستوطنة (قدوميم) المقامة على أراضي القرية.
+            </p>
+            <p align="justify">
+             <strong>
+              28-3-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتدى ?جنود الاحتلال الإسرائيلي على خمسة صحفيين خلال تغطيتهم لمسيرة النبي صالح إحياءً ليوم الأرض، وهم: مصور الوكالة الفرنسية عباس المومني، ومصور وكالة رويترز محمد تركمان، ومصور وكالة الأناضول عصام الريماوي، والمصور شادي حاتم، ومراسلة قناة القدس الفضائية ليندا شلش.
+            </p>
+            <p align="justify">
+             <strong>
+              29-3-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتقلت قوات الاحتلال الإسرائيلي الصحفي علي العويوي مقدم برنامج "السابعة مساءً" بعد مداهمة منزله في مدينة الخليل وتكسير الأبواب ومصادرة جواله وحاسوبه.
+            </p>
+            <p align="justify">
+             <strong>
+              30-3-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيبت مراسلة شبكة هنا القدس شذى حماد بحالة اختناق نتيجة استنشاقها الغاز المسيل للدموع، أثناء تغطيتها قمع قوات الاحتلال، مسيرة إحياء الذكرى الـ39 ليوم الأرض الفلسطيني، في بلدة سلواد شمال شرق مدينة رام الله. فيما أصيب كذلك المصور الصحافي عصام الريماوي.
+            </p>
+            <p align="justify">
+             <strong>
+              30-3-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيبت الصحفية مروة عبيد مراسلة مؤسسة "إيلياء  للإعلام" بقنبلة صوت في القدم أطلقتها شرطة الاحتلال خلال تغطيتها مسيرة يوم الأرض في القدس المحتلة.
+            </p>
+            <p align="justify">
+             <strong>
+              30-3-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتدت قوات الاحتلال الإسرائيلي على الصحافيين خلال تغطيتهم للفعاليات التي نظمت في مختلف المدن والقرى في الضفة الغربية إحياءً لفعاليات يوم الأرض. وتجلت هذه الاعتداءات بشكل ملحوظ في المسيرة المركزية جنوب مدينة نابلس شمال الضفة الغربية.
+             <br/>
+             <br/>
+             ومن بين الصحفيين الذين تم الاعتداء عليهم مصور الوكالة الأوروبية علاء بدارنة، والذي تعرض للضرب المباشر من قبل الجنود ومحاوله منعه من التصوير. فيما أصيب مصور وكالة رامسات مثنى الديك بقنبلة صوت في رجله، كذلك أيمن النوباني مصور وكاله وفا، وأحمد الكيلاني مصور بالميديا.
+            </p>
+            <p align="justify">
+             <strong>
+              3-4-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتقلت قوات الاحتلال الإسرائيلي المصور الصحفي طارق القضماني من شارع صلاح الدين في القدس، واقتادته إلى مركز التحقيق، دون معرفة الأسباب.
+            </p>
+            <p align="justify">
+             <strong>
+              3-4-2015
+             </strong>
+             <br/>
+             <br/>
+             منع جنود الاحتلال الإسرائيلي مراسل ومصور تلفزيون فضائية فلسطين علي دار علي، والصحافية شذى حماد، من  تغطية مواجهات سلواد الأسبوعية شرق رام الله.
+            </p>
+            <p align="justify">
+             <strong>
+              9-4-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتدى جنود الاحتلال الإسرائيلي على مراسلة تلفزيون فلسطين سارة العدرة، ومصور فضائية رؤيا شوشة محمد، والمصور زاهر ابو حسين، خلال تغطيتهم لمسيرة احتجاجية على المارثون الرياضي الذي نظمه المستوطنون على الشارع الرئيسي الواصل بين رام الله ونابلس.
+            </p>
+            <p align="justify">
+             <strong>
+              10-4-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب الصحافي الأرجنتيني فيرناندو بجروح وصفت بالمتوسطة نتيجة إصابته بعيار مطاطي، خلال تغطيته قمع قوات الاحتلال الإسرائيلي مسيرة قرية كفر قدوم الأسبوعية، بمحافظة قلقيلية، المناهضة للاستيطان والمطالبة بفتح شارع القرية الرئيس المغلق منذ ما يزيد على 13 عاماً لصالح مستوطنة (قدوميم) المقامة على أراضي القرية.
+            </p>
+            <p align="justify">
+             <strong>
+              10-4-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب المصور الصحفي الحر محمد ريكاردو برصاصة مطاطية في القدم أطلقها عليه جنود الاحتلال الإسرائيلي خلال تغطيته مواجهات على مدخل مخيم الجلزون شمال رام الله.
+            </p>
+            <p align="justify">
+             <strong>
+              15-4-20
+             </strong>
+             15
+             <br/>
+             <br/>
+             اعتقلت قوات الاحتلال الإسرائيلي مدير صفحة "شبكة أصداء الإخبارية" على "فيسبوك" (Facebook) الصحافي أمين أبو وردة، من منزله في مخيم بلاطة في نابلس. وصادرت جميع معدّاته الإلكترونية من هواتف وحواسيب محمولة.
+            </p>
+            <p align="justify">
+             <strong>
+              17-4-2015
+             </strong>
+             <br/>
+             <br/>
+             استهدف جنود الاحتلال الإسرائيلي الصحفيين بقنابل الغاز خلال تغطيتهم مظاهرة بلعين لإحياء يوم الأسير الفلسطيني؛ ما أدى إلى إصابة مراسلة قناة القدس ليندا شلش بالاختناق الشديد.
+            </p>
+            <p align="justify">
+             <strong>
+              28-4-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب مصور وكالة " شينخوا" الصينية نضال اشتية بعيارين مطاطيين أطلقهما عليه جنود الاحتلال خلال تغطيته فعالية احتجاجية لنشطاء ضد مصانع "جيشوري" الإسرائيلية الموجودة على أراضي طولكرم. وقال اشتية إن الجنود الإسرائيليين أطلقوا الرصاص عليه بشكل متعمد.
+            </p>
+            <p align="justify">
+             <strong>
+              2-5-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتدت قوات الاحتلال الإسرائيلي، على مسيرة الحرية التي دعت إليها نقابة الصحافيين بمناسبة اليوم العالمي لحرية الصحافة على حاجز الكاريتاس في المدخل الشمالي لمدينة بيت لحم؛ وقد أصيب في الاعتداء نقيب الصحافيين د. عبد الناصر النجار بكلتا ساقيه، واصابة عضو الأمانة العامة للنقابة محمد اللحام، والمصور الصحافي في وكالة رويترز محمد أبو هنية بقنابل الصوت والغاز.
+            </p>
+            <p align="justify">
+             <strong>
+              8-5-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب ثلاثة صحافيين بجروح وصفت بالمتوسطة، خلال تغطيتهم قمع قوات الاحتلال الإسرائيلي، مسيرة كفر قدوم الأسبوعية، بمحافظة قلقيلية، المناهضة للاستيطان والمطالبة بفتح شارع القرية الرئيس المغلق منذ ما يزيد على 13 عاماً لصالح مستوطنة (قدوميم) المقامة على أراضي القرية؛ والصحفيون هم: أشرف أبو شاويش مصور «بالميديا» بقنبلة غاز في يده، ومحمد عناية مصور فضائية فلسطين بقنبلة غاز في ذراعه، وأيمن النوباني مصور وكالة «وفا» بقنبلة غاز في يده.
+            </p>
+            <p align="justify">
+             <strong>
+              16-5-2015
+             </strong>
+             <br/>
+             <br/>
+             أصيب الصحافي نضال اشتية مصور وكالة الأنباء الصينية "شينخوا" برصاصة معدنية مغلفة بالمطاط في عينه؛ كما أصيبت المصورة الإيطالية سامانتا كاميزولي برصاصة مماثلة في يدها اليسرى، خلال تغطيتهم قمع قوات الاحتلال الإسرائيلي مسيرةً لإحياء الذكرى الـ 67 للنكبة نظمت على حاجز حوارة جنوب مدينة نابلس.
+            </p>
+            <p align="justify">
+             <strong>
+              17-5-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتدى عدد من المستوطنين وعناصر من الشرطة الإسرائيلية بالعصي والضرب المبرح على ستة صحافيين خلال تغطيتهم مسيرة رفع الأعلام الإسرائيلية السنوية التي يحتفلون خلالها باحتلال مدينة القدس. والصحفيون هم: الصحافي الحر رامي الخطيب، ومراسل القناة الفرنسية الأولى (TF1) جميل قضماني، ومراسل تلفزيون "فلسطين" علي ياسين، ومراسل تلفزيون "رؤيا" جهاد المحسن، والمصور الحر فايز أبو رميلة، ومراسلة "روسيا اليوم" داليا النمري.  كما تم كسر قاعدة الكاميرا للصحافي قضماني، والتي تساوي 35 ألف شيكل، وقاموا بكسر إحدى الكاميرات التي تعود للصحافية النمري.
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <strong>
+              19-5-2015
+             </strong>
+             <br/>
+             <br/>
+             اقتحمت قوة عسكرية احتلالية منزل المصور الصحفي عبد الحفيظ الهشلمون (مصور الوكالة الأوروبية بالخليل)، وقامت بتسليم نجله الصحفي إياد الهشلمون (22 عامًا) (مصور تلفزيون فلسطين) بلاغًا لمراجعة المخابرات الإسرائيلية بعد العبث بمحتويات المنزل وتحطيم أثاثه.
+            </p>
+            <p align="justify">
+             <strong>
+              23-5-2015
+             </strong>
+             <br/>
+             <br/>
+             اعتقلت شرطة الاحتلال الإسرائيلي، مصور وكالة "كيو برس" محمد قزاز، واقتادته من داخل المسجد الأقصى إلى مركز شرطة بيت إلياهو ومركز شرطة القشلة؛ وتعرض خلال ذلك للضرب المبرّح، وأُفرج عنه بعد عشر ساعات، مع شرط الإبعاد عن البلدة القديمة أسبوعاً.
+            </p>
+            <p align="justify">
+             <strong>
+              1-6-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتقلت قوات الاحتلال الإسرائيلي، الصحفي احمد البيتاوي، المحرر في وكالة "قدس برس" إنترناشيونال للأنباء في مدينة نابلس شمال الضفة الغربية المحتلة، وذلك بعد دهم منزله وتفتيشه، كما قاموا بمصادرة جهاز "اللاب توب" الخاص به.
+            </p>
+            <p align="justify">
+             <strong>
+              2-6-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتدت قوات الاحتلال الإسرائيلي، بالضرب على الصحفيين محمد العدم، و شادي زماعرة من  طاقم القدس دوت كوم، ومنعتهم من إعداد تقرير تلفزيوني حول بيت البركة الذي يحاول المستوطنون الاستيلاء عليه، بالقرب من مخيم العروب شمال الخليل.
+            </p>
+            <p align="justify">
+             <strong>
+              4-6-2015
+             </strong>
+            </p>
+            <p align="justify">
+             منعت سلطات الاحتلال الإسرائيلي، الصحفي نضال اشتيه بدخول القدس المحتلة، ليتلقى العلاج اللازم في عينه اليسرى، حيث يعاني من ضعف بالرؤيا وآلام حادة نتيجة النزيف الدائم في العين. بعد إصابته برصاص الاحتلال خلال مواجهات شهدها حاجز حوارة قرب نابلس شمال الضفة الغربية المحتلة قبل نحو أسبوعين.
+            </p>
+            <p align="justify">
+             <strong>
+              12-6-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب مصور تلفزيون فلسطين شامخ الجاغوب بحجر في رأسه بعد قيام قوات الاحتلال الإسرائيلي بمنع الصحفيين من التواجد في مكان آمن لتغطية مواجهات عنيفة شهدتها بلدة سلواد شرق رام الله.
+            </p>
+            <p align="justify">
+             <br/>
+             <strong>
+              17-6-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصدر رئيس الحكومة الإسرائيلية بنيامين نتنياهو، تعليماته إلى وزارة الاتصالات الإسرائيلية للقيام بكل ما بوسعها لاتخاذ الإجراءات اللازمة لإغلاق قناة "فلسطين 48" الفضائية، قبل ساعات من بدء بثها الذي كان قد تقرر في أول شهر رمضان. الجدير ذكره أن القناة لا تزال تبث من الناصرة، وهي تابعة لتلفزيون "فلسطين" الرسمي  ومموّلة من قبل السلطة الفلسطينية.
+            </p>
+            <p align="justify">
+             <strong>
+              19-6-2015
+             </strong>
+            </p>
+            <p align="justify">
+             احتجزت قوات الاحتلال الإسرائيلي، مصور وكالة اسوشيتدبرس عماد سعيد، عدة ساعات، ومنعته من تصوير وتغطية إطلاق النار على مستوطنين قرب قرية دير بزيع بالقرب من  رام الله.
+            </p>
+            <p align="justify">
+             <strong>
+              21-6-2015
+             </strong>
+            </p>
+            <p align="justify">
+             منع الاحتلال الإسرائيلي د. تحسين الاسطل نائب نقيب الصحفيين من التوجه إلى رام الله برئاسة وفد من نقابة الصحفيين الفلسطينيين بغزة .حيث ابلغ الارتباط المدني الفلسطيني د. الاسطل برفض الاحتلال دخوله إلى المعبر والمغادرة إلى الضفة لأسباب أمنية  فيما تمكن بقية الوفد من المغادرة.
+            </p>
+            <p align="justify">
+             <strong>
+              24-6-2015
+             </strong>
+            </p>
+            <p align="justify">
+             جددت سلطات الاحتلال الإسرائيلي، الاعتقال الإداري للصحفي عبد الرازق ياسين فرّاج، لمدة أربعة أشهر أخرى، وذلك للمرة الخامسة على التوالي. والصحفي فرّاج وهو من مخيم الجلزون شمال مدينة رام الله، اعتقل لدى الاحتلال لأكثر من عشر سنوات على فترات متفرقة.
+            </p>
+            <p align="justify">
+             <strong>
+              25-6-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتقلت قوات الاحتلال الإسرائيلي،ـ الصحفية الفلسطينية فاطمة أبو سبيتان مراسلة وكالة "قدس برس إنترناشيونال" للأنباء، أثناء خروجها من إحدى بوابات المسجد الأقصى بالقدس المحتلة، عقب تغطيتها لأحداث المواجهات التي اندلعت في المسجد إثر اقتحامات المستوطنين.
+            </p>
+            <p align="justify">
+             <strong>
+              2-7-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب ستة صحافيين ومصوّرين، عندما قام جنود الاحتلال الإسرائيلي برشّهم بغاز الفلفل الحارق على وجوههم وعيونهم، أثناء تغطيتهم مسيرة لإحياء الذكرى الأولى لاستشهاد الفتى محمد أبو خضير، التي أقيمت قرب حاجز جبع العسكري الإسرائيلي المقام على أراضي الفلسطينيين شمال القدس، وهم طاقم قناة zzz*zرؤياzzz*z الأردنية الذي ضم المصوّر محمد أبو شوشة والمراسلة نبال فرسخ، وطاقم تلفزيون zzz*zفلسطينzzz*z الذي ضم المراسل محمد راضي والمصور محمد تركمان، ومصور zzz*zالحياة الجديدةzzz*z عصام الريماوي، ومصور وكالة الصحافة الفرنسية (AFP) عباس المومني.
+             <br/>
+            </p>
+            <p align="justify">
+             4-7-2015
+            </p>
+            <p align="justify">
+             أصيب المصور رامز عواد بقنبلة غاز خلال موجهات اندلعت قرب حاجز قلنديا شمال مدينة القدس، عقب استشهاد الشاب محمد الكسبة.
+            </p>
+            <p align="justify">
+             <strong>
+              8-7-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتقلت قوات الاحتلال الإسرائيلي مراسلة تلفزيون فلسطين سارة العدرة قرب بلدة بيرزيت شمال رام الله خلال توجهها لتغطية اقتحام قرية دير أبو مشعل غربا.
+            </p>
+            <p align="justify">
+             <strong>
+              9-7-2015
+             </strong>
+            </p>
+            <p align="justify">
+             وقّع وزير الأمن الداخلي الإسرائيلي جلعاد أردان أمر حظر يمنع نشاطات قناة zzz*zفلسطين 48zzz*z التابعة لتلفزيون فلسطين الرسمي، بحجة zzz*zعدم السماح بإلحاق أي ضرر بسيادة إسرائيل وإعطاء السلطة الفلسطينية موطئ قدم في أي من أرجاء إسرائيلzzz*z.
+            </p>
+            <p align="justify">
+             <strong>
+              22-7-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتقلت قوات الاحتلال الإسرائيلي الصحفي محمد علي عتيق، بعد مداهمة منزله في بلدة برقين قضاء جنين، وسط إطلاق القنابل الصوتية والأعيرة النارية والغاز المسيل للدموع.
+            </p>
+            <p align="justify">
+             <strong>
+              23-7-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب المتدرب المصور بوكالة وفا، شادي جرارعة برصاصة معدنية مغلفة بالمطاط في صدره، أطلقها عليه جنود الاحتلال الإسرائيلي بشكل متعمد خلال قيامه بتغطية اقتحام لمدينة نابلس.
+            </p>
+            <p align="justify">
+             <strong>
+              23-7-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب مصور تلفزيون zzz*zوطنzzz*z محمد جرادات بالاختناق الشديد، عندما استهدفته قوات الاحتلال الإسرائيلي، بقنابل الغاز المسيّل للدموع أثناء تغطيته تشييع فلاح أبو ماريا الذي قضى برصاص الجنود الإسرائيليين خلال اقتحامهم منزله في بلدة بيت أمر شمال الخليل.
+            </p>
+            <p align="justify">
+             <strong>
+              26-7-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيبت الصحافية في قناة zzz*zفلسطين اليومzzz*z لواء أبو رميلة برضوض في يدها وظهرها، عندما قام شرطي إسرائيلي، بالاعتداء بالضرب المبرح عليها،أثناء تغطيتها اقتحام المستوطنين للمسجد الأقصى والمواجهات التي اندلعت بين عناصر الشرطة والمصلّين بعد الاقتحام.
+            </p>
+            <p align="justify">
+             <strong>
+              28-7-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصدرت محكمة zzz*zعوفرzzz*z العسكرية الإسرائيلية حكما بالسجن لمدة ستة أشهر بحق الصحفي علي عبد الكريم أحمد العويوي (25 عاما) من الخليل جنوب الضفة الغربية، الذي اعتقل نهاية مارس وهو متزوج ولديه طفلان، ويعمل صحفيا في إذاعة zzz*zالرابعةzzz*z المحلية في الخليل.
+            </p>
+            <p align="justify">
+             <strong>
+              4-8-2015
+             </strong>
+            </p>
+            <p align="justify">
+             احتجزت شرطة الاحتلال الإسرائيلي، مصور فضائية "القدس" عبد الكريم درويش ساعتين، خلال تصويره في القدس وحققت معه قبل أن تقوم باحتجاز كاميرته الخاصة.
+            </p>
+            <p align="justify">
+             <strong>
+              4-8-2015
+             </strong>
+            </p>
+            <p align="justify">
+             منعت سلطات الاحتلال الإسرائيلي الصحافي الحر أمجد عرفة من السفر مدة ثلاثة أشهر، بذريعة "أسباب أمنية".
+            </p>
+            <p align="justify">
+             <strong>
+              6-8-2015
+             </strong>
+            </p>
+            <p align="justify">
+             رفضت سلطات الاحتلال الإسرائيلي منح الصحفي عمر نزال عضو الأمانة العامة لنقابة الصحفيين تصريحاً للعلاج في القدس بذريعة ( المنع الأمني ).
+            </p>
+            <p align="justify">
+             <strong>
+              13-8-2015
+             </strong>
+            </p>
+            <p align="justify">
+             منعت سلطات الاحتلال الإسرائيلي أمين سر المجلس الإداري للنقابة عبد الكريم أبو عرقوب من السفر للخارج، أثناء توجهه إلى الأردن عبر معبر الكرامة.
+            </p>
+            <p align="justify">
+             <strong>
+              17-8-2015
+             </strong>
+            </p>
+            <p align="justify">
+             منعت سلطات الاحتلال الإسرائيلي الصحفي خالد بلبل عضو المجلس الإداري لنقابة الصحفيين من السفر عبر معبر بيت حانون لإكمال دراسة الماجستير في جمهورية مصر العربية، على الرغم من حصوله على تصريح بالسفر عبر معبر الكرامة إلى المملكة الأردنية ومنها إلى مصر.
+            </p>
+            <p align="justify">
+             <strong>
+              18-8-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتدت شرطة الاحتلال الإسرائيلي على مصور "كيو برس" عبد العفو زغير بالضرب واحتجزته أكثر من ساعة وذلك أثناء قيامه بالتصوير في حي الشرف في القدس.
+            </p>
+            <p align="justify">
+             <strong>
+              20-8-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتقلت قوات الاحتلال الإسرائيلي المصور الصحفي أيمن أبو عرام خلال مداهمة منزله في بلدة بير زيت شمال مدينة رام الله، وتم نقله إلى جهة مجهولة.
+             <br/>
+             <br/>
+             <strong>
+              21-8-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتقل جنود الاحتلال الإسرائيلي المصوران بلال حسن تميمي، والمصور الأجنبي ديفيد ريف، خلال تغطيتهما للمواجهات في قرية النبي صالح بمحافظة رام الله، واقتادتهما للتحقيق في مركز شرطة بنيامينا.
+            </p>
+            <p align="justify">
+             <strong>
+              26-8-2015
+             </strong>
+            </p>
+            <p align="justify">
+             فرضت بلدية الاحتلال الإسرائيلي مخالفات مالية على المصورين علي ياسين من تلفزيون فلسطين ، ومصور روسيا اليوم محمد عشو، بحجة إعاقة الحركة أثناء تغطيتهما منع الشرطة المصلين من دخول المسجد الأقصى.
+             <br/>
+             <br/>
+             <strong>
+              27-8-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتقلت شرطة الاحتلال الإسرائيلي المصورة الصحفية زينة قطميرة أثناء تواجدها قرب باب السلسلة وتنقلها إلى أحد مراكز الشرطة. وبعد ساعات من احتجازها تم الإفراج عنها ولكن مع تسليمها بلاغ استدعاء للتحقيق معها.
+            </p>
+            <p align="justify">
+             <strong>
+              28-8-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب الصحفي محمد بسمان ياسين، برصاصة مطاطية في ساقه خلال تغطيته قمع قوات الاحتلال الإسرائيلي مسيرة قرية بلعين، غرب رام الله، الأسبوعية السلمية المناهضة لجدار الفصل العنصري والاستيلاء على الأراضي.
+            </p>
+            <p align="justify">
+             <strong>
+              28-8-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتقلت قوات الاحتلال الإسرائيلي المصور الصحفي حمزة ياسين خلال تغطيته لقمع قوات الاحتلال الإسرائيلي مسيرة قرية بلعين، غرب رام الله، الأسبوعية السلمية المناهضة لجدار الفصل العنصري والاستيلاء على الأراضي.
+            </p>
+            <p align="justify">
+             <strong>
+              4-9-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتقلت قوات الاحتلال الإسرائيلي الصحفي علي دار علي، مراسل تلفزيون فلسطين، بعد الاعتداء عليه بالضرب المبرح في قرية النبي صالح غرب ?رام الله?.
+            </p>
+            <p align="justify">
+             <strong>
+              7-9-2015
+             </strong>
+            </p>
+            <p align="justify">
+             منعت شرطة الاحتلال الإسرائيلي ثلاث صحفيات من الدخول إلى المسجد الأقصى لتغطية الأحداث الجارية هناك وهن المصورة الحرة في مؤسسة “همة نيوز” سماح علاء الدين دويك، والمصورة في شبكة قدس صابرين عبيدات، والمراسلة في مركز إعلام القدس بيان راغب الجعبة.
+            </p>
+            <p align="justify">
+             <strong>
+              8-9-2015
+             </strong>
+            </p>
+            <p align="justify">
+             احتجزت شرطة الاحتلال الإسرائيلي مراسلة وكالة “بيت المقدس”، الصحافية لواء أبو رميلة وأعاقت دخولها إلى المسجد الأقصى لتغظية الأحداث.
+            </p>
+            <p align="justify">
+             <strong>
+              10-9-2015
+             </strong>
+            </p>
+            <p align="justify">
+             داهمت المخابرات الإسرائيلية مكتب وكالة "بال ميديا" في القدس وفتشت الغرف والاستوديو، وتركت استدعاء بحق مدير المكتب إسحاق الكسبة. بعد أن قامت بالتحقيق مع صحفي التابع للوكالة أحد جابر حول عمل الوكالة والمحطات التي تقدم لها خدماتها.
+            </p>
+            <p align="justify">
+             <strong>
+              10-9-2015
+             </strong>
+            </p>
+            <p align="justify">
+             جددت سلطات الاحتلال الإسرائيلي، الاعتقال الإداري للصحفي نضال أبو عكر، لمدة ثلاثة أشهر. يذكر أن أبو عكر يخوض إضرابا مفتوحا عن الطعام منذ 20 آب الماضي، احتجاجا على استمرار اعتقاله الإداري.
+            </p>
+            <p align="justify">
+             <strong>
+              10-9-2015
+             </strong>
+            </p>
+            <p align="justify">
+             احتجزت قوات الاحتلال الإسرائيلي، طاقم تلفزيون فلسطين خلال تصويره لقرية العرينات المدمرة قرب نهر الأردن في محافظة أريحا والأغوار.
+            </p>
+            <p align="justify">
+             <strong>
+              14-9-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتدت شرطة الاحتلال الإسرائيلي بالضرب المبرح وبالهروات على ستة عشر صحفياً خلال تغطيتهم المواجهات التي اندلعت بين عناصر الشرطة والشبان المرابطين في باب السلسلة قرب المسجد الأقصى في القدس. والصحفيون هم : مراسلة "شبكة القدس الإخبارية" ليالي عيد، الصحافية الحرة كريستين ريناوي، المصور في شركة "الأرز" للإنتاج أيمن أبو رموز، وطاقم "كيو برس" الذي ضم المراسل محمود أبو عطا والمصور مصطفى الخاروف، كما تم الاعتداء على مصور "الوكالة الفرنسية" أحمد غرابلة، ومراسلة "الحياة الجديدة" ديالا جويحان، ومصور "قناة رؤيا" جهاد المحتسب، ومصور "قناة الغد العربي" منذر الخطيب، ومراسل "قناة الغد العربي" ضياء حوشيه، والمصوارن الصحفيان إيثار أبو غربية، ومحفوظ أبو ترك، كما تم الاعتداء على مراسلة "قناة فلسطين اليوم" لواء أبو ارميلة، ومصورة ـ"شبكة قدس" صابرين عبيد، ومصور "قناة فلسطين" علي ياسين، ومصور "معًا الفضائية" مؤمن شبانة.
+            </p>
+            <p align="justify">
+             <strong>
+              25-9-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتدت قوات الاحتلال الإسرائيلي بالضرب المبرح على طاقم  "وكالة الصحافة الفرنسية" (AFP) الذي ضم المصور عباس المومني، ومصور تلفزيون الوكالة الإيطالي أندريا بريناردي، إضافة إلى تكسير الكاميرات والهواتف المحمولة، أثناء تغطيتهما المواجهات التي اندلعت خلال تشييع شاب قتل برصاص الجنود الإسرائيليين في نابلس.
+            </p>
+            <p align="justify">
+             <strong>
+              28-9-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب أربعة صحافيين بجراح متفاوتة بعد إلقاء قوات الاحتلال الإسرائيلي قنابل الصوت والغاز المسيل للدموع اتجاههم في باب المجلس، أحد أبواب المسجد الأقصى. وهم الصحفي رامي الخطيب ومراسل فضائية zzz*zمعاzzz*zمحمد صياد، ومصور فضائية zzz*zروسيا اليومzzz*z محمد عشو، كما تم الاعتداء بالضرب على الصحفية بيان الجعبة.
+            </p>
+            <p align="justify">
+             <br/>
+             <strong>
+              3-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب  المصور أحمد حسن بعيار ناري في فخذه الأيمن بعد أن استهدفه قناص من قوات الاحتلال، أثناء تغطيته المسيرة الأسبوعية في كفر قدوم في قلقيلية.
+            </p>
+            <p align="justify">
+             <strong>
+              4-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيبت مراسلة قناة الميادين (هناء المحاميد) في وجهها، بعد إلقاء جيش الاحتلال قنبلة غاز على طاقم القناة خلال تغطيتهم الأحداث في بلدة العيسوية في القدس.
+            </p>
+            <p align="justify">
+             5-10-2015
+            </p>
+            <p align="justify">
+             أصيب مراسل إذاعة zzz*zالرايةzzz*z وإذاعة zzz*zالرابعةzzz*z الصحفي (طه أبو حسين)، برصاصة معدنية في رأسه، أثناء تغطيته المواجهات في الخليل بين المواطنين وقوات الاحتلال.
+            </p>
+            <p align="justify">
+             <strong>
+              6-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب مصور وكالة zzz*zبال ميدياzzz*z (صلاح زياد) بالرصاص الحي في بطنه، خلال تغطيته المواجهات على حاجز قلنديا العسكري جنوب رام الله.
+            </p>
+            <p align="justify">
+             <strong>
+              8-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب خمسة صحفيين بجروح متوسطة عندما استهدفتهم قوات الاحتلال الإسرائيلي بالرصاص المطاطي وقنابل الصوت، أثناء تغطيتهم المواجهات في مدينة الناصرة في أراضي 1948، وهم: مراسلة تلفزيون zzz*zاحنا تي فيzzz*z (ليلى عبدو)، والمصور حمودي حبيشي، والمحرر في موقع zzz*zجفراzzz*z (ساهر الحاج)، ومراسل موقع zzz*zبكراzzz*z (أحمد عزايزة) والمصور الحر (سمير جمامعة).
+            </p>
+            <p align="justify">
+             <strong>
+              8-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتدى مستوطنون على ستة صحفيين بالضرب المبرح خلال تغطيتهم الأحداث الجارية في القدس والضفة الغربية. وهم: مصور “بال ميديا” عامر عابدين وإلقاء كاميرته على الأرض، وناصر الشيوخي (مصورAP)، ومأمون وزوز (مصور الوكالة الصينية)، وحازم بدر (مصور وكالة الأنباء الفرنسية)، وعامر الجعبري (رئيس مجلس إدارة شركة “ترانس ميديا”)، وموسى القواسمي (مصور “رويترز”).
+             <br/>
+             بتاريخ 8-10-2015 أصيب المصور عاطف الصفدي (مصور الوكالة الأوروبية) ومصور أجنبي آخر بالرصاص المطاطي خلال مواجهات عند المدخل الشمالي لمدينة البيرة.
+            </p>
+            <p align="justify">
+             <strong>
+              9-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             استشهد الطالب في كلية الإعلام بجامعة الأقصى (أحمد عبد الرحمن الهرباوي) (20 عامًا) أثناء تغطيته المواجهات المندلعة في منطقة الشجاعية شرق مدينة غزة.
+            </p>
+            <p align="justify">
+             <strong>
+              9-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب مصور تلفزيون zzz*zفلسطينzzz*z (صخر زواتية) برصاصتين معدنيتين في رأسه وقدمه، أثناء تغطيته المواجهات التي اندلعت بين شبان فلسطينيين وبين الجنود الإسرائيليين، عند حاجز الجلمة العسكري شمال جنين.
+            </p>
+            <p align="justify">
+             <strong>
+              9-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب ثلاثة صحفيين بينهم تركي عندما استهدفتهم قوات الاحتلال الإسرائيلي بالرصاص الحي وقنابل الغاز المسيلة للدموع وقنابل الصوت، أثناء تغطيتهم على حدود قطاع غزة الشرقية والجنوبية، تضامناً مع أحداث القدس والضفة الغربية، وهم: مراسل وكالة zzz*zالأناضولzzz*z التركي (متين كايا) أصيب بشظايا في كف يده اليسرى؛ ومراسل zzz*zقدس برسzzz*z انترناشونال (فادي ثابت) أصيب بقنبلة صوت؛ والناشط الإعلامي مؤمن الحلو أصيب برصاصة في فخده الأيسر وشظايا في كتفه الأيمن.
+            </p>
+            <p align="justify">
+             <strong>
+              9-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب كل من المصور الصحفي مأمون وزوز (مصور الوكالة الصينية)، وأمجد شاور (مراسل إذاعة محلية بالخليل)، بحالة اختناق جراء استنشاقهما الغاز المسيل للدموع خلال تغطيتهما المواجهات عند المدخل الشمالي لمدينة الخليل.
+            </p>
+            <p align="justify">
+             بتاريخ 10-10-2015 أصيبت مراسلة صحيفة zzz*zالقدسzzz*z (منى القواسمي) بالرصاص الحي في يدها أثناء تغطيتها المواجهات عند حاجز مخيم شعفاط؛ في حين أصيب مراسل وكالة zzz*zبال ميدياzzz*z (علي ديواني) بالرصاص المطاطي في قدمه أثناء تغطيته المواجهات عند باب العمود.
+            </p>
+            <p align="justify">
+             <strong>
+              10-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب مصور صحيفة zzz*zالحياة الجديدةzzz*z (عصام الريماوي) برصاصة معدنية بشكل مباشر في قدمه اليسرى، أثناء تغطيته المواجهات في مدينة رام الله.
+            </p>
+            <p align="justify">
+             <strong>
+              10-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             تعرض طاقم فضائية zzz*zفلسطين اليومzzz*z إلى استهداف من قبل قوات الاحتلال بإطلاق الأعيرة المطاطية وقنابل الغاز والصوت خلال تغطية المواجهات في بلدة  يطا قرب الخليل؛ الأمر الذي أدى إلى إصابة المراسلة فداء نصر بحالة اختناق، والمصور محمود خلاّف بحالة اختناق، ومسؤول سيارة البث جودي أبو نجمة، برصاصة معدنية في كتفه الأيمن.
+            </p>
+            <p align="justify">
+             <strong>
+              10-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب الصحفي جودة أبو نجمة من فضائية “فلسطين اليوم” بعيار مطاطي خلال تغطيته المواجهات في يطا. كما أطلقت قوات الاحتلال قنابل الغاز والصوت بشكل مباشر على كل من لؤي صبابا (مصور الوكالة الصينية)، وعبد الرحمن يونس (مصور “القدس دوت كوم”)، وموسى الشاعر (مصور الوكالة الفرنسية)، وأحمد مزهر (مصور وكالة “وفا”) خلال تغطيتهم المواجهات عند مدخل بيت لحم.
+             <br/>
+             كما أصيب أربعة صحفيين عندما استهدفتهم قوات الاحتلال بإطلاق الرصاص المطاطي وقنابل الغاز والصوت خلال تغطيتهم الأحداث عند حاجز الجلمة. وهم: المثنى سمير ديك (مصور قناة “فلسطين اليوم”)؛ ما أدى إلى إصابته برصاصة مطاطية في رقبته؛ ومراسل القناة مجاهد السعدي؛ كما أصيبت سيارة البث التابعة لـ”فلسطين اليوم” برصاصة؛ إضافة إلى إصابة المصور علي السمودي، وأحمد الكيلاني مصور “بال ميديا”.
+            </p>
+            <p align="justify">
+             <strong>
+              11-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             منعت قوات الاحتلال، طاقم فضائية zzz*zفلسطين اليومzzz*z من تغطية المواجهات بين جنودها وبين الشبان الفلسطينيين على حاجز حوارة العسكري جنوب نابلس؛ في حين أشهرت السلاح في وجه الصحفية لواء أبو ارميلة عند باب السلسلة، وتم منعها من دخول المسجد الأقصى المبارك.  كما أصيب المصور الصحفي رامي سويدان برصاصة معدنية في ساقه اليسرى خلال تغطيته مواجهات عند حاجز حوارة عند مدخل مدينة نابلس.
+            </p>
+            <p align="justify">
+             <strong>
+              11-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب الصحفي أشرف أبو عمرة بقنبلة مسيلة للدموع في صدره بشكل مباشر فقد على إثرها الوعي، خلال تغطيته التظاهرة الغاضبة على الحدود الشرقية لمدينة غزة.
+            </p>
+            <p align="justify">
+             <strong>
+              13-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب ستة صحفيين بجروح وصفت بالمتوسطة عندما أطلقت قوات الاحتلال قنابل الغاز المسيل للدموع باتجاههم خلال تغطيتهم المواجهات عند معبر zzz*zإيرزzzz*z على حدود قطاع غزة الشرقية والشمالية، وهم: مراسل قناة zzz*zالجزيرةzzz*z (وائل الدحدوح)، والمصور محمود عوض، ومصور شركة zzz*zبال ميدياzzz*z (سمير البوجي)، ومساعد مصور الشركة الوطنية للإعلام (محمد غبن)، ومصور الفيديو من شركة zzz*zعالم نيوزzzz*z (سيف أبو زيد)، ومراسل موقع zzz*zأسوار برسzzz*z (حسين كرسوع).
+            </p>
+            <p align="justify">
+             <strong>
+              15-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             داهمت شرطة الاحتلال الاسرائيلي مكتب وكالة “بال ميديا” في القدس، وفتشت الغرف والأستوديو، وتركت استدعاء بحق مدير المكتب (إسحاق الكسبة).
+            </p>
+            <p align="justify">
+             <strong>
+              15-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيبت مراسلة قناة “الميادين” (هناء محاميد) بحروق في وجهها ورقبتها خلال استهدافها من قبل جنود الاحتلال الإسرائيلي بقنبلة صوت، أثناء تغطيتها على الهواء مباشرة اقتحام الجنود الإسرائيليين منزل الشهيد فادي علوان في بلدة العيسوية في القدس.
+            </p>
+            <p align="justify">
+             <strong>
+              16-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب سبعة صحفيين بجروح متفاوتة، عندما قامت قوات الاحتلال بإطلاق النيران باتجاههم بشكل مباشر خلال تغطيتهم zzz*zجمعة الغضبzzz*z على الحدود الشرقية والشمالية والجنوبية لقطاع غزة، وهم: مصور تلفزيون zzz*zفلسطينzzz*z نبيل أبو دية أصيب برصاصة مطاطية في فخذه الأيسر؛ ومراسل إذاعة zzz*zالحريةzzz*z علاء الدواهيد، أصيب بقنبلة غاز في رأسه؛ كما أصيب مراسل إذاعة zzz*zالقدسzzz*z وقناة zzz*zفلسطين اليومzzz*z (الصحفي مثنى النجار) بقنبلة غاز في صدره، وأصيب المصور الفوتوغرافي في وكالة zzz*zXinhuazzz*z الصينية (حاتم عمر) بقنبلة غاز في قدمه اليسرى؛ في حين إصيب كل من مراسل zzz*zوكالة الصحافة الفرنسيةzzz*z (أ.ف. ب) (سعيد الخطيب)، والمصور في وكالة الأنباء المحلية zzz*zABAzzz*z (عبد الرحيم الخطيب)، والصحفي في وكالة zzz*zUPIzzz*z الأميركية (إسماعيل الخطيب)، بحالات اختناق.
+            </p>
+            <p align="justify">
+             كما أُصيب بالتاريخ ذاته، محمد الشريف (الفني المسؤول عن سيارة بث فضائية zzz*zفلسطين)، بجروح بالغة في عينه؛ إثر استخدامه كدرع بشرية من قبل الجنود الإسرائيليين خلال تغطيته مع الطاقم المواجهات على حاجز حوارة العسكري جنوب نابلس.
+            </p>
+            <p align="justify">
+             كما أصيب الصحفي منتصر نصار بحالة اختناق شديدة جراء إطلاق الغاز المسيل للدموع من قبل قوات الاحتلال خلال تغطيته للأحداث على المدخل الشمالي لمدينة الخليل. ومن جهة أخرى أصيبت مراسلة فضائية “فلسطين اليوم” (فداء نصر)، بالاختناق خلال المواجهات في مدينة الخليل.
+            </p>
+            <p align="justify">
+             <strong>
+              18-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيبت مراسلة قناة zzz*zرؤياzzz*z الفضائية (نبال فرسخ) برصاصة معدنية في كفها، خلال بثها تقريراً حياً للمواجهات على المدخل الشمالي لمدينة رام الله.
+            </p>
+            <p align="justify">
+             <strong>
+              21-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب مصور zzz*zمركز الإعلام المستقلzzz*z (الصحفي رامي علارية) برصاصة مطاطية في رأسه، كما تعرض للضرب المبرح والاستهداف بالرصاص المطاطي وقنابل الغاز والتهديد، على مدى ثلاثة أيام متتالية من قبل قوات الاحتلال الإسرائيلي خلال تغطيته المواجهات في بلدة العيزرية شمال القدس.
+            </p>
+            <p align="justify">
+             <strong>
+              21-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتدت قوات الاحتلال الإسرائيلي، بالضرب المبرح على مراسل إذاعة zzz*zالرابعةzzz*z المحلية (علي العويوي)، بعد اقتحام منزله في الخليل. ثم قامت باعتقاله واقتياده إلى جهة غير معلومة.
+            </p>
+            <p align="justify">
+             <strong>
+              23-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب ثمانية صحفيين بجروح مختلفة بالرصاص الحي والمطاطي وقنابل الغاز، أثناء تغطيتهم المواجهات على حدود قطاع غزة الشرقية والشمالية والجنوبية، وهم: مدير مجلة zzz*zعكاظzzz*z (المصور الصحفي إيهاب فسفوس)؛ حيث أصيب برصاصة مطاطية في فخذه، ومراسل وكالة zzz*zفلسطين اليومzzz*z الإخبارية (داوود أبو الكاس)، هو الآخر أصيب برصاصة مطاطية في فخذه، والمصور الحر محمود عليان، (أصيب بحالة اختناق)، والمصور الحر ناهد بدير، برصاصة مطاطية في كعب قدمه، والصحفي الحر جيفارا الصفدي، ومراسل zzz*zبوابة الهدفzzz*z الإخبارية (طارق أبو الخير)، الذي أُصيب برصاصة حية متفجرة في فخذه، كما أصيبت مراسلة تلفزيون zzz*zفلسطينzzz*z (سالي السكني) بحالة اختناق، والناشط الإعلامي عامر الفرا.
+            </p>
+            <p align="justify">
+             وفي التاريخ ذاته، أصيب الصحفي عبد الرحمن يونس (مصور ومراسل موقع “القدس” دوت كوم) برصاصة مطاطية خلال تغطيته للمواجهات في بيت لحم. وأصيب كذلك مدير تحرير “وكالة معا” (ناصر اللحام) بالرصاص المطاطي وحالة اختناق خلال تغطيته للمواجهات التي اندلعت في بيت لحم.
+            </p>
+            <p align="justify">
+             <strong>
+              25-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتدت شرطة الاحتلال بالضرب المبرح على الصحفي الحر عطا عويسات بعد استدعائه إلى مركز عوز القريب من جبل المكبر في القدس. بسبب تعليق كتبه على zzz*zفيسبوكzzz*z.
+            </p>
+            <p align="justify">
+             <strong>
+              26-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيبت الصحفية منال دعنا برصاص مطاطي بتاريخ 26-10-2015، الأمر الذي تسبب في كسر بيدها خلال تغطيتها الأحداث في منطقة باب الزاوية، وسط الخليل.
+            </p>
+            <p align="justify">
+             <strong>
+              27-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب المصور الصحفي سامر نزال من (إذاعة راية أف أم)، برصاصة مطاطية في ساقه، خلال تغطيته للمواجهات الدائرة مع قوات الاحتلال على المدخل الشمالي للبيرة.
+            </p>
+            <p align="justify">
+             كما استهدفت قوات الاحتلال الإسرائيلي، مصور  إذاعة zzz*zرايةzzz*z (سامر نزال) برصاصة معدنية في ساقه، أثناء تغطيته المواجهات عند المدخل الشمالي لمحافظة رام الله؛ ما أدى إلى كسر في العظم ونزيف حاد.?
+            </p>
+            <p align="justify">
+             <strong>
+              29-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب المصور الصحفي منذر الخطيب، في يده بالرصاص المعدني المغلف بالمطاط؛ فيما تم تحطيم كاميرا مصور وكالة “رويترز” الصحفي عمار عوض جراء إصابتها بشكل مباشر بقنابل الغاز، أثناء تغطيتهما المواجهات الدائرة عند المدخل الشمالي لمدينة البيرة.
+             <br/>
+             بتاريخ 30-10-2015 أطلقت قوات الاحتلال، الغاز السام باتجاه مصور وكالة الأنباء الفلسطينية zzz*zوفاzzz*z (إياد جاد الله)؛ الأمر الذي أدى إلى إصابته إصابة مباشرة في الوجه، خلال تغطيته ضرب الجنود أحد المتظاهرين ودهسه خلال المواجهات على مدخل محافظة رام الله والبيرة الشمالي.
+            </p>
+            <p align="justify">
+             كما استهدفت قوات الاحتلال الإسرائيلي، طاقم عمل فضائية zzz*zالغد العربيzzz*z الذي ضم المراسل ضياء حوشية والمصور منذر الخطيب، بالرش بغاز الفلفل وغاز الأعصاب، فضلاً عن الضرب المبرح، أثناء تغطيتهما المواجهات على مدخل محافظة رام الله والبيرة الشمالي.
+             <br/>
+             بتاريخ 30-10-2015 استهدفت قوات الاحتلال، كلاً من المصور الصحفي الحر إبراهيم أبو ريدة برصاصة في صدره أثناء تغطيته المواجهات الأسبوعية على الحدود الشرقية لمدينة خان يونس، ومراسل إذاعة zzz*zالبراقzzz*z المحلية (الصحفي ماجد زريد) بقنابل الغاز، التي أدت الى إصابته بالاختناق عند حدود مخيم البريج شرقي القطاع.
+            </p>
+            <p align="justify">
+             <strong>
+              31-10-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب مصور الوكالة الأوروبية عبد الحفيظ الهشلمون برصاص الاحتلال المعدني المغلف بالمطاط في قدمه اليمنى، وذلك أثناء تغطيته المواجهات في منطقة باب الزاوية وسط مدينة الخليل.
+            </p>
+            <p align="justify">
+             <strong>
+              3-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اقتحمت قوات الاحتلال الإسرائيلي مقر إذاعة zzz*zمنبر الحريةzzz*z في مدينة الخليل، ودمّرت معظم معداتها ومحتوياتها، وصادرت أجهزة البث الخاصة بالإذاعة؛ بذريعة أنها zzz*zتمارس التحريض ضد إسرائيلzzz*z.
+            </p>
+            <p align="justify">
+             <strong>
+              4-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتدت قوات الاحتلال الإسرائيلي، بالضرب على طاقم تلفزيون zzz*zفلسطينzzz*z الذي ضم المراسل محمد بدارنة، والمصور صخر زواتية، وسائق سيارة التلفزيون مهند حمادة، واحتجزتهم نصف ساعة، على حاجز الجلمة العسكري شمال جنين، وأطلقت سراحهم بعد أن استولت على جزء من معداتهم.
+            </p>
+            <p align="justify">
+             <strong>
+              6-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب المصور الصحفي حمدي أبو رحمة، في صدره برصاص الإسفنج، خلال تغطيته قمع قوات الاحتلال الإسرائيلي لمسيرة بلعين الأسبوعية المناوئة للاستيطان وجدار الفصل العنصري.
+            </p>
+            <p align="justify">
+             <strong>
+              8-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             حاول مستوطن إسرائيلي دهس كلّ من مصور صحيفة zzz*zالحياة الجديدةzzz*z (عصام الريماوي) ومصور وكالة zzz*zأسوشيتد برسzzz*z (AP) (مجدي اشتية)، ومصور إذاعة zzz*zرايةzzz*z (شادي حاتم)، خلال تغطيتهم استشهاد شاب فلسطيني على يد القوات الإسرائيلية قرب حاجز zzz*zزعترةzzz*z الإسرائيلي جنوب مدينة نابلس.
+            </p>
+            <p align="justify">
+             <strong>
+              9-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتدت قوات الاحتلال الإسرائيلي، بالضرب المبرح والشتائم البذيئة، على طاقم تلفزيون zzz*zفلسطينzzz*z الذي ضم كلاً من المراسل أحمد شاور، والمصور محمد عنايا، والسائق أيمن الهرش، قبل أن تقوم باحتجازهم لمدة ثلاث ساعات داخل السيارة، أثناء إعدادهم تقريراً عن إغلاقها للمحال التجارية في قرية النبي الياس شرق مدينة قلقيلية.
+            </p>
+            <p align="justify">
+             <strong>
+              13-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب المصور الصحفي الحر سامر نزال برصاصة معدنية في ساقه، تسببت في كسر بعظم الساق، أطلقها عليه جنود الاحتلال بشكل مباشر، أثناء تغطيته المواجهات التي اندلعت بين الجنود وشبان فلسطينيين، على المدخل الشمالي لمدينة البيرة.
+             <br/>
+             وبنفس التاريخ أصيب الصحفيان فادي ثابت من وكالة zzz*zقدس برس انترنشونال للأنباءzzz*z، وإبراهيم حسين من شركة زين للإنتاج الإعلامي، بقنابل الغاز بشكل مباشر، حيث أصابت أطرافهم السفلية ووصفت بالمتوسطة، كما تضررت كاميراتهما بشكل كامل؛ وذلك خلال تغطيتهم للمواجهات التي اندلعت على الشريط الحدودي شرق البريج وسط قطاع غزة.
+            </p>
+            <p align="justify">
+             <strong>
+              15-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب مصور وكالة الأنباء الفرنسية (جعفر اشتية) بالرصاص المعدني المغلف بالمطاط خلال تغطيته المواجهات بين شبان فلسطينيين وقوات الاحتلال، التي اندلعت  في حي النقار غربي مدينة قلقيلية.
+            </p>
+            <p align="justify">
+             <br/>
+             <strong>
+              16-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب ثلاثة مصورين بجروح مختلفة خلال تغطيتهم المواجهات المندلعة على المدخل الشمالي لمدينة البيرة، وهم: مصور وكالة الأنباء والمعلومات الفلسطينية zzz*zوفاzzz*z  (الصحفي بهاء نصر بعيار معدني أسفل الركبة اليسرى)، ومصور إذاعة zzz*zراية أف أمzzz*z (شادي كراكرة) بعيار معدني مغلفة بالمطاط في القدم اليسرى، ومصور الموقع الإلكتروني لإذاعة zzz*zرايةzzz*z (شادي حاتم)، برصاصة معدنية في قدمه.
+            </p>
+            <p align="justify">
+             <strong>
+              17-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أغلقت شرطة الاحتلال الإسرائيلي أربع مؤسسات إعلامية في القدس، وهي zzz*zصوت الحق والحريةzzz*z، وكالة zzz*zكيو برسzzz*z، مجلة zzz*zإشراقةzzz*z وموقع zzz*zفلسطينيو 48zzz*z، بعد صدور قرار حكومي بحظر كل نشاط الحركة الإسلامية - الشق الشمالي.
+            </p>
+            <p align="justify">
+             <strong>
+              18-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتقلت شرطة الاحتلال الإسرائيلي كلاً من المصور الحرّ مصطفى الخاروف ومصور zzz*zالجزيرة نتzzz*z (إياد الطويل) ساعات عدة، أثناء تصويرهما قرب حائط البراق في القدس؛ وبعد عدة ساعات قاموا بإطلاق سراحهم وتم احتجاز الهواتف والكاميرات الخاصة بهم لفحصها.
+            </p>
+            <p align="justify">
+             <strong>
+              18-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             احتجزت قوات الاحتلال الإسرائيلي طاقم تلفزيون zzz*zفلسطينzzz*z الذي ضم  كلاً من المراسل أحمد نزال، والمصور سامر حبش، ومهندس الصوت ثائر الخطيب، والسائق مروان الشافعي، لمدة أربع ساعات في معسكر zzz*zزعترةzzz*z، أثناء إعدادهم تقريراً مصوّراً عن اعتداءات القوات الإسرائيلية على قريتَي عقربا وأوصرين الواقعتين جنوب شرق نابلس.
+            </p>
+            <p align="justify">
+             <strong>
+              20-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب كل من الصحفي الحر علي عاشور برصاصة حية في ساقه اليسرى، ومراسل قناة zzz*zالكوفيةzzz*z (محمد صبح) بشظايا رصاصة متفجرة بجانب عينه اليمنى وأخرى في صدره، عندما استهدفتهما قوات الاحتلال بشكل مباشر، أثناء تغطيتهما المواجهات التي اندلعت تضامناً مع أهلنا في القدس والضفة الغربية عند حدود قطاع غزة.
+             <br/>
+             وبالتاريخ ذاته، أصيب الصحفيان شادي القواسمة (مراسل إذاعة منبر الحرية) ومهند الشريف (من وكالة منبر الحرية الإخبارية) بعيار ناري في الفخذ الأيسر خلال تغطيتهما المواجهات عند رأس الجورة على المدخل الشمالي لمدينة الخليل.
+            </p>
+            <p align="justify">
+             <strong>
+              21-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتقلت قوات الاحتلال، مراسل قناة zzz*zالمجدzzz*z الإخبارية السعودية (الكاتب الصحفي محمد القيق)، واستولت على هواتفه وحاسوبه بعد اقتحام منزله في قرية أبو قش شمال مدينة رام الله.
+            </p>
+            <p align="justify">
+             <strong>
+              21-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اقتحمت قوات الاحتلال مقرّ إذاعة zzz*zالخليلzzz*z في مدينة الخليل وأغلقتها مدة ستة أشهر بتهمة zzz*zالتحريضzzz*z، واستولت على معداتها، وأحدثت خراباً كبيرًا في المقر.
+            </p>
+            <p align="justify">
+             <strong>
+              21-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتدت قوات الاحتلال بالضرب المبرح على مراسل ومصور شبكة الحرية الإعلامية (راضي كرامة، وحلمي الجعبة)، وصادرت بعض المعدات منهما أثناء تغطيتهما الأحداث في منطقة ديرسامت جنوب غرب الخليل.
+            </p>
+            <p align="justify">
+             <strong>
+              26-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             هدّدت قوات الاحتلال بإغلاق إذاعة zzz*zناسzzz*z المحلية في جنين، والاستيلاء على كل المعدات الموجودة في المقر، في حال لم تتوقف عن بث ما ادّعت بأنه zzz*zمواد تحريضيةzzz*z.
+            </p>
+            <p align="justify">
+             <strong>
+              27-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب المصور الصحفي حمدي أبو رحمة برصاصة معدنية مغلفة بالمطاط في فخذه، وذلك أثناء تغطيته قمع الاحتلال لمسيرة بلعين الأسبوعية المناوئة للاستيطان وجدار الفصل العنصري.
+            </p>
+            <p align="justify">
+             <strong>
+              29-11-2015
+             </strong>
+            </p>
+            <p align="justify">
+             إغلاق قوات الاحتلال إذاعة zzz*zدريمzzz*z بتهمة zzz*zالتحريضzzz*z، بعد أن اقتحمت مقرّها في مدينة الخليل، وعاثت فيه فساداً، وقامت بتخريب الأثاث الموجود فيه، قبل أن تقوم بالاستلاء على معدّات البث وأجهزته.
+             <br/>
+             <br/>
+             <strong>
+              4-12-2015
+             </strong>
+            </p>
+            <p align="justify">
+             إصابة مراسلة ومصورة موقع zzz*zهنا القدسzzz*z (شذى حماد) برصاصة معدنية في ساقها؛ وفي اليوم التالي تم استهدافها بقنبلة غاز، أثناء تغطيتها المواجهات المستمرة  بين شبان فلسطينيين وجنود الاحتلال الإسرائيلي في بلدة سلواد، شمال شرق رام الله.
+            </p>
+            <p align="justify">
+             <strong>
+              4-12-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب المصوران الصحفيان أحمد مزهر، (مصور وكالة الأنباء والمعلومات الفلسطينية/ وفا)، ومحيسن عمارين (الذي يعمل لحساب إحدى المحطات المحلية) بجروح ما بين متوسطة إلى طفيفة، خلال تغطيتهما قمع الاحتلال مسيرة سلمية قرب مسجد بلال بن رباح شمال بيت لحم.
+            </p>
+            <p align="justify">
+             <strong>
+              5-12-2015
+             </strong>
+            </p>
+            <p align="justify">
+             شنت قوات الاحتلال الإسرائيلي حملة دهم وتفتيش لمطبعتي “انفنيتي” و”لمسات” وعدد من المكاتب في مدينة الخليل، جنوب الضفة الغربية المحتلة، وصادرت أجهزة حواسيب وأوراق وملفات، ودمرت محتويات عدد منها بادعاء بث ونشر مواد تحريضية.
+            </p>
+            <p align="justify">
+             <strong>
+              11-12-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب المصوران حمدي أبو رحمة في خاصرته بالرصاص المطاطي، وهيثم الخطيب برصاصة zzz*zاسفنجيةzzz*z؛ ما أدى لتحطم زجاج سيارته خلال تغطيتهما قمع قوات الاحتلال الإسرائيلي المسيرة الأسبوعية السلمية المناهضة للاستيطان وجدار الفصل العنصري في قرية بلعين غرب رام الله.
+            </p>
+            <p align="justify">
+             وعلى الصعيد ذاته وبنفس التاريخ أصيبت مراسلة فضائية zzz*zفلسطين اليومzzz*z (رغدة عتمة) برصاصة مطاطية في القدم، خلال تغطيتها مواجهات في بلدة سلواد شرق رام الله؛ كما أصيبت المصورة الصحافية رحاب نزال برصاصة في الفخذ خلال تغطيتها مواجهات اندلعت بين المواطنين وقوات الاحتلال على المدخل الشمالي لمدينة بيت لحم.
+             <br/>
+             <br/>
+             إلى ذلك أصيب الصحفي أمير حمايل (مصور تلفزيون ووكالة وطن للأنباء) بعيار معدني في القدم اليسرى، أطلقه عليه جنود الاحتلال خلال تغطيته مسيرة تطالب باسترداد جثمان الشهداء في  بلدة سلواد، شمال شرقي مدينة رام الله.
+            </p>
+            <p align="justify">
+             أما في قطاع غزة، وبنفس التاريخ، فقد أصيب المصور الصحفي أيمن منصور بقنبلة غاز في يده خلال تغطيته مواجهات مع قوات الاحتلال في منطقة الفراحين شرق مدينة خان يونس؛ في حين أصيب مراسلا zzz*zصوت الشعبzzz*z (محمود اللوح بعيار ناري في القدم؛ ومحمد العايدي) بحالة اختناق أثناء تغطيتهما للمواجهات في مخيم البريج شرق مدينة غزة.
+            </p>
+            <p align="justify">
+             <strong>
+              13-12-2015
+             </strong>
+            </p>
+            <p align="justify">
+             واعتقلت قوات الاحتلال الإسرائيلي المتمركزة في محيط الحرم الإبراهيمي الشريف وسط الخليل الصحفي رائد أبو ارميلة، ونقلته لجهة غير معلومة.
+            </p>
+            <p align="justify">
+             <strong>
+              14-12-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتدى جنود الاحتلال الإسرائيلي على مراسلة فضائية فلسطين (سارة العدرة) بألفاظ نابية، ومنعوها من التصوير في قرية عابود، شمال غرب رام الله.
+            </p>
+            <p align="justify">
+             <strong>
+              16-12-2015
+             </strong>
+            </p>
+            <p align="justify">
+             استشهد المصور الصحفي أحمد جحاجحة (23 عامًا). وهو طالب في  كلية الصحافة والإعلام في الفصل الأخير، عندما أطلقت قوات الاحتلال الإسرائيلي النار عليه بدم بارد، بعد اقتحامها مخيم قلنديا شمال القدس.
+            </p>
+            <p align="justify">
+             وفي ذات التاريخ احتجزت قوات الاحتلال الإسرائيلي الصحفي، براء حمدان (مراسل إذاعة zzz*zبلدنا المحلية) في بيت لحم، بالضفة الغربية المحتلة، لساعات عند مدخل قبر حلوة شرق بيت لحم، وأجبروه على الترجل من سيارته، ثم قيدوه واقتادوه إلى معسكر لجيش الاحتلال في منطقة جبل الفرديس، وصادروا هاتفه وفتشوه وحذفوا جميع الصور الموجودة فيه، واستجوبوه لعدة ساعات قبل أن يطلقوا سراحه.
+             <br/>
+             <br/>
+             كما اعتقلت قوات الاحتلال الإسرائيلي بالتاريخ ذاته المصور ثائر الفاخوري خلال مداهمة منزله في مدينة الخليل، ونقلته إلى جهة مجهولة.  ويذكر أن الفاخوري هو شقيق شهيد ارتقى بانتفاضة الأقصى.
+             <br/>
+             <br/>
+             <strong>
+              18-12-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصيب الصحفيان يسري الريس (مصور تلفزيون فلسطين) بعيار ناري في القدم؛ ورائد مصلح بقنابل الغاز المسيلة للدموع التي أطلقها جنود الاحتلال الإسرائيلي، أثناء تغطيتهما مواجهات مع جنود الاحتلال شرق البريج.
+            </p>
+            <p align="justify">
+             <strong>
+              20-12-2015
+             </strong>
+            </p>
+            <p align="justify">
+             أصدرت محكمة سالم الإسرائيلية حكماً بالسجن الإداري لمدة ستة أشهر، بحق مراسل فضائية zzz*zالمجدzzz*z الإخبارية السعودية (محمد القيق).
+            </p>
+            <p align="justify">
+             <strong>
+              25-12-2015
+             </strong>
+            </p>
+            <p align="justify">
+             اعتقلت قوات الاحتلال الإسرائيلي أسعد أبو طامع (مراسل شبكة قدس الإخبارية)، من مدينة جنين؛ حيث تم إيقافه خلال مروره على حاجز الكونتينر، والتحقيق معه ميدانيًا، قبل أن تقوم تلك القوات باعتقاله.
+            </p>
+            <p align="justify">
+             <strong>
+              26-12-2015
+             </strong>
+            </p>
+            <p align="justify">
+             تعرض الصحفي المستقل الألماني مارتين ليجيون للاحتجاز والتحقيق معه لمدة 20 ساعة على أيدي سلطات الاحتلال، التي أخبرته أنه ممنوع من الدخول إلى إسرائيل؛ بادعاء أنه يشكل خطراً على الأمن، وأنه ليس صحفياً، ولديه أجندة سياسية.
+            </p>
+            <p align="justify">
+             <strong>
+              31-12-2015
+             </strong>
+            </p>
+            <p align="justify">
+             نقل الأسير الصحفي محمد القيق المضرب عن الطعام من سجون الاحتلال إلى مستشفى العفولة؛ بسبب تدهور وضعه الصحي.
+             <br/>
+            </p>
+           </div>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-xs-12 text-right">
+          </div>
+         </div>
+         <script type="text/javascript">
+          $(document).ready(function () {
+        $(".leftmenu").hover(function () {
+            var id = $(this).data("id");
+            $("#sub_" + id).stop().fadeIn(500);
+        }, function () {
+            var id = $(this).data("id");
+            $("#sub_" + id).stop().fadeOut('fast');
+        });
+
+        $(".leftmenu_sub").hover(function () {
+            var id = $(this).data("id");
+            $("#sub_" + id).stop().fadeIn(500);
+        }, function () {
+            var id = $(this).data("id");
+            $("#sub_" + id).stop().fadeOut('fast');
+        });
+    });
+         </script>
+        </div>
+       </div>
+       <div class="col-md-3 col-sm-12 col-xs-12 leftCats" style="float:right;padding-left:0px;">
+        <ul class="list info">
+         <li class="leftmenu" data-id="3" style="position:relative;">
+          <a href="ar_page.aspx?id=mNQgSBa2220439749amNQgSB" target="_self">
+           مـعـلـومـات عـامــة
+          </a>
+         </li>
+         <li class="leftmenu" data-id="4" style="position:relative;">
+          <a href="ar_page.aspx?id=fbWkL3a3969761763afbWkL3" target="_self">
+           مـلـفـــات وطـنـيــــة
+          </a>
+         </li>
+         <li class="leftmenu" data-id="5" style="position:relative;">
+          <a href="ar_page.aspx?id=dh9Esra1983453252adh9Esr" target="_self">
+           قـضـايــا الصـراع
+          </a>
+         </li>
+         <li class="leftmenu" data-id="6" style="position:relative;">
+          <a href="ar_page.aspx?id=z2jpOUa1984405005az2jpOU" target="_self">
+           تـاريــخ فـلسـطـيــن
+          </a>
+         </li>
+         <li class="leftmenu" data-id="7" style="position:relative;">
+          <a href="ar_page.aspx?id=2GcU2Oa3393951198a2GcU2O" target="_self">
+           الــقـــدس
+          </a>
+         </li>
+         <li class="leftmenu" data-id="8" style="position:relative;">
+          <a href="ar_page.aspx?id=d6K9Hha3598578093ad6K9Hh" target="_self">
+           الـنــظــام الـســيـاسـي
+          </a>
+         </li>
+         <li class="leftmenu" data-id="9" style="position:relative;">
+          <a href="ar_page.aspx?id=QnzxTGa1980597993aQnzxTG" target="_self">
+           قوانـيـن وتـشـريـعـات
+          </a>
+         </li>
+         <li class="leftmenu" data-id="10" style="position:relative;">
+          <a href="ar_page.aspx?id=2GkREXa2002488312a2GkREX" target="_self">
+           الــسـكـان
+          </a>
+         </li>
+         <li class="leftmenu" data-id="11" style="position:relative;">
+          <a href="ar_page.aspx?id=14CsVba3759424350a14CsVb" target="_self">
+           طوائف ومذاهب وجاليات
+          </a>
+         </li>
+         <li class="leftmenu" data-id="12" style="position:relative;">
+          <a href="ar_page.aspx?id=GP8z8ba2830513422aGP8z8b" target="_self">
+           الــصــحــــة
+          </a>
+         </li>
+         <li class="leftmenu" data-id="13" style="position:relative;">
+          <a href="ar_page.aspx?id=YhFyDma2952337806aYhFyDm" target="_self">
+           الـتــعـلـيـــم
+          </a>
+         </li>
+         <li class="leftmenu" data-id="14" style="position:relative;">
+          <a href="ar_page.aspx?id=6KC9qya2998973703a6KC9qy" target="_self">
+           شــؤون اجـتـمـاعـيـــة
+          </a>
+         </li>
+         <li class="leftmenu" data-id="15" style="position:relative;">
+          <a href="ar_page.aspx?id=PQW46Ba2058641739aPQW46B" target="_self">
+           سـيـاحــة
+          </a>
+         </li>
+         <li class="leftmenu" data-id="16" style="position:relative;">
+          <a href="ar_page.aspx?id=sEYCDSa2427921903asEYCDS" target="_self">
+           اقـتـصــاد
+          </a>
+         </li>
+         <li class="leftmenu" data-id="17" style="position:relative;">
+          <a href="ar_page.aspx?id=envBOja4865361336aenvBOj" target="_self">
+           الإســكـان
+          </a>
+         </li>
+         <li class="leftmenu" data-id="18" style="position:relative;">
+          <a href="ar_page.aspx?id=kf880ta3215021634akf880t" target="_self">
+           عـمــل وعـمّـال
+          </a>
+         </li>
+         <li class="leftmenu" data-id="19" style="position:relative;">
+          <a href="ar_page.aspx?id=XPrbVqa2385093018aXPrbVq" target="_self">
+           زراعـــة
+          </a>
+         </li>
+         <li class="leftmenu" data-id="1016" style="position:relative;">
+          <a href="ar_page.aspx?id=R5uvpva2280400188aR5uvpv" target="_self">
+           جغرافيا
+          </a>
+         </li>
+         <li class="leftmenu" data-id="1021" style="position:relative;">
+          <a href="ar_page.aspx?id=b2PMova2637307563ab2PMov" target="_self">
+           نقل واتصالات
+          </a>
+         </li>
+         <li class="leftmenu" data-id="1022" style="position:relative;">
+          <a href="ar_page.aspx?id=piiVkQa2113843413apiiVkQ" target="_self">
+           المياه
+          </a>
+         </li>
+         <li class="leftmenu" data-id="1023" style="position:relative;">
+          <a href="ar_page.aspx?id=0zZLpwa2196645924a0zZLpw" target="_self">
+           البيئة
+          </a>
+         </li>
+         <li class="leftmenu" data-id="1024" style="position:relative;">
+          <a href="ar_page.aspx?id=HYZWOma2309904531aHYZWOm" target="_self">
+           ثقافة
+          </a>
+         </li>
+         <li class="leftmenu" data-id="1025" style="position:relative;">
+          <a href="ar_page.aspx?id=C3jbuQa2349878157aC3jbuQ" target="_self">
+           إعلام
+          </a>
+         </li>
+         <li class="leftmenu" data-id="1026" style="position:relative;">
+          <a href="ar_page.aspx?id=bjwHzRa2248040586abjwHzR" target="_self">
+           الرياضة
+          </a>
+         </li>
+         <li class="leftmenu" data-id="1027" style="position:relative;">
+          <a href="ar_page.aspx?id=xqfMzqa2152865286axqfMzq" target="_self">
+           خدمات عامة
+          </a>
+         </li>
+         <li class="leftmenu" data-id="1028" style="position:relative;">
+          <a href="ar_page.aspx?id=Yg24Kra3516727335aYg24Kr" target="_self">
+           شؤون إسرائيلية
+          </a>
+         </li>
+         <li class="leftmenu" data-id="1029" style="position:relative;">
+          <a href="ar_page.aspx?id=StpZ75a3970713516aStpZ75" target="_self">
+           منظمات غير حكومية
+          </a>
+         </li>
+         <li class="leftmenu" data-id="1030" style="position:relative;">
+          <a href="ar_page.aspx?id=bLueQXa4643602887abLueQX" target="_self">
+           وثـائـق
+          </a>
+         </li>
+         <li class="leftmenu" data-id="1031" style="position:relative;">
+          <a href="ar_page.aspx?id=xUDXBsa5011931298axUDXBs" target="_self">
+           تقارير
+          </a>
+         </li>
+         <li class="leftmenu" data-id="1032" style="position:relative;">
+          <a href="ar_page.aspx?id=i82CgXa2054834727ai82CgX" target="_self">
+           القرارات الدولية بشأن فلسطين
+          </a>
+         </li>
+        </ul>
+       </div>
+       <!-- ############## Latest News ############### -->
+       <!--
+	        	<div class="col-sm-12 col-md-4 col-xs-12 b-categories-filter on-md-padd-left no-print"  style="float:left;padding-top: 15px;">
+	                <div class="row">
+	                    <div class="col-xs-12" >
+		                   <div class="header-gradiant" style="padding:10px;padding-bottom: 5px;border: 1px solid #eee;">
+		                        <a href="ar_category.aspx?latest=1">
+    					        أحدث الاخبار
+    					        </a>
+    		                </div>
+    		
+    		                <div style="height:350px;overflow: scroll;overflow-x: hidden;"></div>
+			                <div class="b-ol-list-text-container b-ol-list-text-container1" style="padding:10px;background:#006692;text-align:left" >
+                                <div class="b-ol-list-text__item">
+                                    <div class="b-ol-list-text__item_info">
+						                <a href="ar_category.aspx?latest=1" style="color:#fff;font-family:HelveticaNeueBold;font-size:18px;">المزيد</a>
+                                    </div>
+				                </div>
+                            </div>
+					    </div>
+					    </div>
+					    <div class="row">
+					        <div class='col-xs-12' style=''>
+					            
+					        </div>
+					    </div>
+					    <div class="row">
+					        <div class="col-xs-12" style="margin-top:15px;">
+					            <div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=mNQgSBa2220439749amNQgSB";'><a href='ar_page.aspx?id=mNQgSBa2220439749amNQgSB' style='color:#fff'> مـعـلـومـات عـامــة</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=fbWkL3a3969761763afbWkL3";'><a href='ar_page.aspx?id=fbWkL3a3969761763afbWkL3' style='color:#fff'> مـلـفـــات وطـنـيــــة</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=dh9Esra1983453252adh9Esr";'><a href='ar_page.aspx?id=dh9Esra1983453252adh9Esr' style='color:#fff'> قـضـايــا الصـراع</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=z2jpOUa1984405005az2jpOU";'><a href='ar_page.aspx?id=z2jpOUa1984405005az2jpOU' style='color:#fff'> تـاريــخ فـلسـطـيــن</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=2GcU2Oa3393951198a2GcU2O";'><a href='ar_page.aspx?id=2GcU2Oa3393951198a2GcU2O' style='color:#fff'> الــقـــدس</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=d6K9Hha3598578093ad6K9Hh";'><a href='ar_page.aspx?id=d6K9Hha3598578093ad6K9Hh' style='color:#fff'> الـنــظــام الـســيـاسـي</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=QnzxTGa1980597993aQnzxTG";'><a href='ar_page.aspx?id=QnzxTGa1980597993aQnzxTG' style='color:#fff'> قوانـيـن وتـشـريـعـات</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=2GkREXa2002488312a2GkREX";'><a href='ar_page.aspx?id=2GkREXa2002488312a2GkREX' style='color:#fff'> الــسـكـان</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=14CsVba3759424350a14CsVb";'><a href='ar_page.aspx?id=14CsVba3759424350a14CsVb' style='color:#fff'> طوائف ومذاهب وجاليات</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=GP8z8ba2830513422aGP8z8b";'><a href='ar_page.aspx?id=GP8z8ba2830513422aGP8z8b' style='color:#fff'> الــصــحــــة</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=YhFyDma2952337806aYhFyDm";'><a href='ar_page.aspx?id=YhFyDma2952337806aYhFyDm' style='color:#fff'> الـتــعـلـيـــم</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=6KC9qya2998973703a6KC9qy";'><a href='ar_page.aspx?id=6KC9qya2998973703a6KC9qy' style='color:#fff'> شــؤون اجـتـمـاعـيـــة</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=PQW46Ba2058641739aPQW46B";'><a href='ar_page.aspx?id=PQW46Ba2058641739aPQW46B' style='color:#fff'> سـيـاحــة</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=sEYCDSa2427921903asEYCDS";'><a href='ar_page.aspx?id=sEYCDSa2427921903asEYCDS' style='color:#fff'> اقـتـصــاد</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=envBOja4865361336aenvBOj";'><a href='ar_page.aspx?id=envBOja4865361336aenvBOj' style='color:#fff'> الإســكـان</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=kf880ta3215021634akf880t";'><a href='ar_page.aspx?id=kf880ta3215021634akf880t' style='color:#fff'> عـمــل وعـمّـال</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=XPrbVqa2385093018aXPrbVq";'><a href='ar_page.aspx?id=XPrbVqa2385093018aXPrbVq' style='color:#fff'> زراعـــة</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=R5uvpva2280400188aR5uvpv";'><a href='ar_page.aspx?id=R5uvpva2280400188aR5uvpv' style='color:#fff'>جغرافيا</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=b2PMova2637307563ab2PMov";'><a href='ar_page.aspx?id=b2PMova2637307563ab2PMov' style='color:#fff'>نقل واتصالات</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=piiVkQa2113843413apiiVkQ";'><a href='ar_page.aspx?id=piiVkQa2113843413apiiVkQ' style='color:#fff'>المياه</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=0zZLpwa2196645924a0zZLpw";'><a href='ar_page.aspx?id=0zZLpwa2196645924a0zZLpw' style='color:#fff'>البيئة</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=HYZWOma2309904531aHYZWOm";'><a href='ar_page.aspx?id=HYZWOma2309904531aHYZWOm' style='color:#fff'>ثقافة</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=C3jbuQa2349878157aC3jbuQ";'><a href='ar_page.aspx?id=C3jbuQa2349878157aC3jbuQ' style='color:#fff'>إعلام</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=bjwHzRa2248040586abjwHzR";'><a href='ar_page.aspx?id=bjwHzRa2248040586abjwHzR' style='color:#fff'>الرياضة</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=xqfMzqa2152865286axqfMzq";'><a href='ar_page.aspx?id=xqfMzqa2152865286axqfMzq' style='color:#fff'>خدمات عامة</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=Yg24Kra3516727335aYg24Kr";'><a href='ar_page.aspx?id=Yg24Kra3516727335aYg24Kr' style='color:#fff'>شؤون إسرائيلية</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=StpZ75a3970713516aStpZ75";'><a href='ar_page.aspx?id=StpZ75a3970713516aStpZ75' style='color:#fff'>منظمات غير حكومية</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=bLueQXa4643602887abLueQX";'><a href='ar_page.aspx?id=bLueQXa4643602887abLueQX' style='color:#fff'>وثـائـق</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=xUDXBsa5011931298axUDXBs";'><a href='ar_page.aspx?id=xUDXBsa5011931298axUDXBs' style='color:#fff'>تقارير</a></div><div class='header-gradiant b-ol-list-text-container1' style='background:#1a93c7;color:#fff;padding:10px;padding-bottom: 5px;border: 1px solid #eee;text-align:center;font-size:1.3em;cursor:pointer;' onclick='window.location.href="ar_page.aspx?id=i82CgXa2054834727ai82CgX";'><a href='ar_page.aspx?id=i82CgXa2054834727ai82CgX' style='color:#fff'>القرارات الدولية بشأن فلسطين</a></div>		
+					        </div>
+					    </div>	
+					    <div class="row">
+					        <div class="col-xs-12" style="">
+					    
+					            		
+					        </div>
+					    </div>	
+			    </div>
+                -->
+      </div>
+     </div>
+    </section>
+   </div>
+   <br/>
+   <!-- End Center Side -->
+   <!-- Footer -->
+   <!-- #content -->
+   <footer class="row-fluid" id="footer" style="background:#D2D2D2">
+    <div class="container" style="display:none;">
+     <div id="footer-widgets" style="min-height:280px;">
+      <div class="col-xs-12 col-sm-3 col-md-3">
+       <div class="widget" style="margin-bottom: 17px;">
+        <h3 class="title" style="">
+         <span>
+          تواصل معنا من خلال
+         </span>
+        </h3>
+        <div class="socmed clearfix">
+         <ul>
+          <li>
+           <a href="https://www.youtube.com/channel/UCVOXzuA8psqZVjwCZu5Po2w" target="_blank">
+            <img alt="" src="images/vid2.png"/>
+           </a>
+          </li>
+          <li>
+           <a href="https://twitter.com/wafa_ps" target="_blank">
+            <img alt="" src="images/twitter-icon.png"/>
+           </a>
+          </li>
+          <li>
+           <a href="https://www.facebook.com/pages/WAFA-News-Agency/124368524307970" target="_blank">
+            <img alt="" src="images/fb-icon.png"/>
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div>
+        <h3 class="title" style="margin:0;margin-bottom:10px;">
+         <span>
+          القائمة البريدية
+         </span>
+        </h3>
+        <input class="form-control" id="emailsubs" placeholder="البريد الالكتروني" style="border-radius:0" type="email"/>
+        <button class="btn btn-primary" id="subscribe" onclick="subsc()" style="width:100%;background:#666;border: 1px solid #ccc;
+									border-radius: 0;" type="button">
+         انضمام للقائمة
+        </button>
+       </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6">
+       <div class="widget">
+        <br>
+         <div class="tagcloud">
+         </div>
+        </br>
+       </div>
+      </div>
+      <div class="col-xs-12 col-sm-3 col-md-3">
+       <div class="widget widget_latestpost" style="text-align:right">
+        <h3 class="title">
+         <span>
+          الاتصال المباشر
+         </span>
+        </h3>
+        <div class="latest-posts widget">
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- footer-widgets -->
+    </div>
+    <!-- footer-widgets -->
+    <div class="" style="background-color:#23323F;">
+     <div class="container" style="color:White;padding:0px;">
+      <div class="col-xs-12 col-sm-4 text-left" style="padding-left:5px;">
+       <ul class="footermenu" style="margin-bottom:0px;text-align: left;">
+        <li style="background-image: linear-gradient(to left, #0a3141 50%, #23323f 50%) !important">
+         <a href="https://www.youtube.com/channel/UCVOXzuA8psqZVjwCZu5Po2w" target="_blank">
+          <img alt="" src="images/vid2.png"/>
+         </a>
+        </li>
+        <li style="background-image: linear-gradient(to left, #0a3141 50%, #23323f 50%) !important">
+         <a href="https://twitter.com/wafa_ps" target="_blank">
+          <img alt="" src="images/twitter-icon.png"/>
+         </a>
+        </li>
+        <li style="background-image: linear-gradient(to left, #0a3141 50%, #23323f 50%) !important">
+         <a href="https://www.facebook.com/pages/WAFA-News-Agency/124368524307970" target="_blank">
+          <img alt="" src="images/fb-icon.png"/>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="col-xs-12 col-sm-3 text-center" style="    line-height: 60px;">
+       عدد الزوار ( 16038868 )
+      </div>
+      <div class="col-xs-12 col-sm-5 text-right" style="    line-height: 60px;">
+       جميع الحقوق محفوظة لوكالة الأنباء والمعلومات الفلسطينية وفا © 2019
+      </div>
+     </div>
+    </div>
+    <!-- .site-info -->
+   </footer>
+   <!-- End footer -->
+   <script type="text/javascript">
+    //<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+   </script>
+   <script src="/WebResource.axd?d=zyOkhECVggNH8cXYJB_ujbC0O9ExkVfgfVE-ileWztHZQx33KzBsi-6wM4KgLc2SUUYPTT-PC4nIHKHCB9-i_LCHHWRcU9xrOiUgTC2BsXo1&amp;t=636736120180102877" type="text/javascript">
+   </script>
+  </form>
+  <script>
+   function subsc(){
+	var re =/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+		var bemail = document.getElementById("emailsubs").value;
+		if(!re.test(bemail))
+		{
+			document.getElementById("emailsubs").focus();
+			alert("ايميل خاطىء");
+			
+		}
+		else{
+		jQuery(function($) {
+			$.ajax({
+            url:"subscribe.aspx?email="+bemail,
+            beforeSend:function(){$("#subscribe").html('جاري الاضافة <img src="images/loading.gif" width="15">');},
+            success:function(z){$("#subscribe").html(z);setTimeout(function(){ $("#subscribe").html('انضمام للقائمة'); }, 5000);
+            },
+            async:true
+			});
+		});
+		}
+	}
+  </script>
+ </body>
+</html>

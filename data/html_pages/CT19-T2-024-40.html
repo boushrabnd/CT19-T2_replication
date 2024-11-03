@@ -1,0 +1,1514 @@
+<!DOCTYPE doctype html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="wikiwand" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="wikiwand" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="wikiwand" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" ng-app="wikiwand" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
+ <!--<![endif]-->
+ <head>
+  <!--header generic -->
+  <!--this is the original url for google fonts-->
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Lora:400,700,400italic,700italic|Merriweather:400italic,400,300italic,300,700,700italic|Open+Sans:300italic,400italic,700italic,700,300,400&amp;subset=latin,cyrillic-ext,greek-ext,greek,devanagari,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://chrome.google.com/webstore/detail/emffkefkbkpkgpdeeooapgaicgmcbolj" rel="chrome-webstore-item"/>
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <!--<script type="text/javascript"  src="//assets.wikiwand.com/ads.js"></script>-->
+  <link href="//assets.wikiwand.com/img/wikiwand_icon_apple.png" rel="apple-touch-icon">
+   <script>
+    function detectWidth(){
+            var w = window;
+            var d = w.document;
+            var e = d.documentElement;
+            var clientWidth = screen.width || w.innerWidth || e.offsetWidth || e.clientWidth;
+            return clientWidth;
+        }
+
+        var EXCHANGE_RATE = 1;
+        var PREBID_TIMEOUT = 1800;
+
+        if(detectWidth() < 768) PREBID_TIMEOUT = 1800;
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+
+        function initAdserver() {
+            if (pbjs.initAdserverSet) return;
+            //load GPT library here
+            loadScript('//www.googletagservices.com/tag/js/gpt.js');
+            pbjs.initAdserverSet = true;
+        }
+        setTimeout(initAdserver, PREBID_TIMEOUT);
+        var pbjs = pbjs || {};
+        pbjs.que = pbjs.que || [];
+        loadScript('//assets.wikiwand.com/js/prebid.js'); //Add Your Script Here
+
+        pbjs.que.push(function() {
+            pbjs.setConfig({
+                enableSendAllBids: true
+            });
+        });
+
+        function loadScript(scriptSrc) {
+            var script = document.createElement('script');
+            script.async=true;
+            script.type = 'text/javascript';
+            script.src = scriptSrc;
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(script, node);
+        }
+
+        pbjs.que.push(function() {
+            var adUnits = [{
+                code: 'div-gpt-ad-1527601425745-0',
+                mediaTypes: {
+                    banner: {
+                        sizes: [320, 50]
+                    }
+                },
+                bids: [
+                    {bidder: 'appnexus' ,params: {placementId: '14178733'}},
+                    {bidder: 'audienceNetwork' ,params: {placementId: '2108823939380318_2108906992705346'}}
+                ]
+            },{
+                code: 'div-gpt-ad-1527601425745-2',
+                mediaTypes: {
+                    banner: {
+                        sizes: [300, 250]
+                    }
+                },
+                bids: [
+                    {bidder: 'appnexus' ,params: {placementId: '14178714'}},
+                    {bidder: 'audienceNetwork' ,params: {placementId: '2108823939380318_2108906782705367'}}
+                ]
+            },{
+                code: 'div-gpt-ad-1527601425745-3',
+                mediaTypes: {
+                    banner: {
+                        sizes: [300, 250]
+                    }
+                },
+                bids: [
+                    {bidder: 'appnexus' ,params: {placementId: '14178714'}},
+                    {bidder: 'audienceNetwork' ,params: {placementId: '2108823939380318_2114674888795223'}}
+                ]
+            }];
+
+
+            pbjs.addAdUnits(adUnits);
+            pbjs.requestBids({
+                bidsBackHandler: function(bidResponses) {
+                    initAdserver();
+                },
+                timeout : PREBID_TIMEOUT
+            });
+
+            pbjs.bidderSettings = {
+                //standard applies to all bidders
+                standard: {
+                    adserverTargeting: [{
+                        key: "hb_bidder",
+                        val: function(bidResponse) {
+                            return bidResponse.bidderCode;
+                        }
+                    }, {
+                        key: "hb_adid",
+                        val: function(bidResponse) {
+                            return bidResponse.adId;
+                        }
+                    }, {
+                        key: "hb_pb",
+                        val: function(bidResponse) {
+                            if(bidResponse.cpm >= 20) return '20.00';
+                            return (Math.floor(bidResponse.cpm * 20) / 20).toFixed(2);
+                        }
+                    }]
+                },
+                appnexus: {
+                    bidCpmAdjustment: function (bidCpm) {
+                        return bidCpm * EXCHANGE_RATE * .90;
+                    },
+                    alwaysUseBid: true
+                },
+                audienceNetwork: {
+                    bidCpmAdjustment: function(bidCpm) {
+                        return bidCpm * EXCHANGE_RATE * .80;
+                    },
+                    alwaysUseBid: true
+                }
+            };
+        });  //end push command
+
+        // Wrapper for Adnimation, generated on 2018-10-18T03:08:23-04:00, version 2018.04.02
+        pbjs.que.push(function() {
+
+            var confiantWrap = function confiantWrap(a,b,c,d,e){function f(a){return(m(a)||"")[s]("/","_")[s]("+","-")}function g(b,c,d){var e=w+n(b)+"&d="+c,f="err__"+1*new Date;k[f]=d;var g="<"+q+" on"+t+'="void('+f+'())" '+r+'="'+e+'" type="text/java'+q+'" ></'+q+">";a[v](g)}function h(){var c=f(d+"/"+x.k.hb_bidder[0]+":"+x.k.hb_size[0]),h={wh:c,wd:l.parse(l[u](x)),wr:0};g(c,f(l[u](h)),function(){a[v](b.ad)});var i={prebid:{adId:b.adId,cpm:b.cpm}},j={d:h,t:b.ad,cb:e,id:i};k[d]={},k[d][c]=j}var i=b.bidder,j=b.size,k=a.parentWindow||a.defaultView,l=k.JSON,m=k.btoa,n=k.encodeURIComponent;if(!l||!m)return!1;var o="t",p="i",q="script",r="src",s="replace",t="error",u="stringify",v="wr"+p+o+"e",w="https://"+c+"/?wrapper="+n(d)+"&tpid=",x={k:{hb_bidder:[i],hb_size:[j]}};return h(),a.close(),!0};
+
+            // keep a reference to original renderAd function
+            var w = window;
+            w._clrm = w._clrm || {};
+            w._clrm.renderAd = w._clrm.renderAd || pbjs.renderAd;
+            var config = w._clrm.prebid || {
+                /* Enables sandboxing on a device group
+                     All:1 , Desktop:2, Mobile: 3, iOS: 4, Android: 5, Off: 0
+                 */
+                sandbox: 0
+            };
+
+            var isGoogleFrame = function (c) {
+                return c.tagName === 'IFRAME' && c.id && c.id.indexOf('google_ads_iframe_') > -1;
+            };
+
+            var shouldSandbox = function () {
+                var uaToRegexMap = {
+                        "mobile": /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/i,
+                        "ios": /(.+)(iPhone|iPad|iPod)(.+)OS[\s|\_](\d)\_?(\d)?[\_]?(\d)?.+/i,
+                        "android": /Android/i
+                    },
+                    sbStr = "" +config.sandbox;
+                if (sbStr === "1") {
+                    // all environments
+                    return true;
+                } else if (sbStr === "2") {
+                    // desktop
+                    return !navigator.userAgent.match(uaToRegexMap["mobile"]);
+                } else if (sbStr === "3") {
+                    // mobile
+                    return navigator.userAgent.match(uaToRegexMap["mobile"]);
+                } else if (sbStr === "4") {
+                    // ios only
+                    return navigator.userAgent.match(uaToRegexMap["ios"]);
+                } else if (sbStr === "5") {
+                    // android
+                    return navigator.userAgent.match(uaToRegexMap["android"]);
+                } else {
+                    return false;
+                }
+            };
+
+            Node.prototype.appendChild = (function (original) {
+                return function (child) {
+                    if (isGoogleFrame(child) && shouldSandbox() && !child.getAttribute('sandbox')) {
+                        child.setAttribute('sandbox', 'allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation');
+                        child.setAttribute('data-forced-sandbox', true);
+                    }
+                    return original.call(this, child);
+                };
+            }(Node.prototype.appendChild));
+
+
+            // override renderAd
+            pbjs.renderAd = function(doc, id) {
+                if (doc && id) {
+                    try {
+
+                        // get pbjs bids
+                        var bids = [],
+                            bidResponses = pbjs.getBidResponses(),
+                            highestBids = pbjs.getHighestCpmBids();
+                        for (var slot in bidResponses) {
+                            bids = bids.concat(bidResponses[slot].bids);
+                        }
+                        bids = bids.concat(highestBids);
+
+                        // lookup ad by ad Id (avoid ES6 array functions)
+                        var bid, i;
+                        for (i=0; i<bids.length; i++) {
+                            if (bids[i].adId === id) {
+                                bid = bids[i];
+                                break;
+                            }
+                        }
+
+                        // Optional: list of bidders that don't need wrapping, array of strings, e.g.: ["bidder1", "bidder2"]
+                        var confiantExcludeBidders = [];
+
+                        // check bidder exclusion (avoid ES6 array functions)
+                        var excludeBidder = false;
+                        for (i=0; i<confiantExcludeBidders.length; i++) {
+                            if (bid.bidder === confiantExcludeBidders[i]) {
+                                excludeBidder = true;
+                                break;
+                            }
+                        }
+
+                        if (bid && bid.ad && !excludeBidder) {
+                            // Neutralize document
+                            var docwrite = doc.write;
+                            var docclose = doc.close;
+                            doc.write = doc.close = function() {};
+                            // call renderAd with our neutralized doc.write
+                            window._clrm.renderAd(doc, id);
+                            // Restore document
+                            delete doc.write;
+                            delete doc.close;
+
+                            var callback = function(blockingType, blockingId, isBlocked, wrapperId, tagId, impressionData) {
+                                console.log("w00t one more bad ad nixed.", arguments);
+                            };
+
+                            // do the actual ad serving and fall back on document.write if failure
+                            if (!confiantWrap(doc, bid, 'clarium.global.ssl.fastly.net', 'd2ehZtyVAa1kXxOtMxFp7XciXcU', callback)) {
+                                doc.write(bid.ad);
+                                doc.close();
+                            }
+
+                            return;
+                        }
+                    } catch (e) {
+                        console.log(e);
+                    }
+                }
+
+                // if bid.ad is not defined or if any error occurs, call renderAd to serve the creative
+                window._clrm.renderAd(doc, id);
+            };
+
+        });
+
+
+        pbjs.que.push(function() {
+            pbjs.enableAnalytics({
+                provider: 'ga',
+                options: {
+                    global: 'ga',
+                    enableDistribution: false,
+                    sampling: 0.10
+                }
+            });
+        });
+   </script>
+   <script>
+    var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+   </script>
+   <script>
+    googletag.cmd.push(function() {
+
+        var TopBannerMapping = googletag.sizeMapping().
+            addSize([0, 0], [320, 50]).
+            addSize([730, 200], [728, 90]).
+            build();
+
+        var SideBarBannerMapping = googletag.sizeMapping().
+            addSize([0, 0], []).
+            addSize([730, 200], [160, 600]).
+            build();
+
+
+        var MiddleBannerMapping = googletag.sizeMapping().
+            addSize([0, 0], [300, 250]).
+            addSize([730, 200], [728, 90]).
+            build();
+
+        var BottomBannerMapping = googletag.sizeMapping().
+            addSize([0, 0], [300, 250]).
+            addSize([730, 200], [728, 90]).
+            build();
+
+        googletag.
+            defineSlot('/339474670/Wikiwand/ATF', [[728, 90], [320, 50]], 'div-gpt-ad-1527601425745-0').
+            defineSizeMapping(TopBannerMapping).
+            addService(googletag.pubads());
+
+        googletag.
+            defineSlot('/339474670/Wikiwand/SideBar', [[160, 600], [120, 600]], 'div-gpt-ad-1527601425745-1').
+            defineSizeMapping(SideBarBannerMapping).
+            addService(googletag.pubads());
+
+        googletag.
+            defineSlot('/339474670/Wikiwand/BTF', [[728, 90], [300, 250]], 'div-gpt-ad-1527601425745-2').
+            defineSizeMapping(MiddleBannerMapping).
+            addService(googletag.pubads());
+
+        googletag.
+            defineSlot('/339474670/Wikiwand/Bottom', [[728, 90], [300, 250]], 'div-gpt-ad-1527601425745-3').
+            defineSizeMapping(BottomBannerMapping).
+            addService(googletag.pubads());
+
+        pbjs.que.push(function() {
+            pbjs.setTargetingForGPTAsync();
+        });
+
+        googletag.enableServices();
+    });
+   </script>
+   <script>
+    (function () {
+            var node = document.getElementsByTagName('script')[0],
+            rvbP = document.createElement('script');
+            window.CMT = { appId: '97173451-3aaa-4889-b6d0-38984809ec49' };
+            rvbP.defer = true;
+            rvbP.type = 'text/javascript';
+            rvbP.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                '//revboostprocdnadsprod.azureedge.net/scripts/latest/min.js';
+            node.parentNode.insertBefore(rvbP, node);
+        })();
+   </script>
+   <style>
+    @media screen and (max-width: 1680px) {
+        .sideplacement {
+            right: -160px !important;
+        }
+    }
+    @media screen and (max-width: 1400px) {
+        .sideplacement {
+            display: none
+        }
+    }
+   </style>
+   <!--BEGIN FIRSTIMPRESSION TAG - wikiwand.com -->
+   <script data-cfasync="false" type="text/javascript">
+    window.disableAdLayout = false;
+        window.apd_options = { 'websiteId': 7350, 'runFromFrame': false };
+        (function() {
+            var w = window.apd_options.runFromFrame ? window.top : window;
+            if(window.apd_options.runFromFrame && w!==window.parent) w=window.parent;
+            if (w.location.hash.indexOf('apdAdmin') !== -1){if(typeof(Storage) !== 'undefined') {w.localStorage.apdAdmin = 1;}}
+            var adminMode = ((typeof(Storage) == 'undefined') || (w.localStorage.apdAdmin == 1));
+            w.apd_options=window.apd_options;
+            var apd = w.document.createElement('script'); apd.type = 'text/javascript'; apd.async = true;
+            apd.src = '//' + (adminMode ? 'cdn' : 'ecdn') + '.firstimpression.io/' + (adminMode ? 'fi.js?id=' + window.apd_options.websiteId : 'fi_client.js') ;
+            var s = w.document.getElementsByTagName('head')[0]; s.appendChild(apd);
+        })();
+   </script>
+   <!-- END FIRSTIMPRESSION TAG -->
+   <img height="0" id="imagePlaceHolder" src="" style="opacity:0;position:fixed" width="0"/>
+   <script>
+    console.time('time up to showArticleContents');
+        var precache_from_extension = false;
+        if (window.location.hash.indexOf('precache_from_extension=true') > -1) {
+            precache_from_extension = true;
+        }
+        var pageLoadStart = new Date().getTime();
+        var pageHTMLReceived = (new Date()).getTime();
+        var genericData = {
+            debug: {
+                pageLoadedTimestamp: (new Date()).getTime()
+            }
+        };
+        var localContentHtml;
+        var localContentHtmlPartial;
+        var attempts = 0;
+        function tempConditioning(mystring) {
+            //this is to migrate old article contents until we do a database recaching (advance version)
+            //replace old pic-placeholder with one which supports both protocols
+            if (location.protocol == 'https:') {
+                var newstring = mystring.split('http://assets.cdn.wikiwand.com/img/pic-placeholder.gif').join('//assets.wikiwand.com/img/pic-placeholder.gif');
+            } else {
+                newstring = mystring;
+            }
+            return newstring;
+        }
+
+        function httpGet(theUrl, type) {
+            var xmlHttp = null;
+            xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState == 4) // Finished
+                {
+                    if (xmlHttp.status == 200) {
+                        if (theUrl.indexOf('_PARTIAL_DOWNLOAD') == -1) {
+                            //console.log('got full text');
+                            localContentHtml = xmlHttp.responseText;
+                        } else {
+                            //console.log('got partial text');
+                            localContentHtmlPartial = xmlHttp.responseText;
+                        }
+                    }
+                    else {
+                        console.log('failed with status ',xmlHttp.status);
+                        attempts++;
+                        if (attempts < 10 && (theUrl.indexOf('_PARTIAL_DOWNLOAD') == -1)) {
+                            console.log("DOWNLOAD FAILED, TRYING AGAIN ", theUrl);
+                            if (xmlHttp.status == 0) {
+                                if (theUrl.indexOf('s3.amazonaws.com') != -1) {
+                                    if (attempts==9) {
+
+                                        setTimeout(function() {
+                                            var element;
+                                            if (typeof(noAdblock) == 'undefined') {
+                                                element = '#adblockNotice';
+                                            } else {
+                                                element = '#httpsEverywhereNotice';
+                                            }
+                                            if ($(element).length > 0) {
+                                                console.log(' element exists');
+                                                $(element).show();
+                                                $(element).css('opacity', 1);
+                                                $(element).detach().prependTo('#content');
+                                            }
+                                        }, 6000);
+                                    }
+                                }
+                                var urlOnS3 = 'https://s3.amazonaws.com/ww-article-cache-1/ar/%25D9%2582%25D8%25A7%25D8%25A6%25D9%2585%25D8%25A9_%25D8%25AD%25D8%25B1%25D9%2588%25D8%25A8_%25D9%2585%25D8%25B5%25D8%25B1';
+                                urlOnS3 = urlOnS3.replace('http://', '//').replace('https://', '//');
+                                urlOnS3 = urlOnS3.replace(/\+/g, '%2B');
+                                httpGet(urlOnS3, 'html');
+                                httpGet(urlOnS3, 'html');
+                            } else {
+                                //console.log('status ', xmlHttp);
+                                setTimeout(function() {
+                                    httpGet(theUrl, 'html');
+                                }, 500);
+                            }
+                        }
+                    }
+                }
+            };
+            xmlHttp.open("GET", theUrl, true);
+            xmlHttp.send(null);
+        }
+   </script>
+   <script>
+    //console.log('have cdn file in generic header, this is cached');
+        var loadedFromCache = true;
+        var urlOnCdn = 'https://db0nus869y26v.cloudfront.net/ar/%25D9%2582%25D8%25A7%25D8%25A6%25D9%2585%25D8%25A9_%25D8%25AD%25D8%25B1%25D9%2588%25D8%25A8_%25D9%2585%25D8%25B5%25D8%25B1?rev=1553938753863';
+        urlOnCdn = urlOnCdn.replace('http://', '//').replace('https://', '//');
+        urlOnCdn = urlOnCdn.replace(/\+/g, '%2B');
+        httpGet(urlOnCdn, 'html');
+        //var partialDownloadUrl=urlOnCdn.replace('?rev','_PARTIAL_DOWNLOAD?rev');
+        //httpGet(partialDownloadUrl,'html');
+        try {
+            var mainImageUrl = '';
+            mainImageUrl = mainImageUrl.replace('https://', '//').replace('http://', '//');
+            var image = document.getElementById("imagePlaceHolder");
+            image.src = mainImageUrl;
+        }
+        catch (e) {console.log('error predownloading image', e);}
+   </script>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+   </script>
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js">
+   </script>
+   <!--
+    
+    <link rel="stylesheet" href="//assets.wikiwand.com/css/fonts.92ff4698.css" type="text/css" media="screen"/>
+    
+    -->
+   <script>
+    var CURRENT_USER_ID=null;
+   </script>
+   <link href="//assets.wikiwand.com/css/wikiwand.early.min.fd1a9197.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="//assets.wikiwand.com/js/wikiwand.early.min.d470c7d7.js" type="text/javascript">
+    </script>
+    <!-- BEGIN TRACKJS -->
+    <script type="text/javascript">
+     var LOAD_TRACKJS = false;
+        if (LOAD_TRACKJS && !precache_from_extension) {
+            window._trackJs = {
+                token: '9bcd9b3d130a4b8eb9f58ff06e6781b5',
+                callback: {enabled: false},
+                console: {enabled: true, display: true, error: false},
+                network: {enabled: false},
+                visitor: {enabled: false},
+                window: {enabled: false},
+                onError: function(payload, error) {
+
+                    // List borrowed from the awesome @pamelafox
+                    // https://gist.github.com/pamelafox/1878283
+                    var i, commonCrypticExtensionErrors = [
+                        "top.GLOBALS",
+                        "originalCreateNotification",
+                        "canvas.contentDocument",
+                        "MyApp_RemoveAllHighlights",
+                        "http://tt.epicplay.com",
+                        "Can't find variable: ZiteReader",
+                        "jigsaw is not defined",
+                        "ComboSearch is not defined",
+                        "http://loading.retry.widdit.com/",
+                        "atomicFindClose",
+                        "fb_xd_fragment",
+                        "Script error",
+                        "__adg_gm_commands_api",
+                        "A Chrome Web Store installation is already pending.",
+                        "‘-×´]/: Range out of order in character class"
+                    ];
+                    for (i = 0; i < commonCrypticExtensionErrors.length; i++) {
+                        if (payload.message.indexOf(commonCrypticExtensionErrors[i]) > -1) {
+                            // returning any kind of falsy value will reject error
+                            return false;
+                        }
+                    }
+                    return true; // Return any kind of truthy value here to allow transmission of error
+                }
+            };
+            var fileref = document.createElement('script');
+            fileref.setAttribute("type", "text/javascript");
+            fileref.setAttribute("src", "//d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js");
+            if (typeof fileref != "undefined")    document.getElementsByTagName("head")[0].appendChild(fileref);
+        }
+    </script>
+    <link href="//fonts.googleapis.com/earlyaccess/droidarabickufi.css" rel="stylesheet" type="text/css"/>
+    <script>
+     // disable all logs
+		if (document.location.search.indexOf('debug_logs=1') == -1) {
+			console.log = function() {};
+			console.time = function() {};
+			console.timeEnd = function() {};
+		}
+    </script>
+    <script>
+     var serverData={"fromSearchEngine":false,"layout":"wikiwand","publisherMonetization":"false","showTOC":"true","agent":{"string":"Mozilla/5.0","ua":{"family":"Other","major":null,"minor":null,"patch":null},"userAgent":{"family":"Other","major":null,"minor":null,"patch":null},"os":{"family":"Other","major":null,"minor":null,"patch":null,"patchMinor":null},"device":{"family":"Other"},"family":"Other","isMobileRes":false,"extensionInstalled":false,"fromSearchWidget":false,"isBot":false,"isHuman":false},"config":{"environment":"production","features":{"news":false,"map":true,"toc":true,"gallery":true,"partials":true,"apiCache":true,"invites":false,"articlePromo":true,"classification":false,"moduleYouTubeVideo":false,"webSocket":false,"snippet":true,"userManagement":false,"comments":false,"reportBoardActions":true,"paywall":false,"boards":false,"comparisons":false},"agent":{"string":"Mozilla/5.0","ua":{"family":"Other","major":null,"minor":null,"patch":null},"userAgent":{"family":"Other","major":null,"minor":null,"patch":null},"os":{"family":"Other","major":null,"minor":null,"patch":null,"patchMinor":null},"device":{"family":"Other"},"family":"Other","isMobileRes":false,"extensionInstalled":false,"fromSearchWidget":false,"isBot":false,"isHuman":false},"facebook":{"appId":"823404911083396"}},"cpu":null,"callToInstallExtension":false,"settings":{"tests":{},"monPlus":false}};
+		
+		
+		
+
+		
+			var articleData={"cache":{"cacheDBVer":54,"cacheDate":1553938753863,"hash":"8bb4ec41664389358901a7abbec6f19e","key":"/ar/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1","wikiRevision":"33670806","canonical":"/ar/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1","isCanonical":true,"S3FileUrl":"https://s3.amazonaws.com/ww-article-cache-1/ar/%25D9%2582%25D8%25A7%25D8%25A6%25D9%2585%25D8%25A9_%25D8%25AD%25D8%25B1%25D9%2588%25D8%25A8_%25D9%2585%25D8%25B5%25D8%25B1","CDNFileUrl":"https://db0nus869y26v.cloudfront.net/ar/%25D9%2582%25D8%25A7%25D8%25A6%25D9%2585%25D8%25A9_%25D8%25AD%25D8%25B1%25D9%2588%25D8%25A8_%25D9%2585%25D8%25B5%25D8%25B1?rev=1553938753863"},"langCodeUrl":"ar","rawArticlePath":"%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1","fonts":{"arabic":true},"bodyClasses":["rtl","lg_arabic"],"hasInfobox":false,"facts":[],"photos":[],"title":"قائمة حروب مصر","geo":null,"TOC":{"type":"ul","id":"toc_btn_article-root-section","href":"article-root-section","text":"","children":[{"type":"od","classesHtml":"","special":false,"id":"toc_btn_overview","href":"overview","text":"مقدمة","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_عصر_الأسرة_العلوية","href":"عصر_الأسرة_العلوية","text":"عصر الأسرة العلوية","children":[]},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_العصر_الجمهوري","href":"العصر_الجمهوري","text":"العصر الجمهوري","children":[{"type":"li","classesHtml":"","special":false,"id":"toc_btn_دعم_عسكري_ومناوشات_حربية","href":"دعم_عسكري_ومناوشات_حربية","text":"دعم عسكري ومناوشات حربية","children":[]}],"hasChildren":true},{"type":"od","classesHtml":"","special":false,"id":"toc_btn_انظر_أيضاً","href":"انظر_أيضاً","text":"انظر أيضاً","children":[]},{"type":"od","classesHtml":" class='special'","special":true,"id":"toc_btn_المراجع","href":"المراجع","text":"المراجع","children":[]}],"hasChildren":true},"mainImage":{"mode":"none","fromEnglishWikipedia":true},"pageIsArticle":true,"links":{"selfRead":"http://wikiwand.com/ar/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1","wikipediaRead":"https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1?oldformat=true","wikipediaEdit":"https://ar.wikipedia.org/w/index.php?title=%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1&action=edit","wikipediaHistory":"https://ar.wikipedia.org/w/index.php?title=%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1&action=history","wikipediaPrint":"https://ar.wikipedia.org/w/index.php?title=%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1&printable=yes","wikipediaTalk":"https://ar.wikipedia.org/wiki/Talk:%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1?oldformat=true","wikipediaDownload":"https://ar.wikipedia.org/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1&writer=rl"},"meta":{"title":"قائمة حروب مصر | Wikiwand","keywords":"qw, قائمة حروب مصر, العربية","description":"على مر التاريخ خاضت مصر العديد من الحروب منذ العصر الفرعوني ومروراً بالعصر الإسلامي ووصولاً لعهد الدولة المصرية الحديثة لعدة أسباب مختلفة منها توسيع النفوذ بغرض حماية العمق الإستراتيجي للحدود المصرية، ومنها مساعدة الدول الحليفة في حروبها، ولكن يبقى أهمها صد هجمات الغزاة والمعتدين دفاعاً عن مصر. ففي عهد مُحمد علي شن الجيش المصري حملة على السودان بهدف تأليف وحدة وادي النيل وتدعيم الوحدة القومية بين البلدين.[1]:158 وانتهت ببسط النفوذ المصري في ربوع السودان،[1]:189 كما شارك بحرب المورة بهدف مساعدة الجيش التركي في إخماد الثورة باليونان وتوسيع نطاق الدولة المصرية وبسط نفوذها فيما وراء البحار،[1]:193 وشن الجيش المصري حملة على سوريا قوامها 30000 مقاتل تحت قيادة إبراهيم باشا، نجحت في ضم سوريا وتحقيق أهداف مُحمد علي التوسعية والاقتصادية ودحض الجيش التركي الذي أرسله السلطان العثماني لإيقاف الجيش المصري، واستطرد زاحفا إلى الأناضول ووصل إلى حدود الآستانة مما اضطر السلطان العثماني إلى الإذعان لإبراهيم باشا والاتفاق على الصلح فيما عرف باتفاقية كوتاهيه، والتي قضت بأن يتخلى السلطان العثماني لمُحمد علي عن سوريا وإقليم أضنة مع تثبيته على مصر وجزيرة كريت والحجاز مقابل أن يجلو الجيش المصري عن باقي بلاد الأناضول.[1]:220:257 وفي عهد عباس باشا الأول قام الجيش المصري بمساعدة الدولة العثمانية في حربها ضد الإمبراطورية الروسية المسماة \"بحرب القرم\" بأسطول بحري قوامه 12 سفينة، و6850 جندي بحري تحت قيادة أمير البحر حسن باشا الإسكندراني، وجيش بري قوامه 72 مدفع، و19722 جندي بري تحت قيادة الفريق سليم فتحي باشا، وانتهت الحرب بانتصار الدولة العثمانية وهزيمة الروس.[2] وفي عهد سعيد باشا أُرسلت أورطة مصرية سودانية قوامها 453 جندي إلى المكسيك لمساعدة فرنسا في حربها ضد الحكومة المكسيكية بعد أن تخلت عنها كل من إنجلترا وإسبانيا.[3] كما شارك الجيش المصري في الدفاع عن فلسطين والعروبة وخاض خمس حروب ضد إسرائيل . وحروب ضد الجيش البريطاني والجيش الفرنسي. وشارك الجيش المصري أيضا بشكل كبير في حرب شمال اليمن الأهلية، والمناوشات المصرية الليبية في يوليو 1977. وكان له مشاركة كبيرة في عملية عاصفة الصحراء، وتحرير الكويت من الاحتلال العراقي في عام 1991، وكان الجيش المصري يشكل ثاني أكبر كتيبة من قوات التحالف.[4]","robots":"index,follow","url":"http://www.wikiwand.com/ar/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1","image":"//assets.wikiwand.com/img/wikiwand_icon.png"},"fromWikipedia":"من ويكيبيديا، الموسوعة الحرة","disambiguations":[],"searchTranslation":"ابحث في ويكيبيديا","availableLanguages":[{"langEnglishName":"Arabic","langNativeName":"العربية","langAbberviation":"ar","langCodeHTML":0,"langCodeURL":"ar","articleTitle":"قائمة حروب مصر","articleLink":"/ar/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1","score":0},{"langEnglishName":"English","langNativeName":"English","langAbberviation":"en","langCodeHTML":0,"langCodeURL":"en","articleTitle":"List of wars involving Egypt","articleLink":"/en/List_of_wars_involving_Egypt","score":1},{"langEnglishName":"Norwegian (Bokmål)","langNativeName":"norsk (bokmål)","langAbberviation":"no","langCodeHTML":0,"langCodeURL":"no","articleTitle":"Liste over kriger Egypt har deltatt i","articleLink":"/no/Liste_over_kriger_Egypt_har_deltatt_i","score":0},{"langEnglishName":"Portuguese","langNativeName":"português","langAbberviation":"pt","langCodeHTML":0,"langCodeURL":"pt","articleTitle":"Lista de conflitos envolvendo o Egito","articleLink":"/pt/Lista_de_conflitos_envolvendo_o_Egito","score":1}],"englishLink":{"langEnglishName":"English","langNativeName":"English","langAbberviation":"en","langCodeHTML":0,"langCodeURL":"en","articleTitle":"List of wars involving Egypt","articleLink":"/en/List_of_wars_involving_Egypt","score":1}};
+    </script>
+    <script>
+     if (location.host=='translate.googleusercontent.com' && location.search){
+
+			var requestedLang=location.search.split('tl=')[1];
+			if (requestedLang) {
+				requestedLang = requestedLang.split('&')[0];
+				var desiredLink = articleData.links.selfRead.replace('http://', 'https://');
+				for (idx in articleData.availableLanguages) {
+					var lang = articleData.availableLanguages[idx];
+					if (lang.langCodeURL == requestedLang) {
+						desiredLink = 'https://www.wikiwand.com' + lang.articleLink;
+						break;
+					}
+				}
+				window.location = desiredLink;
+				var dontReport=true;
+			}
+		}
+    </script>
+    <title>
+     قائمة حروب مصر - Wikiwand
+    </title>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="@wikiwand" name="twitter:site"/>
+    <meta content="wikiwand-article://ar/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1" name="twitter:app:url:iphone">
+     <meta content="wikiwand-article://ar/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1" name="twitter:app:url:ipad">
+      <meta content="823404911083396" property="fb:app_id">
+       <meta content="index,follow" name="robots"/>
+       <meta content="article" property="og:type"/>
+       <meta content="Wikiwand" property="og:site_name"/>
+       <meta content="http://www.wikiwand.com/ar/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%AD%D8%B1%D9%88%D8%A8_%D9%85%D8%B5%D8%B1" property="og:url"/>
+       <meta content="قائمة حروب مصر | Wikiwand" property="og:title"/>
+       <meta content="قائمة حروب مصر | Wikiwand" property="twitter:title"/>
+       <meta content='على مر التاريخ خاضت مصر العديد من الحروب منذ العصر الفرعوني ومروراً بالعصر الإسلامي ووصولاً لعهد الدولة المصرية الحديثة لعدة أسباب مختلفة منها توسيع النفوذ بغرض حماية العمق الإستراتيجي للحدود المصرية، ومنها مساعدة الدول الحليفة في حروبها، ولكن يبقى أهمها صد هجمات الغزاة والمعتدين دفاعاً عن مصر. ففي عهد مُحمد علي شن الجيش المصري حملة على السودان بهدف تأليف وحدة وادي النيل وتدعيم الوحدة القومية بين البلدين.[1]:158 وانتهت ببسط النفوذ المصري في ربوع السودان،[1]:189 كما شارك بحرب المورة بهدف مساعدة الجيش التركي في إخماد الثورة باليونان وتوسيع نطاق الدولة المصرية وبسط نفوذها فيما وراء البحار،[1]:193 وشن الجيش المصري حملة على سوريا قوامها 30000 مقاتل تحت قيادة إبراهيم باشا، نجحت في ضم سوريا وتحقيق أهداف مُحمد علي التوسعية والاقتصادية ودحض الجيش التركي الذي أرسله السلطان العثماني لإيقاف الجيش المصري، واستطرد زاحفا إلى الأناضول ووصل إلى حدود الآستانة مما اضطر السلطان العثماني إلى الإذعان لإبراهيم باشا والاتفاق على الصلح فيما عرف باتفاقية كوتاهيه، والتي قضت بأن يتخلى السلطان العثماني لمُحمد علي عن سوريا وإقليم أضنة مع تثبيته على مصر وجزيرة كريت والحجاز مقابل أن يجلو الجيش المصري عن باقي بلاد الأناضول.[1]:220:257 وفي عهد عباس باشا الأول قام الجيش المصري بمساعدة الدولة العثمانية في حربها ضد الإمبراطورية الروسية المسماة "بحرب القرم" بأسطول بحري قوامه 12 سفينة، و6850 جندي بحري تحت قيادة أمير البحر حسن باشا الإسكندراني، وجيش بري قوامه 72 مدفع، و19722 جندي بري تحت قيادة الفريق سليم فتحي باشا، وانتهت الحرب بانتصار الدولة العثمانية وهزيمة الروس.[2] وفي عهد سعيد باشا أُرسلت أورطة مصرية سودانية قوامها 453 جندي إلى المكسيك لمساعدة فرنسا في حربها ضد الحكومة المكسيكية بعد أن تخلت عنها كل من إنجلترا وإسبانيا.[3] كما شارك الجيش المصري في الدفاع عن فلسطين والعروبة وخاض خمس حروب ضد إسرائيل . وحروب ضد الجيش البريطاني والجيش الفرنسي. وشارك الجيش المصري أيضا بشكل كبير في حرب شمال اليمن الأهلية، والمناوشات المصرية الليبية في يوليو 1977. وكان له مشاركة كبيرة في عملية عاصفة الصحراء، وتحرير الكويت من الاحتلال العراقي في عام 1991، وكان الجيش المصري يشكل ثاني أكبر كتيبة من قوات التحالف.[4]' property="og:description"/>
+       <meta content='على مر التاريخ خاضت مصر العديد من الحروب منذ العصر الفرعوني ومروراً بالعصر الإسلامي ووصولاً لعهد الدولة المصرية الحديثة لعدة أسباب مختلفة منها توسيع النفوذ بغرض حماية العمق الإستراتيجي للحدود المصرية، ومنها مساعدة الدول الحليفة في حروبها، ولكن يبقى أهمها صد هجمات الغزاة والمعتدين دفاعاً عن مصر. ففي عهد مُحمد علي شن الجيش المصري حملة على السودان بهدف تأليف وحدة وادي النيل وتدعيم الوحدة القومية بين البلدين.[1]:158 وانتهت ببسط النفوذ المصري في ربوع السودان،[1]:189 كما شارك بحرب المورة بهدف مساعدة الجيش التركي في إخماد الثورة باليونان وتوسيع نطاق الدولة المصرية وبسط نفوذها فيما وراء البحار،[1]:193 وشن الجيش المصري حملة على سوريا قوامها 30000 مقاتل تحت قيادة إبراهيم باشا، نجحت في ضم سوريا وتحقيق أهداف مُحمد علي التوسعية والاقتصادية ودحض الجيش التركي الذي أرسله السلطان العثماني لإيقاف الجيش المصري، واستطرد زاحفا إلى الأناضول ووصل إلى حدود الآستانة مما اضطر السلطان العثماني إلى الإذعان لإبراهيم باشا والاتفاق على الصلح فيما عرف باتفاقية كوتاهيه، والتي قضت بأن يتخلى السلطان العثماني لمُحمد علي عن سوريا وإقليم أضنة مع تثبيته على مصر وجزيرة كريت والحجاز مقابل أن يجلو الجيش المصري عن باقي بلاد الأناضول.[1]:220:257 وفي عهد عباس باشا الأول قام الجيش المصري بمساعدة الدولة العثمانية في حربها ضد الإمبراطورية الروسية المسماة "بحرب القرم" بأسطول بحري قوامه 12 سفينة، و6850 جندي بحري تحت قيادة أمير البحر حسن باشا الإسكندراني، وجيش بري قوامه 72 مدفع، و19722 جندي بري تحت قيادة الفريق سليم فتحي باشا، وانتهت الحرب بانتصار الدولة العثمانية وهزيمة الروس.[2] وفي عهد سعيد باشا أُرسلت أورطة مصرية سودانية قوامها 453 جندي إلى المكسيك لمساعدة فرنسا في حربها ضد الحكومة المكسيكية بعد أن تخلت عنها كل من إنجلترا وإسبانيا.[3] كما شارك الجيش المصري في الدفاع عن فلسطين والعروبة وخاض خمس حروب ضد إسرائيل . وحروب ضد الجيش البريطاني والجيش الفرنسي. وشارك الجيش المصري أيضا بشكل كبير في حرب شمال اليمن الأهلية، والمناوشات المصرية الليبية في يوليو 1977. وكان له مشاركة كبيرة في عملية عاصفة الصحراء، وتحرير الكويت من الاحتلال العراقي في عام 1991، وكان الجيش المصري يشكل ثاني أكبر كتيبة من قوات التحالف.[4]' name="description"/>
+       <meta content='على مر التاريخ خاضت مصر العديد من الحروب منذ العصر الفرعوني ومروراً بالعصر الإسلامي ووصولاً لعهد الدولة المصرية الحديثة لعدة أسباب مختلفة منها توسيع النفوذ بغرض حماية العمق الإستراتيجي للحدود المصرية، ومنها مساعدة الدول الحليفة في حروبها، ولكن يبقى أهمها صد هجمات الغزاة والمعتدين دفاعاً عن مصر. ففي عهد مُحمد علي شن الجيش المصري حملة على السودان بهدف تأليف وحدة وادي النيل وتدعيم الوحدة القومية بين البلدين.[1]:158 وانتهت ببسط النفوذ المصري في ربوع السودان،[1]:189 كما شارك بحرب المورة بهدف مساعدة الجيش التركي في إخماد الثورة باليونان وتوسيع نطاق الدولة المصرية وبسط نفوذها فيما وراء البحار،[1]:193 وشن الجيش المصري حملة على سوريا قوامها 30000 مقاتل تحت قيادة إبراهيم باشا، نجحت في ضم سوريا وتحقيق أهداف مُحمد علي التوسعية والاقتصادية ودحض الجيش التركي الذي أرسله السلطان العثماني لإيقاف الجيش المصري، واستطرد زاحفا إلى الأناضول ووصل إلى حدود الآستانة مما اضطر السلطان العثماني إلى الإذعان لإبراهيم باشا والاتفاق على الصلح فيما عرف باتفاقية كوتاهيه، والتي قضت بأن يتخلى السلطان العثماني لمُحمد علي عن سوريا وإقليم أضنة مع تثبيته على مصر وجزيرة كريت والحجاز مقابل أن يجلو الجيش المصري عن باقي بلاد الأناضول.[1]:220:257 وفي عهد عباس باشا الأول قام الجيش المصري بمساعدة الدولة العثمانية في حربها ضد الإمبراطورية الروسية المسماة "بحرب القرم" بأسطول بحري قوامه 12 سفينة، و6850 جندي بحري تحت قيادة أمير البحر حسن باشا الإسكندراني، وجيش بري قوامه 72 مدفع، و19722 جندي بري تحت قيادة الفريق سليم فتحي باشا، وانتهت الحرب بانتصار الدولة العثمانية وهزيمة الروس.[2] وفي عهد سعيد باشا أُرسلت أورطة مصرية سودانية قوامها 453 جندي إلى المكسيك لمساعدة فرنسا في حربها ضد الحكومة المكسيكية بعد أن تخلت عنها كل من إنجلترا وإسبانيا.[3] كما شارك الجيش المصري في الدفاع عن فلسطين والعروبة وخاض خمس حروب ضد إسرائيل . وحروب ضد الجيش البريطاني والجيش الفرنسي. وشارك الجيش المصري أيضا بشكل كبير في حرب شمال اليمن الأهلية، والمناوشات المصرية الليبية في يوليو 1977. وكان له مشاركة كبيرة في عملية عاصفة الصحراء، وتحرير الكويت من الاحتلال العراقي في عام 1991، وكان الجيش المصري يشكل ثاني أكبر كتيبة من قوات التحالف.[4]' name="twitter:description"/>
+       <link href="//assets.wikiwand.com/img/wikiwand_icon.png" rel="image_src">
+        <meta content="//assets.wikiwand.com/img/wikiwand_icon.png" property="og:image"/>
+        <meta content="//assets.wikiwand.com/img/wikiwand_icon.png" property="twitter:image:src"/>
+        <meta content="qw, قائمة حروب مصر, العربية" name="keywords"/>
+       </link>
+      </meta>
+     </meta>
+    </meta>
+   </link>
+  </link>
+ </head>
+ <body class="rtl lg_arabic bsp1 bsp2 lang_ar bsp3" ng-class="$root.userBodyStyle" ng-controller="ShellController" ng-init="initializeShellController()">
+  <div id="body_wrapp" ng-click="clickedOutside()" ng-mousedown="clickedAnywhere($event)">
+   <div ng-cloak="" ng-if="precache_from_extension">
+    For faster navigation, this Iframe is preloading the Wikiwand page for
+    <b>
+     قائمة حروب مصر
+    </b>
+    .
+   </div>
+   <nav class=" unselectable" id="header" ng-class="{active:!$root.tocShow}" ng-cloak="" ng-controller="ToolbarController" ng-hide="$root.serverData.agent.iOSWebView" ng-if="!hideToolbar">
+    <ul class="menu navbar_opaque " id="main_menu" ng-class="{ios_focus: $root.iosFocus}">
+     <li class="toc_folded" ng-class="{activated:!$root.tocShow, gone: searchFocus}" ng-click="$root.tocFold(); $root.userClick(true, 'toolbar-toc-show');">
+      <i>
+      </i>
+     </li>
+     <li class="article_btn article" ng-class="{active:showWikiwandMenu, gone: searchFocus}" ng-click="toggleWikiwandMenu($event); $root.userClick(showWikiwandMenu, 'toolbar-mainmenu');">
+      <img alt="wikiwand logo" class="logo_img unselectable" src="/img/logo_new.svg">
+       <img alt="wikiwand w" class="hide logo_w unselectable" src="/img/w.svg"/>
+       <i>
+       </i>
+       <div class="drop_down" ng-click="clickedInside($event)" ng-show="showWikiwandMenu">
+        <ul id="feadback_list" ng-show="!showUserVoice &amp;&amp; !showCoverReport">
+         <li>
+          <a href="/">
+           <i class="home_icon">
+           </i>
+           Home
+          </a>
+         </li>
+         <li>
+          <a href="/news">
+           <i class="news_icon">
+           </i>
+           News
+          </a>
+         </li>
+         <li>
+          <a href="/random/ar">
+           <i class="random_icon">
+           </i>
+           Random Article
+          </a>
+         </li>
+         <li ng-if="!activation.extensionInstalled">
+          <a href="#" ng-click="$root.showInstall = true" onclick="event.preventDefault();">
+           <i class="install_icon">
+           </i>
+           Install Wikiwand
+          </a>
+         </li>
+         <li>
+          <a href="#" ng-click="$root.showFollow = true; loadGplusScript()" onclick="event.preventDefault();">
+           <i class="follow_icon">
+           </i>
+           Follow Us
+          </a>
+         </li>
+         <!--<li><a href="http://wikiwand.uservoice.com" target="_blank"><i class="support_icon"></i>Support</a></li>-->
+         <!-- -->
+         <!--<!<li><a href="javascript:void(0);" ng-click="showUserVoice=true; openUserVoiceDialog()" onclick="event.preventDefault()"><i class="report_icon"></i>Report a problem</a></li>-->
+         <li>
+          <a href="http://wikiwand.uservoice.com/forums/247843-wikiwand-website-extensions" ng-click="closeAllMenus()" target="_blank">
+           <i class="idea_icon">
+           </i>
+           Send a suggestion
+          </a>
+         </li>
+         <li ng-if="activation.extensionInstalled">
+          <a href="/extension/uninstall/menu" target="_blank">
+           <i class="uninstall_icon">
+           </i>
+           Uninstall Wikiwand
+          </a>
+         </li>
+         <!--<li ng-if="$root.activation.showSwitchToWikipedia"><a href="javascript:void(0);" ng-click="closeAllMenus(); $root.walkthroughs['switch_to_wp'].showWalkthrough=true;" onclick="event.preventDefault()"><i class="wiki_icon"></i>Switch to Wikipedia</a></li>-->
+         <!--<li ng-if="!$root.activation.showSwitchToWikipedia"><a href="javascript:void(0);" ng-click="closeAllMenus()" ng-href="{{::articleData.links.wikipediaRead }}" target="_blank"><i class="wiki_icon"></i>Switch to Wikipedia</a></li>-->
+        </ul>
+        <div id="user_voice_wrapper" ng-show="showUserVoice">
+        </div>
+        <div id="cover_report" ng-show="showCoverReport">
+         <article ng-cloak="" ng-show="$root.showReportCoverImageText1">
+          <h3>
+           Our magic isn't perfect
+          </h3>
+          <p>
+           You can help our automatic cover photo selection by reporting an unsuitable photo.
+          </p>
+          <div ng-click="$root.reportImage($event,'disturbing',articleData.mainImage.full.originalUrl)">
+           The cover is visually disturbing
+          </div>
+          <div ng-click="$root.reportImage($event,'irrelevant',articleData.mainImage.full.originalUrl)">
+           The cover is not a good choice
+          </div>
+         </article>
+         <article ng-cloak="" ng-show="$root.showReportCoverImageText2">
+          <h4>
+           Thank you for helping!
+          </h4>
+          <br/>
+          <p>
+           Your input will affect cover photo selection, along with input from other users.
+           <br/>
+          </p>
+         </article>
+        </div>
+        <div id="feadback_back" ng-click="showUserVoice=false;showCoverReport=false;$root.showReportCoverImageText1=true;$root.showReportCoverImageText2=false;" ng-show="showUserVoice || showCoverReport">
+         &lt; back
+        </div>
+       </div>
+      </img>
+     </li>
+     <li class="search_btn menu-tooltip" ng-click="$root.openSearch('open'); $root.userClick(true, 'toolbar-search');" title="Search">
+      <i>
+      </i>
+     </li>
+     <li class="per_btn menu-tooltip" ng-class="{active:showPerMenu, gone: searchFocus}" ng-click="togglePerMenu($event); $root.userClick(showPerMenu, 'toolbar-pers');" title="Personalize">
+      <i>
+      </i>
+      <div class="drop_down menu_per" id="pref_drop_down" ng-click="prefClick(); clickedInside($event)" ng-controller="UserPrefsController" ng-if="showPerMenu" ng-init="initPrefsController()" ng-show="preMenuReady">
+       <ul class="main_theme">
+        <li ng-class="{active: $root.minimalStyle == false}" ng-click="$root.layoutHandler('rich')">
+         Rich
+        </li>
+        <li ng-class="{active: $root.minimalStyle == true}" ng-click="$root.layoutHandler('minimal')">
+         Minimal
+        </li>
+       </ul>
+       <div class="per_slider two style per_serif">
+        <span class="hover" ng-click="$root.fontStyleHandler(0, true)">
+         Serif
+        </span>
+        <div class="toggle_slider" id="font_style_slider">
+        </div>
+        <span class="hover" ng-click="$root.fontStyleHandler(1, true)">
+         Sans
+        </span>
+       </div>
+       <div class="per_slider two theme">
+        <span class="hover" ng-click="$root.themesHandler(0, true)">
+        </span>
+        <div class="toggle_slider" id="theme_slider">
+        </div>
+        <span class="hover" ng-click="$root.themesHandler(1, true)">
+        </span>
+       </div>
+       <div class="per_slider three size">
+        <span class="hover" ng-click="fontSizeSlider =  Math.max(fontSizeSlider - 1, 0); $root.txtSizeHandler(fontSizeSlider, true);">
+        </span>
+        <div class="step_slider" id="font_size_slider">
+        </div>
+        <span class="hover" ng-click="fontSizeSlider =  Math.min(fontSizeSlider + 1, 2); $root.txtSizeHandler(fontSizeSlider, true);">
+        </span>
+       </div>
+       <div class="per_slider three column">
+        <span class="hover" ng-click="columnWidthSlider =  Math.max(columnWidthSlider - 1, 0); $root.columnWidthHandler(columnWidthSlider, true)">
+        </span>
+        <div class="step_slider" id="column_slider">
+        </div>
+        <span class="hover" ng-click="columnWidthSlider =  Math.min(columnWidthSlider + 1, 2); $root.columnWidthHandler(columnWidthSlider, true)">
+        </span>
+       </div>
+       <div class="per_justify" ng-click="$root.justifyHandler(!$root.justifyTxt)">
+        <i ng-class="{active: $root.justifyTxt}">
+        </i>
+        Justify Text
+       </div>
+       <a class="upgrade_button small activation_install preferences_install" href="javascript:void(0);" ng-class="{active: btnHover}" ng-click="hidePerMenu($event); $root.reportClick('fromPrefs');$root.activationButtonClicked('');$root.extensionPopup('click');" ng-cloak="" ng-if="$root.callToPersonalize &amp;&amp; $root.prefsTouched" ng-mouseenter="$root.activationHover('enter')" ng-mouseleave="$root.activationHover('leave')">
+        Get Wikiwand
+        <i>
+        </i>
+       </a>
+       <!--<div class="per_reset" ng-click="$root.resetPreferences();">Reset</div>-->
+       <div class="per_httpsnotice" ng-if="::isHttps">
+        Note: preferences and languages are saved separately in https mode
+       </div>
+      </div>
+     </li>
+     <!--
+			<li class="find_btn menu-tooltip" title="Find in article" ng-class="{active: showFindMenu}">
+				<i></i>
+			</li>
+			-->
+     <li class="lang_btn menu-tooltip" ng-class="{active:showLanguageMenu, gone: searchFocus}" ng-click="toggleLanguageMenu($event); $root.userClick(showLanguageMenu, 'toolbar-lang');" title="Other Languages">
+      <i ng-cloak="">
+       {{::langAbbreviation}}
+      </i>
+      <ul class="drop_down" ng-cloak="" ng-controller="PreferredLanguagesController" ng-show="showLanguageMenu">
+       <li class="favourite_lang" ng-class="{current_lang: lang.lang == articleData, no_lang: !lang.hasArticle}" ng-cloak="" ng-repeat="lang in list">
+        <a href="{{::lang.articleLink}}" hreflang="{{::lang.CodeHTML}}" ng-if="::lang.fav" rel="alternate" title="{{::lang.tooltip}}">
+         <i>
+          {{::lang.langAbberviation}}
+         </i>
+         {{::lang.NameEnglish}}
+         <span>
+          {{::lang.articleTitle}}
+         </span>
+        </a>
+       </li>
+       <li class="favourite_lang lang_open" ng-if="articleData.availableLanguages.length &gt; numOfAvailablePreferredLanguages">
+        <a href="javascript:void(0);" ng-click="$root.$broadcast('showAllArticleLanguagesFunc')">
+         <i>
+          ∙∙∙
+         </i>
+         4 other languages
+        </a>
+       </li>
+       <li class="lang_pref">
+        <a href="javascript:void(0);" ng-click="$root.$broadcast('showAllWikipediaLanguagesFunc')">
+         <i>
+         </i>
+         Language preferences
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="share_btn article menu-tooltip" ng-class="{active:showShareMenu, gone: searchFocus}" ng-click="toggleShareMenu($event); $root.userClick(showShareMenu, 'toolbar-share');" title="Share Article ">
+      <i>
+      </i>
+      <div class="drop_down menu_share" id="share_drop_down" ng-click="clickedInside($event)" ng-show="showShareMenu">
+       <ul class="share_links">
+        <li class="share-facebook">
+         <a class="hover" href="#" ng-click="$root.userClick(showShareMenu, 'toolbar-share-facebook');" target="_blank">
+         </a>
+        </li>
+        <li class="share-gplus">
+         <a class="hover" href="#" ng-click="$root.userClick(showShareMenu, 'toolbar-share-gplus');" target="_blank">
+         </a>
+        </li>
+        <!--<li class="share-reddit"><a class="hover" href="#" target="_blank" ng-click="$root.userClick(showShareMenu, 'toolbar-share-reddit');"></a></li>-->
+        <li class="share-twitter">
+         <a class="hover" href="#" ng-click="$root.userClick(showShareMenu, 'toolbar-share-twitter');" target="_blank">
+         </a>
+        </li>
+        <li class="share-gmail">
+         <a class="hover" href="#" ng-click="$root.userClick(showShareMenu, 'toolbar-share-gmail');" target="_blank">
+         </a>
+        </li>
+       </ul>
+      </div>
+     </li>
+     <li class="feedback_btn article menu-tooltip" ng-class="{active:showFeedbackMenu, gone: searchFocus}" ng-click="toggleFeedbackMenu($event); $root.userClick(showFeedbackMenu, 'toolbar-report');" title="Wikipedia Tools">
+      <i>
+      </i>
+      <ul class="drop_down menu_feedback" id="feedback_drop_down" ng-show="showFeedbackMenu">
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaRead }}" target="_blank">
+         <i class="read_w_icon">
+         </i>
+         Read On Wikipedia
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaEdit }}" target="_blank">
+         <i class="edit_w_icon">
+         </i>
+         Edit
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaHistory }}" target="_blank">
+         <i class="history_w_icon">
+         </i>
+         History
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaTalk }}" target="_blank">
+         <i class="talk_w_icon">
+         </i>
+         Talk Page
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaPrint }}" target="_blank">
+         <i class="print_w_icon">
+         </i>
+         Print
+        </a>
+       </li>
+       <li class="wikipedia_list">
+        <a ng-href="{{::articleData.links.wikipediaDownload }}" target="_blank">
+         <i class="download_w_icon">
+         </i>
+         Download PDF
+        </a>
+       </li>
+       <!--<li class="wikipedia_list"><a ng-href="https://en.wikipedia.org/wiki/Special:Watchlist" target="_blank"><i class="watch_icon"></i>Your Watchlist</a></li>-->
+       <!--<li class="wikipedia_list"><a ng-href="https://{{::articleData.langCodeUrl }}.wikipedia.org" target="_blank"><i class="home_icon"></i>Wikipedia Home Page</a></li>-->
+      </ul>
+     </li>
+     <span class="menu_line">
+     </span>
+     <li class="upgrade_btn menu-tooltip {{::$root.activation.nextAction}}" ng-class="{active: hover}" ng-click="$root.reportClick('toolbar');$root.activationButtonClicked();  $root.extensionPopup('click');" ng-cloak="" ng-if="$root.activation.nextAction != ''" ng-mouseenter="hover = true; $root.extensionPopup('enter');" ng-mouseleave="hover = false; $root.extensionPopup('leave');" title="{{::$root.activation.tooltip}}">
+      <span class="upgrade_txt" ng-if="$root.activation.nextAction != 'activation_share'">
+       {{::$root.activation.text}}
+      </span>
+      <span class="upgrade_txt" ng-if="$root.activation.nextAction == 'activation_share'">
+       {{::$root.activation.toolbarText}}
+      </span>
+      <i>
+      </i>
+     </li>
+     <!--
+<a href="javascript:void(0);" ng-cloak ng-class="{active: hover}"
+	ng-mouseenter="hover = true"  ng-mouseleave="hover = false"
+	ng-click="activationButtonClicked();" class="upgrade_button activation_button_toolbar small {{::activation.action}}" >
+	<span>{{activation.text}}</span><i></i>
+</a>
+-->
+    </ul>
+   </nav>
+   <!--*************************** content  *************************-->
+   <div class=" small_image" id="content" ng-class="{limit: $root.limitPage, active:!$root.tocShow}">
+    <!--************ news Article section ************-->
+    <!--************ main_image ************-->
+    <!--************ main_image ENDS ************-->
+    <article class=" " id="article_content_wrapper" ng-class="{withGist: $root.gistOn, minimal_margin: $root.minimalStyle, loaded: showArticleContents, narrow_column: $root.columnWidth=='narrow', wide_column: $root.columnWidth=='wide',
+	full_column: $root.columnWidth=='full', no_cover: articleMarginTop=='noCover', margin_initial: articleMarginTop=='initial', margin_low: articleMarginTop=='low', margin_middle: articleMarginTop=='middle', margin_high: articleMarginTop=='high'}" ng-cloak="" ng-controller="ArticleContentController">
+     <section class="title_wrapper">
+      <h1 class="firstHeading">
+       <span class="">
+        قائمة حروب مصر
+       </span>
+       <a class="title_icon edit_article edit_section tooltip_top" href="{{::articleData.links.wikipediaEdit }}" target="_blank" title="Edit Article">
+       </a>
+       <!--<span class="title_icon geo-location tooltip_top" title="Browse map" ng-if="$root.map.exists" ng-class="{loading: $root.mapLoading}" onClick="loadGoogleMaps();"></span>
+
+			<span class="title_icon like_buttons unselectable" onclick="event.stopPropagation()"></span>-->
+      </h1>
+      <!-- READ MORE SECTION-->
+      <nav id="read_more" ng-style="{opacity:showReadMore}">
+       <svg height="25px" version="1.1" width="25px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+        <path d="M9.512,8.692L8.073,7.331C8.24,7.026,8.344,6.682,8.344,6.31c0-1.179-0.956-2.135-2.135-2.135	c-1.18,0-2.137,0.955-2.137,2.135s0.957,2.136,2.137,2.136c0.416,0,0.801-0.124,1.129-0.33l1.438,1.359	C8.993,9.188,9.238,8.924,9.512,8.692z">
+        </path>
+        <path d="M15.603,8.522l1.912-3.22c0.188,0.054,0.384,0.093,0.589,0.093c1.182,0,2.138-0.956,2.138-2.136 c0-1.179-0.956-2.134-2.138-2.134c-1.18,0-2.135,0.955-2.135,2.134c0,0.586,0.236,1.115,0.618,1.501l-1.907,3.21	C15.008,8.119,15.316,8.305,15.603,8.522z">
+        </path>
+        <path d="M22.199,11.217c-0.918,0-1.696,0.583-1.998,1.397l-2.657-0.262c0,0.02,0.003,0.039,0.003,0.059 c0,0.346-0.039,0.685-0.107,1.012l2.657,0.263c0.16,1.019,1.038,1.801,2.103,1.801c1.18,0,2.135-0.955,2.135-2.135	C24.334,12.173,23.379,11.217,22.199,11.217z">
+        </path>
+        <path d="M14.865,19.612l-0.594-2.597c-0.336,0.117-0.685,0.201-1.049,0.243l0.596,2.596c-0.683,0.357-1.153,1.063-1.153,1.887 c0,1.18,0.954,2.134,2.137,2.134c1.179,0,2.134-0.954,2.134-2.134C16.937,20.584,16.015,19.646,14.865,19.612z">
+        </path>
+        <path d="M7.896,13.441L4.587,14.55c-0.382-0.583-1.039-0.97-1.787-0.97c-1.18,0-2.135,0.955-2.135,2.135 c0,1.181,0.955,2.136,2.135,2.136c1.179,0,2.136-0.955,2.136-2.136c0-0.049-0.011-0.095-0.015-0.144l3.319-1.111	C8.092,14.138,7.973,13.798,7.896,13.441z">
+        </path>
+        <circle cx="12.666" cy="12.411" r="3.662">
+        </circle>
+       </svg>
+       <h4 ng-if="showTextEnglish">
+        Connected to:
+       </h4>
+       <a class="read_more_link int-link" href="{{::readMoreArticle.link}}" ng-class="{no_thumb: readMoreArticle.thumb == 'none'}" ng-mousedown="reportReadMore('click')" ng-mouseenter="reportReadMore('hover')" ng-repeat="readMoreArticle in readMoreArticles | limitTo:3">
+        <span class="title">
+         {{::readMoreArticle.title}}
+        </span>
+       </a>
+      </nav>
+      <!-- /339474670/Wikiwand/ATF -->
+      <div id="div-gpt-ad-1527601425745-0" style="margin-bottom:10px">
+       <script>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527601425745-0'); });
+       </script>
+      </div>
+      <h2>
+       من ويكيبيديا، الموسوعة الحرة
+      </h2>
+     </section>
+     <!-- the styling below is used for the smooth transition between the partial content and the final content -->
+     <style>
+      .content-absolute {
+			position: absolute;
+			z-index: 200;
+		}
+		#partialContent {
+			min-height: 1000px;
+		}
+     </style>
+     <!--<div id='partialContent'></div>-->
+     <!-- /339474670/Wikiwand/SideBar -->
+     <div class="sideplacement" id="div-gpt-ad-1527601425745-1" style="position:absolute;right:-170px">
+      <script>
+       googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527601425745-1'); });
+      </script>
+     </div>
+     <div id="fullContent">
+     </div>
+     <a ng-click="onBottomLinkClick()" ng-href="{{bottomLinkUrl}}" target="_blank">
+      <span id="bottom_link" ng-cloak="" ng-if="showBottomLink" style="display: block; text-align:center; font-family: 'Lora', serif; line-height: 1.5em; font-size: 24px; padding: 20px 15px; border-radius: 5px; box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); background: linear-gradient(to bottom, #40bbe1 -100%, #1559b5 100%); direction: ltr;">
+       <span style="display:block; font-size: 0.8em; color: rgba(255,255,255,0.85)">
+        {{bottomLinkPreText}}
+       </span>
+       <span style="display:block; font-size: 1em; color: white">
+        {{bottomLinkText}}
+       </span>
+      </span>
+     </a>
+     <section class="page_copyright" ng-cloak="" ng-init="mainImage = articleData.mainImage" ng-show="$root.showArticleContents">
+      This page is based on a
+      <a ng-href="http://www.wikipedia.org" rel="nofollow" target="_blank">
+       Wikipedia
+      </a>
+      article written by
+      <a href="{{::articleData.links.wikipediaHistory }}" rel="nofollow" target="_blank">
+       contributors
+      </a>
+      (
+      <a ng-href="{{::articleData.links.wikipediaRead }}" rel="nofollow" target="_blank">
+       read
+      </a>
+      /
+      <a href="{{::articleData.links.wikipediaEdit }}" rel="nofollow" target="_blank">
+       edit
+      </a>
+      ).
+      <br/>
+      Text is available under the
+      <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license,nofollow" target="_blank">
+       CC BY-SA 4.0
+      </a>
+      license; additional terms may apply.
+      <br/>
+      Images, videos and audio are available under their respective licenses.
+      <br/>
+      <div ng-if="mainImage.wikipediaPageFullUrl">
+       <span ng-show="mainImage.info.license.url">
+        Cover photo is available under
+        <a href="{{::mainImage.info.license.url}}" target="_blank">
+         {{::mainImage.info.license.name || 'Unknown'}}
+        </a>
+        license.
+       </span>
+       <span ng-show="!mainImage.info.license.url">
+        Cover photo is available under {{::mainImage.info.license.name || 'Unknown'}} license.
+       </span>
+       Credit:
+       <span ng-bind-html="mainImage.info.license.artist">
+       </span>
+       (
+       <a href="{{::mainImage.wikipediaPageFullUrl}}" target="_blank">
+        see original file
+       </a>
+       ).
+      </div>
+      <div class="line">
+      </div>
+     </section>
+     <!-- /339474670/Wikiwand/Bottom -->
+     <div class="OUTBRAIN" data-ob-template="Admination" data-widget-id="AR_12">
+     </div>
+     <script src="//widgets.outbrain.com/outbrain.js" type="text/javascript">
+     </script>
+    </article>
+    <!--************ wikiwand_footer ************-->
+    <footer class="wikiwand_footer" ng-cloak="" ng-show="$root.showArticleContents || !articleData.pageIsArticle">
+     <div ng-if="$root.activation.nextAction != ''">
+      <!-- touch devices footer share -->
+      <div class="mobile_share" ng-if="$root.touchDevice">
+       <div class="footer_icon">
+       </div>
+       <div class="h2">
+        Enjoying Wikiwand?
+       </div>
+       <div class="h3" ng-cloak="" ng-if="!activation.extensionInstalled">
+        Give good old Wikipedia a great new look:
+       </div>
+       <a class="upgrade_button {{::$root.activation.nextAction}}" href="javascript:void(0);" ng-class="{active: btnHover}" ng-click="$root.reportClick('footer');$root.activationButtonClicked(''); $root.extensionPopup('click');" ng-cloak="" ng-mouseenter="$root.activationHover('enter')" ng-mouseleave="$root.activationHover('leave')">
+        <span>
+         {{::$root.activation.text}}
+        </span>
+        <i>
+        </i>
+       </a>
+      </div>
+      <!-- desktop upsale -->
+      <div class="desktop_upsale" ng-if="!$root.touchDevice">
+       <!-- desktop: rate -->
+       <div ng-if="$root.activation.extensionInstalled &amp;&amp; $root.activation.nextAction == 'activation_rate'">
+        <div class="footer_icon">
+        </div>
+        <div class="h2">
+         Enjoying Wikiwand?
+        </div>
+        <a class="upgrade_button {{::$root.activation.nextAction}}" href="javascript:void(0);" ng-class="{active: btnHover}" ng-click="$root.reportClick('footer');$root.activationButtonClicked(''); $root.extensionPopup('click');" ng-cloak="" ng-mouseenter="$root.activationHover('enter')" ng-mouseleave="$root.activationHover('leave')">
+         <span>
+          {{::$root.activation.text}}
+         </span>
+         <i>
+         </i>
+        </a>
+        <div class="stars" ng-bind-html="activation.ratedText">
+        </div>
+       </div>
+       <!-- desktop: share -->
+       <div ng-if="$root.activation.extensionInstalled &amp;&amp; $root.activation.nextAction == 'activation_share'">
+        <div class="hide_before_angular">
+         <div class="invite_box footer_invite_box active anim">
+          <h4>
+           Tell your friends about Wikiwand!
+          </h4>
+          <a href="http://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=&amp;su=Have you seen Wikiwand%3F&amp;body=Check out Wikiwand - it's an awesome new interface for Wikipedia:%0Ahttp://www.wikiwand.com/{{::$root.refString}}%0AGive it a try, you'll thank me later :)" ng-click="$root.pressedTellAFriendLink('gmail','footer')" style="background-color:#bb0000" target="_blank">
+           <i style="background-position: 0 -96px">
+           </i>
+           Gmail
+          </a>
+          <a href="http://www.facebook.com/sharer.php?u=http://www.wikiwand.com/{{::$root.refString}}" ng-click="$root.pressedTellAFriendLink('facebook','footer')" style="background-color:#3B5999" target="_blank">
+           <i style="background-position: -120px -96px">
+           </i>
+           Facebook
+          </a>
+          <a href="http://twitter.com/share?text=Wikiwand gives good old Wikipedia a great new look - check it out:&amp;hashtags=wikipedia,ux,design&amp;url=http://www.wikiwand.com/{{::$root.refString}}&amp;related=wikiwand" ng-click="$root.pressedTellAFriendLink('twitter','footer')" style="background-color:#0084b4" target="_blank">
+           <i style="background-position: -150px -96px">
+           </i>
+           Twitter
+          </a>
+          <a class="link" href="javascript:void(0);" ng-class="{wide: wideLink}" ng-click="$root.pressedTellAFriendLink('link','footer')" style="background-color:#615a5f">
+           <i style="background-position: -90px -97px">
+           </i>
+           <input ng-blur="wideLink = false" ng-focus="wideLink = true" onclick="this.setSelectionRange(0, this.value.length)" type="text" value="http://www.wikiwand.com/"/>
+           Link
+          </a>
+          <br/>
+          <br/>
+         </div>
+        </div>
+       </div>
+       <!-- desktop: install -->
+       <div ng-if="!$root.activation.extensionInstalled &amp;&amp; $root.activation.nextAction == 'activation_install'">
+        <div class="footer_icon">
+        </div>
+        <div class="h2">
+         Enjoying Wikiwand?
+        </div>
+        <div class="h3">
+         Give good old Wikipedia a great new look:
+        </div>
+        <a class="upgrade_button {{::$root.activation.nextAction}}" href="javascript:void(0);" ng-class="{active: btnHover}" ng-click="$root.reportClick('footer');$root.activationButtonClicked(''); $root.extensionPopup('click');" ng-cloak="" ng-mouseenter="$root.activationHover('enter')" ng-mouseleave="$root.activationHover('leave')">
+         <span>
+          {{::$root.activation.text}}
+         </span>
+         <i>
+         </i>
+        </a>
+       </div>
+      </div>
+     </div>
+     <ul class="social_links" ng-show="(!activation.extensionInstalled || activation.nextAction != 'activation_share') &amp;&amp; !$root.showContentRecommendations">
+      <li class="facebook">
+       <a class="hover" href="https://www.facebook.com/wikiwandapp" target="_blank">
+       </a>
+      </li>
+      <li class="twitter">
+       <a class="hover" href="https://twitter.com/wikiwand" target="_blank">
+       </a>
+      </li>
+      <li class="gplus">
+       <a class="hover" href="https://plus.google.com/+Wikiwand" target="_blank">
+       </a>
+      </li>
+      <li class="linkedin">
+       <a class="hover" href="http://www.linkedin.com/company/wikiwand" target="_blank">
+       </a>
+      </li>
+     </ul>
+     <ul class="footer_links">
+      <li>
+       <a href="/">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="/about">
+        About Us
+       </a>
+      </li>
+      <li>
+       <a href="/press">
+        Press
+       </a>
+      </li>
+      <li>
+       <a href="/sitemap">
+        Site Map
+       </a>
+      </li>
+      <li>
+       <a href="/terms">
+        Terms Of Service
+       </a>
+      </li>
+      <li>
+       <a href="/privacy">
+        Privacy Policy
+       </a>
+      </li>
+      <!--<li style="font-weight: 400"><a href="javascript:void(0);" ng-mouseenter="loadUserVoice()"  data-uv-trigger="contact">Send Feedback</a></li>-->
+     </ul>
+    </footer>
+    <!--************ wikiwand_footer ENDS ************-->
+   </div>
+   <!--**************************** content ENDS *****************************-->
+   <!--************ gallery & lang  ************-->
+   <!--************ TOC  ************-->
+   <div id="toc_wrapper" ng-class="{active: $root.tocShow}" ng-cloak="" ng-controller="TableOfContentsController" ng-show="$root.tocShow" ng-swipe-left="$root.tocFold('swipeLeft')" ng-swipe-right="$root.tocFold('swipeRight')">
+    <div id="toc_swipe" ng-click="$root.tocFold()" ng-cloak="" ng-show="$root.tocShow" ng-swipe-left="$root.tocFold('swipeLeft')" ng-swipe-right="$root.tocFold('swipeRight')">
+    </div>
+    <div id="toc_btn">
+     <span ng-cloak="">
+      قائمة حروب مصر
+     </span>
+     <i id="content_icon" ng-click="tocFold(); $root.userClick(true, 'toolbar-toc-hide');">
+     </i>
+    </div>
+    <aside class="unselectable lang_ar" id="wikiwand_toc" ng-cloak="">
+     <ul class="toc_list">
+      <li class="{special:line.special}" id="toc_btn_overview" ng-click="tocMobileFold()">
+       <a href="#overview" ng-click="button.doClick($event)">
+        مقدمة
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_عصر_الأسرة_العلوية" ng-click="tocMobileFold()">
+       <a href="#عصر_الأسرة_العلوية" ng-click="button.doClick($event)">
+        عصر الأسرة العلوية
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_العصر_الجمهوري" ng-click="tocMobileFold()">
+       <a href="#العصر_الجمهوري" ng-click="button.doClick($event)">
+        العصر الجمهوري
+       </a>
+       <ol class="sub_toc_list">
+        <li class="" id="toc_btn_دعم_عسكري_ومناوشات_حربية">
+         <a href="#دعم_عسكري_ومناوشات_حربية" ng-click="button.doClick($event)">
+          دعم عسكري ومناوشات حربية
+         </a>
+        </li>
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_انظر_أيضاً" ng-click="tocMobileFold()">
+       <a href="#انظر_أيضاً" ng-click="button.doClick($event)">
+        انظر أيضاً
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+      <li class="{special:line.special}" id="toc_btn_المراجع" ng-click="tocMobileFold()">
+       <a href="#المراجع" ng-click="button.doClick($event)">
+        المراجع
+       </a>
+       <ol class="sub_toc_list">
+       </ol>
+      </li>
+     </ul>
+    </aside>
+   </div>
+   <div ng-controller="BookmarkController">
+    <!-- gist -->
+    <!-- bookmark -->
+   </div>
+   <!--************ gallery ************-->
+   <div class="hide_before_angular" id="gallery" ng-class="{full: galleryFull}" ng-cloak="" ng-controller="GalleryController" ng-show="galleryActive">
+    <div class="bg" ng-click="closeGallery()">
+    </div>
+    <div id="gallery_bg">
+     <!--************ gallery image ************-->
+     <div class="unselectable" id="gallery_img" ng-class="{active: infoOpen}" ng-cloak="">
+      <div class="loadThumb unselectable" id="gallery_img_placeholder" ng-mouseenter="hoveredImg = true" ng-mouseleave="hoveredImg = false" ng-swipe-left="onNextClick()" ng-swipe-right="onPrevClick()">
+       <div class="loaderAnim unselectable" id="img_loading" ng-if="!current.bucket.loaded">
+       </div>
+       <img alt="" class="gallery_main bucket unselectable" ng-class="{active:current.bucket.loaded}" ng-show="current.info.type == 'image'" ng-src="{{::current.bucket.src}}"/>
+       <div class="gallery_main bucket video unselectable" ng-class="{active:current.bucket.loaded}" ng-show="current.info.type == 'video'">
+        <div class="payload_container">
+        </div>
+       </div>
+      </div>
+      <div class="gallery_arrow next unselectable" ng-click="onNextClick()" ng-show="current.index != items.length-1">
+       <i>
+       </i>
+      </div>
+      <div class="gallery_arrow prev unselectable" ng-click="onPrevClick()" ng-show="current.index != 0">
+       <i>
+       </i>
+      </div>
+      <div id="img_counter" ng-cloak="" ng-mouseenter="hoveredImg = true" ng-mouseleave="hoveredImg = false">
+       {{current.index+1}} of {{items.length}}
+       <a class="pin_btn tooltip_top" href="http://www.pinterest.com/pin/create/button/?url={{articleData.links.selfRead}}&amp;media={{current.bucket.src}}&amp;description=From Wikiwand:%20{{current.titleTxt}}" ng-class="{active: hoveredImg}" ng-show="current.info.type == 'image'" target="_blank" title="Pin it">
+       </a>
+       <div class="report tooltip_top" ng-class="{active: hoveredImg}" ng-click="$root.showCoverImageSuggestPopup=true;$root.showSuggestImageText1=true;$root.showSuggestImageText2=false;" ng-show="current.info.type == 'image'" title="Suggest as cover photo">
+       </div>
+      </div>
+      <div id="img_title" ng-bind-html="current.title">
+      </div>
+      <!--************ gallery thumbs ************-->
+      <div class="unselectable" id="gallery_thumbs_con">
+       <!--<div id="gallery_thumbs_pull" class="unselectable"></div>-->
+       <div class="unselectable" id="gallery_thumbs_scroll">
+        <ul class="unselectable" id="gallery_thumbs">
+         <li class="unselectable" ng-class="{active:item.active, video:item.info.type == 'video'}" ng-click="onThumbClick($event, item)" ng-repeat="item in items" ng-style="{'background-image': item.urlString}">
+         </li>
+        </ul>
+       </div>
+      </div>
+      <!--************ gallery btns ************-->
+      <ul id="gallery_btn">
+       <li id="gallery_info_pull" ng-class="{active: infoOpen}" ng-click="infoOpen = !infoOpen">
+       </li>
+       <li id="gallery_close" ng-click="closeGallery()">
+       </li>
+       <li id="full_screen" ng-class="{active:fullScreenActive, unactive:!fullScreenActive}" ng-click="toggleFullScreen()">
+       </li>
+      </ul>
+     </div>
+     <!--************ gallery info  ************-->
+     <div id="gallery_info" ng-show="infoOpen" ng-swipe-right="infoOpen = false">
+      <div id="gallery_info_wrap">
+       <div class="image_caption" ng-bind-html="current.title" ng-if="current.title">
+       </div>
+       <ul>
+        <li class="unselectable img_desc" ng-show="current.info.description">
+         <i>
+         </i>
+         <div class="description_text" ng-bind-html="current.info.descriptionSafe">
+         </div>
+        </li>
+        <li class="img_date" ng-show="current.info.dateOriginal">
+         <i>
+         </i>
+         Date: {{current.info.dateOriginal || 'Unknown'}}
+        </li>
+        <li class="img_date" ng-show="!current.info.dateOriginal">
+         <i>
+         </i>
+         Date: {{(current.info.date | date:'mediumDate') || 'Unknown'}}
+        </li>
+        <li class="with-child unselectable img_credit" ng-click="subInfoOpen1 = !subInfoOpen1" ng-show="current.info.license.artist">
+         <i>
+         </i>
+         Credit:
+         <span ng-bind-html="current.info.license.artist">
+         </span>
+         <ul ng-show="subInfoOpen1">
+          <li>
+           Uploaded by: {{current.info.uploadUser}} on {{current.info.uploadDate | date:'mediumDate'}}
+          </li>
+          <li>
+           <span ng-bind-html="current.info.license.credit">
+           </span>
+          </li>
+         </ul>
+        </li>
+        <li class="img_license" ng-show="current.info.license.url">
+         <i>
+         </i>
+         License:
+         <a href="{{current.info.license.url}}" target="_blank">
+          {{current.info.license.usageTerms || current.info.license.name || current.info.license.detected || 'Unknown'}}
+         </a>
+        </li>
+        <li class="img_license" ng-show="!current.info.license.url">
+         <i>
+         </i>
+         License: {{current.info.license.usageTerms || current.info.license.name || current.info.license.detected || 'Unknown'}}
+        </li>
+        <li class="img_original">
+         <i>
+         </i>
+         <a href="{{current.wikipediaPageFullUrl}}" target="_blank">
+          View file on Wikipedia
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div class="report_popup_wrapp suggest" ng-show="$root.showCoverImageSuggestPopup">
+     <div class="bg" ng-click="$root.showCoverImageSuggestPopup = false">
+     </div>
+     <div class="report_popup">
+      <div ng-show="$root.showSuggestImageText1">
+       <h3>
+        Suggest as cover photo
+       </h3>
+       <p>
+        Would you like to suggest this photo as the cover photo for this article?
+       </p>
+       <a href="" ng-click="$root.suggestImage($event,'recommended',current.original.url);" target="_blank">
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+Yes, this would make a good choice
+<a href="" ng-click="$root.showCoverImageSuggestPopup=false" target="_blank">
+</a>
+No, never mind
+<div ng-show="$root.showSuggestImageText2">
+ <h3>
+  Thank you for helping!
+ </h3>
+ <br/>
+ <p>
+  Your input will affect cover photo selection, along with input from other users.
+  <br/>
+ </p>
+</div>
+<div class="ex" ng-click="$root.showCoverImageSuggestPopup = false">
+</div>
+<!--************ gallery ENDS ************-->
+<!-- fixed_btns at the bottom -->
+<div id="fixed_btns">
+ <!-- audio_player  -->
+ <div class="unselectable" id="audio_player">
+  <i class="unselectable">
+  </i>
+  <div class="unselectable">
+  </div>
+  <span class="listen hide">
+   Listen to this article
+  </span>
+ </div>
+ <div class="dialog_wrapper follow_dialog hide_before_angular" ng-cloak="" ng-if="$root.showVidReport">
+  <div class="bg" ng-click="$root.showVidReport = false">
+  </div>
+  <div class="dialog_box round active" ng-class="{active: $root.showVidReport}" style="height: auto;padding: 20px">
+   <p>
+    Thanks for reporting this video!
+   </p>
+  </div>
+ </div>
+</div>
+<script>
+ if (!precache_from_extension) {
+		if (typeof (analytics) != 'undefined') {
+			analytics.gaVirtualPageView('virtualpageview/impression-article-page');
+		}
+	} else {
+		if (typeof (analytics) != 'undefined') {
+			analytics.gaVirtualPageView('virtualpageview/iframe-precache-article');
+		}
+	}
+</script>
+<!--*************************** search  *************************-->
+<!--*************************** search  *************************-->
+<div id="wikiwand_search" ng-cloak="" ng-controller="ArticleSearchControllerRev2" ng-init="initSearch()" ng-show="$root.showSearch">
+ <div class="bg darkBlack" ng-click="$root.openSearch('close')">
+ </div>
+ <div id="search_list" ng-class="{on: search.query.length}">
+  <input autocomplete="off" class="toolbar-search" id="queryinput" ng-class="{selectedResult: noSelection, loading:waiting}" ng-keyup="testKeyboard($event)" ng-model="search.query" placeholder="بحث" type="text"/>
+  <div id="articleSearch" ng-show="search.query.length">
+   <ul class="results-container" ng-show="search.results.length">
+    <li class="searchResult" desc-attr="{{result.desc}}" id="result_{{$index}}" ng-class="{selectedResult:result.selected, rtl: result.rtl}" ng-click='resultClicked($event,"{{result.linkEncoded}}");' ng-repeat="result in search.results">
+     <span class="thumbicon" ng-style="{'background-image' :result.backgroundImageSring}">
+     </span>
+     <span class="langtag" ng-if="result.firstInlang">
+      <i>
+       {{result.lang}}
+      </i>
+     </span>
+     <span class="value">
+      {{result.T}}
+     </span>
+     <div class="suggestion-type-icon {{result.c}}">
+     </div>
+    </li>
+   </ul>
+   <div id="no_results" ng-if="noResults &amp;&amp; search.query &amp;&amp; !waiting">
+    No matching articles found
+   </div>
+   <a class="searchResult containing" href="/en/{{search.query}}?fullSearch=true" ng-class="{selectedResult:fullSearch}" ng-show="search.query &amp;&amp; !waiting">
+    <span class="value">
+     Search for articles containing:
+     <i>
+      {{search.query}}
+     </i>
+    </span>
+   </a>
+  </div>
+  <img id="search-hint" ng-if="!$root.touchDevices" src="/img/search_ctrl.svg" style="display: block; margin: 20px auto"/>
+ </div>
+ <div id="search_description">
+ </div>
+</div>
+<!--*************************** search ENDS *************************-->
+<!--*************************** search ENDS *************************-->
+<popups ng-if="$root.loadVariousPopups" ng-include="'/api/various_popups'">
+</popups>
+<!--************ follow dialog ************-->
+<div id="error_message" style="display:none;width:500px;padding: 20px;margin: 30vh auto;font-size:16px;text-align:center;">
+ <h1>
+  Oh no, there's been an error
+ </h1>
+ Please help us solve this error by emailing us at
+ <a href="http://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=support@wikiwand.com&amp;su=Encountered an error on Wikiwand" target="_blank">
+  support@wikiwand.com
+ </a>
+ <br/>
+ Let us know what you've done that caused this error, what browser you're using, and whether you have any special extensions/add-ons installed.
+ <br/>
+ Thank you!
+</div>
+<script>
+ var totalServingTime=0;
+</script>

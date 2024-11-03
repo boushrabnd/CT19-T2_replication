@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html data-locale="AE" dir="ltr" lang="en">
+ <head>
+  <script>
+   if(window&&!("Promise"in window)){var xhr=new XMLHttpRequest;xhr.open("GET",'/media/shared/js/promise.js',false);xhr.onerror=function(){console.log(xhr.statusText)};xhr.send("");eval(xhr.responseText);}
+  </script>
+  <script>
+   window.usingBordeauxAds = true
+  </script>
+  <!-- Consent Manager Tag : Stubbed (minified) (updated 2018-04-27T17:00) -->
+  <script type="text/javascript">
+   (function(){function d(){if(!window.frames.__cmpLocator)if(document.body&&document.body.firstChild){var a=document.body,c=document.createElement("iframe");c.style.display="none";c.height=c.width=0;c.name="__cmpLocator";a.insertBefore(c,a.firstChild)}else setTimeout(d,5)}function g(){var a=arguments;__cmp.a=__cmp.a||[];if(a.length)if("ping"===a[0])a[2]({gdprAppliesGlobally:!1,cmpLoaded:!1},!0);else __cmp.a.push([].slice.apply(a));else return __cmp.a}function b(a){var c="string"===typeof a.data,b=a.data;
+if(c)try{b=JSON.parse(a.data)}catch(h){}if(b.__cmpCall){var e=b.__cmpCall;window.__cmp(e.command,e.parameter,function(b,d){var f={__cmpReturn:{returnValue:b,success:d,callId:e.callId}};a.source.postMessage(c?JSON.stringify(f):f,"*")})}}d();"function"!==typeof __cmp&&(window.__cmp=g,__cmp.msgHandler=b,window.addEventListener?window.addEventListener("message",b,!1):window.attachEvent("onmessage",b))})();
+  </script>
+  <!-- End Consent Manager Tag : Stubbed (minified) -->
+  <script>
+   window.askForConsent = true;
+window.waitForConsent = true;
+window.indexExchangeEnabled = true;
+window.amazonA9Enabled = true;
+window.rampS2SEnabled = null;
+window.iasOptimiseEnabled = true;
+window.bluekaiEnabled = true;
+window.cmpConfig = {"gdprAppliesGlobally":false,"uiUrl":"https:\/\/consent.cmp.techradar.com\/cmpui.html"};
+/*! begin dom-promises (v2.7.10) */
+'use strict';(function(){function v(){m||(m=!0,w.forEach(n))}function x(){p||(p=!0,y.forEach(n))}function z(){q||(q=!0,A.forEach(n))}function l(){return r&&r.now&&r.now()||0}function n(a){return a()}function D(a){"cmp_request_translation_data"===a.data&&Promise.resolve(window.reliablePageLoad).then(function(){var a=window.__translator.trans;a={tag:"cmp_translations_data",main:{heading:a("cmp_main_heading"),description:a("cmp_main_description"),btnAccept:a("cmp_main_btn_accept"),btnMoreInfo:a("cmp_main_btn_moreinfo")},
+confirm:{heading:a("cmp_confirm_heading"),description:a("cmp_confirm_description"),btnGoBack:a("cmp_confirm_btn_goback"),btnLeave:a("cmp_confirm_btn_leave")},purposes:{heading:a("cmp_purposes_heading"),description:a("cmp_purposes_description"),btnAcceptAll:a("cmp_purposes_btn_acceptall"),btnRejectAll:a("cmp_purposes_btn_rejectall"),btnSave:a("cmp_purposes_btn_save"),btnAndContinue:a("cmp_purposes_btn_andcontinue"),btnAndContinueShort:a("cmp_purposes_btn_andcontinueshort"),list:{1:a("cmp_purposes_list_1"),
+"1_description":a("cmp_purposes_list_1_description"),2:a("cmp_purposes_list_2"),"2_description":a("cmp_purposes_list_2_description"),3:a("cmp_purposes_list_3"),"3_description":a("cmp_purposes_list_3_description"),4:a("cmp_purposes_list_4"),"4_description":a("cmp_purposes_list_4_description"),5:a("cmp_purposes_list_5"),"5_description":a("cmp_purposes_list_5_description")}},vendors:{heading:a("cmp_vendors_heading"),description:a("cmp_vendors_description"),btnAcceptAll:a("cmp_vendors_btn_acceptall"),
+btnRejectAll:a("cmp_vendors_btn_rejectall"),btnSave:a("cmp_vendors_btn_save"),btnBack:a("cmp_vendors_btn_back"),privacyPolicy:a("cmp_vendors_privacy_policy")}};document.getElementById("cmp-ui-iframe").contentWindow.postMessage(a,"*")})}function E(a,c,b){a.performance&&a.performance.timing&&Date.now();a.__cmp("init",a.cmpConfig);a.__cmp("getVendorConsents",null,function(g,d){d?(c({askedForConsent:!0,consent:g}),a.reliablePageLoad.then(function(){if(g.gdprApplies&&.33>Math.random()){var b=g.vendorConsents,
+d=Object.keys(b),c=d.length;d=d.map(function(a){return b[a]}).filter(Boolean).length;a.ga&&a.ga("send","event","CMP","getVendorConsents",0===c?"n/a":0===d?"none":d===c?"all":"some",d,{nonInteraction:!0,dimension123:d})}})):b(Error("Failed to get vendor consents"))})}function F(a,c,b){function g(a,b){return null===b||void 0===b?a:b}JSON.parse(g("true",h("mock_consent_success")(a)))?(b=parseInt(h("mock_consent_timeout")(a),10),a={askedForConsent:!0,consent:{gdprApplies:JSON.parse(g("true",h("mock_gdpr_applies")(a))),
+hasGlobalScope:JSON.parse(g("false",h("mock_has_global_scope")(a))),metadata:"AAAAAAA",purposeConsents:JSON.parse(g(JSON.stringify({1:!0,2:!0,3:!0,4:!0,5:!0}),h("mock_purpose_consents")(a))),vendorConsents:JSON.parse(g("{}",h("mock_vendor_consents")(a)))}},isNaN(b)?c(a):setTimeout(c,b,a)):b(Error("Failed to get vendor consents"))}function t(a){return function(c){return 0<=c.location.search.indexOf(a)}}function h(a){return function(c){return B(a,c.location.search)}}function B(a,c,b){b=void 0===b?"\x26":
+b;if(""===a)return!1;a=c.indexOf(a+"\x3d");return 0<=a?(a=c.indexOf("\x3d",a),b=c.indexOf(b,a+1),0<=b?c.substring(a+1,b):c.substring(a+1)):!1}function G(a){return a.split("").map(function(a){return H(I.call(a,0)-1)}).join("")}var f=String,H=f.fromCharCode,I=f.prototype.charCodeAt,e=window,C=e.document,r=e.performance;f=e.Promise;var u=l();e.resolveFEP=null;e.processFEP=f?new f(function(a){e.resolveFEP=a}):{then:function(){}};var k=!(-1<window.location.href.indexOf("disable_dom_promise_timeouts")),
+q=!1,A=[];k&&setTimeout(z,5E3);C.addEventListener("DOMContentLoaded",z);e.reliableDOMContentLoaded=f?new f(function(a){k&&setTimeout(a,5E3);C.addEventListener("DOMContentLoaded",a)}):{then:function(a){q?a():A.push(a)}};e.reliableDOMContentLoaded.then(function(){console.log("::DOMContentLoaded at",l()-u|0)});var p=!1,y=[];k&&setTimeout(x,7E3);e.addEventListener("load",x);e.reliablePageLoad=f?new f(function(a){k&&setTimeout(a,7E3);e.addEventListener("load",a)}):{then:function(a){p?a():y.push(a);return e.reliablePageLoad},
+catch:function(){return e.reliablePageLoad}};e.reliablePageLoad.then(function(){console.log("::PageLoad at",l()-u|0)});var m=!1,w=[];k&&setTimeout(v,1E4);e.resolveBordeauxDone=v;e.bordeauxDone=f?new f(function(a){k&&setTimeout(a,1E4);e.resolveBordeauxDone=a}):{then:function(a){m?a():w.push(a)}};e.bordeauxDone.then(function(){console.log("::BordeauxDone at",l()-u|0)});(function(a){var c=a.Promise;a.addEventListener("message",D,!1);a.reliableConsentGiven=c?c.resolve(a.reliableDOMContentLoaded).then(function(){return new c(function(b,
+c){t("force_clear_consent")(a)&&(document.cookie="EuConsent\x3d; path\x3d/; Max-Age\x3d0",document.cookie="cmp\x3d; path\x3d/; Max-Age\x3d0",document.cookie="TestingHideEUConsent\x3d; path\x3d/; Max-Age\x3d0");t("force_hide_consent")(a)&&(document.cookie="TestingHideEUConsent\x3dtrue;");var d=t("mock_consent")(a);"true"===B("TestingHideEUConsent",document.cookie,";")?b({askedForConsent:!1}):d?F(a,b,c):a.askForConsent?E(a,b,c):b({askedForConsent:!1})})}):{then:function(){}};a.reliableConsentGiven.then(function(b){b.askedForConsent&&
+b.consent.gdprApplies&&a.reliablePageLoad.then(function(){var b=a.document.querySelector("#document-footer-content \x3e nav \x3e ul");if(b){var d=a.document.createElement("a");d.addEventListener("click",function(){a.__cmp("renderConsents",function(){})});d.href="#";d.textContent=a.__translator.trans("cmp_footer_link");var c=a.document.createElement("li");c.appendChild(d);b.appendChild(c)}if(b=a.document.querySelector("ul.footer__listcontainer"))d=a.document.createElement("a"),d.className="footer__link",
+d.addEventListener("click",function(){a.__cmp("renderConsents",function(){})}),d.href="#",d.textContent=a.__translator.trans("cmp_footer_link"),c=a.document.createElement("li"),c.className="footer__list-item",c.appendChild(d),b.appendChild(c);if(b=a.document.querySelector("#gawker-contact-block ul"))d=a.document.createElement("a"),d.className="is-reversed",d.addEventListener("click",function(){a.__cmp("renderConsents",function(){})}),d.href="#",d.textContent=a.__translator.trans("cmp_footer_link"),
+c=a.document.createElement("li"),c.appendChild(d),b.appendChild(c)})})})(e);(function(){var a=window,c=a.document,b=a.Promise;a.wadoinawdoijzxioznelknsdf=b?new b(function(a){var b=parseInt(h("mock_tiberius")(window),10);isNaN(b)||setTimeout(a,b,!0);c.addEventListener(G("tq/cmpdljoh"),function(){a(!0)})}):{then:function(){}}})()})();
+/*! end dom-promises (v2.7.10) */
+  </script>
+  <script>
+   window.hawk_css_endpoint = "https://widgets.hawk-assets.co.uk";
+  </script>
+  <script async="" id="hawk-script" src="https://widgets.hawk-assets.co.uk/js/w/trd.js">
+  </script>
+  <script>
+   window.adParameters = {
+site: 'techradar',
+content: 'pro',
+type: 'standard',
+}
+  </script>
+  <script>
+   window.gaCookieSet=/(?:^|;\\s*)_ga/.test(document.cookie);
+  </script>
+  <script>
+   window.vanilla = window.vanilla || {}
+  </script>
+  <script>
+   'use strict';(function(){function g(c,a){return function(){return setTimeout(c,a)}}function h(c,a,b){b=void 0===b?function(){}:b;return function(){var d=c.createElement("script"),e=c.getElementsByTagName("script")[0],f=k({},a,{async:1});Object.keys(f).forEach(function(a){return d.setAttribute(a,f[a])});e.parentNode.insertBefore(d,e);b()}}var k=Object.assign||function(c){for(var a=1;a<arguments.length;a++){var b=arguments[a],d;for(d in b)Object.prototype.hasOwnProperty.call(b,d)&&(c[d]=b[d])}return c};
+window.vanilla.addJs=function(c,a,b,d){b=void 0===b?!1:b;c=h(document,c,d);a=null!==a?g(c,a):c;b?window.reliablePageLoad.then(a):a()}})();
+  </script>
+  <script>
+   'use strict';(function(){function f(a,d){return function(){var c=a.createElement("link"),b=g({},d,{rel:"stylesheet",type:"text/css"});Object.keys(b).forEach(function(a){return c.setAttribute(a,b[a])});var e=a.getElementsByTagName("head")[0];e.parentNode.insertBefore(c,e)}}var g=Object.assign||function(a){for(var d=1;d<arguments.length;d++){var c=arguments[d],b;for(b in c)Object.prototype.hasOwnProperty.call(c,b)&&(a[b]=c[b])}return a},h=window.requestAnimationFrame||window.webkitRequestAnimationFrame||
+window.mozRequestAnimationFrame||window.msRequestAnimationFrame||function(a){return window.reliablePageLoad.then(a)};window.vanilla.addCss=function(a){return h(f(document,a))}})();
+  </script>
+  <link href="https://www.techradar.com/best/best-iphone-antivirus-app" hreflang="x-default" rel="alternate"/>
+  <link href="https://www.techradar.com/uk/best/best-iphone-antivirus-app" hreflang="en-GB" rel="alternate"/>
+  <link href="https://www.techradar.com/best/best-iphone-antivirus-app" hreflang="en-US" rel="alternate"/>
+  <link href="https://www.techradar.com/best/best-iphone-antivirus-app" hreflang="en-CA" rel="alternate"/>
+  <link href="https://www.techradar.com/au/best/best-iphone-antivirus-app" hreflang="en-AU" rel="alternate"/>
+  <link href="https://www.techradar.com/au/best/best-iphone-antivirus-app" hreflang="en-NZ" rel="alternate"/>
+  <link href="https://www.techradar.com/sg/best/best-iphone-antivirus-app" hreflang="en-SG" rel="alternate"/>
+  <link href="https://www.techradar.com/sg/best/best-iphone-antivirus-app" hreflang="en-MY" rel="alternate"/>
+  <script>
+   function handleHeaderError() {
+if (window.amIIE && !window.amIIE()) {
+window.wadoinawdoijzxioznelknsdf.then(function () {
+window._sp_ = window._sp_ || {};
+window._sp_.config = window._sp_.config || {};
+if (window._sp_.bootstrap && !window.headerExecuted) {
+window._sp_.bootstrap('//vanilla.futurecdn.net/techradar/110946/media/js/header/header.js');
+}
+})
+}
+}
+  </script>
+  <script defer="" onerror="handleHeaderError()" src="//vanilla.futurecdn.net/techradar/110946/media/js/header/header.js">
+  </script>
+  <!-- tag factory //-->
+  <meta charset="utf-8"/>
+  <link href="//pubads.g.doubleclick.net" rel="dns-prefetch"/>
+  <link href="//cdn0.static.techradar.futurecdn.net" rel="dns-prefetch"/>
+  <link href="//cdn.mos.cms.futurecdn.net" rel="dns-prefetch"/>
+  <link href="//widgets.future-fie-assets.co.uk" rel="dns-prefetch"/>
+  <meta data-static-host="//vanilla.futurecdn.net/techradar/110946" id="static-host-pattern"/>
+  <script src="https://consent.cmp.oath.com/cmp3p.js">
+  </script>
+  <meta data-src="//www.googletagservices.com/tag/js/gpt.js" id="gpt-api-script-location"/>
+  <meta data-src="//js-sec.indexww.com/ht/p/184056-184008355455774.js" id="index-exchange-script-location"/>
+  <meta data-src="//c.amazon-adsystem.com/aax2/apstag.js" id="amazon-a9-script-location"/>
+  <meta data-src="//cdn.adsafeprotected.com/iasPET.1.js" id="ias-optimise-script-location"/>
+  <meta data-src="//tags.bkrtx.com/js/bk-coretag.js" id="bluekai-script-location"/>
+  <script>
+   var vanFontLoader=function(e){if("undefined"==typeof e||"object"!=typeof e)return!1;var t=document.getElementsByTagName("head")[0],n=function(e,n){var o=document.createElement("style");o.type="text/css","undefined"!=typeof n&&(o.id=n,o.classList.add("font-style")),o.styleSheet?o.styleSheet.cssText=e:o.appendChild(document.createTextNode(e)),t.appendChild(o)},o=function(){"undefined"!=typeof e.hideKey&&n(e.hideKey+"{visibility:visible}")};if("undefined"!=typeof e.hideKey&&n(e.hideKey+"{visibility:hidden}"),"undefined"!=typeof e.fontKey&&"undefined"!=typeof e.staticHost&&"undefined"!=typeof e.version&&"undefined"!=typeof e.woff2Version){var i=e.fontKey,a=e.version,f=e.woff2Version,r=e.staticHost,d="woff",s=!1;f&&(s=function(e){if(!("FontFace"in e))return!1;var t=new e.FontFace("t",'url( "data:application/font-woff2," ) format( "woff2" )',{});try{var n=t.load();"undefined"!=typeof n.then&&n.then(function(){},function(){})}catch(o){return!1}return"loading"==t.status}(window)),s?d="woff2":navigator.userAgent.indexOf("Android")>-1&&(d="ttf");var c="vanFont-"+i+"-"+d,u=c+".json",y=function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+r+"/"+a+"/media/fonts/json/"+u,t.appendChild(e)},l=!1,v=!1;try{if(l=localStorage.getItem(c)){var v=JSON.parse(l);v.version!=a&&(localStorage.removeItem(c),v=!1)}}catch(p){console.error("Error when parsing font in vanFontLoader",p)}v&&"undefined"!=typeof v.value?(n(v.value,i),o()):y()}this.store=function(e){e.version=a;var t=JSON.stringify(e);localStorage.setItem(c,t),n(e.value),o()}}; try {
+var OpenSans_vanFontLoader = new vanFontLoader({fontKey: 'OpenSans', version: 1, woff2Version: true, staticHost: 'vanilla.futurecdn.net/techradar' });
+var techradar_vanFontLoader = new vanFontLoader({fontKey: 'techradar', version: 14, woff2Version: false, staticHost: 'vanilla.futurecdn.net/techradar' ,hideKey: '.icon' });
+} catch(e) {
+console.warn('Failed to load fonts: '+ e.message);
+}
+  </script>
+  <meta content="width=device-width,minimum-scale=1,initial-scale=1" name="viewport"/>
+  <meta content="" name="news_keywords"/>
+  <title>
+   Best iPhone antivirus apps | TechRadar
+  </title>
+  <meta content="2019-02-26T10:46:09+00:00" name="pub_date"/>
+  <meta content="Protect your iPhone or iPad from online and offline dangers with these antivirus apps. And the best bit? They're all free!" name="description"/>
+  <link href="https://www.techradar.com/best/best-iphone-antivirus-app" rel="canonical"/>
+  <style id="critical-styles">
+   .newsletter-signup,.mag-banner-wrap,.popular-box{display:none;}@charset "UTF-8";html,body,div,span,iframe,h1,h2,h3,h4,h5,p,a,abbr,img,small,strong,i,ol,ul,li,form{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}label,article,aside,figure,figcaption,footer,header,hgroup,nav,section,time{padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}article,aside,figure,figcaption,footer,header,hgroup,nav,section,time{margin:0}html{line-height:1}ol,ul{list-style:none}a img{border:none}article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}.container{margin:auto}.container:after{content:"";display:table;clear:both}.container.full{clear:both;max-width:100%}@media screen and (min-width:1000px){.container.full{max-width:970px}}@media screen and (min-width:1574px){.container.full{max-width:1200px}body.limit-width .container.full{max-width:970px}}#main{background:#fff;border-top:1px solid #ccc}#sidebar{width:100%}@media screen and (min-width:1000px){#sidebar{width:300px;margin-top:.875em}}@media only screen and (min-width:700px){html{font-size:100%}}html{font-family:"Open Sans",sans-serif;color:#333}h1,h2,h3,h4,h5{font-weight:700}.block-link{display:block;position:relative;color:#333;background:#ddd;line-height:22px;padding:11px 12px;margin:0 12px 12px 0;text-align:center;font-size:14px;font-weight:600;text-transform:uppercase}.block-link .chunk{display:inline-block;vertical-align:middle;max-width:80%}.block-link:hover{color:#333;text-decoration:none;background:#666}.block-link:visited{color:#333;text-decoration:none}.block-link.full{width:-webkit-calc(100% - 24px);width:calc(100% - 24px)}.separator-heading{border-top:1px solid #ccc;border-bottom:1px solid #ccc}.news-article header h1,.static-article header h1,.news-article.full-width-image header h1{font-weight:600;font-size:24px;line-height:30px;margin-bottom:.25rem}@media (min-width:700px){.news-article header h1,.static-article header h1,.news-article.full-width-image header h1{margin-bottom:.5rem;font-size:28px;line-height:34px}}@media (min-width:1574px){.news-article header h1,.static-article header h1,.news-article.full-width-image header h1{margin-bottom:.75rem;font-size:34px;line-height:42px}body.limit-width .news-article header h1,body.limit-width .static-article header h1{margin-bottom:.5rem;font-size:28px;line-height:34px}}.news-article header h2,.static-article header h2{font-size:18px;line-height:26px;font-weight:300;margin-bottom:20px}.news-article.full-width-image header h2{font-size:18px;line-height:26px;font-weight:300}@media (min-width:1000px){.news-article header h2,.static-article header h2,.news-article.full-width-image header h2{font-size:20px;line-height:28px}}@media (min-width:1574px){.news-article header h2,.static-article header h2,.news-article.full-width-image header h2{font-size:24px;line-height:30px}body.limit-width .news-article header h2,body.limit-width .static-article header h2{font-size:20px;line-height:28px}}.no-select{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-o-user-select:none;-ms-user-select:none;user-select:none}.hidden{visibility:hidden}.fallback{display:none}.icon:before,.pagination.internal label:after,.pagination.internal input[type=checkbox].hidden:checked~label:after,article .fancy-box h5:after{font-family:"techradar",arial;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;text-transform:none}.icon-amazon:before{content:"\f107"}article .fancy-box h5:after{content:"\f108"}.icon-arrow-left:before{content:"\f109"}.icon-arrow-right:before{content:"\f10a"}.pagination.internal label:after{content:"\f11a"}.pagination.internal input[type=checkbox].hidden:checked~label:after{content:"\f11d"}.icon-envelope-solid:before{content:"\f11f"}.icon-envelope:before{content:"\f120"}.icon-facebook:before{content:"\f122"}.icon-filled-envelope:before{content:"\f123"}.icon-home:before{content:"\f126"}.icon-pinterest:before{content:"\f12a"}.icon-search:before{content:"\f12c"}.icon-share:before{content:"\f12d"}.icon-twitter:before{content:"\f133"}.icon-whats-app:before{content:"\f135"}.icon-youtube:before{content:"\f136"}.icon-circle{border-radius:50%;display:block}.media-list{margin-top:1rem}.media-list li{-webkit-box-sizing:border-box;box-sizing:border-box;margin-bottom:1rem;float:left;width:100%}@media (min-width:575px){.media-list li{width:50%}}.media-list li a{float:left;width:100%;color:#333;text-decoration:none}.media-list li a:hover{text-decoration:underline}.media-list li img,.media-list li h4{-webkit-box-sizing:border-box;box-sizing:border-box;float:left;width:50%;text-transform:none;padding-right:20px;font-weight:300;line-height:24px;font-size:16px}.media-list li:nth-child(odd){clear:both}.news-article,.static-article,.news-article.full-width-image{position:relative}.news-article .box>img,.static-article .box>img{width:100%}.news-article .text-copy,.static-article .text-copy{clear:both;position:relative;word-break:break-word;margin-bottom:40px}.news-article .text-copy h3,.static-article .text-copy h3,.news-article .text-copy p,.static-article .text-copy p,.news-article .text-copy img,.static-article .text-copy img{width:100%}.news-article .text-copy figure.pull-left,.static-article .text-copy figure.pull-left,.news-article .text-copy figure.pull-right,.static-article .text-copy figure.pull-right{display:inline-block;width:30%;min-width:140px;overflow:hidden}.news-article .text-copy figure.pull-left img,.static-article .text-copy figure.pull-left img,.news-article .text-copy figure.pull-right img,.static-article .text-copy figure.pull-right img{margin-top:0}.news-article .text-copy figure.pull-left,.static-article .text-copy figure.pull-left{float:left;margin:6px 20px 6px 0}.news-article .text-copy figure.pull-right,.static-article .text-copy figure.pull-right{float:right;margin:6px 0 6px 20px}.news-article .text-copy img.lft,.static-article .text-copy img.lft{width:auto}.news-article .text-copy figure,.static-article .text-copy figure{margin-bottom:1em}.news-article .text-copy strong,.static-article .text-copy strong{font-weight:600}.news-article .text-copy h3,.static-article .text-copy h3{color:#333;font-size:24px;line-height:30px;margin-bottom:1em}.news-article .text-copy p,.static-article .text-copy p{font-size:16px;line-height:1.5;margin-bottom:1em}.news-article .text-copy>*:last-child,.static-article .text-copy>*:last-child{margin-bottom:0}@media (min-width:1000px){.news-article,.static-article,.news-article.full-width-image{float:left;max-width:650px}}@media (min-width:1574px){.news-article,.static-article,.news-article.full-width-image{max-width:832px}body.limit-width .news-article,body.limit-width .static-article{max-width:650px}}.news-article footer,.static-article footer,.news-article.full-width-image footer{clear:both}.news-article header,.static-article header,.news-article.full-width-image header{margin-top:30px}.news-article header .byline,.static-article header .byline{clear:both;line-height:23px;margin-bottom:.625rem;font-size:13px}@media (min-width:1000px){.news-article header .byline,.static-article header .byline{margin-bottom:.5rem}}@media (min-width:1574px){.news-article header .byline,.static-article header .byline{margin-bottom:.75rem}}.news-article header .byline .chunk,.static-article header .byline .chunk{margin-right:1ex}.news-article header,.static-article header,.news-article.full-width-image header,.news-article section,.static-article section,.news-article.full-width-image section,.news-article footer,.static-article footer,.news-article.full-width-image footer{margin-left:20px;margin-right:20px}.news-article footer #article-comments,.static-article footer #article-comments{margin:2em 0 0;overflow:visible;width:100%}@media (min-width:1000px){.news-article header,.static-article header,.news-article.full-width-image header,.news-article section,.static-article section,.news-article.full-width-image section,.news-article footer,.static-article footer,.news-article.full-width-image footer{margin-left:1.5em;margin-right:1.5em}}@media (min-width:1574px){.news-article header,.static-article header,.news-article.full-width-image header,.news-article section,.static-article section,.news-article.full-width-image section,.news-article footer,.static-article footer,.news-article.full-width-image footer{margin-left:125px;margin-right:70px}body.limit-width .news-article header,body.limit-width .static-article header,body.limit-width .news-article section,body.limit-width .static-article section,body.limit-width .news-article footer,body.limit-width .static-article footer{margin-left:1.5em;margin-right:1.5em}}.news-article header,.static-article header,.news-article.full-width-image header,.news-article section,.static-article section,.news-article.full-width-image section{overflow:visible}.news-article>header h2{margin-bottom:10px}.news-article.full-width-image+#sidebar{margin-top:0}.news-article.full-width-image+#sidebar>*:first-child{margin-top:0}.news-article.full-width-image{width:100%}@media screen and (min-width:900px){.news-article.full-width-image{max-width:100%;float:none}}.news-article.full-width-image header{position:relative}@media (min-width:700px){.news-article.full-width-image header{overflow:hidden;*zoom:1;margin-bottom:20px}}.news-article.full-width-image header h2{margin-bottom:20px}@media (min-width:1000px){.news-article.full-width-image>footer{width:602px}}@media screen and (min-width:1574px){body.limit-width .news-article.full-width-image{max-width:100%}}.no-sidebar .news-article{max-width:100%!important}figure{position:relative}figure img{top:0;left:0}.center-cropped{width:-webkit-calc(100% - 40px);width:calc(100% - 40px);margin:0 25px 25px;overflow:hidden;position:relative}@media (max-width:574px){.center-cropped{width:100%;margin:0 0 25px;max-height:287.5px;height:56.25vw;padding-top:0}}@media (min-width:575px){.center-cropped{max-height:400px;height:50vw;padding-top:0;margin:0 20px 25px}}@media (min-width:1000px){.center-cropped{height:40vw;padding-top:0;width:-webkit-calc(100% - 50px);width:calc(100% - 50px);margin:25px 25px 30px}}.news-article.full-width-image .center-cropped{margin-bottom:30px;margin-top:0}.center-cropped img{width:100%;position:absolute;top:-9999px;bottom:-9999px;left:-9999px;right:-9999px;margin:auto}@media (min-width:1000px){.center-cropped img{width:100%}}img.lft{float:left;margin:0 20px 10px 0;width:auto}.no-ads .dfp-leaderboard-container{display:none}.dfp-leaderboard-container{margin:auto;max-width:970px;height:auto}@media screen and (min-width:850px){html[data-locale=GB] .burgerbar .icon-amazon{display:block}}#burgerbar-none{display:none}#burgerbar{background:#2f6e91}#burgerbar,#burgerbar~.burgerbar .button-menu.checked{display:none}@media only screen and (max-width:699px){#burgerbar:checked~.burgerbar .button-menu.unchecked{display:none}#burgerbar:checked~.burgerbar .button-menu.checked,#burgerbar:checked~.wrapper .menuitems{display:block}}.button-search{position:absolute;top:0;right:0;min-width:60px;height:60px;margin-bottom:0;line-height:60px}@media only screen and (min-width:700px){.button-search{position:relative}}*:checked+.button-search{background-color:#315062}.search-box{z-index:1000001;position:absolute;right:0;top:60px;width:100%;border:2px solid #315062;-webkit-box-sizing:border-box;box-sizing:border-box;background-color:#fff;padding:1em 18px;font-size:16px;display:none;line-height:44px}.search-box .search-submit{position:absolute;right:18px;width:44px;height:44px;background-color:#333;color:#fff;border:none;padding:0}.search-box .search-submit .icon:before{font-size:20px}*:checked~.search-box{display:block}.burgerbar .burgerbar-small .search-box{width:100%}@media screen and (min-width:575px){.burgerbar .burgerbar-small .search-box{width:480px}}.search-checkbox{display:none}.masthead-item{width:auto;text-align:center;font-size:0}@media only screen and (min-width:700px){.masthead-item{padding-right:1rem;padding-left:1rem;position:relative;height:100%;float:right}}.burgerbar{background-color:#2f6e91;color:#fff;font-size:24px;line-height:60px;max-height:60px;height:60px}.pro .burgerbar{background-color:#8c2b5e}@media only screen and (min-width:700px){.burgerbar{border-bottom:1px solid #2f6e91}.pro .burgerbar{border-bottom:1px solid #8c2b5e}}.burgerbar .other-links{display:none}@media only screen and (min-width:700px){.burgerbar .other-links{display:block;float:right;clear:none;margin-right:10px;height:24px;line-height:24px;margin-top:18px;font-size:14px}.burgerbar .other-links a{float:left;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff}.burgerbar .other-links a:visited{color:#fff}}.burgerbar .buttons-social{display:none}@media only screen and (min-width:700px){.burgerbar .buttons-social{display:block}.burgerbar .buttons-social a{float:left;border:1px solid #fff;width:24px;height:24px;margin-top:18px;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;margin-right:10px}.burgerbar .buttons-social a:visited{color:#fff}.burgerbar .buttons-social a:before{font-size:12px;line-height:22px;-webkit-box-sizing:border-box;box-sizing:border-box;float:left;width:22px;text-align:center}}.burgerbar .buttons-social .icon-amazon,.burgerbar .buttons-social .icon-youtube{display:none}@media screen and (min-width:850px){.burgerbar .buttons-social .icon-youtube{display:block}}.burgerbar .logo .site-logo{vertical-align:middle;line-height:25px;height:27px;display:inline-block}.pro .burgerbar .logo .site-logo{line-height:16px}.pro .burgerbar .logo .site-logo:after{bottom:-1px}.burgerbar .logo .site-logo:after{position:absolute;content:'';text-transform:uppercase;font-size:9.11px;bottom:-4px;left:3px;line-height:0}@media only screen and (max-width:360px){.pro .burgerbar .logo svg{width:185px}.pro .burgerbar .logo svg path{-webkit-transform:scale(.93);-ms-transform:scale(.93);transform:scale(.93)}}.burgerbar .logo h1,.burgerbar .logo .hidden-header{display:none}.burgerbar .logo .strapline{font-size:13px;font-weight:400;text-transform:uppercase;float:right;line-height:13px;margin-top:31px;margin-left:13px}@media only screen and (max-width:699px){.burgerbar .logo{text-align:center;margin:auto}.burgerbar .logo .strapline{display:none}}.burgerbar .logo a{color:#fff}.burgerbar .logo a:hover{color:#fff;text-decoration:none}.burgerbar .logo a:visited{color:#fff}.burgerbar .logo a:visited:hover{color:#fff}.burgerbar .button-menu{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-o-user-select:none;-ms-user-select:none;user-select:none;position:absolute;left:0;width:60px}.burgerbar .burgerbar-small{width:100%;max-height:60px;height:60px}@media only screen and (min-width:700px){.burgerbar .burgerbar-small{position:relative}.burgerbar .burgerbar-small>.button-menu{display:none}.burgerbar .burgerbar-small .logo{padding:0 16px;position:absolute}}.burgerbar .site-logo{position:relative}.burgerbar .fill{height:100%}@media only screen and (max-width:699px){.burgerbar .fill{width:100%}}@media only screen and (min-width:700px){.burgerbar .fill{padding:0 16px}}.trending-wrapper{margin:30px 24px 0;display:block;font-weight:600}@media only screen and (max-width:699px){.trending-wrapper{display:none}}.trending-wrapper .trending-bar{overflow:hidden;*zoom:1;display:block;background-color:transparent;position:relative;clear:both;width:100%;height:40px;font-size:14px;background:#ededed}.trending-wrapper .trending-items{overflow:hidden;height:100%;display:inline-block;width:85%}.trending-wrapper .trending-items.brands-enabled{width:70%}.trending-wrapper .trending-lead{text-transform:uppercase;margin:0 0 0 10px;padding:0 10px 0 0;display:inline-block;line-height:40px;position:relative;cursor:pointer;background:#ededed;color:#e6248a}.trending-wrapper .trending-item{display:inline-block;*display:inline;margin-left:-2px;line-height:40px}.trending-wrapper .trending-item:first-of-type{margin-left:0}.trending-wrapper .trending-item a{line-height:40px;padding:0 14px;display:block}.trending-wrapper .trending-item a,.trending-wrapper .trending-item a:hover,.trending-wrapper .trending-item a:visited,.trending-wrapper .trending-item a:hover:visited{color:#333}.trending.pro{width:100%;max-width:927px;display:table;overflow:hidden;border-collapse:separate;border-spacing:2px;margin-left:22px;margin-top:30px}@media only screen and (max-width:999px){.trending.pro{display:none}}.trending.pro .menu-item-container{background:#ededed;padding:0 12px;line-height:40px;font-size:13px;display:table-cell;text-align:center}.trending.pro .menu-item-container a{color:#333}.trending.pro .menu-item{font-size:inherit;display:inline}.trending.pro .menu-item a{font-size:inherit;padding-left:0;padding-right:0;line-height:40px}.trending.pro .menu-item a:hover{background-color:inherit}.sub-set{position:absolute;right:0;overflow:none}.sub-set svg{float:right;padding-top:10px;padding-right:10px;padding-left:10px}.trending-wrapper .trending-item.sub-set a,.trending-wrapper .trending-item.sub-set a:hover,.trending-wrapper .trending-item.sub-set a:visited,.trending-wrapper .trending-item.sub-set a:hover:visited{color:#fff;padding-right:0}.reveal-next,.reveal-next+*{display:none}.reveal-next:checked+*{display:block}.breadcrumb{font-size:13px;margin-bottom:30px}@media (max-width:700px){.breadcrumb{display:none}}.breadcrumb li{display:inline-block}.breadcrumb li:after{content:'>';margin-left:1ex;margin-right:1ex}.breadcrumb li:last-child:after{content:none;margin:0}.box{display:table;margin-bottom:40px;float:left;clear:both;width:100%}.box.less-space{margin-bottom:30px}.box h3,.box h4{font-weight:600;font-size:16px;line-height:40px;text-transform:uppercase;vertical-align:middle}.box p{font-size:16px;line-height:24px;margin-bottom:1rem;color:#333}.box li{font-size:16px;line-height:28px}.box ul{margin-bottom:1rem}#sidebar .box{margin-bottom:30px}.thumbs{display:none;width:100%;height:62px;overflow:hidden;position:relative;margin-top:-20px;margin-bottom:20px}@media screen and (min-width:700px){.thumbs{display:block}}.thumbs .thumbs-wrapper{-webkit-transition:left .2s ease-out;transition:left .2s ease-out;position:absolute;height:100%;top:0;left:0;margin-bottom:0}.thumbs .thumbs-wrapper .thumb{position:absolute;width:110px;height:100%;top:0;list-style:none;margin-right:1px}.thumbs .thumbs-wrapper .thumb img{width:100%;height:100%}.thumbs .thumb-scroll{width:32px;position:absolute;top:0;height:100%;background:#333;color:#fff;line-height:100%;text-align:center;cursor:pointer;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.thumbs .thumb-scroll .icon{display:inline-block;margin-top:21px;cursor:pointer}.thumbs .thumb-scroll.thumbs-left{left:0}.thumbs .thumb-scroll.thumbs-right{right:0}.pagination-gallery{border-top:1px solid #ccc;border-bottom:1px solid #ccc;display:none}.pagination-gallery.top{visibility:hidden;display:block;margin-bottom:0}@media screen and (min-width:700px){.pagination-gallery{display:block}.pagination-gallery.top{visibility:visible;margin-bottom:40px}}.pagination-gallery-label{text-transform:uppercase;margin-top:0;line-height:44px;font-weight:700;display:block;height:44px}.pagination-gallery-label:hover{cursor:pointer}.pagination-gallery-page-list{position:absolute;background-color:#fff;width:50%;z-index:999;border-right:1px solid #ccc;border-left:1px solid #ccc;border-top:1px solid #ccc;-webkit-box-sizing:border-box;box-sizing:border-box}.pagination-gallery-list-item{min-height:44px;border-bottom:1px solid #ccc;cursor:pointer}.pagination-gallery-list-item:hover{background-color:#ccc}.pagination-gallery-list-item label{padding:0 22px;line-height:44px;display:block;cursor:pointer}.pagination-gallery-sequential{position:absolute;width:50%;right:0;border-left:1px solid #ccc;line-height:44px;display:none}@media screen and (min-width:700px){.pagination-gallery-sequential{display:block}}.pagination-gallery-sequential.top{top:-65px}.pagination-gallery-sequential.bottom{bottom:1px}.pagination-gallery-sequential span{text-align:center;display:block;font-size:.8125em;margin-left:20px}.pagination-gallery-sequential .pagination-gallery-sequential-button{position:absolute;top:50%;text-transform:uppercase;font-weight:700;font-size:.875em;margin-top:-22px;line-height:44px;padding-right:1em}.pagination-gallery-sequential .pagination-gallery-sequential-button i{color:#fff;border-radius:50%;background-color:#333;font-size:.7em;padding:6px;width:13px;display:inline-block;text-align:center;line-height:13px;position:relative;top:-2px}.pagination-gallery-sequential .pagination-gallery-sequential-button.prev{left:20px}.pagination-gallery-sequential .pagination-gallery-sequential-button.prev i{margin-right:5px}.pagination-gallery-sequential .pagination-gallery-sequential-button.next{right:0}.pagination-gallery-sequential .pagination-gallery-sequential-button.next i{margin-left:5px}.pagination-gallery-sequential .pagination-gallery-sequential-button.disabled{opacity:.1}.pagination-gallery-sequential label.pagination-gallery-sequential-button{cursor:pointer}.btn-gallery-sequential{background-color:transparent;border:none;color:#333;position:absolute;padding-top:0;padding-bottom:0;line-height:45px;z-index:999;font-weight:700;cursor:pointer}.btn-gallery-sequential:disabled{opacity:.1}.btn-gallery-sequential.next{right:0}.btn-gallery-sequential.next .icon{margin-left:5px}.btn-gallery-sequential.prev .icon{margin-right:5px}.btn-gallery-sequential .icon{color:#fff;border-radius:50%;background-color:#333;font-size:.7em;padding:6px;width:13px;display:inline-block;text-align:center;line-height:13px;position:relative;top:-2px}.pagination-gallery.top .btn-gallery-sequential{top:0}.load-comments:hover{color:#fff}input[type="search"]{-webkit-appearance:none;border:1px solid #ddd;font-size:1em;padding-right:3em;line-height:2.5em;padding-left:.75em;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;outline-offset:0;border-radius:0;margin-top:0;margin-bottom:0}input[type="search"]:focus{outline-offset:0}@media screen and (min-width:700px){input[type="search"]{padding-right:0}}@media screen and (min-width:900px){input[type="search"]{padding-right:54px;padding-top:13px;padding-bottom:11px;line-height:16px;font-size:16px}}label{line-height:1.4;display:block;margin:0 0 5px}body.limit-width.sponsored-article .news-article.full-width-image>header{margin-bottom:20px}body.limit-width.sponsored-article .news-article header{margin-left:1.5em;overflow:visible}body.limit-width.sponsored-article .news-article header h1{font-size:22px;line-height:28px;margin:0}@media screen and (min-width:575px){body.limit-width.sponsored-article .news-article header h1{font-size:42px;line-height:52px;margin-left:9.5%}}@media screen and (min-width:900px){body.limit-width.sponsored-article .news-article header h1{font-size:56px;line-height:68px}}body.limit-width.sponsored-article .news-article .text-copy p{font-size:1em;line-height:24px;font-weight:300}@media screen and (min-width:575px){body.limit-width.sponsored-article .news-article .text-copy p{font-size:18px;line-height:30px}}@media screen and (min-width:900px){body.limit-width.sponsored-article .news-article .text-copy p{font-size:22px;line-height:36px}}@media screen and (min-width:575px){body.limit-width.sponsored-article .news-article .text-copy p:not(.bordeaux-image-check){width:75%;margin-left:9.5%}}body.limit-width.sponsored-article .news-article .text-copy h3{font-size:20px;margin-bottom:18px;margin-top:42px;text-align:center;text-transform:uppercase}@media screen and (min-width:575px){body.limit-width.sponsored-article .news-article .text-copy h3{font-size:28px;margin-bottom:24px}}@media screen and (min-width:900px){body.limit-width.sponsored-article .news-article .text-copy h3{font-size:32px}}body.limit-width.sponsored-article .news-article .text-copy figure.pull-left,body.limit-width.sponsored-article .news-article .text-copy figure.pull-right{width:42%}.sponsored-article #main{border-top:none}.sponsored-article .center-cropped{max-height:500px}.sponsored-article .center-cropped img{top:-10009px}@media screen and (min-width:575px){.sponsored-article .center-cropped img{top:-9999px}}.sponsored-article header{position:relative}.sponsored-article h1{max-width:none}@media screen and (min-width:575px){.sponsored-article h1{max-width:70%}}.sponsored-article .breadcrumb{display:none}.sponsored-article .byline-social{position:relative;left:0;padding-top:0;margin-top:18px;margin-left:0}@media screen and (min-width:575px){.sponsored-article .byline-social{margin-left:9.5%}}@media screen and (min-width:1200px){.sponsored-article .byline-social{position:absolute;top:0;left:-5.5em;padding-top:12px;margin-top:0;margin-left:0}}.sponsored-article .byline-social .avatar{display:none;width:80px;height:80px;border-radius:50px;background-size:cover;background-position:center;margin-bottom:10px}@media screen and (min-width:1200px){.sponsored-article .byline-social .avatar{display:block}}.sponsored-article .byline-social .byline{margin-bottom:0}@media screen and (min-width:1200px){.sponsored-article .byline-social .relative-date{display:block;margin-left:0}}.sponsored-article .byline-social h2{display:none}.sponsored-article .byline-social .socialite-widget{margin-top:14px}@media screen and (min-width:1200px){.sponsored-article .byline-social .socialite-widget{width:120px;border-top:solid 1px #212121;padding-top:25px;margin-top:25px}}.sponsored-article .center-cropped{width:100vw;margin-left:-webkit-calc(-50vw + 50%);margin-left:calc(-50vw + 50%);margin-bottom:17px}@media screen and (min-width:575px){.sponsored-article .center-cropped{margin-bottom:30px}}.sponsored-bar{height:44px;text-align:center;background:#2f6e91;text-transform:uppercase;color:#fff;font-size:10px;vertical-align:middle}.sponsored-bar span{line-height:44px;vertical-align:middle}.sponsored-bar .sponsor-logo-img{height:20px;margin-left:8px;vertical-align:middle}.sponsored-bar .sponsor-logo-img.sponsorbrand-logitech{height:33px}.sponsored-related{width:100%;margin-left:0}@media screen and (min-width:575px){.sponsored-related{width:100vw;margin-left:-webkit-calc(-50vw + 50%);margin-left:calc(-50vw + 50%)}}@media screen and (min-width:1000px){.sponsored-related{width:100%;margin-left:0}}.sponsored-related .separator-heading{border:none;text-align:center;font-size:30px}.sponsored-related .media-list{margin-top:0}@media screen and (min-width:575px){.sponsored-related .media-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-top:26px}}.sponsored-related .media-list li{margin-top:2rem}@media screen and (min-width:575px){.sponsored-related .media-list li{width:33%;margin-bottom:2rem;margin-top:0}}.sponsored-related .media-list li a,.sponsored-related .media-list li a:hover,.sponsored-related .media-list li a:visited,.sponsored-related .media-list li a:visited:hover{text-decoration:none;font-size:13px;color:#999}.sponsored-related .media-list li img{width:200%;float:none;display:block;padding-right:0}@media screen and (min-width:575px){.sponsored-related .media-list li img{height:100%;width:100%}}.pagination-gallery{margin-bottom:25px}@media screen and (min-width:700px){.pagination-gallery{margin-bottom:40px}}.byline{display:block;margin-bottom:4px;line-height:23px;font-size:13px}.byline .relative-date{margin-left:4px}.primary-nav.pro .wrapper,.primary-nav.pro .menuitems.container,.primary-nav.pro .wrapper .menu-item-container a{background:#601948!important}.primary-nav{position:relative;z-index:1100}.primary-nav .wrapper{background:#315062}.primary-nav .menuitems{display:none;position:absolute;width:100%;left:0;top:60px;z-index:999}.primary-nav .menuitems:hover{z-index:999}@media screen and (min-width:700px){.primary-nav .menuitems{z-index:auto;display:block;position:relative;top:0}}.nav-list{font-size:0}@media screen and (min-width:700px){.nav-list{height:44px;overflow:hidden}}.menu-item{background-color:#315062}@media screen and (min-width:700px){.menu-item{display:inline-block;zoom:1;*display:inline;vertical-align:top;font-size:0;background-color:transparent}}.menu-item a{display:block;line-height:44px;font-size:1rem;padding-left:1rem}.menu-item a:not(.maglink){padding-right:1rem}@media screen and (min-width:700px){.menu-item a{display:inline-block;zoom:1;*display:inline;vertical-align:top}}.menu-item a,.menu-item a:visited,.menu-item a:hover,.menu-item a:visited:hover{color:#fff}@media screen and (min-width:700px){.menu-item a:not(.menu-item-magazines):hover{background-color:#315062}}.menu-item a:not(.menu-item-magazines):active{background-color:#2f6e91}.menu-item .icon-home{font-size:1.3em;line-height:1}.pro .menu-item{background-color:transparent}.menu-item.menu-item-main-pro{background-color:#8c2b5e}@media screen and (min-width:700px){.menu-item.menu-item-main-pro{min-width:70px;text-align:center}}.menu-item.menu-item-main-pro a{background-color:transparent}.pro .menu-item.menu-item-main-pro{background-color:#2f6e91}.sub-menu{vertical-align:top;display:none;background-color:#315062;font-size:0}.menu-hamburger{height:60px;margin-bottom:0}.menu-hamburger:before,.menu-hamburger:after{content:"";position:absolute;width:18px;margin-left:-9px;top:50%;left:50%}.menu-hamburger:before{height:8px;border-top:2px solid #fff;border-bottom:2px solid #fff;margin-top:-6px}.menu-hamburger:after{height:2px;background:#fff;margin-top:-1px}.menu-hamburger.checked:before{border-top:none;border-bottom:none;border-left:2px solid #fff;border-right:2px solid #fff;width:8px;height:18px;margin-top:-9px;margin-left:-6px}.menu-hamburger.checked:after{width:2px;height:18px;margin-top:-9px;margin-left:-1px}@media screen and (min-width:700px){.nav-sub-set-container{position:absolute;top:0;right:0}}@media screen and (min-width:700px){.menu-item-nav-sub-set{float:right}}#sidebar{-webkit-box-sizing:border-box;box-sizing:border-box;float:left}@media screen and (min-width:700px){#sidebar{padding-left:20px;padding-right:20px}}@media screen and (min-width:1000px){#sidebar{padding-left:0;padding-right:0;width:300px}#sidebar>*:first-child{margin-top:1em}}.pagination.internal{border-top:1px solid #ccc;border-bottom:1px solid #ccc;width:100%}.pagination.internal.expand{-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;background:#2f6e91}@media (min-width:700px){.pagination.internal.expand{padding:0 0 0 20px}}.pagination.internal label{width:100%;float:left;font-size:16px;line-height:40px;position:relative;margin:0}.pagination.internal label .box-title{font-weight:600;float:left;text-transform:uppercase;margin-left:20px}@media (min-width:700px){.pagination.internal label .box-title{margin-right:17px}}.pagination.internal label .current-page{cursor:pointer;float:left;overflow:hidden;font-weight:300;text-transform:uppercase;display:none}@media (min-width:700px){.pagination.internal label .current-page{display:block}}.pagination.internal label .pages-wrapper{position:relative;clear:both;font-weight:300;z-index:100000}@media (min-width:700px){.pagination.internal label .pages-wrapper{float:none;overflow:hidden;display:block;clear:none}}.pagination.internal label:after{cursor:pointer;font-size:22px;position:absolute;top:2px;right:10px}@media (min-width:700px){.pagination.internal label{max-height:40px;overflow:visible}.pagination.internal label:after{margin-top:0}}.pagination.internal input[type=checkbox].hidden{margin-left:-200px}@media (min-width:700px){.pagination.internal input[type=checkbox].hidden:checked~label:after{position:absolute;right:10px;top:0}}.pagination.internal .pages{display:none;float:left;clear:both;border:1px solid #ccc;background:#fff;font-weight:600;text-transform:none;margin-bottom:0}.pagination.internal .pages li{border-bottom:1px solid #ccc}.pagination.internal .pages li a{line-height:40px;padding:0 10px;display:block}.pagination.internal .pages li:last-child{border-bottom:none}.pagination.internal .pages li:hover{cursor:pointer}.pagination.internal .pages li.current,.pagination.internal .pages li:hover,.pagination.internal .pages li>a:active{background:#eAeAeA;color:#2f6e91}.pagination.internal input[type=checkbox].hidden:checked~label .pages-wrapper .pages{display:block;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}.swipe-pagination:not(.activated){visibility:hidden}.swipe-pagination{position:relative;margin-left:-20px;width:100vw;overflow:hidden}@media screen and (min-width:700px){.swipe-pagination{margin-bottom:-16px;height:72px}}@media screen and (min-width:575px){.swipe-pagination{width:100%;margin-left:1px}}.swipe-pagination .swipe-pages-container{height:46px;position:relative}@media screen and (min-width:700px){.swipe-pagination .swipe-pages-container{height:52px}}.swipe-pagination .swipe-pages-container .swipe-pages-short-text{color:#e6248a;width:77px;position:absolute;margin-right:27px;line-height:52px;padding-left:10px;border-left:1px solid #ccc;font-weight:600;text-transform:uppercase}.swipe-pagination .swipe-pages-wrapper{font-size:0;white-space:nowrap;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:scroll;height:80px;overflow-y:hidden;overflow-x:scroll;-ms-overflow-style:none;will-change:transform;-webkit-transform:translateZ(0);transform:translateZ(0);position:relative;margin-left:27px}@media screen and (min-width:700px){.swipe-pagination .swipe-pages-wrapper{height:79px}}.swipe-pagination .swipe-pages-wrapper::-webkit-scrollbar{display:none;width:0!important}.swipe-pagination .swipe-pages-wrapper-container{height:100%;border-top:1px solid #ccc;border-bottom:1px solid #ccc;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box}.swipe-pagination a{display:block;line-height:43px;padding:0 8px;white-space:nowrap;color:#323232;position:relative;font-size:13px;text-decoration:none}@media screen and (min-width:700px){.swipe-pagination a{font-size:.9rem;line-height:50px}}.swipe-pagination.sticky-sections .swipe-pages-wrapper{margin-left:115px}@media screen and (max-width:700px){.swipe-pagination.sticky-sections .swipe-pages-short-text{display:none}.swipe-pagination.sticky-sections .swipe-pages-wrapper{margin-left:27px}}.socialite-widget-ul{font-size:0;display:inline-block;zoom:1;*display:inline;vertical-align:top}.box .socialite-widget-ul{margin-bottom:0}.socialite-widget-item{display:inline-block;zoom:1;*display:inline;vertical-align:middle;width:24px;height:24px;line-height:24px;font-size:1rem;margin-left:8px}.socialite-widget-item:first-child{margin-left:0}.socialite-widget-item a{background-color:#333;display:block;line-height:24px;width:100%;height:100%;text-align:center;color:#fff;border-radius:50%;text-decoration:none}.socialite-widget-item a:visited,.socialite-widget-item a:hover,.socialite-widget-item a:visited:hover{color:#fff;text-decoration:none}.socialite-widget-item .icon{font-size:.9em;width:100%;height:100%;line-height:24px}.socialite-widget-item .icon:before{display:block}.num-shares-wrapper{display:none;zoom:1;margin-left:10px;line-height:24px;vertical-align:top}.num-shares-label{text-transform:uppercase;margin-left:4px;display:none}@media screen and (min-width:700px){.num-shares-label{display:inline-block;zoom:1;*display:inline}}.num-shares-value{font-weight:700}.socialite-widget-item .facebook,.socialite-widget-item .icon-facebook,.buttons-social .icon-facebook{background:#3B5998}.socialite-widget-item .facebook:hover,.socialite-widget-item .icon-facebook:hover,.buttons-social .icon-facebook:hover{background:#4c70ba}.socialite-widget-item .twitter,.socialite-widget-item .icon-twitter,.buttons-social .icon-twitter{background:#4099FF}.socialite-widget-item .twitter:hover,.socialite-widget-item .icon-twitter:hover,.buttons-social .icon-twitter:hover{background:#73b4ff}.socialite-widget-item .whatsapp{background:#64D448}.socialite-widget-item .whatsapp:hover{background:#87de71}.socialite-widget-item .pinterest,.socialite-widget-item .icon-pinterest{background:#BD081C}.socialite-widget-item .pinterest:hover,.socialite-widget-item .icon-pinterest:hover{background:#ee0a23}.buttons-social .icon-youtube{background:#CD201F}.buttons-social .icon-youtube:hover{background:#e23e3d}.socialite-widget-item .email{background:#333}.socialite-widget-item .email:hover{background:#4d4d4d}.buttons-social .icon-amazon{background:#f90}.buttons-social .icon-amazon:hover{background:#ffad33}.burgerbar .buttons-social a{border:none}.burgerbar .buttons-social a:before{font-size:14px;line-height:24px;width:100%;height:100%}.newsletter-signup{display:block!important;background-color:#ededed;border-bottom:1px solid #ccc}@media (max-width:900px){.newsletter-signup{float:none!important}}.newsletter-signup .grey-box{color:#666}.newsletter-signup>h3{min-height:36px;font-size:16px;line-height:1.25em;font-family:"Open Sans",Arial,sans-serif;padding:8px 0;border-top:1px solid #ccc;border-bottom:1px solid #ccc}.newsletter-signup>h3 span{display:block;-webkit-box-sizing:border-box;box-sizing:border-box;width:300px;margin:0 auto}.newsletter-signup .icon-envelope{float:left;background-color:#2f6e91;color:#fff;text-align:center;border-radius:50%;font-size:25px;line-height:36px;width:38px;height:38px;margin-right:10px;margin-left:10px}.newsletter-signup small{font-size:10px;line-height:12px}@media screen and (min-width:700px){.newsletter-signup{float:none}}@media screen and (min-width:900px){.newsletter-signup{float:none;width:100%}}@media screen and (max-width:900px){.newsletter-signup .icon-envelope{margin-left:0}.newsletter-signup .grey-box{padding-left:0;padding-right:0}.newsletter-signup h3 span{width:300px;margin:0 auto}}.newsletter-signup .newsletter-logo{text-align:center}.newsletter-signup .newsletter-logo img{height:20px;padding-top:2px}.newsletter-signup.product-newsletter{border:solid 1px #333;-webkit-box-sizing:border-box;box-sizing:border-box}.newsletter-signup.product-newsletter h3,.newsletter-signup.product-newsletter h4{color:#fff;text-transform:none;font-family:"Open Sans",sans-serif}.newsletter-signup.product-newsletter h3{background:#333;font-size:15px;line-height:20px;border-top:none;border-bottom:none}.newsletter-signup.product-newsletter .icon-filled-envelope{float:left}.newsletter-signup.product-newsletter .product-cta{font-weight:700;display:inline}.newsletter-signup.product-newsletter .product-info{font-weight:400;display:inline}.newsletter-signup.product-newsletter .reduce{font-size:80%;display:inline}.newsletter-signup.product-newsletter h4{background-color:#666;font-size:.75em;line-height:33px}.newsletter-signup.product-newsletter p{color:#333;text-align:center;font-size:13px;line-height:17px;width:58%;margin-top:.5rem;display:inline-block;margin-left:5px}.newsletter-signup.product-newsletter p .jump-out-text{font-weight:700;display:block}.newsletter-signup.product-newsletter footer{color:#666;margin:.75rem 0 .5rem}.newsletter-signup .newsletter-image{display:inline-block;width:35%;margin-left:8px;background:url("/media/img/newsletter-image.png") no-repeat;background-size:auto 102px;background-repeat:no-repeat;image-rendering:-moz-crisp-edges;image-rendering:-o-crisp-edges;image-rendering:-webkit-optimize-contrast;image-rendering:crisp-edges;-ms-interpolation-mode:nearest-neighbor}.newsletter-signup .newsletter-button{-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;padding:0 17px;background:-webkit-gradient(linear,left bottom,left top,color-stop(50%,#E94E1B),color-stop(50%,#ed724a));background:-webkit-linear-gradient(bottom,#E94E1B 50%,#ed724a 50%);background:linear-gradient(to top,#E94E1B 50%,#ed724a 50%);height:44px;text-align:center}.newsletter-signup .newsletter-button a{color:#fff;font-size:1em;font-weight:900;display:inline-block;padding-top:14px;height:100%;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}.newsletter-signup .newsletter-button a:hover,.newsletter-signup .newsletter-button a:visited{color:#fff;text-decoration:none}.newsletter-signup .newsletter-button .icon{color:#fff;font-size:12px;position:relative;top:-2px;padding-left:3px}.newsletter-signup .subtitle{display:block;padding-left:10px;width:300px;margin:auto}.icon-filled-envelope{float:left;text-align:center;border-radius:50%;font-size:40px;line-height:36px;width:38px;height:38px;margin-right:10px;margin-left:10px;background-color:#2f6e91;color:#fff}.newsletter-signup.pro .icon-filled-envelope{background-color:#8c2b5e}#wrapper-gallery{position:relative}input[name="gallery-slide-radio"]{display:none}@media screen and (min-width:700px){.gallery-image{display:none;display:none}}@media screen and (min-width:700px){input[name="gallery-slide-radio"]:checked+.gallery-image{display:block}}.caption-text{font-size:13px;padding-top:9px;padding-right:9px;margin-top:10px}.menu-item.menu-item-nextup a,.menu-item.menu-item-nextup a:hover{background-color:#1DAFEC}@media screen and (min-width:700px){.menu-item.menu-item-nextup a,.menu-item.menu-item-nextup a:hover{background-color:#1DAFEC}}.fancy-box{background:#fff;position:relative;margin:1.5em 0;width:100%}@media screen and (min-width:575px){.fancy-box{float:right;margin:.3em 0 1.5em 1.5em;width:45%}}article .fancy-box h5{font-family:inherit;text-transform:uppercase;font-size:16px;line-height:16px;background:#e6248a;color:#fff;padding:15px;position:relative;margin-bottom:0}article .fancy-box h5:after{color:#e6248a;position:absolute;bottom:-14px;left:-webkit-calc(50% - 8px);left:calc(50% - 8px)}.text-copy .fancy-box .fancy_box_body p{font-size:14px;padding-top:10px;-webkit-box-sizing:border-box;box-sizing:border-box;margin-bottom:0}.text-copy .fancy-box .fancy_box_body p:last-of-type{padding-bottom:10px}.fancy-box strong{font-weight:600;line-height:23px}.newsletter-signup,.newsletter-signup>h3{background-color:#fff}.newsletter-signup .grey-box{padding:1ex;margin:0 auto;width:300px;-webkit-box-sizing:border-box;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}body{background-color:#fff;-webkit-text-size-adjust:100%}a{color:#2f6e91;text-decoration:none}a:hover{text-decoration:underline}a:visited{color:#09c}a:visited:hover{color:#09c}button{font-size:.875em;line-height:3em;border:solid 1px #333;color:#fff;background-color:#333;text-transform:uppercase;font-family:"Open Sans",sans-serif;margin:0;padding:1ex 1em}button:focus{outline:0}button::-moz-focus-inner{border:0}@media screen and (min-width:700px){.mobile-only{display:none}}.masthead-item.user-locale{border-right:1px solid #97b7c8;padding-right:10px;height:28px;margin-top:16px;padding-left:10px;margin-right:10px}.masthead-item.user-locale .locale__flags{width:20px;height:15px;display:inline-block;margin-bottom:8px}.masthead-item.user-locale .locale__flags svg{float:left;width:20px;height:15px}.masthead-item.user-locale .dropdown__container{display:none;position:relative;overflow:hidden;width:80vw;margin-left:10vw;top:-24px;color:#333;background-color:#fff;z-index:1501}@media (max-width:699px){.masthead-item.user-locale .dropdown__container{left:-10px}}@media (min-width:700px){.masthead-item.user-locale .dropdown__container{position:absolute;width:300px;top:37px;right:0}}.masthead-item.user-locale .locale-label{float:left;height:28px;margin-right:10px;line-height:28px;font-size:10px;display:none}@media screen and (min-width:760px){.masthead-item.user-locale .locale-label{display:block}}@media screen and (max-width:699px){.masthead-item.user-locale{position:absolute;top:-9px;right:-webkit-calc(50% - 115px);right:calc(50% - 115px);border:none}.masthead-item.user-locale .locale__flags svg{height:10px;float:right;width:13px}}.masthead-item.buttons-social{padding:0}.burgerbar .other-links{display:none}@media screen and (min-width:850px){.burgerbar .other-links{display:block;margin-right:0}}.button-search{margin-left:28px}@media (max-width:699px){.burgerbar .logo{margin-left:60px}}@media only screen and (max-width:360px){.burgerbar .logo{margin-left:45px}}@media (min-width:700px) and (max-width:849px){.button-search{margin-left:0}}@media screen and (max-width:699px){.masthead-item.user-locale{border:none;position:static}.masthead-item.user-locale .locale__flags{position:absolute;right:70px;top:22px}}@media screen and (max-width:699px){.masthead-item.user-locale .locale__flags svg{float:left;width:20px;height:15px}}.trending-wrapper .trending-item.black-friday{background:-webkit-gradient(linear,left top,left bottom,from(#ab3573),to(#ea489d))0 0/cover no-repeat;background:-webkit-linear-gradient(top,#ab3573,#ea489d)0 0/cover no-repeat;background:linear-gradient(to bottom,#ab3573,#ea489d)0 0/cover no-repeat}.trending-wrapper .trending-item.black-friday a,.trending-wrapper .trending-item.black-friday a:hover,.trending-wrapper .trending-item.black-friday a:visited,.trending-wrapper .trending-item.black-friday a:hover:visited{color:#fff}.trending-wrapper .trending-item.black-friday a::after{content:"DEALS";background-color:#000;width:34px;height:34px;border-radius:50%;font-size:11px;display:block;float:right;line-height:36px;text-align:center;margin-top:3px;margin-left:8px;letter-spacing:-1px;text-indent:-2px}@media screen and (min-width:320px){.news-article ._van_header_black_friday .byline-social{color:#333;margin:20px 0 10px;padding:210px 10px 36px;background:url("/media/img/black_friday_bg_2018-techradar.jpg") no-repeat top center}}@media screen and (min-width:700px){.news-article ._van_header_black_friday .byline-social{background:url("/media/img/black_friday_bg_2018-techradar.jpg") no-repeat top center;padding:210px 10px 10px}.news-article ._van_header_black_friday .num-shares-wrapper{color:#fff}.news-article ._van_header_black_friday a.email.socialite:hover{background-color:#ccc}.news-article ._van_header_black_friday nav.socialite-widget{float:none;padding-bottom:auto}.news-article ._van_header_black_friday nav.socialite-widget.box.less-space{margin-bottom:5px}.news-article ._van_header_black_friday h1{font-weight:400;width:100%;margin-top:.5em}.news-article ._van_header_black_friday h1,body.limit-width .news-article ._van_header_black_friday h1{margin-bottom:.5em;font-size:28px;line-height:38px}.news-article ._van_header_black_friday h2,.news-article ._van_header_black_friday p{display:block}.news-article ._van_header_black_friday .breadcrumb{color:#333;position:relative;margin-bottom:0;top:0;left:auto}}.lhrailsticky{top:135px;left:32px;max-height:-webkit-calc(100vh - 135px);max-height:calc(100vh - 135px);display:block;width:140px;position:fixed;padding:0 10px;-webkit-box-sizing:border-box;box-sizing:border-box;background:#fff;border-radius:10px;color:#333;font-size:12px;z-index:1010}.lhrailsticky .lhrailsticky__jumpto{margin-top:30px;padding-bottom:10px}.lhrailsticky .lhrailsticky__links{width:-webkit-calc(100% + 3px);width:calc(100% + 3px);max-height:-webkit-calc(100vh - 187px - 44px);max-height:calc(100vh - 187px - 44px);overflow-y:scroll;line-height:16px;margin-bottom:30px;border-top:2px solid #e6248a;border-bottom:2px solid #e6248a;padding:5px 0}.lhrailsticky .lhrailsticky__links::-webkit-scrollbar{width:3px;background:rgba(0,0,0,0)}.lhrailsticky .lhrailsticky__links::-webkit-scrollbar-thumb{background:#ccc;border-radius:10px}.lhrailsticky .lhrailsticky__links .links__item{padding:5px 0;border-bottom:1px solid #ccc}.lhrailsticky .lhrailsticky__links .links__item a.item__link{display:block;width:100%;color:#333;cursor:pointer}.lhrailsticky .lhrailsticky__links .links__item a.item__link:hover{text-decoration:none}.lhrailsticky .lhrailsticky__links li:last-of-type{border-bottom:none}.primary-nav .menuitems .menu-item.techlife{background:#333}@media only screen and (min-width:700px){.primary-nav .menuitems .menu-item.techlife{padding:0 16px;text-align:center;margin-right:5px}}.apester-interaction{display:none}.swipe-pagination a:visited{color:#323232}img[data-src*='XpjytZKadYHuY5Kqsnopd7'],img[data-src*='eaV3kfiKqe8HZw8guGnRxS'],img[data-src*='6055d9b3b185c0b87d5043eec55f7653'],img[data-src*='U6D3ofXKriRQ8SrHtFkjL4'],img[data-src*='54b0b6e40073898e87f068ec93e1c3e8'],img[data-src*='T3PNM7Dfa59sKPGotf9epc']{max-height:1px}.pull-left img{max-height:174px}.pull-right img{max-height:155px}.search-box input{color:#333;max-height:44px}.newsletter-signup .subtitle{-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center}.newsletter-signup .newsletter-image{height:125px;background-size:auto 125px}.fancy-box .fancy_box_body{padding:10px 14px 5px;border:1px solid #ededed}.trending-lead:after,.trending-lead:before{left:88%;top:18%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}.trending-lead::after{border-color:transparent;border-left-color:#ededed;border-width:19px;margin-top:-8px}.trending-lead::before{border-color:transparent;border-left-color:#fff;border-width:22px;margin-top:-11px}.trending-lead{bottom:13px}.burgerbar .logo{text-align:left}@media (max-width:699px){.burgerbar .logo{margin-left:60px}}@media only screen and (max-width:360px){.burgerbar .logo{margin-left:45px}}.locale__flags{width:30px!important}.locale__flags:hover{cursor:pointer}@media (min-width:700px) and (max-width:849px){.button-search{margin-left:0}}@media screen and (max-width:699px){.masthead-item.user-locale{border:none;position:static}.masthead-item.user-locale .locale__flags{position:absolute;right:70px;top:22px}}@media screen and (max-width:699px){.masthead-item.user-locale .locale__flags svg{float:left;width:20px;height:15px}}.locale__flags .flags__flag{float:left;width:20px;height:15px;background-size:contain;background-repeat:no-repeat}.trending-wrapper .trending-item.trending-awards{background:-webkit-gradient(linear,left top,left bottom,from(#ab3573),to(#ea489d))0 0/cover no-repeat;background:-webkit-linear-gradient(top,#ab3573,#ea489d)0 0/cover no-repeat;background:linear-gradient(to bottom,#ab3573,#ea489d)0 0/cover no-repeat}.trending-wrapper .trending-item.trending-awards a,.trending-wrapper .trending-item.trending-awards a:hover,.trending-wrapper .trending-item.trending-awards a:visited,.trending-wrapper .trending-item.trending-awards a:hover:visited{color:#fff}
+  </style>
+  <link href="https://vanilla.futurecdn.net/techradar/110946/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="https://vanilla.futurecdn.net/techradar/110946/favicon.ico" rel="shortcut icon"/>
+  <meta content="#000000" name="msapplication-TileColor"/>
+  <meta content="https://vanilla.futurecdn.net/techradar/110946/apple-touch-icon.png" name="msapplication-TileImage"/>
+  <meta content="Best iPhone antivirus app of 2019" property="og:title"/>
+  <meta content="TechRadar Middle East" property="og:site_name"/>
+  <meta content="https://www.techradar.com/best/best-iphone-antivirus-app" property="og:url"/>
+  <meta content="Make sure your Apple devices are secure" property="og:description"/>
+  <meta content="https://cdn.mos.cms.futurecdn.net/6NQjjCc2iDhcCqM4FVXbeb-1200-80.jpg" property="og:image"/>
+  <meta content="1200" property="og:image:width"/>
+  <meta content="article" property="og:type"/>
+  <meta content="https://www.facebook.com/techradarme" property="article:publisher"/>
+  <meta content="https://www.facebook.com/techradarme" property="article:author"/>
+  <meta content="235441786508054" property="fb:app_id"/>
+  <meta content="" property="fb:pages"/>
+  <meta content="summary_large_image" property="twitter:card"/>
+  <meta content="@TechRadarME" property="twitter:site"/>
+  <meta content="Best iPhone antivirus app of 2019" property="twitter:title"/>
+  <meta content="Make sure your Apple devices are secure" property="twitter:description"/>
+  <meta content="@TechRadarME" property="twitter:creator"/>
+  <meta content="https://cdn.mos.cms.futurecdn.net/6NQjjCc2iDhcCqM4FVXbeb-1200-80.jpg" property="twitter:image"/>
+  <meta content="2549534851" property="twitter:account_id"/>
+  <meta content="qAisqzmHuaDhuuF2P-N0Ci2cFXD9QsgYzFYvVVwO81c" name="google-site-verification"/>
+  <meta content="10329f1fd4d0a2cd5c0d3b3b809cb4cd" name="p:domain_verify"/>
+  <meta content="https://www.techradar.com/best/best-iphone-antivirus-app" name="taboola:url"/>
+  <meta content="xkNFqB6l1qBl8BEqMjQvrHuYinhxlJVe" name="botify-site-verification"/>
+  <meta content="CC462E6DF91492086145CA5EBDCB615E" name="msvalidate.01"/>
+  <meta content="#2f6e91" name="theme-color"/>
+  <script type="text/javascript">
+   window.missingImage = function(){var missingImage = document.createElement('img');missingImage.src = '//vanilla.futurecdn.net/techradar/media/img/missing-image.svg';return missingImage;}
+VAN={};
+var FEP_object;
+VAN.gaDimensions=function(e,i,a,n){ga("create",e,"auto",{useAmpClientId:!0}),null!=a&&ga("set",{dimension57:a}),ga("require","displayfeatures"),n.fepPrimaryProduct&&ga("set",{dimension40:n.fepPrimaryProduct}),n.fepSecondaryProducts.length&&ga("set",{dimension41:n.fepSecondaryProducts.join("|")}),n.fepPrimaryProduct[0]&&ga("set",{dimension42:n.fepPrimaryCompany}),n.fepCompanies.length>=1&&ga("set",{dimension43:n.fepCompanies.join("|")}),n.fepPrimaryProduct&&ga("set",{dimension45:n.fepPrimaryProduct}),n.fepCategory&&ga("set",{dimension46:n.fepCategory}),n.fepArticleName.length>0&&ga("set",{dimension47:n.fepArticleName}),n.fepAlgorithm&&ga("set",{dimension50:n.fepAlgorithm}),n.fepNullified?ga("set",{dimension51:"true"}):ga("set",{dimension51:"false"}),"object"==typeof n.fepGroups&&Array.isArray(n.fepGroups)&&ga("set",{dimension58:n.fepGroups.join("|")}),n.thirdCategories&&ga("set",{dimension74:n.thirdCategories.join("|")});var o="false";try{"undefined"!=typeof window.vanilla&&"undefined"!=typeof window.vanilla.aft&&(o=window.vanilla.aft.logged_in===!0?"true":"false")}catch(t){console.error("Badly structured aft object",t)}ga("set",{dimension13:o}),ga("set",{dimension10:document.querySelector("html").getAttribute("data-locale")});try{var r=document.cookie.replace(/(?:(?:^|.*;\s*)_ga\s*\=\s*([^;]*).*$)|^.*$/,"$1");r&&ga("set",{dimension59:r})}catch(t){console.log("GA ID error: ",t)}ga("send","pageview",i)}; VAN.assignFep=function(a){try{var e=e||{fepPrimaryProduct:"",fepSecondaryProducts:Array(),fepCompanies:Array(),fepHawk:{},fepCategory:"",fepGroups:Array(),kwMunge:Array(),fepArticleName:"",fepPrimaryCompany:"",fepAlgorithm:"",fepNullified:"",ready:!1,primaryCategory:"",secondaryCategories:Array(),thirdCategories:Array()};if(window.FEP=e,!e.ready){if("undefined"==typeof a)throw"FEPNotReady";e.fepPrimaryProduct=a[0].adTags.primaryProduct,e.fepSecondaryProducts=a[0].adTags.secondaryProducts,e.fepCompanies=a[0].adTags.companies,e.fepCategory="object"==typeof a[0].adTags.category?"":a[0].adTags.category,e.fepGroups="undefined"!=typeof a[0].adTags.groups?a[0].adTags.groups:Array(),e.fepArticleName=a[0].articleName,e.fepAlgorithm=a[0].strategy,e.fepNullified=a[0].nullified,e.fepPrimaryCompany=null!==a[0].adTags.primaryCompany&&a[0].adTags.primaryCompany.length>=1?a[0].adTags.primaryCompany:" ","undefined"!=typeof a[0].adTags.primaryCategory&&"undefined"!=typeof a[0].adTags.secondaryCategories&&"undefined"!=typeof a[0].adTags.thirdCategories&&(e.primaryCategory=a[0].adTags.primaryCategory,e.secondaryCategories=a[0].adTags.secondaryCategories,e.thirdCategories=a[0].adTags.thirdCategories),e.fepIAB=[],e.ready=!0;var r=["fepPrimaryProduct","fepSecondaryProducts","fepCompanies","fepCategory"];r.forEach(function(a){var r=e[a];"object"==typeof r&&(r=r),e.kwMunge=e.kwMunge.concat(r)}),e.kwMunge=e.kwMunge.filter(function(a,r){return e.kwMunge.indexOf(a)==r}),"undefined"!=typeof a[0].hawkTags.primaryProduct&&(e.fepHawk.primaryProduct=a[0].hawkTags.primaryProduct),"undefined"!=typeof a[0].hawkTags.secondaryProducts&&(e.fepHawk.secondaryProducts=a[0].hawkTags.secondaryProducts),"undefined"!=typeof a[0].hawkTags.companies&&(e.fepHawk.companies=a[0].hawkTags.companies),"undefined"!=typeof a[0].hawkTags.groups&&(e.fepHawk.groups=a[0].hawkTags.groups),"undefined"!=typeof a[0].hawkTags.category&&(e.fepHawk.category=a[0].hawkTags.category)}return window.FEP=e,e}catch(o){console.log("fep ga exc "+o.message)}};;
+  </script>
+  <script>
+   try{
+var FEP_object = [{"acceptableLanguage":true,"adTags":{"category":"Applications","companies":["Avira","Trend_Micro","McAfee","Website"],"editorialTags":["Buying_Guide"],"groups":["Applications","Software"],"primaryCategory":"Applications","primaryCompany":"F-Secure","primaryProduct":"iPhone","secondaryCategories":["Applications","Software"],"secondaryCompanies":["Avira","Trend_Micro","McAfee","Website"],"secondaryProducts":["iPhone_app","IPhone","IPhone_X","Apple_Watch","Safari"],"thirdCategories":[]},"articleName":"Best_iPhone_antivirus_app_of_2019","articleType":"best","dataSource":"provided","hawkTags":{"primaryProduct":"iPhone","secondaryProducts":["iPhone_app","IPhone","IPhone_X","Apple_Watch","Safari"],"companies":["F-Secure","Avira","Trend_Micro","McAfee","Website"],"category":"Applications","groups":["Applications","Software"],"editorialTags":["Buying_Guide"]},"internalProductName":"","nullified":false,"origSite":"techradar","overrides":[],"site":"techradar","strategy":"6","timestamp":1551178023,"topProductVsproductName":"0"}];
+<!-- /.../20140911155300/techradar/KeT9vTFxnmbmKzkyPJuVRX/5dd976b2/00000000/ -->
+}catch(ex){
+if (typeof console == "object") {
+console.log(ex);
+}
+}
+  </script>
+  <!-- GA TPL PREMIUM -->
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+// Optimizely Universal Analytics Integration
+window.optimizely = window.optimizely || [];
+window.optimizely.push("activateUniversalAnalytics");
+// Setup the FEP global object form the FEP_object
+// @TODO - can the format of FEP_object be changed server side?
+VAN.assignFep(FEP_object);
+var ga_code = 'UA-48894329-1';
+var analytics_ga_data = {"dimension1":"best","dimension2":"mobile-phones","dimension3":"applications|software","dimension4":"tech_techradar\/","dimension5":"KeT9vTFxnmbmKzkyPJuVRX","dimension6":"|contribscontent|buying_guide|ios|iphone|ipad|antivirus|security|mobile_phones|trbc|buyingguide|exclude-from-homepage|security-channel|no-in-article-video|trbcfeature|serversidehawk","dimension7":"mike_williams","dimension8":"26-02-2019","dimension9":"1","dimension10":"EN-US","dimension106":"0","dimension126":"en","dimension127":"GB|US|AU|SG|IN|AE"};
+var version = 'null';
+// Make sure all the GA dimensions are setup and correct
+VAN.gaDimensions(ga_code, analytics_ga_data, version, window.FEP);
+  </script>
+  <!-- END GA PREMIUM -->
+  <script>
+   var trailingSlash = false;
+  </script>
+  <link href="/manifest.json" rel="manifest"/>
+  <script async="" src="https://cdn.onesignal.com/sdks/OneSignalSDK.js">
+  </script>
+  <script>
+   var OneSignal = window.OneSignal || [];
+OneSignal.push(function() {
+OneSignal.init({
+appId: "bf7c1147-c214-44f3-b909-620c0ec86b97",
+autoRegister: true
+});
+OneSignal.registerForPushNotifications();
+});
+OneSignal.push(["addListenerForNotificationOpened", function(data) {
+OneSignal.getUserId( function(userId) {
+ga('send', 'event', 'OneSignal Notification_Clicked', data.id, userId);
+});
+}]);
+  </script>
+ </head>
+ <body class="limit-width pro ">
+  <script>
+   window.isIE = false
+  </script>
+  <!--[IE]><script>window.isIE = true</script><![endif]-->
+  <script>
+   window.amIIE = function() {
+return navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') !== -1 || window.isIE;
+}
+  </script>
+  <script id="selligent-tag">
+   window.reliablePageLoad.then(function(){
+setTimeout(function(){
+window.wa = document.createElement("script"),
+wa_s = document.getElementsByTagName("script")[0];
+window.wa.src = "https://targetemsecure.blob.core.windows.net/138526d1-8ff9-4de4-b84a-3a11ec020ede/138526d18ff94de4b84a3a11ec020ede_1.js";
+window.wa.type = "text/javascript";
+wa_s.parentNode.insertBefore(wa, wa_s);
+window.wa.bt_queue = [];
+window.wa.afterInit = function(){
+window.wa.bt_queue.push({
+"customIdentifier": "",
+"async": true,
+"isEvent": false,
+"exposedFields": [
+{ "field": "Number_of_hits_in_the_last_day" },
+{ "field": "Average_time__minutes__per_visit" }
+]
+});
+}
+}, 1000);
+});
+  </script>
+  <nav class="primary-nav pro">
+   <input checked="" class="burgerbar-none-radio" id="burgerbar-none" name="burgerbar-expand" type="radio"/>
+   <input class="burgerbar-radio" id="burgerbar" name="burgerbar-expand" type="radio"/>
+   <div class="burgerbar ">
+    <div class="container full burgerbar-small">
+     <label class="button-menu unchecked menu-hamburger" for="burgerbar" onclick="">
+     </label>
+     <label class="button-menu checked menu-hamburger" for="burgerbar-none" onclick="">
+     </label>
+     <div id="publisherDetails" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+      <div class="logo">
+       <a href="https://www.techradar.com/pro" itemprop="url">
+        <span class="site-logo" itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+         <svg height="30" width="199" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.6 9.3H9v8.3c0 1.4.8 1.7 2.1 1.7h1.5v4.3c-1.1.1-2.1.2-3.2.2-5.1 0-6.4-1.5-6.4-6.4V9.3H0V5.5h3V0h6v5.5h3.6v3.8zm5.2 6.7c.1 2.5 1.6 4.1 4.1 4.1 1.4 0 2.8-.6 3.4-1.9h5.6c-1.1 4.1-5 6-9.1 6-5.9 0-9.9-3.6-9.9-9.7 0-5.6 4.4-9.5 9.8-9.5 6.5 0 9.8 4.9 9.5 11H17.8zm7.4-3.3c-.1-2-1.5-3.7-3.5-3.7-2.1 0-3.5 1.5-3.9 3.7h7.4zm19-.6c0-1.5-1.4-2.6-2.9-2.6-3.3 0-3.8 2.8-3.8 5.4 0 2.3 1 4.7 3.5 4.7 2.1 0 3.1-1.2 3.4-3.1h5.8c-.5 4.9-4.3 7.7-9.2 7.7-5.4 0-9.5-3.8-9.5-9.3C31.5 9.1 35.2 5 41 5c4.6 0 8.6 2.3 9 7.1h-5.8zM50.3 0h6v8c1-1.9 3.4-3 5.6-3 6 0 6.5 4.4 6.5 7v11.6h-5.9v-8.7c0-2.5.2-5-3-5-2.2 0-3.2 1.8-3.2 3.8v9.9h-6V0zM69 5.5h5.7v3.2h.1c.9-2.3 2.9-3.6 5.5-3.6.4 0 .9.1 1.4.2v5.4c-.8-.2-1.5-.4-2.3-.4-3 0-4.5 2.1-4.5 4.4v8.9H69V5.5zm12.6 5.6c.1-2.4 1.3-3.9 2.9-4.9 1.6-.9 3.7-1.2 5.7-1.2 4.3 0 8.5.9 8.5 6v8c0 1.5 0 3.2.7 4.6h-6c-.2-.5-.2-1.1-.3-1.7a8.37 8.37 0 0 1-6 2.3c-3.5 0-6.2-1.8-6.2-5.5 0-5.9 6.4-5.5 10.6-6.3 1-.2 1.5-.6 1.5-1.7 0-1.4-1.6-1.9-2.8-1.9-1.7 0-2.7.7-3 2.3h-5.6zm7.7 9.4c2.9 0 3.8-1.6 3.7-5.4-.9.6-2.4.7-3.7 1-1.3.3-2.4.9-2.4 2.3 0 1.5 1.1 2.1 2.4 2.1zm28.6 3.1h-5.7v-2.1a5.73 5.73 0 0 1-5 2.7c-5.7 0-8.1-4.9-8.1-10 0-4.8 2.5-9.2 7.6-9.2 2.3 0 4 .8 5.2 2.4h.1V0h5.9v23.6zM105 14.4c0 2.4.9 5.2 3.6 5.2 2.9 0 3.6-2.8 3.6-5.1 0-2.6-1-5-3.6-5-2.7 0-3.6 2.6-3.6 4.9zm13.7-3.3c.1-2.4 1.3-3.9 2.9-4.9 1.6-.9 3.7-1.2 5.8-1.2 4.2 0 8.4.9 8.4 6v8c0 1.5 0 3.2.7 4.6h-6c-.2-.5-.2-1.1-.3-1.7a8.37 8.37 0 0 1-6 2.3c-3.5 0-6.2-1.8-6.2-5.5 0-5.9 6.4-5.5 10.6-6.3 1-.2 1.6-.6 1.6-1.7 0-1.4-1.7-1.9-2.9-1.9-1.7 0-2.7.7-3 2.3h-5.6zm7.7 9.4c2.9 0 3.8-1.6 3.7-5.4-.9.6-2.4.7-3.7 1-1.3.3-2.4.9-2.4 2.3 0 1.5 1.1 2.1 2.4 2.1zm10.3-15h5.8v3.2c.9-2.3 2.9-3.6 5.5-3.6.4 0 1.5.1 1.9.2v5.4c-.7-.2-2-.4-2.8-.4-2.9 0-4.5 2.1-4.5 4.4v8.9h-5.9V5.5z" fill="#FFF">
+          </path>
+          <path d="M144 17.7h5.9v5.9H144z" fill="#E6248A">
+          </path>
+          <path d="M154.7 5.6h2.9V8c1-2 3.3-2.8 5.7-2.8 5.4 0 8.1 4.3 8.1 9.3 0 4.9-2.7 9.1-8 9.1-1.9 0-4.5-.6-5.8-2.7V30h-2.9V5.6zm8.2 2.1c-3.9 0-5.4 3.4-5.4 6.7 0 3.5 1.5 6.7 5.5 6.7s5.3-3.4 5.3-6.8-1.7-6.6-5.4-6.6zM173 5.6h2.8v3.7c1.4-2.8 3.4-4.2 6.5-4.1v3c-4.7 0-6.4 2.7-6.4 7.2v7.8H173V5.6zm16.8-.4c5.6 0 8.6 4 8.6 9.2 0 5.2-3 9.2-8.6 9.2s-8.6-4-8.6-9.2c0-5.2 3-9.2 8.6-9.2zm0 15.9c3 0 5.5-2.4 5.5-6.7 0-4.3-2.5-6.7-5.5-6.7s-5.5 2.4-5.5 6.7c0 4.3 2.5 6.7 5.5 6.7z" fill="#DDD">
+          </path>
+         </svg>
+         <img class="fallback" data-fallback-src="https://vanilla.futurecdn.net/techradar/media/img/techradarpro_logo.png" src=""/>
+         <meta content="https://vanilla.futurecdn.net/techradar/media/img/techradarpro_logo.png" itemprop="url"/>
+        </span>
+        <h1 itemprop="name">
+         TechRadar pro
+        </h1>
+        <span class="strapline">
+         IT insights for business
+        </span>
+       </a>
+      </div>
+     </div>
+     <input class="search-checkbox" id="search-checkbox" name="burgerbar-expand" type="checkbox"/>
+     <label class="button-search masthead-item " for="search-checkbox" onclick="">
+      <span class="desktop-text">
+       Search
+      </span>
+      <span class="icon icon-search">
+      </span>
+     </label>
+     <form action="https://www.techradar.com/search" class="search-box" method="GET">
+      <input class="search-input" name="searchTerm" placeholder="Search TechRadar" type="search"/>
+      <button class="search-submit" type="submit">
+       <span class="icon icon-search">
+       </span>
+      </button>
+     </form>
+     <div class="other-links">
+      <a href="https://www.techradar.com/rsstoolkit">
+       <abbr title="Really Simple Syndication">
+        RSS
+       </abbr>
+      </a>
+     </div>
+     <div class="buttons-social masthead-item">
+      <a class="icon icon-circle icon-facebook" href="https://www.facebook.com/techradarme" target="_blank">
+      </a>
+      <a class="icon icon-circle icon-twitter" href="https://twitter.com/intent/user?screen_name=TechRadarME" target="_blank">
+      </a>
+      <a class="icon icon-circle icon-amazon" href="https://www.amazon.co.uk/techradar?tag=futurepublish-trd-21&amp;ascsubtag=hawk-custom-tracking-21" rel="nofollow" target="_blank">
+      </a>
+      <a class="icon icon-circle icon-youtube" href="https://www.youtube.com/user/techradar?sub_confirmation=1" target="_blank">
+      </a>
+     </div>
+     <div class="user-locale masthead-item">
+      <span class="locale-label">
+      </span>
+      <span class="locale__flags">
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="wrapper">
+    <div class="menuitems container full">
+     <ul class="nav-list">
+      <li class="menu-item menu-item-home">
+       <a class="home" href="https://www.techradar.com/pro">
+        <i class="icon icon-home">
+        </i>
+       </a>
+      </li>
+      <li class="menu-item menu-item-news">
+       <a class="" href="https://www.techradar.com/pro/news">
+        News
+       </a>
+      </li>
+      <li class="menu-item menu-item-reviews">
+       <a class="" href="https://www.techradar.com/pro/reviews">
+        Reviews
+       </a>
+      </li>
+      <li class="menu-item menu-item-insights">
+       <a class="" href="https://www.techradar.com/pro/insights">
+        Insights
+       </a>
+      </li>
+      <li class="menu-item menu-item-more menu-level-1 has-submenu menu-item-hover-reveal more-hide">
+       More
+       <i class="icon icon-arrow-down">
+       </i>
+       <i class="icon icon-arrow-right">
+       </i>
+       <ul class="sub-menu">
+       </ul>
+      </li>
+     </ul>
+     <div class="nav-sub-set-container">
+      <div class="menu-item menu-item-none menu-item-main-pro menu-item-nav-sub-set">
+       <a href="https://www.techradar.com/">
+        TechRadar
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <div class="dfp-leaderboard-container">
+  </div>
+  <div class="container full pro " id="main">
+   <div class="trending-wrapper pro">
+    <div class="trending-bar container full">
+     <ul class="trending-items pro">
+      <li class="trending-item">
+       <a href="https://www.techradar.com/vpn/best-vpn">
+        Best VPN
+       </a>
+      </li>
+      <li class="trending-item">
+       <a href="https://www.techradar.com/pro/mobile-industry">
+        Mobile Industry
+       </a>
+      </li>
+      <li class="trending-item">
+       <a href="https://www.techradar.com/news/best-web-hosting-services">
+        Best Web Hosting
+       </a>
+      </li>
+      <li class="trending-item">
+       <a href="https://www.techradar.com/news/best-antivirus">
+        Best Antivirus
+       </a>
+      </li>
+      <li class="trending-item">
+       <a href="https://www.techradar.com/pro/security">
+        Security
+       </a>
+      </li>
+      <li class="trending-item">
+       <a href="https://www.techradar.com/news/the-best-website-builder">
+        Best Website Builders
+       </a>
+      </li>
+      <li class="trending-item">
+       <a href="https://www.techradar.com/news/best-wordpress-hosting-providers">
+        Best WordPress hosting
+       </a>
+      </li>
+      <li class="trending-item">
+       <a href="https://www.techradar.com/pro/software">
+        Software
+       </a>
+      </li>
+      <li class="trending-item">
+       <a href="https://www.techradar.com/news/best-printers">
+        Best Printers
+       </a>
+      </li>
+      <!-- Start Trending Subset //-->
+      <!-- End Trending Subset //-->
+     </ul>
+    </div>
+   </div>
+   <article class="news-article " data-id="KeT9vTFxnmbmKzkyPJuVRX" itemref="publisherDetails" itemscope="" itemtype="http://schema.org/NewsArticle">
+    <meta content="https://www.techradar.com/best/best-iphone-antivirus-app" itemprop="mainEntityOfPage"/>
+    <header>
+     <nav class="breadcrumb">
+      <ul>
+       <li>
+        <a href="https://www.techradar.com/best">
+         Best
+        </a>
+       </li>
+       <li>
+        Best iPhone antivirus app of 2019
+       </li>
+      </ul>
+     </nav>
+     <h1 itemprop="name headline">
+      Best iPhone antivirus app of 2019
+     </h1>
+     <div class="byline-social">
+      <p class="byline">
+       By
+       <span class="no-wrap by-author">
+        <a href="https://www.techradar.com/author/mike-williams" itemprop="author" itemscope="" itemtype="http://schema.org/Person" rel="author">
+         <span itemprop="name" style="white-space:nowrap">
+          Mike Williams
+         </span>
+        </a>
+       </span>
+       <time class="no-wrap relative-date chunk" datetime="2019-02-26T10:46:09+00:00" itemprop="datePublished">
+        2019-02-26T10:46:09Z
+       </time>
+       <span class="no-wrap">
+        <a class="chunk category" href="https://www.techradar.com/news/software/applications">
+         Applications
+        </a>
+        <i class=" icon icon-category-software">
+        </i>
+       </span>
+      </p>
+      <h2>
+       Make sure your Apple devices are secure
+      </h2>
+      <nav class="socialite-widget box less-space " data-contexturl="https://www.techradar.com/https://www.techradar.com/best/best-iphone-antivirus-app">
+       <ul class="socialite-widget-ul">
+        <li class="socialite-widget-item">
+         <a class="facebook socialite" data-action="share" data-platform="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.techradar.com/best/best-iphone-antivirus-app" target="_blank">
+          <i class="icon icon-facebook">
+          </i>
+         </a>
+        </li>
+        <li class="socialite-widget-item">
+         <a class="twitter socialite" data-action="tweet" data-platform="twitter" href="https://twitter.com/intent/tweet?text=Best%20iPhone%20antivirus%20app%20of%202019&amp;url=https://www.techradar.com/best/best-iphone-antivirus-app" target="_blank">
+          <i class="icon icon-twitter">
+          </i>
+         </a>
+        </li>
+        <li class="socialite-widget-item mobile-only">
+         <a class="whatsapp socialite" data-action="message" data-platform="whatsapp" href="whatsapp://send?text=Best%20iPhone%20antivirus%20app%20of%202019https://www.techradar.com/best/best-iphone-antivirus-app?fwa">
+          <i class="icon icon-whats-app">
+          </i>
+         </a>
+        </li>
+        <li class="socialite-widget-item">
+         <a class="pinterest socialite" data-action="pin" data-platform="pinterest" href="http://pinterest.com/pin/create/button/?url=https://www.techradar.com/best/best-iphone-antivirus-app&amp;media=https://cdn.mos.cms.futurecdn.net/6NQjjCc2iDhcCqM4FVXbeb-1200-80.jpg" target="_blank">
+          <i class="icon icon-pinterest">
+          </i>
+         </a>
+        </li>
+        <li class="socialite-widget-item">
+         <a class="email socialite" data-platform="email" href="mailto:?subject=I%20found%20this%20webpage&amp;body=Hi,%20I%20found%20this%20webpage%20and%20thought%20you%20might%20like%20it%20https://www.techradar.com/best/best-iphone-antivirus-app">
+          <i class="icon icon-envelope-solid">
+          </i>
+         </a>
+        </li>
+       </ul>
+       <div class="num-shares-wrapper">
+        <i class="icon icon-share">
+        </i>
+        <span class="num-shares-label">
+         Shares
+        </span>
+        <span class="num-shares-value">
+        </span>
+       </div>
+      </nav>
+     </div>
+    </header>
+    <section class="content-wrapper">
+     <div class="box" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+      <img alt="Avira Mobile Security" class=" block-image-ads" data-original-mos="https://cdn.mos.cms.futurecdn.net/6NQjjCc2iDhcCqM4FVXbeb.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/6NQjjCc2iDhcCqM4FVXbeb.jpg" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://cdn.mos.cms.futurecdn.net/6NQjjCc2iDhcCqM4FVXbeb-320-80.jpg" srcset="https://cdn.mos.cms.futurecdn.net/6NQjjCc2iDhcCqM4FVXbeb-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/6NQjjCc2iDhcCqM4FVXbeb-480-80.jpg 480w, https://cdn.mos.cms.futurecdn.net/6NQjjCc2iDhcCqM4FVXbeb-650-80.jpg 650w, https://cdn.mos.cms.futurecdn.net/6NQjjCc2iDhcCqM4FVXbeb-970-80.jpg 970w"/>
+      <meta content="https://cdn.mos.cms.futurecdn.net/6NQjjCc2iDhcCqM4FVXbeb.jpg" itemprop="url"/>
+      <meta content="600" itemprop="height"/>
+      <meta content="338" itemprop="width"/>
+      <div class="caption-text">
+       Image Credit: Avira
+      </div>
+     </div>
+     <div class="text-copy bodyCopy auto" id="article-body" itemprop="articleBody">
+      <div itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+       <meta content="https://cdn.mos.cms.futurecdn.net/6NQjjCc2iDhcCqM4FVXbeb.jpg" itemprop="url"/>
+       <meta content="602" itemprop="height"/>
+       <meta content="370" itemprop="width"/>
+      </div>
+      <div class="interscroller-snippet-insert version-1">
+      </div>
+      <div class="fancy-box">
+       <h5>
+        Best iPhone antivirus app
+       </h5>
+       <div class="fancy_box_body">
+        <p>
+         <a href="https://itunes.apple.com/app/id692893556" rel="nofollow" target="_blank">
+          1. Avira Mobile Security
+         </a>
+        </p>
+        <p>
+         <a href="https://itunes.apple.com/us/app/lookout-security-and-identity-theft-protection/id434893913" rel="nofollow" target="_blank">
+          2. Lookout: Security and Identity Theft Protection
+         </a>
+        </p>
+        <p>
+         <a href="https://itunes.apple.com/us/app/mcafee-mobile-security-vault-and-contacts-backup/id724596345?mt=8" rel="nofollow" target="_blank">
+          3. McAfee Mobile Security
+         </a>
+        </p>
+        <p>
+         <a href="https://itunes.apple.com/us/app/trend-micro-mobile-security/id630442428?mt=8" rel="nofollow" target="_blank">
+          4. Trend Micro Mobile Security
+         </a>
+        </p>
+        <p>
+         <a href="https://itunes.apple.com/gb/app/f-secure-safe/id572847748?mt=8" rel="nofollow" target="_blank">
+          5. F-Secure SAFE
+         </a>
+        </p>
+        <p>
+         <strong>
+          Read on for our detailed analysis of each app
+         </strong>
+        </p>
+       </div>
+      </div>
+      <p>
+       Although it's less likely that your Apple iPhone or iPad will get infected by malware compared to a PC, it doesn't mean they are completely immune, so this list of the
+       <a href="https://www.techradar.com/best/best-antivirus">
+        best antivirus
+       </a>
+       for iPhone can give you the extra protection you need.
+      </p>
+      <p>
+       Whether it's malicious websites, annoying ads, web trackers or just someone grabbing your device when you're not looking, there's plenty to be concerned about if you own an iPhone. However, many big-name antivirus and security vendors have products that are specially tailored to devices that run Apple's iOS operating system, which is the mobile OS that iPhones and iPads run on.
+      </p>
+      <p>
+       Installing the right app can protect you from both web-based threats and local snoopers, with powerful extras available from cloud backup to high-end identity theft protection.
+      </p>
+      <p>
+       Not all these apps deliver on their promises, but we've found five top-notch iPhone antivirus contenders that definitely deserve a closer look. Keep reading to find out more.
+      </p>
+      <ul>
+       <li>
+        This is our
+        <a href="https://www.techradar.com/best/best-antivirus" target="_blank">
+         best antivirus
+        </a>
+        buying guide
+       </li>
+      </ul>
+      <ul>
+       <li>
+        Want your company or services to be added to this buyer’s guide? Please email your request to
+        <a href="mailto:desire.athow@futurenet.com" target="_blank">
+         desire.athow@futurenet.com
+        </a>
+        with the URL of the buying guide in the subject line.
+       </li>
+      </ul>
+      <a href="https://itunes.apple.com/app/id692893556" rel="nofollow" target="_blank">
+       <figure>
+        <p class="bordeaux-image-check">
+         <img alt="Avira Mobile Security" class="expandable lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/dJGtKH4Vhn7K2kX6ZUdXy7.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/dJGtKH4Vhn7K2kX6ZUdXy7.jpg" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/dJGtKH4Vhn7K2kX6ZUdXy7-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/dJGtKH4Vhn7K2kX6ZUdXy7-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/dJGtKH4Vhn7K2kX6ZUdXy7-650-80.jpg 650w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+        </p>
+        <figcaption>
+         <div class="caption-text">
+          <p>
+           Image Credit: Avira
+          </p>
+         </div>
+        </figcaption>
+       </figure>
+      </a>
+      <h3>
+       <a href="https://itunes.apple.com/app/id692893556" rel="nofollow" target="_blank">
+        1. Avira Mobile Security
+       </a>
+      </h3>
+      <div class="_hawk subtitle">
+       <p>
+        Stay safe online with the German antivirus giant
+       </p>
+      </div>
+      <p class="specs__container">
+      </p>
+      <aside class="hawk-widget-insert _hawk widget_type:price model_names:Avira%20Mobile%20Security " data-model-name="Avira Mobile Security" data-widget-type="price">
+      </aside>
+      <div class="icon icon-plus_circle _hawk">
+       Blocks malicious websites
+      </div>
+      <div class="icon icon-plus_circle _hawk">
+       Alerts for hacked accounts
+      </div>
+      <div class="icon icon-plus_circle _hawk">
+       Completely free
+      </div>
+      <p>
+       German-based Avira is one of the most effective antivirus engines on the desktop, and although
+       <a href="https://itunes.apple.com/app/id692893556" rel="nofollow" target="_blank">
+        Avira Mobile Security
+       </a>
+       doesn't have the same malware-hunting focus, it's still crammed with useful features.
+      </p>
+      <p>
+       Phishing protection does a good job of blocking malicious websites, an excellent first step in keeping you safe online.
+      </p>
+      <p>
+       An Identity Safeguard automatically scans the email addresses of you and your contacts to check whether they've been leaked online, and alerts you to any security breach.
+      </p>
+      <p>
+       An unusually versatile Contacts Backup feature can protect your address book by emailing the details to yourself, or backing them up directly to Google Drive or Dropbox.
+      </p>
+      <p>
+       Elsewhere, handy management tools enable analyzing memory and storage use, as well as providing monitoring reports on recent security events, plus the suite is rounded off with a simple anti-theft module.
+      </p>
+      <p>
+       Put it all together and Avira Mobile Security is a versatile suite which uses multiple layers to protect you from web-based and other dangers. Go grab a copy immediately.
+      </p>
+      <ul>
+       <li>
+        <a href="https://itunes.apple.com/app/id692893556" rel="nofollow" target="_blank">
+         You can download Avira Mobile Security here
+        </a>
+       </li>
+      </ul>
+      <p class="bordeaux-image-check">
+       <img alt="Best antivirus for iOS" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db.jpg" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db-650-80.jpg 650w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+      </p>
+      <a href="https://itunes.apple.com/us/app/lookout-security-and-identity-theft-protection/id434893913" rel="nofollow" target="_blank">
+       <figure>
+        <p class="bordeaux-image-check">
+         <img alt="Lookout: Security and Identity Theft Protection" class="expandable lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/qftWLLV7JYYU4UdZ7w6A4.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/qftWLLV7JYYU4UdZ7w6A4.jpg" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/qftWLLV7JYYU4UdZ7w6A4-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/qftWLLV7JYYU4UdZ7w6A4-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/qftWLLV7JYYU4UdZ7w6A4-650-80.jpg 650w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+        </p>
+        <figcaption>
+         <div class="caption-text">
+          <p>
+           Image Credit: Lookout
+          </p>
+         </div>
+        </figcaption>
+       </figure>
+      </a>
+      <h3>
+       <a href="https://itunes.apple.com/us/app/lookout-security-and-identity-theft-protection/id434893913" rel="nofollow" target="_blank">
+        2. Lookout: Security and Identity Theft Protection
+       </a>
+      </h3>
+      <div class="_hawk subtitle">
+       <p>
+        iOS security with comprehensive identity theft protection
+       </p>
+      </div>
+      <p class="specs__container">
+      </p>
+      <aside class="hawk-widget-insert _hawk widget_type:price model_names:Lookout%20Security%20and%20Identity%20Theft%20Protection " data-model-name="Lookout Security and Identity Theft Protection" data-widget-type="price">
+      </aside>
+      <div class="icon icon-plus_circle _hawk">
+       Detailed security checks
+      </div>
+      <div class="icon icon-plus_circle _hawk">
+       Full-strength identity theft protection
+      </div>
+      <div class="icon icon-minus_circle _hawk">
+       Poor app store reviews recently
+      </div>
+      <p>
+       <a href="https://itunes.apple.com/us/app/lookout-security-and-identity-theft-protection/id434893913" rel="nofollow" target="_blank">
+        Lookout
+       </a>
+       is an unusually complete security app which shields your iDevice with four layers of in-depth protection.
+      </p>
+      <p>
+       Powerful security tools check for common security vulnerabilities (missing updates, a jailbroken device), monitor running apps for suspect activity, and raise an alert if you connect to a dangerous Wi-Fi network.
+      </p>
+      <p>
+       An effective set of anti-theft technologies include various device location tools, an alarm that works even if your device is on silent, and the ability to display a custom message on the lock screen to help you get the device back.
+      </p>
+      <p>
+       Simple backup options are on hand to keep your contacts and photos safe from harm.
+      </p>
+      <p>
+       There’s a lot of functionality here, for sure, but if you want more, the $9.99 (£7.15) a month Premium Plus version adds a full-strength identity theft protection service. This includes alerts if any of your personal information is exposed in a data breach, along with social media monitoring, lost wallet recovery to help you quickly cancel and reorder credit cards, 24/7 support if the worst happens and $1m identity theft insurance to cover any damages or legal fees.
+      </p>
+      <ul>
+       <li>
+        <a href="https://itunes.apple.com/us/app/lookout-security-and-identity-theft-protection/id434893913" rel="nofollow" target="_blank">
+         You can download Lookout: Security and Identity Theft Protection here
+        </a>
+       </li>
+      </ul>
+      <p class="bordeaux-image-check">
+       <img alt="Best antivirus for iOS" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db.jpg" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db-650-80.jpg 650w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+      </p>
+      <p class="mid__article">
+      </p>
+      <a href="https://itunes.apple.com/us/app/mcafee-mobile-security-vault-and-contacts-backup/id724596345?mt=8" rel="nofollow" target="_blank">
+       <figure>
+        <p class="bordeaux-image-check">
+         <img alt="McAfee Mobile Security" class="expandable lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/gQgryH4PUhKwsgSuS3ipfF.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/gQgryH4PUhKwsgSuS3ipfF.jpg" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/gQgryH4PUhKwsgSuS3ipfF-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/gQgryH4PUhKwsgSuS3ipfF-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/gQgryH4PUhKwsgSuS3ipfF-650-80.jpg 650w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+        </p>
+        <figcaption>
+         <div class="caption-text">
+          <p>
+           Image Credit: McAfee
+          </p>
+         </div>
+        </figcaption>
+       </figure>
+      </a>
+      <h3>
+       <a href="https://itunes.apple.com/us/app/mcafee-mobile-security-vault-and-contacts-backup/id724596345?mt=8" rel="nofollow" target="_blank">
+        3. McAfee Mobile Security
+       </a>
+      </h3>
+      <div class="_hawk subtitle">
+       <p>
+        Original? No. Comprehensive and entirely free? You bet
+       </p>
+      </div>
+      <p class="specs__container">
+      </p>
+      <aside class="hawk-widget-insert _hawk widget_type:price model_names:McAfee%20Mobile%20Security " data-model-name="McAfee Mobile Security" data-widget-type="price">
+      </aside>
+      <div class="icon icon-plus_circle _hawk">
+       Easy-to-use media protection
+      </div>
+      <div class="icon icon-plus_circle _hawk">
+       Comprehensive anti-theft tools
+      </div>
+      <div class="icon icon-minus_circle _hawk">
+       There's not much new here
+      </div>
+      <p>
+       <a href="https://itunes.apple.com/us/app/mcafee-mobile-security-vault-and-contacts-backup/id724596345?mt=8" rel="nofollow" target="_blank">
+        McAfee Mobile Security
+       </a>
+       won't exactly surprise you with its functionality. Anti-theft, contacts backup, secure local storage for your media files: it's all very familiar. But don't let that put you off – the app is more interesting than you might think.
+      </p>
+      <p>
+       The Media Vault hides your photos and videos, for instance. That's not unusual, but you can also snap photos or videos directly from the app, and have them automatically encrypted and stored in the vault. And you can quickly reopen the vault with Touch ID or even Face ID on the iPhone X.
+      </p>
+      <p>
+       The anti-theft features take a similarly thorough approach. Yes, there are the standard options to track your device on a map, or activate a remote alarm which sounds even in silent mode. But the bundled CaptureCam feature can email you with a snapshot of anyone trying to get into your vault. You're able to initiate an alarm from your Apple Watch for easier location. The app can even save your device location when the battery is low, giving you a better chance of tracking it down.
+      </p>
+      <p>
+       Bonus features include automatic contacts backup, remote wiping of contacts if your device is stolen, and a battery indicator which allows checking your iPhone battery level on your Apple Watch.
+      </p>
+      <p>
+       McAfee Mobile Security may not have the most imaginative of feature sets, then, but there's a lot here, especially for a free app from a big-name vendor. If you don't have some of these functions already, it's well worth a closer look.
+      </p>
+      <ul>
+       <li>
+        <a href="https://itunes.apple.com/us/app/mcafee-mobile-security-vault-and-contacts-backup/id724596345?mt=8" rel="nofollow" target="_blank">
+         You can download McAfee Mobile Security here
+        </a>
+       </li>
+      </ul>
+      <p class="bordeaux-image-check">
+       <img alt="Best antivirus for iOS" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db.jpg" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db-650-80.jpg 650w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+      </p>
+      <a href="https://itunes.apple.com/us/app/trend-micro-mobile-security/id630442428?mt=8" rel="nofollow" target="_blank">
+       <figure>
+        <p class="bordeaux-image-check">
+         <img alt="Trend Micro Mobile Security" class="expandable lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/eDZaLr7nZ2ToejBVqEwRCT.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/eDZaLr7nZ2ToejBVqEwRCT.jpg" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/eDZaLr7nZ2ToejBVqEwRCT-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/eDZaLr7nZ2ToejBVqEwRCT-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/eDZaLr7nZ2ToejBVqEwRCT-650-80.jpg 650w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+        </p>
+        <figcaption>
+         <div class="caption-text">
+          <p>
+           Image Credit: Trend Micro
+          </p>
+         </div>
+        </figcaption>
+       </figure>
+      </a>
+      <h3>
+       <a href="https://itunes.apple.com/us/app/trend-micro-mobile-security/id630442428?mt=8" rel="nofollow" target="_blank">
+        4. Trend Micro Mobile Security
+       </a>
+      </h3>
+      <div class="_hawk subtitle">
+       <p>
+        Instantly block a host of web threats
+       </p>
+      </div>
+      <p class="specs__container">
+      </p>
+      <aside class="hawk-widget-insert _hawk widget_type:price model_names:Trend%20Micro%20Mobile%20Security " data-model-name="Trend Micro Mobile Security" data-widget-type="price">
+      </aside>
+      <div class="icon icon-plus_circle _hawk">
+       Loads of features
+      </div>
+      <div class="icon icon-plus_circle _hawk">
+       Trusted big-name developer
+      </div>
+      <div class="icon icon-minus_circle _hawk">
+       The price is a little high
+      </div>
+      <p>
+       Your iOS devices may not need antivirus software in the traditional sense, but there are plenty of other threats out there online, and
+       <a href="https://itunes.apple.com/us/app/trend-micro-mobile-security/id630442428?mt=8" rel="nofollow" target="_blank">
+        Trend Micro Mobile Security
+       </a>
+       tries to combat them all.
+      </p>
+      <p>
+       Built-in web filtering works with Safari and other browsers to prevent you accessing malicious or unwanted websites. Integrated ad and tracker-blocking maintains your privacy while cutting data usage and speeding up website load times.
+      </p>
+      <p>
+       A Social Network Privacy feature scans your Facebook and Twitter account settings and reports on any potential privacy concerns.
+      </p>
+      <p>
+       Trend Micro's Safe Surfing is a secure browser which supports its own private surfing mode, giving you extra reassurance that your history isn't being recorded.
+      </p>
+      <p>
+       A bundled anti-theft feature enables locating missing devices via GPS, Wi-Fi or cell towers.
+      </p>
+      <p>
+       All this functionality comes at a price: $4.99 (£3.50) each month, or $29.99 (£15) for a one-year license, or $49.99 for a two-year license paid up-front.
+      </p>
+      <p>
+       Trend Micro Mobile Security does allow for testing all its premium features via a time-limited trial, though, and even if you don't sign up, the app has a couple of useful free features. The Device Access Status module checks your system to ensure it's configured properly, and a Secure QR Code Scanner provides a safer way to open mystery links.
+      </p>
+      <ul>
+       <li>
+        <a href="https://itunes.apple.com/us/app/trend-micro-mobile-security/id630442428?mt=8" rel="nofollow" target="_blank">
+         You can download Trend Micro Mobile Security here
+        </a>
+       </li>
+      </ul>
+      <p class="bordeaux-image-check">
+       <img alt="Best antivirus for iOS" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db.jpg" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/684e36528eca45e1971880b3630342db-650-80.jpg 650w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+      </p>
+      <a href="https://itunes.apple.com/gb/app/f-secure-safe/id572847748?mt=8" rel="nofollow" target="_blank">
+       <figure>
+        <p class="bordeaux-image-check">
+         <img alt="F-Secure SAFE" class="expandable lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/jV2SekahKiTioUc5pFU6Vg.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/jV2SekahKiTioUc5pFU6Vg.jpg" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/jV2SekahKiTioUc5pFU6Vg-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/jV2SekahKiTioUc5pFU6Vg-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/jV2SekahKiTioUc5pFU6Vg-650-80.jpg 650w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+        </p>
+        <figcaption>
+         <div class="caption-text">
+          <p>
+           Image Credit: F-Secure
+          </p>
+         </div>
+        </figcaption>
+       </figure>
+      </a>
+      <h3>
+       <a href="https://itunes.apple.com/gb/app/f-secure-safe/id572847748?mt=8" rel="nofollow" target="_blank">
+        5. F-Secure SAFE
+       </a>
+      </h3>
+      <div class="_hawk subtitle">
+       <p>
+        Browse safely with this straightforward security app
+       </p>
+      </div>
+      <p class="specs__container">
+      </p>
+      <div class="icon icon-plus_circle _hawk">
+       Blocks access to harmful websites
+      </div>
+      <div class="icon icon-plus_circle _hawk">
+       Simple parental controls system
+      </div>
+      <div class="icon icon-minus_circle _hawk">
+       Web filtering only works in SAFE's browser
+      </div>
+      <p>
+       <a href="https://itunes.apple.com/gb/app/f-secure-safe/id572847748?mt=8" rel="nofollow" target="_blank">
+        F-Secure SAFE
+       </a>
+       for iOS comes with a custom browser which provides several ways to keep you safe online.
+      </p>
+      <p>
+       This starts with simple web filtering which blocks access to dangerous sites, reducing the chance that you'll run into any malware. And that's important – even if a malicious file can't infect your iPhone, there could be problems if you share that file with anybody else, or perhaps email it to yourself for use on a PC.
+      </p>
+      <p>
+       A simple Banking Protection feature sees F-Secure check each website you visit to confirm it's on the 'trusted' list for banking or shopping online. An indicator shows you F-Secure's safety verdict at a glance.
+      </p>
+      <p>
+       SAFE's parental controls system filters content by category, enforces safe search to keep dubious sites out of search results, and allows you to impose browsing time limits. That's reasonable, but keep in mind that iOS doesn't allow SAFE to restrict use of other browsers or apps. The only way to prevent your kids switching to Safari, instead, is to disable it yourself in iOS (Settings &gt; General &gt; Restrictions).
+      </p>
+      <p>
+       F-Secure SAFE also throws in basic anti-theft features, including a device locator and an alarm. We really do mean 'basic' – there's no remote device locking, wiping or anything similar – but the tools work, and they may well come in useful occasionally.
+      </p>
+      <ul>
+       <li>
+        <a href="https://itunes.apple.com/gb/app/f-secure-safe/id572847748?mt=8" rel="nofollow" target="_blank">
+         You can download F-Secure SAFE here
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="read-more-container">
+     </div>
+     <div id="this-will-be-used-for-mpu-2">
+     </div>
+    </section>
+    <footer class="van_taboola" id="taboola-below-article-thumbnails">
+    </footer>
+    <footer class="van_taboola" id="taboola-below-article-thumbnails-2nd">
+    </footer>
+    <footer class="van_taboola" id="taboola-mobile-below-article-thumbnails">
+    </footer>
+    <script>
+     var taboola_lists = [];
+if(window.screen.width >= 700) {
+taboola_lists.push(
+{
+mode: 'thumbnails-b',
+container: 'taboola-below-article-thumbnails',
+placement: 'Below Article Thumbnails',
+target_type: 'mix'
+}
+)
+} else {
+taboola_lists.push(
+{
+mode: 'thumbnails-a',
+container: 'taboola-mobile-below-article-thumbnails',
+placement: 'Mobile Below Article Thumbnails',
+target_type: 'mix'
+}
+)
+}
+window._taboola = window._taboola || [];
+for(var i=0;i<taboola_lists.length;i++)
+{
+_taboola.push(taboola_lists[i]);
+}
+    </script>
+    <div class="related-articles-block">
+     <div id="expanding-articles">
+     </div>
+     <!-- No tag-links -->
+    </div>
+    <footer id="comment-jump">
+    </footer>
+   </article>
+   <aside id="sidebar">
+    <section class="box newsletter-signup product-newsletter pro">
+     <h3 class="separator-heading">
+      <span>
+       <i class="icon icon-filled-envelope white">
+       </i>
+       <div class="product-text-container">
+        <span class="product-cta">
+         Free to Access, Read and Share
+        </span>
+        <span class="product-info">
+         <br/>
+         Build Your First Website eBook
+        </span>
+       </div>
+      </span>
+     </h3>
+     <h4>
+      <span class="subtitle">
+       In association with GoDaddy
+      </span>
+     </h4>
+     <div class="grey-box">
+      <div>
+       <p>
+        Techradar Pro has teamed up with GoDaddy to produce a website-hosting tips eBook, looking at how to plan your website, picking the right domain name and great ways to promote your website.
+       </p>
+       <div class="newsletter-image">
+       </div>
+      </div>
+      <div class="newsletter-button">
+       <a href="https://www.techradar.com/news/techradar-pro-teams-up-with-godaddy-to-produce-a-web-hosting-tips-ebook">
+        READ MORE TODAY
+        <i class="icon icon-arrow-right">
+        </i>
+       </a>
+      </div>
+      <footer>
+       <small>
+        Have a read and let us know what you think. The aim is to inform and provide insight to those interested in building their first real website.
+       </small>
+      </footer>
+      <div class="newsletter-logo">
+       <img src="https://vanilla.futurecdn.net/techradar/media/img/techradarpro_logo_plum.png"/>
+      </div>
+     </div>
+    </section>
+    <section class="popular-box">
+     <div class="style1" id="popular-box-wrapper">
+      <div class="most-popular-tab-bar">
+       <input checked="" id="popradio-1" name="popradio" type="radio"/>
+       <input id="popradio-2" name="popradio" type="radio"/>
+       <div id="popularcontent">
+        <div class="flex-row">
+         <label class="poplabel" for="popradio-1" id="poplabel-1">
+          <span>
+           Most Popular
+          </span>
+         </label>
+         <label class="poplabel" for="popradio-2" id="poplabel-2">
+          <span>
+           Most Shared
+          </span>
+         </label>
+        </div>
+        <ol class="popular-list active" id="poplist-1">
+         <li class="most-popular-item first-article">
+          <div style="width:100%">
+           <a href="https://www.techradar.com/news/iphone-xi">
+            <img alt="" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/CVNTyFTNGjpBqwKg84KiZQ.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/CVNTyFTNGjpBqwKg84KiZQ.jpg" data-pin-nopin="true" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/CVNTyFTNGjpBqwKg84KiZQ-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/CVNTyFTNGjpBqwKg84KiZQ-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/CVNTyFTNGjpBqwKg84KiZQ-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/CVNTyFTNGjpBqwKg84KiZQ-970-80.jpg 970w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+           </a>
+           <div class="popular-listings">
+            <span class="number-1">
+             1
+            </span>
+            <h4>
+             <a href="https://www.techradar.com/news/iphone-xi">
+              New iPhone 11 release date, price, news and leaks
+             </a>
+            </h4>
+           </div>
+          </div>
+         </li>
+         <li class="most-popular-item ">
+          <div style="width:100%">
+           <a href="https://www.techradar.com/news/mobile-computing/laptops/best-laptops-1304361">
+            <img alt="" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/nD6tJpUCYsefTD42LtcPUZ.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/nD6tJpUCYsefTD42LtcPUZ.jpg" data-pin-nopin="true" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/nD6tJpUCYsefTD42LtcPUZ-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/nD6tJpUCYsefTD42LtcPUZ-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/nD6tJpUCYsefTD42LtcPUZ-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/nD6tJpUCYsefTD42LtcPUZ-970-80.jpg 970w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+           </a>
+           <div class="popular-listings">
+            <span class="number-2">
+             2
+            </span>
+            <h4>
+             <a href="https://www.techradar.com/news/mobile-computing/laptops/best-laptops-1304361">
+              The best laptop 2019: our pick of the 15 best laptops you can buy this year
+             </a>
+            </h4>
+           </div>
+          </div>
+         </li>
+         <li class="most-popular-item ">
+          <div style="width:100%">
+           <a href="https://www.techradar.com/news/are-flying-cars-the-future-of-motorsport">
+            <img alt="" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/zBzKQuoZVHqy79kqPYyqCD.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/zBzKQuoZVHqy79kqPYyqCD.jpg" data-pin-nopin="true" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/zBzKQuoZVHqy79kqPYyqCD-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/zBzKQuoZVHqy79kqPYyqCD-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/zBzKQuoZVHqy79kqPYyqCD-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/zBzKQuoZVHqy79kqPYyqCD-970-80.jpg 970w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+           </a>
+           <div class="popular-listings">
+            <span class="number-3">
+             3
+            </span>
+            <h4>
+             <a href="https://www.techradar.com/news/are-flying-cars-the-future-of-motorsport">
+              Are flying cars the future of motorsport?
+             </a>
+            </h4>
+           </div>
+          </div>
+         </li>
+         <li class="most-popular-item ">
+          <div style="width:100%">
+           <a href="https://www.techradar.com/vpn/best-free-vpn">
+            <img alt="" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/b9bs93j7ByhLCGKqqNzBZQ.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/b9bs93j7ByhLCGKqqNzBZQ.jpg" data-pin-nopin="true" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/b9bs93j7ByhLCGKqqNzBZQ-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/b9bs93j7ByhLCGKqqNzBZQ-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/b9bs93j7ByhLCGKqqNzBZQ-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/b9bs93j7ByhLCGKqqNzBZQ-970-80.jpg 970w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+           </a>
+           <div class="popular-listings">
+            <span class="number-4">
+             4
+            </span>
+            <h4>
+             <a href="https://www.techradar.com/vpn/best-free-vpn">
+              The best free VPN in 2019
+             </a>
+            </h4>
+           </div>
+          </div>
+         </li>
+         <li class="most-popular-item ">
+          <div style="width:100%">
+           <a href="https://www.techradar.com/how-to/how-to-download-youtube-videos">
+            <img alt="" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/h4BzgfryLVLRpqNYsGcWKC.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/h4BzgfryLVLRpqNYsGcWKC.jpg" data-pin-nopin="true" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/h4BzgfryLVLRpqNYsGcWKC-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/h4BzgfryLVLRpqNYsGcWKC-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/h4BzgfryLVLRpqNYsGcWKC-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/h4BzgfryLVLRpqNYsGcWKC-970-80.jpg 970w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+           </a>
+           <div class="popular-listings">
+            <span class="number-5">
+             5
+            </span>
+            <h4>
+             <a href="https://www.techradar.com/how-to/how-to-download-youtube-videos">
+              How to download YouTube videos for free
+             </a>
+            </h4>
+           </div>
+          </div>
+         </li>
+        </ol>
+        <ol class="popular-list " id="poplist-2">
+         <li class="most-popular-item first-article">
+          <div style="width:100%">
+           <a href="https://www.techradar.com/news/oneplus-7-range-specs-leaked-in-full">
+            <img alt="" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/Z644VRjPR352WSSwscD75.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/Z644VRjPR352WSSwscD75.jpg" data-pin-nopin="true" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/Z644VRjPR352WSSwscD75-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/Z644VRjPR352WSSwscD75-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/Z644VRjPR352WSSwscD75-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/Z644VRjPR352WSSwscD75-970-80.jpg 970w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+           </a>
+           <div class="popular-listings">
+            <span class="number-1">
+             1
+            </span>
+            <h4>
+             <a href="https://www.techradar.com/news/oneplus-7-range-specs-leaked-in-full">
+              OnePlus 7 range specs leaked in full
+             </a>
+            </h4>
+           </div>
+          </div>
+         </li>
+         <li class="most-popular-item ">
+          <div style="width:100%">
+           <a href="https://www.techradar.com/news/sonys-2019-master-series-tvs-get-price-tags-and-8k-is-going-to-cost-you">
+            <img alt="" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/H8dvZwCDDYKqwamtWJDiAc.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/H8dvZwCDDYKqwamtWJDiAc.jpg" data-pin-nopin="true" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/H8dvZwCDDYKqwamtWJDiAc-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/H8dvZwCDDYKqwamtWJDiAc-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/H8dvZwCDDYKqwamtWJDiAc-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/H8dvZwCDDYKqwamtWJDiAc-970-80.jpg 970w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+           </a>
+           <div class="popular-listings">
+            <span class="number-2">
+             2
+            </span>
+            <h4>
+             <a href="https://www.techradar.com/news/sonys-2019-master-series-tvs-get-price-tags-and-8k-is-going-to-cost-you">
+              Sony's 2019 Master Series TVs get price tags – and 8K is going to cost you
+             </a>
+            </h4>
+           </div>
+          </div>
+         </li>
+         <li class="most-popular-item ">
+          <div style="width:100%">
+           <a href="https://www.techradar.com/news/fortnites-next-event-will-be-avengers-end-game-themed">
+            <img alt="" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/XmkYHWqZ8TukTt4Z2ZjTVN.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/XmkYHWqZ8TukTt4Z2ZjTVN.jpg" data-pin-nopin="true" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/XmkYHWqZ8TukTt4Z2ZjTVN-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/XmkYHWqZ8TukTt4Z2ZjTVN-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/XmkYHWqZ8TukTt4Z2ZjTVN-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/XmkYHWqZ8TukTt4Z2ZjTVN-970-80.jpg 970w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+           </a>
+           <div class="popular-listings">
+            <span class="number-3">
+             3
+            </span>
+            <h4>
+             <a href="https://www.techradar.com/news/fortnites-next-event-will-be-avengers-end-game-themed">
+              Fortnite’s next event will be Avengers: Endgame-themed
+             </a>
+            </h4>
+           </div>
+          </div>
+         </li>
+         <li class="most-popular-item ">
+          <div style="width:100%">
+           <a href="https://www.techradar.com/news/ipad-pro-129-2018-vs-samsung-galaxy-tab-s4-whats-the-best-premium-tablet-available-now">
+            <img alt="" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/W9bEpnuRM4QVa3AxczSJD5.png" data-pin-media="https://cdn.mos.cms.futurecdn.net/W9bEpnuRM4QVa3AxczSJD5.png" data-pin-nopin="true" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/W9bEpnuRM4QVa3AxczSJD5-320-80.png" data-srcset="https://cdn.mos.cms.futurecdn.net/W9bEpnuRM4QVa3AxczSJD5-320-80.png 320w, https://cdn.mos.cms.futurecdn.net/W9bEpnuRM4QVa3AxczSJD5-450-80.png 450w, https://cdn.mos.cms.futurecdn.net/W9bEpnuRM4QVa3AxczSJD5-970-80.png 970w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+           </a>
+           <div class="popular-listings">
+            <span class="number-4">
+             4
+            </span>
+            <h4>
+             <a href="https://www.techradar.com/news/ipad-pro-129-2018-vs-samsung-galaxy-tab-s4-whats-the-best-premium-tablet-available-now">
+              iPad Pro 12.9 (2018) vs Samsung Galaxy Tab S4: what’s the best premium tablet available now?
+             </a>
+            </h4>
+           </div>
+          </div>
+         </li>
+         <li class="most-popular-item ">
+          <div style="width:100%">
+           <a href="https://www.techradar.com/news/iphone-xi">
+            <img alt="" class=" lazy-image lazy-image-loading lazyload optional-image" data-normal="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg" data-original-mos="https://cdn.mos.cms.futurecdn.net/CVNTyFTNGjpBqwKg84KiZQ.jpg" data-pin-media="https://cdn.mos.cms.futurecdn.net/CVNTyFTNGjpBqwKg84KiZQ.jpg" data-pin-nopin="true" data-sizes="auto" data-src="https://cdn.mos.cms.futurecdn.net/CVNTyFTNGjpBqwKg84KiZQ-320-80.jpg" data-srcset="https://cdn.mos.cms.futurecdn.net/CVNTyFTNGjpBqwKg84KiZQ-320-80.jpg 320w, https://cdn.mos.cms.futurecdn.net/CVNTyFTNGjpBqwKg84KiZQ-450-80.jpg 450w, https://cdn.mos.cms.futurecdn.net/CVNTyFTNGjpBqwKg84KiZQ-970-80.jpg 970w" onerror="this.parentNode.replaceChild(window.missingImage(),this)" sizes="auto" src="https://vanilla.futurecdn.net/techradar/media/img/missing-image.svg"/>
+           </a>
+           <div class="popular-listings">
+            <span class="number-5">
+             5
+            </span>
+            <h4>
+             <a href="https://www.techradar.com/news/iphone-xi">
+              New iPhone 11 release date, price, news and leaks
+             </a>
+            </h4>
+           </div>
+          </div>
+         </li>
+        </ol>
+       </div>
+      </div>
+     </div>
+    </section>
+   </aside>
+  </div>
+  <script id="hawklinks-script">
+   function loadHawklinks(src) {
+!function (e, f, u) {
+e.async = 1;
+e.src = u;
+f.parentNode.insertBefore(e, f);
+}(document.createElement('script'),
+document.getElementsByTagName('script')[0],
+src);
+}
+window.reliableDOMContentLoaded.then(function() {
+loadHawklinks("https://gizmos.hawk-tech.co.uk/hl/hawklinks.js");
+});
+  </script>
+  <link as="script" href="https://gizmos.hawk-tech.co.uk/hl/hawklinks.js" rel="preload"/>
+  <script type="text/javascript">
+   if (!window.amIIE()) {
+var targeting = {};
+var siteTargeting = [];
+for (var attrname in siteTargeting) { targeting[attrname] = siteTargeting[attrname]; }
+var pageTags = "contribscontent,buying guide,iOS,iPhone,iPad,antivirus,security,Mobile phones";
+targeting.tags = pageTags;
+window.reliablePageLoad.then(function(){
+(function(){
+/* bootstrap---start */
+var _sp_=function(n){function t(e){if(o[e])return o[e].exports;var r=o[e]={i:e,l:!1,exports:{}};return n[e].call(r.exports,r,r.exports,t),r.l=!0,r.exports}var o={};return t.m=n,t.c=o,t.i=function(n){return n},t.d=function(n,o,e){t.o(n,o)||Object.defineProperty(n,o,{configurable:!1,enumerable:!0,get:e})},t.n=function(n){var o=n&&n.__esModule?function(){return n["default"]}:function(){return n};return t.d(o,"a",o),o},t.o=function(n,t){return Object.prototype.hasOwnProperty.call(n,t)},t.p="",t(t.s=2)}([function(n,t){function o(n,t){e&&console[n].apply(console,["[bootstrap]"].concat(Array.prototype.slice.call(t)))}var e=!1;n.exports={debug:function(){o("debug",arguments)},info:function(){o("info",arguments)},time:function(){o("time",arguments)},warn:function(){o("warn",arguments)},error:function(){o("error",arguments)},useDefaults:function(){e=!0},DEBUG:1}},function(n,t,o){"use strict";function e(){R||(R=!0,D=b.config=b.config||{},s(),F=D.bootstrap&&D.bootstrap.contentControlCallback||D.content_control_callback,q=D.accountId||D.account_id||D.client_id||window.sp_cid,N=D.beacon&&D.beacon.contentControlEndpoint||D.content_control_beacon_endpoint||v.a,D.debug_level&&"OFF"!==D.debug_level.toString().toUpperCase()||D.debug&&D.debug.level&&"OFF"!==D.debug.level.toString().toUpperCase()?j=!0:window.location.search&&null!=window.location.search.match(/_sp_debug_level=(?!off|OFF)/)&&(j=!0),j&&m.useDefaults({defaultLevel:m.DEBUG}))}function r(n,t,e){function r(o,e){var r=new Image;r.src="//"+N+"/cct?v="+encodeURIComponent(v.b)+"&ct="+h+"&cid="+encodeURIComponent(q)+"&l="+encodeURIComponent(n.toString())+"&rc="+encodeURIComponent(t)+"&d0="+encodeURIComponent(i)+(o?"&d1="+encodeURIComponent(o):"")+(null==e?"":"&d2="+encodeURIComponent(e)),g.info("sending beacon: "+r.src),c&&c()}var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"",a=arguments[4],c=arguments[5];if(a){var d=e.lastIndexOf("."),u=e.lastIndexOf("/"),s=-1===d||u>d?e+".png":e.substring(0,d)+".png",l=new Image;l.addEventListener("load",function(){r("1",s)}),l.addEventListener("error",function(){o.i(f.a)(s,function(n,t,o){r("0",s+"::"+o)})}),l.src=s}else r()}function i(n,t,o,e){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},a=arguments.length>5&&void 0!==arguments[5]&&arguments[5],c=function(){i(n,t,o,e,r,!0)};n(t,a?o:c,e,r)}function a(n,t,o,e){function r(o,r){t(o,n,r,e.enableImageLoad)}function i(t,r){o(t,n,r,e.enableImageLoad),e.onError&&e.onError(r)}var a=document.createElement("script");a.src=n,a.onload=function(){e.onLoad&&e.onLoad()},a.onerror=function(){function t(n){return o.indexOf(n)>-1}var o=(navigator.userAgent||navigator.vendor||window.opera).toLowerCase();t("mobi")||t("ipad")||t("android")||t("iphone")?i(L):t("exabot")?i(O):t("bingbot")||t("bingpreview")?i(k):t("googlebot")||t("adsbot-google")||t("mediapartners-google")?i(C):t("googleweblight")?i(E):window.location.host===w?i(x):t("msie 10")||t("msie 9")||t("msie 8")?i(I):c(n,r,i)},document.head.appendChild(a)}function c(n,t,e){o.i(f.a)(n,function(o,r,i,a){(o||r?t:e)(a,n+"::"+i)})}function d(n,t,o,e){if(S)return void u(U+"::"+n,o);r(y,n,t,o,e,function(){if(F){if(j){g.error("bootstrap locking",y,n,t,o,e);debugger}setTimeout(function(){F()},250)}})}function u(n,t,o,e){r(_,n,t,o,e)}function s(){b._networkListenerData||(b._networkListenerData=o.i(p.a)())}function l(n,t){e(),g.info("bootstrap called with",n,t),i(a,n,d,u,t)}Object.defineProperty(t,"__esModule",{value:!0});var f=o(4),p=o(5),v=o(3),g=o(0),m=void 0;m=o(0);var w=["w","e","b","c","a","c","h","e",".","g","o","o","g","l","e","u","s","e","r","c","o","n","t","e","n","t",".","c","o","m"].join(""),b=window._sp_||{},h=1,_=0,y=1,L="m",C="g",x="gw",E="gl",I="i",k="b",O="e",U="n",R=!1,S=!1,j=!1,D=void 0,F=void 0,q=void 0,N=void 0;window.addEventListener("beforeunload",function(){S=!0}),window._sp_=b,b.setupNetworkListeners=s,b.bootstrap=l,window.spBootstrap=l,t["default"]=b},function(n,t,o){o(0);n.exports=o(1)["default"]},function(n,t,o){"use strict";function e(n){return n.join("")}o.d(t,"b",function(){return r}),o.d(t,"a",function(){return i});var r=(o(0),"2.0.1115"),i=(e(["w","w","w",".","s","u","m","m","e","r","h","a","m","s","t","e","r",".","c","o","m"]),e(["w","w","w",".","r","o","o","s","t","e","r","f","i","r","e","w","o","r","k",".","c","o","m"]));e(["/","/","f","s","m","1","0","1","9",".","g","l","o","b","a","l",".","s","s","l",".","f","a","s","t","l","y",".","n","e","t","/","f","s","m","/","d","s"]),e(["h","t","t","p","s",":","/","/","d","2","z","v","5","r","k","i","i","4","6","m","i","q",".","c","l","o","u","d","f","r","o","n","t",".","n","e","t","/","0","/","2",".","0",".","1","1","1","5","/","r","e","c","o","v","e","r","y","_","d","f","p","_","i","n","t","e","r","n","a","l","-","v","2",".","0",".","1","1","1","5",".","j","s"]),e(["h","t","t","p","s",":","/","/","d","2","z","v","5","r","k","i","i","4","6","m","i","q",".","c","l","o","u","d","f","r","o","n","t",".","n","e","t","/","0","/","2",".","0",".","1","1","1","5","/","r","e","c","o","v","e","r","y","_","l","i","b","_","a","p","i","_","i","f","r","a","m","e","-","v","2",".","0",".","1","1","1","5",".","h","t","m","l"]),e(["h","t","t","p","s",":","/","/","d","2","z","v","5","r","k","i","i","4","6","m","i","q",".","c","l","o","u","d","f","r","o","n","t",".","n","e","t","/","0","/","2",".","0",".","1","1","1","5","/","r","e","c","o","v","e","r","y","_","l","i","b","_","r","i","d","_","i","f","r","a","m","e","-","v","2",".","0",".","1","1","1","5",".","h","t","m","l"])},function(n,t,o){"use strict";function e(n,t){function o(n){try{return n&&n.timeStamp?n.timeStamp:window.performance.now()}catch(n){return Date.now()}}var e=arguments.length>2&&void 0!==arguments[2]?arguments[2]:window.location,l=arguments.length>3&&void 0!==arguments[3]?arguments[3]:window.navigator,f=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},p=document.createElement("a");if(p.href=n,"https:"===e.protocol&&p.protocol!==e.protocol)return r.error("protocol mismatch in https environment, standing down"),void t(!1,!1,p.protocol,u);var v=new XMLHttpRequest,g=f.withCredentials;null!=g&&(v.withCredentials=g);try{v.open(f.method||"GET",n)}catch(n){return void t(!0,!1,n.toString(),c,v)}if(null!=f.headers){var m=f.headers;Object.keys(m).forEach(function(n){v.setRequestHeader(n,m[n])})}var w=void 0,b=void 0;v.onloadstart=function(n){w=o(n)},v.onreadystatechange=function(n){if(4===this.readyState){b=o(n)-w;var e=0===this.status&&!1!==l.onLine,r="2"===this.status.toString()[0],c=void 0;return c=r?a:!1===l.onLine?s:i,void t(e,r,this.status+"::"+b,c,v)}};try{v.send(f.body)}catch(n){return void t(!0,!1,n.toString(),d,v)}}t.a=e;var r=o(0),i="n",a="nx",c="xo",d="xs",u="p",s="of"},function(n,t,o){"use strict";function e(){var n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:document,t=[],o=[],e=r.bind(null,t),i=r.bind(null,o);return n.addEventListener("load",e,!0),n.addEventListener("error",i,!0),{load:{events:t,listener:e},error:{events:o,listener:i}}}function r(n,t){if(t.target){var o="string"==typeof t.target.tagName?t.target.tagName.toLowerCase():"",e="string"==typeof t.target.src?t.target.src:"";"iframe"!==o&&n.push({tagName:o,src:e})}}t.a=e;o(0)}]);
+//# sourceMappingURL=https://s3.amazonaws.com/d3jlsadfjkuern/2.0.1115/Ym9vdHN0cmFwLmpz.map
+/* bootstrap---end */
+})();
+(function(){
+(function(){ return (function(){function n(b){window._sp_.config.content_control_callback=function(){p[k("mpdbujpo")][k("isfg")]="//"+b+k("0dd/iunm")};window._sp_.config.enable_rid=!0;window._sp_.config.enable_vid=!0;window._sp_.config.vid_control_callback=function(){console.warn("vid detected")}}function k(b){return b.split("").map(function(a){return q(r.call(a,0)-1)}).join("")}function t(b,a){return"choice"===a?Promise.resolve(b):"off"===a?Promise.resolve(b).then(function(a){return"recovery"===a?"continue-with-adblocker":
+a}):"force"===a?Promise.resolve("recovery"):Promise.reject(Error("Invalid recovery mode: "+a))}function u(){window.pppasoeommmsmzrvbr=new Promise(function(b){window.hiriyyyteetaqgthyu=b})}function v(){window.asdinwawisuihzejsahzl=new Promise(function(b){window.zkckcosdoiaioawqnmzsdqw=b})}function w(b,a){b.then(function(a){a=a.info;0!==(void 0===a.msg_id?0:a.msg_id)&&(l.sendEvent("tiberius","seen",a.msg_desc),window.localStorage.setItem("adblock","disabled"))});Promise.all([b,a]).then(function(a){var b=
+a[0].info;l.sendEvent("tiberius",a[1],0!==(void 0===b.msg_id?0:b.msg_id)?b.msg_desc:"")})}function x(b,a,d){window._sp_.config.mms_domain=b;window._sp_.mms=window._sp_.mms||{};window._sp_.mms.cmd=window._sp_.mms.cmd||[];window._sp_.mms.cmd.push(function(){Object.keys(a).forEach(function(b){window._sp_.mms.setTargeting(b,a[b])});window.vanilla&&window.vanilla.aft?window._sp_.mms.setTargeting("club_loggedin",window.vanilla.aft.logged_in):window._sp_.mms.setTargeting("club_loggedin",!1)});var c=parseInt(h("mock_tiberius_choice")(window),
+10),f=!isNaN(c)&&c in g;b={choice:new Promise(function(a){if(f){var b=g[c]||"choice-"+c,e=parseInt(h("mock_tiberius_choice_timeout")(window),10);isNaN(e)?a(b):window.setTimeout(a,e,b)}else window._sp_.config.mms_choice_selected_callback=function(b){a(g[b]||"choice-"+b)}}),message:new Promise(function(a){function b(a,b){b=void 0===b?0:b;return isNaN(a)?b:a}var c=parseInt(h("mock_tiberius_campaign_id")(window),10),d=parseInt(h("mock_tiberius_message_id")(window),10);isNaN(c)&&isNaN(d)?window._sp_.config.mms_client_data_callback=
+function(b){a(b)}:(c={msgID:b(d),info:{cmpgn_id:b(c),msg_id:b(d)}},d=parseInt(h("mock_tiberius_campaign_timeout")(window),10),isNaN(d)?a(c):window.setTimeout(a,d,c))})};d&&!f&&window._sp_.mms.cmd.push(function(){return window._sp_.mms.startMsg()});return b}function h(b){return function(a){a=a.location.search;var d=void 0;d=void 0===d?"\x26":d;if(""===b)a=!1;else{var c=a.indexOf(b+"\x3d");0<=c?(c=a.indexOf("\x3d",c),d=a.indexOf(d,c+1),a=0<=d?a.substring(c+1,d):a.substring(c+1)):a=!1}return a}}var g=
+{1:"whitelist",2:"recovery",3:"alt-ad",4:"publisher-custom",5:"redirect",6:"continue-with-adblocker"},y=Object.assign||function(b){for(var a=1;a<arguments.length;a++){var d=arguments[a],c;for(c in d)Object.prototype.hasOwnProperty.call(d,c)&&(b[c]=d[c])}return b},l={sendEvent:function(b,a,d){if("undefined"!==typeof window.ga){var c=window.ga,f=window.analytics_ga_data||{};c("set","nonInteraction",!0);c("send",y({},f,{hitType:"event",eventCategory:b,eventAction:a,eventLabel:d}))}}},m=String,q=m.fromCharCode,
+r=m.prototype.charCodeAt,p=window;return function(b,a,d,c,f,k,g,e){window._sp_=window._sp_||{};window._sp_.config=window._sp_.config||{};window._sp_.config.account_id=b;b=void 0===e?"off":e;e=h("force_recovery_mode")(window);e="force"===e||"choice"===e||"off"===e?e:b;b="choice"===e||"force"===e;n(a);c=x(c,g,"force"!==e);a=c.message;c=c.choice;w(a,c);void 0===window.asdinwawisuihzejsahzl&&v();g=window.zkckcosdoiaioawqnmzsdqw;t(c,e).then(g);void 0===window.pppasoeommmsmzrvbr&&u();a.then(window.hiriyyyteetaqgthyu);
+b&&(window._sp_.config.gpt_auto_load=!1,window._sp_.config.publisher_base=k);b?(window._sp_.bootstrap(d+"/media/js/b"+f+"-gb.js"),window._sp_.bootstrap(d+"/media/js/c"+f+"-gb.js")):(window._sp_.bootstrap(d+"/media/js/a"+f+"-gb.js"),window._sp_.bootstrap(d+"/media/js/b"+f+"-gb.js"))}})(); })()(
+200,
+"www.techradar.com",
+"https://www.techradar.com/110946",
+"ttauri.techradar.com",
+"techradar",
+"",
+targeting,
+"off"
+);
+})();
+});
+window.vanilla.tiberius = {
+enabled: true,
+}
+} else {
+window.vanilla.tiberius = {
+enabled: false,
+}
+}
+  </script>
+  <footer class="container full" id="document-footer">
+   <div id="document-footer-content">
+    <p>
+     TechRadar is part of Future US Inc, an international media group and leading digital publisher.
+     <a href="http://www.futureus.com" target="_blank">
+      Visit our corporate site
+     </a>
+     .
+    </p>
+    <nav>
+     <ul>
+      <li>
+       <a href="https://www.techradar.com/news/about-us" target="_blank">
+        About Us
+       </a>
+      </li>
+      <li>
+       <a href="http://www.futureplc.com/terms-conditions/" target="_blank">
+        Terms and conditions
+       </a>
+      </li>
+      <li>
+       <a href="http://www.futureus.com/privacy-policy/" target="_blank">
+        Privacy policy
+       </a>
+      </li>
+      <li>
+       <a href="http://www.futureplc.com/cookies-policy/" target="_blank">
+        Cookies policy
+       </a>
+      </li>
+      <li>
+       <a href="https://www.techradar.com/advertise-with-us" target="_blank">
+        Advertise with us
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <p>
+     ©
+     <span>
+      <span>
+       <span>
+        Future US, Inc.
+       </span>
+      </span>
+      <span>
+       11 West 42nd Street, 15th Floor
+      </span>
+      ,
+      <span>
+       New York,
+      </span>
+      <span class="region">
+       NY
+      </span>
+      <span>
+       10036
+      </span>
+     </span>
+     .
+    </p>
+   </div>
+  </footer>
+  <script>
+   window.vanL10N = {"GB":{"default":"1","goid":"1071292","name":"Great Britain","region name":"United Kingdom","prompt":"UK","demonymic":"British","language":"en-gb","locale":"en-gb","currency":"GBP","currency symbol":"\u00a3","currency symbol html":"&pound;","layout":"en-gb","url":"\/","public":"1"},"US":{"goid":"1071293","name":"USA","region name":"United States","prompt":"US","demonymic":"American","language":"en-us","locale":"en-us","currency":"USD","currency symbol":"$","currency symbol html":"$","layout":"en-us","url":"\/us","public":"1"},"AU":{"goid":"1098509","name":"Australia","region name":"Australia","prompt":"Australian","demonymic":"Australian","language":"en-au","locale":"en-au","currency":"AUD","currency symbol":"$","currency symbol html":"$","layout":"en-au","url":"\/au","public":"1"},"SG":{"goid":"1098509","name":"Singapore","region name":"Singapore","prompt":"Singaporean","demonymic":"Singaporean","language":"en-sg","locale":"en-sg","currency":"SGD","currency symbol":"$","currency symbol html":"$","layout":"en-sg","url":"\/sg","public":"1"},"ZZ":{"name":"Unknown","region name":"Unknown","demonymic":"Unknown","prompt":"Unknown","language":"en-gb","locale":"en-gb","currency":"GBP","currency symbol":"\u00a3","currency symbol html":"&pound;","layout":"en-gb","url":"\/","public":"1"}};
+  </script>
+  <script>
+   if (document.cookie.indexOf("EuConsent") < 0) {
+if (!window._comscore) {
+window._comscore = window._comscore || [];
+}
+window._comscore.push({
+c1: "2",
+c2: "10055482",
+cs_ucfr: '',
+options: { url_append: "comscorekw=prokw" } });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+} else {
+window.reliableConsentGiven.then(function(value) {
+if (!window._comscore) {
+window._comscore = window._comscore || [];
+}
+var cs_ucfr_value = '';
+if (value.consent && value.consent.purposeConsents[5]) {
+cs_ucfr_value = 1;
+} else {
+cs_ucfr_value = 0;
+}
+window._comscore.push({
+c1: "2",
+c2: "10055482",
+cs_ucfr: cs_ucfr_value,
+options: { url_append: "comscorekw=prokw" } });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+});
+}
+  </script>
+  <script>
+   var dfp_config = {
+"keystone": "roadblock",
+"ad_unit": "8644/tech_techradar/trpro/software/applications",
+"live_ad_unit": "8644/tech_techradar/",
+"test_ad_unit": "8644/tech_techradar_test/",
+"recovery_ad_unit": "",
+"recovery_test_ad_unit": "",
+"incremental": true,
+"gptBeta": "",
+"max_incremental_ads": 20,
+"max_incremental_ads_mobile": 20,
+"max_concurrent_ads": 4,
+"refresh": true,
+"site_platform": "vanilla",
+"tiberius": true,
+"tiberius_mode": "off",
+"keywords": "TRBC,buyingguide,exclude-from-homepage,security-channel,no-in-article-video,TRBCFeature,serversidehawk,Mobile phones,contribscontent,buying guide,iOS,iPhone,iPad,antivirus,security",
+"article_id": "KeT9vTFxnmbmKzkyPJuVRX",
+"vanilla_article_id": "KeT9vTFxnmbmKzkyPJuVRX",
+"page_type": "best",
+"product_brand": "",
+"product_category": "",
+"product": "",
+"vertical": "mobile-phones",
+"source": "",
+"provertical": "applications,software",
+"single_request": true,
+"onscroll": {
+"refresh" : "",
+"mpu": ""
+},
+"jwplayer": "carousel"
+}
+  </script>
+  <script>
+   dfp_config.gallery_refresh_interval = 2;
+  </script>
+  <script>
+   window.vanillaComponents = [{"trackable":[{"type":"click","identifier":".menuitems a","name":"Link clicked","countTotal":true}],"name":"Primary Nav","excludeHidden":false,"identifier":".primary-nav"},{"trackable":[{"type":"click","identifier":".feature-block-item-wrapper a","name":"Article clicked","countTotal":false}],"name":"Featured articles","excludeHidden":false,"identifier":".top-featured"},{"trackable":[{"type":"click","identifier":"a","name":"Logo clicked","countTotal":false}],"name":"Site Logo","identifier":".logo"},{"trackable":[{"type":"click","identifier":".most-popular-item","name":"Most read article clicked","countTotal":true}],"name":"Most Popular - Popular","identifier":"#poplist-1"},{"trackable":[{"type":"click","identifier":".most-popular-item","name":"Most shared article clicked","countTotal":true}],"name":"Most Popular - Shared","identifier":"#poplist-2"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":false}],"name":"Prev/Next","identifier":".next-prev-container"},{"trackable":[{"type":"click","identifier":"a","name":"Number clicked","countTotal":true}],"name":"Paginated Review Numerical pagination - Number","identifier":".pagination-numerical-list"},{"trackable":[{"type":"click","identifier":".prev,.next","name":"Prev/Next clicked","countTotal":false}],"name":"Paginated Review Numerical pagination - Prev/Next","identifier":".navigation-sequential"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Inline Pagination","identifier":".swipe-pages-wrapper"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Article Tags","identifier":"#articleTag"},{"trackable":[{"type":"click","identifier":".recommended-article a","name":"Link clicked","countTotal":true}],"name":"Recommended article","identifier":".recommendation-articles"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Trending bar","identifier":".trending-items"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Boilerplate-1","identifier":".club-boilerplate-1"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Boilerplate-2","identifier":".club-boilerplate-2"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Boilerplate-3","identifier":".club-boilerplate-3"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Boilerplate-4","identifier":".club-boilerplate-4"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Inline links","identifier":"#article-body"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Social links","identifier":".socialite-widget"},{"trackable":[{"type":"click","identifier":"a","name":"Link clicked","countTotal":true}],"name":"Avatar","identifier":"#club-login"},{"trackable":[{"type":"click","identifier":".fwd-link","name":"FWD link clicked","countTotal":true}],"name":"FWD Link","identifier":"div [itemprop='articleBody']"}]
+  </script>
+  <script>
+   var require = {waitSeconds:0};
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+   (function(){
+function loadGTM(){
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.defer=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSHR82V');
+}
+// Can't be in asset loader until we can call custom loader functions
+;(window.Promise
+? Promise.all([
+window.reliablePageLoad,
+window.reliableConsentGiven
+])
+: window.reliableConsentGiven
+).then(function(){
+setTimeout(loadGTM, 1500);
+});
+})();
+  </script>
+  <!-- End Google Tag Manager -->
+  <script type="text/javascript">
+   (function(){
+if(typeof window._taboola !== 'undefined' && typeof taboola_lists !== 'undefined'
+&& Array.isArray(taboola_lists) && taboola_lists.length){
+function loadTaboola(){
+_taboola.push({article: 'auto'});
+!function (e, f, u) {
+e.async = 1;
+e.src = u;
+f.parentNode.insertBefore(e, f);
+}(document.createElement('script'),
+document.getElementsByTagName('script')[0],
+'//cdn.taboola.com/libtrc/futureplc-network/loader.js');
+_taboola.push({flush: true});
+}
+// Can't be in asset loader until we can call custom loader functions
+;(window.Promise
+? Promise.all([
+window.reliablePageLoad,
+window.reliableConsentGiven
+])
+: window.reliableConsentGiven
+).then(function(){
+setTimeout(loadTaboola, 6000);
+});
+}
+})();
+  </script>
+  <script>
+   window.addEventListener("load",function(){if(!window.askForConsent){var e=document.createElement("script");e.src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js",e.onload=function(){var e=window.innerWidth>=700?"bottom":"top";window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#666666"}},position:e,content:{message:window.__translator.trans("cookie_popup"),link:window.__translator.trans("click here"),href:"http://www.futureplc.com/cookies-policy/",dismiss:window.__translator.trans("I accept")}})},document.body.appendChild(e);var o=document.createElement("link");o.rel="stylesheet",o.type="text/css",o.href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css",document.body.appendChild(o);var n=document.createElement("style");n.appendChild(document.createTextNode(".cc-window {z-index:10000000}")),document.body.appendChild(n)}});
+  </script>
+  <!-- document assets - added by the article itself -->
+  <script>
+   window.vanilla.addCss({"href":"https:\/\/widgets.future-fie.co.uk\/css\/trd.min.css"})
+window.vanilla.addJs({"id":"main-js","src":"\/\/vanilla.futurecdn.net\/techradar\/110946\/media\/js\/main.min.js"}, null, 0)
+window.vanilla.addJs({"id":"ffte-js","src":"\/\/vanilla.futurecdn.net\/techradar\/110946\/media\/shared\/js\/app.js"}, 2000, 1)
+window.vanilla.addCss({"href":"https:\/\/vanilla.futurecdn.net\/techradar\/110946\/media\/css\/techradar.min.css"})
+  </script>
+  <script>
+   window.ffte = {"site":"techradar","endpoint":"\/\/api.vanilla.futurecdn.net\/article","locale":"AE","gaCode":"UA-48894329-1","debug":[],"serverEnvironment":"live","regionLink":"","isGlobal":false,"properties":{"articleProduct":[],"articleProductHandle":[],"articleType":"best","articleTemplate":"standard","articleTagHandle":["contribscontent","buying-guide","ios","iphone","ipad","antivirus","security","mobile-phones"],"articleTagType":["freeform","freeform","freeform","freeform","freeform","freeform","freeform"],"articleControlTag":["TRBC","buyingguide","exclude-from-homepage","security-channel","no-in-article-video","TRBCFeature","serversidehawk"],"articleVerticalHandle":["mobile-phones"],"articleCategoryHandle":["applications","software","applications"],"subSite":"","articleVertical":"mobile phones","id":"KeT9vTFxnmbmKzkyPJuVRX","legacyId":"KeT9vTFxnmbmKzkyPJuVRX"}}
+  </script>
+  <script>
+   window.xkeys = ["techradar-platform-responsive","techradar-core-version-10.19.18","techradar-core-lypiatt","techradar-article-KeT9vTFxnmbmKzkyPJuVRX","techradar-articletype-best","techradar-article-age-ancient","techradar-region-AE","techradar-language-en","techradar-author-Wv9e4Vv2kmWiX4oiCpXDsa","techradar-tag-wzxGejwxEWL3j2RZM8uHiE","techradar-tag-TgEvVYRFBiYPTSU7fqrNXE","techradar-tag-jfsu7QGPWnYELRhkzomMZV","techradar-tag-DKUqKYA8X2DyGjm4CNkyLV","techradar-tag-8dyLSjpWFVVXjCRoBnbxHd","techradar-tag-2gEE78JhVXBZJvRf4ieyvB","techradar-tag-MRSnJmdSEQ4SJLo6eMp2FF","techradar-tag-WTMPtJ9EVgxsDsvdw8VNwP","techradar-tag-5Y7bU7RSwBGjTAP4MTwZCQ","techradar-tag-uaf6CevohwWzwnpYAXLx2F"];
+window.templateVariables = {};
+  </script>
+ </body>
+ <script>
+  window.ftr_request_id = "";
+ </script>
+ <!-- -->
+</html>

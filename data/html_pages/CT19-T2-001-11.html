@@ -1,0 +1,3237 @@
+<!DOCTYPE html>
+<html class="no-js shopping-cart-disabled direct-store-links" dir="rtl" lang="ar" prefix="og: http://ogp.me/ns#" xml:lang="ar" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, maximum-scale=1, initial-scale=1.0, user-scalable=0, minimal-ui" name="viewport">
+   <meta content="ESET" name="apple-mobile-web-app-title"/>
+   <meta content="yes" name="apple-mobile-web-app-capable"/>
+   <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+   <meta content="#40E0D0" name="theme-color"/>
+   <link href="https://cdn1.esetstatic.com/typo3conf/ext/eset_base/Resources/Public/icons/favicon.ico" rel="icon" type="image/x-icon"/>
+   <link href="https://cdn1.esetstatic.com/typo3conf/ext/eset_base/Resources/Public/img/device/apple-touch-startup-image.png" rel="apple-touch-startup-image"/>
+   <link href="https://cdn1.esetstatic.com/typo3conf/ext/eset_base/Resources/Public/img/device/apple-touch-icon-57x57.png" rel="apple-touch-startup-image" sizes="57x57"/>
+   <link href="https://cdn1.esetstatic.com/typo3conf/ext/eset_base/Resources/Public/img/device/apple-touch-icon-72x72.png" rel="apple-touch-startup-image" sizes="72x72"/>
+   <link href="https://cdn1.esetstatic.com/typo3conf/ext/eset_base/Resources/Public/img/apple-touch-icon-76x76.png" rel="apple-touch-startup-image" sizes="76x76"/>
+   <link href="https://cdn1.esetstatic.com/typo3conf/ext/eset_base/Resources/Public/img/device/apple-touch-icon-114x114.png" rel="apple-touch-startup-image" sizes="114x114"/>
+   <link href="https://cdn1.esetstatic.com/typo3conf/ext/eset_base/Resources/Public/img/device/apple-touch-icon-120x120.png" rel="apple-touch-startup-image" sizes="120x120"/>
+   <link href="https://cdn1.esetstatic.com/typo3conf/ext/eset_base/Resources/Public/img/device/apple-touch-icon-144x144.png" rel="apple-touch-startup-image" sizes="144x144"/>
+   <link href="https://cdn1.esetstatic.com/typo3conf/ext/eset_base/Resources/Public/img/device/apple-touch-icon-152x152.png" rel="apple-touch-startup-image" sizes="152x152"/>
+   <meta content="index,follow" name="robots"/>
+   <meta content="حافظ على جهاز ماك الخاص بك محمياً من البرامج الضارة عبر الإنترنت و التهديدات التصيدية عبر الشبكات الإجتماعية بإستخدام إسيت سايبر سكيوريتي. جربه الآن مجاناً." name="description"/>
+   <meta content="حافظ على جهاز ماك الخاص بك محمياً من البرامج الضارة عبر الإنترنت و التهديدات التصيدية عبر الشبكات الإجتماعية بإستخدام إسيت سايبر سكيوريتي. جربه الآن مجاناً." property="og:description"/>
+   <meta content="Antivirus for Mac | Cyber Security" property="og:title"/>
+   <meta content="https://www.eset.com/me-ar/home/cyber-security/" property="og:url"/>
+   <script type="text/javascript">
+    /*<![CDATA[*/
+/*_scriptCode*/
+			// decrypt helper function
+		function decryptCharcode(n,start,end,offset) {
+			n = n + offset;
+			if (offset > 0 && n > end) {
+				n = start + (n - end - 1);
+			} else if (offset < 0 && n < start) {
+				n = end - (start - n - 1);
+			}
+			return String.fromCharCode(n);
+		}
+			// decrypt string
+		function decryptString(enc,offset) {
+			var dec = "";
+			var len = enc.length;
+			for(var i=0; i < len; i++) {
+				var n = enc.charCodeAt(i);
+				if (n >= 0x2B && n <= 0x3A) {
+					dec += decryptCharcode(n,0x2B,0x3A,offset);	// 0-9 . , - + / :
+				} else if (n >= 0x40 && n <= 0x5A) {
+					dec += decryptCharcode(n,0x40,0x5A,offset);	// A-Z @
+				} else if (n >= 0x61 && n <= 0x7A) {
+					dec += decryptCharcode(n,0x61,0x7A,offset);	// a-z
+				} else {
+					dec += enc.charAt(i);
+				}
+			}
+			return dec;
+		}
+			// decrypt spam-protected emails
+		function linkTo_UnCryptMailto(s) {
+			location.href = decryptString(s,7);
+		}
+		
+/*]]>*/
+   </script>
+   <title>
+    Antivirus for Mac | ESET
+   </title>
+   <link href="https://www.eset.com/me-ar/home/cyber-security/" rel="canonical"/>
+   <link href="//cdn1.esetstatic.com" rel="dns-prefetch"/>
+   <link href="//assets.esetstatic.com" rel="dns-prefetch"/>
+   <link crossorigin="anonymous" href="https://cdn1.esetstatic.com/typo3conf/ext/eset_base/Resources/Public/css/styles.f330d666.css" integrity="sha384-69B/ApVxkpDmD2m2yX5NHOh2wxIKzaE+OSEVRD9TCl0MC3MkKGjJ2xDLTTyXRkzN" rel="stylesheet"/>
+   <script crossorigin="anonymous" integrity="sha384-RKfofw94OLSRZT+xOG+rUdxx1XXHN0Ppd7nsiNua8LC1rhz4PTpW7PrNn5qj00TX" src="https://cdn1.esetstatic.com/typo3conf/ext/eset_base/Resources/Public/js/header-scripts.070a1438.js" type="text/javascript">
+   </script>
+   <script>
+    var gws_branch = location.pathname.split('/')[1];
+dataLayer = [{ 'branch': gws_branch }];
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M6QG34');
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P5N89ZR');
+   </script>
+   <script src="https://cdn1.esetstatic.com/ESET/INT/assets/js/iFrame_Resizer-_v3.5.3.min.js" type="text/javascript">
+   </script>
+   <script src="https://cdn1.esetstatic.com/us/assets/usweb/js/geo-int.js" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    jQuery(document).ready(function(){setTimeout(function(){ iFrameResize({log:false, checkOrigin: false, scrolling: false}); }, 300); 
+ if( ESETcountry ){
+ var USorCAorCaribbean = ["US","CA","AG","AI","AW","BB","BL","BM","BQ","BS","CU","CW","DM","GD","GP","GU","HT","JM","KN","KY","LC","MF","MQ","MS","PR","SX","TC","TT","UM","VC","VG","VI"];
+ if ( USorCAorCaribbean.indexOf(ESETcountry) != -1) {
+ jQuery('.powermail_form').html('<div id="b2b-iframe-submit"><iframe src="https://www.eset.com/us/partners/application/?iframe=1" frameborder="0" scrolling="no" height="1400px" width="100%"></iframe></div>');
+ }
+ }
+});
+   </script>
+   <style>
+    @media (min-width: 1200px) { .nav-main > li:nth-child(3) .submenu{width:745px;} .nav-main-deep > li:nth-child(3) .tabs-submenu>.panes{max-width:100%;} .nav-main > li:nth-child(3) .submenu ul.nav-tabs{display:none;} } @media (max-width: 1199px) { .nav-main > li:nth-child(3) .submenu ul.nav-tabs > li:nth-child(1){display:none;} }
+   </style>
+  </meta>
+ </head>
+ <body>
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-M6QG34" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-P5N89ZR" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <div class="canvas tpl-default" id="canvas">
+   <div class="page" id="page">
+    <div class="main" id="main">
+     <div class="hero without-scroll-to-next" id="hero-content">
+      <div class="csc-default" id="content-c292536">
+       <div class="section-group skin-no-navigation skin-no-pagination" data-module="ui/section-group" data-options='{"speed":500,"mode":"fade","autoplay":false}'>
+        <div class="section skin-inverse " id="content-c459171">
+         <span class="rimg section-image hidden" data-remote=".section" data-src="https://cdn1.esetstatic.com/ESET/ME/Images-AR/Banners/Home/Home-08a_ESET__CYBER_SECURITY.jpg" data-viewport="">
+         </span>
+         <div class="container">
+          <div class="section-content">
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="product-card-dep product-card-b2c " data-module="ui/product-card-dep" id="content-c459170">
+        <div class="csc-default" id="content-c459169">
+         <h1 class="card-title">
+          سرعة و قوة مضاد الفيروسات لماك
+         </h1>
+         <div class="ribbon skin-large">
+         </div>
+         <div class="card-content">
+          <div class="card-image">
+           <img alt="ESET Cyber Security" class="lazyload thumbnail rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Boxes/155x185-Balanced/ECS.png" src=""/>
+          </div>
+          <h3 class="card-title-product">
+           ESET® Cyber Security
+          </h3>
+          <p class="bodytext">
+           حماية سريعة و فعالة لحماية ماك الخاص بك ضد البرامج الضارة و التصيد.
+          </p>
+          <script class="prod-card-data" type="text/json">
+           {"users":{"1":{"years":{"1":{"status":200,"users":1,"years":1,"qty":1,"internalid":"2cb8d92d904421a433a040b436fa1af2","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=1&qt=1&lang=ar","notice":"<p><\/p>","ribbon":"","promocode":"","price":29,"priceNormal":0,"priceHtml":"<span data-price=\"$29.00\" class=\"price\"><span class=\"currency\">$<\/span>29.<sup class=\"cents\">00<\/sup><\/span>"},"2":{"status":200,"users":1,"years":2,"qty":1,"internalid":"419b0ae4b0e99c08e8b2b946199f5726","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=2&qt=1&lang=ar","notice":"<p>\u0648\u0641\u0631 \u062d\u062a\u0649 \u0662\u0665\u066a \u0645\u0639 \u062a\u0631\u062e\u064a\u0635 \u0644\u0645\u062f\u0629 \u0639\u0627\u0645\u0627\u0646<\/p>","ribbon":"","promocode":"","price":43.5,"priceNormal":58,"priceHtml":"<span data-price=\"$58.00\" class=\"price flat obsolete\"><span class=\"currency\">$<\/span>58.<sup class=\"cents\">00<\/sup><\/span><span data-price=\"$43.50\" class=\"price\"><span class=\"currency\">$<\/span>43.<sup class=\"cents\">50<\/sup><\/span>"}}},"2":{"years":{"1":{"status":200,"users":2,"years":1,"qty":2,"internalid":"0937e315644eb32a52d458e39bfae938","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=1&qt=2&lang=ar","notice":"<p><\/p>","ribbon":"","promocode":"","price":44,"priceNormal":0,"priceHtml":"<span data-price=\"$44.00\" class=\"price\"><span class=\"currency\">$<\/span>44.<sup class=\"cents\">00<\/sup><\/span>"},"2":{"status":200,"users":2,"years":2,"qty":2,"internalid":"ee49bcc30165370dcfe6d0089e65d916","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=2&qt=2&lang=ar","notice":"<p>\u0648\u0641\u0631 \u062d\u062a\u0649 \u0662\u0665\u066a \u0645\u0639 \u062a\u0631\u062e\u064a\u0635 \u0644\u0645\u062f\u0629 \u0639\u0627\u0645\u0627\u0646<\/p>","ribbon":"","promocode":"","price":66,"priceNormal":88,"priceHtml":"<span data-price=\"$88.00\" class=\"price flat obsolete\"><span class=\"currency\">$<\/span>88.<sup class=\"cents\">00<\/sup><\/span><span data-price=\"$66.00\" class=\"price\"><span class=\"currency\">$<\/span>66.<sup class=\"cents\">00<\/sup><\/span>"}}},"3":{"years":{"1":{"status":200,"users":3,"years":1,"qty":3,"internalid":"4a6afe1bcfdeceebb1597ba8cfdb60dc","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=1&qt=3&lang=ar","notice":"<p><\/p>","ribbon":"","promocode":"","price":54,"priceNormal":0,"priceHtml":"<span data-price=\"$54.00\" class=\"price\"><span class=\"currency\">$<\/span>54.<sup class=\"cents\">00<\/sup><\/span>"},"2":{"status":200,"users":3,"years":2,"qty":3,"internalid":"640b87b2fb91897dbd16ec0fc6736b65","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=2&qt=3&lang=ar","notice":"<p>\u0648\u0641\u0631 \u062d\u062a\u0649 \u0662\u0665\u066a \u0645\u0639 \u062a\u0631\u062e\u064a\u0635 \u0644\u0645\u062f\u0629 \u0639\u0627\u0645\u0627\u0646<\/p>","ribbon":"","promocode":"","price":81,"priceNormal":108,"priceHtml":"<span data-price=\"$108.00\" class=\"price flat obsolete\"><span class=\"currency\">$<\/span>108.<sup class=\"cents\">00<\/sup><\/span><span data-price=\"$81.00\" class=\"price\"><span class=\"currency\">$<\/span>81.<sup class=\"cents\">00<\/sup><\/span>"}}},"4":{"years":{"1":{"status":200,"users":4,"years":1,"qty":4,"internalid":"4fc6afb5d5d38fb62035efb891075113","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=1&qt=4&lang=ar","notice":"<p><\/p>","ribbon":"","promocode":"","price":68,"priceNormal":0,"priceHtml":"<span data-price=\"$68.00\" class=\"price\"><span class=\"currency\">$<\/span>68.<sup class=\"cents\">00<\/sup><\/span>"},"2":{"status":200,"users":4,"years":2,"qty":4,"internalid":"e968ec13a80f73be1e5f18ad2d0e71ea","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=2&qt=4&lang=ar","notice":"<p>\u0648\u0641\u0631 \u062d\u062a\u0649 \u0662\u0665\u066a \u0645\u0639 \u062a\u0631\u062e\u064a\u0635 \u0644\u0645\u062f\u0629 \u0639\u0627\u0645\u0627\u0646<\/p>","ribbon":"","promocode":"","price":104,"priceNormal":136,"priceHtml":"<span data-price=\"$136.00\" class=\"price flat obsolete\"><span class=\"currency\">$<\/span>136.<sup class=\"cents\">00<\/sup><\/span><span data-price=\"$104.00\" class=\"price\"><span class=\"currency\">$<\/span>104.<sup class=\"cents\">00<\/sup><\/span>"}}},"5":{"years":{"1":{"status":200,"users":5,"years":1,"qty":5,"internalid":"7d6d0cf6a3f0b793f72ef71777102ea7","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=1&qt=5&lang=ar","notice":"<p><\/p>","ribbon":"","promocode":"","price":80,"priceNormal":0,"priceHtml":"<span data-price=\"$80.00\" class=\"price\"><span class=\"currency\">$<\/span>80.<sup class=\"cents\">00<\/sup><\/span>"},"2":{"status":200,"users":5,"years":2,"qty":5,"internalid":"4a10483bb309e57a7a9a49746d711831","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=2&qt=5&lang=ar","notice":"<p>\u0648\u0641\u0631 \u062d\u062a\u0649 \u0662\u0665\u066a \u0645\u0639 \u062a\u0631\u062e\u064a\u0635 \u0644\u0645\u062f\u0629 \u0639\u0627\u0645\u0627\u0646<\/p>","ribbon":"","promocode":"","price":125,"priceNormal":160,"priceHtml":"<span data-price=\"$160.00\" class=\"price flat obsolete\"><span class=\"currency\">$<\/span>160.<sup class=\"cents\">00<\/sup><\/span><span data-price=\"$125.00\" class=\"price\"><span class=\"currency\">$<\/span>125.<sup class=\"cents\">00<\/sup><\/span>"}}},"6":{"years":{"1":{"status":200,"users":6,"years":1,"qty":6,"internalid":"a45cd202d32dd9420f9d5e4524381406","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=1&qt=6&lang=ar","notice":"<p><\/p>","ribbon":"","promocode":"","price":96,"priceNormal":0,"priceHtml":"<span data-price=\"$96.00\" class=\"price\"><span class=\"currency\">$<\/span>96.<sup class=\"cents\">00<\/sup><\/span>"},"2":{"status":200,"users":6,"years":2,"qty":6,"internalid":"1b83964100c5800655336fc3b602b1ff","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=2&qt=6&lang=ar","notice":"<p>\u0648\u0641\u0631 \u062d\u062a\u0649 \u0662\u0665\u066a \u0645\u0639 \u062a\u0631\u062e\u064a\u0635 \u0644\u0645\u062f\u0629 \u0639\u0627\u0645\u0627\u0646<\/p>","ribbon":"","promocode":"","price":150,"priceNormal":192,"priceHtml":"<span data-price=\"$192.00\" class=\"price flat obsolete\"><span class=\"currency\">$<\/span>192.<sup class=\"cents\">00<\/sup><\/span><span data-price=\"$150.00\" class=\"price\"><span class=\"currency\">$<\/span>150.<sup class=\"cents\">00<\/sup><\/span>"}}},"7":{"years":{"1":{"status":200,"users":7,"years":1,"qty":7,"internalid":"9f6e45f8b524ff61d5872fda1e2781fa","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=1&qt=7&lang=ar","notice":"<p><\/p>","ribbon":"","promocode":"","price":112,"priceNormal":0,"priceHtml":"<span data-price=\"$112.00\" class=\"price\"><span class=\"currency\">$<\/span>112.<sup class=\"cents\">00<\/sup><\/span>"},"2":{"status":200,"users":7,"years":2,"qty":7,"internalid":"d88ca12f0d02489eaadb1cfa49ac69b2","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=2&qt=7&lang=ar","notice":"<p>\u0648\u0641\u0631 \u062d\u062a\u0649 \u0662\u0665\u066a \u0645\u0639 \u062a\u0631\u062e\u064a\u0635 \u0644\u0645\u062f\u0629 \u0639\u0627\u0645\u0627\u0646<\/p>","ribbon":"","promocode":"","price":175,"priceNormal":224,"priceHtml":"<span data-price=\"$224.00\" class=\"price flat obsolete\"><span class=\"currency\">$<\/span>224.<sup class=\"cents\">00<\/sup><\/span><span data-price=\"$175.00\" class=\"price\"><span class=\"currency\">$<\/span>175.<sup class=\"cents\">00<\/sup><\/span>"}}},"8":{"years":{"1":{"status":200,"users":8,"years":1,"qty":8,"internalid":"9ecb72791ae7e84ea2a3ce7ae8001969","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=1&qt=8&lang=ar","notice":"<p><\/p>","ribbon":"","promocode":"","price":128,"priceNormal":0,"priceHtml":"<span data-price=\"$128.00\" class=\"price\"><span class=\"currency\">$<\/span>128.<sup class=\"cents\">00<\/sup><\/span>"},"2":{"status":200,"users":8,"years":2,"qty":8,"internalid":"2d93f4e88695146667aa26d27e0d5755","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=2&qt=8&lang=ar","notice":"<p>\u0648\u0641\u0631 \u062d\u062a\u0649 \u0662\u0665\u066a \u0645\u0639 \u062a\u0631\u062e\u064a\u0635 \u0644\u0645\u062f\u0629 \u0639\u0627\u0645\u0627\u0646<\/p>","ribbon":"","promocode":"","price":200,"priceNormal":256,"priceHtml":"<span data-price=\"$256.00\" class=\"price flat obsolete\"><span class=\"currency\">$<\/span>256.<sup class=\"cents\">00<\/sup><\/span><span data-price=\"$200.00\" class=\"price\"><span class=\"currency\">$<\/span>200.<sup class=\"cents\">00<\/sup><\/span>"}}},"9":{"years":{"1":{"status":200,"users":9,"years":1,"qty":9,"internalid":"55e700a8ee8b13300a7a0ad9befabc22","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=1&qt=9&lang=ar","notice":"<p><\/p>","ribbon":"","promocode":"","price":144,"priceNormal":0,"priceHtml":"<span data-price=\"$144.00\" class=\"price\"><span class=\"currency\">$<\/span>144.<sup class=\"cents\">00<\/sup><\/span>"},"2":{"status":200,"users":9,"years":2,"qty":9,"internalid":"8e6d40519353632070f402941cac5945","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=2&qt=9&lang=ar","notice":"<p>\u0648\u0641\u0631 \u062d\u062a\u0649 \u0662\u0665\u066a \u0645\u0639 \u062a\u0631\u062e\u064a\u0635 \u0644\u0645\u062f\u0629 \u0639\u0627\u0645\u0627\u0646<\/p>","ribbon":"","promocode":"","price":225,"priceNormal":288,"priceHtml":"<span data-price=\"$288.00\" class=\"price flat obsolete\"><span class=\"currency\">$<\/span>288.<sup class=\"cents\">00<\/sup><\/span><span data-price=\"$225.00\" class=\"price\"><span class=\"currency\">$<\/span>225.<sup class=\"cents\">00<\/sup><\/span>"}}},"10":{"years":{"1":{"status":200,"users":10,"years":1,"qty":10,"internalid":"a7bc856864c62ec5980472d990f0d79e","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=1&qt=10&lang=ar","notice":"<p><\/p>","ribbon":"","promocode":"","price":160,"priceNormal":0,"priceHtml":"<span data-price=\"$160.00\" class=\"price\"><span class=\"currency\">$<\/span>160.<sup class=\"cents\">00<\/sup><\/span>"},"2":{"status":200,"users":10,"years":2,"qty":10,"internalid":"b946e2a16fc08844c2c4027557811347","direct_store_url":"https:\/\/store.esetme.com\/cart\/?pc=108&pt=1&ut=2&qt=10&lang=ar","notice":"<p>\u0648\u0641\u0631 \u062d\u062a\u0649 \u0662\u0665\u066a \u0645\u0639 \u062a\u0631\u062e\u064a\u0635 \u0644\u0645\u062f\u0629 \u0639\u0627\u0645\u0627\u0646<\/p>","ribbon":"","promocode":"","price":250,"priceNormal":320,"priceHtml":"<span data-price=\"$320.00\" class=\"price flat obsolete\"><span class=\"currency\">$<\/span>320.<sup class=\"cents\">00<\/sup><\/span><span data-price=\"$250.00\" class=\"price\"><span class=\"currency\">$<\/span>250.<sup class=\"cents\">00<\/sup><\/span>"}}}}}
+          </script>
+          <form action="/me-ar/home/cyber-security/?no_cache=1&amp;tx_esetproducts_productcard%5Baction%5D=productCardAjax&amp;tx_esetproducts_productcard%5Bcontroller%5D=Sku" class="form form-price-configurator" data-api-pricings="" data-module="ui/price-configurator-dep" method="post">
+           <div>
+            <input name="tx_esetproducts_productcard[__referrer][@extension]" type="hidden" value="EsetProducts"/>
+            <input name="tx_esetproducts_productcard[__referrer][@vendor]" type="hidden" value="AOE"/>
+            <input name="tx_esetproducts_productcard[__referrer][@controller]" type="hidden" value="Product"/>
+            <input name="tx_esetproducts_productcard[__referrer][@action]" type="hidden" value="productCard"/>
+            <input name="tx_esetproducts_productcard[__referrer][arguments]" type="hidden" value="YTowOnt9286b588e4d206720254ea1ec595b56f77f09fc0a"/>
+            <input name="tx_esetproducts_productcard[__referrer][@request]" type="hidden" value='a:4:{s:10:"@extension";s:12:"EsetProducts";s:11:"@controller";s:7:"Product";s:7:"@action";s:11:"productCard";s:7:"@vendor";s:3:"AOE";}4160c679826375ad61ace0bdc9cf376dd747baee'/>
+            <input name="tx_esetproducts_productcard[__trustedProperties]" type="hidden" value='a:3:{s:5:"users";i:1;s:5:"years";i:1;s:9:"productid";i:1;}70ca924399df5844db9b28442dd8565617b52af8'/>
+           </div>
+           <div class="row">
+            <div class="col col-xs-6 col-sm-4">
+             <div class="form-group form-group-quantity">
+              <label class="form-label" for="qty-IwS2fg2s">
+               المستخدمين
+              </label>
+              <select class="form-control rangeified select-users" id="qty-IwS2fg2s" name="tx_esetproducts_productcard[users]">
+               <option selected="selected" value="1">
+                1
+               </option>
+               <option value="2">
+                2
+               </option>
+               <option value="3">
+                3
+               </option>
+               <option value="4">
+                4
+               </option>
+               <option value="5">
+                5
+               </option>
+               <option value="6">
+                6
+               </option>
+               <option value="7">
+                7
+               </option>
+               <option value="8">
+                8
+               </option>
+               <option value="9">
+                9
+               </option>
+               <option value="10">
+                10
+               </option>
+              </select>
+             </div>
+            </div>
+            <div class="col col-xs-6 col-sm-4">
+             <div class="form-group form-group-quantity">
+              <label class="form-label" for="years-oKuXOMWE">
+               سنوات
+              </label>
+              <select class="form-control rangeified select-years" id="years-oKuXOMWE" name="tx_esetproducts_productcard[years]">
+               <option selected="selected" value="1">
+                1
+               </option>
+               <option value="2">
+                2
+               </option>
+              </select>
+             </div>
+            </div>
+            <div class="col col-xs-12 col-sm-4">
+             <div class="form-group form-group-result configurator-result-price ">
+              <span class="price" data-price="$29.00">
+               <span class="currency">
+                $
+               </span>
+               29.
+               <sup class="cents">
+                00
+               </sup>
+              </span>
+             </div>
+            </div>
+           </div>
+           <div class="configurator-result-notice">
+            <p>
+            </p>
+           </div>
+           <input class="form-control" name="tx_esetproducts_productcard[productid]" type="hidden" value="1408"/>
+           <input class="internalid" name="internalid" type="hidden" value="2cb8d92d904421a433a040b436fa1af2"/>
+           <input class="promocode" name="promocode" type="hidden" value=""/>
+           <input class="qty" name="qty" type="hidden" value="1"/>
+          </form>
+          <div class="product-card-ctas clearfix clear-left">
+           <a class="btn" data-btn-buy="" data-event-action="ESET Cyber Security" data-event-category="Buy now" href="https://store.esetme.com/cart/?pc=108&amp;pt=1&amp;ut=1&amp;qt=1&amp;lang=ar" id="sku-101467" target="_blank">
+            إشتري الأن
+           </a>
+           <a class="btn-bordered" href="/me-ar/home/cyber-security/download/" target="">
+            تحميل
+           </a>
+          </div>
+         </div>
+         <div class="nav nav-card-links">
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!--TYPO3SEARCH_begin-->
+     <div id="main-content">
+      <div class="section faded-opaque skin-kv-right align-center skin-tongue skin-height-s " id="content-c292546">
+       <div class="container">
+        <div class="section-content">
+         <div class="csc-default skin-mt-s skin-mb-s skin-padding-m" id="content-c292586">
+          <h2 class="align-center">
+           تمتع بالإنترنت بحماية الأمن الحائز على جوائز
+          </h2>
+          <p class="align-center">
+           الحائز على جائزة
+           <strong>
+            تكنولوجيا الكشف
+           </strong>
+           يوفر لك,
+           <strong>
+            حماية سريعة و قوية ضد البرمجيات الخبيثة
+           </strong>
+           لجهازك الماك, سواء كنت تعمل أو تتصفح أو تلعب أونلاين.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section faded-opaque skin-kv-right skin-tongue " id="content-c292545">
+       <div class="container">
+        <div class="section-content">
+         <div class="csc-default" id="content-c292578">
+          <div class="row flex skin-gutter-l skin-padding-xl">
+           <div class="col col-sm-6 col-md-8 ">
+            <div class="csc-default" id="content-c292563">
+             <h3>
+              حماية عالمك على الإنترنت
+             </h3>
+             <p class="bodytext">
+              <strong>
+               مضاد الفيروسات و مضاد التجسس
+              </strong>
+              مبنى على تكنولوجية محطم الأرقام القياسية نود٣٢ الذى يقوم بحمايتك ضد
+              <strong>
+               التصيد و الإحتيال
+              </strong>
+              سرقة أسماء المستخدمين و التفاصيل المصرفية.
+             </p>
+            </div>
+           </div>
+           <div class="col col-sm-6 col-md-4 hidden-to-xs hidden-to-sm">
+            <div class="csc-default" id="content-c292574">
+             <div class="csc-default" id="content-c292512">
+              <div class="csc-textpic csc-textpic-center csc-textpic-above">
+               <noscript>
+                <img alt="Antivirus protection icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/browser.png" title="Antivirus protection"/>
+               </noscript>
+               <picture>
+                <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/browser.png" media="(min-width: 1550px)"/>
+                <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/browser.png" media="(min-width: 1200px)"/>
+                <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/browser.png" media="(min-width: 990px)"/>
+                <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/browser.png" media="(min-width: 768px)"/>
+                <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/browser.png" media="(min-width: 480px)"/>
+                <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/browser.png" media="(min-width: 320px)"/>
+                <img alt="Antivirus protection icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/browser.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="Antivirus protection"/>
+               </picture>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section faded-opaque skin-kv-left skin-tongue skin-height-s " id="content-c292544">
+       <div class="container">
+        <div class="section-content">
+         <div class="csc-default" id="content-c292579">
+          <div class="row flex skin-gutter-l skin-padding-xl">
+           <div class="col col-sm-6 col-md-4 hidden-to-xs hidden-to-sm">
+            <div class="csc-default" id="content-c292572">
+             <div class="csc-textpic csc-textpic-center csc-textpic-above">
+              <noscript>
+               <img alt="Internet security icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/internet_security.png" title="Internet security"/>
+              </noscript>
+              <picture>
+               <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/internet_security.png" media="(min-width: 1550px)"/>
+               <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/internet_security.png" media="(min-width: 1200px)"/>
+               <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/internet_security.png" media="(min-width: 990px)"/>
+               <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/internet_security.png" media="(min-width: 768px)"/>
+               <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/internet_security.png" media="(min-width: 480px)"/>
+               <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/internet_security.png" media="(min-width: 320px)"/>
+               <img alt="Internet security icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/internet_security.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="Internet security"/>
+              </picture>
+             </div>
+            </div>
+           </div>
+           <div class="col col-sm-6 col-md-8 ">
+            <div class="csc-default" id="content-c292568">
+             <h3>
+              تمتع بالقوة الكاملة لجهازك الماك
+             </h3>
+             <p class="bodytext">
+              ترك مزيد من الطاقة للبرامج التي تستخدمها يومياً. برامجنا تتيح لك
+              <strong>
+               اللعب و العمل و تصفح الإنترنت دون تباطؤ
+              </strong>
+              .
+             </p>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section faded-opaque skin-kv-right skin-tongue skin-height-s " id="content-c292543">
+       <div class="container">
+        <div class="section-content">
+         <div class="csc-default" id="content-c292580">
+          <div class="row flex skin-gutter-l skin-padding-xl">
+           <div class="col col-sm-6 col-md-8 ">
+            <div class="csc-default" id="content-c292564">
+             <h3>
+              ثبته و إنساه و تمتع بالحماية
+             </h3>
+             <p class="bodytext">
+              تمتع
+              <strong>
+               بواجهة تحكم مبسطة و سهلة
+              </strong>
+              احصل على حماية قوية مع إعدادات إفتراضية. أو إختر بنفسك.
+             </p>
+            </div>
+           </div>
+           <div class="col col-sm-6 col-md-4 hidden-to-sm hidden-to-xs">
+            <div class="csc-default" id="content-c292573">
+             <div class="csc-default" id="content-c292511">
+              <div class="csc-textpic csc-textpic-center csc-textpic-above">
+               <noscript>
+                <img alt="Signature-light footprint icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/light_footprint.png" title="Signature-light footprint"/>
+               </noscript>
+               <picture>
+                <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/light_footprint.png" media="(min-width: 1550px)"/>
+                <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/light_footprint.png" media="(min-width: 1200px)"/>
+                <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/light_footprint.png" media="(min-width: 990px)"/>
+                <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/light_footprint.png" media="(min-width: 768px)"/>
+                <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/light_footprint.png" media="(min-width: 480px)"/>
+                <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/light_footprint.png" media="(min-width: 320px)"/>
+                <img alt="Signature-light footprint icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Benefits/200x200/light_footprint.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="Signature-light footprint"/>
+               </picture>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section skin-tongue skin-padding-bottom-small" id="content-c292542">
+       <span class="rimg section-image hidden" data-remote=".section" data-src="https://cdn1.esetstatic.com/ESET/INT/Test/placeholders/test/features_bg_650.jpg" data-viewport="">
+       </span>
+       <div class="container">
+        <div class="section-content">
+         <div class="csc-default skin-mb-l" id="content-c292587">
+          <h3 class="align-center">
+           جميع الميزات التي تحتاجها لحمايتك
+          </h3>
+         </div>
+         <div class="csc-default" id="content-c292569">
+          <div class="row flex skin-gutter-xl skin-padding-xl skin-mb-l">
+           <div class="col col-xs-12 col-sm-12 col-md-6 ">
+            <div class="csc-default" id="content-c292582">
+             <ul class="list-checkmark list-skin-green">
+              <li>
+               مضاد الفيروسات و مضاد التجسس
+              </li>
+              <li>
+               سحابة المسح الضوئي
+              </li>
+              <li>
+               التحكم بالوسائط القابلة للإزالة
+              </li>
+             </ul>
+            </div>
+            <div class="csc-default" id="content-c292581">
+             <div class="row flex skin-mt-l">
+              <div class="col col-sm-6 col-md-6 ">
+              </div>
+              <div class="col col-sm-6 col-md-6 ">
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="col col-xs-12 col-sm-12 col-md-6 ">
+            <div class="csc-default" id="content-c878144">
+             <ul class="list-checkmark list-skin-green">
+              <li>
+               مضاد التصيد
+              </li>
+              <li>
+               التحكم بالوسائط القابلة للإزالة
+              </li>
+             </ul>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section faded-opaque " id="content-c292541">
+       <div class="container">
+        <div class="section-content">
+         <div class="csc-default" id="content-c292584">
+          <h2 class="section-title">
+          </h2>
+          <p class="align-center">
+          </p>
+          <div class="compare compare-list skin-count-3" data-module="ui/compare">
+           <div class="comparable">
+            <div class="product">
+             <a class="product-thumbnail" href="/me-ar/home/cyber-security/">
+              <figure class="thumbnail-wrap">
+               <img alt="ESET Cyber Security" class="lazyload thumbnail rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Boxes/155x185-Balanced/ECS.png" src="">
+               </img>
+              </figure>
+             </a>
+             <h4 class="name">
+              <a href="/me-ar/home/cyber-security/">
+               ESET Cyber Security
+              </a>
+             </h4>
+             <p class="description">
+              سرعة و قوة مضاد الفيروسات لماك
+             </p>
+            </div>
+            <div class="features">
+             <p class="feature checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                حماية إستباقية ضد جميع أنواع التهديدات على الإنترنت أونلاين أو أوفلاين مع مضاد الفيروسات و مضاد التجسس.
+               </span>
+              </span>
+              <span class="name">
+               البقاء آمن من الفيروسات و برامج التجسس
+              </span>
+             </p>
+             <p class="feature even checked-even checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                مضاد التصيد هو درع حماية ضدالمواقع الوهمية التى تحاول الحصول على معلومات حساسة.
+               </span>
+              </span>
+              <span class="name">
+               تأمين كلمات المرور و بياناتك الخاصة
+              </span>
+             </p>
+             <p class="feature checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                بصمة النظام صغيرة - يترك المزيد من الطاقة للبرامج التي تستخدمها يومياً و تمد عمر الأجهزة.
+               </span>
+              </span>
+              <span class="name">
+               الحفاظ على جهازك الماك يعمل بسلاسة
+              </span>
+             </p>
+             <p class="feature even unchecked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                جدار الحماية الشخصي يمنع المخترقين من الوصول إلى جهاز الكمبيوتر و يجعلك غير مرئي عند إستخدام خدمة الواي فاي العامة
+               </span>
+              </span>
+              <span class="name">
+               وقف المتسللين من الوصول إلى جهاز الكمبيوتر الخاص بك
+              </span>
+             </p>
+             <p class="feature unchecked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                منع محتويات الإنترنت غير الملائمة حسب الفئات أو بالمواقع الفردية مع الرقابة الأبوية.
+               </span>
+              </span>
+              <span class="name">
+               الحفاظ على أطفالك فى أمان على الإنترنت
+              </span>
+             </p>
+             <p class="feature even unchecked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                مزج و مطابقة الحماية حتى ٣ أو ٥ أجهزة
+               </span>
+              </span>
+              <span class="name">
+               حماية جميع الأجهزة الخاصة بك
+              </span>
+             </p>
+            </div>
+            <div class="information">
+             <p class="description">
+              سرعة و قوة مضاد الفيروسات لماك
+             </p>
+             <div class="prices">
+              <span class="price" data-price="$29.00">
+               <span class="currency">
+                $
+               </span>
+               29.
+               <sup class="cents">
+                00
+               </sup>
+              </span>
+             </div>
+             <a class="btn" data-btn-buy="" data-event-action="ESET Cyber Security" data-event-category="Buy now" href="https://store.esetme.com/cart/?pc=108&amp;pt=1&amp;ut=1&amp;qt=1&amp;lang=ar" id="sku-101467" target="_blank">
+              إشتري الأن
+             </a>
+             <a class="btn-bordered" href="/me-ar/home/cyber-security/download/" target="">
+              تحميل
+             </a>
+            </div>
+           </div>
+           <div class="comparable skin-highlight">
+            <div class="product">
+             <a class="product-thumbnail" href="/me-ar/home/cyber-security-pro/">
+              <figure class="thumbnail-wrap">
+               <img alt="ESET Cyber Security Pro" class="lazyload thumbnail rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Boxes/155x185-Balanced/ECSP.png" src="">
+               </img>
+              </figure>
+             </a>
+             <h4 class="name">
+              <a href="/me-ar/home/cyber-security-pro/">
+               ESET Cyber Security Pro
+              </a>
+             </h4>
+             <p class="description">
+              حماية متعددة الطبقات لأجهزة ماك
+             </p>
+            </div>
+            <div class="features">
+             <p class="feature checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                حماية إستباقية ضد جميع أنواع التهديدات على الإنترنت أونلاين أو أوفلاين مع مضاد الفيروسات و مضاد التجسس.
+               </span>
+              </span>
+              <span class="name">
+               البقاء آمن من الفيروسات و برامج التجسس
+              </span>
+             </p>
+             <p class="feature even checked-even checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                مضاد التصيد هو درع حماية ضدالمواقع الوهمية التى تحاول الحصول على معلومات حساسة.
+               </span>
+              </span>
+              <span class="name">
+               تأمين كلمات المرور و بياناتك الخاصة
+              </span>
+             </p>
+             <p class="feature checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                بصمة النظام صغيرة - يترك المزيد من الطاقة للبرامج التي تستخدمها يومياً و تمد عمر الأجهزة.
+               </span>
+              </span>
+              <span class="name">
+               الحفاظ على جهازك الماك يعمل بسلاسة
+              </span>
+             </p>
+             <p class="feature even checked-even checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                جدار الحماية الشخصي يمنع المخترقين من الوصول إلى جهاز الكمبيوتر و يجعلك غير مرئي عند إستخدام خدمة الواي فاي العامة
+               </span>
+              </span>
+              <span class="name">
+               وقف المتسللين من الوصول إلى جهاز الكمبيوتر الخاص بك
+              </span>
+             </p>
+             <p class="feature checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                منع محتويات الإنترنت غير الملائمة حسب الفئات أو بالمواقع الفردية مع الرقابة الأبوية.
+               </span>
+              </span>
+              <span class="name">
+               الحفاظ على أطفالك فى أمان على الإنترنت
+              </span>
+             </p>
+             <p class="feature even unchecked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                مزج و مطابقة الحماية حتى ٣ أو ٥ أجهزة
+               </span>
+              </span>
+              <span class="name">
+               حماية جميع الأجهزة الخاصة بك
+              </span>
+             </p>
+            </div>
+            <div class="information">
+             <p class="description">
+              حماية متعددة الطبقات لأجهزة ماك
+             </p>
+             <div class="prices">
+              <span class="price" data-price="$39.00">
+               <span class="currency">
+                $
+               </span>
+               39.
+               <sup class="cents">
+                00
+               </sup>
+              </span>
+             </div>
+             <a class="btn" data-btn-buy="" data-event-action="ESET Cyber Security Pro" data-event-category="Buy now" href="https://store.esetme.com/cart/?pc=116&amp;pt=1&amp;ut=1&amp;qt=1&amp;lang=ar" id="sku-101487" target="_blank">
+              إشتري الأن
+             </a>
+             <a class="btn-bordered" href="/me-ar/home/cyber-security-pro/download/" target="">
+              تحميل
+             </a>
+            </div>
+           </div>
+           <div class="comparable">
+            <div class="product">
+             <a class="product-thumbnail" href="/me-ar/home/multi-device-security/">
+              <figure class="thumbnail-wrap">
+               <img alt="ESET Multi-Device Security" class="lazyload thumbnail rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Boxes/155x185-Balanced/EMDS.png" src="">
+               </img>
+              </figure>
+             </a>
+             <h4 class="name">
+              <a href="/me-ar/home/multi-device-security/">
+               ESET Multi-Device Security
+              </a>
+             </h4>
+             <p class="description">
+              حزمة حماية واحدة لكل أجهزتك
+             </p>
+            </div>
+            <div class="features">
+             <p class="feature checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                حماية إستباقية ضد جميع أنواع التهديدات على الإنترنت أونلاين أو أوفلاين مع مضاد الفيروسات و مضاد التجسس.
+               </span>
+              </span>
+              <span class="name">
+               البقاء آمن من الفيروسات و برامج التجسس
+              </span>
+             </p>
+             <p class="feature even checked-even checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                مضاد التصيد هو درع حماية ضدالمواقع الوهمية التى تحاول الحصول على معلومات حساسة.
+               </span>
+              </span>
+              <span class="name">
+               تأمين كلمات المرور و بياناتك الخاصة
+              </span>
+             </p>
+             <p class="feature checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                بصمة النظام صغيرة - يترك المزيد من الطاقة للبرامج التي تستخدمها يومياً و تمد عمر الأجهزة.
+               </span>
+              </span>
+              <span class="name">
+               الحفاظ على جهازك الماك يعمل بسلاسة
+              </span>
+             </p>
+             <p class="feature even checked-even checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                جدار الحماية الشخصي يمنع المخترقين من الوصول إلى جهاز الكمبيوتر و يجعلك غير مرئي عند إستخدام خدمة الواي فاي العامة
+               </span>
+              </span>
+              <span class="name">
+               وقف المتسللين من الوصول إلى جهاز الكمبيوتر الخاص بك
+              </span>
+             </p>
+             <p class="feature checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                منع محتويات الإنترنت غير الملائمة حسب الفئات أو بالمواقع الفردية مع الرقابة الأبوية.
+               </span>
+              </span>
+              <span class="name">
+               الحفاظ على أطفالك فى أمان على الإنترنت
+              </span>
+             </p>
+             <p class="feature even checked-even checked">
+              <span class="tooltip">
+               <span class="tooltip-content">
+                مزج و مطابقة الحماية حتى ٣ أو ٥ أجهزة
+               </span>
+              </span>
+              <span class="name">
+               حماية جميع الأجهزة الخاصة بك
+              </span>
+             </p>
+            </div>
+            <div class="information">
+             <p class="description">
+              حزمة حماية واحدة لكل أجهزتك
+             </p>
+             <div class="prices">
+              <span class="price" data-price="$69.00">
+               <span class="currency">
+                $
+               </span>
+               69.
+               <sup class="cents">
+                00
+               </sup>
+              </span>
+             </div>
+             <a class="btn" data-btn-buy="" data-event-action="ESET Multi-Device Security" data-event-category="Buy now" href="https://store.esetme.com/cart/?pc=1600&amp;pt=1&amp;ut=1&amp;qt=3&amp;lang=ar" id="sku-101463" target="_blank">
+              إشتري الأن
+             </a>
+             <a class="btn-bordered" href="/me-ar/home/multi-device-security/download/" target="">
+              تحميل
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="csc-default" id="content-c292567">
+          <div class="align-center">
+           <a class="btn-bordered " href="/me-ar/home/for-mac/">
+            مقارنة كاملة
+           </a>
+          </div>
+         </div>
+         <div class="csc-default" id="content-c859622">
+          <style>
+           .compare-table .description { line-height: 22px; } .description { height: 45px !important; }
+          </style>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section skin-inverse align-center " id="content-c292540">
+       <span class="rimg section-image hidden" data-remote=".section" data-src="https://cdn1.esetstatic.com/ESET/INT/Test/placeholders/test/testimonials_bg.jpg" data-viewport="">
+       </span>
+       <div class="container">
+        <div class="section-content">
+         <div class="csc-default" id="content-c292588">
+          <div class="slider skin-navigator" data-module="ui/slider" data-options='{"speed":30000}'>
+           <div class="swiper-wrapper">
+            <div class="slide review-quote">
+             <div class="content">
+              <blockquote>
+               <p>
+                يمكنني إستخدام إسيت مضاد الفيروسات على جهاز الكمبيوتر الخاص بي و ماك في المنزل و العمل و السفر. يعمل بهدوء فى الخلفية. منذ شراء إسيت قبل عدة سنوات، لم يتم إختراق الأجهزة.لقد كانت مشكلة مع العديد من البرامج و الأسماء الكبيرة الأخرى.
+               </p>
+              </blockquote>
+              <p class="quote-author">
+               ديبرا جى ام, أمريكا
+              </p>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="csc-default" id="content-c880297">
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section faded-opaque " id="content-c292539">
+       <div class="container">
+        <div class="section-content">
+         <div class="csc-default" id="content-c292590">
+          <div class="row flex skin-gutter-l">
+           <div class="col col-sm-6 col-md-6 ">
+            <div class="csc-default" id="content-c292570">
+             <h3>
+              المزيد من المعلومات
+             </h3>
+             <ul class="list-clean">
+              <li>
+               <a href="https://cdn1.esetstatic.com/ESET/INT/Docs/Home/Product-Overview-ESET-Cyber-Security.pdf" target="_blank" title="Product Overview ESET Cyber Security">
+                نظرة على المنتج (بى دى اف)
+               </a>
+              </li>
+              <li>
+               <a href="https://my.eset.com/convert?culture=en-US" target="_blank" title="Convert your Username &amp; Password to a License Key">
+                تحويل اسم المستخدم الخاص بك وكلمة المرور إلى مفتاح ترخيص
+               </a>
+              </li>
+              <li>
+               <a href="/me-ar/home/for-mac/">
+                مقارنة منتجات ماك
+               </a>
+              </li>
+              <li>
+               <a href="/me-ar/home/unilicense/">
+                إسيت متعدد التراخيص
+               </a>
+              </li>
+             </ul>
+             <p class="bodytext">
+             </p>
+            </div>
+           </div>
+           <div class="col col-sm-6 col-md-6 ">
+            <div class="csc-default" id="content-c292589">
+             <h3>
+              متطلبات النظام
+             </h3>
+             <p class="bodytext">
+              متطلبات نظام التشغيل لإسيت سايبر سكيوريتى: المعالج: 32 bit x86 or 64bit x64, Intel®. أنظمة التشغيل: macOS 10.12.x (Sierra), OS X 10.11.x (El Capitan), OS X 10.10.x (Yosemite), OS X 10.9.x (Mavericks), OS X 10.8.x (Mountain Lion), OS X 10.7.x (Lion), OS X 10.6.x (Snow Leopard).
+             </p>
+             <p class="bodytext">
+              إستهلاك الذاكرة: 300 MB.
+             </p>
+             <p class="bodytext">
+              مساحة القرص (التثبيت): 150 MB.
+             </p>
+             <p class="bodytext">
+              <a href="http://support.eset.com/kb3448/?&amp;page=content&amp;id=SOLN3448" target="_blank">
+               مشاكل شائعة
+              </a>
+             </p>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section faded-opaque " id="content-c292538">
+       <div class="container">
+        <div class="section-content">
+         <div class="csc-default" id="content-download">
+          <h1 class="align-center">
+           تحميل ESET Cyber Security
+          </h1>
+         </div>
+         <div class="csc-default" id="content-c292560">
+         </div>
+         <div class="csc-default" id="content-c292556">
+          <form class="product-download loading" data-module="ui/product-download" data-options='{"apiUrl": "https://www.eset.com/me-ar/home/cyber-security/?type=13554"}'>
+           <div class="csc-default" id="content-c292561">
+            <input class="pd-product" name="tx_esetdownloads_ajax[product]" type="hidden" value="84"/>
+            <input class="pd-product" name="tx_esetdownloads_ajax[beta]" type="hidden" value="0"/>
+            <input class="pd-page_id" name="tx_esetdownloads_ajax[page_id]" type="hidden" value="11021"/>
+            <input class="pd-plugin_id" name="tx_esetdownloads_ajax[plugin_id]" type="hidden" value="292561"/>
+            <div class="row skin-gutter-l skin-padding-l">
+             <div class="message-container message-position-top">
+             </div>
+            </div>
+            <div class="row skin-gutter-l skin-padding-l">
+             <div class="col col-sm-8">
+              <div class="step step-advanced">
+               <h3>
+                تكوين التحميل
+               </h3>
+               <div class="form-wrap">
+               </div>
+               <div class="message-container message-position-bottom">
+               </div>
+               <div class="form-group">
+                <a class="btn-download-block js-download" data-event-category="Download" data-event-label="Advanced" download="" href="#">
+                 تحميل
+                </a>
+               </div>
+               <div class="information information-dynamic">
+                <span class="info">
+                 اسم الملف:
+                 <span class="filename">
+                 </span>
+                </span>
+                |
+                <span class="info">
+                 حجم الملف:
+                 <span class="size">
+                 </span>
+                </span>
+                |
+                <span class="info">
+                 الإصدار:
+                 <span class="version">
+                 </span>
+                </span>
+               </div>
+               <div class="message-container message-position-button">
+               </div>
+               <div class="changelog-wrap">
+                <a class="changelog-toggle align-center" href="#">
+                 Changelog
+                </a>
+                <div class="changelog">
+                </div>
+               </div>
+              </div>
+              <div class="step step-thanks">
+               <div class="download-thankyou-head">
+                <h3 class="align-center">
+                 شكرا لك لتحميل
+                </h3>
+                <p class="align-center">
+                 <strong>
+                  تمتع بكونك أمن على الإنترنت ، بحماية إسيت
+                 </strong>
+                </p>
+               </div>
+               <div class="download-thankyou-body">
+                <p class="align-center">
+                 تحميل الملف
+                 <span class="download-filename">
+                 </span>
+                 قد بدأت تلقائياً. إذا لم يبدأ التحميل تلقائياً، فالرجاء النقر هنا
+                 <a class="download-url" data-event-category="Download" data-event-label="Click here" href="#">
+                  cliquez ici
+                 </a>
+                 (قد يبدأ التحميل بعد بضع ثوان).
+                </p>
+               </div>
+              </div>
+             </div>
+             <div class="col col-sm-4">
+              <div class="dynamic-links file-links">
+               <h3>
+                الوثائق
+               </h3>
+               <div class="content">
+               </div>
+              </div>
+              <div class="dynamic-links download-options">
+               <h3>
+                خيارات التحميل
+               </h3>
+               <div class="content">
+                <div class="hide-on-liveinstaller">
+                 <a class="js-goto" data-step="liveinstaller" href="#">
+                  العودة إلى التحميل البسيط
+                 </a>
+                </div>
+                <div class="show-on-liveinstaller show-on-version show-on-thanks">
+                 <a class="js-goto" data-step="advanced" href="#">
+                  تحميل متقدم
+                 </a>
+                </div>
+                <div class="hide-on-liveinstaller hide-on-version hide-on-thanks">
+                 <a class="js-goto" data-step="advanced version" href="#">
+                  اختر إصدار منتج آخر
+                 </a>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="step step-thanks step-thanks-marketing skin-mt-l">
+            <div class="csc-default" id="content-c292576">
+             <div class="row flex skin-mb-l">
+              <div class="col ">
+               <div class="csc-default" id="content-c292575">
+                <h3 class="align-center">
+                 How to install ESET Cyber Security
+                </h3>
+                <ol class="list-counter">
+                 <li>
+                  حدد موقع حزمة التثبيت (عادة في مجلد التحميلات) و انقر على ملف التحميل لفتحه.
+                 </li>
+                 <li>
+                  انقر فوق رمز تثبيت و انقر فوق متابعة لبدء تشغيل معالج التثبيت.
+                 </li>
+                 <li>
+                  اتبع الإرشادات التي تظهر على الشاشة حتى يكتمل التثبيت. انظر على
+                  <a href="http://kb.eset.com/esetkb/index?page=content&amp;id=SOLN3238" target="_blank" title="ESET Knowledgebase">
+                   قاعدة المعارف
+                  </a>
+                  إذا كنت بحاجة إلى المساعدة.
+                 </li>
+                </ol>
+               </div>
+               <div class="csc-default" id="content-c292559">
+               </div>
+              </div>
+              <div class="col ">
+              </div>
+             </div>
+            </div>
+           </div>
+          </form>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!--TYPO3SEARCH_end-->
+     <section class="sneaky hidden-to-sm" id="sneaky">
+      <div id="breadcrumb">
+       <div class="container">
+        <div class="row flex">
+         <div class="sneaky-left col col-sm-8" id="sneaky-left">
+          <ul class="nav nav-breadcrumbs">
+           <li>
+            <a href="/me-ar/" rel="index up" title="ME-AR">
+             <span>
+              ME
+             </span>
+            </a>
+           </li>
+           <li>
+            <a href="/me-ar/home/" rel="index up" title="Antivirus and Internet Security for home users">
+             For Home
+            </a>
+           </li>
+           <li>
+            <span>
+             ESET Cyber Security
+            </span>
+           </li>
+          </ul>
+         </div>
+         <div class="sneaky-right col col-sm-4" id="sneaky-right">
+          <div class="csc-default" id="content-c786464">
+           <span class="price" data-price="$29.00">
+            <span class="currency">
+             $
+            </span>
+            29.
+            <sup class="cents">
+             00
+            </sup>
+           </span>
+           <a class="btn" data-btn-buy="" data-event-action="ESET Cyber Security" data-event-category="Buy now" href="https://store.esetme.com/cart/?pc=108&amp;pt=1&amp;ut=1&amp;qt=1&amp;lang=ar" id="sku-101467" target="_blank">
+            إشتري الأن
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <header class="header skin-initial-semi-transparent" id="header">
+      <div class="container">
+       <a class="logo" href="/me-ar/" id="logo" title="Go to ESET Homepage">
+        <span>
+         ESET
+        </span>
+       </a>
+       <nav class="navigation" id="navigation" role="navigation">
+        <ul class="nav nav-main nav-main-deep" data-module="ui/navigation-main" id="nav-main-deep">
+         <li>
+          <a class="link">
+           منتجات المنازل
+          </a>
+          <div class="submenu">
+           <div class="tabs skin-vertical tabs-submenu" data-module="ui/tabs" data-options='{"store": "true", "isMegamenu": true, "event": "mouseover"}'>
+            <div class="panes">
+             <div class="pane" id="windows">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/home/for-windows/">
+                ويندوز
+               </a>
+               <span class="hidden-to-lg">
+                ويندوز
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c297530">
+                 <div class="row">
+                  <div class="col col-sm-4">
+                   <div class="product-tile">
+                    <a class="product-thumbnail" href="/me-ar/home/smart-security-premium/">
+                     <figure class="thumbnail-wrap">
+                      <img alt="ESET Smart Security Premium" class="lazyload rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Boxes/155x185-Balanced/ESSP.png" src="">
+                      </img>
+                     </figure>
+                    </a>
+                    <div class="content">
+                     <div class="info">
+                      <h3 class="name">
+                       <a href="/me-ar/home/smart-security-premium/">
+                        ESET Smart Security Premium
+                       </a>
+                      </h3>
+                      <p class="description">
+                       <a href="/me-ar/home/smart-security-premium/">
+                        أمن الإنترنت المميز لأنظمة ويندوز
+                       </a>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-4">
+                   <div class="product-tile">
+                    <a class="product-thumbnail" href="/me-ar/home/internet-security/">
+                     <figure class="thumbnail-wrap">
+                      <img alt="ESET Internet Security" class="lazyload rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Boxes/155x185-Balanced/EIS.png" src="">
+                      </img>
+                     </figure>
+                    </a>
+                    <div class="content">
+                     <div class="info">
+                      <h3 class="name">
+                       <a href="/me-ar/home/internet-security/">
+                        ESET Internet Security
+                       </a>
+                      </h3>
+                      <p class="description">
+                       <a href="/me-ar/home/internet-security/">
+                        أمن الإنترنت الشامل لأنظمة ويندوز
+                       </a>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-4">
+                   <div class="product-tile">
+                    <a class="product-thumbnail" href="/me-ar/home/antivirus/">
+                     <figure class="thumbnail-wrap">
+                      <img alt="ESET NOD32 Antivirus" class="lazyload rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Boxes/155x185-Balanced/EAV.png" src="">
+                      </img>
+                     </figure>
+                    </a>
+                    <div class="content">
+                     <div class="info">
+                      <h3 class="name">
+                       <a href="/me-ar/home/antivirus/">
+                        ESET NOD32 Antivirus
+                       </a>
+                      </h3>
+                      <p class="description">
+                       <a href="/me-ar/home/antivirus/">
+                        حاصد الجوائز مضاد الفيروسات لأنظمة ويندوز
+                       </a>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="csc-default" id="content-c297529">
+                 <div class="align-center">
+                  <a class="btn-bordered-light " href="/me-ar/home/for-windows/">
+                   مقارنة كل المنتجات لويندوز
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="pane" id="android">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/home/mobile-security-android/">
+                أندرويد
+               </a>
+               <span class="hidden-to-lg">
+                أندرويد
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c297534">
+                 <div class="row">
+                  <div class="col col-sm-4">
+                   <div class="product-tile">
+                    <a class="product-thumbnail" href="/me-ar/home/mobile-security-android/">
+                     <figure class="thumbnail-wrap">
+                      <img alt="ESET Mobile Security for Android" class="lazyload rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Boxes/155x185-Balanced/EMS.png" src=""/>
+                     </figure>
+                    </a>
+                    <div class="content">
+                     <div class="info">
+                      <h3 class="name">
+                       <a href="/me-ar/home/mobile-security-android/">
+                        ESET Mobile Security for Android
+                       </a>
+                      </h3>
+                      <p class="description">
+                       <a href="/me-ar/home/mobile-security-android/">
+                        حافظ على أمن جهازك الأندرويد أينما تذهب.
+                       </a>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-4">
+                   <div class="product-tile">
+                    <a class="product-thumbnail" href="/me-ar/home/parental-control-android/">
+                     <figure class="thumbnail-wrap">
+                      <img alt="ESET Parental Control for Android" class="lazyload rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Boxes/155x185-Balanced/EPC.png" src=""/>
+                     </figure>
+                    </a>
+                    <div class="content">
+                     <div class="info">
+                      <h3 class="name">
+                       <a href="/me-ar/home/parental-control-android/">
+                        ESET Parental Control for Android
+                       </a>
+                      </h3>
+                      <p class="description">
+                       <a href="/me-ar/home/parental-control-android/">
+                        إحم أطفالك على الإنترنت بثقة
+                       </a>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-4">
+                   <div class="product-tile">
+                    <a class="product-thumbnail" href="/me-ar/home/smart-tv-security/">
+                     <figure class="thumbnail-wrap">
+                      <img alt="ESET Smart TV Security" class="lazyload rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Boxes/155x185-Balanced/ESTVS.png" src=""/>
+                     </figure>
+                    </a>
+                    <div class="content">
+                     <div class="info">
+                      <h3 class="name">
+                       <a href="/me-ar/home/smart-tv-security/">
+                        ESET Smart TV Security
+                       </a>
+                      </h3>
+                      <p class="description">
+                       <a href="/me-ar/home/smart-tv-security/">
+                        حماية Internet of Things تبدأ بجهاز التلفزيون
+                       </a>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="csc-default skin-mt-s" id="content-c297533">
+                 <p class="bodytext">
+                 </p>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="pane" id="mac">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/home/for-mac/">
+                ماك
+               </a>
+               <span class="hidden-to-lg">
+                ماك
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c297532">
+                 <div class="row">
+                  <div class="col col-sm-4">
+                   <div class="product-tile">
+                    <a class="product-thumbnail" href="/me-ar/home/cyber-security-pro/">
+                     <figure class="thumbnail-wrap">
+                      <img alt="ESET Cyber Security Pro" class="lazyload rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Boxes/155x185-Balanced/ECSP.png" src=""/>
+                     </figure>
+                    </a>
+                    <div class="content">
+                     <div class="info">
+                      <h3 class="name">
+                       <a href="/me-ar/home/cyber-security-pro/">
+                        ESET Cyber Security Pro
+                       </a>
+                      </h3>
+                      <p class="description">
+                       <a href="/me-ar/home/cyber-security-pro/">
+                        حماية متعددة الطبقات لأجهزة ماك
+                       </a>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-4">
+                   <div class="product-tile">
+                    <a class="product-thumbnail" href="/me-ar/home/cyber-security/">
+                     <figure class="thumbnail-wrap">
+                      <img alt="ESET Cyber Security" class="lazyload rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Boxes/155x185-Balanced/ECS.png" src=""/>
+                     </figure>
+                    </a>
+                    <div class="content">
+                     <div class="info">
+                      <h3 class="name">
+                       <a href="/me-ar/home/cyber-security/">
+                        ESET Cyber Security
+                       </a>
+                      </h3>
+                      <p class="description">
+                       <a href="/me-ar/home/cyber-security/">
+                        سرعة و قوة مضاد الفيروسات لماك
+                       </a>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="csc-default" id="content-c297531">
+                 <div class="align-center">
+                  <a class="btn-bordered-light " href="/me-ar/home/for-mac/">
+                   مقارنة كل المنتجات لماك
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="pane" id="multidevice">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/home/multi-device-security/">
+                حماية أجهزة متعددة
+               </a>
+               <span class="hidden-to-lg">
+                حماية أجهزة متعددة
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c297524">
+                 <div class="row flex ">
+                  <div class="col col-sm-4 col-md-5 ">
+                   <div class="csc-default" id="content-c297526">
+                    <div class="csc-textpic csc-textpic-right csc-textpic-above">
+                     <noscript>
+                      <img alt="ESET Multi-Device Security: Advanced Antivirus Pack for Windows, Mac, and Android" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Boxes/119x170/EMDS-stacked.png" style="padding:20px 0px 40px 0px;" title=""/>
+                     </noscript>
+                     <picture>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Boxes/119x170/EMDS-stacked.png" media="(min-width: 1550px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Boxes/119x170/EMDS-stacked.png" media="(min-width: 1200px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Boxes/119x170/EMDS-stacked.png" media="(min-width: 990px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Boxes/119x170/EMDS-stacked.png" media="(min-width: 768px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Boxes/119x170/EMDS-stacked.png" media="(min-width: 480px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Boxes/119x170/EMDS-stacked.png" media="(min-width: 320px)"/>
+                      <img alt="ESET Multi-Device Security: Advanced Antivirus Pack for Windows, Mac, and Android" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Boxes/119x170/EMDS-stacked.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" style="padding:20px 0px 40px 0px;" title=""/>
+                     </picture>
+                     <div class="csc-textpic-text">
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-4 col-md-5 ">
+                   <div class="csc-default" id="content-c297528">
+                    <div class="csc-textpic csc-textpic-left csc-textpic-above">
+                     <noscript>
+                      <img alt="" class="rimg" src="https://cdn1.esetstatic.com/_processed_/8/4/csm_emds_cd0adaca63.png" style="padding:30px 0px 15px 0px;" title=""/>
+                     </noscript>
+                     <picture>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/emds.png" media="(min-width: 1550px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/emds.png" media="(min-width: 1200px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/emds.png" media="(min-width: 990px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/emds.png" media="(min-width: 768px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/_processed_/8/4/csm_emds_05984e30fa.png" media="(min-width: 480px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/_processed_/8/4/csm_emds_cd0adaca63.png" media="(min-width: 320px)"/>
+                      <img alt="" class="rimg" data-src="https://cdn1.esetstatic.com/_processed_/8/4/csm_emds_cd0adaca63.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" style="padding:30px 0px 15px 0px;" title=""/>
+                     </picture>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c297527">
+                    <div class="csc-textpic-text">
+                     <h4>
+                      ESET Multi-Device Security
+                     </h4>
+                     <p class="bodytext">
+                      أمن الإنترنت الشامل لجهاز الكمبيوتر الخاص بك، ماك أو أجهزة أندرويد
+                     </p>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-4 col-md-2 ">
+                  </div>
+                 </div>
+                </div>
+                <div class="csc-default" id="content-c297523">
+                 <div class="align-center">
+                  <a class="btn-bordered-light " href="/me-ar/home/multi-device-security/">
+                   إعرف المزيد عن ESET Multi-Device Security
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="pane" id="__">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/support/activate/">
+                تجديد / تنشيط
+               </a>
+               <span class="hidden-to-lg">
+                تجديد / تنشيط
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c297536">
+                 <div class="row flex skin-gutter-l skin-padding-m skin-mb-s">
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default" id="content-c297539">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <a href="https://store.esetme.com/renew/" target="_blank" title="Renew">
+                      <noscript>
+                       <img alt="Renew white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" title="Renew"/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" media="(min-width: 320px)"/>
+                       <img alt="Renew white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="Renew"/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <h3 class="align-center">
+                       تجديد
+                      </h3>
+                      <p class="align-center">
+                       جدد ترخيصك الحالي
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c297538">
+                    <div class="align-center">
+                     <a class="btn-bordered-light-block " href="https://store.esetme.com/renew/" target="_blank">
+                      تجديد
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default" id="content-c297541">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <a href="/me-ar/support/activate/" title="Activate">
+                      <noscript>
+                       <img alt="Activate white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" title="Activate"/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" media="(min-width: 320px)"/>
+                       <img alt="Activate white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="Activate"/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <h3 class="align-center">
+                       تنشيط
+                      </h3>
+                      <p class="align-center">
+                       تنشيط الترخيص
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c297540">
+                    <div class="align-center">
+                     <a class="btn-bordered-light-block " href="/me-ar/support/activate/">
+                      تنشيط
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="csc-default" id="content-c297535">
+                 <p class="align-center">
+                  فقدت الترخيص الخاص بك؟
+                  <a href="/me-ar/support/lost-license/" title="Lost ESET license">
+                   يمكنك العثور عليه هنا
+                  </a>
+                 </p>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </li>
+         <li>
+          <a class="link">
+           منتجات الشركات
+          </a>
+          <div class="submenu">
+           <div class="tabs skin-vertical tabs-submenu" data-module="ui/tabs" data-options='{"store": "true", "isMegamenu": true, "event": "mouseover"}'>
+            <div class="panes">
+             <div class="pane" id="solutions">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/for-business/solutions/">
+                Solutions
+               </a>
+               <span class="hidden-to-lg">
+                Solutions
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c2077878">
+                 <div class="row flex skin-splitted skin-gutter-l skin-mt-s">
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default" id="content-c2077872">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <a href="/me-ar/business/" title="Reseller Program">
+                      <noscript>
+                       <img alt="Reseller Program white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/reseller_white.png" title="Reseller Program"/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/reseller_white.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/reseller_white.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/reseller_white.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/reseller_white.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/reseller_white.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/reseller_white.png" media="(min-width: 320px)"/>
+                       <img alt="Reseller Program white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/reseller_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="Reseller Program"/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <h4 class="align-center">
+                       <strong>
+                        <a href="/me-ar/business/">
+                         BUSINESS SOLUTIONS
+                        </a>
+                       </strong>
+                      </h4>
+                      <p class="align-center">
+                       بغض النظر عن حجم شركتك ، ستحميك إسيت من جميع التهديدات
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c2077870">
+                    <div class="align-center">
+                     <a class="btn-bordered-light btn-small " href="/me-ar/business/">
+                      إكتشف المزيد
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default" id="content-c2077876">
+                    <h4 class="align-left">
+                     محفظة برامجنا
+                    </h4>
+                   </div>
+                   <div class="csc-default skin-mt-s" id="content-c2077874">
+                    <p class="bodytext">
+                     <a href="/me-ar/business/portfolio/">
+                      <strong>
+                       All standalone products
+                      </strong>
+                     </a>
+                     <br/>
+                     تنفيذ حماية البرامج الضارة المتقدمة متعددة الطبقات الفريدة التي تم تطويرها في ١٣ مركزاً عالمياً للبحث و التطوير.
+                    </p>
+                    <p class="bodytext">
+                     <a href="/me-ar/business/services/">
+                      <strong>
+                       Cybersecurity services
+                      </strong>
+                     </a>
+                     <br/>
+                     <span title="">
+                      خدمات إسيت المتخصصة هي مكملاً مثالياً للحلول الأمنية القوية للمؤسسات
+                     </span>
+                     .
+                    </p>
+                    <p class="bodytext">
+                     <a href="/me-ar/business/request-business-trial/">
+                      <strong>
+                       Request a trial or quotation
+                      </strong>
+                     </a>
+                     <br/>
+                     <span title="">
+                      اترك بيانات الإتصال الخاصة بك للحصول على إقتراح مجاني يتم تصميمه وفقاً لإحتياجات شركتك
+                     </span>
+                     .
+                    </p>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="pane" id="by_company_size">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/business/">
+                حسب حجم الشركة
+               </a>
+               <span class="hidden-to-lg">
+                حسب حجم الشركة
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default skin-mb-l" id="content-c2076793">
+                 <h3 class="align-center">
+                  ما هو حجم شركتك؟
+                 </h3>
+                </div>
+                <div class="csc-default" id="content-c2076788">
+                 <div class="row flex skin-mb-l">
+                  <div class="col col-sm-4 ">
+                   <div class="csc-default" id="content-company-size">
+                    <h4 class="align-center bold">
+                     <a href="/me-ar/business/small-business/">
+                      Small business
+                     </a>
+                    </h4>
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above csc-textpic-equalheight">
+                     <a href="/me-ar/business/small-business/">
+                      <noscript>
+                       <img alt="" class="rimg" src="https://cdn1.esetstatic.com/_processed_/b/7/csm_soho-white_bd82e47995.png" title=""/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/b/7/csm_soho-white_7632458451.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/b/7/csm_soho-white_d0b060fde6.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/b/7/csm_soho-white_eeb9407aea.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/b/7/csm_soho-white_79bdc3f024.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/b/7/csm_soho-white_52b9ae601b.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/b/7/csm_soho-white_5ec591310f.png" media="(min-width: 320px)"/>
+                       <img alt="" class="rimg" data-src="https://cdn1.esetstatic.com/_processed_/b/7/csm_soho-white_bd82e47995.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title=""/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <p class="align-center">
+                       <span class="text-label-crimson">
+                        up to 250 seats
+                       </span>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-4 ">
+                   <div class="csc-default skin-mb-s" id="content-company-size">
+                    <h4 class="align-center bold">
+                     <a href="/me-ar/business/mid-size-business/">
+                      Mid-size business
+                     </a>
+                    </h4>
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above csc-textpic-equalheight">
+                     <a href="/me-ar/business/mid-size-business/">
+                      <noscript>
+                       <img alt="" class="rimg" src="https://cdn1.esetstatic.com/_processed_/e/e/csm_smb-white_8a070b8465.png" title=""/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/e/e/csm_smb-white_8985442d9d.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/e/e/csm_smb-white_8775273d90.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/e/e/csm_smb-white_d67e1bee1f.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/e/e/csm_smb-white_9dde91a5f3.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/e/e/csm_smb-white_3214ece3c1.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/e/e/csm_smb-white_38392d469b.png" media="(min-width: 320px)"/>
+                       <img alt="" class="rimg" data-src="https://cdn1.esetstatic.com/_processed_/e/e/csm_smb-white_8a070b8465.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title=""/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <p class="align-center">
+                       <span class="text-label-crimson">
+                        251 - 999 seats
+                       </span>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-4 ">
+                   <div class="csc-default skin-mb-s" id="content-company-size">
+                    <h4 class="align-center bold">
+                     <a href="/me-ar/business/enterprise/">
+                      Enterprise
+                     </a>
+                    </h4>
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above csc-textpic-equalheight">
+                     <a href="/me-ar/business/enterprise/">
+                      <noscript>
+                       <img alt="" class="rimg" src="https://cdn1.esetstatic.com/_processed_/3/6/csm_enterprise-white_802b5bb4af.png" title=""/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/3/6/csm_enterprise-white_85034a99da.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/3/6/csm_enterprise-white_df30301b81.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/3/6/csm_enterprise-white_abe08575d2.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/3/6/csm_enterprise-white_d00cdf90e6.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/3/6/csm_enterprise-white_72ec0417b3.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/_processed_/3/6/csm_enterprise-white_d949c675d1.png" media="(min-width: 320px)"/>
+                       <img alt="" class="rimg" data-src="https://cdn1.esetstatic.com/_processed_/3/6/csm_enterprise-white_802b5bb4af.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title=""/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <p class="align-center">
+                       <span class="text-label-crimson">
+                        1000+ seats
+                       </span>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="csc-default" id="content-c2077130">
+                 <style>
+                  #content-company-size img:hover{ opacity: 0.5; -webkit-transform: translateY(-8px); transform: translateY(-8px); transition: transform 0.5s; }
+                 </style>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="pane" id="_">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/for-business/endpoint-security-solutions/">
+                حماية النهايات
+               </a>
+               <span class="hidden-to-lg">
+                حماية النهايات
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c2077266">
+                 <div class="row flex skin-splitted skin-gutter-l skin-mt-s">
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default" id="content-c2077256">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <a href="/me-ar/business/portfolio/" title="[Translate to United Arab Emirates - Arabic (ar_AE):] Endpoin Security">
+                      <noscript>
+                       <img alt="Endpoint Security white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/endpoinsecurity_white.png" title="[Translate to United Arab Emirates - Arabic (ar_AE):] Endpoin Security"/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/endpoinsecurity_white.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/endpoinsecurity_white.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/endpoinsecurity_white.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/endpoinsecurity_white.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/endpoinsecurity_white.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/endpoinsecurity_white.png" media="(min-width: 320px)"/>
+                       <img alt="Endpoint Security white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/endpoinsecurity_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="[Translate to United Arab Emirates - Arabic (ar_AE):] Endpoin Security"/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <h4 class="align-center">
+                       <strong>
+                        <a href="/me-ar/business/portfolio/#endpoint-security">
+                         ENDPOINT SECURITY
+                        </a>
+                       </strong>
+                      </h4>
+                      <p class="bodytext">
+                       <span class="tlid-translation translation">
+                        حافظ على الأداء و الكشف و الإيجابيات الخاطئة بإستمرار في توازن مع نهجنا متعدد الطبقات
+                       </span>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c2077254">
+                    <div class="align-center">
+                     <a class="btn-bordered-light btn-small " href="/me-ar/business/portfolio/#endpoint-security">
+                      إكتشف الحلول
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default skin-mb-s" id="content-c2077264">
+                    <h4 class="align-left">
+                     الحلول الموصى بها
+                    </h4>
+                   </div>
+                   <div class="csc-default skin-mt-s" id="content-c2077262">
+                    <ul class="list-dotmark list-skin-white">
+                     <li>
+                      <a href="/me-ar/business/portfolio/#endpoint-security">
+                       <strong>
+                        Endpoint Protection
+                       </strong>
+                      </a>
+                     </li>
+                     <li>
+                      <a href="/me-ar/business/portfolio/#remote-management">
+                       <strong>
+                        Remote Management
+                       </strong>
+                      </a>
+                     </li>
+                    </ul>
+                   </div>
+                   <div class="csc-default skin-mt-s" id="content-c2077322">
+                    <ul class="list-dotmark list-skin-white">
+                     <li>
+                      <a href="/me-ar/business/endpoint-encryption/">
+                       <strong>
+                        Encryption
+                       </strong>
+                      </a>
+                     </li>
+                     <li>
+                      <a href="/me-ar/business/secure-authentication/">
+                       <strong>
+                        Secure Authentication
+                       </strong>
+                      </a>
+                     </li>
+                    </ul>
+                   </div>
+                   <div class="csc-default skin-mt-s" id="content-c2077324">
+                    <ul class="list-dotmark list-skin-white">
+                     <li>
+                      <span style="font-size: 15px; ">
+                       <a href="/me-ar/business/backup-recovery-xopero/">
+                        <strong>
+                         Backup/Recovery
+                        </strong>
+                       </a>
+                      </span>
+                     </li>
+                     <li>
+                      <span style="font-size: 15px; ">
+                       <a href="/me-ar/business/data-loss-prevention-safetica/">
+                        <strong>
+                         Data Loss Prevention
+                        </strong>
+                       </a>
+                      </span>
+                     </li>
+                     <li>
+                      <span style="font-size: 15px; ">
+                       <a href="/me-ar/business/network-security-greycortex-mendel/">
+                        <strong>
+                         Network Security
+                        </strong>
+                       </a>
+                      </span>
+                     </li>
+                    </ul>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="pane" id="server_security">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/for-business/server-security-solutions/">
+                حماية الخوادم
+               </a>
+               <span class="hidden-to-lg">
+                حماية الخوادم
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c2077347">
+                 <div class="row flex skin-splitted skin-gutter-l skin-mt-s">
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default" id="content-c2077345">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <a href="/me-ar/business/portfolio/#server-security" title="Server security">
+                      <noscript>
+                       <img alt="Server security white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/server_security_white.png" title="Server security "/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/server_security_white.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/server_security_white.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/server_security_white.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/server_security_white.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/server_security_white.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/server_security_white.png" media="(min-width: 320px)"/>
+                       <img alt="Server security white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/server_security_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="Server security "/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <h4 class="align-center">
+                       <strong>
+                        <a href="/me-ar/business/portfolio/#server-security">
+                         SERVER SECURITY
+                        </a>
+                       </strong>
+                      </h4>
+                      <p class="bodytext">
+                       يمكن ضمان الحماية المتقدمة لجميع الخوادم مع إستمرارية العمل
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c2077346">
+                    <div class="align-center">
+                     <a class="btn-bordered-light btn-small " href="/me-ar/business/portfolio/#server-security">
+                      View solutions
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default skin-mb-s" id="content-c2077341">
+                    <h4 class="align-left">
+                     الحلول الموصى بها
+                    </h4>
+                   </div>
+                   <div class="csc-default skin-mt-s" id="content-c2077342">
+                    <ul class="list-dotmark list-skin-white">
+                     <li>
+                      <a href="/me-ar/business/portfolio/#mail-security">
+                       <strong>
+                        File Server Security
+                       </strong>
+                      </a>
+                     </li>
+                     <li>
+                      <a href="/me-ar/business/portfolio/#mail-security">
+                       <strong>
+                        Mail Server Security
+                       </strong>
+                      </a>
+                     </li>
+                     <li>
+                      <a href="/me-ar/business/microsoft-sharepoint-security/">
+                       <strong>
+                        SharePoint Security
+                       </strong>
+                      </a>
+                     </li>
+                     <li>
+                      <a href="/me-ar/business/gateway-security-linux/">
+                       <strong>
+                        Gateway Security
+                       </strong>
+                      </a>
+                     </li>
+                     <li>
+                      <a href="/me-ar/business/portfolio/#mail-security">
+                       <strong>
+                        Virtualization Security
+                       </strong>
+                      </a>
+                     </li>
+                    </ul>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="pane" id="services">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/for-business/services/">
+                الخدمات
+               </a>
+               <span class="hidden-to-lg">
+                الخدمات
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c2077780">
+                 <div class="row flex skin-splitted skin-gutter-l skin-mt-s">
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default" id="content-c2077778">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <a href="/me-ar/business/services/" title="Security Services">
+                      <noscript>
+                       <img alt="Security Services white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/security_services_white.png" title="Security Services"/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/security_services_white.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/security_services_white.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/security_services_white.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/security_services_white.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/security_services_white.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/security_services_white.png" media="(min-width: 320px)"/>
+                       <img alt="Security Services white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/security_services_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="Security Services"/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <h4 class="align-center">
+                       <strong>
+                        <a href="/me-ar/business/services/">
+                         SERVICES
+                        </a>
+                       </strong>
+                      </h4>
+                      <p class="bodytext">
+                       <span class="tlid-translation translation">
+                        تعد خدمات إسيت بمثابة تكملة مثالية لحلولنا الأمنية
+                       </span>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c2077779">
+                    <div class="align-center">
+                     <a class="btn-bordered-light btn-small " href="/me-ar/business/services/">
+                      View services
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default skin-mb-s" id="content-c2077776">
+                    <h4 class="align-left">
+                     Related services
+                    </h4>
+                   </div>
+                   <div class="csc-default skin-mt-s" id="content-c2077777">
+                    <ul class="list-dotmark list-skin-white">
+                     <li>
+                      <strong style="font-size: 15px;">
+                       <span style="font-size: 15px;">
+                        <a href="/me-ar/business/services/threat-intelligence/">
+                         Threat Intelligence
+                        </a>
+                       </span>
+                      </strong>
+                     </li>
+                     <li>
+                      <span style="font-size: 15px; ">
+                       <a href="/me-ar/business/services/eset-authorized-training-center/">
+                        <strong>
+                         Authorized Training Center
+                        </strong>
+                       </a>
+                      </span>
+                     </li>
+                     <li>
+                      <span style="font-size: 15px;">
+                       <a href="/me-ar/business/services/micro-updates/">
+                        <strong>
+                         Micro Updates
+                        </strong>
+                       </a>
+                      </span>
+                     </li>
+                    </ul>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="pane" id="msp__">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/for-business/msp/">
+                MSP و المشاركة
+               </a>
+               <span class="hidden-to-lg">
+                MSP و المشاركة
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c2077853">
+                 <div class="row flex skin-splitted skin-gutter-l skin-mt-s">
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default" id="content-c2077843">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <a href="/me-ar/business/partner/msp/" title="Partner with ESET">
+                      <noscript>
+                       <img alt="Partner with ESET" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/msp_white.png" title="Partner with ESET"/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/msp_white.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/msp_white.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/msp_white.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/msp_white.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/msp_white.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/msp_white.png" media="(min-width: 320px)"/>
+                       <img alt="Partner with ESET" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/msp_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="Partner with ESET"/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <h4 class="align-center">
+                       <strong>
+                        <a href="/me-ar/business/partner/msp/">
+                         MANAGED SERVICE PROVIDERS
+                        </a>
+                       </strong>
+                      </h4>
+                      <p class="align-center">
+                       إكتشف برنامج إسيت MSP مع الفواتير اليومية و الشهرية
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c2077841">
+                    <div class="align-center">
+                     <a class="btn-bordered-light btn-small " href="/me-ar/business/partner/msp/">
+                      المزيد
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default" id="content-c2077851">
+                    <h4 class="align-left">
+                     Partnerships
+                    </h4>
+                   </div>
+                   <div class="csc-default skin-mt-s" id="content-c2077849">
+                    <ul class="list-dotmark">
+                     <li>
+                      <a href="/me-ar/business/partner/reseller/" title="Become a reseller">
+                       <strong>
+                        Become a reseller
+                       </strong>
+                      </a>
+                      <strong>
+                      </strong>
+                     </li>
+                     <li>
+                      <a href="/me-ar/business/partner/anti-malware-sdk/" title="Anti-malware SDK">
+                       <strong>
+                        Anti-malware SDK
+                       </strong>
+                      </a>
+                     </li>
+                     <li>
+                      <strong>
+                       <a href="/me-ar/business/partner/isp-telco-operators/">
+                        ISP &amp; Telco
+                       </a>
+                      </strong>
+                     </li>
+                     <li>
+                      <strong>
+                       <a href="/me-ar/business/partner/integration/" title="Integration Program">
+                        Integration Program
+                       </a>
+                      </strong>
+                     </li>
+                     <li>
+                      <strong>
+                       <a href="/me-ar/business/partner/technology-alliance/" title="Technology Alliance">
+                        Technology Alliance
+                       </a>
+                      </strong>
+                     </li>
+                    </ul>
+                   </div>
+                   <div class="csc-default" id="content-c2077845">
+                    <a class="btn-bordered-light btn-small " href="/me-ar/business/partner/">
+                     المزيد عن المشاركة
+                    </a>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </li>
+         <li>
+          <a class="link" href="https://store.esetme.com/" target="_blank">
+           المتجر الإلكتروني
+          </a>
+         </li>
+         <li>
+          <a class="link">
+           التحميل
+          </a>
+          <div class="submenu">
+           <div class="tabs skin-vertical tabs-submenu" data-module="ui/tabs" data-options='{"store": "true", "isMegamenu": true, "event": "mouseover"}'>
+            <div class="panes">
+             <div class="pane" id="">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/downloadstab/">
+                التحميل
+               </a>
+               <span class="hidden-to-lg">
+                التحميل
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c1376723">
+                 <div class="row flex skin-gutter-l">
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default" id="content-c1376719">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <noscript>
+                      <img alt="Download for Home white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" title="Download for Home"/>
+                     </noscript>
+                     <picture>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" media="(min-width: 1550px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" media="(min-width: 1200px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" media="(min-width: 990px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" media="(min-width: 768px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" media="(min-width: 480px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" media="(min-width: 320px)"/>
+                      <img alt="Download for Home white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="Download for Home"/>
+                     </picture>
+                     <div class="csc-textpic-text">
+                      <h3 class="align-center">
+                       تحميل للمنازل
+                      </h3>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c1376720">
+                    <div class="align-center">
+                     <a class="btn-block " href="/me-ar/home/free-trial/">
+                      احصل على نسخة تجريبية مجانية لمدة ٣٠ يوماً
+                     </a>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c1376721">
+                    <div style="height:5px">
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c1376722">
+                    <div class="align-center">
+                     <a class="btn-bordered-light-block " href="/me-ar/download-home/">
+                      لقد اشتريت مسبقاً
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default" id="content-c1376715">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <noscript>
+                      <img alt="Download for Business white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" title="Download for Business"/>
+                     </noscript>
+                     <picture>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" media="(min-width: 1550px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" media="(min-width: 1200px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" media="(min-width: 990px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" media="(min-width: 768px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" media="(min-width: 480px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" media="(min-width: 320px)"/>
+                      <img alt="Download for Business white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="Download for Business"/>
+                     </picture>
+                     <div class="csc-textpic-text">
+                      <h3 class="align-center">
+                       تحميل للشركات
+                      </h3>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c1376716">
+                    <div class="align-center">
+                     <a class="btn-block " href="/me-ar/business/request-business-trial/">
+                      احصل على نسخة تجريبية مجانية للشركات
+                     </a>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c1376717">
+                    <div style="height:5px">
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c1376718">
+                    <div class="align-center">
+                     <a class="btn-bordered-light-block " href="/me-ar/business/portfolio/">
+                      لدي ترخيص بالفعل للشركات
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="csc-default skin-mt-s" id="content-c1376714">
+                 <p class="align-center">
+                  <a href="/me-ar/download-utilities/">
+                   الأدوات و المرفقات
+                  </a>
+                 </p>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </li>
+         <li>
+          <a class="link">
+           الدعم
+          </a>
+          <div class="submenu">
+           <div class="tabs skin-vertical tabs-submenu" data-module="ui/tabs" data-options='{"store": "true", "isMegamenu": true, "event": "mouseover"}'>
+            <div class="panes">
+             <div class="pane" id="renew__activate">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/support/activate/">
+                تجديد / تنشيط
+               </a>
+               <span class="hidden-to-lg">
+                تجديد / تنشيط
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c785818">
+                 <div class="row flex skin-gutter-l skin-padding-m skin-mb-s">
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default" id="content-c785816">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <a href="https://store.esetme.com/renew/" target="_blank" title="Renew">
+                      <noscript>
+                       <img alt="Renew white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" title="Renew"/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" media="(min-width: 320px)"/>
+                       <img alt="Renew white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/renew_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="Renew"/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <h3 class="align-center">
+                       تجديد
+                      </h3>
+                      <p class="align-center">
+                       جدد ترخيص إسيت الحالى
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c785817">
+                    <div class="align-center">
+                     <a class="btn-bordered-light-block " href="https://store.esetme.com/renew/" target="_blank">
+                      تجديد
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default" id="content-c785814">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <a href="/me-ar/support/activate/" title="Activate">
+                      <noscript>
+                       <img alt="Activate white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" title="Activate"/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" media="(min-width: 320px)"/>
+                       <img alt="Activate white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/activate_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" title="Activate"/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <h3 class="align-center">
+                       تنشيط
+                      </h3>
+                      <p class="align-center">
+                       تنشيط شراء البرنامج في المتجر الإلكترونى
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c785815">
+                    <div class="align-center">
+                     <a class="btn-bordered-light-block " href="/me-ar/support/activate/">
+                      تنشيط
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="csc-default" id="content-c785819">
+                 <p class="align-center">
+                  فقدت الترخيص الخاص بك؟
+                  <a href="/me-ar/support/lost-license/" title="Lost ESET license">
+                   يمكنك العثور عليه هنا
+                  </a>
+                 </p>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="pane" id="technical_support">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/support/">
+                الدعم التقنى
+               </a>
+               <span class="hidden-to-lg">
+                الدعم التقنى
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c297590">
+                 <div class="row flex ">
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default skin-mb-s" id="content-c297593">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <a href="http://support.eset.com/?segment=home" target="_blank" title="Home FAQ">
+                      <noscript>
+                       <img alt="Home FAQ white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homefaq_white.png" style="padding:0px 0px 0px 0px;" title="Home FAQ"/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homefaq_white.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homefaq_white.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homefaq_white.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homefaq_white.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homefaq_white.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homefaq_white.png" media="(min-width: 320px)"/>
+                       <img alt="Home FAQ white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homefaq_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" style="padding:0px 0px 0px 0px;" title="Home FAQ"/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <h3 class="align-center">
+                       الدعم للمنازل
+                      </h3>
+                      <p class="align-center">
+                       <a href="http://support.eset.com/?segment=home" target="_blank">
+                        المساعدة فى التحميل و التثبيت
+                       </a>
+                      </p>
+                      <p class="align-center">
+                       <a href="http://support.eset.com/kb2434/" target="_blank">
+                        مشاكل فى التنشيط
+                       </a>
+                      </p>
+                      <p class="align-center">
+                       <a href="http://support.eset.com/kb2850/" target="_blank">
+                        خلل أثناء تحديث المنتجات
+                       </a>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c297592">
+                    <div class="align-center">
+                     <a class="btn " href="http://support.eset.com/?segment=home&amp;locale=ar_ME" target="_blank">
+                      الدعم للمنازل
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-6 ">
+                   <div class="csc-default skin-mb-s" id="content-c297595">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <a href="http://support.eset.com/?segment=business" target="_blank" title="Business FAQ">
+                      <noscript>
+                       <img alt="Business FAQ white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessfaq_white.png" style="padding:0px 0px 0px 0px;" title="Business FAQ"/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessfaq_white.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessfaq_white.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessfaq_white.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessfaq_white.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessfaq_white.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessfaq_white.png" media="(min-width: 320px)"/>
+                       <img alt="Business FAQ white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessfaq_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" style="padding:0px 0px 0px 0px;" title="Business FAQ"/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <h3 class="align-center">
+                       الدعم للشركات
+                      </h3>
+                      <p class="align-center">
+                       <a href="http://support.eset.com/kb3590/" target="_blank">
+                        أسئلة عن ESET Remote Administrator
+                       </a>
+                      </p>
+                      <p class="align-center">
+                       <a href="http://support.eset.com/kb3613/" target="_blank">
+                        تثبيت حلول النهايات
+                       </a>
+                      </p>
+                      <p class="align-center">
+                       <a href="http://support.eset.com/news/" target="_blank">
+                        أخبار الدعم
+                       </a>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c297594">
+                    <div class="align-center">
+                     <a class="btn " href="http://support.eset.com/?segment=business&amp;locale=ar_ME" target="_blank">
+                      الدعم للشركات
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="pane" id="downloads">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/home/free-trial/">
+                التحميل
+               </a>
+               <span class="hidden-to-lg">
+                التحميل
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c297596">
+                 <div class="row flex ">
+                  <div class="col col-sm-4 ">
+                   <div class="csc-default" id="content-c297598">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <a href="/me-ar/download-home/" title="Download for Home">
+                      <noscript>
+                       <img alt="Download for Home white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" style="padding:0px 0px 0px 0px;" title="Download for Home"/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" media="(min-width: 320px)"/>
+                       <img alt="Download for Home white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/homedownload_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" style="padding:0px 0px 0px 0px;" title="Download for Home"/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <h3 class="align-center">
+                       للمنازل
+                      </h3>
+                      <p class="align-center">
+                       تحميل البرنامج الخاص بك (مفتاح الترخيص مطلوب) أو تحميل نسخة تجريبية من إسيت مجاناً
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c297597">
+                    <div class="align-center">
+                     <a class="btn " href="/me-ar/download-home/">
+                      تحميل
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-4 ">
+                   <div class="csc-default" id="content-c297600">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <noscript>
+                      <img alt="Download for Business white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" style="padding:0px 0px 0px 0px;" title="Download for Business"/>
+                     </noscript>
+                     <picture>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" media="(min-width: 1550px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" media="(min-width: 1200px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" media="(min-width: 990px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" media="(min-width: 768px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" media="(min-width: 480px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" media="(min-width: 320px)"/>
+                      <img alt="Download for Business white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/businessdownload_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" style="padding:0px 0px 0px 0px;" title="Download for Business"/>
+                     </picture>
+                     <div class="csc-textpic-text">
+                      <h3 class="align-center">
+                       للمنازل
+                      </h3>
+                      <p class="align-center">
+                       تحميل البرنامج الخاص بك (مفتاح الترخيص مطلوب). طلب نسخة تجريبية مجانية هنا
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c297599">
+                    <div class="align-center">
+                     <a class="btn " href="/me-ar/business/portfolio/">
+                      تحميل
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-4 ">
+                   <div class="csc-default" id="content-c297603">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <noscript>
+                      <img alt="Download others white icon" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/otherdownload_white.png" style="padding:0px 0px 0px 0px;" title="Download others"/>
+                     </noscript>
+                     <picture>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/otherdownload_white.png" media="(min-width: 1550px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/otherdownload_white.png" media="(min-width: 1200px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/otherdownload_white.png" media="(min-width: 990px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/otherdownload_white.png" media="(min-width: 768px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/otherdownload_white.png" media="(min-width: 480px)"/>
+                      <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/otherdownload_white.png" media="(min-width: 320px)"/>
+                      <img alt="Download others white icon" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/otherdownload_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" style="padding:0px 0px 0px 0px;" title="Download others"/>
+                     </picture>
+                     <div class="csc-textpic-text">
+                      <h3 class="align-center">
+                       أخرى
+                      </h3>
+                      <p class="align-center">
+                       تحميل أدوات الأمان و المرافق و نسخة بيتا مجاناً.
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c297602">
+                    <div class="align-center">
+                     <a class="link " href="/me-ar/download-utilities/">
+                      الأدوات والمرافق
+                     </a>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c297601">
+                    <div class="align-center">
+                     <a class="link " href="/me-ar/download-beta/">
+                      إصدارات بيتا
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="pane" id="support_form">
+              <span class="title">
+               <a class="hidden-from-lg " href="/me-ar/support/contact-support/">
+                نموزج الدعم
+               </a>
+               <span class="hidden-to-lg">
+                نموزج الدعم
+               </span>
+              </span>
+              <div class="content">
+               <div class="content-wrapper">
+                <div class="csc-default" id="content-c785833">
+                 <div class="row flex ">
+                  <div class="col col-sm-4 ">
+                  </div>
+                  <div class="col col-sm-4 ">
+                   <div class="csc-default" id="content-c785829">
+                    <div class="csc-textpic csc-textpic-center csc-textpic-above">
+                     <a href="/me-ar/support/contact-support/">
+                      <noscript>
+                       <img alt="[Translate to United Arab Emirates - Arabic (ar_AE):] ESET Technical Support" class="rimg" src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/premium_support_white.png" style="padding:0px 0px 0px 0px;" title=""/>
+                      </noscript>
+                      <picture>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/premium_support_white.png" media="(min-width: 1550px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/premium_support_white.png" media="(min-width: 1200px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/premium_support_white.png" media="(min-width: 990px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/premium_support_white.png" media="(min-width: 768px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/premium_support_white.png" media="(min-width: 480px)"/>
+                       <source data-srcset="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/premium_support_white.png" media="(min-width: 320px)"/>
+                       <img alt="[Translate to United Arab Emirates - Arabic (ar_AE):] ESET Technical Support" class="rimg" data-src="https://cdn1.esetstatic.com/ESET/INT/Floated/Icons/100x100/White/premium_support_white.png" src="https://cdn1.esetstatic.com/ESET/INT/assets/img/transparent1x1px.png" style="padding:0px 0px 0px 0px;" title=""/>
+                      </picture>
+                     </a>
+                     <div class="csc-textpic-text">
+                      <h3 class="align-center">
+                       نموزج الدعم
+                      </h3>
+                      <p class="align-center">
+                       إتصل بالدعم التقني
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="csc-default" id="content-c785830">
+                    <div class="align-center">
+                     <a class="btn " href="/me-ar/support/contact-support/">
+                      نموزج الدعم
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col col-sm-4 ">
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </li>
+        </ul>
+        <ul class="nav nav-secondary">
+         <li id="item-search">
+          <a class="link link-search" href="#" id="link-search" title="Search">
+           <span class="icon">
+            <i class="ficon-search">
+            </i>
+           </span>
+           <span class="name">
+            بحث
+           </span>
+          </a>
+         </li>
+         <li id="item-page">
+          <a class="link link-language " href="/me-ar/home/cyber-security/" id="link-language" title="MIDDLE EAST">
+           <span class="icon">
+            <i class="ficon-globe-half">
+             <span class="language-label with-caret">
+              ar
+             </span>
+            </i>
+           </span>
+           <span class="name">
+            الشرق الأوسط
+           </span>
+          </a>
+         </li>
+         <li id="item-menu">
+          <a class="link link-menu" href="#" id="link-menu" title="Menu">
+           <span class="icon">
+            <i class="ficon-menu">
+            </i>
+           </span>
+           <span class="name">
+            القائمة
+           </span>
+          </a>
+         </li>
+        </ul>
+       </nav>
+      </div>
+     </header>
+     <div class="footer-scroll-to-top-wrapper">
+      <button class="scroll-to top">
+       <i class="icon ficon-scroll-up">
+       </i>
+      </button>
+     </div>
+     <div class="csc-default" id="content-c297633">
+      <footer class="footer" id="footer">
+       <div class="container">
+        <ul class="row nav nav-sitemap-footer" data-module="ui/footer-navigation">
+         <div class="csc-default" id="content-c297687">
+          <li class="sitemap-section col col-md-2">
+           <dl>
+            <dt>
+             برامج الحماية للمنازل
+            </dt>
+            <dd>
+             <a class="" href="/me-ar/home/" id="content-c297683">
+              كل البرامج
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/home/multi-device-security/" id="content-c297675">
+              حماية أجهزة متعددة
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/home/for-windows/" id="content-c297672">
+              منتجات ويندوز
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/home/for-mac/" id="content-c297665">
+              منتجات ماك
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/home/#?platform=android&amp;devices=1&amp;years=1" id="content-c297659">
+              منتجات أندرويد
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/home/free-trial/" id="content-c297653">
+              تحميل نسخة تجريبية
+             </a>
+            </dd>
+           </dl>
+          </li>
+         </div>
+         <div class="csc-default" id="content-c297680">
+          <li class="sitemap-section col col-md-2">
+           <dl>
+            <dt>
+             برامج الحماية للشركات
+            </dt>
+            <dd>
+             <a class="" href="/me-ar/business/" id="content-c297682">
+              نبذة عن منتجات الشركات
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/business/portfolio/" id="content-c297674">
+              حماية النهايات
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/business/portfolio/" id="content-c297667">
+              حماية الخوادم
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/business/portfolio/" id="content-c297661">
+              الإدارة عن بعد
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/business/services/" id="content-c297655">
+              خدمات الأمن
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/business/partner/" id="content-c297650">
+              شريكاً مع إسيت
+             </a>
+            </dd>
+           </dl>
+          </li>
+         </div>
+         <div class="csc-default" id="content-c297673">
+          <li class="sitemap-section col col-md-2">
+           <dl>
+            <dt>
+             حسب حجم الشركة
+            </dt>
+            <dd>
+             <a class="" href="/me-ar/business/small-business/" id="content-c297684">
+              المكاتب و الشركات الصغيرة
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/business/mid-size-business/" id="content-c297676">
+              الشركات المتوسطة و الكبيرة
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/business/enterprise/" id="content-c297668">
+              المؤسسات الكبرى
+             </a>
+            </dd>
+           </dl>
+          </li>
+         </div>
+         <div class="csc-default" id="content-c297666">
+          <li class="sitemap-section col col-md-2">
+           <dl>
+            <dt>
+             الشركاء
+            </dt>
+            <dd>
+             <a class="" href="/me-ar/business/partner/msp/" id="content-c297685">
+              برنامج MSP
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/business/partner/reseller/" id="content-c297678">
+              برنامج الموزعين
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/business/partner/isp-telco-operators/" id="content-c297670">
+              ISP &amp; Telco
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/business/partner/integration/" id="content-c297663">
+              التكامل
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/business/partner/technology-alliance/" id="content-c297657">
+              التكنولوجيا المتحدة
+             </a>
+            </dd>
+           </dl>
+          </li>
+         </div>
+         <div class="csc-default" id="content-c297660">
+          <li class="sitemap-section col col-md-2">
+           <dl>
+            <dt>
+             عن إسيت
+            </dt>
+            <dd>
+             <a class="" href="/me-ar/about/" id="content-c297681">
+              نبذة عنا
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/about/why-eset/" id="content-c297677">
+              لماذا إسيت
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/about/newsroom/" id="content-c297669">
+              غرفة الأخبار
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/about/technology/" id="content-c297662">
+              التقنية
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/about/careers/" id="content-c297656">
+              الوظائف
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/beta/" id="content-c297651">
+              برامج بيتا
+             </a>
+            </dd>
+           </dl>
+          </li>
+         </div>
+         <div class="csc-default" id="content-c297654">
+          <li class="sitemap-section col col-md-2">
+           <dl>
+            <dt>
+             الدعم
+            </dt>
+            <dd>
+             <a class="" href="https://support.eset.com/?segment=home&amp;locale=ar_ME" id="content-c297686" target="_blank">
+              دعم المنازل
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="https://support.eset.com/?segment=business&amp;locale=ar_ME" id="content-c297679" target="_blank">
+              دعم الشركات
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/download-home/" id="content-c297671">
+              تحميل للمنازل
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="/me-ar/business/portfolio/" id="content-c297664">
+              تحميل للشركات
+             </a>
+            </dd>
+            <dd>
+             <a class="" href="http://forum.eset.com" id="content-c297652" target="_blank">
+              منتدى الحماية
+             </a>
+            </dd>
+           </dl>
+          </li>
+         </div>
+        </ul>
+       </div>
+       <div class="container">
+        <div class="realign">
+         <ul class="nav nav-social-profiles" data-module="ui/social-profiles">
+          <li>
+           <a class=" provider-facebook" href="https://www.facebook.com/EsetMiddleEast/" id="content-c297642" target="_blank">
+            <i class="icon ficon-facebook">
+            </i>
+            <span class="name">
+             Facebook
+            </span>
+           </a>
+          </li>
+          <li>
+           <a class=" provider-twitter" href="https://twitter.com/EsetMiddleEast" id="content-c297641" target="_blank" title="Twitter">
+            <i class="icon ficon-twitter">
+            </i>
+            <span class="name">
+             Twitter
+            </span>
+           </a>
+          </li>
+          <li>
+           <a class=" provider-youtube" href="http://www.youtube.com/user/esetmiddleeast" id="content-c297640" target="_blank">
+            <i class="icon ficon-youtube">
+            </i>
+            <span class="name">
+             Youtube
+            </span>
+           </a>
+          </li>
+          <li>
+           <a class=" provider-linkedin" href="http://www.linkedin.com/company/eset-middle-east" id="content-c297639" target="_blank">
+            <i class="icon ficon-linkedin">
+            </i>
+            <span class="name">
+             LinkedIn
+            </span>
+           </a>
+          </li>
+          <li>
+           <a class=" provider-google" href="https://plus.google.com/106469875546325710629" id="content-c297637" target="_blank">
+            <i class="icon ficon-google">
+            </i>
+            <span class="name">
+             Google+
+            </span>
+           </a>
+          </li>
+          <li>
+           <a class=" provider-rss" href="/me-ar/rss/" id="content-c297636">
+            <i class="icon ficon-rss">
+            </i>
+            <span class="name">
+             RSS
+            </span>
+           </a>
+          </li>
+         </ul>
+         <ul class="nav nav-meta-footer">
+          <li>
+           <a class="" href="/me-ar/about/contact/" id="content-c297647">
+            اتصل بنا
+           </a>
+          </li>
+          <li>
+           <a class="" href="/me-ar/privacy/" id="content-c297646">
+            الخصوصية
+           </a>
+          </li>
+          <li>
+           <a class="" href="/me-ar/legal-information/" id="content-c297645">
+            معلومات قانونية
+           </a>
+          </li>
+          <li>
+           <a class="" href="/me-ar/security-vulnerability-reporting/" id="content-c297644">
+            الإبلاغ عن نقاط الضعف
+           </a>
+          </li>
+          <li>
+           <a class="" href="/me-ar/sitemap/" id="content-c297643">
+            خريطة الموقع
+           </a>
+          </li>
+         </ul>
+         <div class="logo-and-copyright">
+          <div>
+           <a class="logo" href="/me-ar/" id="content-c297634">
+            <span class=" ">
+            </span>
+           </a>
+          </div>
+          <p class="copyright">
+           © ١٩٩٢ - ٢٠١٩ ESET, spol. s r.o. -كل الحقوق محفوظة. و العلامات التجارية المستخدمةهي علامات تجارية مسجلة لإسيت، , spol. s r.o. أو إسيت أمريكا الشمالية. جميع الأسماء و العلامات التجارية الأخرى هي علامات تجارية مسجلة للشركات الخاصة بها.
+          </p>
+         </div>
+        </div>
+       </div>
+      </footer>
+     </div>
+    </div>
+    <aside class="sidebar" data-module="ui/sidebar" id="sidebar">
+    </aside>
+   </div>
+  </div>
+  <script>
+   var templateBaseUrl = "https://cdn1.esetstatic.com/typo3conf/ext/eset_base/Resources/Public/js";
+	var geoApiUrl = "/me-ar/?type=13554&tx_esetdownloads_ajax%5Baction%5D=getGeo&tx_esetdownloads_ajax%5Bcontroller%5D=Downloads";
+	var cartMetaApiUrl = "/me-ar/about/careers/?type=13544";
+	var autocompleteApiUrl = "/me-ar/?type=13555";
+ var sidebarApiUrl = "/me-ar/?type=99999";
+	var cartViewAllUrl = "/me-ar/home/";
+	
+			var cartApiUrl = "";
+			var cartSid = "0";
+		
+	var i18n = {
+		user: 'User',
+		users: 'Users',
+		year: 'Year',
+		years: 'Years',
+ month: 'Month',
+ months: 'Months',
+		remove: 'Remove',
+		checkout: 'Checkout',
+		subtotal: 'Subtotal',
+		emptyCart: 'Your cart is empty.',
+		viewAll: 'View all products'
+	};
+  </script>
+  <script>
+   jQuery( document ).ready(function() {
+try {
+ var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+ if (MutationObserver) {
+ var obsConfig = { childList: true, characterData: true, attributes: true, subtree: true };
+ var myObserver = new MutationObserver (function (mutationRecords) { 
+ mutationRecords.forEach ( function (mutation) { 
+ if (mutation.type === 'childList') {
+ jQuery('.dynamic-links a').each(function () { 
+ switch (jQuery(this).text()) {
+ case 'User guide':
+ jQuery(this).text('دليل المستخدم');
+ break; 
+ case 'Quick-start guide':
+ jQuery(this).text('دليل البدء السريع');
+ break;
+		 case 'Guide for Small and Medium-sized Businesses':
+ jQuery(this).text('دليل الشركات المتوسطة والمحدودة');
+ break;
+		 case 'Installation, Upgrade and Migration Guide':
+ jQuery(this).text('دليل التنصيب، الترقية والاستبدال');
+ break;
+	 case 'Virtual Appliance deployment guide':
+ jQuery(this).text('دليل دمج وتفعيل الأجهزة الافتراضية');
+ break;
+	 case 'Administration guide':
+ jQuery(this).text('دليل الإدارة');
+ break;
+	 case 'Installation manual and User Guide':
+ jQuery(this).text('دليل المستخدم للتنصيب والاستخدام');
+ break;
+ }
+ });
+ jQuery('.form-label span').each(function () { 
+ switch (jQuery(this).text()) {
+ case 'ERA All-in-one installer type':
+ jQuery(this).text('تثبيت ERA الكل في واحد');
+ break;
+					 case 'ERA Component':
+ jQuery(this).text('مكونات ERA');
+ break;
+					 case 'ERA Appliance':
+ jQuery(this).text('وحدة ERA');
+ break;
+					 case 'File Type':
+ jQuery(this).text('نوع الملف');
+ break;
+					 case 'Has AV Remover':
+ jQuery(this).text('به مُزيل لمُضاد الفيروسات');
+ break;
+					 case 'Hypervisor Type':
+ jQuery(this).text('نوع نظام المراقبة للأجهزة الإفتراضية');
+ break;
+					 case 'Installer Type':
+ jQuery(this).text('نوع المُثبت');
+ break;
+					 case 'Installers package':
+ jQuery(this).text('حزمة المُثبتات');
+ break;
+					 case 'Operating system and Bitness':
+ jQuery(this).text('نظام التشغيل والسعة الرقمية');
+ break;
+ case 'Language':
+ jQuery(this).text('اللغة');
+ break;
+ case 'Operating system':
+ jQuery(this).text('نظام التشغيل');
+ break;
+					 case 'Operating system and Bitness and Has AV Remover':
+ jQuery(this).text('نظام التشغيل، السعة الرقمية، و به مُزيل لمضاد الفيروسات');
+ break;
+					 case 'Plug-in type':
+ jQuery(this).text('نوع البرنامج المساعد/الإضافة');
+ break;
+					 case 'Virtualization Platform':
+ jQuery(this).text('المنصة الإفتراضية');
+ break;
+					 case 'Virtualization security component':
+ jQuery(this).text('مكونات الحماية الإفتراضية');
+ break;
+		 case 'Programming language':
+ jQuery(this).text('لغة البرمجة');
+ break;
+ }
+ });
+ }
+
+ } );
+ }); 
+ jQuery( ".product-download" ).each(function(){
+ myObserver.observe (this, obsConfig);
+ }); 
+ }
+} catch (error) {};
+});
+  </script>
+  <style>
+   h1.card-title, h1.claim { line-height: 1.3em !important; }
+  </style>
+  <script crossorigin="anonymous" integrity="sha384-EDGY7mEjVdiqzTwS9MKcA0piIPDK/BZcT24lWWY6/L6CTTJh1/t1S/pDq7po7Nur" src="https://cdn1.esetstatic.com/typo3conf/ext/eset_base/Resources/Public/js/dist/bundle.b4b6c64766e1703fa527.js" type="text/javascript">
+  </script>
+ </body>
+</html>

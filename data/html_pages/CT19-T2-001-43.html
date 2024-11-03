@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="ar">
+ <head>
+  <title>
+   حماية جهازك من البرمجيات الخبيثة وهجمات المخترقين
+  </title>
+  <meta content="حماية جهازك من البرمجيات الخبيثة وهجمات المخترقين" name="description"/>
+  <meta content="Tactical Technology Collective" name="author"/>
+  <meta content="حماية جهازك من البرمجيات الخبيثة وهجمات المخترقين" property="og:title"/>
+  <meta content="حماية جهازك من البرمجيات الخبيثة وهجمات المخترقين" name="og:description"/>
+  <meta content="حماية جهازك من البرمجيات الخبيثة وهجمات المخترقين" name="twitter:card"/>
+  <meta content="@ononymous" name="twitter:site"/>
+  <meta content="@ononymous" name="twitter:creator"/>
+  <meta content="https://securityinabox.org" property="og:url"/>
+  <meta content="https://securityinabox.org" name="twitter:url"/>
+  <meta content="https://securityinabox.org/assets/images/siab-og-image.png" property="og:image"/>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <link href="/assets/images/favicon.ico" rel="icon" type="image/png"/>
+  <link href="/assets/css/15106-global.css" rel="stylesheet"/>
+  <link href="/assets/css/58184-rtl.css" rel="stylesheet"/>
+  <link href="/assets/css/41377-arabic.css" rel="stylesheet"/>
+  <!--[if lt IE 9]><link href="/assets/css/39580-ie.css" rel="stylesheet" /><script src="/assets/vendor/js/html5shiv.3-7-3.min.js" type="text/javascript"></script><script src="/assets/vendor/js/respond.min.1.4.2.js"></script><![endif]-->
+  <noscript>
+   <link href="/assets/css/20547-bootstrap-no-js.css" rel="stylesheet"/>
+  </noscript>
+ </head>
+ <body class="tactics guide rtl">
+  <header id="header">
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12" id="masthead">
+      <div class="sprite sprite-logo-background">
+       <div class="sprite sprite-bubble">
+        <p class="site-name">
+         <a href="/ar">
+          security in-a-box
+         </a>
+        </p>
+        <p class="site-slogan">
+         أدوات وممارسات للأمن الرقمي
+        </p>
+       </div>
+       <div class="sprite sprite-eye">
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </header>
+  <nav class="navbar navbar-default-fixed" id="top-nav">
+   <div class="container">
+    <div class="navbar-header">
+     <button aria-expanded="false" class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+      <span class="sr-only">
+       __('Expand navigation')
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+     </button>
+    </div>
+    <div class="collapse navbar-collapse">
+     <ul class="nav navbar-nav">
+      <li class="dropdown">
+       <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+        ممارسات
+        <span class="caret">
+        </span>
+       </a>
+       <ul class="dropdown-menu">
+        <li>
+         <a class="link" href="/ar/guide/malware">
+          <span class="unmaintainedalert">
+          </span>
+          حماية جهازك من البرمجيات الخبيثة وهجمات المخترقين
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/physical">
+          <span class="unmaintainedalert">
+          </span>
+          حماية معلوماتك من التهديدات المادية
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/passwords">
+          <span class="unmaintainedalert">
+          </span>
+          إنشاء كلمات مرور قويّة وحفظها
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/secure-communication">
+          <span class="unmaintainedalert">
+          </span>
+          الحفاظ على خصوصية الاتصالات عبر الانترنت
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/anonymity-and-circumvention">
+          <span class="unmaintainedalert">
+          </span>
+          الحفاظ على المجهولية وتجاوز الرقابة على الإنترنت
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/smartphones">
+          <span class="unmaintainedalert">
+          </span>
+          كيفيةُ استخدام الهَوَاتف الذكيّة بأقصى قدرٍ ممْكن من الأمان
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/secure-file-storage">
+          <span class="unmaintainedalert">
+           [غير محدث]
+          </span>
+          حِفظُ سِرِّية البيانات الحسّاسة
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/backup">
+          <span class="unmaintainedalert">
+           [غير محدث]
+          </span>
+          تَدارُكُ فَقْدِ البيانات
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/destroy-sensitive-information">
+          <span class="unmaintainedalert">
+           [غير محدث]
+          </span>
+          تدمير البيانات الحسَّاسة
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/social-networking">
+          <span class="unmaintainedalert">
+           [غير مدعوم]
+          </span>
+          كيفَ تحمي نفْسَك وبَياناتِك عندَ استخدامِ مواقعِ شبكاتِ التواصلِ الاجتماعيِّ
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li class="dropdown">
+       <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+        لينكس
+        <span class="caret">
+        </span>
+       </a>
+       <ul class="dropdown-menu">
+        <li>
+         <a class="link" href="/ar/guide/keepassx/linux">
+          <span class="unmaintainedalert">
+          </span>
+          كي باس إكس للينكس - المدير الآمن لكلمات السّر
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/veracrypt/linux">
+          <span class="unmaintainedalert">
+          </span>
+          ڤيراكربت للينكس - التخزين الآمن للملفات
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/firefox/linux">
+          <span class="unmaintainedalert">
+          </span>
+          متصفح فيرفُكس وملحقاته الأمنية لنظام لينكس- متصفح وب آمن
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/thunderbird/linux">
+          <span class="unmaintainedalert">
+          </span>
+          ثندربرد، إنجميل وَ OpenPGP للينكس - البريد الآمن
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/torbrowser/linux">
+          <span class="unmaintainedalert">
+          </span>
+          متصفح تور للينكس - المجهولية وتجاوز الرقابة
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/jitsi/linux">
+          <span class="unmaintainedalert">
+           [غير مدعوم]
+          </span>
+          جيتسي للينكس - تراسل فوري ومكالمات آمنة
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li class="dropdown">
+       <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+        ويندوز
+        <span class="caret">
+        </span>
+       </a>
+       <ul class="dropdown-menu">
+        <li>
+         <a class="link" href="/ar/guide/keepassx/windows">
+          <span class="unmaintainedalert">
+          </span>
+          كي باس إكس لويندوز - المدير الآمن لكلمات السّر
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/veracrypt/windows">
+          <span class="unmaintainedalert">
+          </span>
+          ڤيراكربت لويندوز - التخزين الآمن للملفات
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/firefox/windows">
+          <span class="unmaintainedalert">
+          </span>
+          متصفح فيرفُكس وملحقاته الأمنية لنظام ويندوز- متصفح وب آمن
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/thunderbird/windows">
+          <span class="unmaintainedalert">
+          </span>
+          ثندربرد، إنجميل وَ OpenPGP لويندوز - البريد الآمن
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/torbrowser/windows">
+          <span class="unmaintainedalert">
+          </span>
+          متصفح تور لويندوز - المجهولية وتجاوز الرقابة
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/jitsi/windows">
+          <span class="unmaintainedalert">
+           [غير مدعوم]
+          </span>
+          جيتسي لويندوز - تراسل فوريّ ومكالمات آمنة
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/avast/windows">
+          <span class="unmaintainedalert">
+           [غير محدث]
+          </span>
+          أفاست - مضاد الفيروسات
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/ccleaner/windows">
+          <span class="unmaintainedalert">
+           [غير محدث]
+          </span>
+          سيكلينر - حذف آمن للملفات وتنظيف الشوارد
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/gpg4usb/windows">
+          <span class="unmaintainedalert">
+           [غير مدعوم]
+          </span>
+          gpg4usb المحمول لتشفير الإيميل والملفات
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li class="dropdown">
+       <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+        أندرويد
+        <span class="caret">
+        </span>
+       </a>
+       <ul class="dropdown-menu">
+        <li>
+         <a class="link" href="/ar/guide/signal/android">
+          <span class="unmaintainedalert">
+          </span>
+          سيجنال لأندرويد
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/basic-security/android">
+          <span class="unmaintainedalert">
+           [غير محدث]
+          </span>
+          خطوات أساسية في إعداد أمن هاتف أندرويد الخاص بكم
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/keepassdroid/android">
+          <span class="unmaintainedalert">
+           [غير محدث]
+          </span>
+          تطبيق كي باس درويد لإنشاء كلمات سر قوية وتخزينها بأمان
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/orbot/android">
+          <span class="unmaintainedalert">
+           [غير محدث]
+          </span>
+          تطبيق أوربوت لتجاوز الحجب وللمجهوليه
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <ul class="nav navbar-nav">
+      <li class="dropdown">
+       <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+        إنترنت
+        <span class="caret">
+        </span>
+       </a>
+       <ul class="dropdown-menu">
+        <li>
+         <a class="link" href="/ar/guide/mailvelope/web">
+          <span class="unmaintainedalert">
+          </span>
+          Mailvelope - تعمية OpenPGP للبريد الإلكتروني عبر المتصفح
+         </a>
+        </li>
+        <li>
+         <a class="link" href="/ar/guide/social-networking/web">
+          <span class="unmaintainedalert">
+           [غير محدث]
+          </span>
+          أدوات شبكات التواصل الاجتماعي
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="menu-wrapper inline">
+      <ul class="nav navbar-nav">
+       <li class="dropdown">
+        <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+         العربية
+         <span class="caret">
+         </span>
+        </a>
+        <ul class="dropdown-menu">
+         <li>
+          <a class="link" href="/ar/">
+           العربية
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/id/">
+           Bahasa
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/en/">
+           English
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/es/">
+           Español
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/fa/">
+           فارسی
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/fr/">
+           Français
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/pt/">
+           Português
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/ru/">
+           Русский
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/th/">
+           ภาษาไทย
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/tr/">
+           Türkçe
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/vi/">
+           Tiếng Việt
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/zh/">
+           简体中文
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/am/">
+           <span class="unmaintainedalert">
+            [غير مدعوم]
+           </span>
+           አማርኛ
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/my/">
+           <span class="unmaintainedalert">
+            [غير مدعوم]
+           </span>
+           Burmese
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/km/">
+           <span class="unmaintainedalert">
+            [غير مدعوم]
+           </span>
+           ភាសាខ្មែរ
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/mk/">
+           <span class="unmaintainedalert">
+            [غير مدعوم]
+           </span>
+           Македонски
+          </a>
+         </li>
+         <li>
+          <a class="link" href="/bo/">
+           <span class="unmaintainedalert">
+            [غير مدعوم]
+           </span>
+           Tibetan
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <button class="btn" data-target="#toc-modal" data-toggle="modal" id="toc-modal-trigger" type="button">
+   <span class="sr-only">
+    __('Table of Contents')
+   </span>
+   <span class="icon-bar">
+   </span>
+   <span class="icon-bar">
+   </span>
+   <span class="icon-bar">
+   </span>
+  </button>
+  <div class="modal fade" id="toc-modal" role="dialog">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <button class="close" data-dismiss="modal" type="button">
+       ×
+      </button>
+     </div>
+     <div class="modal-body">
+     </div>
+     <div class="modal-footer">
+      <button class="btn btn-default" data-dismiss="modal" type="button">
+       غلق
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <main id="content">
+      <ul class="breadcrumbs">
+       <li>
+        <a href="/ar">
+         الرئيسية
+        </a>
+       </li>
+       <li>
+        <a href="/ar/tactics">
+         ممارسات
+        </a>
+       </li>
+      </ul>
+      <h1 class="title">
+       حماية جهازك من البرمجيات الخبيثة وهجمات المخترقين
+      </h1>
+      <p class="posted">
+       مُحدّث
+       <span>
+        20 May 2018
+       </span>
+      </p>
+      <div class="toc-invisible" id="toc">
+       <h2>
+        جدول المحتويات
+       </h2>
+       <span class="loading-element">
+        ...تحميل الفهرس...
+       </span>
+       <ul>
+       </ul>
+      </div>
+      <p>
+       تُعتبر المحافظة على سلامة جهازك الخطوة الأولى على درب تحقيق أمانٍ رقميّ أفضل، وذلك أيًا كانت طبيعة عملك. لذا فقبل أن تَشغَل بالك بمواضيع تعمية البيانات، الرسائل الخاصة، التصفح الخفيّ وما إلى ذلك، عليك أن تحمي جهازك من
+       <a href="/ar/glossary#Malware">
+        البرمجيات الخبيثة
+       </a>
+       ،
+       <em>
+        والتي يمكنها أن تحدّ بشكلٍ كبير من فعّالية التدابير الوقائية التي قد تتخذها.
+       </em>
+      </p>
+      <p>
+       وعلى الرغم من أنّ معظم البرمجيات الخبيثة لا تزال تستهدف الحواسيب العاملة بنظام التشغيل ويندوز، فإنّ مُستخدمي ماك، لينكس، أندرويد، وَ iOS معرضون أيضًا للمخاطر ويجب عليهم مراجعة الممارسات المُقدّمة هنا.
+      </p>
+      <h1 id="ما-يمكن-أن-تتعلمه-من-هذا-الدليل">
+       ما يُمكن أن تتعلمه من هذا الدليل
+      </h1>
+      <ul>
+       <li>
+        معلومات حول المخاطر التي يمكن أن تُشكّلها البرمجيات الخبيثة لخصوصية وسلامة بياناتك، استقرار حاسوبك، وموثوقيّة أدوات الأمان الأخرى.
+       </li>
+       <li>
+        وصف موجز لبعض أنواع البرمجيات الخبيثة.
+       </li>
+       <li>
+        المحافظة على أمان جهازك من خلال تحديث نظام التشغيل والبرامج الأخرى بشكل دوريّ.
+       </li>
+       <li>
+        استخدام بعض الأدوات الموصى بها للمساعدة في حماية نفسك من تلك التهديدات.
+       </li>
+       <li>
+        الخطوات الواجب اتخاذها إن كنت تعتقد أن أحد أجهزتك قد أُصيب ببرمجيّة خبيثة.
+       </li>
+       <li>
+        أهمية استخدام
+        <a href="/ar/glossary#FOSS">
+         البرمجيات الحرّة ومفتوحة المصدر
+        </a>
+        كلما أمكن ذلك، وكيف يمكن أن تساعدك بعض
+        <a href="/ar/glossary#Freeware">
+         الأدوات المجانية
+        </a>
+        مُغلقة المصدر أحيانًا على تجنب المخاطر المرتبطة بالتراخيص منتهية الصلاحية أو بالبرمجيات المقرصنة.
+       </li>
+      </ul>
+      <h1 id="البرمجيات-الخبيثة-وهجمات-الاحتيال">
+       البرمجيات الخبيثة وهجمات الاحتيال
+      </h1>
+      <p>
+       على الرغم من وجود طرقٍ مُتعدّدة لتصنيف أنواع البرمجيات الخبيثة، إلا أن الحديث عن أسمائها المختلفة لن يساعدنا كثيرًا في تجنبها، فالقائمة تشمل الفيروسات، برمجيات التجسّس، الديدان، أحصنة طروادة، الجذور الخفيّة (روتكيت)، برمجيات الفدية، التعدين الخفي. وجميعها تُعدّ نوعًا من البرمجيات الخبيثة والتي يُمكن تصنيفها كذلك كشكل من
+       <a href="/ar/glossary#Phishing">
+        هجمات الاحتيال
+       </a>
+       . تنتشر البرمجيات الخبيثة أحيانًا عبر الإنترنت من خلال البريد الإلكتروني، الرسائل النصية، صفحات الويب المشبوهة وغيرها من وسائط الشبكة. بينما تنتشر أنواعٌ أخرى عبر أجهزة مثل وسائط USB المُستخدمة لتبادل البيانات. وفي الوقت الذي تتطلّب فيه بعض البرمجيات الخبيثة خطأً ما يرتكبه مستخدم غير حذر، يمكن لبعضها الآخر أن يُصيب الأنظمة الضعيفة بصمت دون حاجة لأن يفعل الضحية أي شيءٍ على الإطلاق.
+      </p>
+      <h2 id="مقدمة-إلى-البرمجيات-الخبيثة">
+       مقدمة إلى البرمجيات الخبيثة
+      </h2>
+      <p>
+       تُصنّف هجمات البرمجيات الخبيثة غالبًا إلى نوعين؛ عامّة أو مُستهدِفة.
+      </p>
+      <h3 id="البرمجيات-الخبيثة-العامة">
+       البرمجيات الخبيثة العامة
+      </h3>
+      <p>
+       تُنشأ بعض البرمجيات الخبيثة، أو يجري شرائها، من قبل مجرمين يهدفون لنشرها على الإنترنت بأوسع نطاقٍ ممكن بغرض كسب المال. قد يتضمن ذلك البرمجيات التي تبحث عن أرقام بطاقات الائتمان المُخزّنة على جهازك ومن ثم تُرسلها إلى المُجرم. بينما تستولي برمجيات خبيثة أخرى على موارد حاسوبك وتستخدمه
+       <a href="https://ar.wikipedia.org/wiki/%D8%B9%D9%85%D9%84%D8%A9_%D9%85%D8%B9%D9%85%D8%A7%D8%A9">
+        لتعدين العملات الرقميّة
+       </a>
+       أو للتفاعل مع إعلانات الإنترنت؛ مستغلةً إعلانات الدفع بالنقرة. صُمّمت بعض البرمجيات الخبيثة لنقل الإصابة إلى الأجهزة الأخرى التي يتصل بها جهاز الضحية المُصاب، مثل "الأجهزة الذكيّة" المتصلة بالإنترنت في منزلك أو حتى الأجهزة القابلة للإصابة والتي يستخدمها أشخاصٌ يحتفظ جهاز الضحية بنسخة عن عناوينهم البريدية على جهازه. في بعض الأحيان تُستخدم هذه الأجهزة المُصابة لإنشاء
+       <a href="https://ar.wikipedia.org/wiki/%D8%A8%D9%88%D8%AA_%D9%86%D8%AA">
+        شبكة روبوتات
+       </a>
+       والتي يتم تأجيرها لاحقًا لشن
+       <a href="https://ar.wikipedia.org/wiki/%D9%87%D8%AC%D9%85%D8%A7%D8%AA_%D8%A7%D9%84%D8%AD%D8%B1%D9%85%D8%A7%D9%86_%D9%85%D9%86_%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA#%D8%A3%D9%86%D9%88%D8%A7%D8%B9_(%D8%B7%D8%B1%D9%82)_%D9%87%D8%AC%D9%85%D8%A7%D8%AA_%D8%A7%D9%84%D8%AD%D8%B1%D9%85%D8%A7%D9%86_%D9%85%D9%86_%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9">
+        هجمات موزعة للحرمان من الخدمة
+       </a>
+       وغيرها من الأنشطة العدوانية.
+      </p>
+      <p>
+       يجدر بنا أن نتوقف قليلًا عند برمجيات الفدية، نظرًا لإنتشارها المتزايد في الآونة الأخيرة وكذلك لما تحتويه من خصائص فريدة. برمجيات الفدية هي برمجيات خبيثة تُشفّر ملفاتك ثم تطلب المال مقابل فكّ تشفيرها. وخلافًا لمعظم البرمجيات الخبيثة فإنها تُنبّه ضحيتها بمجرد الإصابة. ومن هنا فإن النسخ الاحتياطي الدوري لملفاتك يُمكنه أن يحدّ بشكلٍ كبير من الأضرار التي تُسببها هذه البرمجيات. (تُشير بعض الأبحاث إلى أنّ الملفات لا تُستعاد في 50% من الحالات، حتى بعد دفع الفدية المطلوبة). إن امتلاك استراتيجية جيدة للنسخ الاحتياطي أمرٌ هام، عمومًا، لتقليل أضرار البرمجيات الخبيثة، ولكن المهلة الزمنية التي تُعطى للضحية في حالة برمجيات الفدية تعني أن احتمال معرفتك بكون النسخ الاحتياطية الأخرى قد أتلفت نتيجة الإصابة، هو احتمال ضعيف.
+      </p>
+      <p>
+       راجع دليل الممارسات ذا الصلة لتتعرف أكثر عن
+       <a href="../tactics/secure-file-storage">
+        كيفية حماية ملفاتك الحسّاسة على حاسوبك
+       </a>
+       .
+      </p>
+      <h3 id="البرمجيات-الخبيثة-المستهدفة">
+       البرمجيات الخبيثة المُستهدِفة
+      </h3>
+      <p>
+       عادةً ما تُستخدم البرمجيات الخبيثة المُستهدِفة بغرض التدخّل أو التجسس على فرد، منظمة، أو شبكة مُعينة. وإلى جانب المجرمين العاديين، تُستخدم هذه الأساليب كذلك من طرف أجهزة الاستخبارات، الدوائر العسكرية، الإرهابيين، المتحرشين على الشبكة، الأزواج سيئي المعاملة، الأطراف السياسيّة المشبوهة، الآباء القلقين، وأرباب العمل غير الأخلاقيين. غالبًا ما تتضمن الهجمات المُستهدِفة أشياء مثل رسائل مُخصّصة بدقة للإيقاع بالضحية، جهات مُرسلة مزيفة، مرفقات بريد بأسماء ملفات مناسبة للسياق ولا تبدو مشبوهة، الوصول الفيزيائي إلى الأجهزة المُستهدَفة، وغيرها من الحيل. كما أن أصحاب هذا النوع من البرمجيات الخبيثة أكثر احتمالًا لاستغلال ثغرات
+       <a href="https://ar.wikipedia.org/wiki/%D9%87%D8%AC%D9%88%D9%85_%D8%AF%D9%88%D9%86_%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1">
+        اليوم-صفر
+       </a>
+       ، وهي علل برمجيّة غير شائعة نسبيًا، يُبقيها المجرمون سريّة فيما بينهم بحيث تبقى فعّالة بشكل كبير حتى على الأجهزة التي تستخدم برمجيات مُحدّثة باستمرار.
+      </p>
+      <p>
+       <em>
+        برمجيات الملاحقة
+       </em>
+       هي نوع من البرمجيات الخبيثة المُستهدِفة والتي تُمكّن المهاجم من رصد أنشطة ضحاياه. تُصمّم هذه الهجمات عادةً للحصول على بيانات الموقع الجغرافي، معلومات المراسلة، وكذلك الوصول إلى ميزات الجهاز مثل الكاميرا والمايكروفون. ترتبط هذه الهجمات غالبًا بالعنف والمطاردة من قبل الشريك، ولكن يتم تسويقها أحيانًا لأولياء الأمور وأرباب العمل.
+      </p>
+      <p>
+       عادةً ما يكون الدفاع ضد البرمجيات الخبيثة المُستهدِفة أكثر صعوبة، وذلك بسبب تعقيدها التقني، دقة ومستوى التخصيص الذي قد تُصمم بناءً عليه وأيضًا - وبدرجة أكثر أهمية - بسبب أن أولئك الذين يختارون استخدامها يميلون إلى أن يكونوا أكثر إصرارًا على استهداف ضحيتهم بأساليب مختلفة. إن كنتَ تعتقد أن شخصًا ما قد يستهدفك بالتحديد، فمن المهم جدًا أن تراجع الاقتراحات المدرجة أدناه ضمن فقرة
+       <a href="#avoiding-malware-and-phishing-attacks">
+        تجنّب هجمات البرمجيات الخبيثة
+       </a>
+       ، وكذلك
+       <a href="../physical">
+        حماية معلوماتك من التهديدات المادية
+       </a>
+       .
+      </p>
+      <h2 id="مضادات-البرمجيات-الخبيثة">
+       مضادات البرمجيات الخبيثة
+      </h2>
+      <p>
+       لا يتوفر في الوقت الراهن، مع الأسف، أدوات كاملة-المزايا، مفتوحة المصدر؛ مضادة للبرمجيات الخبيثة. ولهذا فنحن لا نوفّر مجموعة أدلة عن مضادات البرمجيات الخبيثة. إذا كنت تستخدم نظام التشغيل ويندوز، فيجدر بك أن تُلقي نظرة على برنامج
+       <a href="https://support.microsoft.com/en-us/help/17464/help-protect-my-computer-with-windows-defender">
+        Windows Defender
+       </a>
+       الافتراضي، والذي نُوقش في
+       <a href="../basic-security/windows#-4-2-windows-defender">
+        دليل أساسيات الأمان الرقمي في ويندوز
+       </a>
+       . في المقابل، لا تأتي أنظمة لينكس وماك مع مضادات للبرمجيات الخبيثة افتراضيًا، كذلك الأمر مع أندرويد وَ iOS، فهي تُعتبر في العموم أقل عرضةً للإصابة ببرمجيات خبيثة نظرًا لأنها تمنع عادةً تثبيت البرامج من خارج المصادر الرسمية، مثل Google Play Store،
+       <a href="https://f-droid.org">
+        F-droid
+       </a>
+       أو Apple App Store.
+      </p>
+      <p>
+       يمكنك أيضًا ثتبيت أداة ذات سمعة جيدة ومجانية مثل Malwarebytes (
+       <a href="https://www.malwarebytes.com/mwb-download/thankyou/">
+        ويندوز
+       </a>
+       ،
+       <a href="https://www.malwarebytes.com/mac-download/">
+        ماك
+       </a>
+       ،
+       <a href="https://play.google.com/store/apps/details?id=org.malwarebytes.antimalware">
+        أندرويد
+       </a>
+       )، أڤيرا (
+       <a href="https://www.avira.com/en/free-antivirus-windows">
+        ويندوز
+       </a>
+       ،
+       <a href="https://www.avira.com/en/free-antivirus-mac">
+        ماك
+       </a>
+       ،
+       <a href="https://www.avira.com/en/free-antivirus-android">
+        أندرويد
+       </a>
+       )، AVG (
+       <a href="https://www.avg.com/en-eu/free-antivirus-download">
+        ويندوز
+       </a>
+       ،
+       <a href="https://www.avg.com/en-eu/avg-antivirus-for-mac">
+        ماك
+       </a>
+       ،
+       <a href="https://www.avg.com/en-eu/antivirus-for-android">
+        أندرويد
+       </a>
+       ). إنتبه إلى أن معظم المُنتجات التي تُروّج لنفسها كَمضادات للبرمجيات الخبيثة على متجر iOS هي في واقع الأمر أدوات أمان مختلفة، مثل تطبيقات الشبكات الافتراضية VPN، مدراء كلمات المرور، برامج مضادة للسرقة وغيرها.
+      </p>
+      <p>
+       تتوفر أداة واحدة حرّة ومفتوحة المصدر تُستخدم كمضاد للبرمجيات الخبيثة، تُسمى
+       <a href="https://www.clamav.net">
+        CalmAV
+       </a>
+       ، وتعمل على كلٍ من
+       <a href="https://www.clamav.net/downloads#otherversions">
+        ويندوز
+       </a>
+       ولينكس (حيث يمكن تثبيتها على
+       <em>
+        أوبونتو
+       </em>
+       وغيرها من التوزيعات من مدير الحزم المدمج). يُعتبر ClamAV مجرّد ماسح للملفات والأقراص، أي أنه لا يعمل في الخلفية لمراقبة العمليات النشطة، رغم ذلك فلا يزال بالإمكان الاستفادة منه للتأكّد إن كان ملف أو مجلد ما يحتوي على برمجيات خبيثة معروفة، بالإضافة إلى إمكانية تشغيله من مفتاح USB مباشرة دون تثبيت، وهذا يفيد في حال لم تكن تملك صلاحية تثبيت البرامج على الحاسوب المُشتبه به. لكن تذكّر أنه لن يعمل كمراقب في الخلفية أو يؤمّن حماية من احتمالات الإصابة.
+      </p>
+      <p>
+       أخيرًا، يمكنك بالطبع شراء منتج تجاري لمكافحة البرمجيات الخبيثة، عادةً ما تفرض هذه المنتجات رسوم تراخيص سنويّة لمتابعة تلقي التحديثات بشكل دوري في المستقبل.
+      </p>
+      <h3 id="التنازلات-التي-تأتي-مع-مضادات-البرمجيات-الخبيثة">
+       التنازلات التي تأتي مع مضادات البرمجيات الخبيثة
+      </h3>
+      <p>
+       تتطلّب مكافحات البرمجيات الخبيثة وصولًا كاملًا إلى نظام التشغيل الخاص بك من أجل البحث عن الملفات المصابة واكتشاف السلوكيات الضارة. نتيجة لذلك هناك بعض الحالات التي يُمكن أن يؤدّي فيها تثبيت البرنامج
+       <em>
+        إلى زيادة
+       </em>
+       مستوى المخاطر، لا سيما إن كان تصميمه ضعيفًا، أو اُخترِق عبر
+       <a href="/ar/glossary#Back_door">
+        باب خلفي
+       </a>
+       .
+      </p>
+      <p>
+       رغم ذلك، يُوصى دومًا بتثبيت أداةٍ لمكافحة البرمجيات الخبيثة، خاصةً على نظام التشغيل ويندوز، ما لم تكن مستخدمًا محترفًا مُعرضًا للاستهداف من قِبل خصمٍ قوي. إن كنتَ تعتقد أن هذا ينطبق عليك، أو إذا نصحك خبير أمني بذلك، فيتعيّن عليك البحث عن طرقٍ أخرى لحماية نفسك من البرمجيات الخبيثة، مثل الانتقال لنظام تشغيل مُحصنّ مثل
+       <a href="https://tails.boum.org">
+        Talis
+       </a>
+       أوَ
+       <a href="https://www.qubes-os.org">
+        Qubes
+       </a>
+       ، أو فكّر بحصر الوصول للمحتويات الحساسّة بجهاز لا يملك اتصالًا بشبكة الإنترنت.
+      </p>
+      <h3 id="نصائح-حول-استخدام-مضادات-البرمجيات-الخبيثة-على-نحو-فعال">
+       نصائح حول استخدام مضادات البرمجيات الخبيثة على نحوٍ فعّال
+      </h3>
+      <ul>
+       <li>
+        <p>
+         لا تُشغّل اثنتين من أدوات مكافحة البرمجيات الخبيثة في نفس الوقت، غالبًا ما سيُحدّد كلّ منها الآخر كتطبيق مشبوه ويوقفه عن العمل، وهكذا، قد ينتهي بك المطاف بفقدان فعالية كلتي الأداتين معًا.
+        </p>
+       </li>
+       <li>
+        <p>
+         تحقّق من أن المضاد الذي تستخدمه يسمح لك بتلقي التحديثات. العديد من الأدوات التجارية التي تُشحن بها أجهزة الحاسوب الحديثة افتراضيًا تتطلب، في مرحلة ما، شراء رخصة استخدام للتمكّن من تلقي التحديثات. البرامج الموصى بها في هذا الدليل تعمل مجانًا بالكامل.
+        </p>
+       </li>
+       <li>
+        <p>
+         تحقّق من أن المكافح الذي تستخدمه يعمل على تحديث نفسه دوريًا. هناك برمجيات خبيثة يتم إنشاؤها ونشرها يوميًا، لذا فإن حاسوبك سيصبح عرضة للإصابة سريعًا ما لم تحرص على تحديثه باستمرار. إن كان ذلك ممكن؛ اضبط المكافح ليقوم بتثبيت التحديثات تلقائيًا.
+        </p>
+       </li>
+       <li>
+        <p>
+         بعض المضادات تملك ميزة اختيارية تُسمى
+         <em>
+          التشغيل الدائم
+         </em>
+         أو always on، قم بتشغيلها حال وجودها. البرامج الأخرى قد تُطلق عليها مسميات أخرى مثل Resident Protection, Realtime Protecting أو Resident Protection.
+        </p>
+       </li>
+       <li>
+        <p>
+         اهتم بمسح جميع الملفات الموجودة على حاسوبك بين الحين والآخر، هذه العملية ستستغرق وقتًا طويلًا لذا ستُفضّل القيام بها أثناء الليل. يُساعد هذا الإجراء على تجاوز بعض المشكلات التي قد تعاني منها أحيانا ميزة "التشغيل الدائم". الوتيرة الموصى بها تعتمد على ظروفك. هل قمتَ بوصل جهازك الحاسب مؤخرًا إلى شبكة غير آمنة؟ هل شاركت ذاكرة USB مع أحدهم؟ هل بتّ تتلقى مؤخرًا مرفقات غريبة عن طريق البريد الإلكتروني؟ هل هناك شخصٌ آخر في منزلك أو مكتبك عانى من البرمجيات الخبيثة مؤخرًا؟
+        </p>
+       </li>
+      </ul>
+      <h3 id="تجنب-البرمجيات-الخبيثة-وهجمات-الاحتيال">
+       تجنّب البرمجيات الخبيثة وهجمات الاحتيال
+      </h3>
+      <p>
+       لا يُعدّ تثبيت مكافح للبرمجيات الخبيثة الخطوة الوحيدة التي يُمكنك القيام بها لحماية جهازك، فيما يلي بعض المقترحات الإضافية:
+      </p>
+      <ul>
+       <li>
+        <p>
+         كلما أمكن، استخدم أحدث إصدار من نظام التشغيل العامل على حاسوبك (
+         <a href="https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_versions">
+          ويندوز
+         </a>
+         ،
+         <a href="https://en.wikipedia.org/wiki/MacOS_version_history">
+          ماك
+         </a>
+         ،
+         <a href="https://en.wikipedia.org/wiki/Ubuntu_version_history">
+          أوبونتو طويلة الأمد
+         </a>
+         ، أندرويد، iOS)، واحرص على تثبيت التحديثات فور اتاحتها.
+        </p>
+       </li>
+       <li>
+        <p>
+         احرص على تحديث التطبيقات الأخرى التي تستخدمها أولًا بأول. على ويندوز وماك قد يعني هذا حاجتك لتنزيل الحزم الجديدة يدويًا ومن ثم تثبيتها، انتبه أثناء ذلك لاستخدام المصادر الرسمية فقط.
+        </p>
+       </li>
+       <li>
+        <p>
+         احذف البرامج التي لم تعد تستخدمها. البرامج الأقدم تحتوي غالبًا على علل ومشاكل أمنية، لذا ابتعد عن تثبيت أدوات لم تعد تتلقى تحديثات منذ فترة طويلة. اقرأ المزيد عن ذلك ضمن فقرة
+         <a href="#keeping-your-software-up-to-date">
+          المحافظة على تحديث تطبيقاتك
+         </a>
+         أدناه.
+        </p>
+       </li>
+       <li>
+        <p>
+         حسّن أمان متصفح الويب الذي تستخدمه عن طريق منعه من تشغيل البرامج التي يُحتمل أن تكون ضارة والتي تُضمّن أحيانا داخل صفحات الويب. للمزيد ألقِ نظرة على دليل استخدام فيرفكس (
+         <a href="../firefox/windows">
+          ويندوز
+         </a>
+         ،
+         <a href="../firefox/mac">
+          ماك
+         </a>
+         ،
+         <a href="../firefox/linux">
+          لينكس
+         </a>
+         ).
+        </p>
+       </li>
+       <li>
+        <p>
+         كن حذرًا عند فتح الملفات التي تُرسل إليك كمرفقات بريد إلكتروني أو من خلال تطبيقات الدردشة أو عبر روابط التنزيل أو بأي وسيلةٍ كانت. من الأفضل تجنّب فتح الملفات من المصادر غير المعروفة. المصادر الموثوقة بدورها قد تُرسل إليك برمجيات خبيثة عن غير عمد. فكّر مرتين قبل إدخال وسائط التخزين القابلة للإزالة مثل ذواكر USB، بطاقات الذاكرة، أقراص DVD وغيرها في حاسبك الخاص. راجع
+         <a href="../basic-security/windows#4-avoiding-malware-on-windows">
+          دليل أدوات الأمان الأساسيّة لويندوز
+         </a>
+         للمزيد من التلميحات حول ذلك.
+        </p>
+       </li>
+       <li>
+        <p>
+         إن كنت تحتاج باستمرار لفتح ملفات أو إدراج وسائط تخزين من غرباء، فيجدر بك استخدام نظامٍ مجزّأ مثل
+         <a href="https://tails.boum.org">
+          Talis
+         </a>
+         بغرض منع البرمجيات الخبيثة من إصابة جهاز الحاسوب الخاص بك أو الوصول إلى ملفاتك الحسّاسة.
+        </p>
+       </li>
+       <li>
+        <p>
+         لا تقبل أو تُشغّل تطبيقات من مواقع ويب لا تعرفها أو لا تثق بها. على سبيل المثال بدلًا من قبول "تحديث" تقترحه نافذة منبثقة من متصفح الويب، تحقّق من الموقع الرسمي للتطبيق إن كان تتوفر بالفعل نسخة جديدة له.
+        </p>
+       </li>
+       <li>
+        <p>
+         أزل تثبيت مُلحقتي
+         <em>
+          أدوبي فلاش
+         </em>
+         وَ
+         <em>
+          جاڤا
+         </em>
+         كما هو مُوضّح في
+         <em>
+          القسم 3
+         </em>
+         من
+         <em>
+          دليل أدوات فيرفكس
+         </em>
+         (
+         <a href="../firefox/windows#3-1-update-or-disable-potentially-harmful-plugins">
+          ويندوز
+         </a>
+         ،
+         <a href="../firefox/mac#3-firefox-add-ons">
+          ماك
+         </a>
+         ،
+         <a href="../firefox/linux#3-1-update-or-disable-potentially-harmful-plugins">
+          لينكس
+         </a>
+         ).
+        </p>
+       </li>
+       <li>
+        <p>
+         إن قمتَ بتمرير الفأرة فوق رابط ما ضمن متصفح الويب، فسترى عنوان موقع الويب الكامل الذي يُوجّه له هذا الرابط، قد يُساعدك ذلك في تحديد ما إذا كنت تُريد النقر عليه أم لا. إن كنتَ تستخدم متصفح موزيلا فيرفكس فيمكنك تثبيت مُلحق
+         <a href="/ar/glossary#NoScript">
+          NoScript
+         </a>
+         كما هو مُوضّح في
+         <a href="../firefox/windows#noscript">
+          <strong>
+           دليل فيرفكس
+          </strong>
+         </a>
+         . مُلحقات أخرى مثل
+         <a href="https://www.eff.org/privacybadger">
+          Privacy Badger
+         </a>
+         ،
+         <a href="https://www.eff.org/https-everywhere">
+          HTTPSEverywhere
+         </a>
+         ، وَ
+         <a href="https://github.com/gorhill/uBlock#ublock-origin">
+          uBlock Origin
+         </a>
+         ستكون مفيدةَ أيضًا.
+        </p>
+       </li>
+       <li>
+        <p>
+         ابقَ يقظًا عند تصفح مواقع الويب. ألقِ نظرةً خاطفة على عنوان الموقع عند اتباع رابط ما، وتأكّد من أن الموقع يبدو حقيقيًا قبل إدخال معلومات حسّاسة مثل كلمة مرورك. توقّف عند النوافذ والرسائل التي تنبثق تلقائيًا واقرأها بعناية بدلًا من النقر فوق
+         <strong>
+          نعم
+         </strong>
+         أو
+         <strong>
+          موافق
+         </strong>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         تحقّق، عند الإمكان، من البرنامج الذي قمتَ بتنزيله من الشبكة قبل تثبيته. هذه ليست مهمة سهلة دائمًا، لكن دليل أداة
+         <a href="../torbrowser/linux/#advanced-verify-the-tor-browser-package">
+          VeraCrypt للينكس
+         </a>
+         يصف واحدة من الطرق التي يمكن اتباعها، على منصة لينكس.
+        </p>
+       </li>
+      </ul>
+      <h2 id="حماية-هاتفك-الذكي-أو-جهازك-اللوحي-من-البرمجيات-الخبيثة">
+       حماية هاتفك الذكي أو جهازك اللوحي من البرمجيات الخبيثة
+      </h2>
+      <p>
+       تُستهدف الهواتف الذكيّة والأجهزة اللوحية بشكلٍ متزايد من قبل البرمجيات الخبيثة، إذ تُعتبر أهدافًا جيدة للمهاجمين، نظرًا لأننا نميل إلى إبقائها تعمل، نحملها معنا أينما ذهبنا، كما أنها تحتوي على مايكروفونات، وكاميرات وأجهزة تحديد
+       <a href="/ar/glossary#GPS">
+        موقع GPS
+       </a>
+       .
+      </p>
+      <ul>
+       <li>
+        <p>
+         كما هو الأمر مع الحواسيب، فمن المهم المحافظة على تحديث نظام التشغيل والتطبيقات الأخرى.
+        </p>
+       </li>
+       <li>
+        <p>
+         ثبّت التطبيقات فقط من المصادر الرسمية أو الموثوقة، مثل غوغل بلاي ستور (أو متجر التطبيقات الحرّة ومفتوحة المصدر لمنصّة أندرويد؛
+         <a href="https://f-droid.org">
+          F-droid
+         </a>
+         ) وَ آبل ستور. يمكن للتطبيقات أن تحتوي على برمجيات خبيثة وتستمر بأداء مهامها بشكل طبيعي، لذا لن يكون بمقدورك دومًا معرفة ما إذا كان أحد التطبيقات خبيثًا أم لا.
+        </p>
+       </li>
+       <li>
+        <p>
+         انتبه إلى الأذونات والصلاحيات التي تطلبها التطبيقات. إن كانت تبدو مفرطة، فينبغي رفضها أو إزالة تثبيتها كُليًا.
+        </p>
+       </li>
+       <li>
+        <p>
+         فكّر في تثبيت أداة ذات سمعة جيّدة لمكافحة البرمجيات الخبيثة إن كان يتوفر أحدها لجهازك.
+        </p>
+       </li>
+       <li>
+        <p>
+         أزل تثبيت التطبيقات التي لم تعد تستخدمها من أجهزتك، قد يُساعدك هذا في حماية هاتفك الذكي أو جهازك اللوحي. في بعض الأحيان يبيع مطورو التطبيقات ملكية تطبيقاتهم لأشخاصٍ آخرين، والذين بدورهم قد يستمرون بتحسين التطبيق أو يحاولون جني المال عن طريق تضمينه برمجيات خبيثة.
+        </p>
+       </li>
+       <li>
+        <p>
+         لمزيد من المعلومات حول كيفية حماية هاتفك الذكي أو جهازك اللوحي العامل بنظام أندرويد، راجع دليل
+         <a href="../basic-security/android">
+          أساسيات الأمان لأندرويد
+         </a>
+         .
+        </p>
+       </li>
+      </ul>
+      <h2 id="التخلص-من-البرمجيات-الخبيثة">
+       التخلص من البرمجيات الخبيثة
+      </h2>
+      <p>
+       إن شككت بأن جهازك قد أصيب ببرمجة خبيثة، فينبغي عليك قطع اتصاله عن أي شبكة يملك اتصالًا بها. يشمل ذلك الشبكات اللاسلكية WiFi، السلكية Ethernet، بيانات الجوال،
+       <a href="/ar/glossary#Bluetooth">
+        البلوتوث
+       </a>
+       وأيّة أنواع أخرى من الشبكات. سيُساعد ذلك في منع البرمجية الخبيثة من إرسال بيانات إضافية، تلقيّ أوامر جديدة، أو إصابة أجهرة أخرى على الشبكة.
+      </p>
+      <p>
+       تجنّب توصيل أشياء مثل ذواكر الـ USB وأقراص التخزين الخارجية إلى الجهاز المشبوه، إلا إن كنتَ مُستعدًا للتخلي عنها، أو تعرف كيفيّة تنظيفها بأمان. وبالمثل؛ تجنّب استخدام أجهزة كانت
+       <em>
+        متصلة
+       </em>
+       سابقًا بالجهاز المشبوه.
+      </p>
+      <p>
+       في بعض الأحيان، يكون بالإمكان إزالة البرمجيات الخبيثة عن طريق تشغيل المكافح فقط والسماح له بالبحث عن المشاكل والتعامل معها. من ناحية أخرى؛ صُمّمت بعض البرمجيات الخبيثة لمواصلة العمل حتى بعد إعادة تثبيت نظام التشغيل من الصفر. لكن تبقى معظم الإصابات قياسية ويمكن التعامل معها بشكل أو بآخر. فما يلي قائمة من الخطوات التي يُمكن اتباعها، مرتبّة من الأسهل إلى الأعقد (وللأسف هذا يعني من الأقل إلى الأكثر فاعلية):
+      </p>
+      <ol type="1">
+       <li>
+        أجرِ مسحًا كاملًا لجهازك باستخدام مكافح البرمجيات الخبيثة المُثبّت لديك.
+       </li>
+       <li>
+        إذا كان الجهاز المُشتبه بإصابته حاسوبًا، فأعد تشغيله وأقلع من قرص إنقاذ مضاد للبرمجيات الخبيثة، كذاك الذي تُقدّمه مايكروسوفت باسم
+        <a href="https://support.microsoft.com/en-us/help/17466/windows-defender-offline-help-protect-my-pc">
+         Windows Defender Offline
+        </a>
+        ، أو
+        <a href="https://www.avg.com/en-us/rescue-cd-business-edition">
+         قرص الإنقاذ من AVG
+        </a>
+        . تخلّى بعد ذلك عن استخدام ذاكرة USB التي اسُتخدمت لإنشاء قرص الإنقاذ.
+       </li>
+       <li>
+        إذا كنت تستطيع استعادة الجهاز إلى "ضبط المصنع"، فاحتفظ بنسخة من ملفاتك المُهمة وقم بذلك. لا تنسخ أي برنامج لاستعادته بعد ذلك. كن حذرًا في التعامل مع جهاز التخزين المُستخدم للنسخ الاحتياطي. تأكّد من سلامته تمامًا قبل توصيله مع الجهاز الذي أُعيد لضبط المصنع.
+       </li>
+       <li>
+        إذا كان الجهاز المشبوه حاسوبًا، فكّر بإعادة تثبيت نظام التشغيل بعد الاحتفاظ بنسخة احتياطية من بياناتك المهمة. مُجددًا؛ تأكّد من أن قرص النسخ الاحتياطي نظيف قبل وصله بالجهاز الذي أعدت تثبيت نظام التشغيل عليه. إن كنت قد استخدمت ذاكرة USB لإعادة تثبيت النظام، ففكّر بالتخلّص منها.
+       </li>
+       <li>
+        أنشئ نسخة احتياطية لملفاتك المهمة، لا تنسخ معها أي برنامج. اشترِ جهازًا جديدًا وتأكّد من أنّ قرص النسخ الاحتياطي نظيف قبل توصيله بالجهاز الجديد.
+       </li>
+      </ol>
+      <p>
+       في الإجراءات الثلاث الأخيرة قد ترغب باستخدام أداة إقلاع liveUSB مثل
+       <a href="https://tails.boum.org">
+        Talis
+       </a>
+       ، من دون اتصالٍ بالشبكة، لنسخ ملفاتك الاحتياطية من أداة التخزين الأساسية إلى أخرى جديدة. هذا ليس حلًا مثاليًا؛ لكنّه سيُقلّل احتمالية أن تُصيب تلك الملفات حاسوبك من جديد.
+      </p>
+      <p>
+       من الواضح أن أفضل طريقة للتعامل مع البرمجيات الخبيثة هي تجنبها. لكن التفكير بالآثار المحتملة للإصابة بها، والتخطيط مُقدّما لكيفية الاستجابة حينها، سيُمكّنك من التعافي بسرعة أكبر في حال أُصيب جهازك بالعدوى لاحقًا.
+      </p>
+      <h2 id="حدث-برامجك-دوريا">
+       حدّث برامجك دوريًا
+      </h2>
+      <p>
+       غالبًا ما تكون برامج الحاسوب كبيرة ومعقدّة، لذا فإنّ العلل غير المكتشفة تُعتبر أمرًا حتميًا إلى حدٍ ما، بعض هذه العلل قد يقوّض أمن جهازك بالكامل، لذلك يهتم مطوّرو البرامج بالعثور على العلل والأخطاء في تطبيقاتهم وإصدار تحديثات لإصلاحها. من الضروريّ أن تُحدّث كافة البرامج الموجودة على حاسوبك، بما في ذلك نظام التشغيل نفسه، بشكلٍ منتظم قدر الإمكان.
+       <strong>
+        قد تكون هذه هي النصيحة الأهم لحماية جهازك من البرمجيات الخبيثة
+       </strong>
+       .
+      </p>
+      <h3 id="استفد-من-البرمجيات-الحرة-والتطبيقات-المجانية">
+       استفد من البرمجيات الحرّة والتطبيقات المجانية
+      </h3>
+      <p>
+       يتطّلب تحديث
+       <a href="/ar/glossary#Proprietary_software">
+        البرمجيات المملوكة
+       </a>
+       في غالب الأحيان إثبات أنها اُشتريت قانونيًا. على سبيل المثال، إن كنت تستخدم نسخة مُقرصنة من مايكروسوفت ويندوز فلن تكون قادرًا على تحديثها، مما يُعرّض ملفاتك لمخاطر أمنية كبيرة. بعض التطبيقات المقرصنة تتضمّن برمجيات خبيثة بالفعل! إن عدم امتلاكك تراخيص سارية الصلاحية لتطبيقاتك يُعرّضك والآخرين للخطر.
+      </p>
+      <p>
+       الاعتماد على التطبيقات المقرصنة قد يؤدي أيضًا لمشاكل غير تقنيّة، في بعض البلدان تستخدم السلطات "قرصنة البرامج" كذريعة لمصادرة الأجهزة وإغلاق المكاتب التابعة لمنظمات مُعارضة سياسيًا.
+      </p>
+      <p>
+       لحسن الحظ، لا يتوجب عليك شراء تراخيص برامج باهظة الثمن لحماية نفسك من تهديداتٍ كهذه، حيث يُمكنك الحصول على البرمجيات الحرّة ومفتوحة المصدر وتحديثها مجانًا. تُوفّر هذه التطبيقات كذلك المصدر البرمجي الخاص بها
+       <a href="/ar/glossary#Source_code">
+        مفتوحًا للعموم
+       </a>
+       . يُعتبر هذا النهج في بناء التطبيقات أكثر أمنًا، إذ يُمكن لمجموعة أكبر من الخبراء فحص تلك التطبيقات، التبليغ عن عللها، والمشاركة في معالجتها. تجعل هذه الشفافيّة من الصعوبة بمكان على شخصٍ ما إخفاء بابٍ خلفي ضمن تطبيق مفتوح المصدر.
+      </p>
+      <p>
+       <a href="/ar/glossary#freeware">
+        التطبيقات المجانية
+       </a>
+       ، بالمقابل، هي برامج تُوزّع مجانًا دون أن تكون مفتوحة المصدر. وعلى الرغم من أنها لا تستفيد من نهج الشفافية المُتبع من قبل البرمجيات الحرّة، لكنها لا تزال أكثر أمنًا من التطبيقات المملوكة مُنتهية الصلاحية أو المُقرصنة. حاول دومًا استخدام البرمجيات الحرّة ومفتوحة المصدر بدلًا من تلك المملوكة، وفي حال لم تجد شيئًا يُلبي احتياجاتك، فكّر باستخدام التطبيقات المجانية كخيارٍ ثانٍ.
+      </p>
+      <p>
+       تتشابه البرمجيات الحرّة مع تلك المملوكة من الناحية الوظيفيّة، بل وتتغلّب عليها أحيانًا. حتى لو استمر زملاؤك باستعمال برامج تجارية من نوع مُعيّن فلا يزال بإمكانك تبادل الملفات ومشاركة المعلومات معهم بسهولة تامة. كنقطة بداية جرّب استخدام كلًا من موزيلا
+       <a href="https://www.mozilla.org/ar/firefox/new/">
+        فيرفكس
+       </a>
+       و
+       <a href="https://www.libreoffice.org/">
+        ليبرأوفيس
+       </a>
+       بدلًا عن إنترنت اكسبلورر ومايكروسوفت أوفيس.
+      </p>
+      <p>
+       تتوفر بدائل لنظامي التشغيل ويندوز وماك أوإس إكس أيضًا. يُعتبر
+       <a href="/ar/glossary#GNU_Linux">
+        غنو/لينكس
+       </a>
+       البديل الأكثر شعبية والأسهل للاستخدام ربما. يمكنك تجربة أحد توزيعات لينكس من خلال تنزيل
+       <a href="/ar/glossary#LiveUSB">
+        قرص إقلاع حيّ
+       </a>
+       من
+       <a href="https://www.ubuntu.com/">
+        أوبونتو لينكس
+       </a>
+       ، ثم نسخه على ذاكرة USB والإقلاع منها لتجريب سطح مكتب أوبونتو بشكل كامل وأخذ انطباع واقعي عنه. بعد الانتهاء يُمكنك إعادة التشغيل والعودة إلى ويندوز دون كتابة أية تغييرات دائمة إلى القرص، هكذا ستعود جميع تطبيقاتك، بياناتك وإعداداتك تمامًا كما تركتها.
+      </p>
+      <p>
+       بالإضافة إلى المزايا الأمنية العامة للبرمجيات مفتوحة المصدر، يُوفّر أوبونتو أداة تحديثات سهلة الاستخدام تُبقي جميع تطبيقاتك، بما في ذلك نظام التشغيل، مُحدّثة وآمنة. يُعتبر لينكس كذلك خيارًا جيدًا للأجهزة القديمة والتي لم يعد بإمكانها تشغيل الإصدارات الحالية من مايكروسوفت ويندوز أو ماك أوإس إكس.
+      </p>
+      <h1 id="جدران-النار">
+       جدران النار
+      </h1>
+      <p>
+       يُعدّ جدار النار أول برنامج على حاسوبك يستقبل البيانات الواردة من الإنترنت، وهو أيضًا آخر برنامج يتعامل مع البيانات الصادرة. هذا يُشبه حارس أمن يقف على باب أحد المباني ليُحدّد من يُمكنه الدخول ومن يُمكنه المغادرة. يتلقى جدار النار ويفحص ويُقرّر البيانات المارّة عبر الشبكة.
+      </p>
+      <p>
+       تصل اتصالات الشبكة إلى جهازك عبر
+       <em>
+        منافذ رقميّة
+       </em>
+       . تسمح هذه المنافذ للبرامج الموجودة على جهازك بالاستماع إلى الطلبات والردّ عليها. إذا اعتبرنا الجدران النارية كحرّاس، فإن هذه المنافذ هي الأبواب نفسها، والتي يُمكن أن تكون مفتوحة أو مُغلقة. المنفذ المُغلق هو ذاك الذي لا يستخدمه أي برنامج. لا توجد وسيلة تُمكّن مهاجم خارجي من استغلال المنافذ المغلقة مُباشرةً؛ ولذلك لا تأتي كافة أنظمة التشغيل مع جدران حماية مُفعّلة افتراضيًا. أجهزة ماك مثلًا تُشحن مع جدار نار مُعطّل. بالمثل؛ يُضبط جدار النار في لينكس معظم الأحيان بسياسة متُساهلة تسمح للكثير من حركات المرور. أيضًا لا تتوفر أجهزة أندرويد أو iOS على جدران حماية. لا يعني هذا أن تلك الأنظمة تملك أبوابًا مُشرعة على مصراعيها لجميع اتصالات الشبكة، بل أن مُصنعي الأجهزة يثقون أن برمجياتهم لن تستمع إلى المنافذ في الوقت الذي لا ينبغي لها ذلك. هذا يُشبه أصحاب المباني الذين لا يهتمون بالحرّاس وكاميرات الحماية لأنهم يثقون من كون الأبواب مُوصدة، وحصينة، وأنها ستفتح فقط للأشخاص الذين يملكون مفاتيح مُعينة.
+      </p>
+      <p>
+       على العموم، أجهزة الحاسوب أكثر تعقيدًا، ويمكنها أن تفعل أشياءً غير متوقعة أحيانًا. لذا تساعدنا جدران النار على حماية أجهزتنا في الحالات التي يبدأ فيها أحد البرامج بالاستماع إلى منفذ لا يتوقع منه استخدامه. بالعودة إلى مثالنا؛ فإنه عندما يُترك الباب مفتوحًا، إما عن طريق المصادفة أو عن طريق شخص خبيث داخل المبنى تأتي أهمية الحرّاس. إن كنتَ على دراية بالمنافذ التي ينبغي أن تكون قابلة للوصول على حاسوبك، وإن كنت لا ترغب بأن تُضاف منافذ جديدة لتلك القائمة فقط لمجرّد أن تطبيقًا ما يريد ذلك، ألقِ نظرة على
+       <a href="#firewall-software">
+        برامج جدران النار
+       </a>
+       أدناه.
+      </p>
+      <p>
+       بعد بيان ذلك، تجدر الإشارة إلى أن الإعدادات الافتراضية لجدران النار على نظم التشغيل الحديثة تعمل بشكلٍ جيد لمعظم حالات الاستخدام.
+      </p>
+      <p>
+       بالإضافة إلى كون جدران النار تمنع المهاجمين الخارجيين من الوصول إلى أجهزتنا، فإن معظمها أيضًا يراقب الاتصالات الخارجة كذلك، هذا يسمح لها بتنبيهنا عندما يحاول أحد التطبيقات سرقة البيانات. إن قمت بتثبيت جدار نار صُمم خصيصًا لتقييد الاتصالات الصادرة، أو إن ضبطت جدار النار لديك ليعمل بهذه الطريقة، فيجب أن تكون مستعدًا لإمضاء بعض الوقت في "تدريبه" بحيث لا ينبهك إلا عند ملاحظة شيء غير عادي.
+      </p>
+      <h2 id="تطبيقات-جدران-النار">
+       تطبيقات جدران النار
+      </h2>
+      <p>
+       تأتي كافة إصدارات ويندوز الحديثة مع جدار نار مُدمج ومُفعّل افتراضيًا. بالمقابل يحتوي ماك أوإس إكس على جدار نار لكنه مُعطّل، يُعتبر تفعيله فكرة جيدة، فنادرًا ما يُسبب ذلك في حدوث مشاكل. يمكنك تعلّم المزيد عن جدران الحماية من خلال النظر في كيفية ضبطها. يأتي أوبونتو لينكس أيضًا بجدار نار يُسمى
+       <em>
+        iptables
+       </em>
+       ولكن التعامل معه قد يكون صعبًا نوعًا ما. إن كنت ترغب في تعديل إعداداته الافتراضية في إضافة وحذف القيود المُطبّقة، فيُنصح بتثبيت برنامج
+       <em>
+        gufw
+       </em>
+       باستخدام مدير الحزم، وهو عبارة عن واجهة رسومية لتطبيق UFW والذي يُسهّل إدارة iptables.
+      </p>
+      <h2 id="منع-اتصالات-الشبكة-غير-الموثوق-بها">
+       منع اتصالات الشبكة غير الموثوق بها
+      </h2>
+      <ul>
+       <li>
+        <p>
+         تأكّد من وجود جدار نار مُثبت ومُفعّل على جميع الأجهزة العاملة بنظام ويندوز، سواءً على شبكة العمل أو في المنزل.
+        </p>
+       </li>
+       <li>
+        <p>
+         تأكّد من أن
+         <a href="/ar/glossary#Router">
+          الموجّه
+         </a>
+         أو نقطة وصول WiFi مزودة بجدار نار، معظم الأجهزة مُزوّدة بالفعل، ولكن من الجيّد أن تتحقّق من ذلك. الموجّه (أو الرواتر) هو الحاجز الوحيد الذي يفصل شبكتك المحليّة عن شبكة الإنترنت المليئة بالمخاطر والأنشطة الخبيثة. لا تنسَ تغيير كلمة المرور الافتراضية لحساب المدير المسؤول عن تعديل إعدادات الموجّه، إلى عبارة أخرى قويّة وفريدة.
+        </p>
+       </li>
+       <li>
+        <p>
+         ثبّت فقط البرامج الأساسية على الأجهزة التي تستخدمها للعمل الحسّاس، احصل عليها من مصادرها الأصلية واحرص على تحديثها دوريًا.
+        </p>
+       </li>
+       <li>
+        <p>
+         عطّل أي خدمات لا تستخدمها على نظامك، مثل خدمة مشاركة الملفات المحليّة.
+        </p>
+       </li>
+       <li>
+        <p>
+         افصل الحاسوب عن الإنترنت عندما تنتهي من استخدامها، وأغلق جهازك أثناء الليل.
+        </p>
+       </li>
+       <li>
+        <p>
+         لا تُشارك كلمة مرورك مع أي شخصٍ آخر.
+        </p>
+       </li>
+      </ul>
+      <h1 id="قراءات-إضافية">
+       قراءات إضافية
+      </h1>
+      <ul>
+       <li>
+        واكب الأخبار المتعلقة بالبرمجيات الخبيثة من مواقع مثل
+        <a href="https://threatpost.com/tag/malware/">
+         Threatpost
+        </a>
+        وَ
+        <a href="www.virusbtn.com/blog">
+         Virus Bulletin
+        </a>
+        .
+       </li>
+       <li>
+        قد تُساعدك مجموعة الأدوات الأخرى من
+        <a href="https://tacticaltech.org/">
+         تيكتيكال
+        </a>
+        على الانتقال إلى البرمجيات الحرّة والمجانيّة.
+       </li>
+       <li>
+        <a href="https://www.libreoffice.org/">
+         ليبرأوفيس
+        </a>
+        هو بديل حرّ ومفتوح المصدر لحزمة مايكروسوفت أوفيس لأنظمة ويندوز، ماك، ولينكس.
+       </li>
+       <li>
+        <a href="https://www.ubuntu.com/">
+         أوبونتو
+        </a>
+        نظام تشغيل لينكس سهل الاستخدام.
+       </li>
+      </ul>
+     </main>
+    </div>
+   </div>
+  </div>
+  <footer id="footer">
+   <div class="container">
+    <div class="row">
+     <div class="col-md-3">
+      <div class="sprite sprite-bubble">
+       <p class="site-name">
+        <a href="/ar">
+         security in-a-box
+        </a>
+       </p>
+       <p class="site-slogan">
+        أدوات وممارسات للأمن الرقمي
+       </p>
+      </div>
+     </div>
+     <div class="col-md-9">
+      <ul id="footer-nav">
+       <li>
+        <a href="/ar/about">
+         حول
+        </a>
+       </li>
+       <li>
+        <a href="/ar/contact">
+         اتصل بنا
+        </a>
+       </li>
+       <li>
+        <a href="/ar/disclaimer">
+         إخلاء مسؤولية
+        </a>
+       </li>
+       <li>
+        <a href="/en/data-use-policy">
+         Data Use Policy
+        </a>
+       </li>
+       <li>
+        <a href="/ar/glossary">
+         قاموس المصطلحات
+        </a>
+       </li>
+       <li>
+        <a href="https://twitter.com/Info_Activism">
+         تويتر
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="row">
+     <div class="col-md-12">
+      <div class="sprite sprite-creative-commons inline">
+      </div>
+      <p class="inline">
+       ملكية محتويات عدّة الأمان محفوظة للأشخاص الذين أنشؤوها، ومصنّفة تحت رخصة المشاع الإبداعي نَسب المُصنّف | الترخيص بالمثل 3.0 دولي
+       <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">
+        Creative Commons Attribution-Share Alike 3.0 Unported License.
+       </a>
+      </p>
+     </div>
+    </div>
+    <div class="row">
+     <div class="col-md-12">
+      <p>
+       امنیت در جعبه پروژه‌ی مشترک تعاونی تاکتیکال تکنولوژی و خط مقدم مدافعان است
+       <a href="https://tacticaltech.org" target="_blank">
+        Tactical Technology Collective
+       </a>
+       و
+       <a href="https://www.frontlinedefenders.org/" target="_blank">
+        Front Line Defenders
+       </a>
+      </p>
+     </div>
+     <div class="col-md-12">
+      <div class="sprite sprite-tactical-tech-logo">
+      </div>
+      <div class="sprite sprite-frontline-defenders-logo">
+      </div>
+     </div>
+    </div>
+   </div>
+   <span id="scroll-top">
+    ↑
+   </span>
+  </footer>
+  <script>
+   function downloadJSAtOnload() {
+  var element = document.createElement("script");
+  element.src = "/assets/js/13572-all-scripts.js";
+  document.body.appendChild(element);
+}
+if (window.addEventListener) window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent) window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+  </script>
+ </body>
+</html>

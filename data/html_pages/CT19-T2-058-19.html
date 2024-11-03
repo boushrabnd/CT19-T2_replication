@@ -1,0 +1,971 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ar" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <link href="../App_Themes/first/161.css" rel="stylesheet" type="text/css"/>
+  <link href="../App_Themes/first/blocks.css" rel="stylesheet" type="text/css"/>
+  <link href="../App_Themes/first/Default.css" rel="stylesheet" type="text/css"/>
+  <meta content="UTF-8" name="Charset"/>
+  <meta content="Global" name="Distribution"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="../RSS.aspx" rel="alternate" title="صحيفة الوطن العدنية   " type="application/rss+xml"/>
+  <link href="../webfonts/fontsAr.css" rel="stylesheet" type="text/css"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="RSS.aspx" rel="alternate" title="صحيفة الوطن العدنية -آخر الأخبــــار" type="application/rss+xml"/>
+  <link href="../App_Themes/first/blocks.css" rel="stylesheet" type="text/css"/>
+  <link href="../NewThemes/styleVisitorsSelection.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="../NewThemes/style.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="../NewThemes/new-home.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="../NewThemes/custom.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="../Nslider/sslider.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+   function addLinktoCopy() {
+
+        // Define tracking parameter
+        var trackingparam = "source=copypaste";
+
+        // Set document body as body_element variable
+        var body_element = document.getElementsByTagName('body')[0];
+
+        // Create a selection variable to store copied value
+        var selection;
+
+        // Create a selection to store the selection as a text string
+        var selectedText;
+
+        // Populate selection variable with user's selected copy
+        selection = window.getSelection();
+
+        // Populate selectedText variable with the user's selected copy stored as a string
+        selectedText = selection.toString();
+
+        // Create a variable to store the selection length
+        var selectionlength;
+
+        // Convert the selection to a string and get the string's length
+        selectionlength = selection.toString().length
+
+        // If the selectionlength is >14 and doesn't start with "http://", then append tracking
+        // If the selection starts with "http://", it's likely a URL, which could provide for a bad experience when pasting into an address bar
+        if ((selectionlength > 14) && (selectedText.substring(0, 7) != "http://")) {
+            // Set the current page's URL as a variable
+            var page = document.location.href;
+            // Create a seperator variable
+            var seperator;
+            // Create a locationURL variable to store the URL and associated tracking parameters
+            var locationURL;
+            // Check to see if the URL already contains the tracking paramater
+            // If the URL doesn't contain the tracking code, append it to the end
+            if (page.indexOf(trackingparam) == -1) {
+                // Check to see if the URL already includes a ? in it
+                if (page.indexOf("?") != -1) {
+                    // If ? is present in the URL string, set seperator variable to &
+                    seperator = "&";
+                }
+                else {
+                    // If ? is not present in the URL string, set seperator variable to ?
+                    seperator = "?";
+                }
+                // Set locationURL variable with URL + tracking code
+                locationURL = document.location.href + seperator + trackingparam;
+            }
+            // Othwerise, the tracking code already exists in the URL string, so append nothing
+            else {
+                // Set the locationURL variable with the URL as is      
+                locationURL = document.location.href;
+            }
+            // Build link to page with editorial copy, URL, seperator, and URL tracking parameters
+            var pagelink = "<br /> اقرأ المزيد : <br /><a href='" + document.location.href + "'>" + document.location.href + "</a><br />تابعونا عبر قناتنا بالتليجرام" + "<br />https://t.me/alwatanews1" + "<br />صفحتنا على الفيس بوك" + "<br />https://www.facebook.com/alwattan.net" + "<br />رؤية حديثة للإعلام / صحيفة #الوطن_العدنية"; // change this if you want
+              // Create new variable with user's selection and page link
+            var copytext = selection + pagelink;
+            // Replace line breaks /n with HTML break tags to quasi-preserve formatting on paste
+            var copytext = copytext.replace(/\n/g, '<br />');
+            // Create a new div and add associated styling and hide it off the page
+            var newdiv = document.createElement("div");
+            // Append new div to document
+            body_element.appendChild(newdiv);
+            // Select text from the new (hidden) div
+            newdiv.innerHTML = copytext;
+            // Replace clipboard values with new selection + link value
+            selection.selectAllChildren(newdiv);
+			   window.setTimeout(function () {
+         body_element.removeChild(newdiv);
+       }, 0);
+        }
+        // Otherwise, selectionlength <= 14, so do nothing
+        // We are not appending any copy or URLs to the user's selection
+    }
+    // Execute addLinktoCopy function when user copies text from page
+    document.oncopy = addLinktoCopy;
+  </script>
+  <script src="../Nslider/jquery.min.js" type="text/javascript">
+  </script>
+  <link href="../Nslider/sslider.css" rel="stylesheet" type="text/css"/>
+  <!--   الاثنين -->
+  <script src="../Nslider/jquery.jscrollpane.min.js" type="text/javascript">
+  </script>
+  <script src="../Nslider/jquery-ui.min.js" type="text/javascript">
+  </script>
+  <style>
+   html,body {
+  margin: 0;
+}
+#navbar.navbar_fixed {
+  position:fixed;
+  top:0px;
+   background-color: #35a831;
+    border-bottom: 1px solid #8f8f8f;
+  width:100%;
+  opacity: 0.8;
+  z-index:100
+  
+  
+}
+         #navbar.navbar_absolute {
+             /*position:absolute;*/
+            background-color:  #0099cc;
+    border-bottom: 10px solid #eee;
+    height: 33px;
+    margin: auto;
+    width: auto;
+             z-index: 100;
+         }
+  </style>
+  <style type="text/css">
+   #share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+  </style>
+  <meta content="التحرش الجنسي: من هم أبرز المشاهير المتهمين في 2018؟" property="og:title"/>
+  <meta content='ول من أطلقت هاشتاغ "مي تو" في أواخر عام 2017، كانت الممثلة الأمريكية أليسا ميلانو،' property="og:description"/>
+  <meta content="http://alwattan.net/news/45891" property="og:url"/>
+  <meta content="http://alwattan.net/UploadFiles/2018/Dec/27/e52c3163-f166-47f9-9b36-e119ff5ca00d.jpg" property="og:image"/>
+  <meta content="website" property="og:type"/>
+  <meta content="2002446059968618" property="fb:app_id"/>
+  <title>
+   التحرش الجنسي: من هم أبرز المشاهير المتهمين في 2018؟
+  </title>
+ </head>
+ <body onload="javascript:window_onload();">
+  <div id="pagemaincontentwrapper">
+   <table align="center" cellpadding="0" cellspacing="0" class="PageBoundingBox">
+    <tbody>
+     <tr valign="top">
+      <td>
+       <div id="pagewrapper">
+        <div id="toplinkwrapper">
+         <!-- 100% width wrapper so top link bar color can scale with dpi/font changes -->
+         <div style="background-color: #0099cc;
+ width:100% ; height:25px;border-bottom:1px solid #ccc">
+          <div id="toplinkcontent">
+           <div id="toplinkcontenthead">
+            <div id="toplinkLastUpdate">
+             <div class="date" styl="Font-bold:True; Font-Size:14px; color:#c6000a;">
+              آخر تحديث للموقع :
+              <span id="ctl00_ctl00_ldate2_lastupdate">
+               الخميس - 25 أبريل 2019 - 10:09 ص
+              </span>
+              <br/>
+             </div>
+            </div>
+            <!-- content wrapper fixed to right width and centered -->
+            <ul id="toplinks" style="color:#fff">
+             <li>
+              <a href="../pag/3" title="هيئة التحرير">
+               هيئة التحرير
+              </a>
+             </li>
+             <li>
+              <a href="../pag/2" title="من نحن">
+               من نحــن
+              </a>
+             </li>
+             <li>
+              <a href="../pag/1" title="إتصـل بـنا ">
+               إتصـل بـنا
+              </a>
+             </li>
+            </ul>
+            <br/>
+           </div>
+          </div>
+          <!-- end toplinkcontent -->
+         </div>
+         <!-- end toplinkwrapper -->
+         <div id="headerwrapper">
+          <!-- main header area wrapper -->
+          <div id="headercontent">
+           <div id="share-buttons" style="width: 300px;float: left; margin-top: 20px;">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/alwattan.net" target="_blank">
+             <img alt="Facebook" src="../images/mediabutton/facebook.png"/>
+            </a>
+            <!-- Google+ -->
+            <a href="https://plus.google.com/u/1/107249321864002755023" target="_blank">
+             <img alt="Google" src="../images/mediabutton/google.png"/>
+            </a>
+            <!-- Twitter -->
+            <a href="https://twitter.com/alwatanews1" target="_blank">
+             <img alt="Twitter" src="../images/mediabutton/twitter.png"/>
+            </a>
+            <!-- yotube -->
+            <a href="https://www.youtube.com/channel/UC9IgQDgsP6Orea2NoW1wrNQ" target="_blank">
+             <img alt="youtube" src="../images/mediabutton/youttube.png"/>
+            </a>
+            <!-- telegram -->
+            <a href="https://t.me/alwatanews1" target="_blank">
+             <img alt="Google" src="../images/mediabutton/telegram.jpg"/>
+            </a>
+            <!-- RSS -->
+            <a href="/feed" target="_blank">
+             <img alt="RSS" src="../images/mediabutton/rss.png"/>
+            </a>
+            <!-- googleplay -->
+            <!-- <a href="https://play.google.com/store/apps/details?id=com.aden.time.news.ye.app" target="_blank">
+        <img style="width: 100px;" src="images/mediabutton/googleplay.png" alt="Twitter" />
+    </a> -->
+           </div>
+           <div id="headercontent1">
+           </div>
+          </div>
+          <!-- End headercontent -->
+         </div>
+         <!-- End headerwrapper -->
+         <!-- End gnavcontent -->
+        </div>
+        <div class="navbar_absolute" id="navbar">
+         <div class="mainNav2">
+          <div class="mainNav">
+           <ul id="FirstLevel">
+            <li>
+             <a href="../home">
+              <img id="ctl00_ctl00_Menu1_ImageButton1" longdesc="../controls/%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9" src="../App_Themes/first/images/HB.png" style="height:27px;border-width:0px; padding-left: 10px;"/>
+             </a>
+            </li>
+            <li>
+             <a href="../sec/1">
+              اخبار وتقارير
+             </a>
+             |
+            </li>
+            <li>
+             <a href="../sec/2">
+              محلية
+             </a>
+             |
+            </li>
+            <li>
+             <a href="../sec/3">
+              أبين
+             </a>
+             |
+            </li>
+            <li>
+             <a href="../sec/4">
+              رياضة
+             </a>
+             |
+            </li>
+            <li>
+             <a href="../sec/5">
+              عربية وعالمية
+             </a>
+             |
+            </li>
+            <li>
+             <a href="../sec/9">
+              حوارات
+             </a>
+             |
+            </li>
+            <li>
+             <a href="../sec/6">
+              اقتصاد
+             </a>
+             |
+            </li>
+            <li>
+             <a href="../sec/11">
+              قصص الشهداء
+             </a>
+             |
+            </li>
+            <li>
+             <a href="../sec/10">
+              ثقافة وفن
+             </a>
+             |
+            </li>
+            <li>
+             <a href="../sec/12">
+              علوم وتقنية
+             </a>
+             |
+            </li>
+            <li>
+             <a href="../sec/13">
+              آراء
+             </a>
+             |
+            </li>
+            <li>
+             <a href="../sec/14">
+              مجتمع مدني
+             </a>
+             |
+            </li>
+            <li>
+             <a href="../pag/1">
+              إتصل بنا
+             </a>
+             |
+            </li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <link href="../styles/ticker-style.css" rel="stylesheet" type="text/css"/>
+        <script src="../includes/jquery.ticker.js" type="text/javascript">
+        </script>
+        <div id="newslineMain">
+         <div id="newslin">
+          <ul class="js-hidden" id="js-news">
+           <table border="0" cellspacing="0" id="ctl00_ctl00_nline1_rUnews" style="border-collapse:collapse;">
+            <tr>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <li class="news-item">
+               <a href="../news/65649" title="إضغط لمعرفة التفاصيل">
+                الفاينانشال تايمز : ترامب يجد رجلا قويا جديدا كحليف في ليبيا
+               </a>
+              </li>
+             </td>
+            </tr>
+            <tr>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <li class="news-item">
+               <a href="../news/65648" title="إضغط لمعرفة التفاصيل">
+                الغارديان: "السودانية ذات الثوب الأبيض أيقونة ولكن الحقيقة ليست بهذه البساطة"
+               </a>
+              </li>
+             </td>
+            </tr>
+            <tr>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <li class="news-item">
+               <a href="../news/65647" title="إضغط لمعرفة التفاصيل">
+                اسباب مرارة الفم أهمها مشكلات الأسنان والحمل
+               </a>
+              </li>
+             </td>
+            </tr>
+            <tr>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <li class="news-item">
+               <a href="../news/65646" title="إضغط لمعرفة التفاصيل">
+                علاج الاسهال بالأعشاب ودقيق الشوفان
+               </a>
+              </li>
+             </td>
+            </tr>
+            <tr>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <li class="news-item">
+               <a href="../news/65645" title="إضغط لمعرفة التفاصيل">
+                مؤسسة بصمة أمل بلحج تنجح في حملتها نكسوهم لنصنع فرحتهم
+               </a>
+              </li>
+             </td>
+            </tr>
+            <tr>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <li class="news-item">
+               <a href="../news/65644" title="إضغط لمعرفة التفاصيل">
+                مدير مستشفى الصداقة بعدن يتسلم مهامه رسميا "وثيقة"
+               </a>
+              </li>
+             </td>
+            </tr>
+            <tr>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <li class="news-item">
+               <a href="../news/65643" title="إضغط لمعرفة التفاصيل">
+                قادة يعملون بدون ضجيج
+               </a>
+              </li>
+             </td>
+            </tr>
+            <tr>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <li class="news-item">
+               <a href="../news/65642" title="إضغط لمعرفة التفاصيل">
+                محافظ أبين يناقش مع وكيلي وزارة الأشغال أولويات مشاريع المحافظة
+               </a>
+              </li>
+             </td>
+            </tr>
+            <tr>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <li class="news-item">
+               <a href="../news/65641" title="إضغط لمعرفة التفاصيل">
+                سالمين ينفذ زيارة لصندوق صيانة الطرق للاطلاع على سير مشاريع الصندوق بعدن
+               </a>
+              </li>
+             </td>
+            </tr>
+            <tr>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <li class="news-item">
+               <a href="../news/65640" title="إضغط لمعرفة التفاصيل">
+                اعراض مرض السكر عند الاطفال أبرزها كثرة التبول وفقدان الوزن والعطش
+               </a>
+              </li>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <hr/>
+             </td>
+            </tr>
+           </table>
+          </ul>
+          <script type="text/javascript">
+           $(function () {
+        $('#js-news').ticker();
+    });
+          </script>
+         </div>
+        </div>
+        <div id="pagemaincontent1">
+         <!-- Begin Header Area -->
+         <!-- Begin Javascript for Search-->
+         <!-- End Javascript for Search-->
+         <!-- End gnavwrapper -->
+         <!-- this sets the main content area to fixed width and centered -->
+         <!-- End Header Area -->
+         <!-- Begin Content Area -->
+         <form action="./45891" id="aspnetForm" method="post" name="aspnetForm">
+          <div>
+           <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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2KfYoSDZgdmKINmI2KzZhyDYp9mE2YXYqtit2LHYtNmK2YYg2KjZh9mGINmF2YYg2YPYqNin2LEg2YbYrNmI2YUg2KfZhNmB2YYg2YjYp9mE2LPZitmG2YXYpyDZiNiz2Lcg2LDZh9mI2YQg2YjYtdiv2YXYqSDYp9mE2KzZhdmH2YjYsSDZiNin2YTZhdi52KzYqNmK2YYuPGJyIC8+PGJyIC8+2YXYtdiv2LEg2KfZhNi12YjYsdipU09DSUFMIE1FRElBLVRXSVRURVI8YnIgLz48YnIgLz7ZiNmB2YrZhdinINmK2YTZiiDZgtin2KbZhdipINio2KPYqNix2LIg2KfZhNmF2KrZh9mF2YrZhiDYqNin2YTYqtit2LHYtCDYp9mE2KzZhtiz2Yog2K7ZhNin2YQg2LnYp9mFIDIwMTg6PGJyIC8+PGJyIC8+2YXYtdiv2LEg2KfZhNi12YjYsdipRVBBSW1hZ2UgY2FwdGlvbtmK2YbZgdmKINmI2KfZitmG2LPYqtmK2YYg2KfZhNin2KrZh9in2YXYp9iqINin2YTZhdmI2KzZh9ipINil2YTZitmHPGJyIC8+PGJyIC8+2YfYp9ix2YHZisKg2YjYp9mK2YbYs9iq2YrZhjxiciAvPjxiciAvPtmK2YjYp9is2Ycg2KfZhNmF2YbYqtisINin2YTYs9mK2YbZhdin2KbZiiDYp9mE2KPZhdix2YrZg9mKINmH2KfYsdmB2Yog2YjYp9mK2YbYs9iq2YrZhiAoNjYg2LnYp9mF2KcpINiq2YfZhdin2Ysg2KjYp9mE2KfYudiq2K/Yp9ihINin2YTYrNmG2LPZiiDYudmE2Ykg2LnYp9ix2LbYqSDYqNmI2YTZhtiv2YrYqSDZgdmKINmG2YrZiNmK2YjYsdmDINit2YrZhiDZg9in2YYg2LnZhdix2YfYpyAxNiDYudin2YXYp9iMINit2LPYqNmF2Kcg2YjYsdivINmB2Yog2YjYq9in2KbZgiDZgti22KfYptmK2KkuPGJyIC8+PGJyIC8+2YjYqtiv2LnZiiDYp9mE2YHYqtin2Kkg2KPZhiDZiNin2YrZhtiz2KrZitmGINij2K7YsNmH2Kcg2KXZhNmJINi02YLYqtmHINmB2Yog2YXYp9mG2YfYp9iq2YYg2YjYo9is2KjYsdmH2Kcg2LnZhNmJICLYo9mGINiq2KrYrdiz2LMg2KPYudi22KfYpNmHINmI2KPYsdi62YXZh9inINi52YTZiSDZhdmF2KfYsdiz2Kkg2KfZhNis2YbYsyDYqtit2Kog2KfZhNiq2YfYr9mK2K8iLjxiciAvPjxiciAvPtmI2KjYrdiz2Kgg2YjYq9in2KbZgiDYp9mE2YXYrdmD2YXYqSDZgdmC2K8g2YLYp9mEINmE2YfYpyDZiNin2YrZhtiz2KrZitmGIDoiINil2LDYpyDYo9ix2K/YqiDYo9mGINiq2LXYqNit2Yog2YXZhdir2YTYqSDZgdi52YTZitmDINij2YYg2KrZg9mI2YbZiiDZhdiz2KrYudiv2Kkg2YTYudmF2YQg2YXYpyDZiti32YTYqNmHINmF2YbZgyDYp9mE2YXYrtix2Kwg2KjZhdinINmB2Yog2LDZhNmDINin2YTYqti52LHZiiIuPGJyIC8+PGJyIC8+2YjYp9iv2LnYqiDYp9mE2YHYqtin2Kkg2KPZhiDZiNin2YrZhtiz2KrZitmGINi42YQg2YrYqtit2LHYtCDYqNmH2Kcg2YTZhdiv2KkgMTAg2LPZhtmI2KfYqi48YnIgLz48YnIgLz7Yp9mE2YbYrNmF2Kkg2KfZhNiz2YrZhtmF2KfYptmK2Kkg2LPZhNmF2Ykg2K3Yp9mK2YMg2KrYqtmH2YUg2KfZhNmF2YbYqtisINmI2KfZitmG2LPYqtmK2YYg2KjYqtmH2K/Zitiv2YfYpyDYqNin2YTZgtiq2YQ8YnIgLz48YnIgLz7Zhdiz2YrYsdipINiy2YrYsSDYp9mE2YbYs9in2KEg2YjZgti32Kgg2YfZiNmE2YrZiNivINmI2KfZitmG2LPYqtmK2YYg2KXZhNmJINin2YTZgtmF2Kkg2YjYs9mC2YjYt9mHINin2YTZhdiv2YjZijxiciAvPjxiciAvPtmF2LXYr9ixINin2YTYtdmI2LHYqUFGUC9HRVRUWSBJTUFHRVNJbWFnZSBjYXB0aW9u2KjYudi2INmG2KzZhdin2Kog2YfZiNmE2YrZiNmI2K8g2KfZhNmE2YjYp9iq2Yog2KfYqtmH2YXZhiDZh9in2LHZgdmKINio2KfZhNiq2K3Ysdi0INmI2KfZhNin2LnYqtiv2KfYoSDYp9mE2KzZhtiz2Yo8YnIgLz48YnIgLz7ZiNmK2YjYp9is2Ycg2YjYp9mK2YbYs9iq2YrZhiDYp9iq2YfYp9mF2KfYqiDYqNin2YTYqtit2LHYtCDYp9mE2KzZhtiz2Yog2YjYp9mE2YXYudin2YXZhNipINin2YTYs9mK2KbYqSDZhdmGINij2YPYq9ixINmF2YYgNzAg2KfZhdix2KPYqS4g2YjZgtivINiq2KTYr9mKINiz2YTYs9mE2Kkg2KfZhNiq2YfZhSDZiNmF2YYg2KjZitmG2YfYpyDYp9mE2KfYutiq2LXYp9ioINin2YTYqtmKINmK2YjYp9is2YfZh9inINmI2KfZitmG2LPYqtmK2YYg2KXZhNmJINmC2LbYp9ihINio2YLZitipINit2YrYp9iq2Ycg2YHZiiDYp9mE2LPYrNmGINmB2Yog2K3Yp9mEINil2K/Yp9mG2KrZhy48YnIgLz48YnIgLz7ZiNmC2K8g2KPYt9mE2YIg2LPYsdin2K3ZhyDZgdmKINmF2KfZitmILyDYo9mK2KfYsSAyMDE42Iwg2KjZg9mB2KfZhNipINmC2YrZhdiq2YfYpyDZhdmE2YrZiNmGINiv2YjZhNin2LEuPGJyIC8+PGJyIC8+2YXYtdiv2LEg2KfZhNi12YjYsdipR0VUVFkgSU1BR0VTSW1hZ2UgY2FwdGlvbtmD2YrZgdmGINiz2KjZitiz2Yog2K7ZhNin2YQg2LnYtNin2KEg2LHYp9io2LfYqSDZhdix2KfYs9mE2Yog2KfZhNio2YrYqiDYp9mE2KPYqNmK2LYg2YHZiiAyNyDYo9io2LHZitmEL9mG2YrYs9in2YYgMjAxMyDZgdmKINmI2KfYtNmG2LfZhiDYp9mE2LnYp9i12YXYqS4g2YjZh9mIINit2K/YqyDYs9mG2YjZiiDZitit2LbYsdmHINin2YTYtdit2YHZitmI2YYg2YjYp9mE2LPZitin2LPZitmI2YYg2YjYp9mE2YXYtNin2YfZitixLtmD2YrZgdmGINiz2KjZitiz2Yo8YnIgLz48YnIgLz7ZiNmP2KzZhyDYp9iq2YfYp9mFINix2LPZhdmKINmE2YTZhdmF2KvZhCDYp9mE2KPZhdix2YrZg9mKINmD2YrZgdmK2YYg2LPYqNmK2LPZiiDYqNin2YTYqtit2LHYtCDYp9mE2KzZhtiz2Yog2KjZhdix2KfZh9mCINmB2Yog2K3Yp9mG2Kkg2YHZiiDZiNmE2KfZitipINmF2KfYs9in2KrYtNmI2LPYqtizINio2KfZhNmI2YTYp9mK2KfYqiDYp9mE2YXYqtit2K/YqSDZgdmKINi52KfZhSAyMDE2LiDZiNiz2YrZhdir2YQg2LPYqNmK2LPZiiDYo9mF2KfZhSDYp9mE2YXYrdmD2YXYqSDZgdmKIDcg2YrZhtin2YrYsS8g2YPYp9mG2YjZhiDYp9mE2KvYp9mG2YogMjAxOS48YnIgLz48YnIgLz7ZiNmG2YHZiSDYs9io2YrYs9mKINiw2YTZgyDZiNmC2KfZhCDZgdmKINiq2LPYrNmK2YQg2YXYtdmI2LE6ICLYqNin2YTYqtij2YPZitivINmE2YYg2KPYr9mB2Lkg2KvZhdmGINij2LTZitin2KEg2YTZhSDYo9mC2YUg2KjZh9inIi7ZiNin2YTYttit2YrYqSDZh9mIINin2KjZhiDZhdmC2K/ZhdipINin2YTYo9iu2KjYp9ixINin2YTYs9in2KjZgtipINmH2YrYsNixINij2YjZhtix2YjYjCDYp9mE2KrZiiDYqtit2K/Yq9iqINi52YTZhtinINi52YYg2KfZhNit2KfYr9irINin2YTYudin2YUg2KfZhNmF2KfYttmKLjxiciAvPjxiciAvPtmI2KfYqtmH2YXYqiDYo9mI2YbYsdmIINiz2KjZitiz2Yog2KjYtNix2KfYoSDYp9mE2YPYrdmI2YQg2YTYp9io2YbZh9in2Iwg2KfZhNiw2Yog2YPYp9mGINii2YbYsNin2YMg2YHZiiDYp9mE2KvYp9mF2YbYqSDYudi02LEg2YjZgtiq2YfYp9iMINmI2KrYrdix2LQg2KjZhyDYrNmG2LPZitin2YvYjCDZgdmKINin2YTZiNmC2Kog2KfZhNiw2Yog2YPYp9mGINin2YTYs9mGINin2YTZgtin2YbZiNmG2Yog2YTYp9it2KrYs9in2KEg2KfZhNmD2K3ZiNmEINmB2Yog2YXYp9iz2KfYqti02YjYs9iq2LMg2YfZiCAyMSDYudin2YXYpy48YnIgLz48YnIgLz7ZiNiy2LnZhSDYotiu2LHZiNmGINmE2KfYrdmC2Kcg2KPZhiDYs9io2YrYs9mKINiq2K3Ysdi0INio2YfZhSDYrNmG2LPZitinINij2YrYttin2YsuPGJyIC8+PGJyIC8+2YXYtdiv2LEg2KfZhNi12YjYsdipUEFJbWFnZSBjYXB0aW9u2YHYsdmK2YXYp9mGINij2YPYryDYo9mG2Ycg2YTZhSDZitmD2YYg2YrZgti12K8g2YXYttin2YrZgtipINij2Ygg2KXYsti52KfYrCDYo9mKINi02K7YtdmF2YjYsdi62KfZhiDZgdix2YrZhdin2YY8YnIgLz48YnIgLz7Yp9i52KrYsNixINin2YTZhdmF2KvZhCDYp9mE2KPZhdix2YrZg9mKINin2YTYtNmH2YrYsSDZhdmI2LHYutin2YYg2YHYsdmK2YXYp9mGINio2LnYryDZhdmI2KfYrNmH2KrZhyDYqNiz2YjYoSDYp9mE2LPZhNmI2YMg2KfZhNis2YbYs9mK2Iwg2YXZhiDYo9mD2KvYsSDZhdmGIDgg2YbYs9in2KEuINmI2KfYqtmH2YXYqiDZhdiz2KfYudiv2Kkg2KXZhtiq2KfYrCDZgdix2YrZhdin2YYg2KjYp9mE2KrYrdix2LQg2KjZh9inINi52YTZiSDZhdiv2Ykg2KPYtNmH2LEg2KPYq9mG2KfYoSDYqti12YjZitixINin2YTZgdmK2YTZhSDYp9mE2YPZiNmF2YrYr9mKwqBHb2luZyBJbiBTdHlsZS48YnIgLz48YnIgLz7ZiNmC2KfZhNiqINi12KfYrdio2Kkg2KfZhNin2K/Yudin2KEg2KXZhiDZgdix2YrZhdin2YYgKDgwINi52KfZhdinKSDYqtmE2YXYsyDYrNiz2K/Zh9inINmF2LHYp9ix2Kcg2YjYqtmD2LHYp9ix2Kcg2YjYrdin2YjZhCDYsdmB2Lkg2KrZhtmI2LHYqtmH2Kcg2YjYs9ij2YTZh9inINi52YYg2YXYpyDYpdiw2Kcg2YPYp9mG2Kog2KrYsdiq2K/ZiiDZhdmE2KfYqNizINiv2KfYrtmE2YrYqS4g2YjZgtiv2YUg2YHYsdmK2YXYp9mGINin2LnYqtiw2KfYsdinINix2LPZhdmK2KcgItmE2KPZiiDYtNiu2LUg2LTYudixINio2KfZhNil2YbYsti52KfYrCDYo9mIINi52K/ZhSDYp9mE2KfYrdiq2LHYp9mFINio2LPYqNio2YciLjxiciAvPjxiciAvPtmI2KPYtdiv2LEg2KjZitin2YbYpyDZgtin2YQg2YHZitmHICLYo9mKINi02K7YtSDZiti52LHZgdmG2Yog2KPZiCDYudmF2YQg2YXYudmKINmK2LnYsdmBINij2YbZhtmKINmE2LPYqiDYtNiu2LXYpyDZitiz2YrYoSDZhNmE2KLYrtix2YrZhiDYudmGINi52YXYryDYo9mIINmK2KrYudmF2K8g2KXYsti52KfYrNmH2YUiLjxiciAvPjxiciAvPtin2YTYpdi52YTYp9mFINin2YTYsdmI2LPZiiDZiti12YEg2YXZiNix2LrYp9mGINmB2LHZitmF2KfZhiDYqNmAICLYp9mE2YXYutmB2YQiPGJyIC8+PGJyIC8+2YXZitix2YrZhCDYs9iq2LHZitioOiDYudiv2YUg2KfZhNmF2LPYp9mI2KfYqSDZgdmKINin2YTYpdiv2KfYsdipINiz2KfZh9mFINmB2Yog2YHYttin2KbYrSDZh9mI2YTZitmI2YjYryDYp9mE2KzZhtiz2YrYqTxiciAvPjxiciAvPtmB2Yog2LrYttmI2YYg2LDZhNmD2Iwg2YLYp9mE2Kog2KfZhdix2KPYqSDYudmF2YTYqiDZgdmKINmB2YrZhNmFICLYp9mE2KLZhiDYo9mG2Kog2KrYsdin2YbZiiIgTm93IFlvdSBTZWUgTWXYjCDYudin2YUgMjAxM9iMINil2YYg2KzZhdmK2Lkg2KfZhNi52KfZhdmE2KfYqiDYudix2YHZhiDYqNi22LHZiNix2KkgIti52K/ZhSDYp9ix2KrYr9in2KEg2YXZhNin2KjYsyDYqtio2LHYsiDYtdiv2YjYsdmH2YbYjCDYo9mIINij2YrYqSDZhdmE2KfYqNizINiq2YPYtNmBINi52YYg2KfZhNmF2KTYrtix2KkiINij2Ygg2KPZitipINmF2YTYp9io2LMg2KrZj9i42YfYsSDYqtmB2KfYtdmK2YQg2KfZhNis2LPZhSDYo9ir2YbYp9ihINmI2KzZiNivINin2YTZhdmF2KvZhCDZgdix2YrZhdin2YYuPGJyIC8+PGJyIC8+2YXYtdiv2LEg2KfZhNi12YjYsdipQ0xBVURJTyBPTk9SQVRJSW1hZ2UgY2FwdGlvbtii2LPZitinINij2LHYrNmG2KrZiNii2LPZitinINij2LHYrNmG2KrZiDxiciAvPjxiciAvPtiq2YjYp9is2Ycg2KfZhNmF2YXYq9mE2Kkg2KfZhNil2YrYt9in2YTZitipINii2LPZitinINij2LHYrNmG2KrZiNiMINin2YTYqtmKINmD2KfZhtiqINmF2YYg2KPZiNin2KbZhCDYp9mE2YXZhdir2YTYp9iqINin2YTZhNmI2KfYqtmKINin2KrZh9mF2YYgItmH2KfYsdmB2YrZiNin2YrZhtiz2KrZitmGIiDYqNin2YTYqtit2LHYtCDYp9mE2KzZhtiz2YrYjCDZhdiy2KfYudmFINin2YTYqtit2LHYtCDYqNmF2YXYq9mEINi02KfYqCDZhdmG2LAg2K7Zhdiz2Kkg2KPYudmI2KfZhdiMINi52YbYr9mF2Kcg2YPYp9mGINmB2Yog2KfZhNiz2KfYqNi52Kkg2LnYtNixINio2YrZhtmF2Kcg2YPYp9mG2Kog2KPYsdis2YbYqtmIINii2YbYsNin2YMg2YHZiiDYp9mE2LPYp9io2LnYqSDZiNin2YTYq9mE2KfYq9mK2YYuPGJyIC8+PGJyIC8+2YjZiNix2K/YqiDYqtmC2KfYsdmK2LEg2LnZhiDYo9mGINij2LHYrNmG2KrZiCDYr9mB2LnYqiDZhNmE2YXZhdir2YQg2KzZitmF2Yog2KjZitmG2YrYqtiMINmI2YfZiCDYp9mE2KLZhiDZgdmKINin2YTYq9in2YbZitipINmI2KfZhNi52LTYsdmK2YYg2YXZhiDYudmF2LHZh9iMINmF2KjZhNi6INio2YLZitmF2KkgMzgwINij2YTZgSDYr9mI2YTYp9ixINmE2LTYsdin2KEg2LXZhdiq2Ycg2KjYudivINin2KrZh9in2YXZhyDZhNmH2Kcg2KjYp9mE2KrYrdix2LQg2KfZhNis2YbYs9mKINmB2Yog2YHZhtiv2YIg2KjZg9in2YTZitmB2YjYsdmG2YrYpy48YnIgLz48YnIgLz7ZiNiq2YLZiNmEINmD2KfYsdmKINi62YjZhNiv2KjYsdi62Iwg2YXYrdin2YXZitipINij2LHYrNmG2KrZiNiMINil2YYg2KfZhNmF2KjZhNi6INij2Y/Yudi32Yog2YTYqNmK2YbZitiqINmE2YXYs9in2LnYr9iq2Ycg2YjYo9mG2Ycg2YPYp9mGINmK2LPYqti62YQg2YXYs9in2LnYr9iq2YfYpyDZhNmHLjxiciAvPjxiciAvPtmI2YLYp9mE2Kog2LrZiNmE2K/YqNix2Log2KXZhiDYo9ix2KzZitmG2KrZiCDZg9in2YbYqiDZhdi22LfYsdipINmE2YTYqti52KfZhdmEINmF2Lkg2KPYtNiu2KfYtSAi2KfYs9iq2LrZhNmI2Kcg2YbZgtin2Lcg2LbYudmB2YfYpyDZiNmC2YjYqtmH2KciLjxiciAvPjxiciAvPtmI2YjYtdmBINmF2K3Yp9mF2Yog2KjZitmG2YrYqiDYp9mE2YTZgtin2KEg2KfZhNis2YbYs9mKINmB2Yog2KfZhNmB2YbYr9mCINio2YrZhiDZhdmI2YPZhNmHINmI2KPYsdis2YrZhtiq2Ygg2KjYo9mG2YcgItin2LnYqtiv2KfYoSDYrNmG2LPZiiIg2KPYttixINmG2YHYs9mK2Kcg2KjZhdmI2YPZhNmHINmI2KjYr9iu2YTZhyDZiNmC2K/Ysdiq2Ycg2LnZhNmJINin2YTYudmF2YQuPGJyIC8+PGJyIC8+2YjZhdmGINio2YrZhiDYp9mE2YjYq9in2KbZgiDYp9mE2KrZiiDYqtmC2YjZhCDYtdit2YrZgdipICLZhtmK2YjZitmI2LHZgyDYqtin2YrZhdiyIiDYpdmG2YfYpyDYqNit2YjYstiq2YfYpyDYtdmI2LHYqSDYs9mK2YTZgdmKINmE2YTYp9ir2YbZitmGINmK2LPYqtmE2YLZitin2YYg2YHZitmH2Kcg2LnZhNmJINin2YTZgdix2KfYtNiMINmI2YrYsdis2Lkg2KrYp9ix2YrYrtmH2Kcg2KXZhNmJIDkg2YXYp9mK2Ygv2KPZitin2LEgMjAxMy5kZGQab3xUrOee4vK3lxzekzj6vuNYjnse5jAtxWUxyhqhFQ=="/>
+          </div>
+          <div>
+           <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="9754D209"/>
+          </div>
+          <!-- Go to www.addthis.com/dashboard to customize your tools -->
+          <script async="async" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56197d69b10bf630" type="text/javascript">
+          </script>
+          <div id="pagemaincontentwrapper1">
+           <table cellpadding="0" cellspacing="0" class="ContentBoundingBox" width="100%">
+            <tbody>
+             <tr valign="top">
+              <!-- 1 Column Style -->
+              <!-- START MAIN Column Content Area -->
+              <td class="MainContent11" width="100%">
+               <div class="home-sidebar-left">
+                <!--<div style="width: 100% !important; height: auto; clear: right; padding-bottom: 0px; float: right; margin-top: 10px;  padding-left: 7px">
+ 	<script>
+  (function() {
+    var cx = '011421082305143571014:qn3fb6ghoxo';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchbox-only></gcse:searchbox-only>
+
+  </div>-->
+                <div style="width: 99% !important; height: auto; clear: right; padding-bottom: 0px; float: right; margin-top: 10px; margin-left: 7px">
+                 <div class="bxheader">
+                  <a class="hd-title" href="#" style="color:#0099cc; border-bottom: 3px solid #A6AAAB ;">
+                   مقالات وكتابات
+                  </a>
+                 </div>
+                 <div class="bx-contnet">
+                  <div style=" float: right;padding-bottom: 10px;">
+                   <div class="opinions">
+                    <ul class="opinions_holder">
+                     <li>
+                      <div class="opinions_content">
+                       <a href="../art/5043">
+                        <div class="opinions_img">
+                         <img id="Content_Content_Content_AnalysisViewer_lstArticles_authorImage_0" src="../Uploadartpic/18-Apr-2019/e91afb70-80a2-4bc6-b283-a1d8631d90e9.jpg" style="height:102px;width:102px;padding: 3px;border: 1px solid #999;"/>
+                        </div>
+                        <div class="opinions_txt">
+                         <h2 style="min-height: 60px;">
+                          السادس والعشرون من مارس الفين وخمسة عشر..
+                         </h2>
+                        </div>
+                       </a>
+                       <a href="../Rprof/187">
+                        <h3>
+                         <span id="Content_Content_Content_AnalysisViewer_lstArticles_lblAuthorName_0">
+                          أ. علي ناصر الحنشي
+                         </span>
+                        </h3>
+                       </a>
+                      </div>
+                     </li>
+                    </ul>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+         </form>
+        </div>
+       </div>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+ </body>
+</html>
+<li>
+ <div class="opinions_content">
+  <a href="../art/5042">
+   <div class="opinions_img">
+    <img id="Content_Content_Content_AnalysisViewer_lstArticles_authorImage_0" src="../Uploadartpic/11-Nov-2017/1da08370-7757-438f-822f-5362213b3902.jpeg" style="height:102px;width:102px;padding: 3px;border: 1px solid #999;"/>
+   </div>
+   <div class="opinions_txt">
+    <h2 style="min-height: 60px;">
+     الفلسفة والأطفال.. استئناف الدهشة!
+    </h2>
+   </div>
+  </a>
+  <a href="../Rprof/2">
+   <h3>
+    <span id="Content_Content_Content_AnalysisViewer_lstArticles_lblAuthorName_0">
+     د. قاسم المحبشي
+    </span>
+   </h3>
+  </a>
+ </div>
+</li>
+<li>
+ <div class="opinions_content">
+  <a href="../art/5041">
+   <div class="opinions_img">
+    <img id="Content_Content_Content_AnalysisViewer_lstArticles_authorImage_0" src="../Uploadartpic/06-Jan-2019/5ea72844-f60c-46fd-b866-c718599c224b.jpg" style="height:102px;width:102px;padding: 3px;border: 1px solid #999;"/>
+   </div>
+   <div class="opinions_txt">
+    <h2 style="min-height: 60px;">
+     كلمة إنصاف بحق هذا الرجُل
+    </h2>
+   </div>
+  </a>
+  <a href="../Rprof/134">
+   <h3>
+    <span id="Content_Content_Content_AnalysisViewer_lstArticles_lblAuthorName_0">
+     صلاح السقلدي
+    </span>
+   </h3>
+  </a>
+ </div>
+</li>
+<li>
+ <div class="opinions_content">
+  <a href="../art/5040">
+   <div class="opinions_img">
+    <img id="Content_Content_Content_AnalysisViewer_lstArticles_authorImage_0" src="../Uploadartpic/11-Nov-2017/5dd5e95d-7031-47e1-b2b3-934c0b6c1ba5.jpg" style="height:102px;width:102px;padding: 3px;border: 1px solid #999;"/>
+   </div>
+   <div class="opinions_txt">
+    <h2 style="min-height: 60px;">
+     إذا غامرت في شرفٍ مرومِ .. فلا تقنع بما دون النجومِ
+    </h2>
+   </div>
+  </a>
+  <a href="../Rprof/1">
+   <h3>
+    <span id="Content_Content_Content_AnalysisViewer_lstArticles_lblAuthorName_0">
+     انور الصوفي
+    </span>
+   </h3>
+  </a>
+ </div>
+</li>
+<li>
+ <div class="opinions_content">
+  <a href="../art/5039">
+   <div class="opinions_img">
+    <img id="Content_Content_Content_AnalysisViewer_lstArticles_authorImage_0" src="../Uploadartpic/16-Apr-2019/e9a3c745-7161-4d83-bf44-cb91222b3fd3.jpg" style="height:102px;width:102px;padding: 3px;border: 1px solid #999;"/>
+   </div>
+   <div class="opinions_txt">
+    <h2 style="min-height: 60px;">
+     هل انتهى المستقبل السياسي لصالح وفريقه ؟
+    </h2>
+   </div>
+  </a>
+  <a href="../Rprof/184">
+   <h3>
+    <span id="Content_Content_Content_AnalysisViewer_lstArticles_lblAuthorName_0">
+     أحمد سيود
+    </span>
+   </h3>
+  </a>
+ </div>
+</li>
+<li>
+ <div class="opinions_content">
+  <a href="../art/5038">
+   <div class="opinions_img">
+    <img id="Content_Content_Content_AnalysisViewer_lstArticles_authorImage_0" src="../Uploadartpic/30-Jan-2018/6eb6b5db-cb78-4a2e-abbf-0f44426534d6.jpg" style="height:102px;width:102px;padding: 3px;border: 1px solid #999;"/>
+   </div>
+   <div class="opinions_txt">
+    <h2 style="min-height: 60px;">
+     الارهاب الذي يريد أن يشوه وظيفة الدين التسامحية
+    </h2>
+   </div>
+  </a>
+  <a href="../Rprof/31">
+   <h3>
+    <span id="Content_Content_Content_AnalysisViewer_lstArticles_lblAuthorName_0">
+     د.ياسين سعيد نعمان
+    </span>
+   </h3>
+  </a>
+ </div>
+</li>
+<li>
+ <div class="opinions_content">
+  <a href="../art/5037">
+   <div class="opinions_img">
+    <img id="Content_Content_Content_AnalysisViewer_lstArticles_authorImage_0" src="../Uploadartpic/15-Oct-2018/34020989-e12f-4043-a2f3-07fe40029236.jpg" style="height:102px;width:102px;padding: 3px;border: 1px solid #999;"/>
+   </div>
+   <div class="opinions_txt">
+    <h2 style="min-height: 60px;">
+     على مسؤوليتي  ..  اتفاق يافعي حوثي
+    </h2>
+   </div>
+  </a>
+  <a href="../Rprof/99">
+   <h3>
+    <span id="Content_Content_Content_AnalysisViewer_lstArticles_lblAuthorName_0">
+     خالد الحميقاني
+    </span>
+   </h3>
+  </a>
+ </div>
+</li>
+<li>
+ <div class="opinions_content">
+  <a href="../art/5036">
+   <div class="opinions_img">
+    <img id="Content_Content_Content_AnalysisViewer_lstArticles_authorImage_0" src="../Uploadartpic/02-Jan-2018/46d8fc82-1749-4ba3-b3f6-3ec6467913c5.jpg" style="height:102px;width:102px;padding: 3px;border: 1px solid #999;"/>
+   </div>
+   <div class="opinions_txt">
+    <h2 style="min-height: 60px;">
+     الجيش الوطني بين ميليشيات آل علي وجيش علي وعلي وعلي
+    </h2>
+   </div>
+  </a>
+  <a href="../Rprof/26">
+   <h3>
+    <span id="Content_Content_Content_AnalysisViewer_lstArticles_lblAuthorName_0">
+     محمد عبدالله القادري
+    </span>
+   </h3>
+  </a>
+ </div>
+</li>
+<div class="linkbutton linkbuttonplus" style="clear:both; margin:5px; margin-left:10px;margin-bottom:20px; float:left">
+ <a href="../artsec/1" style="color:#555;">
+  المزيد
+ </a>
+</div>
+<br/>
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script>
+<!-- عدن تايم العمود الجانبي الرئيسية 600*300 -->
+<ins class="adsbygoogle" data-ad-client="ca-pub-0745154507938510" data-ad-slot="5126988597" style="display:inline-block;width:100%;height:600px">
+</ins>
+<script>
+ (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br/>
+<div style="clear: both;">
+</div>
+<!--end .home-sidebar-right-->
+<!-- four columns ------------------------------------------------------------------------>
+<div class="home-content">
+ <div class="Pages" id="">
+  <div class="colsethed3" id="Div3">
+   <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+   </script>
+   <!-- صفحة الاخبار جامعة عدن -->
+   <ins class="adsbygoogle" data-ad-client="ca-pub-0745154507938510" data-ad-slot="1908960595" style="display:inline-block;width:100%;height:130px">
+   </ins>
+   <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>
+   <div class="pageheader">
+    <h2 style="margin-right: 15px;color:#f00;">
+     <span id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_NDetails1_lblprefixtitle">
+     </span>
+    </h2>
+    <img src="../NewThemes/images/round_plus.png" style="float:right;margin-top: 15px;">
+     <h1 style="margin-right: 15px;">
+      <span id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_NDetails1_lblarticalTitle">
+       التحرش الجنسي: من هم أبرز المشاهير المتهمين في 2018؟
+      </span>
+     </h1>
+    </img>
+   </div>
+   <h3 class="widget-title" style="padding-top: 2px;">
+    <span id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_NDetails1_catn">
+     عربية وعالمية
+    </span>
+   </h3>
+   <div class="date" style="color: #555;">
+    <span id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_NDetails1_lblDateOfartical" style="font-size:Medium;font-weight:bold;">
+     الخميس - 27 ديسمبر 2018 - الساعة  11:53 ص بتوقيت اليمن ،،،
+    </span>
+    <br/>
+   </div>
+   <div style="padding-bottom: 10px;  margin-top:20px;margin-right:50px;">
+    <img id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_NDetails1_newsimg" src="/UploadFiles/2018/Dec/27/e52c3163-f166-47f9-9b36-e119ff5ca00d.jpg" style="height:300px;width:540px;border-width:0px;border: 2px solid #ccc;">
+     <div style="width: 537px;background: #555;
+    color: #f8f8f8; opacity: 1;padding-right: 5px;">
+      <p style="Top: 0;color:#FFFFFF; font-family: tahoma;">
+       <span id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_NDetails1_imgdescription" style="font-size:Small;">
+       </span>
+      </p>
+     </div>
+    </img>
+   </div>
+   <div class="content">
+    <p style=" color:  #5DBCD2;font-family: sans-serif;font-weight: bold;padding-right: 20px;">
+     <span id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_NDetails1_newssourcefro" style="font-size:Medium;">
+      الوطن العدنية / متابعات
+     </span>
+    </p>
+    <span id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_NDetails1_lblarticalDetails" style="font-size:Medium;">
+     أول من أطلقت هاشتاغ "مي تو" في أواخر عام 2017، كانت الممثلة الأمريكية أليسا ميلانو، التي ادعت تحرش المخرج الأمريكي هارفي واينستين جنسياً بها. ودعت من خلال الهاشتاغ " أنا أيضاً" جميع النساء اللواتي تعرضن للتحرش الجنسي إلى الإفصاح عن تجاربهن وإرفاقها بالهاشتاغ. واستجابت المئات من النساء حول العالم لهذا الهاشتاغ وطالبن بوضع حد لهذا السلوك.
+     <br/>
+     <br/>
+     وكان عام 2018 عاماً لصرخة النساء في وجه المتحرشين بهن من كبار نجوم الفن والسينما وسط ذهول وصدمة الجمهور والمعجبين.
+     <br/>
+     <br/>
+     مصدر الصورةSOCIAL MEDIA-TWITTER
+     <br/>
+     <br/>
+     وفيما يلي قائمة بأبرز المتهمين بالتحرش الجنسي خلال عام 2018:
+     <br/>
+     <br/>
+     مصدر الصورةEPAImage captionينفي واينستين الاتهامات الموجهة إليه
+     <br/>
+     <br/>
+     هارفي واينستين
+     <br/>
+     <br/>
+     يواجه المنتج السينمائي الأمريكي هارفي واينستين (66 عاما) تهماً بالاعتداء الجنسي على عارضة بولندية في نيويورك حين كان عمرها 16 عاما، حسبما ورد في وثائق قضائية.
+     <br/>
+     <br/>
+     وتدعي الفتاة أن واينستين أخذها إلى شقته في مانهاتن وأجبرها على "أن تتحسس أعضاؤه وأرغمها على ممارسة الجنس تحت التهديد".
+     <br/>
+     <br/>
+     وبحسب وثائق المحكمة فقد قال لها واينستين :" إذا أردت أن تصبحي ممثلة فعليك أن تكوني مستعدة لعمل ما يطلبه منك المخرج بما في ذلك التعري".
+     <br/>
+     <br/>
+     وادعت الفتاة أن واينستين ظل يتحرش بها لمدة 10 سنوات.
+     <br/>
+     <br/>
+     النجمة السينمائية سلمى حايك تتهم المنتج واينستين بتهديدها بالقتل
+     <br/>
+     <br/>
+     مسيرة زير النساء وقطب هوليود واينستين إلى القمة وسقوطه المدوي
+     <br/>
+     <br/>
+     مصدر الصورةAFP/GETTY IMAGESImage captionبعض نجمات هوليوود اللواتي اتهمن هارفي بالتحرش والاعتداء الجنسي
+     <br/>
+     <br/>
+     ويواجه واينستين اتهامات بالتحرش الجنسي والمعاملة السيئة من أكثر من 70 امرأة. وقد تؤدي سلسلة التهم ومن بينها الاغتصاب التي يواجهها واينستين إلى قضاء بقية حياته في السجن في حال إدانته.
+     <br/>
+     <br/>
+     وقد أطلق سراحه في مايو/ أيار 2018، بكفالة قيمتها مليون دولار.
+     <br/>
+     <br/>
+     مصدر الصورةGETTY IMAGESImage captionكيفن سبيسي خلال عشاء رابطة مراسلي البيت الأبيض في 27 أبريل/نيسان 2013 في واشنطن العاصمة. وهو حدث سنوي يحضره الصحفيون والسياسيون والمشاهير.كيفن سبيسي
+     <br/>
+     <br/>
+     وُجه اتهام رسمي للممثل الأمريكي كيفين سبيسي بالتحرش الجنسي بمراهق في حانة في ولاية ماساتشوستس بالولايات المتحدة في عام 2016. وسيمثل سبيسي أمام المحكمة في 7 يناير/ كانون الثاني 2019.
+     <br/>
+     <br/>
+     ونفى سبيسي ذلك وقال في تسجيل مصور: "بالتأكيد لن أدفع ثمن أشياء لم أقم بها".والضحية هو ابن مقدمة الأخبار السابقة هيذر أونرو، التي تحدثت علنا عن الحادث العام الماضي.
+     <br/>
+     <br/>
+     واتهمت أونرو سبيسي بشراء الكحول لابنها، الذي كان آنذاك في الثامنة عشر وقتها، وتحرش به جنسياً، في الوقت الذي كان السن القانوني لاحتساء الكحول في ماساتشوستس هو 21 عاما.
+     <br/>
+     <br/>
+     وزعم آخرون لاحقا أن سبيسي تحرش بهم جنسيا أيضاً.
+     <br/>
+     <br/>
+     مصدر الصورةPAImage captionفريمان أكد أنه لم يكن يقصد مضايقة أو إزعاج أي شخصمورغان فريمان
+     <br/>
+     <br/>
+     اعتذر الممثل الأمريكي الشهير مورغان فريمان بعد مواجهته بسوء السلوك الجنسي، من أكثر من 8 نساء. واتهمت مساعدة إنتاج فريمان بالتحرش بها على مدى أشهر أثناء تصوير الفيلم الكوميدي Going In Style.
+     <br/>
+     <br/>
+     وقالت صاحبة الادعاء إن فريمان (80 عاما) تلمس جسدها مرارا وتكرارا وحاول رفع تنورتها وسألها عن ما إذا كانت ترتدي ملابس داخلية. وقدم فريمان اعتذارا رسميا "لأي شخص شعر بالإنزعاج أو عدم الاحترام بسببه".
+     <br/>
+     <br/>
+     وأصدر بيانا قال فيه "أي شخص يعرفني أو عمل معي يعرف أنني لست شخصا يسيء للآخرين عن عمد أو يتعمد إزعاجهم".
+     <br/>
+     <br/>
+     الإعلام الروسي يصف مورغان فريمان بـ "المغفل"
+     <br/>
+     <br/>
+     ميريل ستريب: عدم المساواة في الإدارة ساهم في فضائح هوليوود الجنسية
+     <br/>
+     <br/>
+     في غضون ذلك، قالت امرأة عملت في فيلم "الآن أنت تراني" Now You See Me، عام 2013، إن جميع العاملات عرفن بضرورة "عدم ارتداء ملابس تبرز صدورهن، أو أية ملابس تكشف عن المؤخرة" أو أية ملابس تُظهر تفاصيل الجسم أثناء وجود الممثل فريمان.
+     <br/>
+     <br/>
+     مصدر الصورةCLAUDIO ONORATIImage captionآسيا أرجنتوآسيا أرجنتو
+     <br/>
+     <br/>
+     تواجه الممثلة الإيطالية آسيا أرجنتو، التي كانت من أوائل الممثلات اللواتي اتهمن "هارفيواينستين" بالتحرش الجنسي، مزاعم التحرش بممثل شاب منذ خمسة أعوام، عندما كان في السابعة عشر بينما كانت أرجنتو آنذاك في السابعة والثلاثين.
+     <br/>
+     <br/>
+     ووردت تقارير عن أن أرجنتو دفعت للممثل جيمي بينيت، وهو الآن في الثانية والعشرين من عمره، مبلغ بقيمة 380 ألف دولار لشراء صمته بعد اتهامه لها بالتحرش الجنسي في فندق بكاليفورنيا.
+     <br/>
+     <br/>
+     وتقول كاري غولدبرغ، محامية أرجنتو، إن المبلغ أُعطي لبينيت لمساعدته وأنه كان يستغل مساعدتها له.
+     <br/>
+     <br/>
+     وقالت غولدبرغ إن أرجينتو كانت مضطرة للتعامل مع أشخاص "استغلوا نقاط ضعفها وقوتها".
+     <br/>
+     <br/>
+     ووصف محامي بينيت اللقاء الجنسي في الفندق بين موكله وأرجينتو بأنه "اعتداء جنسي" أضر نفسيا بموكله وبدخله وقدرته على العمل.
+     <br/>
+     <br/>
+     ومن بين الوثائق التي تقول صحيفة "نيويورك تايمز" إنها بحوزتها صورة سيلفي للاثنين يستلقيان فيها على الفراش، ويرجع تاريخها إلى 9 مايو/أيار 2013.
+    </span>
+   </div>
+   <br/>
+   <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+   </script>
+   <!-- جامعة عدن الاعلان السفلي -->
+   <ins class="adsbygoogle" data-ad-client="ca-pub-0745154507938510" data-ad-slot="2541841799" style="display:inline-block;width:728px;height:90px">
+   </ins>
+   <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>
+   <br/>
+   <hr/>
+   <br/>
+   <br/>
+   <!-- Go to www.addthis.com/dashboard to customize your tools -->
+   <div class="addthis_sharing_toolbox">
+   </div>
+   <br/>
+   <br/>
+  </div>
+ </div>
+</div>
+<br/>
+<!-- crazy egg heat track code -->
+<!-- END MAIN Column Content Area -->
+<!-- End Content Area -->
+<!-- Begin Footer Area -->
+<!-- closing out pagemaincontent div -->
+<!-- end footerwrapper -->
+<!-- end Pagewrapper Div -->
+<!-- End Footer Area -->
+<div id="footerwrapper">
+ <div id="footerwrappercontent">
+  <div id="footerleftwrapper">
+   <ul style="color:#fff">
+    <li>
+     <a href="../pag/1" style="color:#fff" title="اتصل بنا">
+      اتصل بنا
+     </a>
+     |
+    </li>
+    <li>
+     <a href="../pag/3" style="color:#fff" title="هيئة التحرير">
+      هيئة التحرير
+     </a>
+     |
+    </li>
+   </ul>
+  </div>
+  <div id="footerrightwrapper">
+   <p>
+    <a href="mailto:alsaiaad@infotech-union.com" style="color:#fff">
+     صحيفة الوطن العدنية - جميع الحقوق محفوظة  -
+    </a>
+    Copyright © 2018
+    <br/>
+   </p>
+   <br/>
+   <a href="mailto:alsaiaad@infotech-union.com" style="color:#fff" title="ITU-TEAM">
+    برمجة وتطوير ITU-TEAM
+   </a>
+  </div>
+ </div>
+ <!-- end footerleftwrapper -->
+ <!-- end footerrightwrapper -->
+</div>
+<!-- End Page Display -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-9732391-32">
+</script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-9732391-32');
+</script>

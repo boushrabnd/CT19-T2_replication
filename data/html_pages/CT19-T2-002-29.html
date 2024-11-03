@@ -1,0 +1,1237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+ <head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);
+  </script>
+  <meta content="600" http-equiv="refresh"/>
+  <meta content="noodp" name="robots"/>
+  <meta content="noodp" name="googlebot"/>
+  <meta content="noodp" name="googlebot-news"/>
+  <meta content="le360.ma" name="copyright">
+   <meta content="1001626509887031" property="fb:app_id">
+    <script async="async" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5536223c4a81ff2a" type="text/javascript">
+    </script>
+    <script src="http://pub.le360.ma/ads360/www/delivery/spcjs.php?id=9&amp;block=1" type="text/javascript">
+    </script>
+    <link href="http://ar.le360.ma/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+    <style media="all" type="text/css">
+     @import url("http://ar.le360.ma/css/system.base.css");
+@import url("http://ar.le360.ma/css/system.menus.css");
+@import url("http://ar.le360.ma/css/system.messages.css");
+@import url("http://ar.le360.ma/css/system.theme.css");
+    </style>
+    <style media="all" type="text/css">
+     @import url("http://ar.le360.ma/css/fonts.css");
+@import url("http://ar.le360.ma/css/form.css");
+@import url("http://ar.le360.ma/css/ie.css");
+@import url("http://ar.le360.ma/css/styles.css?08");
+@import url("http://ar.le360.ma/css/color-spectrum.css");
+@import url("http://ar.le360.ma/css/custom.css?04");
+    </style>
+    <script src="http://ar.le360.ma/scripts/jquery.min.js?v=1.7.1" type="text/javascript">
+    </script>
+    <script src="http://m.le360.ma/js/device.min.js" type="text/javascript">
+    </script>
+    <script src="http://m.le360.ma/devicear.js?v6" type="text/javascript">
+    </script>
+    <script src="http://ar.le360.ma/scripts/jquery.once.js?v=1.2" type="text/javascript">
+    </script>
+    <script src="http://ar.le360.ma/scripts/drupal.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+     <!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"http://ar.le360.ma","pathPrefix":"","le_site":{"french_disabled":1,"page_type":"home_page","current_nid":0,"current_language":"fr"}});
+//--><!]]>
+    </script>
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-56328976-2', 'auto');
+ga('send', 'pageview');
+    </script>
+    <!-- Start Alexa Certify Javascript -->
+    <script type="text/javascript">
+     _atrk_opts = { atrk_acct:"qRkLk1ao6C52bm", domain:"le360.ma",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+    </script>
+    <noscript>
+     <img alt="" height="1" src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=qRkLk1ao6C52bm" style="display:none" width="1"/>
+    </noscript>
+    <!-- End Alexa Certify Javascript -->
+    <script>
+     window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1001626509887031',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <meta content="اللبنانية نادين لبكي أول مخرجة عربية تُرشح للأوسكار" property="og:title"/>
+    <meta content="http://i.le360.ma/ar/sites/default/files/assets/images/2019/01/1037274893.jpg" property="og:image"/>
+    <meta content="594" property="og:image:width"/>
+    <meta content="334" property="og:image:height"/>
+    <meta content="article" property="og:type"/>
+    <meta content="http://ar.le360.ma/culture/144636" property="og:url"/>
+    <meta content="ar.le360.ma" property="og:site_name"/>
+    <meta content="100005205097677" property="fb:admins"/>
+    <meta content="أعلنت أكاديمية فنون وعلوم الصور المتحركة، اليوم الثلاثاء، عن الترشيحات النهائية لحفل جوائز الأوسكار الـ91، الذي سيقام في شهر فبراير المقبل، إذ أعلن رسميا عن ترشح المخرجة اللبنانية، نادين لبكي، وفيلمها &amp;quot;كفر ناحوم&amp;quot;، لفئة أفضل فيلم أجنبي، إلى جانب الأفلام عدد من الأفلام.
+" property="og:description"/>
+    <meta content="أعلنت أكاديمية فنون وعلوم الصور المتحركة، اليوم الثلاثاء، عن الترشيحات النهائية لحفل جوائز الأوسكار الـ91، الذي سيقام في شهر فبراير المقبل، إذ أعلن رسميا عن ترشح المخرجة اللبنانية، نادين لبكي، وفيلمها &amp;quot;كفر ناحوم&amp;quot;، لفئة أفضل فيلم أجنبي، إلى جانب الأفلام عدد من الأفلام.
+" name="description"/>
+    <link href="http://ar.le360.ma" rel="author"/>
+    <link href="http://ar.le360.ma/culture/144636" rel="canonical"/>
+    <meta content="اللبنانية نادين لبكي أول مخرجة عربية تُرشح للأوسكار" name="news_keywords"/>
+    <title>
+     اللبنانية نادين لبكي أول مخرجة عربية تُرشح للأوسكار | www.le360.ma
+    </title>
+   </meta>
+  </meta>
+ </head>
+ <body class="page-culture">
+  <div class="container">
+   <img src="http://boar.le360.ma/sites/default/files/assets/images/2019/01/1037274893.jpg" style="display:none; height:1px; width:1px;"/>
+   <div class="search-panel">
+    <div class="holder">
+     <form accept-charset="UTF-8" action="#" id="search-block-form" method="post">
+      <div>
+       <fieldset>
+        <div class="form-item form-type-textfield form-item-search-block-form text-form">
+         <span class="input-placeholder-text" style="color: rgb(63, 62, 60); position: absolute;">
+          اكتب عبارة البحث
+         </span>
+         <input class="input-placeholder-text form-text" id="edit-search-block-form--2" maxlength="128" name="search_block_form" size="15" title="أدخل العبارات التي تريد البحث عنها." type="text" value=""/>
+        </div>
+        <div class="form-actions form-wrapper" id="edit-actions">
+         <input class="btn-submit form-submit" id="edit-submit" name="op" type="submit" value="ابحث"/>
+         <a class="close-search-panel" href="#">
+          close
+         </a>
+        </div>
+       </fieldset>
+      </div>
+     </form>
+    </div>
+   </div>
+   <div id="header">
+    <div class="panel-pane pane-header">
+     <div class="header-holder">
+      <strong class="logo">
+       <a href="/">
+        le360
+       </a>
+      </strong>
+      <div id="nav">
+       <ul>
+        <li>
+         <a class="policy" href="/politique">
+          سياسة
+         </a>
+        </li>
+        <li>
+         <a class="economy" href="/economie">
+          اقتصاد
+         </a>
+        </li>
+        <li>
+         <a class="company" href="/societe">
+          مجتمع
+         </a>
+        </li>
+        <li>
+         <a class="culture" href="/culture">
+          ثقافة
+         </a>
+        </li>
+        <li>
+         <a class="media" href="/medias">
+          ميديا
+         </a>
+        </li>
+        <li>
+         <a class="sports" href="http://ar.sport.le360.ma">
+          رياضة
+         </a>
+        </li>
+        <li>
+         <a class="people" href="/people">
+          مشاهير
+         </a>
+        </li>
+        <li>
+         <a class="nisaiat" href="/nisaiat">
+          نسائيات
+         </a>
+        </li>
+        <li>
+         <a class="insolite" href="/insolite">
+          منوعات
+         </a>
+        </li>
+        <li>
+         <a class="monde" href="/monde">
+          دولي
+         </a>
+        </li>
+       </ul>
+      </div>
+      <ul class="top-nav">
+       <li>
+        <span>
+         <a class="arabe" href="/videos" style="font-size:21px">
+          فيديو 360
+         </a>
+        </span>
+       </li>
+       <li class="search-btn">
+        <span>
+         <a class="search open-search-panel" href="#">
+          ابحث
+         </a>
+        </span>
+       </li>
+       <li>
+        <span>
+         <a class="menu-link-to-french arabe" href="http://fr.le360.ma" id="menu-link-to-french">
+          Version FR
+         </a>
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="wrapper">
+    <div class="wrap">
+     <div class="m1">
+      <div class="m2">
+       <div class="m3">
+        <script type="text/javascript">
+         <!--// <![CDATA[
+    OA_show(169);
+// ]]> -->
+        </script>
+        <noscript>
+         <a href="http://pub.le360.ma/ads360/www/delivery/ck.php?n=0ff7f19" target="_blank">
+          <img alt="" border="0" src="http://pub.le360.ma/ads360/www/delivery/avw.php?zoneid=169&amp;n=0ff7f19"/>
+         </a>
+        </noscript>
+        <script type="text/javascript">
+         <!--// <![CDATA[
+    OA_show(159);
+// ]]> -->
+        </script>
+        <noscript>
+         <a href="http://pub.le360.ma/ads360/www/delivery/ck.php?n=03f2e4e" target="_blank">
+          <img alt="" border="0" src="http://pub.le360.ma/ads360/www/delivery/avw.php?zoneid=159&amp;n=03f2e4e"/>
+         </a>
+        </noscript>
+        <script type="text/javascript">
+         <!--// <![CDATA[
+    OA_show(171);
+// ]]> -->
+        </script>
+        <noscript>
+         <a href="http://pub.le360.ma/ads360/www/delivery/ck.php?n=6bef89d" target="_blank">
+          <img alt="" border="0" src="http://pub.le360.ma/ads360/www/delivery/avw.php?zoneid=171&amp;n=6bef89d"/>
+         </a>
+        </noscript>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="banner-holder">
+     <div id="main">
+      <div class="block block-system" id="block-system-main">
+       <div class="content">
+        <div class="content-block">
+         <div class="label-ttl">
+          <div>
+           ثقافة
+          </div>
+          <div class="corner">
+          </div>
+         </div>
+         <div class="addthis_sharing_toolbox social-list">
+         </div>
+         <div class="articles-holder">
+          <h1>
+           اللبنانية نادين لبكي أول مخرجة عربية تُرشح للأوسكار
+          </h1>
+          <span class="date-ttl">
+           <span>
+            22/01/2019-
+            <a href="/recherche?f[0]=field_signature%253Auid%3A18435">
+             نسرين الناجي
+            </a>
+           </span>
+           على الساعة | 20:30
+          </span>
+          <div class="full-item">
+           <div class="holder">
+            <img alt="نادين لبكي" src="http://i.le360.ma/ar/sites/default/files/styles/asset_image_full/public/assets/images/2019/01/1037274893.jpg" title="نادين لبكي" typeof="foaf:Image"/>
+           </div>
+          </div>
+          <span class="copy-item">
+           © حقوق النشر :   DR
+          </span>
+          <p class="marker">
+           أعلنت أكاديمية فنون وعلوم الصور المتحركة، اليوم الثلاثاء، عن الترشيحات النهائية لحفل جوائز الأوسكار الـ91، الذي سيقام في شهر فبراير المقبل، إذ أعلن رسميا عن ترشح المخرجة اللبنانية، نادين لبكي، وفيلمها "كفر ناحوم"، لفئة أفضل فيلم أجنبي، إلى جانب الأفلام عدد من الأفلام.
+          </p>
+          <div class="ctn">
+           وكان فيلم "كفر ناحوم"، اختير من قبل الأكاديمية في شهر دجنبر الماضي، ضمن القائمة المختصرة للأفلام المرشحة لجائزة أوسكار في فئة أفضل فيلم أجنبي.
+           <br/>
+           <br/>
+           وبذلك الترشيح في هذه الفئة، تحقق نادين لبكي سبقا، بأن تصبح هي أول إمرأة عربية ترشح لجائزة أوسكار، بعد أن كانت الترشيحات السابقة مقتصرة على أفلام المخرجين العرب من الذكور.
+           <br/>
+           <br/>
+           يذكر أن فيلم "كفر ناحوم" ترشح لجائزة أفضل فيلم أجنبي بحفل "غولدن غلوب"، وهو من إنتاج 2018، ومن إخراج نادين لبكي، وتم اختياره للتنافس على جائزة "السعفة الذهبية" في مهرجان "كان" السينمائي في عام 2018، ولكنه فاز بجائزة لجنة التحكيم.
+           <br/>
+           <br/>
+           ويروي الفيلم قصة "زين"، وهو صبي لبناني يقاضي والديه بسبب "جريمة" إهدائه الحياة، بسبب ظروفه القاسية، وإهمالهما له.
+           <br/>
+           <br/>
+           ويتتبع الفيلم حياة "زين" في الشوارع، مرورا بأن يكون "شخص بالغ" يبلغ من العمر 12 عاما، يهرب من والديه المهملين، ويتمكن من العيش في الشوارع بدهائه، ثم يعتني باللاجئين الإثيوبيين "رحيل" وابنها الصغير "يونس"، حتى يتم القبض عليه في جريمة، ويسعى لتبرئة نفسه في المحكمة.
+           <br/>
+           <br/>
+           يذكر أن هذه هي ثاني مرة يرشح فيها لبنان لجائزة أوسكار أفضل فيلم أجنبي للعام الثاني على التوالي، بعد فيلم "قضية رقم 23" في عام 2018، من بطولة عادل كرم، وكامل الباشا، ومن إخراج زياد دويري.
+           <br/>
+           <br/>
+           وسيقام حفل توزيع جوائز الأوسكار الـ 91 على مسرح "دولبي" في بيفرلي هيلز بولاية كاليفورنيا الأمريكية، في 24 فبراير المقبل.
+          </div>
+          <div class="social-bar-bottom">
+           <div class="addthis_sharing_toolbox">
+           </div>
+           <h3>
+            <a href="/recherche?f[0]=field_signature%253Auid%3A18435">
+             نسرين الناجي
+            </a>
+           </h3>
+          </div>
+         </div>
+         <div style="width:300px; margin:0 auto 17px;">
+          <script type="text/javascript">
+           <!--// <![CDATA[
+    OA_show(167);
+// ]]> -->
+          </script>
+          <noscript>
+           <a href="http://pub.le360.ma/ads360/www/delivery/ck.php?n=bed024d" target="_blank">
+            <img alt="" border="0" src="http://pub.le360.ma/ads360/www/delivery/avw.php?zoneid=167&amp;n=bed024d"/>
+           </a>
+          </noscript>
+         </div>
+         <div class="title">
+          <h3>
+           مضامين ذات صلة
+          </h3>
+         </div>
+         <div class="content-slider content-slider-carousel">
+          <a class="btn-prev" href="#">
+           prev
+          </a>
+          <a class="btn-next" href="#">
+           next
+          </a>
+          <div class="holder">
+           <ul class="content-slider-list">
+            <li>
+             <div class="img">
+              <a href="/culture/144332">
+               <img alt="cover: نادين لبكي تتحدث لـLe360 عن فيلمها الجديد وهكذا علقت على مشاركتها بمهرجان الفيلم بمراكش" src="http://i.le360.ma/ar/sites/default/files/styles/related_articles/public/assets/images/2018/12/nadine.jpg" title="cover: نادين لبكي تتحدث لـLe360 عن فيلمها الجديد وهكذا علقت على مشاركتها بمهرجان الفيلم بمراكش" typeof="foaf:Image"/>
+              </a>
+             </div>
+             <p>
+              <a href="/culture/144332">
+               "كفر ناحوم" يحلق بلبكي إلى جوائز الأكاديمية البريطانية للسينما
+              </a>
+             </p>
+            </li>
+            <li>
+             <div class="img">
+              <a href="/culture/143085">
+               <img alt="cover: نادين لبكي تتحدث لـLe360 عن فيلمها الجديد وهكذا علقت على مشاركتها بمهرجان الفيلم بمراكش" src="http://i.le360.ma/ar/sites/default/files/styles/related_articles/public/assets/images/2018/12/nadine.jpg" title="cover: نادين لبكي تتحدث لـLe360 عن فيلمها الجديد وهكذا علقت على مشاركتها بمهرجان الفيلم بمراكش" typeof="foaf:Image"/>
+              </a>
+             </div>
+             <p>
+              <a href="/culture/143085">
+               بالفيديو. نادين لبكي: سعيدة بعرض "كفر ناحوم" في مهرجان مراكش
+              </a>
+             </p>
+            </li>
+            <li>
+             <div class="img">
+              <a href="/people/143398">
+               <img alt="هارفي واينستين" src="http://i.le360.ma/ar/sites/default/files/styles/related_articles/public/assets/images/2018/05/a_002_4.jpg" title="هارفي واينستين" typeof="foaf:Image"/>
+              </a>
+             </div>
+             <p>
+              <a href="/people/143398">
+               المنتج "الذئب" يعترف: مارست الجنس مع فنانة فنالت الأوسكار
+              </a>
+             </p>
+            </li>
+           </ul>
+          </div>
+         </div>
+         <script type="text/javascript">
+          <!--// <![CDATA[
+    OA_show(292);
+// ]]> -->
+         </script>
+         <noscript>
+          <a href="http://pub.le360.ma/ads360/www/delivery/ck.php?n=RN9032" target="_blank">
+           <img alt="" border="0" src="http://pub.le360.ma/ads360/www/delivery/avw.php?zoneid=292&amp;n=RN9032"/>
+          </a>
+         </noscript>
+         <script>
+          var url="http://ar.le360.ma/culture/144636";
+					    var title="اللبنانية نادين لبكي أول مخرجة عربية تُرشح للأوسكار"
+						var id_node ="144636"
+         </script>
+         <div id="comments_thread">
+          <div class="load">
+          </div>
+         </div>
+         <!-- date article : 2019-04-25 08:26:51 -->
+        </div>
+        <script>
+         ga("set", "dimension1","378");
+						                 ga("set", "dimension2","18435");
+        </script>
+        <script>
+         ga("set", "dimension3","article");
+        </script>
+        <div class="page-overlay">
+        </div>
+        <img height="1" src="http://ar.le360.ma/stat.php?nid=144636" style="position: fixed;display:none" width="1"/>
+        <div class="sidebar">
+         <div class="lastarticles" id="last_articles">
+          <div class="title">
+           <h3>
+            آخر الأخبار
+           </h3>
+          </div>
+          <div id="last_articles">
+           <ul class="laste_articles-list">
+            <li>
+             <span class="num">
+              09:08
+             </span>
+             <h3 class="text">
+              <a href="/monde/148334" title="بالفيديو: شاهد لحظة دخول إرهابي إلى كنيسة سيرلانكية">
+               بالفيديو: شاهد لحظة دخول إرهابي إلى كنيسة سيرلانكية
+              </a>
+             </h3>
+            </li>
+            <li>
+             <span class="num">
+              08:30
+             </span>
+             <h3 class="text">
+              <a href="/societe/148331" title="طقس الخميس: سقوط أمطار بهذه المناطق ">
+               طقس الخميس: سقوط أمطار بهذه المناطق
+              </a>
+             </h3>
+            </li>
+            <li>
+             <span class="num">
+              23:30
+             </span>
+             <h3 class="text">
+              <a href="/people/148329" title="بالفيديو: أول تصريح لبرتني سبيرز بعد خروجها من المصحة النفسية">
+               بالفيديو: أول تصريح لبرتني سبيرز بعد خروجها من المصحة النفسية
+              </a>
+             </h3>
+            </li>
+            <li>
+             <span class="num">
+              23:15
+             </span>
+             <h3 class="text">
+              <a href="/politique/148332" title="العثماني يلتقي النائب العام القطري ويتباحثان سبل تعزيز التعاون بين البلدين">
+               العثماني يلتقي النائب العام القطري ويتباحثان سبل تعزيز التعاون بين البلدين
+              </a>
+             </h3>
+            </li>
+            <li>
+             <span class="num">
+              23:07
+             </span>
+             <h3 class="text">
+              <a href="/societe/148333" title="توقيف ثمانية مستخدمات بمركز نداء غير مرخص بمدينة خريبكة">
+               توقيف ثمانية مستخدمات بمركز نداء غير مرخص بمدينة خريبكة
+              </a>
+             </h3>
+            </li>
+            <li>
+             <span class="num">
+              22:30
+             </span>
+             <h3 class="text">
+              <a href="/people/148300" title="بالفيديو.. الدكتورة خلود: أنا رقم واحد في الوطن العربي">
+               بالفيديو.. الدكتورة خلود: أنا رقم واحد في الوطن العربي
+              </a>
+             </h3>
+            </li>
+            <li>
+             <span class="num">
+              22:18
+             </span>
+             <h3 class="text">
+              <a href="/societe/148304" title="مكناس. هكذا تم حجز 3891 قرقوبية قادمة من طنجة">
+               مكناس. هكذا تم حجز 3891 قرقوبية قادمة من طنجة
+              </a>
+             </h3>
+            </li>
+            <li>
+             <span class="num">
+              21:30
+             </span>
+             <h3 class="text">
+              <a href="/societe/148322" title="بالصور: " السياح"="" الماعز..="" بالصويرة="" حيلة="" سيلفي"="" فلاحين="" لجلب="" مع="">
+               بالصور: "سيلفي" مع الماعز.. حيلة فلاحين بالصويرة لجلب السياح
+              </a>
+             </h3>
+            </li>
+            <li>
+             <span class="num">
+              20:42
+             </span>
+             <h3 class="text">
+              <a href="/societe/148287" title="كليم. قاصر مبحوث عنه يقود عصابة لسرقة المنازل">
+               كليم. قاصر مبحوث عنه يقود عصابة لسرقة المنازل
+              </a>
+             </h3>
+            </li>
+            <li>
+             <span class="num">
+              20:28
+             </span>
+             <h3 class="text">
+              <a href="/politique/148330" title="بنعبد الله يقدم تقريره أمام برلمان حزبه خلال الأيام المقبلة">
+               بنعبد الله يقدم تقريره أمام برلمان حزبه خلال الأيام المقبلة
+              </a>
+             </h3>
+            </li>
+           </ul>
+          </div>
+          <p class="last_bloc_news">
+           <a href="http://ar.le360.ma/articles">
+            المزيد من الأخبار
+           </a>
+          </p>
+         </div>
+         <div class="right-top-banner">
+          <script type="text/javascript">
+           <!--// <![CDATA[
+    OA_show(165);
+// ]]> -->
+          </script>
+          <noscript>
+           <a href="http://pub.le360.ma/ads360/www/delivery/ck.php?n=7636117" target="_blank">
+            <img alt="" border="0" src="http://pub.le360.ma/ads360/www/delivery/avw.php?zoneid=165&amp;n=7636117"/>
+           </a>
+          </noscript>
+         </div>
+         <div id="last_video">
+          <div class="title">
+           <h3>
+            فيديو
+           </h3>
+          </div>
+          <ul class="laste_video-list">
+           <li>
+            <div class="wrap_v">
+             <a href="/insolite/148321" title="بالفيديو: ياجور يسجل هدفا عالميا للرجاء في شباك حسنية أكادير">
+              <img alt="ياجور" height="82" src="http://i.le360.ma/ar/sites/default/files/styles/asset_image_search_result/public/assets/images/2018/03/eb3dd4cd-0318-4363-93cd-c70b0d608bee.jpg" title="ياجور" typeof="foaf:Image" width="151"/>
+             </a>
+             <a 148321"="" class="play_v" href="" insolite="">
+              play
+             </a>
+            </div>
+            <h2>
+             بالفيديو: ياجور يسجل هدفا عالميا للرجاء في شباك حسنية أكادير
+            </h2>
+           </li>
+           <li>
+            <div class="wrap_v">
+             <a href="/insolite/148294" title="بالفيديو: لاعب أسود الأطلس يسجل هدفا " أرنهيم"="" ذكيا"="" شباك="" في="" لأياكس="">
+              <img alt="زياش ومزراوي" height="82" src="http://i.le360.ma/ar/sites/default/files/styles/asset_image_search_result/public/assets/images/2018/10/1044728432-600x400.jpg" title="زياش ومزراوي" typeof="foaf:Image" width="151"/>
+             </a>
+             <a 148294"="" class="play_v" href="" insolite="">
+              play
+             </a>
+            </div>
+            <h2>
+             بالفيديو: لاعب أسود الأطلس يسجل هدفا "ذكيا" لأياكس في شباك أرنهيم
+            </h2>
+           </li>
+           <li>
+            <div class="wrap_v">
+             <a href="/politique/148275" title="بالفيديو: هذه وضعية السوق الاستهلاكية المغربية خلال شهر رمضان">
+              <img alt="Cover_Vidéo: Le360.ma •تعرفوا على تزويد الأسواق بالمواد الاستهلاكية خلال شهر رمضان" height="82" src="http://i.le360.ma/ar/sites/default/files/styles/asset_image_search_result/public/assets/images/2019/04/interieure_.jpg" title="Cover_Vidéo: Le360.ma •تعرفوا على تزويد الأسواق بالمواد الاستهلاكية خلال شهر رمضان" typeof="foaf:Image" width="151"/>
+             </a>
+             <a 148275"="" class="play_v" href="" politique="">
+              play
+             </a>
+            </div>
+            <h2>
+             بالفيديو: هذه وضعية السوق الاستهلاكية المغربية خلال شهر رمضان
+            </h2>
+           </li>
+           <li>
+            <div class="wrap_v">
+             <a href="/politique/148259" title="بالفيديو: مصر توضح موقفها من قضية الصحراء المغربية">
+              <img alt="Cover_Vidéo: Le360.ma •حصري. الصحراء المغربية: مصر توضح موقفها و تنفي وجود محور القاهرة /بريتوريا" height="82" src="http://i.le360.ma/ar/sites/default/files/styles/asset_image_search_result/public/assets/images/2019/04/ambassad_egypte.jpg" title="Cover_Vidéo: Le360.ma •حصري. الصحراء المغربية: مصر توضح موقفها و تنفي وجود محور القاهرة /بريتوريا" typeof="foaf:Image" width="151"/>
+             </a>
+             <a 148259"="" class="play_v" href="" politique="">
+              play
+             </a>
+            </div>
+            <h2>
+             بالفيديو: مصر توضح موقفها من قضية الصحراء المغربية
+            </h2>
+           </li>
+           <li>
+            <div class="wrap_v">
+             <a href="/insolite/148222" title="بالفيديو: فيصل فجر وحبيبته في حفل راقص بحضور دنيا بطمة">
+              <img alt="فيصل" height="82" src="http://i.le360.ma/ar/sites/default/files/styles/asset_image_search_result/public/assets/images/2019/04/57989078_422454125155239_2642429464373362688_n.jpg" title="فيصل" typeof="foaf:Image" width="151"/>
+             </a>
+             <a 148222"="" class="play_v" href="" insolite="">
+              play
+             </a>
+            </div>
+            <h2>
+             بالفيديو: فيصل فجر وحبيبته في حفل راقص بحضور دنيا بطمة
+            </h2>
+           </li>
+           <li>
+            <div class="wrap_v">
+             <a href="/insolite/148201" title="بالفيديو: مصارعة محترفة تبرح ميا خليفة ضربا على منطقة حساسة">
+              <img alt="ميا خليفة" height="82" src="http://i.le360.ma/ar/sites/default/files/styles/asset_image_search_result/public/assets/images/2019/04/my.jpg" title="ميا خليفة" typeof="foaf:Image" width="151"/>
+             </a>
+             <a 148201"="" class="play_v" href="" insolite="">
+              play
+             </a>
+            </div>
+            <h2>
+             بالفيديو: مصارعة محترفة تبرح ميا خليفة ضربا على منطقة حساسة
+            </h2>
+           </li>
+          </ul>
+          <p class="last_bloc_video">
+           <a href="http://ar.le360.ma/videos">
+            المزيد
+           </a>
+          </p>
+         </div>
+         <div class="top360">
+          <div class="title">
+           <h3>
+            طوب 360
+           </h3>
+          </div>
+          <ul class="tabset top360-nav">
+           <li>
+            <a class="active" href="#tab1">
+             أخبار
+            </a>
+           </li>
+           <li>
+            <a class="" href="#tab2">
+             فيديو
+            </a>
+           </li>
+           <li>
+            <a class="" href="#tab3">
+             صور
+            </a>
+           </li>
+          </ul>
+          <div class="view view-right-column-blocks view-id-right_column_blocks " id="tab1">
+           <ul class="top360-list">
+            <li>
+             <span class="num">
+              1
+             </span>
+             <div class="text">
+              <span>
+               <a href="/people/148279">
+                صورة: أميمة باعزية تتخلى عن الشعر المستعار
+               </a>
+              </span>
+             </div>
+            </li>
+            <li>
+             <span class="num">
+              2
+             </span>
+             <div class="text">
+              <span>
+               <a href="/people/148210">
+                فيديو. حلا الترك تتجاهل مساعدة والدها في تحقيق شهرتها
+               </a>
+              </span>
+             </div>
+            </li>
+            <li>
+             <span class="num">
+              3
+             </span>
+             <div class="text">
+              <span>
+               <a href="/monde/148239">
+                بالفيديو: من يكون "ربّ الجزائر".. يسعد ربراب؟
+               </a>
+              </span>
+             </div>
+            </li>
+            <li>
+             <span class="num">
+              4
+             </span>
+             <div class="text">
+              <span>
+               <a href="/politique/148313">
+                تفجيرات سيريلانكا: الاستخبارات المغربية قدمت معطيات حساسة لتحديد هويات الإرهابيين
+               </a>
+              </span>
+             </div>
+            </li>
+            <li>
+             <span class="num">
+              5
+             </span>
+             <div class="text">
+              <span>
+               <a href="/people/148199">
+                بالفيديو: منى فتو وعثمان مولين "محيحين" فوق العمارية
+               </a>
+              </span>
+             </div>
+            </li>
+           </ul>
+          </div>
+          <div class="view view-right-column-blocks view-id-right_column_blocks " id="tab2">
+           <ul class="top360-list">
+            <li>
+             <span class="num">
+              1
+             </span>
+             <div class="text">
+              <span>
+               <a href="/people/148199">
+                بالفيديو: منى فتو وعثمان مولين "محيحين" فوق العمارية
+               </a>
+              </span>
+             </div>
+            </li>
+            <li>
+             <span class="num">
+              2
+             </span>
+             <div class="text">
+              <span>
+               <a href="/medias/148112">
+                نايضة فهوليود (حلقة 7): كمال موماد.. من لاعب كرة سلة إلى عارض وممثل عالمي
+               </a>
+              </span>
+             </div>
+            </li>
+            <li>
+             <span class="num">
+              3
+             </span>
+             <div class="text">
+              <span>
+               <a href="/medias/148115">
+                راديو36 (حلقة 3): استدعاء الفنانين زهير بهاوي وإيهاب أمير للتجنيد الإجباري
+               </a>
+              </span>
+             </div>
+            </li>
+            <li>
+             <span class="num">
+              4
+             </span>
+             <div class="text">
+              <span>
+               <a href="/politique/148259">
+                بالفيديو: مصر توضح موقفها من قضية الصحراء المغربية
+               </a>
+              </span>
+             </div>
+            </li>
+            <li>
+             <span class="num">
+              5
+             </span>
+             <div class="text">
+              <span>
+               <a href="/culture/148138">
+                بالفيديو: البولماني يطلق كليب "خارجة من الحمام"
+               </a>
+              </span>
+             </div>
+            </li>
+           </ul>
+          </div>
+          <div class="view view-right-column-blocks view-id-right_column_blocks " id="tab3">
+           <ul class="top360-list">
+            <li>
+             <span class="num">
+              1
+             </span>
+             <div class="text">
+              <span>
+               <a href="/nisaiat/90365">
+                صور. تسويق دمى ذكية تمارس الجنس وفق رغبات الزبائن!
+               </a>
+              </span>
+             </div>
+            </li>
+            <li>
+             <span class="num">
+              2
+             </span>
+             <div class="text">
+              <span>
+               <a href="/nisaiat/82225">
+                صور. ديانا حداد تكشف عن سر جمالها بطريقة عفوية
+               </a>
+              </span>
+             </div>
+            </li>
+            <li>
+             <span class="num">
+              3
+             </span>
+             <div class="text">
+              <span>
+               <a href="/nisaiat/37243">
+                صور. شاهد أجمل إطلالات النجمة كيم كارداشيان رفقة ابنتها
+               </a>
+              </span>
+             </div>
+            </li>
+            <li>
+             <span class="num">
+              4
+             </span>
+             <div class="text">
+              <span>
+               <a href="/nisaiat/36127">
+                صور. رجال بالتنانير في تركيا احتجاجا على اغتصاب فتاة
+               </a>
+              </span>
+             </div>
+            </li>
+            <li>
+             <span class="num">
+              5
+             </span>
+             <div class="text">
+              <span>
+               <a href="/insolite/75872">
+                بالصور: عارضة "بكيني" تتصدى للشريعة الإسلامية
+               </a>
+              </span>
+             </div>
+            </li>
+           </ul>
+          </div>
+         </div>
+         <iframe allowfullscreen="true" allowtransparency="true" class="" frameborder="0" height="400px" scrolling="no" src="http://www.facebook.com/plugins/like_box.php?app_id=537657189588485&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df379e7c0720ecf4%26domain%3Dwww.le360.ma%26origin%3Dhttp%253A%252F%252Fwww.le360.ma%252Ff269dc3327cbdb4%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=300&amp;header=false&amp;height=400&amp;href=https%3A%2F%2Fwww.facebook.com%2Fle360ar&amp;locale=fr_FR&amp;sdk=joey&amp;show_border=false&amp;show_faces=true&amp;stream=false&amp;width=300" style="border: none; visibility: visible; width: 300px; height: 214px;" title="fb:like_box Facebook Social Plugin" width="300px">
+         </iframe>
+         <div class="right-bottom-banner">
+          <script type="text/javascript">
+           <!--// <![CDATA[
+    OA_show(173);
+// ]]> -->
+          </script>
+          <noscript>
+           <a href="http://pub.le360.ma/ads360/www/delivery/ck.php?n=0d84e9d" target="_blank">
+            <img alt="" border="0" src="http://pub.le360.ma/ads360/www/delivery/avw.php?zoneid=173&amp;n=0d84e9d"/>
+           </a>
+          </noscript>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="footer">
+     <div class="footer-top">
+      <div class="footer-holder">
+       <div class="column">
+        <div class="ttl">
+         <h3>
+          <span>
+           إستطلاع الرأي
+          </span>
+         </h3>
+        </div>
+        <div class="content">
+         <div class="poll">
+          <p>
+           على هامش النقاش الدائر في البرلمان حول لغات التدريس.. هل أنت مع تدريس المواد العلمية بالعربية أم بالفرنسية؟
+          </p>
+          <div class="vote-holder full" id="147667">
+           <div class="vote-form">
+            <div class="content">
+             <form accept-charset="UTF-8" action="/api/blockpoll" id="poll-view-voting" method="post">
+              <div>
+               <div class="poll">
+                <div class="vote-form">
+                 <div class="choices">
+                  <div class="form-item form-type-radios form-item-choice">
+                   <label class="element-invisible" for="edit-choice">
+                    ‏الخيارات ‏
+                   </label>
+                   <div class="form-radios" id="edit-choice">
+                    <div class="form-item form-type-radio form-item-choice">
+                     <input checked="checked" class="form-radio" id="edit-choice-315" name="choice" type="radio" value="315">
+                      <label class="option" for="edit-choice-315">
+                       ‏التدريس باللغة العربية ‏
+                      </label>
+                     </input>
+                    </div>
+                    <div class="form-item form-type-radio form-item-choice">
+                     <input class="form-radio" id="edit-choice-316" name="choice" type="radio" value="316">
+                      <label class="option" for="edit-choice-316">
+                       ‏التدريس باللغة الفرنسية ‏
+                      </label>
+                     </input>
+                    </div>
+                    <div class="form-item form-type-radio form-item-choice">
+                     <input class="form-radio" id="edit-choice-317" name="choice" type="radio" value="317"/>
+                     <label class="option" for="edit-choice-317">
+                      ‏لا أدري ‏
+                     </label>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <input class="btn-submit form-submit" id="edit-vote" name="op" type="submit" value="صوّت"/>
+                </div>
+                <input name="form_build_id" type="hidden" value="form-P9eIVC2GKo948SO97oE_keQ4-Iw9vVcYtmdMsZxCl0M"/>
+                <input name="form_id" type="hidden" value="poll_view_voting"/>
+               </div>
+              </div>
+             </form>
+            </div>
+           </div>
+           <div class="poll_results content">
+            <div class="poll">
+             <div class="text">
+              التدريس باللغة العربية
+             </div>
+             <div class="row">
+              <div class="bar">
+               <div class="foreground" style="width: 55%;">
+                <div class="percent">
+                 55%
+                </div>
+               </div>
+              </div>
+              <div class="votes">
+               12 أصوات
+              </div>
+             </div>
+             <div class="text">
+              التدريس باللغة الفرنسية
+             </div>
+             <div class="row">
+              <div class="bar">
+               <div class="foreground" style="width: 41%;">
+                <div class="percent">
+                 41%
+                </div>
+               </div>
+              </div>
+              <div class="votes">
+               9 أصوات
+              </div>
+             </div>
+             <div class="text">
+              لا أدري
+             </div>
+             <div class="row">
+              <div class="bar">
+               <div class="foreground" style="width: 5%;">
+                <div class="percent">
+                 5%
+                </div>
+               </div>
+              </div>
+              <div class="votes">
+               صوت واحد
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="column">
+        <div class="ttl">
+         <h3>
+          <span>
+           360 في نقرة واحدة
+          </span>
+         </h3>
+        </div>
+        <div class="holder">
+         <ul class="footer-list">
+          <li>
+           <a href="/economie">
+            اقتصاد
+           </a>
+          </li>
+          <li>
+           <a href="/politique">
+            سياسة
+           </a>
+          </li>
+          <li>
+           <a href="/societe">
+            مجتمع
+           </a>
+          </li>
+          <li>
+           <a href="/culture">
+            ثقافة
+           </a>
+          </li>
+          <li>
+           <a href="/people">
+            مشاهير
+           </a>
+          </li>
+          <li>
+           <a href="/sports">
+            رياضة
+           </a>
+          </li>
+          <li>
+           <a href="/medias">
+            ميديا
+           </a>
+          </li>
+         </ul>
+         <ul class="footer-list">
+          <li>
+           <a href="/blogs360">
+            مدونات 360
+           </a>
+          </li>
+          <li>
+           <a href="/%D9%85%D9%86-%D9%86%D8%AD%D9%86-%D8%9F">
+            من نحن ؟
+           </a>
+          </li>
+          <li>
+           <a href="/%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9-%D8%A7%D9%84%D8%A3%D9%83%D8%AB%D8%B1-%D8%B7%D8%B1%D8%AD%D8%A7">
+            الأسئلة الأكثر طرحا
+           </a>
+          </li>
+          <li>
+           <a href="/%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9">
+            بيانات قانونية
+           </a>
+          </li>
+          <li>
+           <a href="/contact">
+            للإتصال بنا
+           </a>
+          </li>
+          <li>
+           <a href="/%D9%84%D9%84%D8%A5%D8%B9%D9%84%D8%A7%D9%86-%D8%B9%D9%84%D9%89-%D9%85%D9%88%D9%82%D8%B9%D9%86%D8%A7">
+            للإعلان على موقعنا
+           </a>
+          </li>
+          <li>
+           <a href="http://goo.gl/utSVag">
+            نسخة الهاتف
+           </a>
+          </li>
+          <li>
+           <a href="/sitemap">
+            خريطة الموقع
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="column-last">
+        <div class="ttl">
+         <h3>
+          <span>
+           تابعنا
+          </span>
+         </h3>
+        </div>
+        <ul class="footer-soc-list">
+         <li>
+          <a class="facebook" href="https://www.facebook.com/le360ar" target="_blank">
+           facebook
+          </a>
+         </li>
+         <li>
+          <a class="twitter" href="https://twitter.com/Le360ar" target="_blank">
+           twitter
+          </a>
+         </li>
+         <li>
+          <a class="youtube" href="http://www.youtube.com/user/Le360Live" target="_blank">
+           youtube
+          </a>
+         </li>
+         <li>
+          <a class="google" href="https://plus.google.com/u/0/b/107124589331413226032/107124589331413226032/" target="_blank">
+           google
+          </a>
+         </li>
+         <li>
+          <a class="linkedin" href="http://www.linkedin.com/in/le360" target="_blank">
+           linkedin
+          </a>
+         </li>
+         <li>
+          <a class="pinterest" href="http://pinterest.com/le360/" target="_blank">
+           pinterest
+          </a>
+         </li>
+        </ul>
+        <div class="newletter-form">
+         <h4>
+          الاشتراك في الرسائل الإخبارية
+         </h4>
+         <p>
+          أدخل بريدك الإلكتروني للتوصل بآخر الأخبار Le360
+         </p>
+         <form action="http://le360.us9.list-manage1.com/subscribe?u=cc53e98eaccc71cf0f0ada82c&amp;id=9a48a4e55c" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+          <fieldset>
+           <div class="row">
+            <div class="text-form">
+             <input name="EMAIL" type="text" value=""/>
+             <select class="required" id="mce-MMERGE3" name="MMERGE3">
+              <option selected="" value="AR">
+               AR
+              </option>
+              <option value="FR">
+               FR
+              </option>
+             </select>
+            </div>
+            <input class="btn-submit" type="submit" value="أرسل"/>
+           </div>
+          </fieldset>
+         </form>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="footer-bottom">
+      <div class="footer-holder">
+       <strong class="logo-footer">
+        <a class="active" href="/">
+         le360
+        </a>
+       </strong>
+       <span class="copy">
+        © Web News / le360.ma / Tous droits réservés 2018
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- date :  2019-04-25 08:26:51 -->
+  <script src="http://ar.le360.ma/scripts/jquery.cookie.js?v=67fb34f6a866c40d0570" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/jquery.form.min.js?v=2.69" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/form.js?v=7.19" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/le-site-links.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/progress.js?v=7.19" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/html5.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/jquery-1.8.3.min.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/jquery.tabs.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/jquery.form.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/jquery.main.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/placeholder.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/scripts.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/jquery.carousel.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/jquery.simplelightbox.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/jquery.slideshow.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/jquery.masonry.min.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/ads.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/custom.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/jquery.cookie.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/scripts/le_site.js" type="text/javascript">
+  </script>
+  <script src="http://ar.le360.ma/comment/comment.js" type="text/javascript">
+  </script>
+  <link href="http://ar.le360.ma/comment/comment.css" rel="stylesheet"/>
+  <script>
+   ga('send', 'pageview');
+  </script>
+  <div id="ads_inter">
+   <script type="text/javascript">
+    <!--//<![CDATA[
+   var ox_u = 'http://pub.le360.ma/ads360/www/delivery/al.php?zoneid=270&cb=INSERT_RANDOM_NUMBER_HERE&layerstyle=simple&align=center&valign=middle&padding=2&padding=2&shifth=0&shiftv=0&closebutton=t&nobg=t&noborder=t';
+   if (document.context) ox_u += '&context=' + escape(document.context);
+   document.write("<scr"+"ipt type='text/javascript' src='" + ox_u + "'></scr"+"ipt>");
+//]]>-->
+   </script>
+  </div>
+  <script type="text/javascript">
+   (function() {
+        function async_load(script_url){
+            var protocol = ('https:' == document.location.protocol ? 'https://' : 'http://');
+            var s = document.createElement('script'); s.src = protocol + script_url;
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        }
+        bm_website_code = '3301F19A8250449B';
+        jQuery(document).ready(function(){async_load('asset.pagefair.com/measure.min.js')});
+        jQuery(document).ready(function(){async_load('asset.pagefair.net/ads.min.js')});
+    })();
+  </script>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"02d76c8e25","applicationID":"8176075","transactionName":"Y11TMEFWVkZQVUxZDVoXZBZaGFFbVVNAHhJcSA==","queueTime":0,"applicationTime":737,"atts":"TxpQRglMRUg=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>
