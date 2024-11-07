@@ -5,3 +5,4 @@ python-docx
 pandas
 nltk
 stanza
+scikit-learn
