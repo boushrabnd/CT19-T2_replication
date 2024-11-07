@@ -59,4 +59,4 @@ for claim in claims_data:
 # Save results to CSV
 print("Saving results to CSV")
 ranked_results_df = pd.DataFrame(ranked_results, columns=['claimID', 'rank', 'pageID', 'score', 'runID'])
-ranked_results_df.to_csv('results/predictions/pred_arabert_run.csv', index=False, sep='\t', header=False)
+ranked_results_df.to_csv('results/A/predictions/pred_arabert_run.csv', index=False, sep='\t', header=False)
