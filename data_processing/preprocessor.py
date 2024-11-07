@@ -1,8 +1,12 @@
 import os
 from bs4 import BeautifulSoup
 from transformers import AutoTokenizer, AutoModel
+from arabert.preprocess import ArabertPreprocessor
 import torch
 from docx import Document
+
+model_name = "aubmindlab/bert-base-arabertv2"
+arabert_prep = ArabertPreprocessor(model_name=model_name)
 
 def clean_html(content):
     """Extract and clean text from HTML content."""
@@ -25,16 +29,16 @@ def load_text_file(filepath):
         raise ValueError(f"Unsupported file type: {ext}")
 
 def preprocess_text(text):
-    """Tokenize and prepare text for Arabert model."""
-    tokenizer = AutoTokenizer.from_pretrained("aubmindlab/bert-base-arabertv2")
-    tokens = tokenizer.tokenize(text)
-    return tokens
+    """Preprocess text using ArabertPreprocessor for the AraBERT model."""
+    return arabert_prep.preprocess(text)
 
 def get_arabert_embedding(text):
     """Generate embeddings using AraBERT."""
-    tokenizer = AutoTokenizer.from_pretrained("aubmindlab/bert-base-arabertv2")
-    model = AutoModel.from_pretrained("aubmindlab/bert-base-arabertv2")
+    preprocessed_text = preprocess_text(text)
+
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModel.from_pretrained(model_name)
     
-    inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True)
+    inputs = tokenizer(preprocessed_text, return_tensors="pt", truncation=True, padding=True)
     outputs = model(**inputs)
     return outputs.last_hidden_state.mean(dim=1).squeeze().detach().numpy()
